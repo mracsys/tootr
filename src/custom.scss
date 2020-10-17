@@ -1,0 +1,21 @@
+// Override default variables before the import
+//$body-bg: #000;
+
+// Import Bootstrap and its default variables
+@import '~bootstrap/scss/bootstrap.scss';
+
+// Responsive number of columns for locations
+.card-columns {
+    @include media-breakpoint-only(xl) {
+        column-count: 6;
+    }
+    @include media-breakpoint-only(lg) {
+        column-count: 5;
+    }
+    @include media-breakpoint-only(md) {
+        column-count: 3;
+    }
+    @include media-breakpoint-only(sm) {
+        column-count: 2;
+    }
+}

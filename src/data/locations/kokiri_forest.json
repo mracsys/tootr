@@ -1,0 +1,312 @@
+{
+    "entrances": {
+        "Kokiri Forest -> KF Links House": {
+            "area": "Kokiri Forest",
+            "reverse": "KF Links House -> Kokiri Forest",
+            "alias": "Link's House",
+            "tag": "",
+            "type": "specialInterior",
+            "default": "Link's House",
+            "link": "",
+            "reverseLink": "",
+            "userLink": "",
+            "reverseUserLink": ""
+        },
+        "Kokiri Forest -> KF Midos House": {
+            "area": "Kokiri Forest",
+            "reverse": "KF Midos House -> Kokiri Forest",
+            "alias": "Mido's House",
+            "tag": "",
+            "type": "interior",
+            "default": "Mido's House",
+            "link": "",
+            "reverseLink": "",
+            "userLink": "",
+            "reverseUserLink": ""
+        },
+        "Kokiri Forest -> KF Sarias House": {
+            "area": "Kokiri Forest",
+            "reverse": "KF Sarias House -> Kokiri Forest",
+            "alias": "Saria's House",
+            "tag": "",
+            "type": "interior",
+            "default": "Saria's House",
+            "link": "",
+            "reverseLink": "",
+            "userLink": "",
+            "reverseUserLink": ""
+        },
+        "Kokiri Forest -> KF House of Twins": {
+            "area": "Kokiri Forest",
+            "reverse": "KF House of Twins -> Kokiri Forest",
+            "alias": "House of Twins",
+            "tag": "",
+            "type": "interior",
+            "default": "House of Twins",
+            "link": "",
+            "reverseLink": "",
+            "userLink": "",
+            "reverseUserLink": ""
+        },
+        "Kokiri Forest -> KF Know It All House": {
+            "area": "Kokiri Forest",
+            "reverse": "KF Know It All House -> Kokiri Forest",
+            "alias": "Know It All House",
+            "tag": "",
+            "type": "interior",
+            "default": "Know It All House",
+            "link": "",
+            "reverseLink": "",
+            "userLink": "",
+            "reverseUserLink": ""
+        },
+        "Kokiri Forest -> KF Kokiri Shop": {
+            "area": "Kokiri Forest",
+            "reverse": "KF Kokiri Shop -> Kokiri Forest",
+            "alias": "Kokiri Shop",
+            "tag": "",
+            "type": "interior",
+            "default": "Kokiri Shop",
+            "link": "",
+            "reverseLink": "",
+            "userLink": "",
+            "reverseUserLink": ""
+        },
+        "Kokiri Forest -> KF Storms Grotto": {
+            "area": "Kokiri Forest",
+            "reverse": "KF Storms Grotto -> Kokiri Forest",
+            "alias": "Storms Grotto",
+            "tag": "",
+            "type": "grotto",
+            "default": "Kokiri Storms Grotto",
+            "link": "",
+            "reverseLink": "",
+            "userLink": "",
+            "reverseUserLink": ""
+        },
+        "KF Outside Deku Tree -> Deku Tree Lobby": {
+            "area": "Kokiri Forest",
+            "reverse": "Deku Tree Lobby -> KF Outside Deku Tree",
+            "alias": "Deku Tree",
+            "tag": "",
+            "type": "dungeon",
+            "default": "Deku Tree",
+            "link": "",
+            "reverseLink": "",
+            "userLink": "",
+            "reverseUserLink": ""
+        },
+        "Kokiri Forest -> LW Bridge From Forest": {
+            "area": "Kokiri Forest",
+            "reverse": "LW Bridge -> Kokiri Forest",
+            "alias": "Lost Woods Bridge",
+            "tag": "",
+            "type": "overworld",
+            "default": "",
+            "link": "",
+            "reverseLink": "",
+            "userLink": "",
+            "reverseUserLink": ""
+        },
+        "Kokiri Forest -> Lost Woods": {
+            "area": "Kokiri Forest",
+            "reverse": "LW Forest Exit -> Kokiri Forest",
+            "alias": "Lost Woods",
+            "tag": "",
+            "type": "overworld",
+            "default": "",
+            "link": "",
+            "reverseLink": "",
+            "userLink": "",
+            "reverseUserLink": ""
+        },
+        "Child Spawn -> KF Links House": {
+            "area": "Spawn Points",
+            "reverse": "",
+            "alias": "Child Spawn",
+            "tag": "",
+            "type": "spawn",
+            "default": "",
+            "link": "",
+            "reverseLink": "",
+            "userLink": "",
+            "reverseUserLink": ""
+        },
+        "Adult Spawn -> Temple of Time": {
+            "area": "Spawn Points",
+            "reverse": "",
+            "alias": "Adult Spawn",
+            "tag": "",
+            "type": "spawn",
+            "default": "",
+            "link": "",
+            "reverseLink": "",
+            "userLink": "",
+            "reverseUserLink": ""
+        },
+        "Graveyard Warp Pad Region -> Shadow Temple Entryway": {
+            "area": "Graveyard",
+            "reverse": "Shadow Temple Entryway -> Graveyard Warp Pad Region",
+            "alias": "Shadow Temple",
+            "tag": "",
+            "type": "dungeon",
+            "default": "Shadow Temple",
+            "link": "",
+            "reverseLink": "",
+            "userLink": "",
+            "reverseUserLink": ""
+        },
+        "Graveyard -> Graveyard Dampes House": {
+            "area": "Graveyard",
+            "reverse": "Graveyard Dampes House -> Graveyard",
+            "alias": "Dampe's Hut",
+            "tag": "",
+            "type": "interior",
+            "default": "Dampe's Hut",
+            "link": "",
+            "reverseLink": "",
+            "userLink": "",
+            "reverseUserLink": ""
+        },
+        "Graveyard -> Graveyard Shield Grave": {
+            "area": "Graveyard",
+            "reverse": "Graveyard Shield Grave -> Graveyard",
+            "alias": "Shield Grave",
+            "tag": "",
+            "type": "grave",
+            "default": "Shield Grave",
+            "link": "",
+            "reverseLink": "",
+            "userLink": "",
+            "reverseUserLink": ""
+        },
+        "Graveyard -> Graveyard Heart Piece Grave": {
+            "area": "Graveyard",
+            "reverse": "Graveyard Heart Piece Grave -> Graveyard",
+            "alias": "Redead Grave",
+            "tag": "",
+            "type": "grave",
+            "default": "Redead Grave",
+            "link": "",
+            "reverseLink": "",
+            "userLink": "",
+            "reverseUserLink": ""
+        },
+        "Graveyard -> Graveyard Composers Grave": {
+            "area": "Graveyard",
+            "reverse": "Graveyard Composers Grave -> Graveyard",
+            "alias": "Composer Grave",
+            "tag": "",
+            "type": "grave",
+            "default": "Composer Grave",
+            "link": "",
+            "reverseLink": "",
+            "userLink": "",
+            "reverseUserLink": ""
+        },
+        "Graveyard -> Graveyard Dampes Grave": {
+            "area": "Graveyard",
+            "reverse": "Graveyard Dampes Grave -> Graveyard",
+            "alias": "Dampe's Grave",
+            "tag": "",
+            "type": "grave",
+            "default": "Dampe's Grave",
+            "link": "",
+            "reverseLink": "",
+            "userLink": "",
+            "reverseUserLink": ""
+        },
+        "Graveyard -> Kakariko Village": {
+            "area": "Graveyard",
+            "reverse": "Kakariko Village -> Graveyard",
+            "alias": "Kakariko Village",
+            "tag": "",
+            "type": "overworld",
+            "default": "",
+            "link": "",
+            "reverseLink": "",
+            "userLink": "",
+            "reverseUserLink": ""
+        },
+        "Nocturne of Shadow Warp -> Graveyard Warp Pad Region": {
+            "area": "Graveyard",
+            "reverse": "",
+            "alias": "Nocturne of Shadow",
+            "tag": "",
+            "type": "warpsong",
+            "default": "Nocturne",
+            "link": "",
+            "reverseLink": "",
+            "userLink": "",
+            "reverseUserLink": ""
+        },
+        "LH Owl Flight -> Hyrule Field": {
+            "area": "Hyrule Field",
+            "reverse": "",
+            "alias": "Hyrule Field Owl Drop",
+            "tag": "",
+            "type": "owldrop",
+            "default": "",
+            "link": "",
+            "reverseLink": "",
+            "userLink": "",
+            "reverseUserLink": ""
+        },
+        "DMT Owl Flight -> Kak Impas Ledge": {
+            "area": "Kakariko Village",
+            "reverse": "",
+            "alias": "Kakariko Village Owl Drop",
+            "tag": "",
+            "type": "owldrop",
+            "default": "",
+            "link": "",
+            "reverseLink": "",
+            "userLink": "",
+            "reverseUserLink": ""
+        },
+        "ZD Eyeball Frog Timeout -> Zoras Domain": {
+            "area": "Zora's Domain",
+            "reverse": "",
+            "alias": "Eyeball Frog Timeout",
+            "tag": "",
+            "type": "extra",
+            "default": "",
+            "link": "",
+            "reverseLink": "",
+            "userLink": "",
+            "reverseUserLink": ""
+        },
+        "ZR Top of Waterfall -> Zora River": {
+            "area": "Zora River",
+            "reverse": "",
+            "alias": "Top of Waterfall",
+            "tag": "",
+            "type": "extra",
+            "default": "",
+            "link": "",
+            "reverseLink": "",
+            "userLink": "",
+            "reverseUserLink": ""
+        }
+    },
+    "locations": {
+        "Kokiri Sword Chest": {
+            "area": "Kokiri Forest",
+            "alias": "Kokiri Sword Chest",
+            "type": "item",
+            "check": ""
+        },
+        "Graveyard Ledge": {
+            "area": "Graveyard",
+            "alias": "Freestanding PoH",
+            "type": "item",
+            "check": ""
+        },
+        "Dampe Digging": {
+            "area": "Graveyard",
+            "alias": "Dampe Digging",
+            "type": "item",
+            "check": ""
+        }
+    }
+}

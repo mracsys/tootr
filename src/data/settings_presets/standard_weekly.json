@@ -1,0 +1,27 @@
+{
+    "Settings": {
+        "Zora's Fountain": "Closed",
+        "Gerudo Fortress": "1 Carpenter",
+        "Rainbow Bridge": "Medallions",
+        "Shopsanity": "Off",
+        "Tokensanity": "Off",
+        "Scrubsanity": "Off",
+        "Cowsanity": "Off",
+        "Songsanity": "Off",
+        "Shuffle Kokiri Sword": "On",
+        "Shuffle Ocarinas": "Off",
+        "Shuffle Weird Egg": "Off",
+        "Shuffle Gerudo Card": "Off",
+        "Shuffle Magic Beans": "Off",
+        "Shuffle Merchants": "Off",
+        "Shuffle Interiors": "Off",
+        "Shuffle Grottos": "Off",
+        "Shuffle Dungeons": "Off",
+        "Shuffle Overworld": "Off",
+        "Shuffle Owls": "Off",
+        "Shuffle Warp Songs": "Off",
+        "Shuffle Spawn Points": "Off",
+        "Mixed Pools": "Off",
+        "Decoupled Entrances": "Off"
+    }
+}

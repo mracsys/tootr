@@ -1,0 +1,164 @@
+{
+    "Kokiri Forest": {
+        "entrances": {
+            "Kokiri Forest -> KF Midos House": {
+                "reverse": "KF Midos House -> Kokiri Forest",
+                "alias": "Mido's House",
+                "type": "interior",
+                "default": "Mido's House"
+            },
+            "Kokiri Forest -> KF Sarias House": {
+                "reverse": "KF Sarias House -> Kokiri Forest",
+                "alias": "Saria's House",
+                "type": "interior",
+                "default": "Saria's House"
+            },
+            "Kokiri Forest -> KF House of Twins": {
+                "reverse": "KF House of Twins -> Kokiri Forest",
+                "alias": "House of Twins",
+                "type": "interior",
+                "default": "House of Twins"
+            },
+            "Kokiri Forest -> KF Know It All House": {
+                "reverse": "KF Know It All House -> Kokiri Forest",
+                "alias": "Know It All House",
+                "type": "interior",
+                "default": "Know It All House"
+            },
+            "Kokiri Forest -> KF Kokiri Shop": {
+                "reverse": "KF Kokiri Shop -> Kokiri Forest",
+                "alias": "Kokiri Shop",
+                "type": "interior",
+                "default": "Kokiri Shop"
+            }
+        },
+        "locations": []
+    },
+    "Graveyard": [],
+    "Death Mountain Trail": [
+        "Death Mountain Trail Wall Chest",
+        "Trail Storms Grotto",
+        "Summit Fairy",
+        "Biggoron",
+        "Above Dodongo's Cavern"
+    ],
+    "Goron City": [
+        "Goron City Maze Left Chest",
+        "Goron City Maze Right Chest",
+        "Goron City Maze Middle Chest",
+        "Darunia's Joy",
+        "Link the Goron",
+        "Rolling Goron",
+        "Spinning Pot"
+    ],
+    "Zora's Domain": [
+        "Torch Run Chest",
+        "Diving Minigame",
+        "Thaw King Zora"
+    ],
+    "Gerudo Valley": [
+        "Hammer Rocks Chest",
+        "Valley Waterfall",
+        "Valley Crate"
+    ],
+    "Gerudo Fortress": [
+        "Fortress Rooftop Chest",
+        "Horseback Archery 1000",
+        "Horseback Archery 1500"
+    ],
+    "Haunted Wasteland": [
+        "Wasteland Chest"
+    ],
+    "Kakariko Village": [
+        "Redead Grotto Chest",
+        "Kak Open Grotto",
+        "Nocturne of Shadow",
+        "Song of Storms",
+        "10 Skulls",
+        "20 Skulls",
+        "30 Skulls",
+        "40 Skulls",
+        "50 Skulls",
+        "Man on Roof",
+        "Adult Shooting",
+        "Anju as Adult",
+        "Anju's Chickens",
+        "Impa's House Freestanding",
+        "Windmill Freestanding"
+    ],
+    "Sacred Forest Meadow": [
+        "Wolfos Grotto Chest",
+        "Minuet of Forest",
+        "Saria's Song"
+    ],
+    "Hyrule Field": [
+        "Field Boulder Grotto",
+        "Field Remote Grotto",
+        "Field Open Grotto",
+        "Song of Time",
+        "Tektite Grotto",
+        "Field Scrub Grotto"
+    ],
+    "Zora's River": [
+        "River Open Grotto",
+        "Frogs 2",
+        "Frogs in the Rain",
+        "River Lower",
+        "River Upper"
+    ],
+    "Lost Woods": [
+        "Lost Woods Grotto",
+        "Skull Kid",
+        "Ocarina Memory Game",
+        "Target in the Woods",
+        "Skull Mask",
+        "Mask of Truth",
+        "Lost Woods Bridge Scrub",
+        "Lost Woods Grotto Scrub Front"
+    ],
+    "Death Mountain Crater": [
+        "Crater Grotto",
+        "Crater Fairy",
+        "Bolero of Fire",
+        "Crater Wall",
+        "Volcano"
+    ],
+    "Market": [
+        "Treasure Box Shop",
+        "Chu Bowling 1",
+        "Chu Bowling 2",
+        "Richard the Dog",
+        "Child Shooting",
+        "Big Poes"
+    ],
+    "Zora's Fountain": [
+        "Fountain Fairy",
+        "Fountain Iceberg",
+        "Fountain Bottom"
+    ],
+    "Hyrule Castle": [
+        "Hyrule Castle Fairy",
+        "Zelda's Lullaby"
+    ],
+    "Desert Colossus": [
+        "Colossus Fairy",
+        "Requiem of Spirit",
+        "Colossus Arch"
+    ],
+    "Outside Ganon's Castle": [
+        "Ganon's Castle Fairy"
+    ],
+    "Lon Lon Ranch": [
+        "Epona's Song",
+        "Talon's Chickens",
+        "Lon Lon Tower Freestanding"
+    ],
+    "Lake Hylia": [
+        "Child Fishing",
+        "Adult Fishing",
+        "Lab Dive",
+        "Underwater Letter",
+        "Shoot the Sun",
+        "Top of Lab"
+    ]
+}

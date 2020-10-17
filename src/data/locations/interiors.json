@@ -1,0 +1,53 @@
+{
+    "Mido's House": {
+        "category": "",
+        "type": "interior",
+        "locations": {
+            "Mido's House Top Left": {
+                "alias": "Mido's House Top Left",
+                "type": "item",
+                "check": ""
+            },
+            "Mido's House Top Right": {
+                "alias": "Mido's House Top Right",
+                "type": "item",
+                "check": ""
+            },
+            "Mido's House Bottom Left": {
+                "alias": "Mido's House Bottom Left",
+                "type": "item",
+                "check": ""
+            },
+            "Mido's House Bottom Right": {
+                "alias": "Mido's House Bottom Right",
+                "type": "item",
+                "check": ""
+            }
+        }
+    },
+    "Saria's House": {
+        "category": "House",
+        "type": "interior",
+        "locations": {}
+    },
+    "House of Twins": {
+        "category": "House",
+        "type": "interior",
+        "locations": {}
+    },
+    "Know It All House": {
+        "category": "House",
+        "type": "interior",
+        "locations": {}
+    },
+    "Kokiri Shop": {
+        "category": "Shop",
+        "type": "interior",
+        "locations": {}
+    },
+    "Dampe's Hut": {
+        "category": "House",
+        "type": "interior",
+        "locations": {}
+    }
+}
