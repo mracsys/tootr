@@ -1,0 +1,265 @@
+{
+    "entrances": {
+        "Lon Lon Ranch -> Hyrule Field": {
+            "area": "Lon Lon Ranch",
+            "reverse": "Hyrule Field -> Lon Lon Ranch",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "",
+            "isReverse": false,
+            "alias": "Hyrule Field",
+            "reverseAlias": "Lon Lon Ranch",
+            "tag": "",
+            "tagRep": false,
+            "type": "overworld",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": true
+        },
+        "Lon Lon Ranch -> LLR Grotto": {
+            "area": "Lon Lon Ranch",
+            "reverse": "LLR Grotto -> Lon Lon Ranch",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "",
+            "isReverse": false,
+            "alias": "Open Grotto",
+            "reverseAlias": "from Open Grotto",
+            "tag": "3 Scrub Grotto",
+            "tagRep": false,
+            "type": "grotto",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": true
+        },
+        "Lon Lon Ranch -> LLR Talons House": {
+            "area": "Lon Lon Ranch",
+            "reverse": "LLR Talons House -> Lon Lon Ranch",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "",
+            "isReverse": false,
+            "alias": "Talon's House",
+            "reverseAlias": "from Talon's House",
+            "tag": "Talon's House",
+            "tagRep": true,
+            "type": "interior",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": true
+        },
+        "Lon Lon Ranch -> LLR Stables": {
+            "area": "Lon Lon Ranch",
+            "reverse": "LLR Stables -> Lon Lon Ranch",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "",
+            "isReverse": false,
+            "alias": "Stable",
+            "reverseAlias": "from Stable",
+            "tag": "",
+            "tagRep": false,
+            "type": "interior",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": true
+        },
+        "Lon Lon Ranch -> LLR Tower": {
+            "area": "Lon Lon Ranch",
+            "reverse": "LLR Tower -> Lon Lon Ranch",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "",
+            "isReverse": false,
+            "alias": "Lon Lon Ranch Tower",
+            "reverseAlias": "from Lon Lon Ranch Tower",
+            "tag": "",
+            "tagRep": false,
+            "type": "interior",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": true
+        }
+    },
+    "locations": {
+        "Epona's Song": {
+            "area": "Lon Lon Ranch",
+            "lKey": "",
+            "alias": "Epona's Song",
+            "type": "song",
+            "settings": [],
+            "visible": true,
+            "check": ""
+        },
+        "LLR Talons Chickens": {
+            "area": "Lon Lon Ranch",
+            "lKey": "",
+            "alias": "Talon's Chickens",
+            "type": "item",
+            "settings": [],
+            "visible": true,
+            "check": ""
+        },
+        "LLR Freestanding PoH": {
+            "area": "",
+            "lKey": "Lon Lon Ranch -> LLR Tower",
+            "alias": "Tower Freestanding Item",
+            "type": "item",
+            "settings": [],
+            "visible": true,
+            "check": ""
+        },
+        "LLR Tower Left Cow": {
+            "area": "",
+            "lKey": "Lon Lon Ranch -> LLR Tower",
+            "alias": "Tower Cow 1",
+            "type": "item",
+            "settings": [{"setting": "Cowsanity", "value": "On", "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "LLR Tower Right Cow": {
+            "area": "",
+            "lKey": "Lon Lon Ranch -> LLR Tower",
+            "alias": "Tower Cow 2",
+            "type": "item",
+            "settings": [{"setting": "Cowsanity", "value": "On", "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "LLR Stables Left Cow": {
+            "area": "",
+            "lKey": "Lon Lon Ranch -> LLR Stables",
+            "alias": "Stable Cow 1",
+            "type": "item",
+            "settings": [{"setting": "Cowsanity", "value": "On", "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "LLR Stables Right Cow": {
+            "area": "",
+            "lKey": "Lon Lon Ranch -> LLR Stables",
+            "alias": "Stable Cow 2",
+            "type": "item",
+            "settings": [{"setting": "Cowsanity", "value": "On", "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "LLR Deku Scrub Grotto Left": {
+            "area": "",
+            "lKey": "Lon Lon Ranch -> LLR Grotto",
+            "alias": "Left Scrub",
+            "type": "item",
+            "settings": [
+                {"setting": "Scrubsanity", "value": "Affordable", "required": false},
+                {"setting": "Scrubsanity", "value": "Random", "required": false},
+                {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "LLR Deku Scrub Grotto Center": {
+            "area": "",
+            "lKey": "Lon Lon Ranch -> LLR Grotto",
+            "alias": "Center Scrub",
+            "type": "item",
+            "settings": [
+                {"setting": "Scrubsanity", "value": "Affordable", "required": false},
+                {"setting": "Scrubsanity", "value": "Random", "required": false},
+                {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "LLR Deku Scrub Grotto Right": {
+            "area": "",
+            "lKey": "Lon Lon Ranch -> LLR Grotto",
+            "alias": "Right Scrub",
+            "type": "item",
+            "settings": [
+                {"setting": "Scrubsanity", "value": "Affordable", "required": false},
+                {"setting": "Scrubsanity", "value": "Random", "required": false},
+                {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "LLR GS House Window": {
+            "area": "Lon Lon Ranch",
+            "lKey": "",
+            "alias": "House",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "LLR GS Tree": {
+            "area": "Lon Lon Ranch",
+            "lKey": "",
+            "alias": "Tree Bonk",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "LLR GS Rain Shed": {
+            "area": "Lon Lon Ranch",
+            "lKey": "",
+            "alias": "Back Fence",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "LLR GS Back Wall": {
+            "area": "Lon Lon Ranch",
+            "lKey": "",
+            "alias": "Back Wall",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        }
+    }
+}

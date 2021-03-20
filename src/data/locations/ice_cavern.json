@@ -1,0 +1,170 @@
+{
+    "entrances": {},
+    "locations": {
+        "Ice Cavern Map Chest": {
+            "area": "",
+            "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
+            "alias": "Freezard Chest",
+            "type": "map",
+            "settings": [{"setting": "Ice Cavern MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Ice Cavern Compass Chest": {
+            "area": "",
+            "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
+            "alias": "Keese Chest",
+            "type": "compass",
+            "settings": [{"setting": "Ice Cavern MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Ice Cavern Freestanding PoH": {
+            "area": "",
+            "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
+            "alias": "Freestanding Item",
+            "type": "item",
+            "settings": [{"setting": "Ice Cavern MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Ice Cavern Iron Boots Chest": {
+            "area": "",
+            "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
+            "alias": "Wolfos Chest",
+            "type": "item",
+            "settings": [{"setting": "Ice Cavern MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Ice Cavern MQ Map Chest": {
+            "area": "",
+            "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
+            "alias": "Wolfos Chest",
+            "type": "map",
+            "settings": [{"setting": "Ice Cavern MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Ice Cavern MQ Compass Chest": {
+            "area": "",
+            "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
+            "alias": "Freezard Chest",
+            "type": "compass",
+            "settings": [{"setting": "Ice Cavern MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Ice Cavern MQ Freestanding PoH": {
+            "area": "",
+            "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
+            "alias": "Freestanding Item",
+            "type": "item",
+            "settings": [{"setting": "Ice Cavern MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Ice Cavern MQ Iron Boots Chest": {
+            "area": "",
+            "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
+            "alias": "Stalfos Chest",
+            "type": "item",
+            "settings": [{"setting": "Ice Cavern MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Serenade of Water": {
+            "area": "",
+            "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
+            "alias": "Serenade of Water",
+            "type": "song",
+            "settings": [],
+            "visible": true,
+            "check": ""
+        },
+        "Ice Cavern GS Spinning Scythe Room": {
+            "area": "",
+            "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
+            "alias": "Spinning Blades",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Ice Cavern MQ", "value": false, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Ice Cavern GS Heart Piece Room": {
+            "area": "",
+            "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
+            "alias": "Near Freestanding Item",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Ice Cavern MQ", "value": false, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Ice Cavern GS Push Block Room": {
+            "area": "",
+            "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
+            "alias": "Near Silver Rupees",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Ice Cavern MQ", "value": false, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Ice Cavern MQ GS Red Ice": {
+            "area": "",
+            "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
+            "alias": "Red Ice",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Ice Cavern MQ", "value": true, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Ice Cavern MQ GS Ice Block": {
+            "area": "",
+            "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
+            "alias": "Ice Cage",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Ice Cavern MQ", "value": true, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Ice Cavern MQ GS Scarecrow": {
+            "area": "",
+            "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
+            "alias": "Scarecrow",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Ice Cavern MQ", "value": true, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        }
+    }
+}

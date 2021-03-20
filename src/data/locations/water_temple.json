@@ -1,0 +1,298 @@
+{
+    "entrances": {},
+    "locations": {
+        "Water Temple Compass Chest": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Stinger Chest",
+            "type": "compass",
+            "settings": [{"setting": "Water Temple MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Water Temple Map Chest": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Spiky Ball Chest",
+            "type": "map",
+            "settings": [{"setting": "Water Temple MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Water Temple Cracked Wall Chest": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Cracked Wall Chest",
+            "type": "smallKey",
+            "settings": [{"setting": "Water Temple MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Water Temple Torches Chest": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Torches Chest",
+            "type": "smallKey",
+            "settings": [{"setting": "Water Temple MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Water Temple Boss Key Chest": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Rolling Boulders Chest",
+            "type": "bossKey",
+            "settings": [{"setting": "Water Temple MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Water Temple Central Pillar Chest": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Central Pillar Chest",
+            "type": "smallKey",
+            "settings": [{"setting": "Water Temple MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Water Temple Central Bow Target Chest": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Central Bow Chest",
+            "type": "smallKey",
+            "settings": [{"setting": "Water Temple MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Water Temple Longshot Chest": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Dark Link Chest",
+            "type": "item",
+            "settings": [{"setting": "Water Temple MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Water Temple River Chest": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "River Chest",
+            "type": "smallKey",
+            "settings": [{"setting": "Water Temple MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Water Temple Dragon Chest": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Dragon Chest",
+            "type": "smallKey",
+            "settings": [{"setting": "Water Temple MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Water Temple GS Behind Gate": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Basement",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Water Temple MQ", "value": false, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Water Temple GS Near Boss Key Chest": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Rolling Boulders",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Water Temple MQ", "value": false, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Water Temple GS Central Pillar": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Central Pillar",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Water Temple MQ", "value": false, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Water Temple GS Falling Platform Room": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Dark Link Lobby",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Water Temple MQ", "value": false, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Water Temple GS River": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "River",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Water Temple MQ", "value": false, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Water Temple MQ Longshot Chest": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Cracked Wall Chest",
+            "type": "item",
+            "settings": [{"setting": "Water Temple MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Water Temple MQ Map Chest": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "3 Stalfos Chest",
+            "type": "map",
+            "settings": [{"setting": "Water Temple MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Water Temple MQ Compass Chest": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Torches Chest",
+            "type": "compass",
+            "settings": [{"setting": "Water Temple MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Water Temple MQ Central Pillar Chest": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Central Pillar Chest",
+            "type": "smallKey",
+            "settings": [{"setting": "Water Temple MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Water Temple MQ Boss Key Chest": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Water Jet Torches Chest",
+            "type": "bossKey",
+            "settings": [{"setting": "Water Temple MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Water Temple MQ Freestanding Key": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Scarecrow Freestanding Item",
+            "type": "smallKey",
+            "settings": [{"setting": "Water Temple MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Water Temple MQ GS Lizalfos Hallway": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Crate Behind Gate",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Water Temple MQ", "value": true, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Water Temple MQ GS Before Upper Water Switch": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Near Top Water Level Switch",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Water Temple MQ", "value": true, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Water Temple MQ GS River": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "River",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Water Temple MQ", "value": true, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Water Temple MQ GS Freestanding Key Area": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Invisible Hookshot Target",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Water Temple MQ", "value": true, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Water Temple MQ GS Triple Wall Torch": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Basement",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Water Temple MQ", "value": true, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Water Temple Morpha Heart": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Morpha",
+            "type": "item",
+            "settings": [],
+            "visible": true,
+            "check": ""
+        }
+    }
+}

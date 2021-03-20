@@ -1,0 +1,156 @@
+{
+    "entrances": {
+        "Zoras Fountain -> Jabu Jabus Belly Beginning": {
+            "area": "Zora Fountain",
+            "reverse": "Jabu Jabus Belly Beginning -> Zoras Fountain",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "",
+            "isReverse": false,
+            "alias": "Jabu Jabu's Belly",
+            "reverseAlias": "from Jabu Jabu's Belly",
+            "tag": "",
+            "tagRep": false,
+            "type": "dungeon",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": true
+        },
+        "ZF Ice Ledge -> Ice Cavern Beginning": {
+            "area": "Zora Fountain",
+            "reverse": "Ice Cavern Beginning -> ZF Ice Ledge",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "",
+            "isReverse": false,
+            "alias": "Ice Cavern",
+            "reverseAlias": "from Ice Cavern",
+            "tag": "",
+            "tagRep": false,
+            "type": "dungeon",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": true
+        },
+        "Zoras Fountain -> ZD Behind King Zora": {
+            "area": "Zora Fountain",
+            "reverse": "ZD Behind King Zora -> Zoras Fountain",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "",
+            "isReverse": false,
+            "alias": "Zora's Domain",
+            "reverseAlias": "Zora Fountain",
+            "tag": "",
+            "tagRep": false,
+            "type": "overworld",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": true
+        },
+        "Zoras Fountain -> ZF Great Fairy Fountain": {
+            "area": "Zora Fountain",
+            "reverse": "ZF Great Fairy Fountain -> Zoras Fountain",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "",
+            "isReverse": false,
+            "alias": "Great Fairy Fountain",
+            "reverseAlias": "from Great Fairy Fountain",
+            "tag": "Great Fairy Fountain",
+            "tagRep": false,
+            "type": "interior",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": true
+        }
+    },
+    "locations": {
+        "ZF Great Fairy Reward": {
+            "area": "",
+            "lKey": "Zoras Fountain -> ZF Great Fairy Fountain",
+            "alias": "Fairy Reward",
+            "type": "item",
+            "settings": [],
+            "visible": true,
+            "check": ""
+        },
+        "ZF Iceberg Freestanding PoH": {
+            "area": "Zora Fountain",
+            "lKey": "",
+            "alias": "Iceberg",
+            "type": "item",
+            "settings": [],
+            "visible": true,
+            "check": ""
+        },
+        "ZF Bottom Freestanding PoH": {
+            "area": "Zora Fountain",
+            "lKey": "",
+            "alias": "Bottom",
+            "type": "item",
+            "settings": [],
+            "visible": true,
+            "check": ""
+        },
+        "ZF GS Above the Log": {
+            "area": "Zora Fountain",
+            "lKey": "",
+            "alias": "Above Log",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "ZF GS Tree": {
+            "area": "Zora Fountain",
+            "lKey": "",
+            "alias": "Tree Bonk",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "ZF GS Hidden Cave": {
+            "area": "Zora Fountain",
+            "lKey": "",
+            "alias": "Hidden Cave",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        }
+    }
+}

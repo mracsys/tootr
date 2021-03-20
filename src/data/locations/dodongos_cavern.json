@@ -1,0 +1,374 @@
+{
+    "entrances": {},
+    "locations": {
+        "Dodongos Cavern Map Chest": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Lobby Chest",
+            "type": "map",
+            "settings": [{"setting": "Dodongo's Cavern MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Dodongos Cavern Compass Chest": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Armos Chest",
+            "type": "compass",
+            "settings": [{"setting": "Dodongo's Cavern MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Dodongos Cavern Bomb Flower Platform Chest": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Near Bomb Flower Chest",
+            "type": "item",
+            "settings": [{"setting": "Dodongo's Cavern MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Dodongos Cavern Bomb Bag Chest": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Bomb Bag Chest",
+            "type": "item",
+            "settings": [{"setting": "Dodongo's Cavern MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Dodongos Cavern End of Bridge Chest": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "End of Bridge Chest",
+            "type": "item",
+            "settings": [{"setting": "Dodongo's Cavern MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Dodongos Cavern Deku Scrub Side Room Near Dodongos": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Side Room Scrub",
+            "type": "item",
+            "settings": [
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true},
+                {"setting": "Scrubsanity", "value": "Affordable", "required": false},
+                {"setting": "Scrubsanity", "value": "Random", "required": false},
+                {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Dodongos Cavern Deku Scrub Lobby": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Lobby Scrub",
+            "type": "item",
+            "settings": [
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true},
+                {"setting": "Scrubsanity", "value": "Affordable", "required": false},
+                {"setting": "Scrubsanity", "value": "Random", "required": false},
+                {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Dodongos Cavern Deku Scrub Near Bomb Bag Left": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Top Level Left Scrub",
+            "type": "item",
+            "settings": [
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true},
+                {"setting": "Scrubsanity", "value": "Affordable", "required": false},
+                {"setting": "Scrubsanity", "value": "Random", "required": false},
+                {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Dodongos Cavern Deku Scrub Near Bomb Bag Right": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Top Level Right Scrub",
+            "type": "item",
+            "settings": [
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true},
+                {"setting": "Scrubsanity", "value": "Affordable", "required": false},
+                {"setting": "Scrubsanity", "value": "Random", "required": false},
+                {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Dodongos Cavern GS Side Room Near Lower Lizalfos": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Bombable Wall Near Lobby",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Dodongos Cavern GS Scarecrow": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Scarecrow",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Dodongos Cavern GS Alcove Above Stairs": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Alcove",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Dodongos Cavern GS Vines Above Stairs": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Vines",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Dodongos Cavern GS Back Room": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Back Room",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Dodongos Cavern MQ Map Chest": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Lobby Bombable Wall Chest",
+            "type": "map",
+            "settings": [{"setting": "Dodongo's Cavern MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Dodongos Cavern MQ Bomb Bag Chest": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Bomb Bag Chest",
+            "type": "item",
+            "settings": [{"setting": "Dodongo's Cavern MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Dodongos Cavern MQ Torch Puzzle Room Chest": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Torch Puzzle Chest",
+            "type": "item",
+            "settings": [{"setting": "Dodongo's Cavern MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Dodongos Cavern MQ Larvae Room Chest": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Larvae Room Chest",
+            "type": "item",
+            "settings": [{"setting": "Dodongo's Cavern MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Dodongos Cavern MQ Compass Chest": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Upper Dodongo Chest",
+            "type": "compass",
+            "settings": [{"setting": "Dodongo's Cavern MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Dodongos Cavern MQ Under Grave Chest": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Under Grave Chest",
+            "type": "item",
+            "settings": [{"setting": "Dodongo's Cavern MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Dodongos Cavern MQ Deku Scrub Lobby Front": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Lobby Front Scrub",
+            "type": "item",
+            "settings": [
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true},
+                {"setting": "Scrubsanity", "value": "Affordable", "required": false},
+                {"setting": "Scrubsanity", "value": "Random", "required": false},
+                {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Dodongos Cavern MQ Deku Scrub Lobby Rear": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Lobby Rear Scrub",
+            "type": "item",
+            "settings": [
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true},
+                {"setting": "Scrubsanity", "value": "Affordable", "required": false},
+                {"setting": "Scrubsanity", "value": "Random", "required": false},
+                {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Dodongos Cavern MQ Deku Scrub Side Room Near Lower Lizalfos": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Side Room Scrub",
+            "type": "item",
+            "settings": [
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true},
+                {"setting": "Scrubsanity", "value": "Affordable", "required": false},
+                {"setting": "Scrubsanity", "value": "Random", "required": false},
+                {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Dodongos Cavern MQ Deku Scrub Staircase": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Staircase Scrub",
+            "type": "item",
+            "settings": [
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true},
+                {"setting": "Scrubsanity", "value": "Affordable", "required": false},
+                {"setting": "Scrubsanity", "value": "Random", "required": false},
+                {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Dodongos Cavern MQ GS Scrub Room": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Scrub Room",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Dodongos Cavern MQ GS Larvae Room": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Larvae Room",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Dodongos Cavern MQ GS Lizalfos Room": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Upper Lizalfos Room",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Dodongos Cavern MQ GS Song of Time Block Room": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Song of Time Block Room",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Dodongos Cavern MQ GS Back Area": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Back Room Wall",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Dodongos Cavern Boss Room Chest": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Boss Room Chest",
+            "type": "item",
+            "settings": [],
+            "visible": true,
+            "check": ""
+        },
+        "Dodongos Cavern King Dodongo Heart": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "King Dodongo",
+            "type": "item",
+            "settings": [],
+            "visible": true,
+            "check": ""
+        }
+    }
+}

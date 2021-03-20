@@ -1,0 +1,311 @@
+{
+    "entrances": {
+        "Lake Hylia -> Hyrule Field": {
+            "area": "Lake Hylia",
+            "reverse": "Hyrule Field -> Lake Hylia",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "",
+            "isReverse": false,
+            "alias": "Hyrule Field",
+            "reverseAlias": "Lake Hylia",
+            "tag": "",
+            "tagRep": false,
+            "type": "overworld",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": true
+        },
+        "Lake Hylia -> Zoras Domain": {
+            "area": "Lake Hylia",
+            "reverse": "Zoras Domain -> Lake Hylia",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "",
+            "isReverse": false,
+            "alias": "Zora's Domain",
+            "reverseAlias": "Lake Hylia",
+            "tag": "",
+            "tagRep": false,
+            "type": "overworld",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": true
+        },
+        "Lake Hylia -> Water Temple Lobby": {
+            "area": "Lake Hylia",
+            "reverse": "Water Temple Lobby -> Lake Hylia",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "",
+            "isReverse": false,
+            "alias": "Water Temple",
+            "reverseAlias": "from Water Temple",
+            "tag": "",
+            "tagRep": false,
+            "type": "dungeon",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": true
+        },
+        "LH Owl Flight -> Hyrule Field": {
+            "area": "Hyrule Field",
+            "reverse": "",
+            "oneWay": true,
+            "oneWayArea": "Lake Hylia",
+            "connector": "",
+            "isReverse": false,
+            "alias": "Hyrule Field Owl Drop",
+            "reverseAlias": "",
+            "tag": "",
+            "tagRep": false,
+            "type": "owldrop",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": true
+        },
+        "Lake Hylia -> LH Grotto": {
+            "area": "Lake Hylia",
+            "reverse": "LH Grotto -> Lake Hylia",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "",
+            "isReverse": false,
+            "alias": "Grave",
+            "reverseAlias": "from Grave",
+            "tag": "3 Scrub Grotto",
+            "tagRep": true,
+            "type": "grotto",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": true
+        },
+        "Lake Hylia -> LH Lab": {
+            "area": "Lake Hylia",
+            "reverse": "LH Lab -> Lake Hylia",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "",
+            "isReverse": false,
+            "alias": "Lakeside Laboratory",
+            "reverseAlias": "from Lakeside Laboratory",
+            "tag": "",
+            "tagRep": false,
+            "type": "interior",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": true
+        },
+        "LH Fishing Island -> LH Fishing Hole": {
+            "area": "Lake Hylia",
+            "reverse": "LH Fishing Hole -> LH Fishing Island",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "",
+            "isReverse": false,
+            "alias": "Fishing Hole",
+            "reverseAlias": "from Fishing Hole",
+            "tag": "",
+            "tagRep": false,
+            "type": "interior",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": true
+        }
+    },
+    "locations": {
+        "LH Underwater Item": {
+            "area": "Lake Hylia",
+            "lKey": "",
+            "alias": "Underwater Item",
+            "type": "item",
+            "settings": [],
+            "visible": true,
+            "check": ""
+        },
+        "LH Freestanding PoH": {
+            "area": "Lake Hylia",
+            "lKey": "",
+            "alias": "Top of Lab",
+            "type": "item",
+            "settings": [],
+            "visible": true,
+            "check": ""
+        },
+        "LH Sun": {
+            "area": "Lake Hylia",
+            "lKey": "",
+            "alias": "Shoot the Sun",
+            "type": "item",
+            "settings": [],
+            "visible": true,
+            "check": ""
+        },
+        "LH Child Fishing": {
+            "area": "",
+            "lKey": "LH Fishing Island -> LH Fishing Hole",
+            "alias": "Child Fishing",
+            "type": "item",
+            "settings": [],
+            "visible": true,
+            "check": ""
+        },
+        "LH Adult Fishing": {
+            "area": "",
+            "lKey": "LH Fishing Island -> LH Fishing Hole",
+            "alias": "Adult Fishing",
+            "type": "item",
+            "settings": [],
+            "visible": true,
+            "check": ""
+        },
+        "LH Lab Dive": {
+            "area": "",
+            "lKey": "Lake Hylia -> LH Lab",
+            "alias": "Lab Dive",
+            "type": "item",
+            "settings": [],
+            "visible": true,
+            "check": ""
+        },
+        "LH Deku Scrub Grotto Left": {
+            "area": "",
+            "lKey": "Lake Hylia -> LH Grotto",
+            "alias": "Left Scrub",
+            "type": "item",
+            "settings": [
+                {"setting": "Scrubsanity", "value": "Affordable", "required": false},
+                {"setting": "Scrubsanity", "value": "Random", "required": false},
+                {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "LH Deku Scrub Grotto Center": {
+            "area": "",
+            "lKey": "Lake Hylia -> LH Grotto",
+            "alias": "Center Scrub",
+            "type": "item",
+            "settings": [
+                {"setting": "Scrubsanity", "value": "Affordable", "required": false},
+                {"setting": "Scrubsanity", "value": "Random", "required": false},
+                {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "LH Deku Scrub Grotto Right": {
+            "area": "",
+            "lKey": "Lake Hylia -> LH Grotto",
+            "alias": "Right Scrub",
+            "type": "item",
+            "settings": [
+                {"setting": "Scrubsanity", "value": "Affordable", "required": false},
+                {"setting": "Scrubsanity", "value": "Random", "required": false},
+                {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "LH GS Bean Patch": {
+            "area": "Lake Hylia",
+            "lKey": "",
+            "alias": "Bean Patch",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "LH GS Lab Wall": {
+            "area": "Lake Hylia",
+            "lKey": "",
+            "alias": "Lab Wall",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "LH GS Small Island": {
+            "area": "Lake Hylia",
+            "lKey": "",
+            "alias": "Near Sun Reward",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "LH GS Tree": {
+            "area": "Lake Hylia",
+            "lKey": "",
+            "alias": "Top of Tree",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "LH GS Lab Crate": {
+            "area": "",
+            "lKey": "Lake Hylia -> LH Lab",
+            "alias": "Lab Crate",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        }
+    }
+}

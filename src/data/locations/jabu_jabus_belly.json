@@ -1,0 +1,278 @@
+{
+    "entrances": {},
+    "locations": {
+        "Jabu Jabus Belly Boomerang Chest": {
+            "area": "",
+            "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
+            "alias": "Boomerang Chest",
+            "type": "item",
+            "settings": [{"setting": "Jabu Jabu's Belly MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Jabu Jabus Belly Map Chest": {
+            "area": "",
+            "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
+            "alias": "Red Tentacle Chest",
+            "type": "map",
+            "settings": [{"setting": "Jabu Jabu's Belly MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Jabu Jabus Belly Compass Chest": {
+            "area": "",
+            "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
+            "alias": "Bubble Chest",
+            "type": "compass",
+            "settings": [{"setting": "Jabu Jabu's Belly MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Jabu Jabus Belly Deku Scrub": {
+            "area": "",
+            "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
+            "alias": "Basement Scrub",
+            "type": "item",
+            "settings": [
+                {"setting": "Jabu Jabu's Belly MQ", "value": false, "required": true},
+                {"setting": "Scrubsanity", "value": "Affordable", "required": false},
+                {"setting": "Scrubsanity", "value": "Random", "required": false},
+                {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Jabu Jabus Belly GS Water Switch Room": {
+            "area": "",
+            "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
+            "alias": "Basement Vines",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Jabu Jabu's Belly MQ", "value": false, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Jabu Jabus Belly GS Lobby Basement Lower": {
+            "area": "",
+            "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
+            "alias": "Basement Lower Wall",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Jabu Jabu's Belly MQ", "value": false, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Jabu Jabus Belly GS Lobby Basement Upper": {
+            "area": "",
+            "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
+            "alias": "Basement Upper Wall",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Jabu Jabu's Belly MQ", "value": false, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Jabu Jabus Belly GS Near Boss": {
+            "area": "",
+            "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
+            "alias": "Boss Lobby",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Jabu Jabu's Belly MQ", "value": false, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Jabu Jabus Belly MQ Map Chest": {
+            "area": "",
+            "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
+            "alias": "Octorock Boulder Chest",
+            "type": "map",
+            "settings": [{"setting": "Jabu Jabu's Belly MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Jabu Jabus Belly MQ First Room Side Chest": {
+            "area": "",
+            "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
+            "alias": "Lobby Cow Switch Chest",
+            "type": "item",
+            "settings": [{"setting": "Jabu Jabu's Belly MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Jabu Jabus Belly MQ Second Room Lower Chest": {
+            "area": "",
+            "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
+            "alias": "Near Elevator Chest",
+            "type": "item",
+            "settings": [{"setting": "Jabu Jabu's Belly MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Jabu Jabus Belly MQ Compass Chest": {
+            "area": "",
+            "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
+            "alias": "Diving Cow Chest",
+            "type": "compass",
+            "settings": [{"setting": "Jabu Jabu's Belly MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Jabu Jabus Belly MQ Basement Near Switches Chest": {
+            "area": "",
+            "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
+            "alias": "Basement Cow Chest 1",
+            "type": "item",
+            "settings": [{"setting": "Jabu Jabu's Belly MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Jabu Jabus Belly MQ Basement Near Vines Chest": {
+            "area": "",
+            "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
+            "alias": "Basement Cow Chest 2",
+            "type": "item",
+            "settings": [{"setting": "Jabu Jabu's Belly MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Jabu Jabus Belly MQ Boomerang Room Small Chest": {
+            "area": "",
+            "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
+            "alias": "Boomerang Room Small Chest",
+            "type": "item",
+            "settings": [{"setting": "Jabu Jabu's Belly MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Jabu Jabus Belly MQ Boomerang Chest": {
+            "area": "",
+            "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
+            "alias": "Boomerang Chest",
+            "type": "item",
+            "settings": [{"setting": "Jabu Jabu's Belly MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Jabu Jabus Belly MQ Falling Like Like Room Chest": {
+            "area": "",
+            "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
+            "alias": "Like Like Trap Chest",
+            "type": "item",
+            "settings": [{"setting": "Jabu Jabu's Belly MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Jabu Jabus Belly MQ Second Room Upper Chest": {
+            "area": "",
+            "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
+            "alias": "Near Boss Lobby Chest",
+            "type": "item",
+            "settings": [{"setting": "Jabu Jabu's Belly MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Jabu Jabus Belly MQ Near Boss Chest": {
+            "area": "",
+            "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
+            "alias": "Boss Lobby Chest",
+            "type": "item",
+            "settings": [{"setting": "Jabu Jabu's Belly MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Jabu Jabus Belly MQ Cow": {
+            "area": "",
+            "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
+            "alias": "After Big Octo Cow",
+            "type": "item",
+            "settings": [
+                {"setting": "Jabu Jabu's Belly MQ", "value": true, "required": true},
+                {"setting": "Cowsanity", "value": "On", "required": true}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Jabu Jabus Belly MQ GS Boomerang Chest Room": {
+            "area": "",
+            "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
+            "alias": "Song of Time Block",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Jabu Jabu's Belly MQ", "value": true, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Jabu Jabus Belly MQ GS Tailpasaran Room": {
+            "area": "",
+            "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
+            "alias": "Water Jet",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Jabu Jabu's Belly MQ", "value": true, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Jabu Jabus Belly MQ GS Invisible Enemies Room": {
+            "area": "",
+            "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
+            "alias": "Invisible Enemies",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Jabu Jabu's Belly MQ", "value": true, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Jabu Jabus Belly MQ GS Near Boss": {
+            "area": "",
+            "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
+            "alias": "Boss Lobby",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Jabu Jabu's Belly MQ", "value": true, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Jabu Jabus Belly Barinade Heart": {
+            "area": "",
+            "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
+            "alias": "Barinade",
+            "type": "item",
+            "settings": [],
+            "visible": true,
+            "check": ""
+        }
+    }
+}

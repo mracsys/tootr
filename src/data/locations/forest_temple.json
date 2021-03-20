@@ -1,0 +1,379 @@
+{
+    "entrances": {},
+    "locations": {
+        "Forest Temple First Room Chest": {
+            "area": "",
+            "lKey": "SFM Forest Temple Entrance Ledge -> Forest Temple Lobby",
+            "alias": "Tree Chest",
+            "type": "smallKey",
+            "settings": [{"setting": "Forest Temple MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Forest Temple First Stalfos Chest": {
+            "area": "",
+            "lKey": "SFM Forest Temple Entrance Ledge -> Forest Temple Lobby",
+            "alias": "Stalfos 1F Chest",
+            "type": "smallKey",
+            "settings": [{"setting": "Forest Temple MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Forest Temple Raised Island Courtyard Chest": {
+            "area": "",
+            "lKey": "SFM Forest Temple Entrance Ledge -> Forest Temple Lobby",
+            "alias": "Island Chest",
+            "type": "item",
+            "settings": [{"setting": "Forest Temple MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Forest Temple Map Chest": {
+            "area": "",
+            "lKey": "SFM Forest Temple Entrance Ledge -> Forest Temple Lobby",
+            "alias": "Bubble Chest",
+            "type": "map",
+            "settings": [{"setting": "Forest Temple MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Forest Temple Well Chest": {
+            "area": "",
+            "lKey": "SFM Forest Temple Entrance Ledge -> Forest Temple Lobby",
+            "alias": "Well Chest",
+            "type": "smallKey",
+            "settings": [{"setting": "Forest Temple MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Forest Temple Eye Switch Chest": {
+            "area": "",
+            "lKey": "SFM Forest Temple Entrance Ledge -> Forest Temple Lobby",
+            "alias": "Eye Switch Chest",
+            "type": "item",
+            "settings": [{"setting": "Forest Temple MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Forest Temple Boss Key Chest": {
+            "area": "",
+            "lKey": "SFM Forest Temple Entrance Ledge -> Forest Temple Lobby",
+            "alias": "Boss Key Chest",
+            "type": "bossKey",
+            "settings": [{"setting": "Forest Temple MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Forest Temple Floormaster Chest": {
+            "area": "",
+            "lKey": "SFM Forest Temple Entrance Ledge -> Forest Temple Lobby",
+            "alias": "Floormaster Chest",
+            "type": "smallKey",
+            "settings": [{"setting": "Forest Temple MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Forest Temple Red Poe Chest": {
+            "area": "",
+            "lKey": "SFM Forest Temple Entrance Ledge -> Forest Temple Lobby",
+            "alias": "Red Poe Chest",
+            "type": "smallKey",
+            "settings": [{"setting": "Forest Temple MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Forest Temple Bow Chest": {
+            "area": "",
+            "lKey": "SFM Forest Temple Entrance Ledge -> Forest Temple Lobby",
+            "alias": "Stalfos 2F Chest",
+            "type": "item",
+            "settings": [{"setting": "Forest Temple MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Forest Temple Blue Poe Chest": {
+            "area": "",
+            "lKey": "SFM Forest Temple Entrance Ledge -> Forest Temple Lobby",
+            "alias": "Blue Poe Chest",
+            "type": "compass",
+            "settings": [{"setting": "Forest Temple MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Forest Temple Falling Ceiling Room Chest": {
+            "area": "",
+            "lKey": "SFM Forest Temple Entrance Ledge -> Forest Temple Lobby",
+            "alias": "Falling Ceiling Chest",
+            "type": "item",
+            "settings": [{"setting": "Forest Temple MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Forest Temple Basement Chest": {
+            "area": "",
+            "lKey": "SFM Forest Temple Entrance Ledge -> Forest Temple Lobby",
+            "alias": "Basement Chest",
+            "type": "item",
+            "settings": [{"setting": "Forest Temple MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Forest Temple GS First Room": {
+            "area": "",
+            "lKey": "SFM Forest Temple Entrance Ledge -> Forest Temple Lobby",
+            "alias": "Vines",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Forest Temple MQ", "value": false, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Forest Temple GS Lobby": {
+            "area": "",
+            "lKey": "SFM Forest Temple Entrance Ledge -> Forest Temple Lobby",
+            "alias": "Lobby Wall",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Forest Temple MQ", "value": false, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Forest Temple GS Raised Island Courtyard": {
+            "area": "",
+            "lKey": "SFM Forest Temple Entrance Ledge -> Forest Temple Lobby",
+            "alias": "Island",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Forest Temple MQ", "value": false, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Forest Temple GS Level Island Courtyard": {
+            "area": "",
+            "lKey": "SFM Forest Temple Entrance Ledge -> Forest Temple Lobby",
+            "alias": "Columns",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Forest Temple MQ", "value": false, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Forest Temple GS Basement": {
+            "area": "",
+            "lKey": "SFM Forest Temple Entrance Ledge -> Forest Temple Lobby",
+            "alias": "Basement",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Forest Temple MQ", "value": false, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Forest Temple MQ First Room Chest": {
+            "area": "",
+            "lKey": "SFM Forest Temple Entrance Ledge -> Forest Temple Lobby",
+            "alias": "Tree Chest",
+            "type": "smallKey",
+            "settings": [{"setting": "Forest Temple MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Forest Temple MQ Wolfos Chest": {
+            "area": "",
+            "lKey": "SFM Forest Temple Entrance Ledge -> Forest Temple Lobby",
+            "alias": "Wolfos Chest",
+            "type": "smallKey",
+            "settings": [{"setting": "Forest Temple MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Forest Temple MQ Well Chest": {
+            "area": "",
+            "lKey": "SFM Forest Temple Entrance Ledge -> Forest Temple Lobby",
+            "alias": "Well Chest",
+            "type": "smallKey",
+            "settings": [{"setting": "Forest Temple MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Forest Temple MQ Raised Island Courtyard Lower Chest": {
+            "area": "",
+            "lKey": "SFM Forest Temple Entrance Ledge -> Forest Temple Lobby",
+            "alias": "Island Chest",
+            "type": "smallKey",
+            "settings": [{"setting": "Forest Temple MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Forest Temple MQ Raised Island Courtyard Upper Chest": {
+            "area": "",
+            "lKey": "SFM Forest Temple Entrance Ledge -> Forest Temple Lobby",
+            "alias": "Balcony Chest",
+            "type": "smallKey",
+            "settings": [{"setting": "Forest Temple MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Forest Temple MQ Boss Key Chest": {
+            "area": "",
+            "lKey": "SFM Forest Temple Entrance Ledge -> Forest Temple Lobby",
+            "alias": "Boss Key Chest",
+            "type": "bossKey",
+            "settings": [{"setting": "Forest Temple MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Forest Temple MQ Redead Chest": {
+            "area": "",
+            "lKey": "SFM Forest Temple Entrance Ledge -> Forest Temple Lobby",
+            "alias": "Redead Chest",
+            "type": "smallKey",
+            "settings": [{"setting": "Forest Temple MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Forest Temple MQ Map Chest": {
+            "area": "",
+            "lKey": "SFM Forest Temple Entrance Ledge -> Forest Temple Lobby",
+            "alias": "Red Poe Chest",
+            "type": "map",
+            "settings": [{"setting": "Forest Temple MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Forest Temple MQ Bow Chest": {
+            "area": "",
+            "lKey": "SFM Forest Temple Entrance Ledge -> Forest Temple Lobby",
+            "alias": "Stalfos Chest",
+            "type": "item",
+            "settings": [{"setting": "Forest Temple MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Forest Temple MQ Compass Chest": {
+            "area": "",
+            "lKey": "SFM Forest Temple Entrance Ledge -> Forest Temple Lobby",
+            "alias": "Blue Poe Chest",
+            "type": "compass",
+            "settings": [{"setting": "Forest Temple MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Forest Temple MQ Falling Ceiling Room Chest": {
+            "area": "",
+            "lKey": "SFM Forest Temple Entrance Ledge -> Forest Temple Lobby",
+            "alias": "Falling Ceiling Chest",
+            "type": "item",
+            "settings": [{"setting": "Forest Temple MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Forest Temple MQ Basement Chest": {
+            "area": "",
+            "lKey": "SFM Forest Temple Entrance Ledge -> Forest Temple Lobby",
+            "alias": "Basement Chest",
+            "type": "item",
+            "settings": [{"setting": "Forest Temple MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Forest Temple MQ GS First Hallway": {
+            "area": "",
+            "lKey": "SFM Forest Temple Entrance Ledge -> Forest Temple Lobby",
+            "alias": "Hallway",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Forest Temple MQ", "value": true, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Forest Temple MQ GS Raised Island Courtyard": {
+            "area": "",
+            "lKey": "SFM Forest Temple Entrance Ledge -> Forest Temple Lobby",
+            "alias": "Archway",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Forest Temple MQ", "value": true, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Forest Temple MQ GS Level Island Courtyard": {
+            "area": "",
+            "lKey": "SFM Forest Temple Entrance Ledge -> Forest Temple Lobby",
+            "alias": "Top of Well",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Forest Temple MQ", "value": true, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Forest Temple MQ GS Well": {
+            "area": "",
+            "lKey": "SFM Forest Temple Entrance Ledge -> Forest Temple Lobby",
+            "alias": "Well Grate",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Forest Temple MQ", "value": true, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Forest Temple MQ GS Block Push Room": {
+            "area": "",
+            "lKey": "SFM Forest Temple Entrance Ledge -> Forest Temple Lobby",
+            "alias": "Block Push Room",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Forest Temple MQ", "value": true, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Forest Temple Phantom Ganon Heart": {
+            "area": "",
+            "lKey": "SFM Forest Temple Entrance Ledge -> Forest Temple Lobby",
+            "alias": "Phantom Ganon",
+            "type": "item",
+            "settings": [],
+            "visible": true,
+            "check": ""
+        }
+    }
+}

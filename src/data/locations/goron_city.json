@@ -1,0 +1,302 @@
+{
+    "entrances": {
+        "GC Woods Warp -> Lost Woods": {
+            "area": "Goron City",
+            "reverse": "Lost Woods -> GC Woods Warp",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "",
+            "isReverse": false,
+            "alias": "Lost Woods",
+            "reverseAlias": "Goron City",
+            "tag": "",
+            "tagRep": false,
+            "type": "overworld",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": true
+        },
+        "Goron City -> Death Mountain": {
+            "area": "Goron City",
+            "reverse": "Death Mountain -> Goron City",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "",
+            "isReverse": false,
+            "alias": "Death Mountain Trail",
+            "reverseAlias": "Goron City",
+            "tag": "",
+            "tagRep": false,
+            "type": "overworld",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": true
+        },
+        "GC Darunias Chamber -> DMC Lower Local": {
+            "area": "Goron City",
+            "reverse": "DMC Lower Nearby -> GC Darunias Chamber",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "",
+            "isReverse": false,
+            "alias": "Death Mountain Crater",
+            "reverseAlias": "Goron City",
+            "tag": "",
+            "tagRep": false,
+            "type": "overworld",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": true
+        },
+        "GC Grotto Platform -> GC Grotto": {
+            "area": "Goron City",
+            "reverse": "GC Grotto -> GC Grotto Platform",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "",
+            "isReverse": false,
+            "alias": "Open Grotto",
+            "reverseAlias": "from Open Grotto",
+            "tag": "3 Scrub Grotto",
+            "tagRep": false,
+            "type": "grotto",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": true
+        },
+        "Goron City -> GC Shop": {
+            "area": "Goron City",
+            "reverse": "GC Shop -> Goron City",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "",
+            "isReverse": false,
+            "alias": "Goron Shop",
+            "reverseAlias": "from Goron Shop",
+            "tag": "Shop",
+            "tagRep": false,
+            "type": "interior",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": true
+        }
+    },
+    "locations": {
+        "GC Darunias Joy": {
+            "area": "Goron City",
+            "lKey": "",
+            "alias": "Darunia's Joy",
+            "type": "item",
+            "settings": [],
+            "visible": true,
+            "check": ""
+        },
+        "GC Pot Freestanding PoH": {
+            "area": "Goron City",
+            "lKey": "",
+            "alias": "Spinning Pot",
+            "type": "item",
+            "settings": [],
+            "visible": true,
+            "check": ""
+        },
+        "GC Rolling Goron as Child": {
+            "area": "Goron City",
+            "lKey": "",
+            "alias": "Hot Rod Goron",
+            "type": "item",
+            "settings": [],
+            "visible": true,
+            "check": ""
+        },
+        "GC Rolling Goron as Adult": {
+            "area": "Goron City",
+            "lKey": "",
+            "alias": "Link the Goron",
+            "type": "item",
+            "settings": [],
+            "visible": true,
+            "check": ""
+        },
+        "GC Medigoron": {
+            "area": "Goron City",
+            "lKey": "",
+            "alias": "Link the Goron",
+            "type": "item",
+            "settings": [{"setting": "Shuffle Merchants", "value": "On", "required": false}],
+            "visible": true,
+            "check": ""
+        },
+        "GC Maze Left Chest": {
+            "area": "Goron City",
+            "lKey": "",
+            "alias": "Boulder Maze Left",
+            "type": "item",
+            "settings": [],
+            "visible": true,
+            "check": ""
+        },
+        "GC Maze Right Chest": {
+            "area": "Goron City",
+            "lKey": "",
+            "alias": "Boulder Maze Right",
+            "type": "item",
+            "settings": [],
+            "visible": true,
+            "check": ""
+        },
+        "GC Maze Center Chest": {
+            "area": "Goron City",
+            "lKey": "",
+            "alias": "Boulder Maze Center",
+            "type": "item",
+            "settings": [],
+            "visible": true,
+            "check": ""
+        },
+        "GC Deku Scrub Grotto Left": {
+            "area": "",
+            "lKey": "GC Grotto Platform -> GC Grotto",
+            "alias": "Left Scrub",
+            "type": "item",
+            "settings": [
+                {"setting": "Scrubsanity", "value": "Affordable", "required": false},
+                {"setting": "Scrubsanity", "value": "Random", "required": false},
+                {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "GC Deku Scrub Grotto Center": {
+            "area": "",
+            "lKey": "GC Grotto Platform -> GC Grotto",
+            "alias": "Center Scrub",
+            "type": "item",
+            "settings": [
+                {"setting": "Scrubsanity", "value": "Affordable", "required": false},
+                {"setting": "Scrubsanity", "value": "Random", "required": false},
+                {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "GC Deku Scrub Grotto Right": {
+            "area": "",
+            "lKey": "GC Grotto Platform -> GC Grotto",
+            "alias": "Right Scrub",
+            "type": "item",
+            "settings": [
+                {"setting": "Scrubsanity", "value": "Affordable", "required": false},
+                {"setting": "Scrubsanity", "value": "Random", "required": false},
+                {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "GC GS Center Platform": {
+            "area": "Goron City",
+            "lKey": "",
+            "alias": "Center Platform",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "GC GS Boulder Maze": {
+            "area": "Goron City",
+            "lKey": "",
+            "alias": "Boulder Maze",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "GC Shop Item 1": {
+            "area": "",
+            "lKey": "Goron City -> GC Shop",
+            "alias": "Shop Item 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shopsanity", "value": "1 Item", "required": false},
+                {"setting": "Shopsanity", "value": "2 Items", "required": false},
+                {"setting": "Shopsanity", "value": "3 Items", "required": false},
+                {"setting": "Shopsanity", "value": "4 Items", "required": false},
+                {"setting": "Shopsanity", "value": "Random", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "GC Shop Item 2": {
+            "area": "",
+            "lKey": "Goron City -> GC Shop",
+            "alias": "Shop Item 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shopsanity", "value": "2 Items", "required": false},
+                {"setting": "Shopsanity", "value": "3 Items", "required": false},
+                {"setting": "Shopsanity", "value": "4 Items", "required": false},
+                {"setting": "Shopsanity", "value": "Random", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "GC Shop Item 3": {
+            "area": "",
+            "lKey": "Goron City -> GC Shop",
+            "alias": "Shop Item 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shopsanity", "value": "3 Items", "required": false},
+                {"setting": "Shopsanity", "value": "4 Items", "required": false},
+                {"setting": "Shopsanity", "value": "Random", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "GC Shop Item 4": {
+            "area": "",
+            "lKey": "Goron City -> GC Shop",
+            "alias": "Shop Item 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shopsanity", "value": "4 Items", "required": false},
+                {"setting": "Shopsanity", "value": "Random", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        }
+    }
+}

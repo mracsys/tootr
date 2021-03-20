@@ -1,0 +1,224 @@
+{
+    "entrances": {
+        "ZD Eyeball Frog Timeout -> Zoras Domain": {
+            "area": "Zora's Domain",
+            "reverse": "",
+            "oneWay": true,
+            "oneWayArea": "",
+            "connector": "",
+            "isReverse": false,
+            "alias": "Eyeball Frog Timeout",
+            "reverseAlias": "",
+            "tag": "",
+            "tagRep": false,
+            "type": "extra",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "shuffled": true
+        },
+        "Zoras Domain -> Lake Hylia": {
+            "area": "Zora's Domain",
+            "reverse": "Lake Hylia -> Zoras Domain",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "",
+            "isReverse": false,
+            "alias": "Lake Hylia",
+            "reverseAlias": "Zora's Domain",
+            "tag": "",
+            "tagRep": false,
+            "type": "overworld",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": true
+        },
+        "Zoras Domain -> ZR Behind Waterfall": {
+            "area": "Zora's Domain",
+            "reverse": "ZR Behind Waterfall -> Zoras Domain",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "",
+            "isReverse": false,
+            "alias": "Zora River",
+            "reverseAlias": "Zora's Domain",
+            "tag": "",
+            "tagRep": false,
+            "type": "overworld",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": true
+        },
+        "ZD Behind King Zora -> Zoras Fountain": {
+            "area": "Zora's Domain",
+            "reverse": "Zoras Fountain -> ZD Behind King Zora",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "",
+            "isReverse": false,
+            "alias": "Zora Fountain",
+            "reverseAlias": "Zora's Domain",
+            "tag": "",
+            "tagRep": false,
+            "type": "overworld",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": true
+        },
+        "Zoras Domain -> ZD Storms Grotto": {
+            "area": "Zora's Domain",
+            "reverse": "ZD Storms Grotto -> Zoras Domain",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "",
+            "isReverse": false,
+            "alias": "Storms Grotto",
+            "reverseAlias": "from Storms Grotto",
+            "tag": "Fairy Fountain",
+            "tagRep": false,
+            "type": "grotto",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": true
+        },
+        "Zoras Domain -> ZD Shop": {
+            "area": "Zora's Domain",
+            "reverse": "ZD Shop -> Zoras Domain",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "",
+            "isReverse": false,
+            "alias": "Zora Shop",
+            "reverseAlias": "from Zora Shop",
+            "tag": "Shop",
+            "tagRep": false,
+            "type": "interior",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": true
+        }
+    },
+    "locations": {
+        "ZD Diving Minigame": {
+            "area": "Zora's Domain",
+            "lKey": "",
+            "alias": "Diving Minigame",
+            "type": "item",
+            "settings": [],
+            "visible": true,
+            "check": ""
+        },
+        "ZD Chest": {
+            "area": "Zora's Domain",
+            "lKey": "",
+            "alias": "Torch Run",
+            "type": "item",
+            "settings": [],
+            "visible": true,
+            "check": ""
+        },
+        "ZD King Zora Thawed": {
+            "area": "Zora's Domain",
+            "lKey": "",
+            "alias": "King Zora",
+            "type": "item",
+            "settings": [],
+            "visible": true,
+            "check": ""
+        },
+        "ZD GS Frozen Waterfall": {
+            "area": "Zora's Domain",
+            "lKey": "",
+            "alias": "Frozen Waterfall",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "ZD Shop Item 1": {
+            "area": "",
+            "lKey": "Zoras Domain -> ZD Shop",
+            "alias": "Shop Item 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shopsanity", "value": "1 Item", "required": false},
+                {"setting": "Shopsanity", "value": "2 Items", "required": false},
+                {"setting": "Shopsanity", "value": "3 Items", "required": false},
+                {"setting": "Shopsanity", "value": "4 Items", "required": false},
+                {"setting": "Shopsanity", "value": "Random", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "ZD Shop Item 2": {
+            "area": "",
+            "lKey": "Zoras Domain -> ZD Shop",
+            "alias": "Shop Item 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shopsanity", "value": "2 Items", "required": false},
+                {"setting": "Shopsanity", "value": "3 Items", "required": false},
+                {"setting": "Shopsanity", "value": "4 Items", "required": false},
+                {"setting": "Shopsanity", "value": "Random", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "ZD Shop Item 3": {
+            "area": "",
+            "lKey": "Zoras Domain -> ZD Shop",
+            "alias": "Shop Item 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shopsanity", "value": "3 Items", "required": false},
+                {"setting": "Shopsanity", "value": "4 Items", "required": false},
+                {"setting": "Shopsanity", "value": "Random", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "ZD Shop Item 4": {
+            "area": "",
+            "lKey": "Zoras Domain -> ZD Shop",
+            "alias": "Shop Item 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shopsanity", "value": "4 Items", "required": false},
+                {"setting": "Shopsanity", "value": "Random", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        }
+    }
+}

@@ -1,0 +1,246 @@
+{
+    "entrances": {
+        "Gerudo Valley -> Hyrule Field": {
+            "area": "Gerudo Valley",
+            "reverse": "Hyrule Field -> Gerudo Valley",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "",
+            "isReverse": false,
+            "alias": "Hyrule Field",
+            "reverseAlias": "Gerudo Valley",
+            "tag": "",
+            "tagRep": false,
+            "type": "overworld",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": true
+        },
+        "GV Fortress Side -> Gerudo Fortress": {
+            "area": "Gerudo Valley",
+            "reverse": "Gerudo Fortress -> GV Fortress Side",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "",
+            "isReverse": false,
+            "alias": "Gerudo Fortress",
+            "reverseAlias": "Gerudo Valley",
+            "tag": "",
+            "tagRep": false,
+            "type": "overworld",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": true
+        },
+        "GV Lower Stream -> Lake Hylia": {
+            "area": "Lake Hylia",
+            "reverse": "",
+            "oneWay": true,
+            "oneWayArea": "Gerudo Valley",
+            "connector": "",
+            "isReverse": false,
+            "alias": "Gerudo Valley",
+            "reverseAlias": "Lake Hylia",
+            "tag": "",
+            "tagRep": false,
+            "type": "overworld",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": true
+        },
+        "GV Fortress Side -> GV Storms Grotto": {
+            "area": "Gerudo Valley",
+            "reverse": "GV Storms Grotto -> GV Fortress Side",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "",
+            "isReverse": false,
+            "alias": "Storms Grotto",
+            "reverseAlias": "from Storms Grotto",
+            "tag": "2 Scrub Grotto",
+            "tagRep": false,
+            "type": "grotto",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": true
+        },
+        "GV Grotto Ledge -> GV Octorok Grotto": {
+            "area": "Gerudo Valley",
+            "reverse": "GV Octorok Grotto -> GV Grotto Ledge",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "",
+            "isReverse": false,
+            "alias": "Silver Boulder Grotto",
+            "reverseAlias": "from Silver Boulder Grotto",
+            "tag": "Octorock Grotto",
+            "tagRep": true,
+            "type": "grotto",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": true
+        },
+        "GV Fortress Side -> GV Carpenter Tent": {
+            "area": "Gerudo Valley",
+            "reverse": "GV Carpenter Tent -> GV Fortress Side",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "",
+            "isReverse": false,
+            "alias": "Carpenter Tent",
+            "reverseAlias": "from Carpenter Tent",
+            "tag": "House",
+            "tagRep": false,
+            "type": "interior",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": true
+        }
+    },
+    "locations": {
+        "GV GS Bean Patch": {
+            "area": "Gerudo Valley",
+            "lKey": "",
+            "alias": "Bean Patch",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "GV GS Small Bridge": {
+            "area": "Gerudo Valley",
+            "lKey": "",
+            "alias": "Near Board Bridge",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "GV GS Behind Tent": {
+            "area": "Gerudo Valley",
+            "lKey": "",
+            "alias": "Behind Tent",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "GV GS Pillar": {
+            "area": "Gerudo Valley",
+            "lKey": "",
+            "alias": "Pillar",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "GV Cow": {
+            "area": "Gerudo Valley",
+            "lKey": "",
+            "alias": "Valley Cow",
+            "type": "item",
+            "settings": [{"setting": "Cowsanity", "value": "On", "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "GV Crate Freestanding PoH": {
+            "area": "Gerudo Valley",
+            "lKey": "",
+            "alias": "Crate Item",
+            "type": "item",
+            "settings": [],
+            "visible": true,
+            "check": ""
+        },
+        "GV Waterfall Freestanding PoH": {
+            "area": "Gerudo Valley",
+            "lKey": "",
+            "alias": "Waterfall Item",
+            "type": "item",
+            "settings": [],
+            "visible": true,
+            "check": ""
+        },
+        "GV Chest": {
+            "area": "Gerudo Valley",
+            "lKey": "",
+            "alias": "Hammer Rocks",
+            "type": "item",
+            "settings": [],
+            "visible": true,
+            "check": ""
+        },
+        "GV Deku Scrub Grotto Front": {
+            "area": "",
+            "lKey": "GV Fortress Side -> GV Storms Grotto",
+            "alias": "Right Scrub",
+            "type": "item",
+            "settings": [
+                {"setting": "Scrubsanity", "value": "Affordable", "required": false},
+                {"setting": "Scrubsanity", "value": "Random", "required": false},
+                {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "GV Deku Scrub Grotto Rear": {
+            "area": "",
+            "lKey": "GV Fortress Side -> GV Storms Grotto",
+            "alias": "Left Scrub",
+            "type": "item",
+            "settings": [
+                {"setting": "Scrubsanity", "value": "Affordable", "required": false},
+                {"setting": "Scrubsanity", "value": "Random", "required": false},
+                {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        }
+    }
+}

@@ -1,0 +1,285 @@
+{
+    "entrances": {
+        "ZR Top of Waterfall -> Zora River": {
+            "area": "Zora River",
+            "reverse": "",
+            "oneWay": true,
+            "oneWayArea": "",
+            "connector": "",
+            "isReverse": false,
+            "alias": "Top of Waterfall",
+            "reverseAlias": "",
+            "tag": "",
+            "tagRep": false,
+            "type": "extra",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": true
+        },
+        "Zora River -> Lost Woods": {
+            "area": "Zora River",
+            "reverse": "Lost Woods -> Zora River",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "",
+            "isReverse": false,
+            "alias": "Lost Woods",
+            "reverseAlias": "Zora River",
+            "tag": "",
+            "tagRep": false,
+            "type": "overworld",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": true
+        },
+        "ZR Behind Waterfall -> Zoras Domain": {
+            "area": "Zora River",
+            "reverse": "Zoras Domain -> ZR Behind Waterfall",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "",
+            "isReverse": false,
+            "alias": "Zora's Domain",
+            "reverseAlias": "Zora River",
+            "tag": "",
+            "tagRep": false,
+            "type": "overworld",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": true
+        },
+        "ZR Front -> Hyrule Field": {
+            "area": "Zora River",
+            "reverse": "Hyrule Field -> ZR Front",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "",
+            "isReverse": false,
+            "alias": "Hyrule Field",
+            "reverseAlias": "Zora River",
+            "tag": "",
+            "tagRep": false,
+            "type": "overworld",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": true
+        },
+        "Zora River -> ZR Storms Grotto": {
+            "area": "Zora River",
+            "reverse": "ZR Storms Grotto -> Zora River",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "",
+            "isReverse": false,
+            "alias": "Storms Grotto",
+            "reverseAlias": "from Storms Grotto",
+            "tag": "2 Scrub Grotto",
+            "tagRep": false,
+            "type": "grotto",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": true
+        },
+        "Zora River -> ZR Fairy Grotto": {
+            "area": "Zora River",
+            "reverse": "ZR Fairy Grotto -> Zora River",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "",
+            "isReverse": false,
+            "alias": "Boulder Grotto",
+            "reverseAlias": "from Boulder Grotto",
+            "tag": "Fairy Fountain",
+            "tagRep": true,
+            "type": "grotto",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": true
+        },
+        "Zora River -> ZR Open Grotto": {
+            "area": "Zora River",
+            "reverse": "ZR Open Grotto -> Zora River",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "",
+            "isReverse": false,
+            "alias": "Open Grotto",
+            "reverseAlias": "from Open Grotto",
+            "tag": "Generic Grotto",
+            "tagRep": false,
+            "type": "grotto",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": true
+        }
+    },
+    "locations": {
+        "ZR Magic Bean Salesman": {
+            "area": "Zora River",
+            "lKey": "",
+            "alias": "Bean Salesman",
+            "type": "item",
+            "settings": [{"setting": "Shuffle Magic Beans", "value": "On", "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "ZR Open Grotto Chest": {
+            "area": "",
+            "lKey": "Zora River -> ZR Open Grotto",
+            "alias": "Grotto Chest",
+            "type": "item",
+            "settings": [],
+            "visible": true,
+            "check": ""
+        },
+        "ZR Frogs in the Rain": {
+            "area": "Zora River",
+            "lKey": "",
+            "alias": "Frogs in the Rain",
+            "type": "item",
+            "settings": [],
+            "visible": true,
+            "check": ""
+        },
+        "ZR Frogs Ocarina Game": {
+            "area": "Zora River",
+            "lKey": "",
+            "alias": "Frogs Ocarina Game",
+            "type": "item",
+            "settings": [],
+            "visible": true,
+            "check": ""
+        },
+        "ZR Near Open Grotto Freestanding PoH": {
+            "area": "Zora River",
+            "lKey": "",
+            "alias": "Lower River Freestanding Item",
+            "type": "item",
+            "settings": [],
+            "visible": true,
+            "check": ""
+        },
+        "ZR Near Domain Freestanding PoH": {
+            "area": "Zora River",
+            "lKey": "",
+            "alias": "Upper River Freestanding Item",
+            "type": "item",
+            "settings": [],
+            "visible": true,
+            "check": ""
+        },
+        "ZR Deku Scrub Grotto Front": {
+            "area": "",
+            "lKey": "Zora River -> ZR Storms Grotto",
+            "alias": "Right Scrub",
+            "type": "item",
+            "settings": [
+                {"setting": "Scrubsanity", "value": "Affordable", "required": false},
+                {"setting": "Scrubsanity", "value": "Random", "required": false},
+                {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "ZR Deku Scrub Grotto Rear": {
+            "area": "",
+            "lKey": "Zora River -> ZR Storms Grotto",
+            "alias": "Left Scrub",
+            "type": "item",
+            "settings": [
+                {"setting": "Scrubsanity", "value": "Affordable", "required": false},
+                {"setting": "Scrubsanity", "value": "Random", "required": false},
+                {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "ZR GS Tree": {
+            "area": "Zora River",
+            "lKey": "",
+            "alias": "Tree Bonk",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "ZR GS Ladder": {
+            "area": "Zora River",
+            "lKey": "",
+            "alias": "Ladder",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "ZR GS Near Raised Grottos": {
+            "area": "Zora River",
+            "lKey": "",
+            "alias": "Lower Adult",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "ZR GS Above Bridge": {
+            "area": "Zora River",
+            "lKey": "",
+            "alias": "Upper Adult",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        }
+    }
+}

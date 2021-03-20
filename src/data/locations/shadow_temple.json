@@ -1,0 +1,487 @@
+{
+    "entrances": {},
+    "locations": {
+        "Shadow Temple Map Chest": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Early Redead Chest",
+            "type": "map",
+            "settings": [{"setting": "Shadow Temple MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Shadow Temple Hover Boots Chest": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Dead Hand Chest",
+            "type": "item",
+            "settings": [{"setting": "Shadow Temple MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Shadow Temple Compass Chest": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Early Gibdo Chest",
+            "type": "compass",
+            "settings": [{"setting": "Shadow Temple MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Shadow Temple Early Silver Rupee Chest": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Spinning Blades Chest",
+            "type": "smallKey",
+            "settings": [{"setting": "Shadow Temple MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Shadow Temple Invisible Blades Visible Chest": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Invisible Blades Left Chest",
+            "type": "item",
+            "settings": [{"setting": "Shadow Temple MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Shadow Temple Invisible Blades Invisible Chest": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Invisible Blades Right Chest",
+            "type": "item",
+            "settings": [{"setting": "Shadow Temple MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Shadow Temple Falling Spikes Lower Chest": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Falling Spikes Lower Chest",
+            "type": "item",
+            "settings": [{"setting": "Shadow Temple MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Shadow Temple Falling Spikes Upper Chest": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Falling Spikes Upper Chest",
+            "type": "item",
+            "settings": [{"setting": "Shadow Temple MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Shadow Temple Falling Spikes Switch Chest": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Falling Spikes Switch Chest",
+            "type": "smallKey",
+            "settings": [{"setting": "Shadow Temple MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Shadow Temple Invisible Spikes Chest": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Invisible Spikes Chest",
+            "type": "item",
+            "settings": [{"setting": "Shadow Temple MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Shadow Temple Freestanding Key": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Bombable Pot Freestanding Item",
+            "type": "smallKey",
+            "settings": [{"setting": "Shadow Temple MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Shadow Temple Wind Hint Chest": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "After Fans Chest",
+            "type": "item",
+            "settings": [{"setting": "Shadow Temple MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Shadow Temple After Wind Enemy Chest": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Bombable Terrain Chest",
+            "type": "smallKey",
+            "settings": [{"setting": "Shadow Temple MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Shadow Temple After Wind Hidden Chest": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Late Gibdo Chest",
+            "type": "item",
+            "settings": [{"setting": "Shadow Temple MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Shadow Temple Spike Walls Left Chest": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Flammable Walls Left Chest",
+            "type": "item",
+            "settings": [{"setting": "Shadow Temple MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Shadow Temple Boss Key Chest": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Flammable Walls Right Chest",
+            "type": "bossKey",
+            "settings": [{"setting": "Shadow Temple MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Shadow Temple Invisible Floormaster Chest": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Floormaster Chest",
+            "type": "smallKey",
+            "settings": [{"setting": "Shadow Temple MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Shadow Temple GS Like Like Room": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Invisible Blades",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Shadow Temple MQ", "value": false, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Shadow Temple GS Falling Spikes Room": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Falling Spikes",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Shadow Temple MQ", "value": false, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Shadow Temple GS Single Giant Pot": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Behind Bombable Pot",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Shadow Temple MQ", "value": false, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Shadow Temple GS Near Ship": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Scarecrow",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Shadow Temple MQ", "value": false, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Shadow Temple GS Triple Giant Pot": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Triple Bombable Pots",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Shadow Temple MQ", "value": false, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Shadow Temple MQ Early Gibdos Chest": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Early Gibdo Chest",
+            "type": "smallKey",
+            "settings": [{"setting": "Shadow Temple MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Shadow Temple MQ Map Chest": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Spinning Blades Chest",
+            "type": "map",
+            "settings": [{"setting": "Shadow Temple MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Shadow Temple MQ Near Ship Invisible Chest": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Boat Cage Invisible Chest",
+            "type": "smallKey",
+            "settings": [{"setting": "Shadow Temple MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Shadow Temple MQ Compass Chest": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Early Redead Chest",
+            "type": "compass",
+            "settings": [{"setting": "Shadow Temple MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Shadow Temple MQ Hover Boots Chest": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Dead Hand 1 Chest",
+            "type": "item",
+            "settings": [{"setting": "Shadow Temple MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Shadow Temple MQ Invisible Blades Invisible Chest": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Invisible Blades Right Chest",
+            "type": "smallKey",
+            "settings": [{"setting": "Shadow Temple MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Shadow Temple MQ Invisible Blades Visible Chest": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Invisible Blades Left Chest",
+            "type": "item",
+            "settings": [{"setting": "Shadow Temple MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Shadow Temple MQ Beamos Silver Rupees Chest": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Beamos Silver Rupees Chest",
+            "type": "item",
+            "settings": [{"setting": "Shadow Temple MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Shadow Temple MQ Falling Spikes Lower Chest": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Falling Spikes Lower Chest",
+            "type": "item",
+            "settings": [{"setting": "Shadow Temple MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Shadow Temple MQ Falling Spikes Upper Chest": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Falling Spikes Upper Chest",
+            "type": "item",
+            "settings": [{"setting": "Shadow Temple MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Shadow Temple MQ Falling Spikes Switch Chest": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Falling Spikes Switch Chest",
+            "type": "smallKey",
+            "settings": [{"setting": "Shadow Temple MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Shadow Temple MQ Invisible Spikes Chest": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Invisible Spikes Chest",
+            "type": "item",
+            "settings": [{"setting": "Shadow Temple MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Shadow Temple MQ Stalfos Room Chest": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Stalfos Chest",
+            "type": "item",
+            "settings": [{"setting": "Shadow Temple MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Shadow Temple MQ Wind Hint Chest": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "After Fans Chest",
+            "type": "smallKey",
+            "settings": [{"setting": "Shadow Temple MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Shadow Temple MQ After Wind Hidden Chest": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Bombable Terrain Chest",
+            "type": "item",
+            "settings": [{"setting": "Shadow Temple MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Shadow Temple MQ After Wind Enemy Chest": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Late Gibdo Chest",
+            "type": "item",
+            "settings": [{"setting": "Shadow Temple MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Shadow Temple MQ Boss Key Chest": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Flammable Walls Right Chest",
+            "type": "bossKey",
+            "settings": [{"setting": "Shadow Temple MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Shadow Temple MQ Spike Walls Left Chest": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Flammable Walls Left Chest",
+            "type": "item",
+            "settings": [{"setting": "Shadow Temple MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Shadow Temple MQ Freestanding Key": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Three Spinning Pots",
+            "type": "smallKey",
+            "settings": [{"setting": "Shadow Temple MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Shadow Temple MQ Bomb Flower Chest": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Dead Hand 2 Chest",
+            "type": "item",
+            "settings": [{"setting": "Shadow Temple MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Shadow Temple MQ GS Falling Spikes Room": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Falling Spikes",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Shadow Temple MQ", "value": true, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Shadow Temple MQ GS Wind Hint Room": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "After Fans",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Shadow Temple MQ", "value": true, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Shadow Temple MQ GS After Wind": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Bombable Terrain",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Shadow Temple MQ", "value": true, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Shadow Temple MQ GS After Ship": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Fallen Statue",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Shadow Temple MQ", "value": true, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Shadow Temple MQ GS Near Boss": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Boss Lobby",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Shadow Temple MQ", "value": true, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Shadow Temple Bongo Bongo Heart": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Bongo Bongo",
+            "type": "item",
+            "settings": [],
+            "visible": true,
+            "check": ""
+        }
+    }
+}

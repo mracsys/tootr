@@ -1,0 +1,392 @@
+{
+    "entrances": {},
+    "locations": {
+        "Ganons Castle Forest Trial Chest": {
+            "area": "",
+            "lKey": "Ganon's Castle",
+            "alias": "Forest Trial Chest",
+            "type": "item",
+            "settings": [{"setting": "Ganon's Castle MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Ganons Castle Water Trial Left Chest": {
+            "area": "",
+            "lKey": "Ganon's Castle",
+            "alias": "Water Trial Left Chest",
+            "type": "item",
+            "settings": [{"setting": "Ganon's Castle MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Ganons Castle Water Trial Right Chest": {
+            "area": "",
+            "lKey": "Ganon's Castle",
+            "alias": "Water Trial Right Chest",
+            "type": "item",
+            "settings": [{"setting": "Ganon's Castle MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Ganons Castle Shadow Trial Front Chest": {
+            "area": "",
+            "lKey": "Ganon's Castle",
+            "alias": "Shadow Trial 1st Chest",
+            "type": "item",
+            "settings": [{"setting": "Ganon's Castle MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Ganons Castle Shadow Trial Golden Gauntlets Chest": {
+            "area": "",
+            "lKey": "Ganon's Castle",
+            "alias": "Shadow Trial 2nd Chest",
+            "type": "item",
+            "settings": [{"setting": "Ganon's Castle MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Ganons Castle Light Trial First Left Chest": {
+            "area": "",
+            "lKey": "Ganon's Castle",
+            "alias": "Light Trial Bottom Left Chest",
+            "type": "item",
+            "settings": [{"setting": "Ganon's Castle MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Ganons Castle Light Trial Second Left Chest": {
+            "area": "",
+            "lKey": "Ganon's Castle",
+            "alias": "Light Trial Middle Left Chest",
+            "type": "item",
+            "settings": [{"setting": "Ganon's Castle MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Ganons Castle Light Trial Third Left Chest": {
+            "area": "",
+            "lKey": "Ganon's Castle",
+            "alias": "Light Trial Top Left Chest",
+            "type": "item",
+            "settings": [{"setting": "Ganon's Castle MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Ganons Castle Light Trial First Right Chest": {
+            "area": "",
+            "lKey": "Ganon's Castle",
+            "alias": "Light Trial Bottom Right Chest",
+            "type": "item",
+            "settings": [{"setting": "Ganon's Castle MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Ganons Castle Light Trial Second Right Chest": {
+            "area": "",
+            "lKey": "Ganon's Castle",
+            "alias": "Light Trial Middle Right Chest",
+            "type": "item",
+            "settings": [{"setting": "Ganon's Castle MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Ganons Castle Light Trial Third Right Chest": {
+            "area": "",
+            "lKey": "Ganon's Castle",
+            "alias": "Light Trial Top Right Chest",
+            "type": "item",
+            "settings": [{"setting": "Ganon's Castle MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Ganons Castle Light Trial Invisible Enemies Chest": {
+            "area": "",
+            "lKey": "Ganon's Castle",
+            "alias": "Light Trial Center Chest",
+            "type": "smallKey",
+            "settings": [{"setting": "Ganon's Castle MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Ganons Castle Light Trial Lullaby Chest": {
+            "area": "",
+            "lKey": "Ganon's Castle",
+            "alias": "Light Trial Lullaby Chest",
+            "type": "smallKey",
+            "settings": [{"setting": "Ganon's Castle MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Ganons Castle Spirit Trial Crystal Switch Chest": {
+            "area": "",
+            "lKey": "Ganon's Castle",
+            "alias": "Spirit Trial Crystal Switch Chest",
+            "type": "item",
+            "settings": [{"setting": "Ganon's Castle MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Ganons Castle Spirit Trial Invisible Chest": {
+            "area": "",
+            "lKey": "Ganon's Castle",
+            "alias": "Spirit Trial Invisible Chest",
+            "type": "item",
+            "settings": [{"setting": "Ganon's Castle MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Ganons Castle Deku Scrub Left": {
+            "area": "",
+            "lKey": "Ganon's Castle",
+            "alias": "Far Left Scrub",
+            "type": "item",
+            "settings": [
+                {"setting": "Ganon's Castle MQ", "value": false, "required": true},
+                {"setting": "Scrubsanity", "value": "Affordable", "required": false},
+                {"setting": "Scrubsanity", "value": "Random", "required": false},
+                {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Ganons Castle Deku Scrub Center-Left": {
+            "area": "",
+            "lKey": "Ganon's Castle",
+            "alias": "Middle Left Scrub",
+            "type": "item",
+            "settings": [
+                {"setting": "Ganon's Castle MQ", "value": false, "required": true},
+                {"setting": "Scrubsanity", "value": "Affordable", "required": false},
+                {"setting": "Scrubsanity", "value": "Random", "required": false},
+                {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Ganons Castle Deku Scrub Center-Right": {
+            "area": "",
+            "lKey": "Ganon's Castle",
+            "alias": "Middle Right Scrub",
+            "type": "item",
+            "settings": [
+                {"setting": "Ganon's Castle MQ", "value": false, "required": true},
+                {"setting": "Scrubsanity", "value": "Affordable", "required": false},
+                {"setting": "Scrubsanity", "value": "Random", "required": false},
+                {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Ganons Castle Deku Scrub Right": {
+            "area": "",
+            "lKey": "Ganon's Castle",
+            "alias": "Far Right Scrub",
+            "type": "item",
+            "settings": [
+                {"setting": "Ganon's Castle MQ", "value": false, "required": true},
+                {"setting": "Scrubsanity", "value": "Affordable", "required": false},
+                {"setting": "Scrubsanity", "value": "Random", "required": false},
+                {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Ganons Castle MQ Forest Trial Freestanding Key": {
+            "area": "",
+            "lKey": "Ganon's Castle",
+            "alias": "Forest Trial Freestanding Item",
+            "type": "smallKey",
+            "settings": [{"setting": "Ganon's Castle MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Ganons Castle MQ Forest Trial Eye Switch Chest": {
+            "area": "",
+            "lKey": "Ganon's Castle",
+            "alias": "Forest Trial Early Eye Switch Chest",
+            "type": "item",
+            "settings": [{"setting": "Ganon's Castle MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Ganons Castle MQ Forest Trial Frozen Eye Switch Chest": {
+            "area": "",
+            "lKey": "Ganon's Castle",
+            "alias": "Forest Trial Frozen Eye Switch Chest",
+            "type": "item",
+            "settings": [{"setting": "Ganon's Castle MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Ganons Castle MQ Water Trial Chest": {
+            "area": "",
+            "lKey": "Ganon's Castle",
+            "alias": "Water Trial Chest",
+            "type": "item",
+            "settings": [{"setting": "Ganon's Castle MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Ganons Castle MQ Shadow Trial Bomb Flower Chest": {
+            "area": "",
+            "lKey": "Ganon's Castle",
+            "alias": "Shadow Trial 1st Chest",
+            "type": "item",
+            "settings": [{"setting": "Ganon's Castle MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Ganons Castle MQ Shadow Trial Eye Switch Chest": {
+            "area": "",
+            "lKey": "Ganon's Castle",
+            "alias": "Shadow Trial 2nd Chest",
+            "type": "smallKey",
+            "settings": [{"setting": "Ganon's Castle MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Ganons Castle MQ Light Trial Lullaby Chest": {
+            "area": "",
+            "lKey": "Ganon's Castle",
+            "alias": "Light Trial Lullaby Chest",
+            "type": "item",
+            "settings": [{"setting": "Ganon's Castle MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Ganons Castle MQ Spirit Trial First Chest": {
+            "area": "",
+            "lKey": "Ganon's Castle",
+            "alias": "Spirit Trial Behind Bubble Chest",
+            "type": "item",
+            "settings": [{"setting": "Ganon's Castle MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Ganons Castle MQ Spirit Trial Invisible Chest": {
+            "area": "",
+            "lKey": "Ganon's Castle",
+            "alias": "Spirit Trial Invisible Chest",
+            "type": "item",
+            "settings": [{"setting": "Ganon's Castle MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Ganons Castle MQ Spirit Trial Sun Front Left Chest": {
+            "area": "",
+            "lKey": "Ganon's Castle",
+            "alias": "Spirit Trial Top Left Sun Chest",
+            "type": "smallKey",
+            "settings": [{"setting": "Ganon's Castle MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Ganons Castle MQ Spirit Trial Sun Back Left Chest": {
+            "area": "",
+            "lKey": "Ganon's Castle",
+            "alias": "Spirit Trial Top Right Sun Chest",
+            "type": "item",
+            "settings": [{"setting": "Ganon's Castle MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Ganons Castle MQ Spirit Trial Sun Back Right Chest": {
+            "area": "",
+            "lKey": "Ganon's Castle",
+            "alias": "Spirit Trial Bottom Left Sun Chest",
+            "type": "item",
+            "settings": [{"setting": "Ganon's Castle MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Ganons Castle MQ Spirit Trial Golden Gauntlets Chest": {
+            "area": "",
+            "lKey": "Ganon's Castle",
+            "alias": "Spirit Trial Bottom Right Sun Chest",
+            "type": "item",
+            "settings": [{"setting": "Ganon's Castle MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Ganons Castle MQ Deku Scrub Left": {
+            "area": "",
+            "lKey": "Ganon's Castle",
+            "alias": "Far Left Scrub",
+            "type": "item",
+            "settings": [
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true},
+                {"setting": "Scrubsanity", "value": "Affordable", "required": false},
+                {"setting": "Scrubsanity", "value": "Random", "required": false},
+                {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Ganons Castle MQ Deku Scrub Center-Left": {
+            "area": "",
+            "lKey": "Ganon's Castle",
+            "alias": "Middle Left Scrub",
+            "type": "item",
+            "settings": [
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true},
+                {"setting": "Scrubsanity", "value": "Affordable", "required": false},
+                {"setting": "Scrubsanity", "value": "Random", "required": false},
+                {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Ganons Castle MQ Deku Scrub Center": {
+            "area": "",
+            "lKey": "Ganon's Castle",
+            "alias": "Middle Scrub",
+            "type": "item",
+            "settings": [
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true},
+                {"setting": "Scrubsanity", "value": "Affordable", "required": false},
+                {"setting": "Scrubsanity", "value": "Random", "required": false},
+                {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Ganons Castle MQ Deku Scrub Center-Right": {
+            "area": "",
+            "lKey": "Ganon's Castle",
+            "alias": "Middle Right Scrub",
+            "type": "item",
+            "settings": [
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true},
+                {"setting": "Scrubsanity", "value": "Affordable", "required": false},
+                {"setting": "Scrubsanity", "value": "Random", "required": false},
+                {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Ganons Castle MQ Deku Scrub Right": {
+            "area": "",
+            "lKey": "Ganon's Castle",
+            "alias": "Middle Right Scrub",
+            "type": "item",
+            "settings": [
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true},
+                {"setting": "Scrubsanity", "value": "Affordable", "required": false},
+                {"setting": "Scrubsanity", "value": "Random", "required": false},
+                {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Ganons Tower Boss Key Chest": {
+            "area": "",
+            "lKey": "Ganon's Castle",
+            "alias": "Ganon's Tower Chest",
+            "type": "item",
+            "settings": [],
+            "visible": true,
+            "check": ""
+        }
+    }
+}

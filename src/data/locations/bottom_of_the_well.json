@@ -1,0 +1,260 @@
+{
+    "entrances": {},
+    "locations": {
+        "Bottom of the Well Front Left Fake Wall Chest": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Front Left Chest",
+            "type": "smallKey",
+            "settings": [{"setting": "Bottom of the Well MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Bottom of the Well Front Center Bombable Chest": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Front Bombable Chest",
+            "type": "item",
+            "settings": [{"setting": "Bottom of the Well MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Bottom of the Well Back Left Bombable Chest": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Back Bombable Chest",
+            "type": "item",
+            "settings": [{"setting": "Bottom of the Well MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Bottom of the Well Underwater Left Chest": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Left Underwater Chest",
+            "type": "item",
+            "settings": [{"setting": "Bottom of the Well MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Bottom of the Well Freestanding Key": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Coffin Freestanding Item",
+            "type": "smallKey",
+            "settings": [{"setting": "Bottom of the Well MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Bottom of the Well Compass Chest": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Left Inner Chest",
+            "type": "compass",
+            "settings": [{"setting": "Bottom of the Well MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Bottom of the Well Center Skulltula Chest": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Right Inner Chest",
+            "type": "item",
+            "settings": [{"setting": "Bottom of the Well MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Bottom of the Well Right Bottom Fake Wall Chest": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Front Right Chest",
+            "type": "smallKey",
+            "settings": [{"setting": "Bottom of the Well MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Bottom of the Well Fire Keese Chest": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Fire Keese Chest",
+            "type": "item",
+            "settings": [{"setting": "Bottom of the Well MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Bottom of the Well Like Like Chest": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Like Like Chest",
+            "type": "item",
+            "settings": [{"setting": "Bottom of the Well MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Bottom of the Well Map Chest": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Basement Chest",
+            "type": "map",
+            "settings": [{"setting": "Bottom of the Well MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Bottom of the Well Underwater Front Chest": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Front Underwater Chest",
+            "type": "item",
+            "settings": [{"setting": "Bottom of the Well MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Bottom of the Well Invisible Chest": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Dead Hand Invisible Chest",
+            "type": "item",
+            "settings": [{"setting": "Bottom of the Well MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Bottom of the Well Lens of Truth Chest": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Dead Hand Chest",
+            "type": "item",
+            "settings": [{"setting": "Bottom of the Well MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Bottom of the Well GS West Inner Room": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Left Inner Room",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Bottom of the Well MQ", "value": false, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Bottom of the Well GS East Inner Room": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Right Inner Room",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Bottom of the Well MQ", "value": false, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Bottom of the Well GS Like Like Cage": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Like Like Cage",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Bottom of the Well MQ", "value": false, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Bottom of the Well MQ Map Chest": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Central Chest",
+            "type": "map",
+            "settings": [{"setting": "Bottom of the Well MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Bottom of the Well MQ East Inner Room Freestanding Key": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Right Center Room Freestanding Item",
+            "type": "smallKey",
+            "settings": [{"setting": "Bottom of the Well MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Bottom of the Well MQ Compass Chest": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Dead Hand Chest",
+            "type": "compass",
+            "settings": [{"setting": "Bottom of the Well MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Bottom of the Well MQ Dead Hand Freestanding Key": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Dead Hand Freestanding Item",
+            "type": "smallKey",
+            "settings": [{"setting": "Bottom of the Well MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Bottom of the Well MQ Lens of Truth Chest": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Lens of Truth Chest",
+            "type": "item",
+            "settings": [{"setting": "Bottom of the Well MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Bottom of the Well MQ GS Coffin Room": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Behind Coffins",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Bottom of the Well MQ", "value": true, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Bottom of the Well MQ GS West Inner Room": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Left Center Room",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Bottom of the Well MQ", "value": true, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Bottom of the Well MQ GS Basement": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Basement",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Bottom of the Well MQ", "value": true, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        }
+    }
+}

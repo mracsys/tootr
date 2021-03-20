@@ -1,0 +1,257 @@
+{
+    "entrances": {},
+    "locations": {
+        "Deku Tree Map Chest": {
+            "area": "",
+            "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
+            "alias": "Lobby Chest",
+            "type": "map",
+            "settings": [{"setting": "Deku Tree MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Deku Tree Slingshot Room Side Chest": {
+            "area": "",
+            "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
+            "alias": "Slingshot Room Side Chest",
+            "type": "item",
+            "settings": [{"setting": "Deku Tree MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Deku Tree Slingshot Chest": {
+            "area": "",
+            "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
+            "alias": "Slingshot Chest",
+            "type": "item",
+            "settings": [{"setting": "Deku Tree MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Deku Tree Compass Chest": {
+            "area": "",
+            "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
+            "alias": "Top Floor Chest 1",
+            "type": "compass",
+            "settings": [{"setting": "Deku Tree MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Deku Tree Compass Room Side Chest": {
+            "area": "",
+            "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
+            "alias": "Top Floor Chest 2",
+            "type": "item",
+            "settings": [{"setting": "Deku Tree MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Deku Tree Basement Chest": {
+            "area": "",
+            "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
+            "alias": "Basement Chest",
+            "type": "item",
+            "settings": [{"setting": "Deku Tree MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Deku Tree MQ Map Chest": {
+            "area": "",
+            "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
+            "alias": "Lobby Chest",
+            "type": "map",
+            "settings": [{"setting": "Deku Tree MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Deku Tree MQ Slingshot Chest": {
+            "area": "",
+            "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
+            "alias": "Slingshot Chest",
+            "type": "item",
+            "settings": [{"setting": "Deku Tree MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Deku Tree MQ Slingshot Room Back Chest": {
+            "area": "",
+            "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
+            "alias": "Slingshot Room Back Chest",
+            "type": "item",
+            "settings": [{"setting": "Deku Tree MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Deku Tree MQ Compass Chest": {
+            "area": "",
+            "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
+            "alias": "Spider Room Chest",
+            "type": "compass",
+            "settings": [{"setting": "Deku Tree MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Deku Tree MQ Basement Chest": {
+            "area": "",
+            "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
+            "alias": "Basement Chest",
+            "type": "item",
+            "settings": [{"setting": "Deku Tree MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Deku Tree MQ Before Spinning Log Chest": {
+            "area": "",
+            "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
+            "alias": "Before Log Chest",
+            "type": "item",
+            "settings": [{"setting": "Deku Tree MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Deku Tree MQ After Spinning Log Chest": {
+            "area": "",
+            "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
+            "alias": "Song of Time Block Chest",
+            "type": "item",
+            "settings": [{"setting": "Deku Tree MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Deku Tree MQ Deku Scrub": {
+            "area": "",
+            "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
+            "alias": "Basement Scrub",
+            "type": "item",
+            "settings": [
+                {"setting": "Deku Tree MQ", "value": true, "required": true},
+                {"setting": "Scrubsanity", "value": "Affordable", "required": false},
+                {"setting": "Scrubsanity", "value": "Random", "required": false},
+                {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Deku Tree GS Compass Room": {
+            "area": "",
+            "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
+            "alias": "Compass Room",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Deku Tree MQ", "value": false, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Deku Tree GS Basement Vines": {
+            "area": "",
+            "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
+            "alias": "Basement Vines",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Deku Tree MQ", "value": false, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Deku Tree GS Basement Gate": {
+            "area": "",
+            "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
+            "alias": "Basement Grate",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Deku Tree MQ", "value": false, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Deku Tree GS Basement Back Room": {
+            "area": "",
+            "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
+            "alias": "Back Room",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Deku Tree MQ", "value": false, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Deku Tree MQ GS Lobby": {
+            "area": "",
+            "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
+            "alias": "Lobby",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Deku Tree MQ", "value": true, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Deku Tree MQ GS Compass Room": {
+            "area": "",
+            "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
+            "alias": "Compass Room",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Deku Tree MQ", "value": true, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Deku Tree MQ GS Basement Graves Room": {
+            "area": "",
+            "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
+            "alias": "Song of Time Ceiling",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Deku Tree MQ", "value": true, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Deku Tree MQ GS Basement Back Room": {
+            "area": "",
+            "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
+            "alias": "Back Room",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Deku Tree MQ", "value": true, "required": true},
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Deku Tree Queen Gohma Heart": {
+            "area": "",
+            "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
+            "alias": "Queen Gohma",
+            "type": "item",
+            "settings": [],
+            "visible": true,
+            "check": ""
+        }
+    }
+}

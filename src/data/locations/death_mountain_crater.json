@@ -1,0 +1,255 @@
+{
+    "entrances": {
+        "DMC Upper Nearby -> Death Mountain Summit": {
+            "area": "Death Mountain Crater",
+            "reverse": "Death Mountain Summit -> DMC Upper Local",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "",
+            "isReverse": false,
+            "alias": "Death Mountain Trail",
+            "reverseAlias": "Death Mountain Crater",
+            "tag": "",
+            "tagRep": false,
+            "type": "overworld",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": true
+        },
+        "DMC Lower Nearby -> GC Darunias Chamber": {
+            "area": "Death Mountain Crater",
+            "reverse": "GC Darunias Chamber -> DMC Lower Local",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "",
+            "isReverse": false,
+            "alias": "Goron City",
+            "reverseAlias": "Death Mountain Crater",
+            "tag": "",
+            "tagRep": false,
+            "type": "overworld",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": true
+        },
+        "DMC Fire Temple Entrance -> Fire Temple Lower": {
+            "area": "Death Mountain Crater",
+            "reverse": "Fire Temple Lower -> DMC Fire Temple Entrance",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "",
+            "isReverse": false,
+            "alias": "Fire Temple",
+            "reverseAlias": "from Fire Temple",
+            "tag": "",
+            "tagRep": false,
+            "type": "dungeon",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": true
+        },
+        "DMC Lower Nearby -> DMC Hammer Grotto": {
+            "area": "Death Mountain Crater",
+            "reverse": "DMC Hammer Grotto -> DMC Lower Local",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "",
+            "isReverse": false,
+            "alias": "Hammer Grotto",
+            "reverseAlias": "from Hammer Grotto",
+            "tag": "3 Scrub Grotto",
+            "tagRep": false,
+            "type": "grotto",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": true
+        },
+        "DMC Upper Nearby -> DMC Upper Grotto": {
+            "area": "Death Mountain Crater",
+            "reverse": "DMC Upper Grotto -> DMC Upper Local",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "",
+            "isReverse": false,
+            "alias": "Bombable Grotto",
+            "reverseAlias": "from Bombable Grotto",
+            "tag": "Generic Grotto",
+            "tagRep": false,
+            "type": "grotto",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": true
+        },
+        "DMC Lower Nearby -> DMC Great Fairy Fountain": {
+            "area": "Death Mountain Crater",
+            "reverse": "DMC Great Fairy Fountain -> DMC Lower Local",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "",
+            "isReverse": false,
+            "alias": "Great Fairy Fountain",
+            "reverseAlias": "from Great Fairy Fountain",
+            "tag": "Great Fairy Fountain",
+            "tagRep": false,
+            "type": "interior",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": true
+        }
+    },
+    "locations": {
+        "Bolero of Fire": {
+            "area": "Death Mountain Crater",
+            "lKey": "",
+            "alias": "Bolero of Fire",
+            "type": "song",
+            "settings": [],
+            "visible": true,
+            "check": ""
+        },
+        "DMC Volcano Freestanding PoH": {
+            "area": "Death Mountain Crater",
+            "lKey": "",
+            "alias": "Volcano",
+            "type": "item",
+            "settings": [],
+            "visible": true,
+            "check": ""
+        },
+        "DMC Wall Freestanding PoH": {
+            "area": "Death Mountain Crater",
+            "lKey": "",
+            "alias": "Item In Wall",
+            "type": "item",
+            "settings": [],
+            "visible": true,
+            "check": ""
+        },
+        "DMC Upper Grotto Chest": {
+            "area": "",
+            "lKey": "DMC Upper Nearby -> DMC Upper Grotto",
+            "alias": "Grotto Chest",
+            "type": "item",
+            "settings": [],
+            "visible": true,
+            "check": ""
+        },
+        "DMC Great Fairy Reward": {
+            "area": "",
+            "lKey": "DMC Lower Nearby -> DMC Great Fairy Fountain",
+            "alias": "Fairy Reward",
+            "type": "item",
+            "settings": [],
+            "visible": true,
+            "check": ""
+        },
+        "DMC Deku Scrub": {
+            "area": "Death Mountain Crater",
+            "lKey": "",
+            "alias": "Child Scrub",
+            "type": "item",
+            "settings": [
+                {"setting": "Scrubsanity", "value": "Affordable", "required": false},
+                {"setting": "Scrubsanity", "value": "Random", "required": false},
+                {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "DMC Deku Scrub Grotto Left": {
+            "area": "",
+            "lKey": "DMC Lower Nearby -> DMC Hammer Grotto",
+            "alias": "Left Scrub",
+            "type": "item",
+            "settings": [
+                {"setting": "Scrubsanity", "value": "Affordable", "required": false},
+                {"setting": "Scrubsanity", "value": "Random", "required": false},
+                {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "DMC Deku Scrub Grotto Center": {
+            "area": "",
+            "lKey": "DMC Lower Nearby -> DMC Hammer Grotto",
+            "alias": "Center Scrub",
+            "type": "item",
+            "settings": [
+                {"setting": "Scrubsanity", "value": "Affordable", "required": false},
+                {"setting": "Scrubsanity", "value": "Random", "required": false},
+                {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "DMC Deku Scrub Grotto Right": {
+            "area": "",
+            "lKey": "DMC Lower Nearby -> DMC Hammer Grotto",
+            "alias": "Right Scrub",
+            "type": "item",
+            "settings": [
+                {"setting": "Scrubsanity", "value": "Affordable", "required": false},
+                {"setting": "Scrubsanity", "value": "Random", "required": false},
+                {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "DMC GS Crate": {
+            "area": "Death Mountain Crater",
+            "lKey": "",
+            "alias": "Crate",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "DMC GS Bean Patch": {
+            "area": "Death Mountain Crater",
+            "lKey": "",
+            "alias": "Bean Patch",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        }
+    }
+}

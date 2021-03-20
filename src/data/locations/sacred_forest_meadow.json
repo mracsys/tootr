@@ -1,0 +1,177 @@
+{
+    "entrances": {
+        "SFM Entryway -> LW Beyond Mido": {
+            "area": "Sacred Forest Meadow",
+            "reverse": "LW Beyond Mido -> SFM Entryway",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "",
+            "isReverse": false,
+            "alias": "Lost Woods",
+            "reverseAlias": "Sacred Forest Meadow",
+            "tag": "",
+            "tagRep": false,
+            "type": "overworld",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": true
+        },
+        "SFM Forest Temple Entrance Ledge -> Forest Temple Lobby": {
+            "area": "Sacred Forest Meadow",
+            "reverse": "Forest Temple Lobby -> SFM Forest Temple Entrance Ledge",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "",
+            "isReverse": false,
+            "alias": "Forest Temple",
+            "reverseAlias": "from Forest Temple",
+            "tag": "",
+            "tagRep": false,
+            "type": "dungeon",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": true
+        },
+        "SFM Entryway -> SFM Wolfos Grotto": {
+            "area": "Sacred Forest Meadow",
+            "reverse": "SFM Wolfos Grotto -> SFM Entryway",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "",
+            "isReverse": false,
+            "alias": "Wolfos Grotto",
+            "reverseAlias": "from Wolfos Grotto",
+            "tag": "",
+            "tagRep": false,
+            "type": "grotto",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": true
+        },
+        "Sacred Forest Meadow -> SFM Storms Grotto": {
+            "area": "Sacred Forest Meadow",
+            "reverse": "SFM Storms Grotto -> Sacred Forest Meadow",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "",
+            "isReverse": false,
+            "alias": "Storms Grotto",
+            "reverseAlias": "from Storms Grotto",
+            "tag": "2 Scrub Grotto",
+            "tagRep": false,
+            "type": "grotto",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": true
+        },
+        "Sacred Forest Meadow -> SFM Fairy Grotto": {
+            "area": "Sacred Forest Meadow",
+            "reverse": "SFM Fairy Grotto -> Sacred Forest Meadow",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "",
+            "isReverse": false,
+            "alias": "Open Grotto",
+            "reverseAlias": "from Open Grotto",
+            "tag": "Fairy Fountain",
+            "tagRep": false,
+            "type": "grotto",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": true
+        }
+    },
+    "locations": {
+        "Saria's Song": {
+            "area": "Sacred Forest Meadow",
+            "lKey": "",
+            "alias": "Saria's Song",
+            "type": "song",
+            "settings": [],
+            "visible": true,
+            "check": ""
+        },
+        "Minuet of Forest": {
+            "area": "Sacred Forest Meadow",
+            "lKey": "",
+            "alias": "Minuet of Forest",
+            "type": "song",
+            "settings": [],
+            "visible": true,
+            "check": ""
+        },
+        "SFM GS": {
+            "area": "Sacred Forest Meadow",
+            "lKey": "",
+            "alias": "Above Maze",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "SFM Wolfos Grotto Chest": {
+            "area": "",
+            "lKey": "SFM Entryway -> SFM Wolfos Grotto",
+            "alias": "Wolfos Chest",
+            "type": "item",
+            "settings": [],
+            "visible": true,
+            "check": ""
+        },
+        "SFM Deku Scrub Grotto Rear": {
+            "area": "",
+            "lKey": "Sacred Forest Meadow -> SFM Storms Grotto",
+            "alias": "Left Scrub",
+            "type": "item",
+            "settings": [
+                {"setting": "Scrubsanity", "value": "Affordable", "required": false},
+                {"setting": "Scrubsanity", "value": "Random", "required": false},
+                {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "SFM Deku Scrub Grotto Front": {
+            "area": "",
+            "lKey": "Sacred Forest Meadow -> SFM Storms Grotto",
+            "alias": "Right Scrub",
+            "type": "item",
+            "settings": [
+                {"setting": "Scrubsanity", "value": "Affordable", "required": false},
+                {"setting": "Scrubsanity", "value": "Random", "required": false},
+                {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        }
+    }
+}

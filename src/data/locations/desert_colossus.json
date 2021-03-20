@@ -1,0 +1,182 @@
+{
+    "entrances": {
+        "Desert Colossus -> Wasteland Near Colossus": {
+            "area": "Desert Colossus",
+            "reverse": "Wasteland Near Colossus -> Desert Colossus",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "",
+            "isReverse": false,
+            "alias": "Haunted Wasteland",
+            "reverseAlias": "Desert Colossus",
+            "tag": "",
+            "tagRep": false,
+            "type": "overworld",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": true
+        },
+        "Desert Colossus -> Spirit Temple Lobby": {
+            "area": "Desert Colossus",
+            "reverse": "Spirit Temple Lobby -> Desert Colossus From Spirit Lobby",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "",
+            "isReverse": false,
+            "alias": "Spirit Temple",
+            "reverseAlias": "from Spirit Temple",
+            "tag": "",
+            "tagRep": false,
+            "type": "dungeon",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": true
+        },
+        "Desert Colossus -> Colossus Grotto": {
+            "area": "Desert Colossus",
+            "reverse": "Colossus Grotto -> Desert Colossus",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "",
+            "isReverse": false,
+            "alias": "Silver Boulder Grotto",
+            "reverseAlias": "from Silver Boulder Grotto",
+            "tag": "2 Scrub Grotto",
+            "tagRep": true,
+            "type": "grotto",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": true
+        },
+        "Desert Colossus -> Colossus Great Fairy Fountain": {
+            "area": "Desert Colossus",
+            "reverse": "Colossus Great Fairy Fountain -> Desert Colossus",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "",
+            "isReverse": false,
+            "alias": "Great Fairy Fountain",
+            "reverseAlias": "from Great Fairy Fountain",
+            "tag": "Great Fairy Fountain",
+            "tagRep": true,
+            "type": "interior",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": true
+        }
+    },
+    "locations": {
+        "Requiem of Spirit": {
+            "area": "Desert Colossus",
+            "lKey": "",
+            "alias": "Requiem of Spirit",
+            "type": "song",
+            "settings": [],
+            "visible": true,
+            "check": ""
+        },
+        "Colossus Great Fairy Reward": {
+            "area": "",
+            "lKey": "Desert Colossus -> Colossus Great Fairy Fountain",
+            "alias": "Fairy Reward",
+            "type": "item",
+            "settings": [],
+            "visible": true,
+            "check": ""
+        },
+        "Colossus Freestanding PoH": {
+            "area": "Desert Colossus",
+            "lKey": "",
+            "alias": "Arch Freestanding Item",
+            "type": "item",
+            "settings": [],
+            "visible": true,
+            "check": ""
+        },
+        "Colossus Deku Scrub Grotto Front": {
+            "area": "",
+            "lKey": "Desert Colossus -> Colossus Grotto",
+            "alias": "Right Scrub",
+            "type": "item",
+            "settings": [
+                {"setting": "Scrubsanity", "value": "Affordable", "required": false},
+                {"setting": "Scrubsanity", "value": "Random", "required": false},
+                {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Colossus Deku Scrub Grotto Rear": {
+            "area": "",
+            "lKey": "Desert Colossus -> Colossus Grotto",
+            "alias": "Left Scrub",
+            "type": "item",
+            "settings": [
+                {"setting": "Scrubsanity", "value": "Affordable", "required": false},
+                {"setting": "Scrubsanity", "value": "Random", "required": false},
+                {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Colossus GS Bean Patch": {
+            "area": "Desert Colossus",
+            "lKey": "",
+            "alias": "Bean Patch",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Colossus GS Tree": {
+            "area": "Desert Colossus",
+            "lKey": "",
+            "alias": "Oasis Tree",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Colossus GS Hill": {
+            "area": "Desert Colossus",
+            "lKey": "",
+            "alias": "Top of Hill",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        }
+    }
+}
