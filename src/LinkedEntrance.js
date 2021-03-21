@@ -77,20 +77,20 @@ class LinkedEntrance extends React.Component {
             <React.Fragment key={this.props.ekey}>
                 <div className={this.props.classes.entranceContainer} key={this.props.entrance + "label"}>
                     { this.props.forceVisible ? <SubdirectoryArrowRightIcon /> : null }
-                    <Typography variant="h6" component="h1" className={this.props.classes.entranceLabel}>
+                    <Typography variant="body1" component="h1" className={this.props.classes.entranceLabel}>
                         {this.buildEntranceName(this.props.entrance)}
                     </Typography>
                     <Box className={this.props.classes.entranceLink}>
-                        <Typography variant="h6" component="h2" className={this.props.classes.entranceLink1}>
+                        <Typography variant="body1" component="h2" className={this.props.classes.entranceLink1}>
                             {this.buildExitName(this.props.entrance)}
                         </Typography>
-                        <Typography variant="body2" component="h3" className={this.props.classes.entranceLink2}>
+                        <Typography variant="caption" component="h3" className={this.props.classes.entranceLink2}>
                             {this.buildExitEntranceName(this.props.entrance)}
                         </Typography>
                     </Box>
                     {
                         (oEntrance.shuffled === true) ?
-                            <IconButton component="span" onClick={() => this.props.handleUnLink(this.props.entrance)}><ClearIcon /></IconButton> :
+                            <IconButton className={this.props.classes.areaButton} size="small" component="span" onClick={() => this.props.handleUnLink(this.props.entrance)}><ClearIcon /></IconButton> :
                             null
                     }
                 </div>

@@ -41,8 +41,8 @@ class UnLinkedEntrance extends React.Component {
         return (
             <div className={this.props.classes.entranceContainer} key={this.props.ekey}>
                 { this.props.forceVisible ? <SubdirectoryArrowRightIcon /> : null }
-                <Typography variant="h6" component="h1" color="error" className={this.props.classes.entranceLabel}>{this.buildEntranceName(this.props.entrance)}</Typography>
-                <FormControl>
+                <Typography variant="body1" component="h1" color="error" className={this.props.classes.entranceLabel}>{this.buildEntranceName(this.props.entrance)}</Typography>
+                <FormControl className={this.props.classes.entranceMenuControl}>
                     <Select className={this.props.classes.entranceMenu} native displayEmpty id={this.props.entrance + "select"} onChange={this.props.handleLink} name={this.props.entrance}>
                         <option aria-label="None" value="">Not Checked</option>
                         {Object.keys(entrancePool).sort().map((areaCategory, l) => {

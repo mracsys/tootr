@@ -14,12 +14,23 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
 import Button from '@material-ui/core/Button';
-import Brightness7Icon from '@material-ui/icons/Brightness7';
-import Brightness3Icon from '@material-ui/icons/Brightness3';
+//import Brightness7Icon from '@material-ui/icons/Brightness7';
+//import Brightness3Icon from '@material-ui/icons/Brightness3';
 import Switch from '@material-ui/core/Switch';
 import ListItem from '@material-ui/core/ListItem';
 import ExpandMore from '@material-ui/icons/ExpandMore';
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogTitle from '@material-ui/core/DialogTitle';
+import './index.css';
+import tokenIcon from './OoT_Token_Icon.png';
 import CssBaseline from '@material-ui/core/CssBaseline';
+import blueGrey from '@material-ui/core/colors/blueGrey';
+import grey from '@material-ui/core/colors/grey';
+import yellow from '@material-ui/core/colors/yellow';
+
 
 import GameSetting from './GameSetting';
 import GameArea from './GameArea';
@@ -62,6 +73,7 @@ import ganons_castle from './data/locations/ganons_castle.json';
 import devr from './data/versions/dev6.0.41r-1.json';
 //import weekly from './data/settings_presets/standard_weekly.json'
 import rsl from './data/settings_presets/random-settings-league.json';
+import { Link } from '@material-ui/core';
 
 const drawerWidth = 240;
 
@@ -75,7 +87,7 @@ const useStyles = (theme) => ({
             easing: theme.transitions.easing.sharp,
             duration: theme.transitions.duration.leavingScreen,
         }),
-        backgroundColor: 'purple',
+        backgroundColor: blueGrey[600],
     },
     appBarShift: {
         width: `calc(100% - ${drawerWidth}px)`,
@@ -93,6 +105,9 @@ const useStyles = (theme) => ({
     },
     title: {
         flexGrow: 1,
+    },
+    titleText: {
+        'font-family': 'Hylia Serif Beta',
     },
     drawer: {
         width: drawerWidth,
@@ -114,7 +129,7 @@ const useStyles = (theme) => ({
     },
     areaPaper: {
         flexGrow: 1,
-        padding: theme.spacing(3),
+        //padding: theme.spacing(3),
         transition: theme.transitions.create('margin', {
           easing: theme.transitions.easing.sharp,
           duration: theme.transitions.duration.leavingScreen,
@@ -129,14 +144,16 @@ const useStyles = (theme) => ({
         marginLeft: 0,
     },
     areaCard: {
-        minWidth: 450,
-        maxWidth: 650,
         margin: 20,
         display: 'inline-block',
         'vertical-align': 'top',
+        backgroundColor: '#cbc26d',
+    },
+    areaHeader: {
+        padding: theme.spacing(0.75),
     },
     areaTitle: {
-        backgroundColor: 'teal',
+        backgroundColor: yellow[200],
         display: 'flex',
         'flex-direction': 'row',
         padding: theme.spacing(1, 2),
@@ -145,11 +162,19 @@ const useStyles = (theme) => ({
     areaTitleText: {
         flexGrow: 1,
     },
+    areaButton: {
+        marginLeft: theme.spacing(1),
+    },
+    areaContent: {
+        padding: 0,
+    },
+    locationList: {
+        margin: 0,
+        padding: 0,
+    },
     locationContainer: {
-        display: 'flex',
-        'flex-direction': 'row',
-        alignItems: 'center',
-        marginLeft: theme.spacing(3),
+        padding: theme.spacing(1,2),
+        backgroundColor: grey[200],
     },
     locationIcon: {
         marginRight: theme.spacing(2),
@@ -161,15 +186,20 @@ const useStyles = (theme) => ({
     locationText: {
         flexGrow: 1,
     },
+    locationMark: {
+        marginRight: 2,
+    },
     entranceContainer: {
         display: 'flex',
         'justify-content': 'space-between',
-        padding: theme.spacing(1,0),
+        padding: theme.spacing(1,2),
         alignItems: 'center',
+        backgroundColor: grey[50],
     },
     entranceLabel: {
         'vertical-align': 'center',
         'margin-right': 20,
+        'font-weight': 'bold',
         flexGrow: 1,
     },
     linkLabel: {
@@ -182,25 +212,43 @@ const useStyles = (theme) => ({
         textAlign: 'right',
     },
     entranceLink1: {
+        'font-weight': 'bold',
     },
     entranceLink2: {
     },
     nested: {
         paddingLeft: theme.spacing(4),
+    },
+    devLink: {
+        padding: theme.spacing(1, 0),
     }
 });
 
-const light = {
-    palette: {
-        type: 'light',
+const BlueSwitch = withStyles({
+    switchBase: {
+        color: blueGrey[400],
+        '&$checked': {
+            color: blueGrey[900],
+        },
+        '&$checked + $track': {
+            backgroundColor: blueGrey[800],
+        },
     },
-}
+    checked: {},
+    track: {},
+})(Switch);
 
-const dark = {
-    palette: {
-        type: 'dark',
-    },
-}
+//const light = createMuiTheme({
+//    palette: {
+//        type: 'light',
+//    },
+//});
+
+//const dark = createMuiTheme({
+//    palette: {
+//        type: 'dark',
+//    },
+//});
   
 class Tracker extends React.Component {
     constructor(props) {
@@ -230,6 +278,7 @@ class Tracker extends React.Component {
         this.checkLocation = this.checkLocation.bind(this);
         this.unCheckLocation = this.unCheckLocation.bind(this);
         this.resetState = this.resetState.bind(this);
+        this.cancelAlert = this.cancelAlert.bind(this);
         this.toggleMQ = this.toggleMQ.bind(this);
 
         this.state = {
@@ -243,6 +292,7 @@ class Tracker extends React.Component {
             openSettings: false,
             themeDark: darkMode,
             anchorEl: null,
+            alertReset: false,
         };
     }
 
@@ -269,6 +319,7 @@ class Tracker extends React.Component {
             oneWayEntrances: oneWayEntrances,
             allEntrances: allEntrances,
             allAreas: allAreas,
+            alertReset: false,
         });
         ls.set('RandoSettings', settings);
         ls.set('AllAreas', allAreas);
@@ -1000,12 +1051,18 @@ class Tracker extends React.Component {
         ls.set('AllEntrances', allEntrances);
     }
 
+    cancelAlert() {
+        this.setState({ alertReset: false, });
+    }
+
     render() {
-        const theme = createMuiTheme(this.state.themeDark ? dark : light);
+        // Revisit after conversion to functional components
+        //const customTheme = this.state.themeDark ? dark : light;
+        const customTheme = createMuiTheme();
         const { classes } = this.props;
         return (
             <React.Fragment>
-                <ThemeProvider theme={theme}>
+                <ThemeProvider theme={customTheme}>
                     <CssBaseline />
                     <div className={classes.root}>
                         <AppBar
@@ -1032,23 +1089,23 @@ class Tracker extends React.Component {
                                             }
                                         }}
                                     >
-                                        <Typography variant="h4">{this.state.settings["View"]}</Typography><ExpandMore />
+                                        <Typography className={classes.titleText} variant="h4">{this.state.settings["View"]}</Typography><ExpandMore />
                                     </ListItem>
                                 </List>
-                                <Switch
+                                <BlueSwitch
                                     checked={this.state.settings["Show Skulls"]}
                                     onChange={() => this.changeSetting({"target": { "name": "Show Skulls", "value": !this.state.settings["Show Skulls"] }})}
                                     name="globalSkullSwitch"
                                 />
-                                <img src={require('./OoT_Token_Icon.png')} alt="Show Unshuffled Skulltulas" style={{marginRight: theme.spacing(2)}} />
+                                <img src={tokenIcon} alt="Show Unshuffled Skulltulas" style={{marginRight: customTheme.spacing(2)}} />
                                 <Button
                                     variant="contained"
-                                    onClick={() => this.resetState()}
+                                    onClick={() => this.setState({alertReset: true,})}
                                     className={classes.menuButton}
                                 >
                                     Reset All
                                 </Button>
-                                <Button
+                                {/*<Button
                                     variant="contained"
                                     onClick={() => {
                                         let darkMode = !this.state.themeDark;
@@ -1062,9 +1119,24 @@ class Tracker extends React.Component {
                                             <React.Fragment><Brightness7Icon />Light Mode</React.Fragment> :
                                             <React.Fragment><Brightness3Icon />Dark Mode</React.Fragment>
                                     }
-                                </Button>
+                                </Button>*/}
                             </Toolbar>
                         </AppBar>
+                        <Dialog
+                            open={this.state.alertReset}
+                            onClose={() => this.cancelAlert()}
+                        >
+                            <DialogTitle>{"Reset Tracker?"}</DialogTitle>
+                            <DialogContent>
+                                <DialogContentText>
+                                    All entrance and location checks will be cleared. Are you sure?
+                                </DialogContentText>
+                            </DialogContent>
+                            <DialogActions>
+                                <Button onClick={() => this.resetState()}>Yes</Button>
+                                <Button onClick={() => this.cancelAlert()}>No</Button>
+                            </DialogActions>
+                        </Dialog>
                         <Drawer
                             className={classes.drawer}
                             variant="persistent"
@@ -1088,6 +1160,9 @@ class Tracker extends React.Component {
                                         )
                                     })
                                 }
+                                <ListItem>
+                                    <Link className={classes.devLink} href="https://github.com/mracsys/tootr"><Typography>Github</Typography></Link>
+                                </ListItem>
                             </List>
                         </Drawer>
                         <div
@@ -1141,7 +1216,7 @@ class Tracker extends React.Component {
                                             classes={classes}
                                             dungeon={true}
                                             mqSwitch={this.toggleMQ}
-                                            isMQ={this.state.settings[area]}
+                                            isMQ={this.state.settings[area+" MQ"]}
                                             key={ia}
                                         />
                                     )

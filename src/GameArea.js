@@ -1,12 +1,25 @@
 import React from 'react';
 import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
-import Divider from '@material-ui/core/Divider';
 import Switch from '@material-ui/core/Switch';
+import { withStyles } from '@material-ui/core/styles';
 
 import UnknownEntrance from './UnknownEntrance'
 import LocationCheck from './LocationCheck'
 import { Typography, Box } from '@material-ui/core';
+
+const YellowSwitch = withStyles({
+    switchBase: {
+        color: '#ffffcf',
+        '&$checked': {
+            color: '#cbc26d',
+        },
+        '&$checked + $track': {
+            backgroundColor: '#cbc693',
+        },
+    },
+    checked: {},
+    track: {},
+})(Switch);
 
 class GameArea extends React.Component {
     render() {
@@ -15,12 +28,13 @@ class GameArea extends React.Component {
                 .filter( key => predicate(locations[key].visible) );
         return (
             <Card className={this.props.classes.areaCard}>
+                <div className={this.props.classes.areaHeader} />
                 <Box className={this.props.classes.areaTitle}>
-                    <Typography variant="h5" component="span" className={this.props.classes.areaTitleText}>{this.props.title}</Typography>
+                    <Typography variant="h6" component="span" className={this.props.classes.areaTitleText}>{this.props.title}</Typography>
                     {this.props.dungeon ?
                     <React.Fragment>
                         <Typography component="span">MQ</Typography>
-                        <Switch
+                        <YellowSwitch
                             checked={this.props.isMQ}
                             onChange={() => {this.props.mqSwitch(this.props.title + " MQ")}}
                             name={this.props.title + "MQ"}
@@ -28,9 +42,8 @@ class GameArea extends React.Component {
                     </React.Fragment>
                     : null}
                 </Box>
-                <CardContent>
                 <div>
-                    <Divider />
+                    <div className={this.props.locationList}>
                     { Object.keys(this.props.locations).map((location, i) => { return (
                         <React.Fragment key={this.props.title + 'locationcheckcontainer' + i}>
                             <LocationCheck
@@ -44,6 +57,7 @@ class GameArea extends React.Component {
                             />
                         </React.Fragment>
                     )})}
+                    </div>
                     { Object.keys(this.props.entrances).map((entrance, i) => {
                         return (
                             <UnknownEntrance
@@ -70,7 +84,6 @@ class GameArea extends React.Component {
                         );
                     })}
                 </div>
-                </CardContent>
             </Card>
         );
     }
