@@ -128,6 +128,68 @@
         }
     },
     "locations": {
+        "GV Crate Freestanding PoH": {
+            "area": "Gerudo Valley",
+            "lKey": "",
+            "alias": "Crate Item",
+            "type": "item",
+            "settings": [],
+            "visible": true,
+            "check": ""
+        },
+        "GV Waterfall Freestanding PoH": {
+            "area": "Gerudo Valley",
+            "lKey": "",
+            "alias": "Waterfall Item",
+            "type": "item",
+            "settings": [],
+            "visible": true,
+            "check": ""
+        },
+        "GV Cow": {
+            "area": "Gerudo Valley",
+            "lKey": "",
+            "alias": "Valley Cow",
+            "type": "item",
+            "settings": [{"setting": "Cowsanity", "value": "On", "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "GV Chest": {
+            "area": "Gerudo Valley",
+            "lKey": "",
+            "alias": "Hammer Rocks",
+            "type": "item",
+            "settings": [],
+            "visible": true,
+            "check": ""
+        },
+        "GV Deku Scrub Grotto Front": {
+            "area": "",
+            "lKey": "GV Fortress Side -> GV Storms Grotto",
+            "alias": "Right Scrub",
+            "type": "item",
+            "settings": [
+                {"setting": "Scrubsanity", "value": "Affordable", "required": false},
+                {"setting": "Scrubsanity", "value": "Random", "required": false},
+                {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "GV Deku Scrub Grotto Rear": {
+            "area": "",
+            "lKey": "GV Fortress Side -> GV Storms Grotto",
+            "alias": "Left Scrub",
+            "type": "item",
+            "settings": [
+                {"setting": "Scrubsanity", "value": "Affordable", "required": false},
+                {"setting": "Scrubsanity", "value": "Random", "required": false},
+                {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
         "GV GS Bean Patch": {
             "area": "Gerudo Valley",
             "lKey": "",
@@ -176,68 +238,6 @@
                 {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
                 {"setting": "Tokensanity", "value": "Overworld", "required": false},
                 {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": ""
-        },
-        "GV Cow": {
-            "area": "Gerudo Valley",
-            "lKey": "",
-            "alias": "Valley Cow",
-            "type": "item",
-            "settings": [{"setting": "Cowsanity", "value": "On", "required": true}],
-            "visible": true,
-            "check": ""
-        },
-        "GV Crate Freestanding PoH": {
-            "area": "Gerudo Valley",
-            "lKey": "",
-            "alias": "Crate Item",
-            "type": "item",
-            "settings": [],
-            "visible": true,
-            "check": ""
-        },
-        "GV Waterfall Freestanding PoH": {
-            "area": "Gerudo Valley",
-            "lKey": "",
-            "alias": "Waterfall Item",
-            "type": "item",
-            "settings": [],
-            "visible": true,
-            "check": ""
-        },
-        "GV Chest": {
-            "area": "Gerudo Valley",
-            "lKey": "",
-            "alias": "Hammer Rocks",
-            "type": "item",
-            "settings": [],
-            "visible": true,
-            "check": ""
-        },
-        "GV Deku Scrub Grotto Front": {
-            "area": "",
-            "lKey": "GV Fortress Side -> GV Storms Grotto",
-            "alias": "Right Scrub",
-            "type": "item",
-            "settings": [
-                {"setting": "Scrubsanity", "value": "Affordable", "required": false},
-                {"setting": "Scrubsanity", "value": "Random", "required": false},
-                {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
-            ],
-            "visible": true,
-            "check": ""
-        },
-        "GV Deku Scrub Grotto Rear": {
-            "area": "",
-            "lKey": "GV Fortress Side -> GV Storms Grotto",
-            "alias": "Left Scrub",
-            "type": "item",
-            "settings": [
-                {"setting": "Scrubsanity", "value": "Affordable", "required": false},
-                {"setting": "Scrubsanity", "value": "Random", "required": false},
-                {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
             ],
             "visible": true,
             "check": ""

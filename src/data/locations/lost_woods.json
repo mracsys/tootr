@@ -191,47 +191,8 @@
         }
     },
     "locations": {
-        "LW GS Bean Patch Near Bridge": {
-            "area": "Lost Woods",
-            "lKey": "",
-            "alias": "Bean Patch near Bridge",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": ""
-        },
-        "LW GS Bean Patch Near Theater": {
-            "area": "Lost Woods",
-            "lKey": "",
-            "alias": "Bean Patch near Theater",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": ""
-        },
-        "LW GS Above Theater": {
-            "area": "Lost Woods",
-            "lKey": "",
-            "alias": "Above Theater",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": ""
-        },
         "LW Gift from Saria": {
-            "area": "Lost Woods",
+            "area": "Lost Woods Bridge",
             "lKey": "",
             "alias": "Gift from Saria",
             "type": "item",
@@ -346,6 +307,45 @@
                 {"setting": "Scrubsanity", "value": "Affordable", "required": false},
                 {"setting": "Scrubsanity", "value": "Random", "required": false},
                 {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "LW GS Bean Patch Near Bridge": {
+            "area": "Lost Woods",
+            "lKey": "",
+            "alias": "Bean Patch near Bridge",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "LW GS Bean Patch Near Theater": {
+            "area": "Lost Woods",
+            "lKey": "",
+            "alias": "Bean Patch near Theater",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "LW GS Above Theater": {
+            "area": "Lost Woods",
+            "lKey": "",
+            "alias": "Above Theater",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
             "check": ""

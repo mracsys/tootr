@@ -146,7 +146,7 @@
         "GC Medigoron": {
             "area": "Goron City",
             "lKey": "",
-            "alias": "Link the Goron",
+            "alias": "Medigoron",
             "type": "item",
             "settings": [{"setting": "Shuffle Merchants", "value": "On", "required": false}],
             "visible": true,

@@ -44,19 +44,6 @@
         }
     },
     "locations": {
-        "Wasteland GS": {
-            "area": "Haunted Wasteland",
-            "lKey": "",
-            "alias": "Wasteland Hut",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": ""
-        },
         "Wasteland Bombchu Salesman": {
             "area": "Haunted Wasteland",
             "lKey": "",
@@ -72,6 +59,19 @@
             "alias": "Wasteland Chest",
             "type": "item",
             "settings": [],
+            "visible": true,
+            "check": ""
+        },
+        "Wasteland GS": {
+            "area": "Haunted Wasteland",
+            "lKey": "",
+            "alias": "Wasteland Hut",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
             "visible": true,
             "check": ""
         }
