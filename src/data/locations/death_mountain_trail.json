@@ -230,7 +230,7 @@
             "alias": "Bombable Wall",
             "type": "skulltula",
             "settings": [
-                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
                 {"setting": "Tokensanity", "value": "Overworld", "required": false},
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
@@ -243,7 +243,7 @@
             "alias": "Bean Patch",
             "type": "skulltula",
             "settings": [
-                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
                 {"setting": "Tokensanity", "value": "Overworld", "required": false},
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
@@ -256,7 +256,7 @@
             "alias": "Boulder near Cavern",
             "type": "skulltula",
             "settings": [
-                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
                 {"setting": "Tokensanity", "value": "Overworld", "required": false},
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
@@ -269,7 +269,7 @@
             "alias": "Boulder near Crater",
             "type": "skulltula",
             "settings": [
-                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
                 {"setting": "Tokensanity", "value": "Overworld", "required": false},
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],

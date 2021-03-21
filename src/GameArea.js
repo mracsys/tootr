@@ -33,7 +33,7 @@ class GameArea extends React.Component {
                     <Typography variant="h6" component="span" className={this.props.classes.areaTitleText}>{this.props.title}</Typography>
                     {this.props.dungeon ?
                     <React.Fragment>
-                        <Typography component="span">MQ</Typography>
+                        <Typography className={this.props.classes.mqSwitchLabel} component="span">MQ</Typography>
                         <YellowSwitch
                             checked={this.props.isMQ}
                             onChange={() => {this.props.mqSwitch(this.props.title + " MQ")}}

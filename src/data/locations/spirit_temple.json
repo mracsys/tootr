@@ -19,6 +19,20 @@
             "visible": true,
             "check": ""
         },
+        "Spirit Temple GS Metal Fence": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Early Child",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Spirit Temple MQ", "value": false, "required": true},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
         "Spirit Temple Child Climb North Chest": {
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
@@ -34,6 +48,20 @@
             "alias": "Child Climb Chest 2",
             "type": "item",
             "settings": [{"setting": "Spirit Temple MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Spirit Temple GS Sun on Floor Room": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Child Climb",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Spirit Temple MQ", "value": false, "required": true},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
             "visible": true,
             "check": ""
         },
@@ -55,6 +83,20 @@
             "visible": true,
             "check": ""
         },
+        "Spirit Temple GS Hall After Sun Block Room": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Iron Knuckle Lobby",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Spirit Temple MQ", "value": false, "required": true},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
         "Spirit Temple Compass Chest": {
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
@@ -70,6 +112,20 @@
             "alias": "Early Adult Right Chest",
             "type": "smallKey",
             "settings": [{"setting": "Spirit Temple MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Spirit Temple GS Boulder Room": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Adult Song of Time",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Spirit Temple MQ", "value": false, "required": true},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
             "visible": true,
             "check": ""
         },
@@ -106,6 +162,20 @@
             "alias": "Statue Hand Chest",
             "type": "smallKey",
             "settings": [{"setting": "Spirit Temple MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Spirit Temple GS Lobby": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Central Room Ledge",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Spirit Temple MQ", "value": false, "required": true},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
             "visible": true,
             "check": ""
         },
@@ -151,76 +221,6 @@
             "alias": "Top Sun Chest",
             "type": "item",
             "settings": [{"setting": "Spirit Temple MQ", "value": false, "required": true}],
-            "visible": true,
-            "check": ""
-        },
-        "Spirit Temple GS Metal Fence": {
-            "area": "",
-            "lKey": "Desert Colossus -> Spirit Temple Lobby",
-            "alias": "Early Child",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Spirit Temple MQ", "value": false, "required": true},
-                {"setting": "Show Skulls", "value": true, "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": ""
-        },
-        "Spirit Temple GS Sun on Floor Room": {
-            "area": "",
-            "lKey": "Desert Colossus -> Spirit Temple Lobby",
-            "alias": "Child Climb",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Spirit Temple MQ", "value": false, "required": true},
-                {"setting": "Show Skulls", "value": true, "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": ""
-        },
-        "Spirit Temple GS Hall After Sun Block Room": {
-            "area": "",
-            "lKey": "Desert Colossus -> Spirit Temple Lobby",
-            "alias": "Iron Knuckle Lobby",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Spirit Temple MQ", "value": false, "required": true},
-                {"setting": "Show Skulls", "value": true, "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": ""
-        },
-        "Spirit Temple GS Lobby": {
-            "area": "",
-            "lKey": "Desert Colossus -> Spirit Temple Lobby",
-            "alias": "Central Room Ledge",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Spirit Temple MQ", "value": false, "required": true},
-                {"setting": "Show Skulls", "value": true, "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": ""
-        },
-        "Spirit Temple GS Boulder Room": {
-            "area": "",
-            "lKey": "Desert Colossus -> Spirit Temple Lobby",
-            "alias": "Adult Song of Time",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Spirit Temple MQ", "value": false, "required": true},
-                {"setting": "Show Skulls", "value": true, "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
             "visible": true,
             "check": ""
         },
@@ -323,6 +323,20 @@
             "visible": true,
             "check": ""
         },
+        "Spirit Temple MQ GS Sun Block Room": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Sun Block Room",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Spirit Temple MQ", "value": true, "required": true},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
         "Spirit Temple MQ Child Hammer Switch Chest": {
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
@@ -359,12 +373,40 @@
             "visible": true,
             "check": ""
         },
+        "Spirit Temple MQ GS Leever Room": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Leever Pit",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Spirit Temple MQ", "value": true, "required": true},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
         "Spirit Temple MQ Symphony Room Chest": {
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
             "alias": "Symphony Chest",
             "type": "item",
             "settings": [{"setting": "Spirit Temple MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Spirit Temple MQ GS Symphony Room": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Symphony Room",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Spirit Temple MQ", "value": true, "required": true},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
             "visible": true,
             "check": ""
         },
@@ -395,57 +437,6 @@
             "visible": true,
             "check": ""
         },
-        "Spirit Temple MQ Mirror Puzzle Invisible Chest": {
-            "area": "",
-            "lKey": "Desert Colossus -> Spirit Temple Lobby",
-            "alias": "Top Invisible Chest",
-            "type": "smallKey",
-            "settings": [{"setting": "Spirit Temple MQ", "value": true, "required": true}],
-            "visible": true,
-            "check": ""
-        },
-        "Spirit Temple MQ GS Sun Block Room": {
-            "area": "",
-            "lKey": "Desert Colossus -> Spirit Temple Lobby",
-            "alias": "Sun Block Room",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Spirit Temple MQ", "value": true, "required": true},
-                {"setting": "Show Skulls", "value": true, "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": ""
-        },
-        "Spirit Temple MQ GS Leever Room": {
-            "area": "",
-            "lKey": "Desert Colossus -> Spirit Temple Lobby",
-            "alias": "Leever Pit",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Spirit Temple MQ", "value": true, "required": true},
-                {"setting": "Show Skulls", "value": true, "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": ""
-        },
-        "Spirit Temple MQ GS Symphony Room": {
-            "area": "",
-            "lKey": "Desert Colossus -> Spirit Temple Lobby",
-            "alias": "Symphony Room",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Spirit Temple MQ", "value": true, "required": true},
-                {"setting": "Show Skulls", "value": true, "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": ""
-        },
         "Spirit Temple MQ GS Nine Thrones Room West": {
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
@@ -453,8 +444,8 @@
             "type": "skulltula",
             "settings": [
                 {"setting": "Spirit Temple MQ", "value": true, "required": true},
-                {"setting": "Show Skulls", "value": true, "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
@@ -467,10 +458,19 @@
             "type": "skulltula",
             "settings": [
                 {"setting": "Spirit Temple MQ", "value": true, "required": true},
-                {"setting": "Show Skulls", "value": true, "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
+            "visible": true,
+            "check": ""
+        },
+        "Spirit Temple MQ Mirror Puzzle Invisible Chest": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Top Invisible Chest",
+            "type": "smallKey",
+            "settings": [{"setting": "Spirit Temple MQ", "value": true, "required": true}],
             "visible": true,
             "check": ""
         },

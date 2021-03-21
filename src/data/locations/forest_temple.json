@@ -1,12 +1,40 @@
 {
     "entrances": {},
     "locations": {
+        "Forest Temple GS First Room": {
+            "area": "",
+            "lKey": "SFM Forest Temple Entrance Ledge -> Forest Temple Lobby",
+            "alias": "Vines",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Forest Temple MQ", "value": false, "required": true},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
         "Forest Temple First Room Chest": {
             "area": "",
             "lKey": "SFM Forest Temple Entrance Ledge -> Forest Temple Lobby",
             "alias": "Tree Chest",
             "type": "smallKey",
             "settings": [{"setting": "Forest Temple MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Forest Temple GS Lobby": {
+            "area": "",
+            "lKey": "SFM Forest Temple Entrance Ledge -> Forest Temple Lobby",
+            "alias": "Lobby Wall",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Forest Temple MQ", "value": false, "required": true},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
             "visible": true,
             "check": ""
         },
@@ -25,6 +53,20 @@
             "alias": "Island Chest",
             "type": "item",
             "settings": [{"setting": "Forest Temple MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Forest Temple GS Raised Island Courtyard": {
+            "area": "",
+            "lKey": "SFM Forest Temple Entrance Ledge -> Forest Temple Lobby",
+            "alias": "Island",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Forest Temple MQ", "value": false, "required": true},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
             "visible": true,
             "check": ""
         },
@@ -61,6 +103,20 @@
             "alias": "Boss Key Chest",
             "type": "bossKey",
             "settings": [{"setting": "Forest Temple MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Forest Temple GS Level Island Courtyard": {
+            "area": "",
+            "lKey": "SFM Forest Temple Entrance Ledge -> Forest Temple Lobby",
+            "alias": "Columns",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Forest Temple MQ", "value": false, "required": true},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
             "visible": true,
             "check": ""
         },
@@ -118,62 +174,6 @@
             "visible": true,
             "check": ""
         },
-        "Forest Temple GS First Room": {
-            "area": "",
-            "lKey": "SFM Forest Temple Entrance Ledge -> Forest Temple Lobby",
-            "alias": "Vines",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Forest Temple MQ", "value": false, "required": true},
-                {"setting": "Show Skulls", "value": true, "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": ""
-        },
-        "Forest Temple GS Lobby": {
-            "area": "",
-            "lKey": "SFM Forest Temple Entrance Ledge -> Forest Temple Lobby",
-            "alias": "Lobby Wall",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Forest Temple MQ", "value": false, "required": true},
-                {"setting": "Show Skulls", "value": true, "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": ""
-        },
-        "Forest Temple GS Raised Island Courtyard": {
-            "area": "",
-            "lKey": "SFM Forest Temple Entrance Ledge -> Forest Temple Lobby",
-            "alias": "Island",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Forest Temple MQ", "value": false, "required": true},
-                {"setting": "Show Skulls", "value": true, "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": ""
-        },
-        "Forest Temple GS Level Island Courtyard": {
-            "area": "",
-            "lKey": "SFM Forest Temple Entrance Ledge -> Forest Temple Lobby",
-            "alias": "Columns",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Forest Temple MQ", "value": false, "required": true},
-                {"setting": "Show Skulls", "value": true, "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": ""
-        },
         "Forest Temple GS Basement": {
             "area": "",
             "lKey": "SFM Forest Temple Entrance Ledge -> Forest Temple Lobby",
@@ -181,8 +181,8 @@
             "type": "skulltula",
             "settings": [
                 {"setting": "Forest Temple MQ", "value": false, "required": true},
-                {"setting": "Show Skulls", "value": true, "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
@@ -197,6 +197,20 @@
             "visible": true,
             "check": ""
         },
+        "Forest Temple MQ GS First Hallway": {
+            "area": "",
+            "lKey": "SFM Forest Temple Entrance Ledge -> Forest Temple Lobby",
+            "alias": "Hallway",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Forest Temple MQ", "value": true, "required": true},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
         "Forest Temple MQ Wolfos Chest": {
             "area": "",
             "lKey": "SFM Forest Temple Entrance Ledge -> Forest Temple Lobby",
@@ -206,10 +220,24 @@
             "visible": true,
             "check": ""
         },
-        "Forest Temple MQ Well Chest": {
+        "Forest Temple MQ GS Raised Island Courtyard": {
             "area": "",
             "lKey": "SFM Forest Temple Entrance Ledge -> Forest Temple Lobby",
-            "alias": "Well Chest",
+            "alias": "Archway",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Forest Temple MQ", "value": true, "required": true},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Forest Temple MQ Raised Island Courtyard Upper Chest": {
+            "area": "",
+            "lKey": "SFM Forest Temple Entrance Ledge -> Forest Temple Lobby",
+            "alias": "Balcony Chest",
             "type": "smallKey",
             "settings": [{"setting": "Forest Temple MQ", "value": true, "required": true}],
             "visible": true,
@@ -224,12 +252,54 @@
             "visible": true,
             "check": ""
         },
-        "Forest Temple MQ Raised Island Courtyard Upper Chest": {
+        "Forest Temple MQ GS Level Island Courtyard": {
             "area": "",
             "lKey": "SFM Forest Temple Entrance Ledge -> Forest Temple Lobby",
-            "alias": "Balcony Chest",
+            "alias": "Top of Well",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Forest Temple MQ", "value": true, "required": true},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Forest Temple MQ Well Chest": {
+            "area": "",
+            "lKey": "SFM Forest Temple Entrance Ledge -> Forest Temple Lobby",
+            "alias": "Well Chest",
             "type": "smallKey",
             "settings": [{"setting": "Forest Temple MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Forest Temple MQ GS Well": {
+            "area": "",
+            "lKey": "SFM Forest Temple Entrance Ledge -> Forest Temple Lobby",
+            "alias": "Well Grate",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Forest Temple MQ", "value": true, "required": true},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Forest Temple MQ GS Block Push Room": {
+            "area": "",
+            "lKey": "SFM Forest Temple Entrance Ledge -> Forest Temple Lobby",
+            "alias": "Block Push Room",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Forest Temple MQ", "value": true, "required": true},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
             "visible": true,
             "check": ""
         },
@@ -293,76 +363,6 @@
             "alias": "Basement Chest",
             "type": "item",
             "settings": [{"setting": "Forest Temple MQ", "value": true, "required": true}],
-            "visible": true,
-            "check": ""
-        },
-        "Forest Temple MQ GS First Hallway": {
-            "area": "",
-            "lKey": "SFM Forest Temple Entrance Ledge -> Forest Temple Lobby",
-            "alias": "Hallway",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Forest Temple MQ", "value": true, "required": true},
-                {"setting": "Show Skulls", "value": true, "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": ""
-        },
-        "Forest Temple MQ GS Raised Island Courtyard": {
-            "area": "",
-            "lKey": "SFM Forest Temple Entrance Ledge -> Forest Temple Lobby",
-            "alias": "Archway",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Forest Temple MQ", "value": true, "required": true},
-                {"setting": "Show Skulls", "value": true, "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": ""
-        },
-        "Forest Temple MQ GS Level Island Courtyard": {
-            "area": "",
-            "lKey": "SFM Forest Temple Entrance Ledge -> Forest Temple Lobby",
-            "alias": "Top of Well",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Forest Temple MQ", "value": true, "required": true},
-                {"setting": "Show Skulls", "value": true, "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": ""
-        },
-        "Forest Temple MQ GS Well": {
-            "area": "",
-            "lKey": "SFM Forest Temple Entrance Ledge -> Forest Temple Lobby",
-            "alias": "Well Grate",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Forest Temple MQ", "value": true, "required": true},
-                {"setting": "Show Skulls", "value": true, "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": ""
-        },
-        "Forest Temple MQ GS Block Push Room": {
-            "area": "",
-            "lKey": "SFM Forest Temple Entrance Ledge -> Forest Temple Lobby",
-            "alias": "Block Push Room",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Forest Temple MQ", "value": true, "required": true},
-                {"setting": "Show Skulls", "value": true, "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
             "visible": true,
             "check": ""
         },

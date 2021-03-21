@@ -55,12 +55,40 @@
             "visible": true,
             "check": ""
         },
+        "Shadow Temple GS Like Like Room": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Invisible Blades",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Shadow Temple MQ", "value": false, "required": true},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
         "Shadow Temple Falling Spikes Lower Chest": {
             "area": "",
             "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
             "alias": "Falling Spikes Lower Chest",
             "type": "item",
             "settings": [{"setting": "Shadow Temple MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Shadow Temple GS Falling Spikes Room": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Falling Spikes",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Shadow Temple MQ", "value": false, "required": true},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
             "visible": true,
             "check": ""
         },
@@ -88,6 +116,20 @@
             "alias": "Invisible Spikes Chest",
             "type": "item",
             "settings": [{"setting": "Shadow Temple MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Shadow Temple GS Single Giant Pot": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Behind Bombable Pot",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Shadow Temple MQ", "value": false, "required": true},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
             "visible": true,
             "check": ""
         },
@@ -127,6 +169,20 @@
             "visible": true,
             "check": ""
         },
+        "Shadow Temple GS Near Ship": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Scarecrow",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Shadow Temple MQ", "value": false, "required": true},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
         "Shadow Temple Spike Walls Left Chest": {
             "area": "",
             "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
@@ -145,71 +201,6 @@
             "visible": true,
             "check": ""
         },
-        "Shadow Temple Invisible Floormaster Chest": {
-            "area": "",
-            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
-            "alias": "Floormaster Chest",
-            "type": "smallKey",
-            "settings": [{"setting": "Shadow Temple MQ", "value": false, "required": true}],
-            "visible": true,
-            "check": ""
-        },
-        "Shadow Temple GS Like Like Room": {
-            "area": "",
-            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
-            "alias": "Invisible Blades",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Shadow Temple MQ", "value": false, "required": true},
-                {"setting": "Show Skulls", "value": true, "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": ""
-        },
-        "Shadow Temple GS Falling Spikes Room": {
-            "area": "",
-            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
-            "alias": "Falling Spikes",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Shadow Temple MQ", "value": false, "required": true},
-                {"setting": "Show Skulls", "value": true, "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": ""
-        },
-        "Shadow Temple GS Single Giant Pot": {
-            "area": "",
-            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
-            "alias": "Behind Bombable Pot",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Shadow Temple MQ", "value": false, "required": true},
-                {"setting": "Show Skulls", "value": true, "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": ""
-        },
-        "Shadow Temple GS Near Ship": {
-            "area": "",
-            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
-            "alias": "Scarecrow",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Shadow Temple MQ", "value": false, "required": true},
-                {"setting": "Show Skulls", "value": true, "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": ""
-        },
         "Shadow Temple GS Triple Giant Pot": {
             "area": "",
             "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
@@ -217,10 +208,19 @@
             "type": "skulltula",
             "settings": [
                 {"setting": "Shadow Temple MQ", "value": false, "required": true},
-                {"setting": "Show Skulls", "value": true, "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
+            "visible": true,
+            "check": ""
+        },
+        "Shadow Temple Invisible Floormaster Chest": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Floormaster Chest",
+            "type": "smallKey",
+            "settings": [{"setting": "Shadow Temple MQ", "value": false, "required": true}],
             "visible": true,
             "check": ""
         },
@@ -305,6 +305,20 @@
             "visible": true,
             "check": ""
         },
+        "Shadow Temple MQ GS Falling Spikes Room": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Falling Spikes",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Shadow Temple MQ", "value": true, "required": true},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
         "Shadow Temple MQ Falling Spikes Upper Chest": {
             "area": "",
             "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
@@ -350,6 +364,20 @@
             "visible": true,
             "check": ""
         },
+        "Shadow Temple MQ GS Wind Hint Room": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "After Fans",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Shadow Temple MQ", "value": true, "required": true},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
         "Shadow Temple MQ After Wind Hidden Chest": {
             "area": "",
             "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
@@ -365,6 +393,34 @@
             "alias": "Late Gibdo Chest",
             "type": "item",
             "settings": [{"setting": "Shadow Temple MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Shadow Temple MQ GS After Wind": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Bombable Terrain",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Shadow Temple MQ", "value": true, "required": true},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Shadow Temple MQ GS After Ship": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Fallen Statue",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Shadow Temple MQ", "value": true, "required": true},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
             "visible": true,
             "check": ""
         },
@@ -404,62 +460,6 @@
             "visible": true,
             "check": ""
         },
-        "Shadow Temple MQ GS Falling Spikes Room": {
-            "area": "",
-            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
-            "alias": "Falling Spikes",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Shadow Temple MQ", "value": true, "required": true},
-                {"setting": "Show Skulls", "value": true, "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": ""
-        },
-        "Shadow Temple MQ GS Wind Hint Room": {
-            "area": "",
-            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
-            "alias": "After Fans",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Shadow Temple MQ", "value": true, "required": true},
-                {"setting": "Show Skulls", "value": true, "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": ""
-        },
-        "Shadow Temple MQ GS After Wind": {
-            "area": "",
-            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
-            "alias": "Bombable Terrain",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Shadow Temple MQ", "value": true, "required": true},
-                {"setting": "Show Skulls", "value": true, "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": ""
-        },
-        "Shadow Temple MQ GS After Ship": {
-            "area": "",
-            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
-            "alias": "Fallen Statue",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Shadow Temple MQ", "value": true, "required": true},
-                {"setting": "Show Skulls", "value": true, "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": ""
-        },
         "Shadow Temple MQ GS Near Boss": {
             "area": "",
             "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
@@ -467,8 +467,8 @@
             "type": "skulltula",
             "settings": [
                 {"setting": "Shadow Temple MQ", "value": true, "required": true},
-                {"setting": "Show Skulls", "value": true, "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,

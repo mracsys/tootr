@@ -63,7 +63,7 @@ class LinkedEntrance extends React.Component {
         if (this.props.connector === false) {
             if ((interiors.includes(this.props.allAreas.entrances[reverseLink].type) &&
             (oneWayTypes.includes(oEntrance.type) || this.props.decoupled) &&
-            !(this.props.allAreas.entrances[reverseLink].isReverse)) && this.props.allAreas.entrances[reverseLink].shuffled === true) {
+            !(this.props.allAreas.entrances[reverseLink].isReverse)) && (this.props.allAreas.entrances[reverseLink].shuffled === true || this.props.decoupled)) {
                 otherEntrances.push({"entrance": this.props.allAreas.entrances[reverseLink].reverse,"ekey":"Reverse","connector": false})
             }
             if (this.props.allAreas.entrances[reverseLink].connector !== "" &&

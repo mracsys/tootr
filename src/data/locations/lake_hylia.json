@@ -248,7 +248,7 @@
             "alias": "Bean Patch",
             "type": "skulltula",
             "settings": [
-                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
                 {"setting": "Tokensanity", "value": "Overworld", "required": false},
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
@@ -261,7 +261,7 @@
             "alias": "Lab Wall",
             "type": "skulltula",
             "settings": [
-                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
                 {"setting": "Tokensanity", "value": "Overworld", "required": false},
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
@@ -274,7 +274,7 @@
             "alias": "Near Sun Reward",
             "type": "skulltula",
             "settings": [
-                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
                 {"setting": "Tokensanity", "value": "Overworld", "required": false},
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
@@ -287,7 +287,7 @@
             "alias": "Top of Tree",
             "type": "skulltula",
             "settings": [
-                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
                 {"setting": "Tokensanity", "value": "Overworld", "required": false},
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
@@ -300,7 +300,7 @@
             "alias": "Lab Crate",
             "type": "skulltula",
             "settings": [
-                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
                 {"setting": "Tokensanity", "value": "Overworld", "required": false},
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],

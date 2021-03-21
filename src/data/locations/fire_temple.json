@@ -10,6 +10,20 @@
             "visible": true,
             "check": ""
         },
+        "Fire Temple GS Boss Key Loop": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Lower Loop",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Fire Temple MQ", "value": false, "required": true},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
         "Fire Temple Flare Dancer Chest": {
             "area": "",
             "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
@@ -34,6 +48,20 @@
             "alias": "Lava Room Open Chest",
             "type": "smallKey",
             "settings": [{"setting": "Fire Temple MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Fire Temple GS Song of Time Room": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Lava Room Song of Time",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Fire Temple MQ", "value": false, "required": true},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
             "visible": true,
             "check": ""
         },
@@ -64,6 +92,20 @@
             "visible": true,
             "check": ""
         },
+        "Fire Temple GS Boulder Maze": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Boulder Maze",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Fire Temple MQ", "value": false, "required": true},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
         "Fire Temple Map Chest": {
             "area": "",
             "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
@@ -88,6 +130,34 @@
             "alias": "Upper Boulder Maze Chest",
             "type": "smallKey",
             "settings": [{"setting": "Fire Temple MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Fire Temple GS Scarecrow Climb": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Scarecrow Lower",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Fire Temple MQ", "value": false, "required": true},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Fire Temple GS Scarecrow Top": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Scarecrow Upper",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Fire Temple MQ", "value": false, "required": true},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
             "visible": true,
             "check": ""
         },
@@ -127,76 +197,6 @@
             "visible": true,
             "check": ""
         },
-        "Fire Temple GS Boss Key Loop": {
-            "area": "",
-            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
-            "alias": "Lower Loop",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Fire Temple MQ", "value": false, "required": true},
-                {"setting": "Show Skulls", "value": true, "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": ""
-        },
-        "Fire Temple GS Song of Time Room": {
-            "area": "",
-            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
-            "alias": "Lava Room Song of Time",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Fire Temple MQ", "value": false, "required": true},
-                {"setting": "Show Skulls", "value": true, "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": ""
-        },
-        "Fire Temple GS Boulder Maze": {
-            "area": "",
-            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
-            "alias": "Boulder Maze",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Fire Temple MQ", "value": false, "required": true},
-                {"setting": "Show Skulls", "value": true, "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": ""
-        },
-        "Fire Temple GS Scarecrow Climb": {
-            "area": "",
-            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
-            "alias": "Scarecrow Lower",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Fire Temple MQ", "value": false, "required": true},
-                {"setting": "Show Skulls", "value": true, "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": ""
-        },
-        "Fire Temple GS Scarecrow Top": {
-            "area": "",
-            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
-            "alias": "Scarecrow Upper",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Fire Temple MQ", "value": false, "required": true},
-                {"setting": "Show Skulls", "value": true, "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": ""
-        },
         "Fire Temple MQ Map Room Side Chest": {
             "area": "",
             "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
@@ -233,6 +233,20 @@
             "visible": true,
             "check": ""
         },
+        "Fire Temple MQ GS Big Lava Room Open Door": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Lava Room Open Door",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Fire Temple MQ", "value": true, "required": true},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
         "Fire Temple MQ Big Lava Room Blocked Door Chest": {
             "area": "",
             "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
@@ -247,6 +261,15 @@
             "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
             "alias": "Lava Room Torch Chest",
             "type": "bossKey",
+            "settings": [{"setting": "Fire Temple MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Fire Temple MQ Lizalfos Maze Lower Chest": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Lizalfos Maze Lower Chest",
+            "type": "item",
             "settings": [{"setting": "Fire Temple MQ", "value": true, "required": true}],
             "visible": true,
             "check": ""
@@ -278,12 +301,31 @@
             "visible": true,
             "check": ""
         },
-        "Fire Temple MQ Lizalfos Maze Lower Chest": {
+        "Fire Temple MQ GS Skull On Fire": {
             "area": "",
             "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
-            "alias": "Lizalfos Maze Lower Chest",
-            "type": "item",
-            "settings": [{"setting": "Fire Temple MQ", "value": true, "required": true}],
+            "alias": "Scarecrow",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Fire Temple MQ", "value": true, "required": true},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Fire Temple MQ GS Fire Wall Maze Side Room": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Fire Maze Side Room",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Fire Temple MQ", "value": true, "required": true},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
             "visible": true,
             "check": ""
         },
@@ -305,29 +347,15 @@
             "visible": true,
             "check": ""
         },
-        "Fire Temple MQ GS Big Lava Room Open Door": {
+        "Fire Temple MQ GS Above Fire Wall Maze": {
             "area": "",
             "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
-            "alias": "Lava Room Open Door",
+            "alias": "Above Fire Maze",
             "type": "skulltula",
             "settings": [
                 {"setting": "Fire Temple MQ", "value": true, "required": true},
-                {"setting": "Show Skulls", "value": true, "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": ""
-        },
-        "Fire Temple MQ GS Skull On Fire": {
-            "area": "",
-            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
-            "alias": "Scarecrow",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Fire Temple MQ", "value": true, "required": true},
-                {"setting": "Show Skulls", "value": true, "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
@@ -340,36 +368,8 @@
             "type": "skulltula",
             "settings": [
                 {"setting": "Fire Temple MQ", "value": true, "required": true},
-                {"setting": "Show Skulls", "value": true, "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": ""
-        },
-        "Fire Temple MQ GS Fire Wall Maze Side Room": {
-            "area": "",
-            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
-            "alias": "Fire Maze",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Fire Temple MQ", "value": true, "required": true},
-                {"setting": "Show Skulls", "value": true, "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": ""
-        },
-        "Fire Temple MQ GS Above Fire Wall Maze": {
-            "area": "",
-            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
-            "alias": "Above Fire Maze",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Fire Temple MQ", "value": true, "required": true},
-                {"setting": "Show Skulls", "value": true, "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,

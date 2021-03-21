@@ -119,7 +119,7 @@
             "alias": "Above Log",
             "type": "skulltula",
             "settings": [
-                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
                 {"setting": "Tokensanity", "value": "Overworld", "required": false},
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
@@ -132,7 +132,7 @@
             "alias": "Tree Bonk",
             "type": "skulltula",
             "settings": [
-                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
                 {"setting": "Tokensanity", "value": "Overworld", "required": false},
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
@@ -145,7 +145,7 @@
             "alias": "Hidden Cave",
             "type": "skulltula",
             "settings": [
-                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
                 {"setting": "Tokensanity", "value": "Overworld", "required": false},
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],

@@ -215,7 +215,7 @@
             "alias": "House",
             "type": "skulltula",
             "settings": [
-                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
                 {"setting": "Tokensanity", "value": "Overworld", "required": false},
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
@@ -228,7 +228,7 @@
             "alias": "Tree Bonk",
             "type": "skulltula",
             "settings": [
-                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
                 {"setting": "Tokensanity", "value": "Overworld", "required": false},
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
@@ -241,7 +241,7 @@
             "alias": "Back Fence",
             "type": "skulltula",
             "settings": [
-                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
                 {"setting": "Tokensanity", "value": "Overworld", "required": false},
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
@@ -254,7 +254,7 @@
             "alias": "Back Wall",
             "type": "skulltula",
             "settings": [
-                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
                 {"setting": "Tokensanity", "value": "Overworld", "required": false},
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],

@@ -1,6 +1,34 @@
 {
     "entrances": {},
     "locations": {
+        "Jabu Jabus Belly Deku Scrub": {
+            "area": "",
+            "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
+            "alias": "Basement Scrub",
+            "type": "item",
+            "settings": [
+                {"setting": "Jabu Jabu's Belly MQ", "value": false, "required": true},
+                {"setting": "Scrubsanity", "value": "Affordable", "required": false},
+                {"setting": "Scrubsanity", "value": "Random", "required": false},
+                {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Jabu Jabus Belly GS Water Switch Room": {
+            "area": "",
+            "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
+            "alias": "Basement Vines",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Jabu Jabu's Belly MQ", "value": false, "required": true},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
         "Jabu Jabus Belly Boomerang Chest": {
             "area": "",
             "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
@@ -28,34 +56,6 @@
             "visible": true,
             "check": ""
         },
-        "Jabu Jabus Belly Deku Scrub": {
-            "area": "",
-            "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
-            "alias": "Basement Scrub",
-            "type": "item",
-            "settings": [
-                {"setting": "Jabu Jabu's Belly MQ", "value": false, "required": true},
-                {"setting": "Scrubsanity", "value": "Affordable", "required": false},
-                {"setting": "Scrubsanity", "value": "Random", "required": false},
-                {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
-            ],
-            "visible": true,
-            "check": ""
-        },
-        "Jabu Jabus Belly GS Water Switch Room": {
-            "area": "",
-            "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
-            "alias": "Basement Vines",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Jabu Jabu's Belly MQ", "value": false, "required": true},
-                {"setting": "Show Skulls", "value": true, "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": ""
-        },
         "Jabu Jabus Belly GS Lobby Basement Lower": {
             "area": "",
             "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
@@ -63,8 +63,8 @@
             "type": "skulltula",
             "settings": [
                 {"setting": "Jabu Jabu's Belly MQ", "value": false, "required": true},
-                {"setting": "Show Skulls", "value": true, "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
@@ -77,8 +77,8 @@
             "type": "skulltula",
             "settings": [
                 {"setting": "Jabu Jabu's Belly MQ", "value": false, "required": true},
-                {"setting": "Show Skulls", "value": true, "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
@@ -91,8 +91,8 @@
             "type": "skulltula",
             "settings": [
                 {"setting": "Jabu Jabu's Belly MQ", "value": false, "required": true},
-                {"setting": "Show Skulls", "value": true, "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
@@ -152,6 +152,20 @@
             "visible": true,
             "check": ""
         },
+        "Jabu Jabus Belly MQ GS Invisible Enemies Room": {
+            "area": "",
+            "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
+            "alias": "Invisible Enemies",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Jabu Jabu's Belly MQ", "value": true, "required": true},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
         "Jabu Jabus Belly MQ Boomerang Room Small Chest": {
             "area": "",
             "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
@@ -170,12 +184,52 @@
             "visible": true,
             "check": ""
         },
+        "Jabu Jabus Belly MQ GS Boomerang Chest Room": {
+            "area": "",
+            "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
+            "alias": "Song of Time Block",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Jabu Jabu's Belly MQ", "value": true, "required": true},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
         "Jabu Jabus Belly MQ Falling Like Like Room Chest": {
             "area": "",
             "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
             "alias": "Like Like Trap Chest",
             "type": "item",
             "settings": [{"setting": "Jabu Jabu's Belly MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "Jabu Jabus Belly MQ GS Tailpasaran Room": {
+            "area": "",
+            "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
+            "alias": "Water Jet",
+            "type": "skulltula",
+            "settings": [
+                {"setting": "Jabu Jabu's Belly MQ", "value": true, "required": true},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ],
+            "visible": true,
+            "check": ""
+        },
+        "Jabu Jabus Belly MQ Cow": {
+            "area": "",
+            "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
+            "alias": "After Big Octo Cow",
+            "type": "item",
+            "settings": [
+                {"setting": "Jabu Jabu's Belly MQ", "value": true, "required": true},
+                {"setting": "Cowsanity", "value": "On", "required": true}
+            ],
             "visible": true,
             "check": ""
         },
@@ -197,60 +251,6 @@
             "visible": true,
             "check": ""
         },
-        "Jabu Jabus Belly MQ Cow": {
-            "area": "",
-            "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
-            "alias": "After Big Octo Cow",
-            "type": "item",
-            "settings": [
-                {"setting": "Jabu Jabu's Belly MQ", "value": true, "required": true},
-                {"setting": "Cowsanity", "value": "On", "required": true}
-            ],
-            "visible": true,
-            "check": ""
-        },
-        "Jabu Jabus Belly MQ GS Boomerang Chest Room": {
-            "area": "",
-            "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
-            "alias": "Song of Time Block",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Jabu Jabu's Belly MQ", "value": true, "required": true},
-                {"setting": "Show Skulls", "value": true, "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": ""
-        },
-        "Jabu Jabus Belly MQ GS Tailpasaran Room": {
-            "area": "",
-            "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
-            "alias": "Water Jet",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Jabu Jabu's Belly MQ", "value": true, "required": true},
-                {"setting": "Show Skulls", "value": true, "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": ""
-        },
-        "Jabu Jabus Belly MQ GS Invisible Enemies Room": {
-            "area": "",
-            "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
-            "alias": "Invisible Enemies",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Jabu Jabu's Belly MQ", "value": true, "required": true},
-                {"setting": "Show Skulls", "value": true, "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": ""
-        },
         "Jabu Jabus Belly MQ GS Near Boss": {
             "area": "",
             "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
@@ -258,8 +258,8 @@
             "type": "skulltula",
             "settings": [
                 {"setting": "Jabu Jabu's Belly MQ", "value": true, "required": true},
-                {"setting": "Show Skulls", "value": true, "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,

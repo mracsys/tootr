@@ -488,7 +488,7 @@
             "alias": "Tree Bonk",
             "type": "skulltula",
             "settings": [
-                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
                 {"setting": "Tokensanity", "value": "Overworld", "required": false},
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
@@ -501,7 +501,7 @@
             "alias": "By Guard",
             "type": "skulltula",
             "settings": [
-                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
                 {"setting": "Tokensanity", "value": "Overworld", "required": false},
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
@@ -514,7 +514,7 @@
             "alias": "Watchtower",
             "type": "skulltula",
             "settings": [
-                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
                 {"setting": "Tokensanity", "value": "Overworld", "required": false},
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
@@ -527,7 +527,7 @@
             "alias": "Skulltula House",
             "type": "skulltula",
             "settings": [
-                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
                 {"setting": "Tokensanity", "value": "Overworld", "required": false},
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
@@ -540,7 +540,7 @@
             "alias": "Under Construction",
             "type": "skulltula",
             "settings": [
-                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
                 {"setting": "Tokensanity", "value": "Overworld", "required": false},
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
@@ -553,7 +553,7 @@
             "alias": "Above Impa's House",
             "type": "skulltula",
             "settings": [
-                {"setting": "Show Skulls", "value": true, "required": false},
+                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
                 {"setting": "Tokensanity", "value": "Overworld", "required": false},
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],

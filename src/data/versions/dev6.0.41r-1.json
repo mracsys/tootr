@@ -1,5 +1,16 @@
 {
     "Settings": {
+        "Tracker Settings": {
+            "open": true,
+            "Show Locations": [
+                "Yes",
+                "No"
+            ],
+            "Show Unshuffled Skulls": [
+                "Yes",
+                "No"
+            ]
+        },
         "ER Settings": {
             "open": true,
             "Shuffle Interiors": [

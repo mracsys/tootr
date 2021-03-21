@@ -16,7 +16,6 @@ import List from '@material-ui/core/List';
 import Button from '@material-ui/core/Button';
 //import Brightness7Icon from '@material-ui/icons/Brightness7';
 //import Brightness3Icon from '@material-ui/icons/Brightness3';
-import Switch from '@material-ui/core/Switch';
 import ListItem from '@material-ui/core/ListItem';
 import ExpandMore from '@material-ui/icons/ExpandMore';
 import Dialog from '@material-ui/core/Dialog';
@@ -25,7 +24,6 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import './index.css';
-import tokenIcon from './OoT_Token_Icon.png';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import blueGrey from '@material-ui/core/colors/blueGrey';
 import grey from '@material-ui/core/colors/grey';
@@ -101,7 +99,6 @@ const useStyles = (theme) => ({
         display: 'none',
     },
     menuButton: {
-        marginRight: theme.spacing(2),
     },
     title: {
         flexGrow: 1,
@@ -162,6 +159,9 @@ const useStyles = (theme) => ({
     areaTitleText: {
         flexGrow: 1,
     },
+    mqSwitchLabel: {
+        marginLeft: theme.spacing(3),
+    },
     areaButton: {
         marginLeft: theme.spacing(1),
     },
@@ -188,6 +188,7 @@ const useStyles = (theme) => ({
     },
     locationMark: {
         marginRight: 2,
+        marginLeft: theme.spacing(3),
     },
     entranceContainer: {
         display: 'flex',
@@ -223,20 +224,6 @@ const useStyles = (theme) => ({
         padding: theme.spacing(1, 0),
     }
 });
-
-const BlueSwitch = withStyles({
-    switchBase: {
-        color: blueGrey[400],
-        '&$checked': {
-            color: blueGrey[900],
-        },
-        '&$checked + $track': {
-            backgroundColor: blueGrey[800],
-        },
-    },
-    checked: {},
-    track: {},
-})(Switch);
 
 //const light = createMuiTheme({
 //    palette: {
@@ -326,7 +313,10 @@ class Tracker extends React.Component {
         ls.set('AllEntrances', allEntrances);
     }
 
-    addReverseEntrances(allAreas) {
+    addReverseEntrances(stateAreas) {
+        // make sure the returned variable is a copy and doesn't
+        // change the global state variables
+        let allAreas = cloneDeep(stateAreas);
         let rEntrances = {};
         let eEntrance;
         let rEntrance;
@@ -347,7 +337,7 @@ class Tracker extends React.Component {
             }
         });
         let areas = { entrances: rEntrances };
-        return merge(allAreas, areas)
+        return merge(allAreas, areas);
     }
 
     getShuffledTypes(settings) {
@@ -482,7 +472,10 @@ class Tracker extends React.Component {
         return areas;
     }
 
-    categorizeEntrances(allAreas) {
+    categorizeEntrances(stateAreas) {
+        // make sure the returned variable is a copy and doesn't
+        // change the global state variables
+        let allAreas = cloneDeep(stateAreas);
         let entrances = {};
         let eType;
         let eRevType;
@@ -540,7 +533,11 @@ class Tracker extends React.Component {
         return entrances;
     }
 
-    loadEntrancePools(settings, allEntrances, allAreas) {
+    loadEntrancePools(settings, stateEntrances, stateAreas) {
+        // make sure the returned variable is a copy and doesn't
+        // change the global state variables
+        let allEntrances = cloneDeep(stateEntrances);
+        let allAreas = cloneDeep(stateAreas);
         Object.filterOWEntrances = (entrances, predicate) =>
             Object.keys(entrances)
                 .filter( key => predicate(entrances[key].type, entrances[key].eLink, entrances[key].area) );
@@ -648,7 +645,11 @@ class Tracker extends React.Component {
         return entrances;
     }
 
-    loadOneWayEntrancePools(settings, allEntrances, allAreas) {
+    loadOneWayEntrancePools(settings, stateEntrances, stateAreas) {
+        // make sure the returned variable is a copy and doesn't
+        // change the global state variables
+        let allEntrances = cloneDeep(stateEntrances);
+        let allAreas = cloneDeep(stateAreas);
         let entrances = {};
 
         let eOverworld = {};
@@ -740,13 +741,15 @@ class Tracker extends React.Component {
     changeSetting(setting) {
         console.log(setting.target.name, setting.target.value);
         let settings = cloneDeep(this.state.settings);
+        let allEntrances = cloneDeep(this.state.allEntrances);
+        let allAreas = cloneDeep(this.state.allAreas);
         settings[setting.target.name] = setting.target.value;
-        let allAreas = this.setShuffledEntrances(settings, this.state.allAreas);
+        allAreas = this.setShuffledEntrances(settings, allAreas);
         this.findVisibleLocations(settings, allAreas);
-        let areas = this.loadAreas(settings, allAreas, this.state.allEntrances);
-        let entrances = this.loadEntrancePools(settings, this.state.allEntrances, allAreas);
-        let oneWayEntrances = this.loadOneWayEntrancePools(settings, this.state.allEntrances, allAreas);
-        this.findVisibleAreas(areas, allAreas, this.state.allEntrances, settings);
+        let areas = this.loadAreas(settings, allAreas, allEntrances);
+        let entrances = this.loadEntrancePools(settings, allEntrances, allAreas);
+        let oneWayEntrances = this.loadOneWayEntrancePools(settings, allEntrances, allAreas);
+        this.findVisibleAreas(areas, allAreas, allEntrances, settings);
         this.setState({
             settings: settings,
             entrances: entrances,
@@ -767,13 +770,14 @@ class Tracker extends React.Component {
 
     findVisibleAreas(shownAreas, allAreas, entrances, settings=this.state.settings) {
         let alwaysOneWay = ["spawn","warpsong","owldrop","extra"];
+        let decoupled = settings["Decoupled Entrances"] === "On";
         Object.filterAreas = (entrances, predicate) =>
             Object.keys(entrances)
                 .filter( key => predicate(entrances[key].eLink, entrances[key].aLink, entrances[key].isReverse, entrances[key].oneWay, entrances[key].shuffled, entrances[key].type, key, entrances[key].oneWayArea, entrances[key].connector) );
         Object.keys(shownAreas).forEach(targetArea => {
             let linkedTargetEntrances = (Object.filterAreas(shownAreas[targetArea].entrances, (eLink, aLink, isReverse, isOneWay, shuffled, lType, e, oneWayArea, connector) => (
                 (isOneWay && aLink !== "" && (lType !== "overworld" && lType !== "owldrop")) ||
-                (eLink !== "" && oneWayArea !== targetArea && ((isReverse === true && shuffled === true) || lType === "overworld" || lType === "warpsong" || lType === "owldrop" || lType === "extra"))) ));
+                (eLink !== "" && oneWayArea !== targetArea && ((isReverse === true && (shuffled === true || decoupled)) || lType === "overworld" || lType === "warpsong" || lType === "owldrop" || lType === "extra"))) ));
             if (linkedTargetEntrances.length === 0 && !(entrances["oneWayAreas"].includes(targetArea))) {
                 shownAreas[targetArea].show = false;
                 allAreas[targetArea].show = false;
@@ -820,20 +824,24 @@ class Tracker extends React.Component {
         let orVisible;
         let orCount;
         Object.keys(allAreas.locations).forEach((location) => {
-            if (allAreas.locations[location].settings.length > 0) {
-                andVisible = true;
-                orVisible = false;
-                andCount = 0;
-                orCount = 0;
-                allAreas.locations[location].settings.forEach(s => {
-                    if (s.required === true) { andCount++; } else { orCount++; }
-                    if (settings[s.setting] === s.value && s.required === true) { andVisible = true && andVisible;  }
-                    if (settings[s.setting] !== s.value && s.required === true) { andVisible = false; }
-                    if (settings[s.setting] === s.value && s.required === false) { orVisible = true; }
-                });
-                allAreas.locations[location].visible = ((andVisible === (andCount >= 0)) && (orVisible === (orCount > 0)));
+            if (settings["Show Locations"] === "Yes") {
+                if (allAreas.locations[location].settings.length > 0) {
+                    andVisible = true;
+                    orVisible = false;
+                    andCount = 0;
+                    orCount = 0;
+                    allAreas.locations[location].settings.forEach(s => {
+                        if (s.required === true) { andCount++; } else { orCount++; }
+                        if (settings[s.setting] === s.value && s.required === true) { andVisible = true && andVisible;  }
+                        if (settings[s.setting] !== s.value && s.required === true) { andVisible = false; }
+                        if (settings[s.setting] === s.value && s.required === false) { orVisible = true; }
+                    });
+                    allAreas.locations[location].visible = ((andVisible === (andCount >= 0)) && (orVisible === (orCount > 0)));
+                } else {
+                    allAreas.locations[location].visible = true;
+                }
             } else {
-                allAreas.locations[location].visible = true;
+                allAreas.locations[location].visible = false;
             }
         });
     }
@@ -1079,6 +1087,7 @@ class Tracker extends React.Component {
                                     <MenuIcon />
                                 </IconButton>
                                 <List component="nav" className={classes.title}>
+                                    { this.state.settings["Show Locations"] === "Yes" ? 
                                     <ListItem
                                         button
                                         onClick={(e) => {
@@ -1090,20 +1099,18 @@ class Tracker extends React.Component {
                                         }}
                                     >
                                         <Typography className={classes.titleText} variant="h4">{this.state.settings["View"]}</Typography><ExpandMore />
+                                    </ListItem> :
+                                    <ListItem>
+                                        <Typography className={classes.titleText} variant="h4">{this.state.settings["View"]}</Typography>
                                     </ListItem>
+                                    }
                                 </List>
-                                <BlueSwitch
-                                    checked={this.state.settings["Show Skulls"]}
-                                    onChange={() => this.changeSetting({"target": { "name": "Show Skulls", "value": !this.state.settings["Show Skulls"] }})}
-                                    name="globalSkullSwitch"
-                                />
-                                <img src={tokenIcon} alt="Show Unshuffled Skulltulas" style={{marginRight: customTheme.spacing(2)}} />
                                 <Button
                                     variant="contained"
                                     onClick={() => this.setState({alertReset: true,})}
                                     className={classes.menuButton}
                                 >
-                                    Reset All
+                                    Reset
                                 </Button>
                                 {/*<Button
                                     variant="contained"
@@ -1192,6 +1199,7 @@ class Tracker extends React.Component {
                                             handleUnCheck={this.unCheckLocation}
                                             classes={classes}
                                             dungeon={false}
+
                                             key={ia}
                                         />
                                     )
