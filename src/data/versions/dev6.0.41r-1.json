@@ -2,8 +2,13 @@
     "Settings": {
         "Tracker Settings": {
             "open": true,
+            "Show Unshuffled Entrances": [
+                "Yes",
+                "No"
+            ],
             "Show Locations": [
                 "Yes",
+                "Interiors Only",
                 "No"
             ],
             "Show Unshuffled Skulls": [

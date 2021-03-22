@@ -59,29 +59,33 @@ class GameArea extends React.Component {
                     )})}
                     </div>
                     { Object.keys(this.props.entrances).map((entrance, i) => {
-                        return (
-                            <UnknownEntrance
-                                forceVisible={false}
-                                title={this.props.title}
-                                entrance={entrance}
-                                entrances={this.props.entrances}
-                                connector={false}
-                                entrancePools={this.props.entrancePools}
-                                oneWayEntrancePools={this.props.oneWayEntrancePools}
-                                mixedPools={this.props.mixedPools}
-                                decoupled={this.props.decoupled}
-                                overworld={this.props.overworld}
-                                allAreas={this.props.allAreas}
-                                allEntrances={this.props.allEntrances}
-                                handleLink={this.props.handleLink}
-                                handleUnLink={this.props.handleUnLink}
-                                handleCheck={this.props.handleCheck}
-                                handleUnCheck={this.props.handleUnCheck}
-                                classes={this.props.classes}
-                                ekey={this.props.title + "entrance" + i}
-                                key={this.props.title + "entranceContainer" + i}
-                            />
-                        );
+                        if ((!(this.props.showUnshuffledEntrances) && this.props.allAreas.entrances[entrance].shuffled === true) ||
+                        (this.props.allAreas.entrances[entrance].connector !== "" && this.props.allAreas.entrances[this.props.allAreas.entrances[entrance].connector].shuffled && !(this.props.showUnshuffledEntrances)) ||
+                        (this.props.showUnshuffledEntrances)) {
+                            return (
+                                <UnknownEntrance
+                                    forceVisible={false}
+                                    title={this.props.title}
+                                    entrance={entrance}
+                                    entrances={this.props.entrances}
+                                    connector={false}
+                                    entrancePools={this.props.entrancePools}
+                                    oneWayEntrancePools={this.props.oneWayEntrancePools}
+                                    mixedPools={this.props.mixedPools}
+                                    decoupled={this.props.decoupled}
+                                    overworld={this.props.overworld}
+                                    allAreas={this.props.allAreas}
+                                    allEntrances={this.props.allEntrances}
+                                    handleLink={this.props.handleLink}
+                                    handleUnLink={this.props.handleUnLink}
+                                    handleCheck={this.props.handleCheck}
+                                    handleUnCheck={this.props.handleUnCheck}
+                                    classes={this.props.classes}
+                                    ekey={this.props.title + "entrance" + i}
+                                    key={this.props.title + "entranceContainer" + i}
+                                />
+                            );
+                        } else { return null }
                     })}
                 </div>
             </Card>

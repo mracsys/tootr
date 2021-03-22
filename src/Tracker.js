@@ -132,6 +132,7 @@ const useStyles = (theme) => ({
           duration: theme.transitions.duration.leavingScreen,
         }),
         marginLeft: -drawerWidth,
+        padding: 20,
     },
     areaPaperShift: {
         transition: theme.transitions.create('margin', {
@@ -139,10 +140,18 @@ const useStyles = (theme) => ({
             duration: theme.transitions.duration.enteringScreen,
         }),
         marginLeft: 0,
+        padding: 20,
     },
     areaCard: {
-        margin: 20,
+        [theme.breakpoints.down('xs')]: {
+            width: '100%',
+        },
+        [theme.breakpoints.up('sm')]: {
+            marginRight: 20,
+        },
         display: 'inline-block',
+        maxWidth: '100%',
+        marginBottom: 20,
         'vertical-align': 'top',
         backgroundColor: '#cbc26d',
     },
@@ -298,6 +307,12 @@ class Tracker extends React.Component {
         let areas = this.loadAreas(settings, allAreas, allEntrances, true);
         let entrances = this.loadEntrancePools(settings, allEntrances, allAreas);
         let oneWayEntrances = this.loadOneWayEntrancePools(settings, allEntrances, allAreas);
+
+        // TODO: Separate tracker and world/preset settings
+        let prevSettings = cloneDeep(this.state.settings);
+        settings["Show Unshuffled Entrances"] = prevSettings["Show Unshuffled Entrances"];
+        settings["Show Locations"] = prevSettings["Show Locations"];
+        settings["Show Unshuffled Skulls"] = prevSettings["Show Unshuffled Skulls"];
 
         this.setState({
             settings: settings,
@@ -800,6 +815,12 @@ class Tracker extends React.Component {
             });
         });
 
+        // Hard code Gerudo Valley to Lake with decoupled off
+        if (shownAreas['Gerudo Valley'].show === true && (settings['Decoupled Entrances'] === 'Off' || settings['Shuffle Overworld'] === 'Off')) {
+            shownAreas['Lake Hylia'].show = true;
+            allAreas['Lake Hylia'].show = true;
+        }
+
         // Hard code LW Bridge and LW visibility if one or the other is visible
         // Can't merge into one area since Kokiri Forest has an exit to LW and LW Bridge each,
         // causing possible naming confusion. This is important if/when logic is added
@@ -811,10 +832,25 @@ class Tracker extends React.Component {
             allAreas['Lost Woods'].show = true;
         }
 
-        // Hard code Gerudo Valley to Lake with decoupled off
-        if (shownAreas['Gerudo Valley'].show === true && (settings['Decoupled Entrances'] === 'Off' || settings['Shuffle Overworld'] === 'Off')) {
-            shownAreas['Lake Hylia'].show = true;
-            allAreas['Lake Hylia'].show = true;
+        // Filter areas with no visible entrances or locations
+        Object.hideAreas = (entrances, predicate) =>
+            Object.keys(entrances)
+                .filter( key => predicate(entrances[key].shuffled, entrances[key].type) );
+        Object.hideAreaLocations = (locations, predicate) =>
+            Object.keys(locations)
+                .filter( key => predicate(locations[key].visible) );
+        if (settings["Show Unshuffled Entrances"] === "No") {
+            Object.keys(shownAreas).filter((a) => (shownAreas[a].show)).forEach(targetArea => {
+                let shownEntrances = (Object.hideAreas(shownAreas[targetArea].entrances, (shuffled, type) => ( (shuffled || type === 'spawn') && type !== 'extra' )));
+                let shownLocations = (Object.hideAreaLocations(shownAreas[targetArea].entrances, (shuffled, type) => ( (shuffled || type === 'spawn') && type !== 'extra' )));
+                // Special case for unshuffled spawn points with shuffled interiors all
+                // due to the connector implementation
+                if ((shownEntrances.length === 0 && ((settings["Show Locations"] === "Yes" && shownLocations.length !== 0) || settings["Show Locations"] !== "Yes")) ||
+                (targetArea === 'Spawn Points' && settings["Shuffle Spawn Points"] === "Off" && settings["Shuffle Interiors"] !== "All")) {
+                    shownAreas[targetArea].show = false;
+                    allAreas[targetArea].show = false;
+                }
+            });
         }
     }
 
@@ -823,8 +859,10 @@ class Tracker extends React.Component {
         let andCount;
         let orVisible;
         let orCount;
+        let interiorsOnly;
         Object.keys(allAreas.locations).forEach((location) => {
-            if (settings["Show Locations"] === "Yes") {
+            if (settings["Show Locations"] === "Yes" || settings["Show Locations"] === "Interiors Only") {
+                interiorsOnly = (settings["Show Locations"] === "Interiors Only");
                 if (allAreas.locations[location].settings.length > 0) {
                     andVisible = true;
                     orVisible = false;
@@ -836,9 +874,9 @@ class Tracker extends React.Component {
                         if (settings[s.setting] !== s.value && s.required === true) { andVisible = false; }
                         if (settings[s.setting] === s.value && s.required === false) { orVisible = true; }
                     });
-                    allAreas.locations[location].visible = ((andVisible === (andCount >= 0)) && (orVisible === (orCount > 0)));
+                    allAreas.locations[location].visible = (((allAreas.locations[location].area !== "" && !(interiorsOnly)) || allAreas.locations[location].area === "") && (andVisible === (andCount >= 0)) && (orVisible === (orCount > 0)));
                 } else {
-                    allAreas.locations[location].visible = true;
+                    allAreas.locations[location].visible = ((allAreas.locations[location].area !== "" && !(interiorsOnly)) || allAreas.locations[location].area === "");
                 }
             } else {
                 allAreas.locations[location].visible = false;
@@ -1087,7 +1125,7 @@ class Tracker extends React.Component {
                                     <MenuIcon />
                                 </IconButton>
                                 <List component="nav" className={classes.title}>
-                                    { this.state.settings["Show Locations"] === "Yes" ? 
+                                    { (this.state.settings["Show Locations"] === "Yes" || this.state.settings["Show Locations"] === "Interiors Only") ? 
                                     <ListItem
                                         button
                                         onClick={(e) => {
@@ -1199,7 +1237,7 @@ class Tracker extends React.Component {
                                             handleUnCheck={this.unCheckLocation}
                                             classes={classes}
                                             dungeon={false}
-
+                                            showUnshuffledEntrances={this.state.settings["Show Unshuffled Entrances"] === "Yes"}
                                             key={ia}
                                         />
                                     )
@@ -1223,6 +1261,7 @@ class Tracker extends React.Component {
                                             handleUnCheck={this.unCheckLocation}
                                             classes={classes}
                                             dungeon={true}
+                                            showUnshuffledEntrances={this.state.settings["Show Unshuffled Entrances"] === "Yes"}
                                             mqSwitch={this.toggleMQ}
                                             isMQ={this.state.settings[area+" MQ"]}
                                             key={ia}
