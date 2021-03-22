@@ -1064,7 +1064,11 @@ class Tracker extends React.Component {
             areas[allAreas.locations[originator].area].locations[originator].check = "checked";
         }
         if (allAreas.locations[originator].lKey !== "") {
-            allEntrances[allAreas.locations[originator].lKey].locations[originator].check = "checked"
+            if (allAreas.locations[originator].lKey === "Ganon's Castle") {
+                areas["Ganon's Castle"].locations[originator].check = "checked";
+            } else {
+                allEntrances[allAreas.locations[originator].lKey].locations[originator].check = "checked";
+            }
         }
         this.setState({
             allAreas: allAreas,
@@ -1086,7 +1090,11 @@ class Tracker extends React.Component {
             areas[allAreas.locations[originator].area].locations[originator].check = "";
         }
         if (allAreas.locations[originator].lKey !== "") {
-            allEntrances[allAreas.locations[originator].lKey].locations[originator].check = ""
+            if (allAreas.locations[originator].lKey === "Ganon's Castle") {
+                areas["Ganon's Castle"].locations[originator].check = "";
+            } else {
+                allEntrances[allAreas.locations[originator].lKey].locations[originator].check = "";
+            }
         }
         this.setState({
             allAreas: allAreas,
