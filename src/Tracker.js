@@ -2,6 +2,8 @@ import React from 'react';
 import clsx from 'clsx';
 import ls from 'local-storage';
 import merge from 'lodash/merge';
+import mergeWith from 'lodash/mergeWith';
+import isArray from 'lodash/isArray';
 import cloneDeep from 'lodash/cloneDeep';
 import clone from 'lodash/clone';
 import { createMuiTheme, withStyles, ThemeProvider } from '@material-ui/core/styles';
@@ -628,23 +630,30 @@ class Tracker extends React.Component {
         });
         oGrottos = { "Grottos": eGrottos };
         oDecoupledGrottos = merge(clone(oGrottos), clone(oReverseGrottos));
+
+        function mergeAreas(objValue, srcValue) {
+            if (isArray(objValue)) {
+                return objValue.concat(srcValue);
+            }
+        }
+
         if (settings["Shuffle Overworld"] === "On") {
             if (settings["Mixed Pools"] === "On") {
-                mixedpool = merge(mixedpool, {"mixed": oOverworld});
+                mixedpool = mergeWith(mixedpool, {"mixed": oOverworld, "mixed_reverse": oOverworld, "mixed_decoupled": oOverworld}, mergeAreas);
             }
             entrances = merge(entrances, {"overworld": oOverworld});
         }
         if (settings["Shuffle Interiors"] === "Simple" || settings["Shuffle Interiors"] === "All") {
-            mixedpool = merge(mixedpool, {"mixed": oInteriors, "mixed_reverse": oReverseInteriors, "mixed_decoupled": oDecoupledInteriors});
+            mixedpool = mergeWith(mixedpool, {"mixed": oInteriors, "mixed_reverse": oReverseInteriors, "mixed_decoupled": oDecoupledInteriors}, mergeAreas);
             entrances = merge(entrances, {"interior": oInteriors, "interior_reverse": oReverseInteriors, "interior_decoupled": oDecoupledInteriors});
         }
         if (settings["Shuffle Grottos"] === "On") {
-            mixedpool = merge(mixedpool, {"mixed": oGrottos, "mixed_reverse": oReverseGrottos, "mixed_decoupled": oDecoupledGrottos});
+            mixedpool = mergeWith(mixedpool, {"mixed": oGrottos, "mixed_reverse": oReverseGrottos, "mixed_decoupled": oDecoupledGrottos}, mergeAreas);
             entrances = merge(entrances, {"grotto": oGrottos, "grotto_reverse": oReverseGrottos, "grotto_decoupled": oDecoupledGrottos});
             entrances = merge(entrances, {"grave": oGrottos, "grave_reverse": oReverseGrottos, "grave_decoupled": oDecoupledGrottos});
         }
         if (settings["Shuffle Dungeons"] === "On") {
-            mixedpool = merge(mixedpool, {"mixed": oDungeons, "mixed_reverse": oReverseDungeons, "mixed_decoupled": oDecoupledDungeons});
+            mixedpool = mergeWith(mixedpool, {"mixed": oDungeons, "mixed_reverse": oReverseDungeons, "mixed_decoupled": oDecoupledDungeons}, mergeAreas);
             entrances = merge(entrances, {"dungeon": oDungeons, "dungeon_reverse": oReverseDungeons, "dungeon_decoupled": oDecoupledDungeons});
         }
         if (settings["Shuffle Warp Songs"] === "On") {
