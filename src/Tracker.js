@@ -738,9 +738,15 @@ class Tracker extends React.Component {
         });
         let oWarpSongs = { "Warp Song Pads": eWarpSongs };
         
-        let oExtOwlDrops = merge(oWarpSongs, eOverworld, oOwlDrops);
-        let oExtWarpSongs = merge(oSpawnPoints, oWarpSongs, eOverworldInteriors, oInteriors, oOwlDrops);
-        let oExtSpawnPoints = merge(oSpawnPoints, oWarpSongs, eOverworldInteriors, oInteriors, oOwlDrops);
+        function mergeAreas(objValue, srcValue) {
+            if (isArray(objValue)) {
+                return objValue.concat(srcValue);
+            }
+        }
+
+        let oExtOwlDrops = mergeWith(cloneDeep(oWarpSongs), cloneDeep(eOverworld), cloneDeep(oOwlDrops), mergeAreas);
+        let oExtWarpSongs = mergeWith(cloneDeep(oSpawnPoints), cloneDeep(oWarpSongs), cloneDeep(eOverworldInteriors), cloneDeep(oInteriors), cloneDeep(oOwlDrops), mergeAreas);
+        let oExtSpawnPoints = mergeWith(cloneDeep(oSpawnPoints), cloneDeep(oWarpSongs), cloneDeep(eOverworldInteriors), cloneDeep(oInteriors), cloneDeep(oOwlDrops), mergeAreas);
         entrances = {
                         "spawn": oExtSpawnPoints,
                         "owldrop": oExtOwlDrops,

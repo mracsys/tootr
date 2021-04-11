@@ -38,6 +38,7 @@ class UnLinkedEntrance extends React.Component {
 
     render() {
         let entrancePool = this.selectEntrancePool(this.props.entrance);
+        let entranceList = this.props.allAreas.entrances;
         return (
             <div className={this.props.classes.entranceContainer} key={this.props.ekey}>
                 { this.props.forceVisible ? <SubdirectoryArrowRightIcon /> : null }
@@ -51,7 +52,15 @@ class UnLinkedEntrance extends React.Component {
                             } else {
                                 return (
                                     <optgroup key={this.props.entrance + "header" + l} label={areaCategory}>
-                                        {entrancePool[areaCategory].sort().map((subArea, j) => {
+                                        {entrancePool[areaCategory].sort(function(a,b) {
+                                            let aName = entranceList[a].tag === "" ?
+                                                        entranceList[a].alias :
+                                                        entranceList[a].tag;
+                                            let bName = entranceList[b].tag === "" ?
+                                                        entranceList[b].alias :
+                                                        entranceList[b].tag;
+                                            return aName.localeCompare(bName);
+                                        }).map((subArea, j) => {
                                             if ((this.props.allAreas.entrances[subArea].tagRep || this.props.allAreas.entrances[subArea].tag === "")) {
                                                 return (<option
                                                             key={this.props.entrance + "option" + j}
