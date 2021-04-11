@@ -86,18 +86,6 @@
         }
     },
     "locations": {
-        "GF North F1 Carpenter": {
-            "area": "Gerudo Fortress",
-            "lKey": "",
-            "alias": "Shiro's Key",
-            "type": "key",
-            "settings": [
-                {"setting": "Gerudo Fortress", "value": "4 Carpenters", "required": false},
-                {"setting": "Gerudo Fortress", "value": "1 Carpenter", "required": false}
-            ],
-            "visible": true,
-            "check": ""
-        },
         "GF North F2 Carpenter": {
             "area": "Gerudo Fortress",
             "lKey": "",
@@ -122,6 +110,18 @@
             "alias": "Sabooru's Key",
             "type": "key",
             "settings": [{"setting": "Gerudo Fortress", "value": "4 Carpenters", "required": true}],
+            "visible": true,
+            "check": ""
+        },
+        "GF North F1 Carpenter": {
+            "area": "Gerudo Fortress",
+            "lKey": "",
+            "alias": "Shiro's Key",
+            "type": "key",
+            "settings": [
+                {"setting": "Gerudo Fortress", "value": "4 Carpenters", "required": false},
+                {"setting": "Gerudo Fortress", "value": "1 Carpenter", "required": false}
+            ],
             "visible": true,
             "check": ""
         },

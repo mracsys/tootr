@@ -220,7 +220,7 @@
             "lKey": "Death Mountain Summit -> DMT Cow Grotto",
             "alias": "Grotto Cow",
             "type": "item",
-            "settings": [],
+            "settings": [{"setting": "Cowsanity", "value": "On", "required": true}],
             "visible": true,
             "check": ""
         },

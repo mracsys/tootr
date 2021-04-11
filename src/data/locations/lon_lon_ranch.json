@@ -117,8 +117,8 @@
             "check": ""
         },
         "LLR Talons Chickens": {
-            "area": "Lon Lon Ranch",
-            "lKey": "",
+            "area": "",
+            "lKey": "Lon Lon Ranch -> LLR Talons House",
             "alias": "Talon's Chickens",
             "type": "item",
             "settings": [],

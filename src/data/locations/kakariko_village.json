@@ -388,7 +388,7 @@
             "lKey": "Kak Impas Ledge -> Kak Impas House Back",
             "alias": "Impa's Cow",
             "type": "item",
-            "settings": [],
+            "settings": [{"setting": "Cowsanity", "value": "On", "required": true}],
             "visible": true,
             "check": ""
         },
