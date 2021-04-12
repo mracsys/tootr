@@ -570,9 +570,12 @@ class Tracker extends React.Component {
         Object.keys(allEntrances.overworld).forEach(area => {
             oOverworld[area] = (Object.filterOWEntrances(allAreas.entrances, (eType, eLink, eArea) => eType === "overworld" && eLink === "" && eArea === area));
         });
-        //if (settings["Decoupled Entrances"] === "On") {
-        //    oOverworld['Lake Hylia'].push('GV Lower Stream -> Lake Hylia');
-        //}
+        if (settings["Decoupled Entrances"] !== "On") {
+            let iGV = oOverworld['Lake Hylia'].indexOf('GV Lower Stream -> Lake Hylia');
+            if (iGV > -1) {
+                oOverworld['Lake Hylia'].splice(iGV, 1);
+            }
+        }
         let oExtra = {};
         Object.keys(allEntrances.extra).forEach(area => {
             oExtra[area] = (Object.filterOWEntrances(allAreas.entrances, (eType, eLink, eArea) => eType === "extra" && eLink === "" && eArea === area));
@@ -593,14 +596,14 @@ class Tracker extends React.Component {
         Object.keys(allEntrances.reverseinterior).forEach(area => {
             oReverseInteriors[area] = (Object.filterReverseEntrances(allAreas.entrances, (eType, eLink, eArea, eReverse) => eType === "interior" && eLink === "" && eArea === area && eReverse === true));
         });
-        Object.keys(allEntrances.reversespecialInterior).forEach(area => {
-            if (!(oReverseInteriors.hasOwnProperty(area))) {
-                oReverseInteriors[area] = [];
-            }
-            oReverseInteriors[area].push(...(Object.filterReverseEntrances(allAreas.entrances, (eType, eLink, eArea, eReverse) => eType === "specialInterior" && eLink === "" && eArea === area && eReverse === true)));
-        });
         if (settings["Shuffle Interiors"] === "All") {
             eInteriors.push(...(Object.filterEntrances(allAreas.entrances, (eType, eLink, eReverse) => eType === "specialInterior" && eLink === "" && eReverse === false)));
+            Object.keys(allEntrances.reversespecialInterior).forEach(area => {
+                if (!(oReverseInteriors.hasOwnProperty(area))) {
+                    oReverseInteriors[area] = [];
+                }
+                oReverseInteriors[area].push(...(Object.filterReverseEntrances(allAreas.entrances, (eType, eLink, eArea, eReverse) => eType === "specialInterior" && eLink === "" && eArea === area && eReverse === true)));
+            });
         }
         oInteriors = { "Interiors": eInteriors };
         oDecoupledInteriors = merge(clone(oInteriors), clone(oReverseInteriors));
@@ -639,21 +642,21 @@ class Tracker extends React.Component {
 
         if (settings["Shuffle Overworld"] === "On") {
             if (settings["Mixed Pools"] === "On") {
-                mixedpool = mergeWith(mixedpool, {"mixed": oOverworld, "mixed_reverse": oOverworld, "mixed_decoupled": oOverworld}, mergeAreas);
+                mixedpool = mergeWith(mixedpool, {"mixed": oOverworld, "mixed_reverse": oOverworld, "mixed_decoupled": oOverworld, "mixed_overworld": oOverworld}, mergeAreas);
             }
             entrances = merge(entrances, {"overworld": oOverworld});
         }
         if (settings["Shuffle Interiors"] === "Simple" || settings["Shuffle Interiors"] === "All") {
-            mixedpool = mergeWith(mixedpool, {"mixed": oInteriors, "mixed_reverse": oReverseInteriors, "mixed_decoupled": oDecoupledInteriors}, mergeAreas);
+            mixedpool = mergeWith(mixedpool, {"mixed": oInteriors, "mixed_reverse": oReverseInteriors, "mixed_decoupled": oDecoupledInteriors, "mixed_overworld": merge(clone(oInteriors), clone(oReverseInteriors))}, mergeAreas);
             entrances = merge(entrances, {"interior": oInteriors, "interior_reverse": oReverseInteriors, "interior_decoupled": oDecoupledInteriors});
         }
         if (settings["Shuffle Grottos"] === "On") {
-            mixedpool = mergeWith(mixedpool, {"mixed": oGrottos, "mixed_reverse": oReverseGrottos, "mixed_decoupled": oDecoupledGrottos}, mergeAreas);
+            mixedpool = mergeWith(mixedpool, {"mixed": oGrottos, "mixed_reverse": oReverseGrottos, "mixed_decoupled": oDecoupledGrottos, "mixed_overworld": merge(clone(oGrottos), clone(oReverseGrottos))}, mergeAreas);
             entrances = merge(entrances, {"grotto": oGrottos, "grotto_reverse": oReverseGrottos, "grotto_decoupled": oDecoupledGrottos});
             entrances = merge(entrances, {"grave": oGrottos, "grave_reverse": oReverseGrottos, "grave_decoupled": oDecoupledGrottos});
         }
         if (settings["Shuffle Dungeons"] === "On") {
-            mixedpool = mergeWith(mixedpool, {"mixed": oDungeons, "mixed_reverse": oReverseDungeons, "mixed_decoupled": oDecoupledDungeons}, mergeAreas);
+            mixedpool = mergeWith(mixedpool, {"mixed": oDungeons, "mixed_reverse": oReverseDungeons, "mixed_decoupled": oDecoupledDungeons, "mixed_overworld": merge(clone(oDungeons), clone(oReverseDungeons))}, mergeAreas);
             entrances = merge(entrances, {"dungeon": oDungeons, "dungeon_reverse": oReverseDungeons, "dungeon_decoupled": oDecoupledDungeons});
         }
         if (settings["Shuffle Warp Songs"] === "On") {
@@ -703,21 +706,21 @@ class Tracker extends React.Component {
         let eOverworldInteriors = {};
         Object.keys(allEntrances.reverseinterior).forEach(area => {
             if (!(Object.keys(eOverworldInteriors).includes(area))) {
-                if (!(Object.keys(eOverworld).includes(area))) {
+                //if (!(Object.keys(eOverworld).includes(area))) {
                     eOverworldInteriors[area] = [];
-                } else {
-                    eOverworldInteriors[area] = clone(eOverworld[area]);
-                }
+                //} else {
+                //    eOverworldInteriors[area] = clone(eOverworld[area]);
+                //}
             }
             eOverworldInteriors[area].push(...((allEntrances.reverseinterior[area])));
         });
         Object.keys(allEntrances.reversespecialInterior).forEach(area => {
             if (!(Object.keys(eOverworldInteriors).includes(area))) {
-                if (!(Object.keys(eOverworld).includes(area))) {
+                //if (!(Object.keys(eOverworld).includes(area))) {
                     eOverworldInteriors[area] = [];
-                } else {
-                    eOverworldInteriors[area] = clone(eOverworld[area]);
-                }
+                //} else {
+                //    eOverworldInteriors[area] = clone(eOverworld[area]);
+                //}
             }
             eOverworldInteriors[area].push(...((allEntrances.reversespecialInterior[area])))
         });
@@ -745,8 +748,8 @@ class Tracker extends React.Component {
         }
 
         let oExtOwlDrops = mergeWith(cloneDeep(oWarpSongs), cloneDeep(eOverworld), cloneDeep(oOwlDrops), mergeAreas);
-        let oExtWarpSongs = mergeWith(cloneDeep(oSpawnPoints), cloneDeep(oWarpSongs), cloneDeep(eOverworldInteriors), cloneDeep(oInteriors), cloneDeep(oOwlDrops), mergeAreas);
-        let oExtSpawnPoints = mergeWith(cloneDeep(oSpawnPoints), cloneDeep(oWarpSongs), cloneDeep(eOverworldInteriors), cloneDeep(oInteriors), cloneDeep(oOwlDrops), mergeAreas);
+        let oExtWarpSongs = mergeWith(cloneDeep(oSpawnPoints), cloneDeep(oWarpSongs), cloneDeep(eOverworld), cloneDeep(eOverworldInteriors), cloneDeep(oInteriors), cloneDeep(oOwlDrops), mergeAreas);
+        let oExtSpawnPoints = mergeWith(cloneDeep(oSpawnPoints), cloneDeep(oWarpSongs), cloneDeep(eOverworld), cloneDeep(eOverworldInteriors), cloneDeep(oInteriors), cloneDeep(oOwlDrops), mergeAreas);
         entrances = {
                         "spawn": oExtSpawnPoints,
                         "owldrop": oExtOwlDrops,

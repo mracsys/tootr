@@ -13,9 +13,10 @@ class UnLinkedEntrance extends React.Component {
         if (areaType in this.props.oneWayEntrancePools) {
             subAreas = this.props.oneWayEntrancePools[areaType];
         } else {
-            if (this.props.mixedPools === "On" || (this.props.mixedPools === "Indoor" && areaType !== "overworld")) { areaType = "mixed"; }
+            if ((this.props.mixedPools === "Indoor" || this.props.mixedPools === "On") && (areaType !== "overworld" || this.props.decoupled)) { areaType = "mixed"; }
+            if (this.props.mixedPools === "On" && areaType === "overworld" && !(this.props.decoupled)) { areaType = "mixed_overworld" }
             if (this.props.allAreas.entrances[entrance].isReverse && !(this.props.decoupled)) { areaType = areaType + "_reverse" }
-            if (this.props.decoupled && areaType !== "overworld") { areaType = areaType + "_decoupled" }
+            if (this.props.decoupled) { areaType = areaType + "_decoupled" }
             subAreas = this.props.entrancePools[areaType];
         }
         return subAreas;
