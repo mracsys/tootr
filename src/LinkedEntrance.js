@@ -4,6 +4,7 @@ import { Box } from '@material-ui/core';
 import IconButton from '@material-ui/core/IconButton';
 import ClearIcon from '@material-ui/icons/Clear';
 import SubdirectoryArrowRightIcon from '@material-ui/icons/SubdirectoryArrowRight';
+import Link from '@material-ui/core/Link';
 
 import LocationCheck from './LocationCheck'
 import UnknownEntrance from './UnknownEntrance'
@@ -60,6 +61,7 @@ class LinkedEntrance extends React.Component {
         let interiors = ['interior','specialInterior','grotto','grave','dungeon'];
         let oneWayTypes = ['spawn','warpsong','owldrop'];
         let otherEntrances = [];
+        const preventDefault = (event) => event.preventDefault();
         if (this.props.connector === false) {
             if ((interiors.includes(this.props.allAreas.entrances[reverseLink].type) &&
             (oneWayTypes.includes(oEntrance.type) || this.props.decoupled) &&
@@ -78,16 +80,24 @@ class LinkedEntrance extends React.Component {
                 <div className={this.props.classes.entranceContainer} key={this.props.entrance + "label"}>
                     { this.props.forceVisible ? <SubdirectoryArrowRightIcon /> : null }
                     <Typography variant="body1" component="h1" className={this.props.classes.entranceLabel}>
-                        {this.buildEntranceName(this.props.entrance)}
+                        <Link className={this.props.classes.entranceAnchor} color="inherit" id={this.props.entrance} onClick={preventDefault}>
+                            {this.buildEntranceName(this.props.entrance)}
+                        </Link>
                     </Typography>
-                    <Box className={this.props.classes.entranceLink}>
-                        <Typography variant="body1" component="h2" className={this.props.classes.entranceLink1}>
-                            {this.buildExitName(this.props.entrance)}
-                        </Typography>
-                        <Typography variant="caption" component="h3" className={this.props.classes.entranceLink2}>
-                            {this.buildExitEntranceName(this.props.entrance)}
-                        </Typography>
-                    </Box>
+                    <Link
+                        color="inherit"
+                        href={(((this.props.allAreas.entrances[reverseLink].type === "overworld") || (this.props.allAreas.entrances[reverseLink].isReverse)) ? '#' + this.props.allAreas.entrances[reverseLink].area : null )}
+                        className={(((this.props.allAreas.entrances[reverseLink].type === "overworld") || (this.props.allAreas.entrances[reverseLink].isReverse)) ? null : this.props.classes.falseLinkAnchor )}
+                    >
+                        <Box className={this.props.classes.entranceLink}>
+                            <Typography variant="body1" component="h2" className={this.props.classes.entranceLink1}>
+                                {this.buildExitName(this.props.entrance)}
+                            </Typography>
+                            <Typography variant="caption" component="h3" className={this.props.classes.entranceLink2}>
+                                {this.buildExitEntranceName(this.props.entrance)}
+                            </Typography>
+                        </Box>
+                    </Link>
                     {
                         (oEntrance.shuffled === true) ?
                             <IconButton className={this.props.classes.areaButton} size="small" component="span" onClick={() => this.props.handleUnLink(this.props.entrance)}><ClearIcon /></IconButton> :

@@ -233,6 +233,33 @@ const useStyles = (theme) => ({
     },
     devLink: {
         padding: theme.spacing(1, 0),
+    },
+    entranceAnchor: {
+        textDecoration: 'none',
+        "&:hover": {
+            textDecoration: 'none',
+            cursor: 'default',
+        },
+        "&:before": {
+            content: '""',
+            display: "block",
+            height: theme.spacing(10),
+            marginTop: -theme.spacing(10)
+        }
+    },
+    entranceAnchorFakeText: {
+        height: 1,
+        width: 1,
+        position: "absolute",
+        overflow: "hidden",
+        top: -10,
+    },
+    falseLinkAnchor: {
+        textDecoration: 'none',
+        "&:hover": {
+            textDecoration: 'none',
+            cursor: 'default',
+        }
     }
 });
 

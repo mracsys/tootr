@@ -6,6 +6,7 @@ import { withStyles } from '@material-ui/core/styles';
 import UnknownEntrance from './UnknownEntrance'
 import LocationCheck from './LocationCheck'
 import { Typography, Box } from '@material-ui/core';
+import Link from '@material-ui/core/Link';
 
 const YellowSwitch = withStyles({
     switchBase: {
@@ -26,11 +27,20 @@ class GameArea extends React.Component {
         Object.filterLocations = (locations, predicate) =>
             Object.keys(locations)
                 .filter( key => predicate(locations[key].visible) );
+        const preventDefault = (event) => event.preventDefault();
         return (
             <Card className={this.props.classes.areaCard}>
+                <Link className={this.props.classes.entranceAnchor} color="inherit" id={this.props.title} onClick={preventDefault}>
+                    {/* Fake text here to make eslint happy.
+                        Can't wrap the actual title with the link because the areaTitle class breaks margin collapse needed
+                        to offset the anchor below the appbar */}
+                    <span className={this.props.classes.entranceAnchorFakeText}>&nbsp;</span>
+                </Link>
                 <div className={this.props.classes.areaHeader} />
                 <Box className={this.props.classes.areaTitle}>
-                    <Typography variant="h6" component="span" className={this.props.classes.areaTitleText}>{this.props.title}</Typography>
+                    <Typography variant="h6" component="span" className={this.props.classes.areaTitleText}>
+                            {this.props.title}
+                    </Typography>
                     {this.props.dungeon ?
                     <React.Fragment>
                         <Typography className={this.props.classes.mqSwitchLabel} component="span">MQ</Typography>

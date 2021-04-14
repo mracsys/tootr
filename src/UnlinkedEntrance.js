@@ -3,6 +3,7 @@ import Typography from '@material-ui/core/Typography';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import SubdirectoryArrowRightIcon from '@material-ui/icons/SubdirectoryArrowRight';
+import Link from '@material-ui/core/Link';
 
 
 class UnLinkedEntrance extends React.Component {
@@ -40,10 +41,15 @@ class UnLinkedEntrance extends React.Component {
     render() {
         let entrancePool = this.selectEntrancePool(this.props.entrance);
         let entranceList = this.props.allAreas.entrances;
+        const preventDefault = (event) => event.preventDefault();
         return (
             <div className={this.props.classes.entranceContainer} key={this.props.ekey}>
                 { this.props.forceVisible ? <SubdirectoryArrowRightIcon /> : null }
-                <Typography variant="body1" component="h1" color="error" className={this.props.classes.entranceLabel}>{this.buildEntranceName(this.props.entrance)}</Typography>
+                <Typography variant="body1" component="h1" color="error" className={this.props.classes.entranceLabel}>
+                    <Link className={this.props.classes.entranceAnchor} color="inherit" id={this.props.entrance} onClick={preventDefault}>
+                        {this.buildEntranceName(this.props.entrance)}
+                    </Link>
+                </Typography>
                 <FormControl className={this.props.classes.entranceMenuControl}>
                     <Select className={this.props.classes.entranceMenu} native displayEmpty id={this.props.entrance + "select"} onChange={this.props.handleLink} name={this.props.entrance}>
                         <option aria-label="None" value="">Not Checked</option>
