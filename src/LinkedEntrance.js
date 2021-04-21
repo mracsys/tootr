@@ -61,7 +61,6 @@ class LinkedEntrance extends React.Component {
         let interiors = ['interior','specialInterior','grotto','grave','dungeon'];
         let oneWayTypes = ['spawn','warpsong','owldrop'];
         let otherEntrances = [];
-        const preventDefault = (event) => event.preventDefault();
         if (this.props.connector === false) {
             if ((interiors.includes(this.props.allAreas.entrances[reverseLink].type) &&
             (oneWayTypes.includes(oEntrance.type) || this.props.decoupled) &&
@@ -80,9 +79,7 @@ class LinkedEntrance extends React.Component {
                 <div className={this.props.classes.entranceContainer} key={this.props.entrance + "label"}>
                     { this.props.forceVisible ? <SubdirectoryArrowRightIcon /> : null }
                     <Typography variant="body1" component="h1" className={this.props.classes.entranceLabel}>
-                        <Link className={this.props.classes.entranceAnchor} color="inherit" id={this.props.entrance} onClick={preventDefault}>
-                            {this.buildEntranceName(this.props.entrance)}
-                        </Link>
+                        {this.buildEntranceName(this.props.entrance)}
                     </Typography>
                     <Link
                         color="inherit"

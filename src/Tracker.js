@@ -236,6 +236,9 @@ const useStyles = (theme) => ({
     },
     entranceAnchor: {
         textDecoration: 'none',
+        height: 0,
+        position: "relative",
+        top: -theme.spacing(10),
         "&:hover": {
             textDecoration: 'none',
             cursor: 'default',
@@ -243,8 +246,8 @@ const useStyles = (theme) => ({
         "&:before": {
             content: '""',
             display: "block",
-            height: theme.spacing(10),
-            marginTop: -theme.spacing(10)
+            //height: theme.spacing(10),
+            //marginTop: -theme.spacing(10),
         }
     },
     entranceAnchorFakeText: {
