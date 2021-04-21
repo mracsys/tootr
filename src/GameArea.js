@@ -64,6 +64,7 @@ class GameArea extends React.Component {
                                 classes={this.props.classes}
                                 handleCheck={this.props.handleCheck}
                                 handleUnCheck={this.props.handleUnCheck}
+                                handleItemMenu={this.props.handleItemMenu}
                             />
                         </React.Fragment>
                     )})}
@@ -90,6 +91,7 @@ class GameArea extends React.Component {
                                     handleUnLink={this.props.handleUnLink}
                                     handleCheck={this.props.handleCheck}
                                     handleUnCheck={this.props.handleUnCheck}
+                                    handleItemMenu={this.props.handleItemMenu}
                                     classes={this.props.classes}
                                     ekey={this.props.title + "entrance" + i}
                                     key={this.props.title + "entranceContainer" + i}

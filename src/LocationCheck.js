@@ -1,18 +1,43 @@
 import React from 'react';
-import CheckBoxOutlineBlankIcon from '@material-ui/icons/CheckBoxOutlineBlank';
 import DoneIcon from '@material-ui/icons/Done';
+import VisibilityIcon from '@material-ui/icons/Visibility';
 import Typography from '@material-ui/core/Typography';
 import { Box } from '@material-ui/core';
-import tokenIcon from './OoT_Token_Icon.png';
-import mapIcon from './OoT_Dungeon_Map_Icon.png';
-import compassIcon from './OoT_Compass_Icon.png';
-import smallKeyIcon from './OoT_Small_Key_Icon.png';
-import bossKeyIcon from './OoT_Boss_Key_Icon.png';
-import noteIcon from './Grey_Note.png';
 import ListItem from '@material-ui/core/ListItem';
 
+import ItemMenu from './ItemMenu';
+
+import tokenIcon from './images/OoT_Token_Icon.png';
+import mapIcon from './images/OoT_Dungeon_Map_Icon.png';
+import compassIcon from './images/OoT_Compass_Icon.png';
+import smallKeyIcon from './images/OoT_Small_Key_Icon.png';
+import bossKeyIcon from './images/OoT_Boss_Key_Icon.png';
+import noteIcon from './images/Grey_Note.png';
 
 class LocationCheck extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.handleItemMenuOpen = this.handleItemMenuOpen.bind(this);
+        this.handleItemMenuClose = this.handleItemMenuClose.bind(this);
+
+        this.state = {
+            itemMenuOpen: null,
+        };
+    }
+
+    handleItemMenuOpen(location) {
+        this.setState({
+            itemMenuOpen: location.currentTarget,
+        });
+    }
+
+    handleItemMenuClose() {
+        this.setState({
+            itemMenuOpen: null,
+        });
+    }
+
     render() {
         let locationIcons = {
             "skulltula": tokenIcon,
@@ -27,10 +52,10 @@ class LocationCheck extends React.Component {
                 button
                 className={this.props.classes.locationContainer}
                 key={this.props.lkey}
-                onClick={
-                    this.props.allAreas.locations[this.props.location].check === "" ?
+                onClick={ () => { return true }
+                    /*this.props.allAreas.locations[this.props.location].check === "" ?
                         () => this.props.handleCheck(this.props.location) :
-                        () => this.props.handleUnCheck(this.props.location)
+                        () => this.props.handleUnCheck(this.props.location)*/
                 }
             >
                 {
@@ -39,11 +64,14 @@ class LocationCheck extends React.Component {
                     <Box className={this.props.classes.locationIconBlank} />
                 }
                 <Typography variant="body2" className={this.props.classes.locationText}><em>{this.props.allAreas.locations[this.props.location].alias}</em></Typography>
-                {
+                <VisibilityIcon className={this.props.classes.locationMark} />
+                <Box className={this.props.classes.locationUnknownItem} onClick={this.handleItemMenuOpen} />
+                <ItemMenu classes={this.props.classes} handleClose={this.handleItemMenuClose} anchorLocation={this.state.itemMenuOpen} />
+                {/*
                     this.props.allAreas.locations[this.props.location].check === "" ?
                         <CheckBoxOutlineBlankIcon className={this.props.classes.locationMark} /> :
                         <DoneIcon className={this.props.classes.locationMark} />
-                }
+                */}
             </ListItem>
         );
     }

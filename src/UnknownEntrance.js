@@ -49,6 +49,7 @@ class UnknownEntrance extends React.Component {
                             handleUnLink={this.props.handleUnLink}
                             handleCheck={this.props.handleCheck}
                             handleUnCheck={this.props.handleUnCheck}
+                            handleItemMenu={this.props.handleItemMenu}
                             forceVisible={this.props.forceVisible}
                             classes={this.props.classes}
                             ekey={this.props.ekey}

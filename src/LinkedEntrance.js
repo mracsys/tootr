@@ -80,9 +80,7 @@ class LinkedEntrance extends React.Component {
                 <div className={this.props.classes.entranceContainer} key={this.props.entrance + "label"}>
                     { this.props.forceVisible ? <SubdirectoryArrowRightIcon /> : null }
                     <Typography variant="body1" component="h1" className={this.props.classes.entranceLabel}>
-                        <Link className={this.props.classes.entranceAnchor} color="inherit" id={this.props.entrance} onClick={preventDefault}>
-                            {this.buildEntranceName(this.props.entrance)}
-                        </Link>
+                        {this.buildEntranceName(this.props.entrance)}
                     </Typography>
                     <Link
                         color="inherit"
@@ -117,6 +115,7 @@ class LinkedEntrance extends React.Component {
                                     classes={this.props.classes}
                                     handleCheck={this.props.handleCheck}
                                     handleUnCheck={this.props.handleUnCheck}
+                                    handleItemMenu={this.props.handleItemMenu}
                                 />
                             );
                         } else {
@@ -141,6 +140,9 @@ class LinkedEntrance extends React.Component {
                             allEntrances={this.props.allEntrances}
                             handleLink={this.props.handleLink}
                             handleUnLink={this.props.handleUnLink}
+                            handleCheck={this.props.handleCheck}
+                            handleUnCheck={this.props.handleUnCheck}
+                            handleItemMenu={this.props.handleItemMenu}
                             classes={this.props.classes}
                             ekey={this.props.entrance + otherEntrance.ekey + this.props.ekey}
                             key={this.props.entrance + otherEntrance.ekey + this.props.ekey + i}

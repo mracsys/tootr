@@ -46,9 +46,7 @@ class UnLinkedEntrance extends React.Component {
             <div className={this.props.classes.entranceContainer} key={this.props.ekey}>
                 { this.props.forceVisible ? <SubdirectoryArrowRightIcon /> : null }
                 <Typography variant="body1" component="h1" color="error" className={this.props.classes.entranceLabel}>
-                    <Link className={this.props.classes.entranceAnchor} color="inherit" id={this.props.entrance} onClick={preventDefault}>
-                        {this.buildEntranceName(this.props.entrance)}
-                    </Link>
+                    {this.buildEntranceName(this.props.entrance)}
                 </Typography>
                 <FormControl className={this.props.classes.entranceMenuControl}>
                     <Select className={this.props.classes.entranceMenu} native displayEmpty id={this.props.entrance + "select"} onChange={this.props.handleLink} name={this.props.entrance}>

@@ -201,6 +201,25 @@ const useStyles = (theme) => ({
         marginRight: 2,
         marginLeft: theme.spacing(3),
     },
+    locationPeek: {
+        marginLeft: theme.spacing(3),
+    },
+    locationUnknownItem: {
+        marginLeft: theme.spacing(1),
+        width: theme.spacing(4),
+        height: theme.spacing(4),
+        border: 2,
+        borderColor: '#000000',
+        borderStyle: 'dashed',
+        borderRadius: '5px',
+    },
+    locationMenuIcon: {
+        width: '24px',
+        margin: theme.spacing(0.5),
+    },
+    locationItemMenu: {
+        lineHeight: 0,
+    },
     entranceContainer: {
         display: 'flex',
         'justify-content': 'space-between',
@@ -236,6 +255,9 @@ const useStyles = (theme) => ({
     },
     entranceAnchor: {
         textDecoration: 'none',
+        height: 0,
+        position: "relative",
+        top: -theme.spacing(10),
         "&:hover": {
             textDecoration: 'none',
             cursor: 'default',
@@ -243,8 +265,8 @@ const useStyles = (theme) => ({
         "&:before": {
             content: '""',
             display: "block",
-            height: theme.spacing(10),
-            marginTop: -theme.spacing(10)
+            //height: theme.spacing(10),
+            //marginTop: -theme.spacing(10),
         }
     },
     entranceAnchorFakeText: {
@@ -260,7 +282,10 @@ const useStyles = (theme) => ({
             textDecoration: 'none',
             cursor: 'default',
         }
-    }
+    },
+    itemIcon: {
+        width: '24px',
+    },
 });
 
 //const light = createMuiTheme({
@@ -316,8 +341,8 @@ class Tracker extends React.Component {
             allAreas: allAreas,
             openSettings: false,
             themeDark: darkMode,
-            anchorEl: null,
             alertReset: false,
+            itemMenuLocation: null,
         };
     }
 
@@ -816,7 +841,6 @@ class Tracker extends React.Component {
             oneWayEntrances: oneWayEntrances,
             areas: areas,
             allAreas: allAreas,
-            anchorEl: null,
         });
         ls.set('RandoSettings', settings);
         ls.set('AllAreas', allAreas);
@@ -1288,6 +1312,7 @@ class Tracker extends React.Component {
                                             handleUnLink={this.unLinkEntrance}
                                             handleCheck={this.checkLocation}
                                             handleUnCheck={this.unCheckLocation}
+                                            handleItemMenu={this.handleItemMenuOpen}
                                             classes={classes}
                                             dungeon={false}
                                             showUnshuffledEntrances={this.state.settings["Show Unshuffled Entrances"] === "Yes"}
