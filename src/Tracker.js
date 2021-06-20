@@ -1138,10 +1138,14 @@ class Tracker extends React.Component {
                     if (allAreas.entrances[eOneWay].aLink !== "" && allAreas[allAreas.entrances[eOneWay].oneWayArea].show === true) {
                         let eLinked = allAreas.entrances[eOneWay].aLink;
                         if (allAreas.entrances[eLinked].oneWay === true && allAreas.entrances[eLinked].connector !== "") {
-                            eLinked = allAreas.entrances[eLinked].connector;
+                            if (allAreas.entrances[allAreas.entrances[eLinked].connector].aLink !== "") {
+                                eLinked = allAreas.entrances[eLinked].connector;
+                            }
                         }
                         if (allAreas.entrances[eLinked].isReverse === false && allAreas.entrances[eLinked].type !== "overworld" && allAreas.entrances[eLinked].oneWay === false) {
-                            eLinked = allAreas.entrances[eLinked].reverse;
+                            if (allAreas.entrances[allAreas.entrances[eLinked].reverse].aLink !== "") {
+                                eLinked = allAreas.entrances[eLinked].reverse;
+                            }
                         }
                         if (allAreas.entrances[eLinked].isReverse === true || allAreas.entrances[eLinked].type === "overworld" ||
                         (allAreas.entrances[eLinked].oneWay === true && allAreas.entrances[eLinked].oneWayArea !== "")) {
