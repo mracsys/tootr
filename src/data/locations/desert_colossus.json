@@ -93,7 +93,8 @@
             "type": "song",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Colossus Great Fairy Reward": {
             "area": "",
@@ -102,7 +103,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Colossus Freestanding PoH": {
             "area": "Desert Colossus",
@@ -111,7 +113,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Colossus Deku Scrub Grotto Front": {
             "area": "",
@@ -124,7 +127,8 @@
                 {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Colossus Deku Scrub Grotto Rear": {
             "area": "",
@@ -137,7 +141,8 @@
                 {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Colossus GS Bean Patch": {
             "area": "Desert Colossus",
@@ -150,7 +155,8 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Colossus GS Tree": {
             "area": "Desert Colossus",
@@ -163,7 +169,8 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Colossus GS Hill": {
             "area": "Desert Colossus",
@@ -176,7 +183,8 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         }
     }
 }

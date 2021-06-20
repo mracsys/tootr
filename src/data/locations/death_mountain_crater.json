@@ -135,7 +135,8 @@
             "type": "song",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "DMC Volcano Freestanding PoH": {
             "area": "Death Mountain Crater",
@@ -144,7 +145,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "DMC Wall Freestanding PoH": {
             "area": "Death Mountain Crater",
@@ -153,7 +155,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "DMC Upper Grotto Chest": {
             "area": "",
@@ -162,7 +165,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "DMC Great Fairy Reward": {
             "area": "",
@@ -171,7 +175,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "DMC Deku Scrub": {
             "area": "Death Mountain Crater",
@@ -184,7 +189,8 @@
                 {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "DMC Deku Scrub Grotto Left": {
             "area": "",
@@ -197,7 +203,8 @@
                 {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "DMC Deku Scrub Grotto Center": {
             "area": "",
@@ -210,7 +217,8 @@
                 {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "DMC Deku Scrub Grotto Right": {
             "area": "",
@@ -223,7 +231,8 @@
                 {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "DMC GS Crate": {
             "area": "Death Mountain Crater",
@@ -236,7 +245,8 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "DMC GS Bean Patch": {
             "area": "Death Mountain Crater",
@@ -249,7 +259,8 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         }
     }
 }

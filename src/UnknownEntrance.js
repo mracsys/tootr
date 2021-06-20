@@ -1,7 +1,6 @@
 import React from 'react';
 import UnLinkedEntrance from './UnlinkedEntrance'
 import LinkedEntrance from './LinkedEntrance'
-import Divider from '@material-ui/core/Divider';
 
 class UnknownEntrance extends React.Component {
     render() {
@@ -12,7 +11,7 @@ class UnknownEntrance extends React.Component {
             if (this.props.allAreas.entrances[this.props.entrance].aLink === "") {
                 return (
                     <React.Fragment>
-                        { this.props.forceVisible === false ? <Divider /> : null }
+                        { this.props.forceVisible === false ? <hr /> : null }
                         <UnLinkedEntrance
                             title={this.props.title}
                             entrance={this.props.entrance}
@@ -24,6 +23,7 @@ class UnknownEntrance extends React.Component {
                             decoupled={this.props.decoupled}
                             allAreas={this.props.allAreas}
                             handleLink={this.props.handleLink}
+                            handleEntranceMenuOpen={this.props.handleEntranceMenuOpen}
                             forceVisible={this.props.forceVisible}
                             classes={this.props.classes}
                             ekey={this.props.ekey}
@@ -33,7 +33,7 @@ class UnknownEntrance extends React.Component {
             } else {
                 return (
                     <React.Fragment>
-                        { this.props.forceVisible === false ? <Divider /> : null }
+                        { this.props.forceVisible === false ? <hr /> : null }
                         <LinkedEntrance
                             title={this.props.title}
                             entrance={this.props.entrance}
@@ -46,10 +46,13 @@ class UnknownEntrance extends React.Component {
                             allAreas={this.props.allAreas}
                             allEntrances={this.props.allEntrances}
                             handleLink={this.props.handleLink}
+                            handleEntranceMenuOpen={this.props.handleEntranceMenuOpen}
                             handleUnLink={this.props.handleUnLink}
                             handleCheck={this.props.handleCheck}
                             handleUnCheck={this.props.handleUnCheck}
-                            handleItemMenu={this.props.handleItemMenu}
+                            handleItemMenuOpen={this.props.handleItemMenuOpen}
+                            handleItemMenuClose={this.props.handleItemMenuClose}
+                            handleFind={this.findItem}
                             forceVisible={this.props.forceVisible}
                             classes={this.props.classes}
                             ekey={this.props.ekey}

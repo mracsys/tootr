@@ -13,7 +13,8 @@
                 {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Jabu Jabus Belly GS Water Switch Room": {
             "area": "",
@@ -27,7 +28,8 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Jabu Jabus Belly Boomerang Chest": {
             "area": "",
@@ -36,7 +38,8 @@
             "type": "item",
             "settings": [{"setting": "Jabu Jabu's Belly MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Jabu Jabus Belly Map Chest": {
             "area": "",
@@ -45,7 +48,8 @@
             "type": "map",
             "settings": [{"setting": "Jabu Jabu's Belly MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Jabu Jabus Belly Compass Chest": {
             "area": "",
@@ -54,7 +58,8 @@
             "type": "compass",
             "settings": [{"setting": "Jabu Jabu's Belly MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Jabu Jabus Belly GS Lobby Basement Lower": {
             "area": "",
@@ -68,7 +73,8 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Jabu Jabus Belly GS Lobby Basement Upper": {
             "area": "",
@@ -82,7 +88,8 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Jabu Jabus Belly GS Near Boss": {
             "area": "",
@@ -96,7 +103,8 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Jabu Jabus Belly MQ Map Chest": {
             "area": "",
@@ -105,7 +113,8 @@
             "type": "map",
             "settings": [{"setting": "Jabu Jabu's Belly MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Jabu Jabus Belly MQ First Room Side Chest": {
             "area": "",
@@ -114,7 +123,8 @@
             "type": "item",
             "settings": [{"setting": "Jabu Jabu's Belly MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Jabu Jabus Belly MQ Second Room Lower Chest": {
             "area": "",
@@ -123,7 +133,8 @@
             "type": "item",
             "settings": [{"setting": "Jabu Jabu's Belly MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Jabu Jabus Belly MQ Compass Chest": {
             "area": "",
@@ -132,7 +143,8 @@
             "type": "compass",
             "settings": [{"setting": "Jabu Jabu's Belly MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Jabu Jabus Belly MQ Basement Near Switches Chest": {
             "area": "",
@@ -141,7 +153,8 @@
             "type": "item",
             "settings": [{"setting": "Jabu Jabu's Belly MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Jabu Jabus Belly MQ Basement Near Vines Chest": {
             "area": "",
@@ -150,7 +163,8 @@
             "type": "item",
             "settings": [{"setting": "Jabu Jabu's Belly MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Jabu Jabus Belly MQ GS Invisible Enemies Room": {
             "area": "",
@@ -164,7 +178,8 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Jabu Jabus Belly MQ Boomerang Room Small Chest": {
             "area": "",
@@ -173,7 +188,8 @@
             "type": "item",
             "settings": [{"setting": "Jabu Jabu's Belly MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Jabu Jabus Belly MQ Boomerang Chest": {
             "area": "",
@@ -182,7 +198,8 @@
             "type": "item",
             "settings": [{"setting": "Jabu Jabu's Belly MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Jabu Jabus Belly MQ GS Boomerang Chest Room": {
             "area": "",
@@ -196,7 +213,8 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Jabu Jabus Belly MQ Falling Like Like Room Chest": {
             "area": "",
@@ -205,7 +223,8 @@
             "type": "item",
             "settings": [{"setting": "Jabu Jabu's Belly MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Jabu Jabus Belly MQ GS Tailpasaran Room": {
             "area": "",
@@ -219,7 +238,8 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Jabu Jabus Belly MQ Cow": {
             "area": "",
@@ -231,7 +251,8 @@
                 {"setting": "Cowsanity", "value": "On", "required": true}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Jabu Jabus Belly MQ Second Room Upper Chest": {
             "area": "",
@@ -240,7 +261,8 @@
             "type": "item",
             "settings": [{"setting": "Jabu Jabu's Belly MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Jabu Jabus Belly MQ Near Boss Chest": {
             "area": "",
@@ -249,7 +271,8 @@
             "type": "item",
             "settings": [{"setting": "Jabu Jabu's Belly MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Jabu Jabus Belly MQ GS Near Boss": {
             "area": "",
@@ -263,7 +286,8 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Jabu Jabus Belly Barinade Heart": {
             "area": "",
@@ -272,7 +296,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         }
     }
 }

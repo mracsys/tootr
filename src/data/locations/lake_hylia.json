@@ -156,7 +156,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "LH Freestanding PoH": {
             "area": "Lake Hylia",
@@ -165,7 +166,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "LH Sun": {
             "area": "Lake Hylia",
@@ -174,7 +176,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "LH Child Fishing": {
             "area": "",
@@ -183,7 +186,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "LH Adult Fishing": {
             "area": "",
@@ -192,7 +196,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "LH Lab Dive": {
             "area": "",
@@ -201,7 +206,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "LH Deku Scrub Grotto Left": {
             "area": "",
@@ -214,7 +220,8 @@
                 {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "LH Deku Scrub Grotto Center": {
             "area": "",
@@ -227,7 +234,8 @@
                 {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "LH Deku Scrub Grotto Right": {
             "area": "",
@@ -240,7 +248,8 @@
                 {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "LH GS Bean Patch": {
             "area": "Lake Hylia",
@@ -253,7 +262,8 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "LH GS Lab Wall": {
             "area": "Lake Hylia",
@@ -266,7 +276,8 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "LH GS Small Island": {
             "area": "Lake Hylia",
@@ -279,7 +290,8 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "LH GS Tree": {
             "area": "Lake Hylia",
@@ -292,7 +304,8 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "LH GS Lab Crate": {
             "area": "",
@@ -305,7 +318,8 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         }
     }
 }

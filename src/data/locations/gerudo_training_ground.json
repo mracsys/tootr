@@ -8,7 +8,8 @@
             "type": "item",
             "settings": [{"setting": "Gerudo Training Ground MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Gerudo Training Grounds Lobby Right Chest": {
             "area": "",
@@ -17,7 +18,8 @@
             "type": "item",
             "settings": [{"setting": "Gerudo Training Ground MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Gerudo Training Grounds Stalfos Chest": {
             "area": "",
@@ -26,7 +28,8 @@
             "type": "smallKey",
             "settings": [{"setting": "Gerudo Training Ground MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Gerudo Training Grounds Before Heavy Block Chest": {
             "area": "",
@@ -35,7 +38,8 @@
             "type": "item",
             "settings": [{"setting": "Gerudo Training Ground MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Gerudo Training Grounds Heavy Block First Chest": {
             "area": "",
@@ -44,7 +48,8 @@
             "type": "item",
             "settings": [{"setting": "Gerudo Training Ground MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Gerudo Training Grounds Heavy Block Second Chest": {
             "area": "",
@@ -53,7 +58,8 @@
             "type": "item",
             "settings": [{"setting": "Gerudo Training Ground MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Gerudo Training Grounds Heavy Block Third Chest": {
             "area": "",
@@ -62,7 +68,8 @@
             "type": "smallKey",
             "settings": [{"setting": "Gerudo Training Ground MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Gerudo Training Grounds Heavy Block Fourth Chest": {
             "area": "",
@@ -71,7 +78,8 @@
             "type": "item",
             "settings": [{"setting": "Gerudo Training Ground MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Gerudo Training Grounds Eye Statue Chest": {
             "area": "",
@@ -80,7 +88,8 @@
             "type": "smallKey",
             "settings": [{"setting": "Gerudo Training Ground MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Gerudo Training Grounds Near Scarecrow Chest": {
             "area": "",
@@ -89,7 +98,8 @@
             "type": "smallKey",
             "settings": [{"setting": "Gerudo Training Ground MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Gerudo Training Grounds Hammer Room Clear Chest": {
             "area": "",
@@ -98,7 +108,8 @@
             "type": "item",
             "settings": [{"setting": "Gerudo Training Ground MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Gerudo Training Grounds Hammer Room Switch Chest": {
             "area": "",
@@ -107,7 +118,8 @@
             "type": "smallKey",
             "settings": [{"setting": "Gerudo Training Ground MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Gerudo Training Grounds Freestanding Key": {
             "area": "",
@@ -116,7 +128,8 @@
             "type": "smallKey",
             "settings": [{"setting": "Gerudo Training Ground MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Gerudo Training Grounds Underwater Silver Rupee Chest": {
             "area": "",
@@ -125,7 +138,8 @@
             "type": "smallKey",
             "settings": [{"setting": "Gerudo Training Ground MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Gerudo Training Grounds Beamos Chest": {
             "area": "",
@@ -134,7 +148,8 @@
             "type": "smallKey",
             "settings": [{"setting": "Gerudo Training Ground MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Gerudo Training Grounds Maze Right Central Chest": {
             "area": "",
@@ -143,7 +158,8 @@
             "type": "item",
             "settings": [{"setting": "Gerudo Training Ground MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Gerudo Training Grounds Maze Right Side Chest": {
             "area": "",
@@ -152,7 +168,8 @@
             "type": "item",
             "settings": [{"setting": "Gerudo Training Ground MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Gerudo Training Grounds Hidden Ceiling Chest": {
             "area": "",
@@ -161,7 +178,8 @@
             "type": "smallKey",
             "settings": [{"setting": "Gerudo Training Ground MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Gerudo Training Grounds Maze Path First Chest": {
             "area": "",
@@ -170,7 +188,8 @@
             "type": "item",
             "settings": [{"setting": "Gerudo Training Ground MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Gerudo Training Grounds Maze Path Second Chest": {
             "area": "",
@@ -179,7 +198,8 @@
             "type": "item",
             "settings": [{"setting": "Gerudo Training Ground MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Gerudo Training Grounds Maze Path Third Chest": {
             "area": "",
@@ -188,7 +208,8 @@
             "type": "item",
             "settings": [{"setting": "Gerudo Training Ground MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Gerudo Training Grounds Maze Path Final Chest": {
             "area": "",
@@ -197,7 +218,8 @@
             "type": "item",
             "settings": [{"setting": "Gerudo Training Ground MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Gerudo Training Grounds MQ Lobby Left Chest": {
             "area": "",
@@ -206,7 +228,8 @@
             "type": "item",
             "settings": [{"setting": "Gerudo Training Ground MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Gerudo Training Grounds MQ Lobby Right Chest": {
             "area": "",
@@ -215,7 +238,8 @@
             "type": "item",
             "settings": [{"setting": "Gerudo Training Ground MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Gerudo Training Grounds MQ First Iron Knuckle Chest": {
             "area": "",
@@ -224,7 +248,8 @@
             "type": "item",
             "settings": [{"setting": "Gerudo Training Ground MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Gerudo Training Grounds MQ Before Heavy Block Chest": {
             "area": "",
@@ -233,7 +258,8 @@
             "type": "item",
             "settings": [{"setting": "Gerudo Training Ground MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Gerudo Training Grounds MQ Heavy Block Chest": {
             "area": "",
@@ -242,7 +268,8 @@
             "type": "item",
             "settings": [{"setting": "Gerudo Training Ground MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Gerudo Training Grounds MQ Eye Statue Chest": {
             "area": "",
@@ -251,7 +278,8 @@
             "type": "item",
             "settings": [{"setting": "Gerudo Training Ground MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Gerudo Training Grounds MQ Ice Arrows Chest": {
             "area": "",
@@ -260,7 +288,8 @@
             "type": "item",
             "settings": [{"setting": "Gerudo Training Ground MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Gerudo Training Grounds MQ Second Iron Knuckle Chest": {
             "area": "",
@@ -269,7 +298,8 @@
             "type": "item",
             "settings": [{"setting": "Gerudo Training Ground MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Gerudo Training Grounds MQ Flame Circle Chest": {
             "area": "",
@@ -278,7 +308,8 @@
             "type": "smallKey",
             "settings": [{"setting": "Gerudo Training Ground MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Gerudo Training Grounds MQ Maze Right Central Chest": {
             "area": "",
@@ -287,7 +318,8 @@
             "type": "item",
             "settings": [{"setting": "Gerudo Training Ground MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Gerudo Training Grounds MQ Maze Right Side Chest": {
             "area": "",
@@ -296,7 +328,8 @@
             "type": "item",
             "settings": [{"setting": "Gerudo Training Ground MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Gerudo Training Grounds MQ Underwater Silver Rupee Chest": {
             "area": "",
@@ -305,7 +338,8 @@
             "type": "smallKey",
             "settings": [{"setting": "Gerudo Training Ground MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Gerudo Training Grounds MQ Dinolfos Chest": {
             "area": "",
@@ -314,7 +348,8 @@
             "type": "smallKey",
             "settings": [{"setting": "Gerudo Training Ground MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Gerudo Training Grounds MQ Hidden Ceiling Chest": {
             "area": "",
@@ -323,7 +358,8 @@
             "type": "item",
             "settings": [{"setting": "Gerudo Training Ground MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Gerudo Training Grounds MQ Maze Path First Chest": {
             "area": "",
@@ -332,7 +368,8 @@
             "type": "item",
             "settings": [{"setting": "Gerudo Training Ground MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Gerudo Training Grounds MQ Maze Path Third Chest": {
             "area": "",
@@ -341,7 +378,8 @@
             "type": "item",
             "settings": [{"setting": "Gerudo Training Ground MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Gerudo Training Grounds MQ Maze Path Second Chest": {
             "area": "",
@@ -350,7 +388,8 @@
             "type": "item",
             "settings": [{"setting": "Gerudo Training Ground MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         }
     }
 }

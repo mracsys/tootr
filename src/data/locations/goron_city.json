@@ -114,7 +114,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "GC Pot Freestanding PoH": {
             "area": "Goron City",
@@ -123,7 +124,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "GC Rolling Goron as Child": {
             "area": "Goron City",
@@ -132,7 +134,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "GC Rolling Goron as Adult": {
             "area": "Goron City",
@@ -141,7 +144,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "GC Medigoron": {
             "area": "Goron City",
@@ -150,7 +154,8 @@
             "type": "item",
             "settings": [{"setting": "Shuffle Merchants", "value": "On", "required": false}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "GC Maze Left Chest": {
             "area": "Goron City",
@@ -159,7 +164,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "GC Maze Right Chest": {
             "area": "Goron City",
@@ -168,7 +174,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "GC Maze Center Chest": {
             "area": "Goron City",
@@ -177,7 +184,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "GC Deku Scrub Grotto Left": {
             "area": "",
@@ -190,7 +198,8 @@
                 {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "GC Deku Scrub Grotto Center": {
             "area": "",
@@ -203,7 +212,8 @@
                 {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "GC Deku Scrub Grotto Right": {
             "area": "",
@@ -216,7 +226,8 @@
                 {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "GC GS Center Platform": {
             "area": "Goron City",
@@ -229,7 +240,8 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "GC GS Boulder Maze": {
             "area": "Goron City",
@@ -242,7 +254,8 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "GC Shop Item 1": {
             "area": "",
@@ -257,7 +270,8 @@
                 {"setting": "Shopsanity", "value": "Random", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "GC Shop Item 2": {
             "area": "",
@@ -271,7 +285,8 @@
                 {"setting": "Shopsanity", "value": "Random", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "GC Shop Item 3": {
             "area": "",
@@ -284,7 +299,8 @@
                 {"setting": "Shopsanity", "value": "Random", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "GC Shop Item 4": {
             "area": "",
@@ -296,7 +312,8 @@
                 {"setting": "Shopsanity", "value": "Random", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         }
     }
 }

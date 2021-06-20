@@ -93,7 +93,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "ZF Iceberg Freestanding PoH": {
             "area": "Zora Fountain",
@@ -102,7 +103,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "ZF Bottom Freestanding PoH": {
             "area": "Zora Fountain",
@@ -111,7 +113,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "ZF GS Above the Log": {
             "area": "Zora Fountain",
@@ -124,7 +127,8 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "ZF GS Tree": {
             "area": "Zora Fountain",
@@ -137,7 +141,8 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "ZF GS Hidden Cave": {
             "area": "Zora Fountain",
@@ -150,7 +155,8 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         }
     }
 }

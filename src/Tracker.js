@@ -13,7 +13,6 @@ import Typography from '@material-ui/core/Typography';
 import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
 import Button from '@material-ui/core/Button';
 //import Brightness7Icon from '@material-ui/icons/Brightness7';
@@ -25,15 +24,18 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
+import { Drawer } from '@material-ui/core';
+import { Link } from '@material-ui/core';
 import './index.css';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import blueGrey from '@material-ui/core/colors/blueGrey';
 import grey from '@material-ui/core/colors/grey';
 import yellow from '@material-ui/core/colors/yellow';
 
-
 import GameSetting from './GameSetting';
 import GameArea from './GameArea';
+import EntranceMenu from './EntranceMenu';
+import ItemMenu from './ItemMenu';
 
 import death_mountain_crater from './data/locations/death_mountain_crater.json';
 import death_mountain_trail from './data/locations/death_mountain_trail.json';
@@ -73,7 +75,6 @@ import ganons_castle from './data/locations/ganons_castle.json';
 import devr from './data/versions/dev6.0.41r-1.json';
 //import weekly from './data/settings_presets/standard_weekly.json'
 import rsl from './data/settings_presets/random-settings-league.json';
-import { Link } from '@material-ui/core';
 
 const drawerWidth = 240;
 
@@ -101,12 +102,77 @@ const useStyles = (theme) => ({
         display: 'none',
     },
     menuButton: {
+        color: 'rgba(0, 0, 0, 0.87)',
+        backgroundColor: '#e0e0e0',
+        boxShadow: '0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12)',
+        padding: '6px 16px',
+        fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+        fontSize: '0.875rem',
+        fontWeight: '500',
+        lineHeight: '1.75',
+        borderRadius: '4px',
+        textTransform: 'uppercase',
+        transition: 'background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms',
+        cursor: 'pointer',
+        border: 0,
+        margin: 0,
+        display: 'inline-flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        textDecoration: 'none',
+        verticalAlign: 'middle',
+        position: 'relative',
+        outline: 0,
+    },
+    menuButtonLabel: {
+        fontSize: '0.875rem',
+        fontWeight: '500',
+        lineHeight: '1.75',
     },
     title: {
         flexGrow: 1,
+        cursor: 'pointer',
+        padding: theme.spacing(1.5,2),
     },
     titleText: {
         'font-family': 'Hylia Serif Beta',
+        fontSize: '2.125rem',
+    },
+    nested: {
+        marginLeft: theme.spacing(4),
+        fontSize: '1rem',
+        color: 'rgba(0, 0, 0, 0.87)',
+        boxSizing: 'border-box',
+        alignItems: 'center',
+        position: 'relative',
+        lineHeight: '1.1876em',
+        letterSpacing: '0.00938em',
+    },
+    settingSelect: {
+        font: 'inherit',
+        borderRadius: 0,
+        border: 0,
+        minWidth: theme.spacing(2),
+        cursor: 'pointer',
+        paddingRight: theme.spacing(3),
+        display: 'block',
+        height: '1.1876em',
+        margin: 0,
+        padding: '6px 0 7px',
+        boxSizing: 'content-box',
+    },
+    settingText: {
+        color: 'rgba(0, 0, 0, 0.54)',
+        margin: 0,
+        paddingTop: '3px',
+        marginBottom: theme.spacing(2),
+        textAlign: 'left',
+        fontSize: '0.75rem',
+        fontWeight: '400',
+        lineHeight: '1.66',
+        letterSpacing: '0.03333em',
+        borderTop: '1px solid rgba(0, 0, 0, 0.42)',
+        width: 'max-content',
     },
     drawer: {
         width: drawerWidth,
@@ -156,6 +222,9 @@ const useStyles = (theme) => ({
         marginBottom: 20,
         'vertical-align': 'top',
         backgroundColor: '#cbc26d',
+        borderRadius: 4,
+        overflow: 'hidden',
+        boxShadow: '0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12)',
     },
     areaHeader: {
         padding: theme.spacing(0.75),
@@ -169,9 +238,16 @@ const useStyles = (theme) => ({
     },
     areaTitleText: {
         flexGrow: 1,
+        fontFamily: 'Roboto,sans-serif',
+        fontSize: '1.25rem',
+        fontWeight: 500,
+        lineHeight: 1.6,
     },
     mqSwitchLabel: {
         marginLeft: theme.spacing(3),
+        fontSize: '1rem',
+        lineHeight: '1.5',
+        letterSpacing: '0.00938em',
     },
     areaButton: {
         marginLeft: theme.spacing(1),
@@ -186,6 +262,18 @@ const useStyles = (theme) => ({
     locationContainer: {
         padding: theme.spacing(1,2),
         backgroundColor: grey[200],
+        display: 'flex',
+        position: 'relative',
+        boxSizing: 'border-box',
+        alignItems: 'center',
+        justifyContent: 'flex-start',
+        cursor: 'pointer',
+        "&:hover": {
+            backgroundColor: 'rgba(0, 0, 0, 0.04)',
+        },
+        "& $iconDiv": {
+            padding: '0px 6px',
+        },
     },
     locationIcon: {
         marginRight: theme.spacing(2),
@@ -196,10 +284,15 @@ const useStyles = (theme) => ({
     },
     locationText: {
         flexGrow: 1,
+        margin: 0,
+        textAlign: 'left',
+        fontSize: '0.875rem',
+        fontWeight: '400',
+        lineHeight: '1.43',
     },
     locationMark: {
         marginRight: 2,
-        marginLeft: theme.spacing(3),
+        marginLeft: theme.spacing(2),
     },
     locationPeek: {
         marginLeft: theme.spacing(3),
@@ -212,13 +305,74 @@ const useStyles = (theme) => ({
         borderColor: '#000000',
         borderStyle: 'dashed',
         borderRadius: '5px',
+        "&:hover": {
+            cursor: 'pointer',
+        }
+    },
+    itemIcon: {
+        width: '24px',
+        verticalAlign: 'middle',
+    },
+    iconDiv: {
+    },
+    iconKeyText: {
+        position: 'absolute',
+        bottom: -8,
+        left: 16,
+        'font-family': 'Hylia Serif Beta',
+        lineHeight: '1.43em',
+    },
+    iconContainer: {
+        position: 'relative',
+    },
+    locationKnownItem: {
+        marginLeft: theme.spacing(1),
+        position: 'relative',
+        color: 'black',
+        "& img": {
+            width: '24px',
+            verticalAlign: 'middle',
+        },
     },
     locationMenuIcon: {
-        width: '24px',
-        margin: theme.spacing(0.5),
+        position: 'relative',
+        "& img": {
+            width: '32px',
+        },
+    },
+    locationMenuIconContainer: {
+    },
+    locationMenuClear: {
+        padding: theme.spacing(2),
+        margin: 0,
+        textAlign: 'center',
+        fontSize: '0.875rem',
+        fontWeight: '400',
+        lineHeight: '1.43',
+        color: '#FFFFFF',
+        "&:hover": {
+            backgroundColor: grey[800],
+            cursor: 'pointer',
+        }
     },
     locationItemMenu: {
         lineHeight: 0,
+        padding: 0,
+        "& ul": {
+            padding: 0,
+            backgroundColor: grey[900],
+        },
+        "& $iconKeyText": {
+            color: '#FFFFFF',
+        },
+        "& $iconDiv": {
+            padding: '8px',
+        },
+        "& $iconDiv:hover": {
+            backgroundColor: grey[800],
+            cursor: 'pointer',
+            margin: '0 auto',
+        },
     },
     entranceContainer: {
         display: 'flex',
@@ -232,23 +386,84 @@ const useStyles = (theme) => ({
         'margin-right': 20,
         'font-weight': 'bold',
         flexGrow: 1,
+        fontSize: '1rem',
+        lineHeight: '1.5',
+        letterSpacing: '0.00938em',
+    },
+    unlinkedEntranceLabel: {
+        'vertical-align': 'center',
+        'margin-right': 20,
+        'font-weight': 'bold',
+        flexGrow: 1,
+        color: '#FF0000',
+        fontSize: '1rem',
+        lineHeight: '1.5',
+        letterSpacing: '0.00938em',
+    },
+    unlinkedEntranceMenu: {
+        display: 'flex',
+        alignItems: 'center',
+        margin: 0,
+        padding: theme.spacing(0.5,0),
+        cursor: 'pointer',
+        marginLeft: theme.spacing(2),
+        fontSize: '1rem',
+        fontWeight: '400',
+        lineHeight: '1.1876em',
+        letterSpacing: '0.00938em',
+        position: 'relative',
+        "&:before": {
+            content: '""',
+            display: "block",
+            borderBottom: '1px solid rgba(0, 0, 0, 0.42)',
+            transition: 'border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms',
+            position: 'absolute',
+            left: 0,
+            right: 0,
+            bottom: 0,
+        },
+        "&:hover:before": {
+            borderBottom: '2px solid rgba(0, 0, 0, 0.87)',
+        },
+        "& span": {
+            marginRight: theme.spacing(1),
+        }
     },
     linkLabel: {
         'vertical-align': 'center',
         textAlign: 'right',
-    },
-    entranceMenu: {
     },
     entranceLink: {
         textAlign: 'right',
     },
     entranceLink1: {
         'font-weight': 'bold',
+        fontSize: '1rem',
+        lineHeight: '1.5',
+        letterSpacing: '0.00938em',
     },
     entranceLink2: {
+        fontSize: '0.75rem',
+        lineHeight: '1.66',
+        letterSpacing: '0.03333em',
     },
-    nested: {
-        paddingLeft: theme.spacing(4),
+    settingCategory: {
+        display: 'flex',
+        alignItems: 'center',
+        fontSize: '1rem',
+        fontWeight: '400',
+        lineHeight: '1.5',
+        letterSpacing: '0.00938em',
+        padding: theme.spacing(1.5,2),
+        cursor: 'pointer',
+        transition: 'background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms',
+        backgroundColor: 'transparent',
+        "&:hover": {
+            backgroundColor: 'rgba(0, 0, 0, 0.04)'
+        },
+        "& span": {
+            flex: '1 1 auto',
+        }
     },
     devLink: {
         padding: theme.spacing(1, 0),
@@ -276,6 +491,13 @@ const useStyles = (theme) => ({
         overflow: "hidden",
         top: -10,
     },
+    overworldLinkAnchor: {
+        color: 'inherit',
+        textDecoration: 'none',
+        "&:hover": {
+            textDecoration: 'underline',
+        }
+    },
     falseLinkAnchor: {
         textDecoration: 'none',
         "&:hover": {
@@ -283,8 +505,30 @@ const useStyles = (theme) => ({
             cursor: 'default',
         }
     },
-    itemIcon: {
-        width: '24px',
+    entranceText: {
+        padding: theme.spacing(0.75,0.75,0.75,3),
+        fontFamily: 'Tahoma, sans-serif',
+        fontSize: '1rem',
+        fontWeight: '400',
+        lineHeight: 'normal',
+        letterSpacing: '0.00938em',
+        "&:hover": {
+            textDecoration: 'none',
+            backgroundColor: '#52525E',
+            color: '#FFFFFF',
+        }
+    },
+    entranceAreaText: {
+        padding: theme.spacing(0.75,0.75),
+        fontFamily: 'Tahoma, sans-serif',
+        fontSize: '1rem',
+        lineHeight: 'normal',
+        letterSpacing: '0.00938em',
+        fontWeight: 'bold',
+        "&:hover": {
+            textDecoration: 'none',
+            cursor: 'default',
+        }
     },
 });
 
@@ -330,6 +574,11 @@ class Tracker extends React.Component {
         this.resetState = this.resetState.bind(this);
         this.cancelAlert = this.cancelAlert.bind(this);
         this.toggleMQ = this.toggleMQ.bind(this);
+        this.handleItemMenuOpen = this.handleItemMenuOpen.bind(this);
+        this.handleItemMenuClose = this.handleItemMenuClose.bind(this);
+        this.handleEntranceMenuOpen = this.handleEntranceMenuOpen.bind(this);
+        this.handleEntranceMenuClose = this.handleEntranceMenuClose.bind(this);
+        this.findItem = this.findItem.bind(this);
 
         this.state = {
             enabled_settings: devr.Settings,
@@ -343,6 +592,19 @@ class Tracker extends React.Component {
             themeDark: darkMode,
             alertReset: false,
             itemMenuLocation: null,
+            itemMenuOpen: null,
+            overworldEntranceMenuOpen: null,
+            interiorEntranceMenuOpen: null,
+            grottoEntranceMenuOpen: null,
+            dungeonEntranceMenuOpen: null,
+            mixedEntranceMenuOpen: null,
+            spawnEntranceMenuOpen: null,
+            owldropEntranceMenuOpen: null,
+            warpsongEntranceMenuOpen: null,
+            entranceToLink: null,
+            entranceConnector: null,
+            locationToLink: null,
+            entranceType: "",
         };
     }
 
@@ -860,8 +1122,8 @@ class Tracker extends React.Component {
                 .filter( key => predicate(entrances[key].eLink, entrances[key].aLink, entrances[key].isReverse, entrances[key].oneWay, entrances[key].shuffled, entrances[key].type, key, entrances[key].oneWayArea, entrances[key].connector) );
         Object.keys(shownAreas).forEach(targetArea => {
             let linkedTargetEntrances = (Object.filterAreas(shownAreas[targetArea].entrances, (eLink, aLink, isReverse, isOneWay, shuffled, lType, e, oneWayArea, connector) => (
-                (isOneWay && aLink !== "" && (lType !== "overworld" && lType !== "owldrop")) ||
-                (eLink !== "" && oneWayArea !== targetArea && ((isReverse === true && (shuffled === true || decoupled || e === "KF Links House -> Kokiri Forest")) || lType === "overworld" || lType === "warpsong" || lType === "owldrop" || lType === "extra"))) ));
+                /*(isOneWay && aLink !== "" && (lType !== "overworld" && lType !== "owldrop")) ||*/
+                (eLink !== "" && oneWayArea !== targetArea && (((isReverse === true || decoupled) && shuffled === true) || lType === "overworld" || lType === "warpsong" || lType === "owldrop" || lType === "extra"))) ));
             if (linkedTargetEntrances.length === 0 && !(entrances["oneWayAreas"].includes(targetArea))) {
                 shownAreas[targetArea].show = false;
                 allAreas[targetArea].show = false;
@@ -874,10 +1136,17 @@ class Tracker extends React.Component {
             Object.keys(entrances[oneType]).forEach(aOneWay => {
                 entrances[oneType][aOneWay].forEach(eOneWay => {
                     if (allAreas.entrances[eOneWay].aLink !== "" && allAreas[allAreas.entrances[eOneWay].oneWayArea].show === true) {
-                        if (allAreas.entrances[allAreas.entrances[eOneWay].aLink].isReverse === true || allAreas.entrances[allAreas.entrances[eOneWay].aLink].type === "overworld" ||
-                        (allAreas.entrances[allAreas.entrances[eOneWay].aLink].oneWay === true && allAreas.entrances[allAreas.entrances[eOneWay].aLink].oneWayArea !== "")) {
-                            shownAreas[allAreas.entrances[allAreas.entrances[eOneWay].aLink].area].show = true;
-                            allAreas[allAreas.entrances[allAreas.entrances[eOneWay].aLink].area].show = true;
+                        let eLinked = allAreas.entrances[eOneWay].aLink;
+                        if (allAreas.entrances[eLinked].oneWay === true && allAreas.entrances[eLinked].connector !== "") {
+                            eLinked = allAreas.entrances[eLinked].connector;
+                        }
+                        if (allAreas.entrances[eLinked].isReverse === false && allAreas.entrances[eLinked].type !== "overworld" && allAreas.entrances[eLinked].oneWay === false) {
+                            eLinked = allAreas.entrances[eLinked].reverse;
+                        }
+                        if (allAreas.entrances[eLinked].isReverse === true || allAreas.entrances[eLinked].type === "overworld" ||
+                        (allAreas.entrances[eLinked].oneWay === true && allAreas.entrances[eLinked].oneWayArea !== "")) {
+                            shownAreas[allAreas.entrances[eLinked].area].show = true;
+                            allAreas[allAreas.entrances[eLinked].area].show = true;
                         }
                     }
                 });
@@ -954,8 +1223,8 @@ class Tracker extends React.Component {
     }
 
     linkEntrance(entrance) {
-        let originator = entrance.target.name;
-        let eCategory = entrance.target.value;
+        let originator = entrance.currentTarget.getAttribute('data-link-from');
+        let eCategory = entrance.currentTarget.getAttribute('data-link-to');
         console.log(originator, "<>", eCategory,"[Connected]");
         let alwaysOneWay = ["spawn","warpsong","owldrop","extra"];
         let areas = cloneDeep(this.state.allAreas);
@@ -1032,6 +1301,7 @@ class Tracker extends React.Component {
             entrances: entrancePools,
         });
         ls.set('AllAreas', areas);
+        this.handleEntranceMenuClose();
     }
 
     unLinkEntrance(entrance) {
@@ -1146,6 +1416,7 @@ class Tracker extends React.Component {
         });
         ls.set('AllAreas', allAreas);
         ls.set('AllEntrances', allEntrances);
+        this.handleItemMenuClose();
     }
 
     unCheckLocation(location) {
@@ -1174,8 +1445,71 @@ class Tracker extends React.Component {
         ls.set('AllEntrances', allEntrances);
     }
 
+    findItem(ootItem) {
+        let originator = ootItem.currentTarget.getAttribute('data-found-in');
+        let foundItem = ootItem.currentTarget.getAttribute('data-found-item');
+        foundItem === "" ? console.log(originator,"[cleared]") :
+        console.log(originator,"[holds]",foundItem);
+        let areas = cloneDeep(this.state.areas);
+        let allAreas = cloneDeep(this.state.allAreas);
+        let allEntrances = cloneDeep(this.state.allEntrances);
+        allAreas.locations[originator].foundItem = foundItem;
+        if (allAreas.locations[originator].area !== "") {
+            areas[allAreas.locations[originator].area].locations[originator].foundItem = foundItem;
+        }
+        if (allAreas.locations[originator].lKey !== "") {
+            if (allAreas.locations[originator].lKey === "Ganon's Castle") {
+                areas["Ganon's Castle"].locations[originator].foundItem = foundItem;
+            } else {
+                allEntrances[allAreas.locations[originator].lKey].locations[originator].foundItem = foundItem;
+            }
+        }
+        this.setState({
+            allAreas: allAreas,
+            allEntrances: allEntrances,
+            areas: areas,
+        });
+        ls.set('AllAreas', allAreas);
+        ls.set('AllEntrances', allEntrances);
+        this.handleItemMenuClose();
+    }
+
     cancelAlert() {
         this.setState({ alertReset: false, });
+    }
+
+    handleItemMenuOpen(location) {
+        location.preventDefault();
+        this.setState({
+            itemMenuOpen: location.currentTarget,
+            locationToLink: location.currentTarget.getAttribute('data-source'),
+        });
+    }
+
+    handleItemMenuClose() {
+        this.setState({
+            itemMenuOpen: null,
+            locationToLink: null,
+        });
+    }
+
+    handleEntranceMenuOpen(entrance) {
+        console.log(entrance.currentTarget.getAttribute('data-source'),'-> Open menu');
+        this.setState({
+            entranceMenuOpen: entrance.currentTarget,
+            entranceToLink: entrance.currentTarget.getAttribute('data-source'),
+            entranceConnector: entrance.currentTarget.getAttribute('data-connector'),
+            entranceType: entrance.currentTarget.getAttribute('data-etype'),
+        });
+    }
+
+    handleEntranceMenuClose() {
+        this.setState({
+            entranceMenuOpen: null,
+            entranceToLink: null,
+            entranceConnector: null,
+            entranceType: "",
+        });
     }
 
     render() {
@@ -1197,14 +1531,12 @@ class Tracker extends React.Component {
                                     edge="start"
                                     aria-label="open drawer"
                                     onClick={() => this.setState({ openSettings: !this.state.openSettings })}
-                                    className={classes.menuButton}
                                 >
                                     <MenuIcon />
                                 </IconButton>
-                                <List component="nav" className={classes.title}>
+                                <div className={classes.title}>
                                     { (this.state.settings["Show Locations"] === "Yes" || this.state.settings["Show Locations"] === "Interiors Only") ? 
-                                    <ListItem
-                                        button
+                                    <div
                                         onClick={(e) => {
                                             if (this.state.settings["View"] === "Overworld") {
                                                 this.changeSetting({"target": { "name": "View", "value": "Dungeons" }});
@@ -1213,20 +1545,19 @@ class Tracker extends React.Component {
                                             }
                                         }}
                                     >
-                                        <Typography className={classes.titleText} variant="h4">{this.state.settings["View"]}</Typography><ExpandMore />
-                                    </ListItem> :
-                                    <ListItem>
-                                        <Typography className={classes.titleText} variant="h4">{this.state.settings["View"]}</Typography>
-                                    </ListItem>
+                                        <span className={classes.titleText} variant="h4">{this.state.settings["View"]}</span><ExpandMore />
+                                    </div> :
+                                    <div>
+                                        <div className={classes.titleText} variant="h4">{this.state.settings["View"]}</div>
+                                    </div>
                                     }
-                                </List>
-                                <Button
-                                    variant="contained"
+                                </div>
+                                <button
                                     onClick={() => this.setState({alertReset: true,})}
                                     className={classes.menuButton}
                                 >
-                                    Reset
-                                </Button>
+                                    <span className={classes.menuButtonLabel}>Reset</span>
+                                </button>
                                 {/*<Button
                                     variant="contained"
                                     onClick={() => {
@@ -1287,6 +1618,27 @@ class Tracker extends React.Component {
                                 </ListItem>
                             </List>
                         </Drawer>
+                        <EntranceMenu
+                            anchorLocation={this.state.entranceMenuOpen}
+                            handleClose={this.handleEntranceMenuClose}
+                            handleLink={this.linkEntrance}
+                            entrancePool={this.state.entranceType in this.state.oneWayEntrances ?
+                                          this.state.oneWayEntrances[this.state.entranceType] :
+                                          this.state.entrances[this.state.entranceType]}
+                            allAreas={this.state.allAreas}
+                            connector={this.state.entranceConnector === 'true'}
+                            title={this.state.entranceToLink ? this.state.allAreas.entrances[this.state.entranceToLink].area : ''}
+                            sourceEntrance={this.state.entranceToLink}
+                            classes={classes}
+                            id="globalEntranceMenu"
+                        />
+                        <ItemMenu
+                            classes={classes}
+                            handleClose={this.handleItemMenuClose}
+                            handleFind={this.findItem}
+                            anchorLocation={this.state.itemMenuOpen}
+                            sourceLocation={this.state.locationToLink}
+                        />
                         <div
                             className={clsx(classes.areaPaper, {
                                 [classes.areaPaperShift]: this.state.openSettings,
@@ -1312,7 +1664,10 @@ class Tracker extends React.Component {
                                             handleUnLink={this.unLinkEntrance}
                                             handleCheck={this.checkLocation}
                                             handleUnCheck={this.unCheckLocation}
-                                            handleItemMenu={this.handleItemMenuOpen}
+                                            handleItemMenuOpen={this.handleItemMenuOpen}
+                                            handleItemMenuClose={this.handleItemMenuClose}
+                                            handleEntranceMenuOpen={this.handleEntranceMenuOpen}
+                                            handleFind={this.findItem}
                                             classes={classes}
                                             dungeon={false}
                                             showUnshuffledEntrances={this.state.settings["Show Unshuffled Entrances"] === "Yes"}
@@ -1337,6 +1692,9 @@ class Tracker extends React.Component {
                                             handleUnLink={this.unLinkEntrance}
                                             handleCheck={this.checkLocation}
                                             handleUnCheck={this.unCheckLocation}
+                                            handleItemMenuOpen={this.handleItemMenuOpen}
+                                            handleItemMenuClose={this.handleItemMenuClose}
+                                            handleFind={this.findItem}
                                             classes={classes}
                                             dungeon={true}
                                             showUnshuffledEntrances={this.state.settings["Show Unshuffled Entrances"] === "Yes"}

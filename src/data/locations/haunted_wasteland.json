@@ -51,7 +51,8 @@
             "type": "item",
             "settings": [{"setting": "Shuffle Merchants", "value": "On", "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Wasteland Chest": {
             "area": "Haunted Wasteland",
@@ -60,7 +61,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Wasteland GS": {
             "area": "Haunted Wasteland",
@@ -73,7 +75,8 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         }
     }
 }

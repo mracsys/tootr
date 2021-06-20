@@ -135,7 +135,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "GV Waterfall Freestanding PoH": {
             "area": "Gerudo Valley",
@@ -144,7 +145,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "GV Cow": {
             "area": "Gerudo Valley",
@@ -153,7 +155,8 @@
             "type": "item",
             "settings": [{"setting": "Cowsanity", "value": "On", "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "GV Chest": {
             "area": "Gerudo Valley",
@@ -162,7 +165,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "GV Deku Scrub Grotto Front": {
             "area": "",
@@ -175,7 +179,8 @@
                 {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "GV Deku Scrub Grotto Rear": {
             "area": "",
@@ -188,7 +193,8 @@
                 {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "GV GS Bean Patch": {
             "area": "Gerudo Valley",
@@ -201,7 +207,8 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "GV GS Small Bridge": {
             "area": "Gerudo Valley",
@@ -214,7 +221,8 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "GV GS Behind Tent": {
             "area": "Gerudo Valley",
@@ -227,7 +235,8 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "GV GS Pillar": {
             "area": "Gerudo Valley",
@@ -240,7 +249,8 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         }
     }
 }

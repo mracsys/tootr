@@ -1,104 +1,7 @@
 import React from 'react';
 import { Menu, Grid } from '@material-ui/core';
 
-import Blue_Note from './images/Blue_Note.png';
-import Green_Note from './images/Green_Note.png';
-import Grey_Note from './images/Grey_Note.png';
-import OoT_Adults_Wallet_Icon from './images/OoT_Adults_Wallet_Icon.png';
-import OoT_Arrows_Icon from './images/OoT_Arrows_Icon.png';
-import OoT_Big_Poe_Soul_Icon from './images/OoT_Big_Poe_Soul_Icon.png';
-import OoT_Blue_Fire_Icon from './images/OoT_Blue_Fire_Icon.png';
-import OoT_Blue_Potion_Icon from './images/OoT_Blue_Potion_Icon.png';
-import OoT_Bombchu_Icon from './images/OoT_Bombchu_Icon.png';
-import OoT_Bomb_Bag_Icon from './images/OoT_Bomb_Bag_Icon.png';
-import OoT_Bomb_Icon from './images/OoT_Bomb_Icon.png';
-import OoT_Boomerang_Icon from './images/OoT_Boomerang_Icon.png';
-import OoT_Boss_Key_Icon from './images/OoT_Boss_Key_Icon.png';
-import OoT_Bottle_Icon from './images/OoT_Bottle_Icon.png';
-import OoT_Broken_Gorons_Sword_Icon from './images/OoT_Broken_Gorons_Sword_Icon.png';
-import OoT_Bug_Icon from './images/OoT_Bug_Icon.png';
-import OoT_Bunny_Hood_Icon from './images/OoT_Bunny_Hood_Icon.png';
-import OoT_Claim_Check_Icon from './images/OoT_Claim_Check_Icon.png';
-import OoT_Cojiro_Icon from './images/OoT_Cojiro_Icon.png';
-import OoT_Compass_Icon from './images/OoT_Compass_Icon.png';
-import OoT_Cucco_Icon from './images/OoT_Cucco_Icon.png';
-import OoT_Deku_Nut_Icon from './images/OoT_Deku_Nut_Icon.png';
-import OoT_Deku_Seeds_Icon from './images/OoT_Deku_Seeds_Icon.png';
-import OoT_Deku_Shield_Icon from './images/OoT_Deku_Shield_Icon.png';
-import OoT_Deku_Stick_Icon from './images/OoT_Deku_Stick_Icon.png';
-import OoT_Dins_Fire_Icon from './images/OoT_Dins_Fire_Icon.png';
-import OoT_Dungeon_Map_Icon from './images/OoT_Dungeon_Map_Icon.png';
-import OoT_Eyeball_Frog_Icon from './images/OoT_Eyeball_Frog_Icon.png';
-import OoT_Fairy_Bow_Icon from './images/OoT_Fairy_Bow_Icon.png';
-import OoT_Fairy_Icon from './images/OoT_Fairy_Icon.png';
-import OoT_Fairy_Ocarina_Icon from './images/OoT_Fairy_Ocarina_Icon.png';
-import OoT_Fairy_Slingshot_Icon from './images/OoT_Fairy_Slingshot_Icon.png';
-import OoT_Farores_Wind_Icon from './images/OoT_Farores_Wind_Icon.png';
-import OoT_Fire_Arrow_Icon from './images/OoT_Fire_Arrow_Icon.png';
-import OoT_Fire_Medallion_Icon from './images/OoT_Fire_Medallion_Icon.png';
-import OoT_Fish_Icon from './images/OoT_Fish_Icon.png';
-import OoT_Forest_Medallion_Icon from './images/OoT_Forest_Medallion_Icon.png';
-import OoT_Gerudo_Token_Icon from './images/OoT_Gerudo_Token_Icon.png';
-import OoT_Giants_Knife_Icon from './images/OoT_Giants_Knife_Icon.png';
-import OoT_Golden_Gauntlets_Icon from './images/OoT_Golden_Gauntlets_Icon.png';
-import OoT_Golden_Scale_Icon from './images/OoT_Golden_Scale_Icon.png';
-import OoT_Gorons_Bracelet_Icon from './images/OoT_Gorons_Bracelet_Icon.png';
-import OoT_Goron_Tunic_Icon from './images/OoT_Goron_Tunic_Icon.png';
-import OoT_Green_Potion_Icon from './images/OoT_Green_Potion_Icon.png';
-import OoT_Heart_Container_Icon from './images/OoT_Heart_Container_Icon.png';
-import OoT_Heart_Icon from './images/OoT_Heart_Icon.png';
-import OoT_Hookshot_Icon from './images/OoT_Hookshot_Icon.png';
-import OoT_Hover_Boots_Icon from './images/OoT_Hover_Boots_Icon.png';
-import OoT_Hylian_Shield_Icon from './images/OoT_Hylian_Shield_Icon.png';
-import OoT_Ice_Arrow_Icon from './images/OoT_Ice_Arrow_Icon.png';
-import OoT_Iron_Boots_Icon from './images/OoT_Iron_Boots_Icon.png';
-import OoT_Keaton_Mask_Icon from './images/OoT_Keaton_Mask_Icon.png';
-import OoT_Kokiri_Boots_Icon from './images/OoT_Kokiri_Boots_Icon.png';
-import OoT_Kokiri_Sword_Icon from './images/OoT_Kokiri_Sword_Icon.png';
-import OoT_Kokiri_Tunic_Icon from './images/OoT_Kokiri_Tunic_Icon.png';
-import OoT_Large_Magic_Jar_Icon from './images/OoT_Large_Magic_Jar_Icon.png';
-import OoT_Lens_of_Truth_Icon from './images/OoT_Lens_of_Truth_Icon.png';
-import OoT_Letter_Icon from './images/OoT_Letter_Icon.png';
-import OoT_Light_Arrow_Icon from './images/OoT_Light_Arrow_Icon.png';
-import OoT_Light_Medallion_Icon from './images/OoT_Light_Medallion_Icon.png';
-import OoT_Longshot_Icon from './images/OoT_Longshot_Icon.png';
-import OoT_Magic_Bean_Icon from './images/OoT_Magic_Bean_Icon.png';
-import OoT_Mask_of_Truth_Icon from './images/OoT_Mask_of_Truth_Icon.png';
-import OoT_Master_Sword_Icon from './images/OoT_Master_Sword_Icon.png';
-import OoT_Megaton_Hammer_Icon from './images/OoT_Megaton_Hammer_Icon.png';
-import OoT_Milk_Icon from './images/OoT_Milk_Icon.png';
-import OoT_Mirror_Shield_Icon from './images/OoT_Mirror_Shield_Icon.png';
-import OoT_Nayrus_Love_Icon from './images/OoT_Nayrus_Love_Icon.png';
-import OoT_Ocarina_of_Time_Icon from './images/OoT_Ocarina_of_Time_Icon.png';
-import OoT_Odd_Mushroom_Icon from './images/OoT_Odd_Mushroom_Icon.png';
-import OoT_Odd_Potion_Icon from './images/OoT_Odd_Potion_Icon.png';
-import OoT_Piece_of_Heart_Icon from './images/OoT_Piece_of_Heart_Icon.png';
-import OoT_Poachers_Saw_Icon from './images/OoT_Poachers_Saw_Icon.png';
-import OoT_Poe_Soul_Icon from './images/OoT_Poe_Soul_Icon.png';
-import OoT_Prescription_Icon from './images/OoT_Prescription_Icon.png';
-import OoT_Red_Potion_Icon from './images/OoT_Red_Potion_Icon.png';
-import OoT_Shadow_Medallion_Icon from './images/OoT_Shadow_Medallion_Icon.png';
-import OoT_Silver_Gauntlets_Icon from './images/OoT_Silver_Gauntlets_Icon.png';
-import OoT_Silver_Scale_Icon from './images/OoT_Silver_Scale_Icon.png';
-import OoT_Skull_Mask_Icon from './images/OoT_Skull_Mask_Icon.png';
-import OoT_Small_Key_Icon from './images/OoT_Small_Key_Icon.png';
-import OoT_Small_Magic_Jar_Icon from './images/OoT_Small_Magic_Jar_Icon.png';
-import OoT_Spiritual_Stone_of_Fire_Icon from './images/OoT_Spiritual_Stone_of_Fire_Icon.png';
-import OoT_Spiritual_Stone_of_the_Forest_Icon from './images/OoT_Spiritual_Stone_of_the_Forest_Icon.png';
-import OoT_Spiritual_Stone_of_Water_Icon from './images/OoT_Spiritual_Stone_of_Water_Icon.png';
-import OoT_Spirit_Medallion_Icon from './images/OoT_Spirit_Medallion_Icon.png';
-import OoT_Spooky_Mask_Icon from './images/OoT_Spooky_Mask_Icon.png';
-import OoT_Stone_of_Agony_Icon from './images/OoT_Stone_of_Agony_Icon.png';
-import OoT_Token_Icon from './images/OoT_Token_Icon.png';
-import OoT_Water_Medallion_Icon from './images/OoT_Water_Medallion_Icon.png';
-import OoT_Weird_Egg_Icon from './images/OoT_Weird_Egg_Icon.png';
-import OoT_Worlds_Finest_Eye_Drops_Icon from './images/OoT_Worlds_Finest_Eye_Drops_Icon.png';
-import OoT_Zeldas_Letter_Icon from './images/OoT_Zeldas_Letter_Icon.png';
-import OoT_Zora_Tunic_Icon from './images/OoT_Zora_Tunic_Icon.png';
-import Orange_Note from './images/Orange_Note.png';
-import Purple_Note from './images/Purple_Note.png';
-import Red_Note from './images/Red_Note.png';
-import Yellow_Note from './images/Yellow_Note.png';
+import OotIcon from './OotIcon';
 
 class ItemMenu extends React.Component {
     render() {
@@ -110,42 +13,235 @@ class ItemMenu extends React.Component {
                 open={Boolean(this.props.anchorLocation)}
                 onClose={this.props.handleClose}
                 className={this.props.classes.locationItemMenu}
+                TransitionProps={{ timeout: 0 }}
             >
-                <Grid container xs={3}>
-                    <Grid container xs={3}>
-                        <Grid item xs={1}>
-                            <img src={OoT_Kokiri_Sword_Icon} alt="Kokiri Sword" className={this.props.classes.locationMenuIcon} />
+                <div>
+                    <Grid container spacing={0}>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Deku Stick Capacity">
+                            <OotIcon classes={this.props.classes} itemName="Deku Stick Capacity" className={this.props.classes.locationMenuIcon} />
                         </Grid>
-                        <Grid item xs={1}>
-                            <img src={OoT_Master_Sword_Icon} alt="Master Sword" className={this.props.classes.locationMenuIcon} />
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Deku Nut Capacity">
+                            <OotIcon classes={this.props.classes} itemName="Deku Nut Capacity" className={this.props.classes.locationMenuIcon} />
                         </Grid>
-                        <Grid item xs={1}>
-                            <img src={OoT_Giants_Knife_Icon} alt="Biggoron Sword" className={this.props.classes.locationMenuIcon} />
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Bomb Bag">
+                            <OotIcon classes={this.props.classes} itemName="Bomb Bag" className={this.props.classes.locationMenuIcon} />
                         </Grid>
-                    </Grid>
-                    <Grid container xs={3}>
-                        <Grid item xs={1}>
-                            <img src={OoT_Kokiri_Tunic_Icon} alt="Kokiri Tunic" className={this.props.classes.locationMenuIcon} />
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Bow">
+                            <OotIcon classes={this.props.classes} itemName="Bow" className={this.props.classes.locationMenuIcon} />
                         </Grid>
-                        <Grid item xs={1}>
-                            <img src={OoT_Goron_Tunic_Icon} alt="Goron Tunic" className={this.props.classes.locationMenuIcon} />
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Fire Arrows">
+                            <OotIcon classes={this.props.classes} itemName="Fire Arrows" className={this.props.classes.locationMenuIcon} />
                         </Grid>
-                        <Grid item xs={1}>
-                            <img src={OoT_Zora_Tunic_Icon} alt="Zora Tunic" className={this.props.classes.locationMenuIcon} />
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Dins Fire">
+                            <OotIcon classes={this.props.classes} itemName="Dins Fire" className={this.props.classes.locationMenuIcon} />
                         </Grid>
-                    </Grid>
-                    <Grid container xs={3}>
-                        <Grid item xs={1}>
-                            <img src={OoT_Kokiri_Boots_Icon} alt="Kokiri Boots" className={this.props.classes.locationMenuIcon} />
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Kokiri Sword">
+                            <OotIcon classes={this.props.classes} itemName="Kokiri Sword" className={this.props.classes.locationMenuIcon} />
                         </Grid>
-                        <Grid item xs={1}>
-                            <img src={OoT_Iron_Boots_Icon} alt="Iron Boots" className={this.props.classes.locationMenuIcon} />
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Master Sword">
+                            <OotIcon classes={this.props.classes} itemName="Master Sword" className={this.props.classes.locationMenuIcon} />
                         </Grid>
-                        <Grid item xs={1}>
-                            <img src={OoT_Hover_Boots_Icon} alt="Hover Boots" className={this.props.classes.locationMenuIcon} />
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Biggoron Sword">
+                            <OotIcon classes={this.props.classes} itemName="Biggoron Sword" className={this.props.classes.locationMenuIcon} />
                         </Grid>
                     </Grid>
-                </Grid>
+                    <Grid container spacing={0}>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Slingshot">
+                            <OotIcon classes={this.props.classes} itemName="Slingshot" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Ocarina">
+                            <OotIcon classes={this.props.classes} itemName="Ocarina" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Bombchu">
+                            <OotIcon classes={this.props.classes} itemName="Bombchu" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Progressive Hookshot">
+                            <OotIcon classes={this.props.classes} itemName="Progressive Hookshot" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Ice Arrows">
+                            <OotIcon classes={this.props.classes} itemName="Ice Arrows" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Farores Wind">
+                            <OotIcon classes={this.props.classes} itemName="Farores Wind" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Deku Shield">
+                            <OotIcon classes={this.props.classes} itemName="Deku Shield" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Hylian Shield">
+                            <OotIcon classes={this.props.classes} itemName="Hylian Shield" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Mirror Shield">
+                            <OotIcon classes={this.props.classes} itemName="Mirror Shield" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                    </Grid>
+                    <Grid container spacing={0}>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Boomerang">
+                            <OotIcon classes={this.props.classes} itemName="Boomerang" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Lens of Truth">
+                            <OotIcon classes={this.props.classes} itemName="Lens of Truth" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Magic Beans">
+                            <OotIcon classes={this.props.classes} itemName="Magic Beans" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Megaton Hammer">
+                            <OotIcon classes={this.props.classes} itemName="Megaton Hammer" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Light Arrows">
+                            <OotIcon classes={this.props.classes} itemName="Light Arrows" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Nayrus Love">
+                            <OotIcon classes={this.props.classes} itemName="Nayrus Love" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Progressive Strength Upgrade">
+                            <OotIcon classes={this.props.classes} itemName="Progressive Strength Upgrade" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Goron Tunic">
+                            <OotIcon classes={this.props.classes} itemName="Goron Tunic" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Zora Tunic">
+                            <OotIcon classes={this.props.classes} itemName="Zora Tunic" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                    </Grid>
+                    <Grid container spacing={0}>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Bottle">
+                            <OotIcon classes={this.props.classes} itemName="Bottle" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Bottle with Letter">
+                            <OotIcon classes={this.props.classes} itemName="Bottle with Letter" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Bottle with Big Poe">
+                            <OotIcon classes={this.props.classes} itemName="Bottle with Big Poe" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Bottle">
+                            <OotIcon classes={this.props.classes} itemName="Bottle" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Adult Trade Item">
+                            <OotIcon classes={this.props.classes} itemName="Adult Trade Item" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Child Trade Item">
+                            <OotIcon classes={this.props.classes} itemName="Child Trade Item" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Progressive Scale">
+                            <OotIcon classes={this.props.classes} itemName="Progressive Scale" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Iron Boots">
+                            <OotIcon classes={this.props.classes} itemName="Iron Boots" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Hover Boots">
+                            <OotIcon classes={this.props.classes} itemName="Hover Boots" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                    </Grid>
+                    <Grid container spacing={0}>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Zeldas Lullaby">
+                            <OotIcon classes={this.props.classes} itemName="Zeldas Lullaby" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Eponas Song">
+                            <OotIcon classes={this.props.classes} itemName="Eponas Song" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Sarias Song">
+                            <OotIcon classes={this.props.classes} itemName="Sarias Song" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Sun Song">
+                            <OotIcon classes={this.props.classes} itemName="Sun Song" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Song of Time">
+                            <OotIcon classes={this.props.classes} itemName="Song of Time" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Song of Storms">
+                            <OotIcon classes={this.props.classes} itemName="Song of Storms" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Progressive Wallet">
+                            <OotIcon classes={this.props.classes} itemName="Progressive Wallet" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Magic Meter">
+                            <OotIcon classes={this.props.classes} itemName="Magic Meter" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Gold Skulltula Token">
+                            <OotIcon classes={this.props.classes} itemName="Gold Skulltula Token" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                    </Grid>
+                    <Grid container spacing={0}>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Minuet of Forest">
+                            <OotIcon classes={this.props.classes} itemName="Minuet of Forest" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Bolero of Fire">
+                            <OotIcon classes={this.props.classes} itemName="Bolero of Fire" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Serenade of Water">
+                            <OotIcon classes={this.props.classes} itemName="Serenade of Water" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Requiem of Spirit">
+                            <OotIcon classes={this.props.classes} itemName="Requiem of Spirit" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Nocturne of Shadow">
+                            <OotIcon classes={this.props.classes} itemName="Nocturne of Shadow" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Prelude of Light">
+                            <OotIcon classes={this.props.classes} itemName="Prelude of Light" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Gerudo Membership Card">
+                            <OotIcon classes={this.props.classes} itemName="Gerudo Membership Card" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Stone of Agony">
+                            <OotIcon classes={this.props.classes} itemName="Stone of Agony" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Piece of the Triforce">
+                            <OotIcon classes={this.props.classes} itemName="Piece of the Triforce" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                    </Grid>
+                    <Grid container spacing={0}>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Small Key (Forest Temple)">
+                            <OotIcon classes={this.props.classes} itemName="Small Key (Forest Temple)" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Small Key (Fire Temple)">
+                            <OotIcon classes={this.props.classes} itemName="Small Key (Fire Temple)" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Small Key (Water Temple)">
+                            <OotIcon classes={this.props.classes} itemName="Small Key (Water Temple)" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Small Key (Spirit Temple)">
+                            <OotIcon classes={this.props.classes} itemName="Small Key (Spirit Temple)" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Small Key (Shadow Temple)">
+                            <OotIcon classes={this.props.classes} itemName="Small Key (Shadow Temple)" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Small Key (Ganons Castle)">
+                            <OotIcon classes={this.props.classes} itemName="Small Key (Ganons Castle)" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Small Key (Bottom of the Well)">
+                            <OotIcon classes={this.props.classes} itemName="Small Key (Bottom of the Well)" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Small Key (Gerudo Training Ground)">
+                            <OotIcon classes={this.props.classes} itemName="Small Key (Gerudo Training Ground)" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                    </Grid>
+                    <Grid container spacing={0}>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Boss Key (Forest Temple)">
+                            <OotIcon classes={this.props.classes} itemName="Boss Key (Forest Temple)" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Boss Key (Fire Temple)">
+                            <OotIcon classes={this.props.classes} itemName="Boss Key (Fire Temple)" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Boss Key (Water Temple)">
+                            <OotIcon classes={this.props.classes} itemName="Boss Key (Water Temple)" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Boss Key (Spirit Temple)">
+                            <OotIcon classes={this.props.classes} itemName="Boss Key (Spirit Temple)" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Boss Key (Shadow Temple)">
+                            <OotIcon classes={this.props.classes} itemName="Boss Key (Shadow Temple)" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Boss Key (Ganons Castle)">
+                            <OotIcon classes={this.props.classes} itemName="Boss Key (Ganons Castle)" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                    </Grid>
+                    <Grid container spacing={0} onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="">
+                        <Grid item xs={12}>
+                            <p className={this.props.classes.locationMenuClear}>Clear Item</p>
+                        </Grid>
+                    </Grid>
+                </div>
             </Menu>
         );
     }

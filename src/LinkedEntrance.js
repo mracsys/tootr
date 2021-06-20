@@ -1,10 +1,7 @@
 import React from 'react';
-import Typography from '@material-ui/core/Typography';
-import { Box } from '@material-ui/core';
 import IconButton from '@material-ui/core/IconButton';
 import ClearIcon from '@material-ui/icons/Clear';
 import SubdirectoryArrowRightIcon from '@material-ui/icons/SubdirectoryArrowRight';
-import Link from '@material-ui/core/Link';
 
 import LocationCheck from './LocationCheck'
 import UnknownEntrance from './UnknownEntrance'
@@ -61,7 +58,6 @@ class LinkedEntrance extends React.Component {
         let interiors = ['interior','specialInterior','grotto','grave','dungeon'];
         let oneWayTypes = ['spawn','warpsong','owldrop'];
         let otherEntrances = [];
-        const preventDefault = (event) => event.preventDefault();
         if (this.props.connector === false) {
             if ((interiors.includes(this.props.allAreas.entrances[reverseLink].type) &&
             (oneWayTypes.includes(oEntrance.type) || this.props.decoupled) &&
@@ -79,23 +75,22 @@ class LinkedEntrance extends React.Component {
             <React.Fragment key={this.props.ekey}>
                 <div className={this.props.classes.entranceContainer} key={this.props.entrance + "label"}>
                     { this.props.forceVisible ? <SubdirectoryArrowRightIcon /> : null }
-                    <Typography variant="body1" component="h1" className={this.props.classes.entranceLabel}>
+                    <div className={this.props.classes.entranceLabel}>
                         {this.buildEntranceName(this.props.entrance)}
-                    </Typography>
-                    <Link
-                        color="inherit"
+                    </div>
+                    <a
                         href={(((this.props.allAreas.entrances[reverseLink].type === "overworld") || (this.props.allAreas.entrances[reverseLink].isReverse)) ? '#' + this.props.allAreas.entrances[reverseLink].area : null )}
-                        className={(((this.props.allAreas.entrances[reverseLink].type === "overworld") || (this.props.allAreas.entrances[reverseLink].isReverse)) ? null : this.props.classes.falseLinkAnchor )}
+                        className={(((this.props.allAreas.entrances[reverseLink].type === "overworld") || (this.props.allAreas.entrances[reverseLink].isReverse)) ? this.props.classes.overworldLinkAnchor : this.props.classes.falseLinkAnchor )}
                     >
-                        <Box className={this.props.classes.entranceLink}>
-                            <Typography variant="body1" component="h2" className={this.props.classes.entranceLink1}>
+                        <div className={this.props.classes.entranceLink}>
+                            <div className={this.props.classes.entranceLink1}>
                                 {this.buildExitName(this.props.entrance)}
-                            </Typography>
-                            <Typography variant="caption" component="h3" className={this.props.classes.entranceLink2}>
+                            </div>
+                            <div className={this.props.classes.entranceLink2}>
                                 {this.buildExitEntranceName(this.props.entrance)}
-                            </Typography>
-                        </Box>
-                    </Link>
+                            </div>
+                        </div>
+                    </a>
                     {
                         (oEntrance.shuffled === true) ?
                             <IconButton className={this.props.classes.areaButton} size="small" component="span" onClick={() => this.props.handleUnLink(this.props.entrance)}><ClearIcon /></IconButton> :
@@ -115,7 +110,9 @@ class LinkedEntrance extends React.Component {
                                     classes={this.props.classes}
                                     handleCheck={this.props.handleCheck}
                                     handleUnCheck={this.props.handleUnCheck}
-                                    handleItemMenu={this.props.handleItemMenu}
+                                    handleItemMenuOpen={this.props.handleItemMenuOpen}
+                                    handleItemMenuClose={this.props.handleItemMenuClose}
+                                    handleFind={this.findItem}
                                 />
                             );
                         } else {
@@ -139,10 +136,13 @@ class LinkedEntrance extends React.Component {
                             allAreas={this.props.allAreas}
                             allEntrances={this.props.allEntrances}
                             handleLink={this.props.handleLink}
+                            handleEntranceMenuOpen={this.props.handleEntranceMenuOpen}
                             handleUnLink={this.props.handleUnLink}
                             handleCheck={this.props.handleCheck}
                             handleUnCheck={this.props.handleUnCheck}
-                            handleItemMenu={this.props.handleItemMenu}
+                            handleItemMenuOpen={this.props.handleItemMenuOpen}
+                            handleItemMenuClose={this.props.handleItemMenuClose}
+                            handleFind={this.findItem}
                             classes={this.props.classes}
                             ekey={this.props.entrance + otherEntrance.ekey + this.props.ekey}
                             key={this.props.entrance + otherEntrance.ekey + this.props.ekey + i}

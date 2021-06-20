@@ -156,7 +156,8 @@
             "type": "item",
             "settings": [{"setting": "Shuffle Magic Beans", "value": "On", "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "ZR Open Grotto Chest": {
             "area": "",
@@ -165,7 +166,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "ZR Frogs in the Rain": {
             "area": "Zora River",
@@ -174,7 +176,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "ZR Frogs Ocarina Game": {
             "area": "Zora River",
@@ -183,7 +186,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "ZR Near Open Grotto Freestanding PoH": {
             "area": "Zora River",
@@ -192,7 +196,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "ZR Near Domain Freestanding PoH": {
             "area": "Zora River",
@@ -201,7 +206,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "ZR Deku Scrub Grotto Front": {
             "area": "",
@@ -214,7 +220,8 @@
                 {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "ZR Deku Scrub Grotto Rear": {
             "area": "",
@@ -227,7 +234,8 @@
                 {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "ZR GS Tree": {
             "area": "Zora River",
@@ -240,7 +248,8 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "ZR GS Ladder": {
             "area": "Zora River",
@@ -253,7 +262,8 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "ZR GS Near Raised Grottos": {
             "area": "Zora River",
@@ -266,7 +276,8 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "ZR GS Above Bridge": {
             "area": "Zora River",
@@ -279,7 +290,8 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         }
     }
 }

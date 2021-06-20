@@ -45,7 +45,7 @@
         "ToT Entrance -> Temple of Time": {
             "area": "Temple of Time Entrance",
             "reverse": "Temple of Time -> ToT Entrance",
-            "oneWay": true,
+            "oneWay": false,
             "oneWayArea": "",
             "connector": "",
             "isReverse": false,
@@ -55,27 +55,6 @@
             "tagRep": false,
             "type": "specialInterior",
             "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "Temple of Time -> ToT Entrance": {
-            "area": "Temple of Time",
-            "reverse": "ToT Entrance -> Temple of Time",
-            "oneWay": true,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": true,
-            "alias": "from Temple of Time",
-            "reverseAlias": "Temple of Time",
-            "tag": "",
-            "tagRep": false,
-            "type": "specialInterior",
-            "lKey": "Temple of Time",
             "aLink": "",
             "userALink": "",
             "eLink": "",
@@ -445,21 +424,23 @@
     "locations": {
         "Prelude of Light": {
             "area": "Temple of Time",
-            "lKey": "",
+            "lKey": "ToT Entrance -> Temple of Time",
             "alias": "Prelude of Light",
             "type": "song",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Light Arrow Cutscene": {
             "area": "Temple of Time",
-            "lKey": "",
+            "lKey": "ToT Entrance -> Temple of Time",
             "alias": "Light Arrow Cutscene",
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Zelda's Lullaby": {
             "area": "Castle Grounds",
@@ -468,7 +449,8 @@
             "type": "song",
             "settings": [{"setting": "Skip Child Zelda", "value": "Off", "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Market Shooting Gallery Reward": {
             "area": "",
@@ -477,7 +459,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Market Bombchu Bowling First Prize": {
             "area": "",
@@ -486,7 +469,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Market Bombchu Bowling Second Prize": {
             "area": "",
@@ -495,7 +479,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Market Lost Dog": {
             "area": "Market",
@@ -504,7 +489,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Market Treasure Chest Game Reward": {
             "area": "",
@@ -513,7 +499,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Market 10 Big Poes": {
             "area": "",
@@ -522,7 +509,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Market GS Guard House": {
             "area": "",
@@ -535,7 +523,8 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Market Bazaar Item 1": {
             "area": "",
@@ -550,7 +539,8 @@
                 {"setting": "Shopsanity", "value": "Random", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Market Bazaar Item 2": {
             "area": "",
@@ -564,7 +554,8 @@
                 {"setting": "Shopsanity", "value": "Random", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Market Bazaar Item 3": {
             "area": "",
@@ -577,7 +568,8 @@
                 {"setting": "Shopsanity", "value": "Random", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Market Bazaar Item 4": {
             "area": "",
@@ -589,7 +581,8 @@
                 {"setting": "Shopsanity", "value": "Random", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Market Potion Shop Item 1": {
             "area": "",
@@ -604,7 +597,8 @@
                 {"setting": "Shopsanity", "value": "Random", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Market Potion Shop Item 2": {
             "area": "",
@@ -618,7 +612,8 @@
                 {"setting": "Shopsanity", "value": "Random", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Market Potion Shop Item 3": {
             "area": "",
@@ -631,7 +626,8 @@
                 {"setting": "Shopsanity", "value": "Random", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Market Potion Shop Item 4": {
             "area": "",
@@ -643,7 +639,8 @@
                 {"setting": "Shopsanity", "value": "Random", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Market Bombchu Shop Item 1": {
             "area": "",
@@ -658,7 +655,8 @@
                 {"setting": "Shopsanity", "value": "Random", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Market Bombchu Shop Item 2": {
             "area": "",
@@ -672,7 +670,8 @@
                 {"setting": "Shopsanity", "value": "Random", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Market Bombchu Shop Item 3": {
             "area": "",
@@ -685,7 +684,8 @@
                 {"setting": "Shopsanity", "value": "Random", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Market Bombchu Shop Item 4": {
             "area": "",
@@ -697,7 +697,8 @@
                 {"setting": "Shopsanity", "value": "Random", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "HC Malon Egg": {
             "area": "Castle Grounds",
@@ -706,7 +707,8 @@
             "type": "item",
             "settings": [{"setting": "Shuffle Weird Egg", "value": "On", "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "HC Great Fairy Reward": {
             "area": "",
@@ -715,7 +717,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "HC GS Tree": {
             "area": "Castle Grounds",
@@ -728,7 +731,8 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "HC GS Storms Grotto": {
             "area": "",
@@ -741,7 +745,8 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "OGC GS": {
             "area": "Castle Grounds",
@@ -754,7 +759,8 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "OGC Great Fairy Reward": {
             "area": "",
@@ -763,7 +769,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         }
     }
 }

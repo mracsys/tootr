@@ -8,7 +8,8 @@
             "type": "item",
             "settings": [{"setting": "Spirit Temple MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Spirit Temple Child Early Torches Chest": {
             "area": "",
@@ -17,7 +18,8 @@
             "type": "smallKey",
             "settings": [{"setting": "Spirit Temple MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Spirit Temple GS Metal Fence": {
             "area": "",
@@ -31,7 +33,8 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Spirit Temple Child Climb North Chest": {
             "area": "",
@@ -40,7 +43,8 @@
             "type": "item",
             "settings": [{"setting": "Spirit Temple MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Spirit Temple Child Climb East Chest": {
             "area": "",
@@ -49,7 +53,8 @@
             "type": "item",
             "settings": [{"setting": "Spirit Temple MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Spirit Temple GS Sun on Floor Room": {
             "area": "",
@@ -63,7 +68,8 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Spirit Temple Map Chest": {
             "area": "",
@@ -72,7 +78,8 @@
             "type": "map",
             "settings": [{"setting": "Spirit Temple MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Spirit Temple Sun Block Room Chest": {
             "area": "",
@@ -81,7 +88,8 @@
             "type": "smallKey",
             "settings": [{"setting": "Spirit Temple MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Spirit Temple GS Hall After Sun Block Room": {
             "area": "",
@@ -95,7 +103,8 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Spirit Temple Compass Chest": {
             "area": "",
@@ -104,7 +113,8 @@
             "type": "compass",
             "settings": [{"setting": "Spirit Temple MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Spirit Temple Early Adult Right Chest": {
             "area": "",
@@ -113,7 +123,8 @@
             "type": "smallKey",
             "settings": [{"setting": "Spirit Temple MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Spirit Temple GS Boulder Room": {
             "area": "",
@@ -127,7 +138,8 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Spirit Temple First Mirror Left Chest": {
             "area": "",
@@ -136,7 +148,8 @@
             "type": "item",
             "settings": [{"setting": "Spirit Temple MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Spirit Temple First Mirror Right Chest": {
             "area": "",
@@ -145,7 +158,8 @@
             "type": "item",
             "settings": [{"setting": "Spirit Temple MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Spirit Temple Statue Room Northeast Chest": {
             "area": "",
@@ -154,7 +168,8 @@
             "type": "item",
             "settings": [{"setting": "Spirit Temple MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Spirit Temple Statue Room Hand Chest": {
             "area": "",
@@ -163,7 +178,8 @@
             "type": "smallKey",
             "settings": [{"setting": "Spirit Temple MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Spirit Temple GS Lobby": {
             "area": "",
@@ -177,7 +193,8 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Spirit Temple Near Four Armos Chest": {
             "area": "",
@@ -186,7 +203,8 @@
             "type": "smallKey",
             "settings": [{"setting": "Spirit Temple MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Spirit Temple Hallway Right Invisible Chest": {
             "area": "",
@@ -195,7 +213,8 @@
             "type": "item",
             "settings": [{"setting": "Spirit Temple MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Spirit Temple Hallway Left Invisible Chest": {
             "area": "",
@@ -204,7 +223,8 @@
             "type": "item",
             "settings": [{"setting": "Spirit Temple MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Spirit Temple Boss Key Chest": {
             "area": "",
@@ -213,7 +233,8 @@
             "type": "bossKey",
             "settings": [{"setting": "Spirit Temple MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Spirit Temple Topmost Chest": {
             "area": "",
@@ -222,7 +243,8 @@
             "type": "item",
             "settings": [{"setting": "Spirit Temple MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Spirit Temple MQ Entrance Front Left Chest": {
             "area": "",
@@ -231,7 +253,8 @@
             "type": "item",
             "settings": [{"setting": "Spirit Temple MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Spirit Temple MQ Entrance Back Right Chest": {
             "area": "",
@@ -240,7 +263,8 @@
             "type": "item",
             "settings": [{"setting": "Spirit Temple MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Spirit Temple MQ Entrance Front Right Chest": {
             "area": "",
@@ -249,7 +273,8 @@
             "type": "smallKey",
             "settings": [{"setting": "Spirit Temple MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Spirit Temple MQ Entrance Back Left Chest": {
             "area": "",
@@ -258,7 +283,8 @@
             "type": "smallKey",
             "settings": [{"setting": "Spirit Temple MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Spirit Temple MQ Map Chest": {
             "area": "",
@@ -267,7 +293,8 @@
             "type": "map",
             "settings": [{"setting": "Spirit Temple MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Spirit Temple MQ Map Room Enemy Chest": {
             "area": "",
@@ -276,7 +303,8 @@
             "type": "smallKey",
             "settings": [{"setting": "Spirit Temple MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Spirit Temple MQ Child Climb North Chest": {
             "area": "",
@@ -285,7 +313,8 @@
             "type": "item",
             "settings": [{"setting": "Spirit Temple MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Spirit Temple MQ Child Climb South Chest": {
             "area": "",
@@ -294,7 +323,8 @@
             "type": "smallKey",
             "settings": [{"setting": "Spirit Temple MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Spirit Temple MQ Compass Chest": {
             "area": "",
@@ -303,7 +333,8 @@
             "type": "compass",
             "settings": [{"setting": "Spirit Temple MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Spirit Temple MQ Silver Block Hallway Chest": {
             "area": "",
@@ -312,7 +343,8 @@
             "type": "smallKey",
             "settings": [{"setting": "Spirit Temple MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Spirit Temple MQ Sun Block Room Chest": {
             "area": "",
@@ -321,7 +353,8 @@
             "type": "item",
             "settings": [{"setting": "Spirit Temple MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Spirit Temple MQ GS Sun Block Room": {
             "area": "",
@@ -335,7 +368,8 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Spirit Temple MQ Child Hammer Switch Chest": {
             "area": "",
@@ -344,7 +378,8 @@
             "type": "smallKey",
             "settings": [{"setting": "Spirit Temple MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Spirit Temple MQ Statue Room Lullaby Chest": {
             "area": "",
@@ -353,7 +388,8 @@
             "type": "item",
             "settings": [{"setting": "Spirit Temple MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Spirit Temple MQ Statue Room Invisible Chest": {
             "area": "",
@@ -362,7 +398,8 @@
             "type": "item",
             "settings": [{"setting": "Spirit Temple MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Spirit Temple MQ Leever Room Chest": {
             "area": "",
@@ -371,7 +408,8 @@
             "type": "item",
             "settings": [{"setting": "Spirit Temple MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Spirit Temple MQ GS Leever Room": {
             "area": "",
@@ -385,7 +423,8 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Spirit Temple MQ Symphony Room Chest": {
             "area": "",
@@ -394,7 +433,8 @@
             "type": "item",
             "settings": [{"setting": "Spirit Temple MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Spirit Temple MQ GS Symphony Room": {
             "area": "",
@@ -408,7 +448,8 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Spirit Temple MQ Beamos Room Chest": {
             "area": "",
@@ -417,7 +458,8 @@
             "type": "item",
             "settings": [{"setting": "Spirit Temple MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Spirit Temple MQ Chest Switch Chest": {
             "area": "",
@@ -426,7 +468,8 @@
             "type": "item",
             "settings": [{"setting": "Spirit Temple MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Spirit Temple MQ Boss Key Chest": {
             "area": "",
@@ -435,7 +478,8 @@
             "type": "bossKey",
             "settings": [{"setting": "Spirit Temple MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Spirit Temple MQ GS Nine Thrones Room West": {
             "area": "",
@@ -449,7 +493,8 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Spirit Temple MQ GS Nine Thrones Room North": {
             "area": "",
@@ -463,7 +508,8 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Spirit Temple MQ Mirror Puzzle Invisible Chest": {
             "area": "",
@@ -472,7 +518,8 @@
             "type": "smallKey",
             "settings": [{"setting": "Spirit Temple MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Spirit Temple Silver Gauntlets Chest": {
             "area": "",
@@ -481,7 +528,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Spirit Temple Mirror Shield Chest": {
             "area": "",
@@ -490,7 +538,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Spirit Temple Twinrova Heart": {
             "area": "",
@@ -499,7 +548,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         }
     }
 }

@@ -324,7 +324,8 @@
             "type": "song",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "HF Ocarina of Time Item": {
             "area": "Hyrule Field",
@@ -333,7 +334,8 @@
             "type": "item",
             "settings": [{"setting": "Shuffle Ocarinas", "value": "On", "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "HF Near Market Grotto Chest": {
             "area": "",
@@ -342,7 +344,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "HF Southeast Grotto Chest": {
             "area": "",
@@ -351,7 +354,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "HF Open Grotto Chest": {
             "area": "",
@@ -360,7 +364,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "HF Tektite Grotto Freestanding PoH": {
             "area": "",
@@ -369,7 +374,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "HF Deku Scrub Grotto": {
             "area": "",
@@ -378,7 +384,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "HF Cow Grotto Cow": {
             "area": "",
@@ -387,7 +394,8 @@
             "type": "item",
             "settings": [{"setting": "Cowsanity", "value": "On", "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "HF GS Cow Grotto": {
             "area": "",
@@ -400,7 +408,8 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "HF GS Near Kak Grotto": {
             "area": "",
@@ -413,7 +422,8 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         }
     }
 }

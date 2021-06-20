@@ -156,7 +156,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Graveyard Ledge": {
             "area": "Graveyard",
@@ -165,7 +166,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Shield Grave Chest": {
             "area": "",
@@ -174,7 +176,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Redead Grave Chest": {
             "area": "",
@@ -183,7 +186,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Sun Song": {
             "area": "",
@@ -192,7 +196,8 @@
             "type": "song",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Composer's Grave Chest": {
             "area": "",
@@ -201,7 +206,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Dampe's Race Reward 1": {
             "area": "",
@@ -210,7 +216,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Dampe's Race Reward 2": {
             "area": "",
@@ -219,7 +226,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Graveyard GS Bean Patch": {
             "area": "Graveyard",
@@ -232,7 +240,8 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Graveyard GS Wall": {
             "area": "Graveyard",
@@ -245,7 +254,8 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         }
     }
 }

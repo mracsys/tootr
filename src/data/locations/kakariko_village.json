@@ -345,7 +345,8 @@
             "type": "song",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Nocturne of Shadow": {
             "area": "Kakariko Village",
@@ -354,7 +355,8 @@
             "type": "song",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Kak Anju as Child": {
             "area": "Kakariko Village",
@@ -363,7 +365,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Kak Anju as Adult": {
             "area": "Kakariko Village",
@@ -372,7 +375,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Kak Impas House Freestanding PoH": {
             "area": "",
@@ -381,7 +385,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Kak Impas House Cow": {
             "area": "",
@@ -390,7 +395,8 @@
             "type": "item",
             "settings": [{"setting": "Cowsanity", "value": "On", "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Kak Windmill Freestanding PoH": {
             "area": "",
@@ -399,7 +405,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Kak Man on Roof": {
             "area": "Kakariko Village",
@@ -408,7 +415,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Kak Open Grotto Chest": {
             "area": "",
@@ -417,7 +425,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Kak Redead Grotto Chest": {
             "area": "",
@@ -426,7 +435,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Kak Shooting Gallery Reward": {
             "area": "",
@@ -435,7 +445,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Kak 10 Gold Skulltula Reward": {
             "area": "",
@@ -444,7 +455,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Kak 20 Gold Skulltula Reward": {
             "area": "",
@@ -453,7 +465,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Kak 30 Gold Skulltula Reward": {
             "area": "",
@@ -462,7 +475,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Kak 40 Gold Skulltula Reward": {
             "area": "",
@@ -471,7 +485,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Kak 50 Gold Skulltula Reward": {
             "area": "",
@@ -480,7 +495,8 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Kak GS Tree": {
             "area": "Kakariko Village",
@@ -493,7 +509,8 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Kak GS Guards House": {
             "area": "Kakariko Village",
@@ -506,7 +523,8 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Kak GS Watchtower": {
             "area": "Kakariko Village",
@@ -519,7 +537,8 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Kak GS Skulltula House": {
             "area": "Kakariko Village",
@@ -532,7 +551,8 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Kak GS House Under Construction": {
             "area": "Kakariko Village",
@@ -545,7 +565,8 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Kak GS Above Impas House": {
             "area": "Kakariko Village",
@@ -558,7 +579,8 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Kak Bazaar Item 1": {
             "area": "",
@@ -573,7 +595,8 @@
                 {"setting": "Shopsanity", "value": "Random", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Kak Bazaar Item 2": {
             "area": "",
@@ -587,7 +610,8 @@
                 {"setting": "Shopsanity", "value": "Random", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Kak Bazaar Item 3": {
             "area": "",
@@ -600,7 +624,8 @@
                 {"setting": "Shopsanity", "value": "Random", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Kak Bazaar Item 4": {
             "area": "",
@@ -612,7 +637,8 @@
                 {"setting": "Shopsanity", "value": "Random", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Kak Potion Shop Item 1": {
             "area": "",
@@ -627,7 +653,8 @@
                 {"setting": "Shopsanity", "value": "Random", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Kak Potion Shop Item 2": {
             "area": "",
@@ -641,7 +668,8 @@
                 {"setting": "Shopsanity", "value": "Random", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Kak Potion Shop Item 3": {
             "area": "",
@@ -654,7 +682,8 @@
                 {"setting": "Shopsanity", "value": "Random", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         },
         "Kak Potion Shop Item 4": {
             "area": "",
@@ -666,7 +695,8 @@
                 {"setting": "Shopsanity", "value": "Random", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": ""
         }
     }
 }
