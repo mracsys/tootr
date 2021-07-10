@@ -30,6 +30,9 @@ class ShopItemMenu extends React.Component {
                         <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Bombchu">
                             <OotIcon classes={this.props.classes} itemName="Bombchu" className={this.props.classes.locationMenuIcon} />
                         </Grid>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Deku Shield">
+                            <OotIcon classes={this.props.classes} itemName="Deku Shield" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
                     </Grid>
                     <Grid container spacing={0} className={this.props.itemMenuRow}>
                         <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Blue Fire">
@@ -43,6 +46,9 @@ class ShopItemMenu extends React.Component {
                         </Grid>
                         <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Deku Seeds">
                             <OotIcon classes={this.props.classes} itemName="Deku Seeds" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Hylian Shield">
+                            <OotIcon classes={this.props.classes} itemName="Hylian Shield" className={this.props.classes.locationMenuIcon} />
                         </Grid>
                     </Grid>
                     <Grid container spacing={0} className={this.props.itemMenuRow}>
