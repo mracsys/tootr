@@ -444,7 +444,7 @@
     },
     "locations": {
         "Prelude of Light": {
-            "area": "Temple of Time",
+            "area": "",
             "lKey": "ToT Entrance -> Temple of Time",
             "alias": "Prelude of Light",
             "type": "song",
@@ -457,7 +457,7 @@
             "walletTier": 0
         },
         "Light Arrow Cutscene": {
-            "area": "Temple of Time",
+            "area": "",
             "lKey": "ToT Entrance -> Temple of Time",
             "alias": "Light Arrow Cutscene",
             "type": "item",

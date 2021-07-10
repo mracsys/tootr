@@ -687,6 +687,12 @@ const useStyles = (theme) => ({
             backgroundColor: blueGrey[800],
         }
     },
+    warpMenuAreaHidden: {
+        display: 'block',
+        color: grey[500],
+        fontWeight: 'bold',
+        padding: theme.spacing(1),
+    },
     warpSongsBig: {
         [theme.breakpoints.down('xs')]: {
             display: 'none',
@@ -1970,6 +1976,9 @@ class Tracker extends React.Component {
                             anchor="left"
                             open={this.state.openSettings}
                             classes={{paper: classes.drawerPaper}}
+                            SlideProps={{
+                                unmountOnExit: true,
+                            }}
                         >
                             <div className={classes.drawerHeader} />
                             <List className={classes.drawerContainer}>
@@ -2002,6 +2011,7 @@ class Tracker extends React.Component {
                             allAreas={this.state.allAreas}
                             connector={this.state.entranceConnector === 'true'}
                             title={this.state.entranceToLink ? this.state.allAreas.entrances[this.state.entranceToLink].area : ''}
+                            oneWay={this.state.entranceToLink ? this.state.allAreas.entrances[this.state.entranceToLink].oneWay : false}
                             sourceEntrance={this.state.entranceToLink}
                             classes={classes}
                             id="globalEntranceMenu"
@@ -2111,7 +2121,7 @@ class Tracker extends React.Component {
                                     />
                                 </div>
                                 <div className={classes.warpSongsSmall}>
-                                    <ClickAwayListener onClickAway={() => this.setState({ expandSongMenu: false })}>
+                                    <ClickAwayListener onClickAway={() => this.state.expandSongMenu ? this.setState({ expandSongMenu: false }) : null}>
                                         <div
                                             className={classes.iconDiv}
                                             onClick={() => this.setState({ expandSongMenu: !this.state.expandSongMenu })}
@@ -2123,7 +2133,7 @@ class Tracker extends React.Component {
                                         </div>
                                     </ClickAwayListener>
                                 </div>
-                                <ClickAwayListener onClickAway={() => this.setState({ expandWarpMenu: false })}>
+                                <ClickAwayListener onClickAway={() => this.state.expandWarpMenu ? this.setState({ expandWarpMenu: false }) : null}>
                                     <div
                                         className={classes.iconDiv}
                                         onClick={() => this.setState({ expandWarpMenu: !this.state.expandWarpMenu })}
@@ -2136,7 +2146,7 @@ class Tracker extends React.Component {
                                         {<PublicIcon className={classes.expandWarpMenu} />}
                                     </div>
                                 </ClickAwayListener>
-                                <ClickAwayListener onClickAway={() => this.setState({ expandDungeonMenu: false })}>
+                                <ClickAwayListener onClickAway={() => this.state.expandDungeonMenu ? this.setState({ expandDungeonMenu: false }) : null}>
                                     <div
                                         className={classes.iconDiv}
                                         onClick={() => this.setState({ expandDungeonMenu: !this.state.expandDungeonMenu })}
@@ -2174,12 +2184,16 @@ class Tracker extends React.Component {
                                 unmountOnExit
                                 className={classes.warpAreaList}
                             >
-                                { Object.keys(this.state.areas).sort().filter((a) => (this.state.areas[a].show)).map((area, ia) => {
+                                { Object.keys(this.state.areas).sort().filter((a) => (!(this.state.areas[a].dungeon))).map((area, ia) => {
                                     return (
                                         <span
                                             key={'quickAreaMenu'+ia}
-                                            className={classes.warpMenuArea}
-                                            onClick={() => this.handleWarpMenu(area)}
+                                            className={this.state.areas[area].show ? 
+                                                classes.warpMenuArea :
+                                                classes.warpMenuAreaHidden}
+                                            onClick={this.state.areas[area].show ?
+                                                () => this.handleWarpMenu(area)
+                                                : null}
                                         >
                                             {area}
                                         </span>
@@ -2213,7 +2227,7 @@ class Tracker extends React.Component {
                             <div className={classes.drawerHeader} />
                             {
                                 this.state.settings["View"] === "Overworld" ?
-                                Object.keys(this.state.areas).sort().filter((a) => (this.state.areas[a].show)).map((area, ia) => { 
+                                Object.keys(this.state.areas).sort().filter((a) => (this.state.areas[a].show && !(this.state.areas[a].dungeon))).map((area, ia) => { 
                                     return (
                                         <GameArea
                                             title={area}

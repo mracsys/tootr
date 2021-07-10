@@ -69,10 +69,8 @@ class LinkedEntrance extends React.Component {
             }
         }
         if (this.props.allAreas.entrances[reverseLink].type === "dungeon") {
-            if (this.props.dungeon) {
+            if (this.props.allAreas.entrances[reverseLink].isReverse === true) {
                 href = '#' + this.props.allAreas.entrances[reverseLink].area;
-            } else if (this.props.allAreas.entrances[reverseLink].isReverse === true) {
-                href = '#' + this.props.allAreas.entrances[reverseLink].reverseAlias;
             } else {
                 href = '#' + this.props.allAreas.entrances[reverseLink].alias;
             }
