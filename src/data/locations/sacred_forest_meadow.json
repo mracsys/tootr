@@ -115,7 +115,10 @@
             "settings": [],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Minuet of Forest": {
             "area": "Sacred Forest Meadow",
@@ -125,7 +128,10 @@
             "settings": [],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "SFM GS": {
             "area": "Sacred Forest Meadow",
@@ -139,7 +145,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "SFM Wolfos Grotto Chest": {
             "area": "",
@@ -149,7 +158,10 @@
             "settings": [],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "SFM Deku Scrub Grotto Rear": {
             "area": "",
@@ -163,7 +175,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "SFM Deku Scrub Grotto Front": {
             "area": "",
@@ -177,7 +192,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         }
     }
 }

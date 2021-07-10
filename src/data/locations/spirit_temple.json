@@ -9,7 +9,10 @@
             "settings": [{"setting": "Spirit Temple MQ", "value": false, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Spirit Temple Child Early Torches Chest": {
             "area": "",
@@ -19,7 +22,10 @@
             "settings": [{"setting": "Spirit Temple MQ", "value": false, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Spirit Temple GS Metal Fence": {
             "area": "",
@@ -34,7 +40,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Spirit Temple Child Climb North Chest": {
             "area": "",
@@ -44,7 +53,10 @@
             "settings": [{"setting": "Spirit Temple MQ", "value": false, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Spirit Temple Child Climb East Chest": {
             "area": "",
@@ -54,7 +66,10 @@
             "settings": [{"setting": "Spirit Temple MQ", "value": false, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Spirit Temple GS Sun on Floor Room": {
             "area": "",
@@ -69,7 +84,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Spirit Temple Map Chest": {
             "area": "",
@@ -79,7 +97,10 @@
             "settings": [{"setting": "Spirit Temple MQ", "value": false, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Spirit Temple Sun Block Room Chest": {
             "area": "",
@@ -89,7 +110,10 @@
             "settings": [{"setting": "Spirit Temple MQ", "value": false, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Spirit Temple GS Hall After Sun Block Room": {
             "area": "",
@@ -104,7 +128,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Spirit Temple Compass Chest": {
             "area": "",
@@ -114,7 +141,10 @@
             "settings": [{"setting": "Spirit Temple MQ", "value": false, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Spirit Temple Early Adult Right Chest": {
             "area": "",
@@ -124,7 +154,10 @@
             "settings": [{"setting": "Spirit Temple MQ", "value": false, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Spirit Temple GS Boulder Room": {
             "area": "",
@@ -139,7 +172,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Spirit Temple First Mirror Left Chest": {
             "area": "",
@@ -149,7 +185,10 @@
             "settings": [{"setting": "Spirit Temple MQ", "value": false, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Spirit Temple First Mirror Right Chest": {
             "area": "",
@@ -159,7 +198,10 @@
             "settings": [{"setting": "Spirit Temple MQ", "value": false, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Spirit Temple Statue Room Northeast Chest": {
             "area": "",
@@ -169,7 +211,10 @@
             "settings": [{"setting": "Spirit Temple MQ", "value": false, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Spirit Temple Statue Room Hand Chest": {
             "area": "",
@@ -179,7 +224,10 @@
             "settings": [{"setting": "Spirit Temple MQ", "value": false, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Spirit Temple GS Lobby": {
             "area": "",
@@ -194,7 +242,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Spirit Temple Near Four Armos Chest": {
             "area": "",
@@ -204,7 +255,10 @@
             "settings": [{"setting": "Spirit Temple MQ", "value": false, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Spirit Temple Hallway Right Invisible Chest": {
             "area": "",
@@ -214,7 +268,10 @@
             "settings": [{"setting": "Spirit Temple MQ", "value": false, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Spirit Temple Hallway Left Invisible Chest": {
             "area": "",
@@ -224,7 +281,10 @@
             "settings": [{"setting": "Spirit Temple MQ", "value": false, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Spirit Temple Boss Key Chest": {
             "area": "",
@@ -234,7 +294,10 @@
             "settings": [{"setting": "Spirit Temple MQ", "value": false, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Spirit Temple Topmost Chest": {
             "area": "",
@@ -244,7 +307,10 @@
             "settings": [{"setting": "Spirit Temple MQ", "value": false, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Spirit Temple MQ Entrance Front Left Chest": {
             "area": "",
@@ -254,7 +320,10 @@
             "settings": [{"setting": "Spirit Temple MQ", "value": true, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Spirit Temple MQ Entrance Back Right Chest": {
             "area": "",
@@ -264,7 +333,10 @@
             "settings": [{"setting": "Spirit Temple MQ", "value": true, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Spirit Temple MQ Entrance Front Right Chest": {
             "area": "",
@@ -274,7 +346,10 @@
             "settings": [{"setting": "Spirit Temple MQ", "value": true, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Spirit Temple MQ Entrance Back Left Chest": {
             "area": "",
@@ -284,7 +359,10 @@
             "settings": [{"setting": "Spirit Temple MQ", "value": true, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Spirit Temple MQ Map Chest": {
             "area": "",
@@ -294,7 +372,10 @@
             "settings": [{"setting": "Spirit Temple MQ", "value": true, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Spirit Temple MQ Map Room Enemy Chest": {
             "area": "",
@@ -304,7 +385,10 @@
             "settings": [{"setting": "Spirit Temple MQ", "value": true, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Spirit Temple MQ Child Climb North Chest": {
             "area": "",
@@ -314,7 +398,10 @@
             "settings": [{"setting": "Spirit Temple MQ", "value": true, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Spirit Temple MQ Child Climb South Chest": {
             "area": "",
@@ -324,7 +411,10 @@
             "settings": [{"setting": "Spirit Temple MQ", "value": true, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Spirit Temple MQ Compass Chest": {
             "area": "",
@@ -334,7 +424,10 @@
             "settings": [{"setting": "Spirit Temple MQ", "value": true, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Spirit Temple MQ Silver Block Hallway Chest": {
             "area": "",
@@ -344,7 +437,10 @@
             "settings": [{"setting": "Spirit Temple MQ", "value": true, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Spirit Temple MQ Sun Block Room Chest": {
             "area": "",
@@ -354,7 +450,10 @@
             "settings": [{"setting": "Spirit Temple MQ", "value": true, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Spirit Temple MQ GS Sun Block Room": {
             "area": "",
@@ -369,7 +468,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Spirit Temple MQ Child Hammer Switch Chest": {
             "area": "",
@@ -379,7 +481,10 @@
             "settings": [{"setting": "Spirit Temple MQ", "value": true, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Spirit Temple MQ Statue Room Lullaby Chest": {
             "area": "",
@@ -389,7 +494,10 @@
             "settings": [{"setting": "Spirit Temple MQ", "value": true, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Spirit Temple MQ Statue Room Invisible Chest": {
             "area": "",
@@ -399,7 +507,10 @@
             "settings": [{"setting": "Spirit Temple MQ", "value": true, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Spirit Temple MQ Leever Room Chest": {
             "area": "",
@@ -409,7 +520,10 @@
             "settings": [{"setting": "Spirit Temple MQ", "value": true, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Spirit Temple MQ GS Leever Room": {
             "area": "",
@@ -424,7 +538,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Spirit Temple MQ Symphony Room Chest": {
             "area": "",
@@ -434,7 +551,10 @@
             "settings": [{"setting": "Spirit Temple MQ", "value": true, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Spirit Temple MQ GS Symphony Room": {
             "area": "",
@@ -449,7 +569,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Spirit Temple MQ Beamos Room Chest": {
             "area": "",
@@ -459,7 +582,10 @@
             "settings": [{"setting": "Spirit Temple MQ", "value": true, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Spirit Temple MQ Chest Switch Chest": {
             "area": "",
@@ -469,7 +595,10 @@
             "settings": [{"setting": "Spirit Temple MQ", "value": true, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Spirit Temple MQ Boss Key Chest": {
             "area": "",
@@ -479,7 +608,10 @@
             "settings": [{"setting": "Spirit Temple MQ", "value": true, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Spirit Temple MQ GS Nine Thrones Room West": {
             "area": "",
@@ -494,7 +626,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Spirit Temple MQ GS Nine Thrones Room North": {
             "area": "",
@@ -509,7 +644,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Spirit Temple MQ Mirror Puzzle Invisible Chest": {
             "area": "",
@@ -519,7 +657,10 @@
             "settings": [{"setting": "Spirit Temple MQ", "value": true, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Spirit Temple Silver Gauntlets Chest": {
             "area": "",
@@ -529,7 +670,10 @@
             "settings": [],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Spirit Temple Mirror Shield Chest": {
             "area": "",
@@ -539,7 +683,10 @@
             "settings": [],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Spirit Temple Twinrova Heart": {
             "area": "",
@@ -549,7 +696,10 @@
             "settings": [],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         }
     }
 }

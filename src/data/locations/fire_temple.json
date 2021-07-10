@@ -9,7 +9,10 @@
             "settings": [{"setting": "Fire Temple MQ", "value": false, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Fire Temple GS Boss Key Loop": {
             "area": "",
@@ -24,7 +27,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Fire Temple Flare Dancer Chest": {
             "area": "",
@@ -34,7 +40,10 @@
             "settings": [{"setting": "Fire Temple MQ", "value": false, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Fire Temple Boss Key Chest": {
             "area": "",
@@ -44,7 +53,10 @@
             "settings": [{"setting": "Fire Temple MQ", "value": false, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Fire Temple Big Lava Room Lower Open Door Chest": {
             "area": "",
@@ -54,7 +66,10 @@
             "settings": [{"setting": "Fire Temple MQ", "value": false, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Fire Temple GS Song of Time Room": {
             "area": "",
@@ -69,7 +84,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Fire Temple Big Lava Room Blocked Door Chest": {
             "area": "",
@@ -79,7 +97,10 @@
             "settings": [{"setting": "Fire Temple MQ", "value": false, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Fire Temple Boulder Maze Lower Chest": {
             "area": "",
@@ -89,7 +110,10 @@
             "settings": [{"setting": "Fire Temple MQ", "value": false, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Fire Temple Boulder Maze Side Room Chest": {
             "area": "",
@@ -99,7 +123,10 @@
             "settings": [{"setting": "Fire Temple MQ", "value": false, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Fire Temple GS Boulder Maze": {
             "area": "",
@@ -114,7 +141,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Fire Temple Map Chest": {
             "area": "",
@@ -124,7 +154,10 @@
             "settings": [{"setting": "Fire Temple MQ", "value": false, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Fire Temple Boulder Maze Shortcut Chest": {
             "area": "",
@@ -134,7 +167,10 @@
             "settings": [{"setting": "Fire Temple MQ", "value": false, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Fire Temple Boulder Maze Upper Chest": {
             "area": "",
@@ -144,7 +180,10 @@
             "settings": [{"setting": "Fire Temple MQ", "value": false, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Fire Temple GS Scarecrow Climb": {
             "area": "",
@@ -159,7 +198,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Fire Temple GS Scarecrow Top": {
             "area": "",
@@ -174,7 +216,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Fire Temple Scarecrow Chest": {
             "area": "",
@@ -184,7 +229,10 @@
             "settings": [{"setting": "Fire Temple MQ", "value": false, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Fire Temple Compass Chest": {
             "area": "",
@@ -194,7 +242,10 @@
             "settings": [{"setting": "Fire Temple MQ", "value": false, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Fire Temple Megaton Hammer Chest": {
             "area": "",
@@ -204,7 +255,10 @@
             "settings": [{"setting": "Fire Temple MQ", "value": false, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Fire Temple Highest Goron Chest": {
             "area": "",
@@ -214,7 +268,10 @@
             "settings": [{"setting": "Fire Temple MQ", "value": false, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Fire Temple MQ Map Room Side Chest": {
             "area": "",
@@ -224,7 +281,10 @@
             "settings": [{"setting": "Fire Temple MQ", "value": true, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Fire Temple MQ Megaton Hammer Chest": {
             "area": "",
@@ -234,7 +294,10 @@
             "settings": [{"setting": "Fire Temple MQ", "value": true, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Fire Temple MQ Map Chest": {
             "area": "",
@@ -244,7 +307,10 @@
             "settings": [{"setting": "Fire Temple MQ", "value": true, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Fire Temple MQ Near Boss Chest": {
             "area": "",
@@ -254,7 +320,10 @@
             "settings": [{"setting": "Fire Temple MQ", "value": true, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Fire Temple MQ GS Big Lava Room Open Door": {
             "area": "",
@@ -269,7 +338,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Fire Temple MQ Big Lava Room Blocked Door Chest": {
             "area": "",
@@ -279,7 +351,10 @@
             "settings": [{"setting": "Fire Temple MQ", "value": true, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Fire Temple MQ Boss Key Chest": {
             "area": "",
@@ -289,7 +364,10 @@
             "settings": [{"setting": "Fire Temple MQ", "value": true, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Fire Temple MQ Lizalfos Maze Lower Chest": {
             "area": "",
@@ -299,7 +377,10 @@
             "settings": [{"setting": "Fire Temple MQ", "value": true, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Fire Temple MQ Lizalfos Maze Side Room Chest": {
             "area": "",
@@ -309,7 +390,10 @@
             "settings": [{"setting": "Fire Temple MQ", "value": true, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Fire Temple MQ Compass Chest": {
             "area": "",
@@ -319,7 +403,10 @@
             "settings": [{"setting": "Fire Temple MQ", "value": true, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Fire Temple MQ Lizalfos Maze Upper Chest": {
             "area": "",
@@ -329,7 +416,10 @@
             "settings": [{"setting": "Fire Temple MQ", "value": true, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Fire Temple MQ GS Skull On Fire": {
             "area": "",
@@ -344,7 +434,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Fire Temple MQ GS Fire Wall Maze Side Room": {
             "area": "",
@@ -359,7 +452,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Fire Temple MQ Freestanding Key": {
             "area": "",
@@ -369,7 +465,10 @@
             "settings": [{"setting": "Fire Temple MQ", "value": true, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Fire Temple MQ Chest On Fire": {
             "area": "",
@@ -379,7 +478,10 @@
             "settings": [{"setting": "Fire Temple MQ", "value": true, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Fire Temple MQ GS Above Fire Wall Maze": {
             "area": "",
@@ -394,7 +496,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Fire Temple MQ GS Fire Wall Maze Center": {
             "area": "",
@@ -409,7 +514,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Fire Temple Volvagia Heart": {
             "area": "",
@@ -419,7 +527,10 @@
             "settings": [],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         }
     }
 }

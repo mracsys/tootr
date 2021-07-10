@@ -94,7 +94,10 @@
             "settings": [],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Colossus Great Fairy Reward": {
             "area": "",
@@ -104,7 +107,10 @@
             "settings": [],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Colossus Freestanding PoH": {
             "area": "Desert Colossus",
@@ -114,7 +120,10 @@
             "settings": [],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Colossus Deku Scrub Grotto Front": {
             "area": "",
@@ -128,7 +137,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Colossus Deku Scrub Grotto Rear": {
             "area": "",
@@ -142,7 +154,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Colossus GS Bean Patch": {
             "area": "Desert Colossus",
@@ -156,7 +171,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Colossus GS Tree": {
             "area": "Desert Colossus",
@@ -170,7 +188,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Colossus GS Hill": {
             "area": "Desert Colossus",
@@ -184,7 +205,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         }
     }
 }

@@ -94,7 +94,10 @@
             "settings": [{"setting": "Gerudo Fortress", "value": "4 Carpenters", "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "GF South F1 Carpenter": {
             "area": "Gerudo Fortress",
@@ -104,7 +107,10 @@
             "settings": [{"setting": "Gerudo Fortress", "value": "4 Carpenters", "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "GF South F2 Carpenter": {
             "area": "Gerudo Fortress",
@@ -114,7 +120,10 @@
             "settings": [{"setting": "Gerudo Fortress", "value": "4 Carpenters", "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "GF North F1 Carpenter": {
             "area": "Gerudo Fortress",
@@ -127,7 +136,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "GF Gerudo Membership Card": {
             "area": "Gerudo Fortress",
@@ -141,7 +153,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "GF Chest": {
             "area": "Gerudo Fortress",
@@ -151,7 +166,10 @@
             "settings": [],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "GF HBA 1000 Points": {
             "area": "Gerudo Fortress",
@@ -161,7 +179,10 @@
             "settings": [],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "GF HBA 1500 Points": {
             "area": "Gerudo Fortress",
@@ -171,7 +192,10 @@
             "settings": [],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "GF GS Top Floor": {
             "area": "Gerudo Fortress",
@@ -185,7 +209,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "GF GS Archery Range": {
             "area": "Gerudo Fortress",
@@ -199,7 +226,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         }
     }
 }

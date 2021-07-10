@@ -199,7 +199,10 @@
             "settings": [{"setting": "Shuffle Ocarinas", "value": "On", "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "LW Ocarina Memory Game": {
             "area": "Lost Woods",
@@ -209,7 +212,10 @@
             "settings": [],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "LW Target in Woods": {
             "area": "Lost Woods",
@@ -219,7 +225,10 @@
             "settings": [],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "LW Skull Kid": {
             "area": "Lost Woods",
@@ -229,7 +238,10 @@
             "settings": [],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "LW Deku Scrub Near Bridge": {
             "area": "Lost Woods",
@@ -239,7 +251,10 @@
             "settings": [],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Deku Theater Skull Mask": {
             "area": "",
@@ -249,7 +264,10 @@
             "settings": [],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Deku Theater Mask of Truth": {
             "area": "",
@@ -259,7 +277,10 @@
             "settings": [],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "LW Near Shortcuts Grotto Chest": {
             "area": "",
@@ -269,7 +290,10 @@
             "settings": [],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "LW Deku Scrub Near Deku Theater Left": {
             "area": "Lost Woods",
@@ -283,7 +307,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "LW Deku Scrub Near Deku Theater Right": {
             "area": "Lost Woods",
@@ -297,7 +324,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "LW Deku Scrub Grotto Front": {
             "area": "",
@@ -307,7 +337,10 @@
             "settings": [],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "LW Deku Scrub Grotto Rear": {
             "area": "",
@@ -321,7 +354,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "LW GS Bean Patch Near Bridge": {
             "area": "Lost Woods",
@@ -335,7 +371,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "LW GS Bean Patch Near Theater": {
             "area": "Lost Woods",
@@ -349,7 +388,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "LW GS Above Theater": {
             "area": "Lost Woods",
@@ -363,7 +405,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         }
     }
 }

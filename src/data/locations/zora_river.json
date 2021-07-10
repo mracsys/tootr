@@ -157,7 +157,10 @@
             "settings": [{"setting": "Shuffle Magic Beans", "value": "On", "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "ZR Open Grotto Chest": {
             "area": "",
@@ -167,7 +170,10 @@
             "settings": [],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "ZR Frogs in the Rain": {
             "area": "Zora River",
@@ -177,7 +183,10 @@
             "settings": [],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "ZR Frogs Ocarina Game": {
             "area": "Zora River",
@@ -187,7 +196,10 @@
             "settings": [],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "ZR Near Open Grotto Freestanding PoH": {
             "area": "Zora River",
@@ -197,7 +209,10 @@
             "settings": [],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "ZR Near Domain Freestanding PoH": {
             "area": "Zora River",
@@ -207,7 +222,10 @@
             "settings": [],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "ZR Deku Scrub Grotto Front": {
             "area": "",
@@ -221,7 +239,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "ZR Deku Scrub Grotto Rear": {
             "area": "",
@@ -235,7 +256,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "ZR GS Tree": {
             "area": "Zora River",
@@ -249,7 +273,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "ZR GS Ladder": {
             "area": "Zora River",
@@ -263,7 +290,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "ZR GS Near Raised Grottos": {
             "area": "Zora River",
@@ -277,7 +307,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "ZR GS Above Bridge": {
             "area": "Zora River",
@@ -291,7 +324,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         }
     }
 }

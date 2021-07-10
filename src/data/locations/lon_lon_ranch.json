@@ -115,7 +115,10 @@
             "settings": [],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "LLR Talons Chickens": {
             "area": "",
@@ -125,7 +128,10 @@
             "settings": [],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "LLR Freestanding PoH": {
             "area": "",
@@ -135,7 +141,10 @@
             "settings": [],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "LLR Tower Left Cow": {
             "area": "",
@@ -145,7 +154,10 @@
             "settings": [{"setting": "Cowsanity", "value": "On", "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "LLR Tower Right Cow": {
             "area": "",
@@ -155,7 +167,10 @@
             "settings": [{"setting": "Cowsanity", "value": "On", "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "LLR Stables Left Cow": {
             "area": "",
@@ -165,7 +180,10 @@
             "settings": [{"setting": "Cowsanity", "value": "On", "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "LLR Stables Right Cow": {
             "area": "",
@@ -175,7 +193,10 @@
             "settings": [{"setting": "Cowsanity", "value": "On", "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "LLR Deku Scrub Grotto Left": {
             "area": "",
@@ -189,7 +210,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "LLR Deku Scrub Grotto Center": {
             "area": "",
@@ -203,7 +227,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "LLR Deku Scrub Grotto Right": {
             "area": "",
@@ -217,7 +244,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "LLR GS House Window": {
             "area": "Lon Lon Ranch",
@@ -231,7 +261,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "LLR GS Tree": {
             "area": "Lon Lon Ranch",
@@ -245,7 +278,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "LLR GS Rain Shed": {
             "area": "Lon Lon Ranch",
@@ -259,7 +295,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "LLR GS Back Wall": {
             "area": "Lon Lon Ranch",
@@ -273,7 +312,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         }
     }
 }

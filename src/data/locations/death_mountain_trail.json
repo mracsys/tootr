@@ -178,7 +178,10 @@
             "settings": [],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "DMT Chest": {
             "area": "Death Mountain Trail",
@@ -188,7 +191,10 @@
             "settings": [],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "DMT Biggoron": {
             "area": "Death Mountain Trail",
@@ -198,7 +204,10 @@
             "settings": [],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "DMT Storms Grotto Chest": {
             "area": "",
@@ -208,7 +217,10 @@
             "settings": [],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "DMT Great Fairy Reward": {
             "area": "",
@@ -218,7 +230,10 @@
             "settings": [],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "DMT Cow Grotto Cow": {
             "area": "",
@@ -228,7 +243,10 @@
             "settings": [{"setting": "Cowsanity", "value": "On", "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "DMT GS Near Kak": {
             "area": "Death Mountain Trail",
@@ -242,7 +260,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "DMT GS Bean Patch": {
             "area": "Death Mountain Trail",
@@ -256,7 +277,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "DMT GS Above Dodongos Cavern": {
             "area": "Death Mountain Trail",
@@ -270,7 +294,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "DMT GS Falling Rocks Path": {
             "area": "Death Mountain Trail",
@@ -284,7 +311,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         }
     }
 }

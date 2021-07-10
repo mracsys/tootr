@@ -220,7 +220,10 @@
             "settings": [],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Mido's House Top Left": {
             "area": "",
@@ -230,7 +233,10 @@
             "settings": [],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Mido's House Top Right": {
             "area": "",
@@ -240,7 +246,10 @@
             "settings": [],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Mido's House Bottom Left": {
             "area": "",
@@ -250,7 +259,10 @@
             "settings": [],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Mido's House Bottom Right": {
             "area": "",
@@ -260,7 +272,10 @@
             "settings": [],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Kokiri Storms Grotto": {
             "area": "",
@@ -270,7 +285,10 @@
             "settings": [],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "KF Links House Cow": {
             "area": "",
@@ -280,7 +298,10 @@
             "settings": [{"setting": "Cowsanity", "value": "On", "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "KF GS Know It All House": {
             "area": "Kokiri Forest",
@@ -294,7 +315,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "KF GS Bean Patch": {
             "area": "Kokiri Forest",
@@ -308,7 +332,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "KF GS House of Twins": {
             "area": "Kokiri Forest",
@@ -322,7 +349,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "KF Shop Item 1": {
             "area": "",
@@ -338,7 +368,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
         },
         "KF Shop Item 2": {
             "area": "",
@@ -353,7 +386,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
         },
         "KF Shop Item 3": {
             "area": "",
@@ -367,7 +403,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
         },
         "KF Shop Item 4": {
             "area": "",
@@ -380,7 +419,62 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
+        },
+        "KF Shop Item 5": {
+            "area": "",
+            "lKey": "Kokiri Forest -> KF Kokiri Shop",
+            "alias": "Shop Item 5",
+            "type": "item",
+            "settings": false,
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
+        },
+        "KF Shop Item 6": {
+            "area": "",
+            "lKey": "Kokiri Forest -> KF Kokiri Shop",
+            "alias": "Shop Item 6",
+            "type": "item",
+            "settings": false,
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
+        },
+        "KF Shop Item 7": {
+            "area": "",
+            "lKey": "Kokiri Forest -> KF Kokiri Shop",
+            "alias": "Shop Item 7",
+            "type": "item",
+            "settings": false,
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
+        },
+        "KF Shop Item 8": {
+            "area": "",
+            "lKey": "Kokiri Forest -> KF Kokiri Shop",
+            "alias": "Shop Item 8",
+            "type": "item",
+            "settings": false,
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
         }
     }
 }

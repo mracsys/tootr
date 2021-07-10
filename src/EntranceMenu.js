@@ -36,6 +36,7 @@ class EntranceMenu extends React.Component {
                         vertical: 'top',
                         horizontal: 'right',
                     }}
+                    disableScrollLock={true}
                 >
                     {Object.keys(this.props.entrancePool).sort().map((areaCategory, l) => {
                         if (((areaCategory === this.props.title && areaCategory !== "Spawn Points") || areaCategory === "Warp Songs" || this.props.entrancePool[areaCategory].length === 0) && this.props.connector === false) {

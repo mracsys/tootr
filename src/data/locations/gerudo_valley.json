@@ -136,7 +136,10 @@
             "settings": [],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "GV Waterfall Freestanding PoH": {
             "area": "Gerudo Valley",
@@ -146,7 +149,10 @@
             "settings": [],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "GV Cow": {
             "area": "Gerudo Valley",
@@ -156,7 +162,10 @@
             "settings": [{"setting": "Cowsanity", "value": "On", "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "GV Chest": {
             "area": "Gerudo Valley",
@@ -166,7 +175,10 @@
             "settings": [],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "GV Deku Scrub Grotto Front": {
             "area": "",
@@ -180,7 +192,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "GV Deku Scrub Grotto Rear": {
             "area": "",
@@ -194,7 +209,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "GV GS Bean Patch": {
             "area": "Gerudo Valley",
@@ -208,7 +226,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "GV GS Small Bridge": {
             "area": "Gerudo Valley",
@@ -222,7 +243,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "GV GS Behind Tent": {
             "area": "Gerudo Valley",
@@ -236,7 +260,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "GV GS Pillar": {
             "area": "Gerudo Valley",
@@ -250,7 +277,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         }
     }
 }

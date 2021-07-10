@@ -102,11 +102,14 @@ import Yellow_Note from './images/Yellow_Note.png';*/
 import Blue_Note from './images/Blue_Note.png';
 import Green_Note from './images/Green_Note.png';
 import OoT_Adults_Wallet_Icon from './images/OoT_Adults_Wallet_Icon.png';
+import OoT_Arrows_Icon from './images/OoT_Arrows_Icon.png';
+import OoT_Blue_Fire_Icon from './images/OoT_Blue_Fire_Icon.png';
 import OoT_Bombchu_Icon from './images/OoT_Bombchu_Icon.png';
 import OoT_Bomb_Icon from './images/OoT_Bomb_Icon.png';
 import OoT_Boomerang_Icon from './images/OoT_Boomerang_Icon.png';
 import OoT_Bottle_Icon from './images/OoT_Bottle_Icon.png';
 import OoT_Deku_Nut_Icon from './images/OoT_Deku_Nut_Icon.png';
+import OoT_Deku_Seeds_Icon from './images/OoT_Deku_Seeds_Icon.png';
 import OoT_Deku_Shield_Icon from './images/OoT_Deku_Shield_Icon.png';
 import OoT_Deku_Stick_Icon from './images/OoT_Deku_Stick_Icon.png';
 import OoT_Dins_Fire_Icon from './images/OoT_Dins_Fire_Icon.png';
@@ -148,6 +151,9 @@ import OoT_Big_Poe_Soul_Icon from './images/OoT_Big_Poe_Soul_Icon.png';
 import OoT_Small_Key_Icon from './images/OoT_Small_Key_Icon.png';
 import OoT_Boss_Key_Icon from './images/OoT_Boss_Key_Icon.png';
 import OoT_Triforce_Icon from './images/OoT_Triforce.png'
+import Green_Rupee from './images/Green_Rupee.png'
+import Blue_Rupee from './images/Blue_Rupee.png'
+import Red_Rupee from './images/Red_Rupee.png'
 
 class OotIcon extends React.Component {
     render() {
@@ -213,12 +219,23 @@ class OotIcon extends React.Component {
             'Small Key (Ganons Castle)': OoT_Small_Key_Icon,
             'Small Key (Bottom of the Well)': OoT_Small_Key_Icon,
             'Small Key (Gerudo Training Ground)': OoT_Small_Key_Icon,
+            'Small Key (Gerudo Fortress)': OoT_Small_Key_Icon,
+            'Small Key (???)': OoT_Small_Key_Icon,
             'Boss Key (Forest Temple)': OoT_Boss_Key_Icon,
             'Boss Key (Fire Temple)': OoT_Boss_Key_Icon,
             'Boss Key (Water Temple)': OoT_Boss_Key_Icon,
             'Boss Key (Spirit Temple)': OoT_Boss_Key_Icon,
             'Boss Key (Shadow Temple)': OoT_Boss_Key_Icon,
-            'Boss Key (Ganons Castle)': OoT_Boss_Key_Icon
+            'Boss Key (Ganons Castle)': OoT_Boss_Key_Icon,
+            'Boss Key (???)': OoT_Boss_Key_Icon,
+            'Green Rupee': Green_Rupee,
+            'Blue Rupee': Blue_Rupee,
+            'Red Rupee': Red_Rupee,
+            'Arrows': OoT_Arrows_Icon,
+            'Deku Seeds': OoT_Deku_Seeds_Icon,
+            'Bombs': OoT_Bomb_Icon,
+            'Deku Stick': OoT_Deku_Stick_Icon,
+            'Blue Fire': OoT_Blue_Fire_Icon,
         };
         let keyMap = {
             'Forest Temple': 'Fo',
@@ -228,7 +245,9 @@ class OotIcon extends React.Component {
             'Shadow Temple': 'Sh',
             'Ganons Castle': 'GC',
             'Bottom of the Well': 'We',
-            'Gerudo Training Ground': 'GTG'
+            'Gerudo Training Ground': 'GTG',
+            'Gerudo Fortress': 'GF',
+            '???': '?'
         };
         let songMap = {
             'Zeldas Lullaby': "Z",

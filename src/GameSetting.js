@@ -24,18 +24,22 @@ class GameSetting extends React.Component {
                             if (setting !== 'open') {
                                 return (
                                 <React.Fragment key={'settingFrag' + i}>
-                                    <div className={this.props.classes.nested} key={'setting' + i}>
-                                        <select
-                                            id={setting}
-                                            className={this.props.classes.settingSelect}
-                                            name={setting}
-                                            value={this.props.userSettings[setting]}
-                                            onChange={this.props.onChange}>
-                                                {this.props.settings[setting].map((s, i) => { return (
-                                                    <option key={i} value={s}>{s}</option>
-                                                )})}
-                                        </select>
-                                        <p className={this.props.classes.settingText}>{setting}</p>
+                                    <div className={this.props.classes.wrapperWrapper}>
+                                        <div className={this.props.classes.nestedWrapper}>
+                                            <div className={this.props.classes.nested} key={'setting' + i}>
+                                                <select
+                                                    id={setting}
+                                                    className={this.props.classes.settingSelect}
+                                                    name={setting}
+                                                    value={this.props.userSettings[setting]}
+                                                    onChange={this.props.onChange}>
+                                                        {this.props.settings[setting].map((s, i) => { return (
+                                                            <option key={i} value={s}>{s}</option>
+                                                        )})}
+                                                </select>
+                                                <p className={this.props.classes.settingText}>{setting}</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </React.Fragment>
                                 );

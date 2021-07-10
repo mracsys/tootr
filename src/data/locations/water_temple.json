@@ -9,7 +9,10 @@
             "settings": [{"setting": "Water Temple MQ", "value": false, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Water Temple Map Chest": {
             "area": "",
@@ -19,7 +22,10 @@
             "settings": [{"setting": "Water Temple MQ", "value": false, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Water Temple Cracked Wall Chest": {
             "area": "",
@@ -29,7 +35,10 @@
             "settings": [{"setting": "Water Temple MQ", "value": false, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Water Temple Torches Chest": {
             "area": "",
@@ -39,7 +48,10 @@
             "settings": [{"setting": "Water Temple MQ", "value": false, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Water Temple GS Behind Gate": {
             "area": "",
@@ -54,7 +66,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Water Temple Boss Key Chest": {
             "area": "",
@@ -64,7 +79,10 @@
             "settings": [{"setting": "Water Temple MQ", "value": false, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Water Temple GS Near Boss Key Chest": {
             "area": "",
@@ -79,7 +97,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Water Temple Central Pillar Chest": {
             "area": "",
@@ -89,7 +110,10 @@
             "settings": [{"setting": "Water Temple MQ", "value": false, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Water Temple GS Central Pillar": {
             "area": "",
@@ -104,7 +128,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Water Temple Central Bow Target Chest": {
             "area": "",
@@ -114,7 +141,10 @@
             "settings": [{"setting": "Water Temple MQ", "value": false, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Water Temple GS Falling Platform Room": {
             "area": "",
@@ -129,7 +159,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Water Temple Longshot Chest": {
             "area": "",
@@ -139,7 +172,10 @@
             "settings": [{"setting": "Water Temple MQ", "value": false, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Water Temple GS River": {
             "area": "",
@@ -154,7 +190,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Water Temple River Chest": {
             "area": "",
@@ -164,7 +203,10 @@
             "settings": [{"setting": "Water Temple MQ", "value": false, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Water Temple Dragon Chest": {
             "area": "",
@@ -174,7 +216,10 @@
             "settings": [{"setting": "Water Temple MQ", "value": false, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Water Temple MQ Central Pillar Chest": {
             "area": "",
@@ -184,7 +229,10 @@
             "settings": [{"setting": "Water Temple MQ", "value": true, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Water Temple MQ Map Chest": {
             "area": "",
@@ -194,7 +242,10 @@
             "settings": [{"setting": "Water Temple MQ", "value": true, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Water Temple MQ Compass Chest": {
             "area": "",
@@ -204,7 +255,10 @@
             "settings": [{"setting": "Water Temple MQ", "value": true, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Water Temple MQ Longshot Chest": {
             "area": "",
@@ -214,7 +268,10 @@
             "settings": [{"setting": "Water Temple MQ", "value": true, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Water Temple MQ GS Lizalfos Hallway": {
             "area": "",
@@ -229,7 +286,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Water Temple MQ GS Before Upper Water Switch": {
             "area": "",
@@ -244,7 +304,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Water Temple MQ GS River": {
             "area": "",
@@ -259,7 +322,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Water Temple MQ Boss Key Chest": {
             "area": "",
@@ -269,7 +335,10 @@
             "settings": [{"setting": "Water Temple MQ", "value": true, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Water Temple MQ GS Triple Wall Torch": {
             "area": "",
@@ -284,7 +353,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Water Temple MQ Freestanding Key": {
             "area": "",
@@ -294,7 +366,10 @@
             "settings": [{"setting": "Water Temple MQ", "value": true, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Water Temple MQ GS Freestanding Key Area": {
             "area": "",
@@ -309,7 +384,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Water Temple Morpha Heart": {
             "area": "",
@@ -319,7 +397,10 @@
             "settings": [],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         }
     }
 }

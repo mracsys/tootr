@@ -14,7 +14,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Forest Temple First Room Chest": {
             "area": "",
@@ -24,7 +27,10 @@
             "settings": [{"setting": "Forest Temple MQ", "value": false, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Forest Temple GS Lobby": {
             "area": "",
@@ -39,7 +45,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Forest Temple First Stalfos Chest": {
             "area": "",
@@ -49,7 +58,10 @@
             "settings": [{"setting": "Forest Temple MQ", "value": false, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Forest Temple Raised Island Courtyard Chest": {
             "area": "",
@@ -59,7 +71,10 @@
             "settings": [{"setting": "Forest Temple MQ", "value": false, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Forest Temple GS Raised Island Courtyard": {
             "area": "",
@@ -74,7 +89,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Forest Temple Map Chest": {
             "area": "",
@@ -84,7 +102,10 @@
             "settings": [{"setting": "Forest Temple MQ", "value": false, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Forest Temple Well Chest": {
             "area": "",
@@ -94,7 +115,10 @@
             "settings": [{"setting": "Forest Temple MQ", "value": false, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Forest Temple Eye Switch Chest": {
             "area": "",
@@ -104,7 +128,10 @@
             "settings": [{"setting": "Forest Temple MQ", "value": false, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Forest Temple Boss Key Chest": {
             "area": "",
@@ -114,7 +141,10 @@
             "settings": [{"setting": "Forest Temple MQ", "value": false, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Forest Temple GS Level Island Courtyard": {
             "area": "",
@@ -129,7 +159,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Forest Temple Floormaster Chest": {
             "area": "",
@@ -139,7 +172,10 @@
             "settings": [{"setting": "Forest Temple MQ", "value": false, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Forest Temple Red Poe Chest": {
             "area": "",
@@ -149,7 +185,10 @@
             "settings": [{"setting": "Forest Temple MQ", "value": false, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Forest Temple Bow Chest": {
             "area": "",
@@ -159,7 +198,10 @@
             "settings": [{"setting": "Forest Temple MQ", "value": false, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Forest Temple Blue Poe Chest": {
             "area": "",
@@ -169,7 +211,10 @@
             "settings": [{"setting": "Forest Temple MQ", "value": false, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Forest Temple Falling Ceiling Room Chest": {
             "area": "",
@@ -179,7 +224,10 @@
             "settings": [{"setting": "Forest Temple MQ", "value": false, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Forest Temple Basement Chest": {
             "area": "",
@@ -189,7 +237,10 @@
             "settings": [{"setting": "Forest Temple MQ", "value": false, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Forest Temple GS Basement": {
             "area": "",
@@ -204,7 +255,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Forest Temple MQ First Room Chest": {
             "area": "",
@@ -214,7 +268,10 @@
             "settings": [{"setting": "Forest Temple MQ", "value": true, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Forest Temple MQ GS First Hallway": {
             "area": "",
@@ -229,7 +286,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Forest Temple MQ Wolfos Chest": {
             "area": "",
@@ -239,7 +299,10 @@
             "settings": [{"setting": "Forest Temple MQ", "value": true, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Forest Temple MQ GS Raised Island Courtyard": {
             "area": "",
@@ -254,7 +317,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Forest Temple MQ Raised Island Courtyard Upper Chest": {
             "area": "",
@@ -264,7 +330,10 @@
             "settings": [{"setting": "Forest Temple MQ", "value": true, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Forest Temple MQ Raised Island Courtyard Lower Chest": {
             "area": "",
@@ -274,7 +343,10 @@
             "settings": [{"setting": "Forest Temple MQ", "value": true, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Forest Temple MQ GS Level Island Courtyard": {
             "area": "",
@@ -289,7 +361,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Forest Temple MQ Well Chest": {
             "area": "",
@@ -299,7 +374,10 @@
             "settings": [{"setting": "Forest Temple MQ", "value": true, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Forest Temple MQ GS Well": {
             "area": "",
@@ -314,7 +392,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Forest Temple MQ GS Block Push Room": {
             "area": "",
@@ -329,7 +410,10 @@
             ],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Forest Temple MQ Boss Key Chest": {
             "area": "",
@@ -339,7 +423,10 @@
             "settings": [{"setting": "Forest Temple MQ", "value": true, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Forest Temple MQ Redead Chest": {
             "area": "",
@@ -349,7 +436,10 @@
             "settings": [{"setting": "Forest Temple MQ", "value": true, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Forest Temple MQ Map Chest": {
             "area": "",
@@ -359,7 +449,10 @@
             "settings": [{"setting": "Forest Temple MQ", "value": true, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Forest Temple MQ Bow Chest": {
             "area": "",
@@ -369,7 +462,10 @@
             "settings": [{"setting": "Forest Temple MQ", "value": true, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Forest Temple MQ Compass Chest": {
             "area": "",
@@ -379,7 +475,10 @@
             "settings": [{"setting": "Forest Temple MQ", "value": true, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Forest Temple MQ Falling Ceiling Room Chest": {
             "area": "",
@@ -389,7 +488,10 @@
             "settings": [{"setting": "Forest Temple MQ", "value": true, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Forest Temple MQ Basement Chest": {
             "area": "",
@@ -399,7 +501,10 @@
             "settings": [{"setting": "Forest Temple MQ", "value": true, "required": true}],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Forest Temple Phantom Ganon Heart": {
             "area": "",
@@ -409,7 +514,10 @@
             "settings": [],
             "visible": true,
             "check": "",
-            "foundItem": ""
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         }
     }
 }

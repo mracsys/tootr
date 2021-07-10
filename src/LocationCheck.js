@@ -22,6 +22,11 @@ class LocationCheck extends React.Component {
             "bossKey": bossKeyIcon,
             "song": noteIcon
         };
+        let walletTiers = [
+            "Green Rupee",
+            "Blue Rupee",
+            "Red Rupee"
+        ];
         return (
             <div
                 className={this.props.classes.locationContainer}
@@ -30,7 +35,11 @@ class LocationCheck extends React.Component {
                             () => this.props.handleCheck(this.props.location) :
                             () => this.props.handleUnCheck(this.props.location)
                         }
-                onContextMenu={this.props.handleItemMenuOpen}
+                onContextMenu={this.props.handleContextMenu.onContextMenu}
+                onTouchStart={this.props.handleContextMenu.onTouchStart}
+                onTouchCancel={this.props.handleContextMenu.onTouchCancel}
+                onTouchEnd={this.props.handleContextMenu.onTouchEnd}
+                onTouchMove={this.props.handleContextMenu.onTouchMove}
                 data-source={this.props.location}
             >
                 {
@@ -39,6 +48,36 @@ class LocationCheck extends React.Component {
                     <div className={this.props.classes.locationIconBlank} />
                 }
                 <p className={this.props.classes.locationText}><em>{this.props.allAreas.locations[this.props.location].alias}</em></p>
+                {
+                    (this.props.allAreas.locations[this.props.location].merchant === true && this.props.allAreas.locations[this.props.location].foundItem !== "") ?
+                        <React.Fragment>
+                            { this.props.showShopInput ?
+                                <input
+                                    name={this.props.location + "shopprice"}
+                                    onClick={(e) => {e.stopPropagation()}}
+                                    className={this.props.classes.priceBox}
+                                    defaultValue={this.props.allAreas.locations[this.props.location].price === 0 ? "" : this.props.allAreas.locations[this.props.location].price}
+                                    onBlur={(e) => {
+                                        this.props.updateShopPrice(this.props.location,e.currentTarget.value);
+                                    }}
+                                /> : null
+                            }
+                            { this.props.showShopRupee ?
+                                <div 
+                                    className={this.props.classes.locationWalletTier}
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                        this.props.toggleWalletTiers(this.props.location);
+                                    }}>
+                                    <OotIcon
+                                        itemName={walletTiers[this.props.allAreas.locations[this.props.location].walletTier]}
+                                        classes={this.props.classes}
+                                    />
+                                </div> : null
+                            }
+                        </React.Fragment>
+                        : null
+                }
                 {
                     this.props.allAreas.locations[this.props.location].foundItem === "" ?
                         null :

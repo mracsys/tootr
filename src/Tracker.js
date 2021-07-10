@@ -18,14 +18,18 @@ import Button from '@material-ui/core/Button';
 //import Brightness7Icon from '@material-ui/icons/Brightness7';
 //import Brightness3Icon from '@material-ui/icons/Brightness3';
 import ListItem from '@material-ui/core/ListItem';
-import ExpandMore from '@material-ui/icons/ExpandMore';
+import PublicIcon from '@material-ui/icons/Public';
+import MeetingRoomIcon from '@material-ui/icons/MeetingRoom';
+import QueueMusicIcon from '@material-ui/icons/QueueMusic';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
+import ClickAwayListener from '@material-ui/core/ClickAwayListener';
 import { Drawer } from '@material-ui/core';
 import { Link } from '@material-ui/core';
+import Collapse from '@material-ui/core/Collapse';
 import './index.css';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import blueGrey from '@material-ui/core/colors/blueGrey';
@@ -36,6 +40,8 @@ import GameSetting from './GameSetting';
 import GameArea from './GameArea';
 import EntranceMenu from './EntranceMenu';
 import ItemMenu from './ItemMenu';
+import ShopItemMenu from './ShopItemMenu.js';
+import ContextMenuHandler from './ContextMenuHandler';
 
 import death_mountain_crater from './data/locations/death_mountain_crater.json';
 import death_mountain_trail from './data/locations/death_mountain_trail.json';
@@ -75,6 +81,7 @@ import ganons_castle from './data/locations/ganons_castle.json';
 import devr from './data/versions/dev6.0.41r-1.json';
 //import weekly from './data/settings_presets/standard_weekly.json'
 import rsl from './data/settings_presets/random-settings-league.json';
+import OotIcon from './OotIcon';
 
 const drawerWidth = 240;
 
@@ -143,10 +150,17 @@ const useStyles = (theme) => ({
         fontSize: '1rem',
         color: 'rgba(0, 0, 0, 0.87)',
         boxSizing: 'border-box',
-        alignItems: 'center',
         position: 'relative',
         lineHeight: '1.1876em',
         letterSpacing: '0.00938em',
+        display: 'flex',
+        flexDirection: 'column',
+    },
+    nestedWrapper: {
+        display: 'inline-block',
+    },
+    wrapperWrapper: {
+        display: 'block',
     },
     settingSelect: {
         font: 'inherit',
@@ -158,8 +172,15 @@ const useStyles = (theme) => ({
         display: 'block',
         height: '1.1876em',
         margin: 0,
-        padding: '6px 0 7px',
+        padding: '6px 0px 7px 0.25em',
         boxSizing: 'content-box',
+        '-webkit-appearance': 'none',
+        '-moz-appearance': 'none',
+        appearance: 'none',
+        background: 'url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'128\' height=\'128\' fill=\'black\'><polygon points=\'0,0 96,0 48,48\'/></svg>") no-repeat',
+        backgroundSize: '12px',
+        backgroundPosition: 'right 0.5em top 70%',
+        backgroundRepeat: 'no-repeat',
     },
     settingText: {
         color: 'rgba(0, 0, 0, 0.54)',
@@ -172,7 +193,6 @@ const useStyles = (theme) => ({
         lineHeight: '1.66',
         letterSpacing: '0.03333em',
         borderTop: '1px solid rgba(0, 0, 0, 0.42)',
-        width: 'max-content',
     },
     drawer: {
         width: drawerWidth,
@@ -200,7 +220,7 @@ const useStyles = (theme) => ({
           duration: theme.transitions.duration.leavingScreen,
         }),
         marginLeft: -drawerWidth,
-        padding: 20,
+        padding: '20px 20px 56px 20px',
     },
     areaPaperShift: {
         transition: theme.transitions.create('margin', {
@@ -272,12 +292,39 @@ const useStyles = (theme) => ({
             backgroundColor: 'rgba(0, 0, 0, 0.04)',
         },
         "& $iconDiv": {
-            padding: '0px 6px',
+            padding: '0px 1em 0px 0px',
         },
+    },
+    shopContainer: {
+        padding: theme.spacing(1,2),
+        backgroundColor: grey[200],
+        display: 'flex',
+        boxSizing: 'border-box',
+        alignItems: 'center',
+        justifyContent: 'center',
+        textAlign: 'center',
+        verticalAlign: 'center',
+        "& $iconDiv": {
+            padding: '0px 1em 0px 0px',
+        },
+        "& div": {
+            lineHeight: 0,
+        }
+    },
+    fixedShopIcon: {
+        lineHeight: 0,
+        margin: 0,
+        padding: 0,
+        cursor: 'pointer',
+        width: '24px',
+        height: '24px',
+        marginLeft: theme.spacing(1),
+        marginRight: theme.spacing(1.75),
     },
     locationIcon: {
         marginRight: theme.spacing(2),
         width: '24px',
+        height: '24px',
     },
     locationIconBlank: {
         marginRight: theme.spacing(2)+24,
@@ -292,7 +339,7 @@ const useStyles = (theme) => ({
     },
     locationMark: {
         marginRight: 2,
-        marginLeft: theme.spacing(2),
+        marginLeft: theme.spacing(1),
     },
     locationPeek: {
         marginLeft: theme.spacing(3),
@@ -311,9 +358,11 @@ const useStyles = (theme) => ({
     },
     itemIcon: {
         width: '24px',
+        height: '24px',
         verticalAlign: 'middle',
     },
     iconDiv: {
+        cursor: 'pointer',
     },
     iconKeyText: {
         position: 'absolute',
@@ -329,15 +378,45 @@ const useStyles = (theme) => ({
         marginLeft: theme.spacing(1),
         position: 'relative',
         color: 'black',
+        marginTop: 0,
+        marginBottom: 0,
         "& img": {
             width: '24px',
+            height: '24px',
             verticalAlign: 'middle',
         },
+    },
+    locationWalletTier: {
+        "& $iconDiv": {
+            marginLeft: theme.spacing(1),
+            padding: 0,
+            position: 'relative',
+            color: 'black',
+            "& img": {
+                width: '16px',
+                height: '16px',
+                verticalAlign: 'middle',
+            },
+        }
+    },
+    priceBox: {
+        width: '3em',
+        marginLeft: theme.spacing(1),
+        textAlign: 'right',
     },
     locationMenuIcon: {
         position: 'relative',
         "& img": {
             width: '32px',
+            height: '32px',
+        },
+    },
+    grayscaleMenuIcon: {
+        position: 'relative',
+        "& img": {
+            width: '32px',
+            height: '32px',
+            filter: 'grayscale(100%)',
         },
     },
     locationMenuIconContainer: {
@@ -367,12 +446,31 @@ const useStyles = (theme) => ({
         },
         "& $iconDiv": {
             padding: '8px',
+            backgroundColor: grey[900],
         },
         "& $iconDiv:hover": {
             backgroundColor: grey[800],
             cursor: 'pointer',
             margin: '0 auto',
         },
+    },
+    itemMenuPaper: {
+        overflowX: 'auto',
+        overflowY: 'auto',
+        backgroundColor: grey[900],
+        width: '432px',
+    },
+    itemMenuRow: {
+        whiteSpace: 'nowrap',
+        backgroundColor: grey[900],
+        "& div": {
+            display: 'inline-block',
+        },
+        "& $itemMenuClear": {
+            width: '432px',
+        },
+    },
+    itemMenuClear: {
     },
     entranceContainer: {
         display: 'flex',
@@ -530,6 +628,92 @@ const useStyles = (theme) => ({
             cursor: 'default',
         }
     },
+    warpMenu: {
+        [theme.breakpoints.down('xs')]: {
+            width: '100%',
+        },
+        [theme.breakpoints.up('sm')]: {
+            borderRadius: '8px 0 0 0',
+            overflow: 'hidden',
+        },
+        position: 'fixed',
+        bottom: 0,
+        right: 0,
+        zIndex: 10,
+        display: 'flex',
+        flexDirection: 'column',
+        "& $iconKeyText": {
+            color: '#FFFFFF',
+        },
+        "& $iconDiv": {
+            padding: '8px',
+            lineHeight: 0,
+        },
+        "& $iconDiv:hover": {
+            backgroundColor: blueGrey[800],
+            cursor: 'pointer',
+        },
+        backgroundColor: blueGrey[600],
+        boxShadow: '-2px -2px 4px -1px rgba(0,0,0,0.2),-4px -4px 5px 0px rgba(0,0,0,0.14),-1px -1px 10px 0px rgba(0,0,0,0.12)',
+        maxHeight: '50%',
+    },
+    warpMenuVisible: {
+        flexShrink: 0,
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    expandWarpMenu: {
+        color: 'white',
+        width: '32px',
+        height: '100%',
+        cursor: 'pointer',
+        "&:hover": {
+            backgroundColor: blueGrey[800],
+        }
+    },
+    warpAreaList: {
+        overflowY: 'auto',
+        flexGrow: 1,
+    },
+    warpMenuArea: {
+        display: 'block',
+        color: 'white',
+        fontWeight: 'bold',
+        padding: theme.spacing(1),
+        cursor: 'pointer',
+        "&:hover": {
+            backgroundColor: blueGrey[800],
+        }
+    },
+    warpSongsBig: {
+        [theme.breakpoints.down('xs')]: {
+            display: 'none',
+        },
+        [theme.breakpoints.up('sm')]: {
+            display: 'flex',
+        },
+    },
+    warpSongsSmall: {
+        [theme.breakpoints.down('xs')]: {
+            display: 'flex',
+        },
+        [theme.breakpoints.up('sm')]: {
+            display: 'none',
+        },
+    },
+    warpSongsBlank: {
+        [theme.breakpoints.down('xs')]: {
+            color: grey[500],
+            width: '32px',
+            height: '100%',
+            cursor: 'pointer',
+        },
+        [theme.breakpoints.up('sm')]: {
+            display: 'none',
+        },
+    },
 });
 
 //const light = createMuiTheme({
@@ -543,29 +727,12 @@ const useStyles = (theme) => ({
 //        type: 'dark',
 //    },
 //});
-  
+
+const trackerVersion = '0.2.0';
+
 class Tracker extends React.Component {
     constructor(props) {
         super(props);
-        let areaJSON = merge(death_mountain_crater, death_mountain_trail, desert_colossus,
-            gerudo_fortress, gerudo_valley, goron_city, graveyard, haunted_wasteland,
-            hyrule_field, kakariko_village, kokiri_forest, lake_hylia, lon_lon_ranch,
-            lost_woods, market, sacred_forest_meadow, spawn_points, warp_songs,
-            zora_fountain, zora_river, zoras_domain, deku_tree, dodongos_cavern, jabu_jabus_belly,
-            forest_temple, fire_temple, water_temple, shadow_temple, spirit_temple,
-            bottom_of_the_well, ice_cavern, gerudo_training_ground, ganons_castle);
-        //let settings = rsl.Settings;
-        //let allAreas = this.addReverseEntrances(areaJSON);
-        //let allEntrances = merge({}, this.categorizeEntrances(allAreas));
-        let settings = !!(ls.get('RandoSettings')) ? ls.get('RandoSettings') : rsl.Settings;
-        let allAreas = !!(ls.get('AllAreas')) ? ls.get('AllAreas') : this.addReverseEntrances(areaJSON);
-        let allEntrances = !!(ls.get('AllEntrances')) ? ls.get('AllEntrances') : merge({}, this.categorizeEntrances(allAreas));
-        this.findVisibleLocations(settings, allAreas);
-        let areas = this.loadAreas(settings, allAreas, allEntrances, true);
-        let entrances = this.loadEntrancePools(settings, allEntrances, allAreas);
-        let oneWayEntrances = this.loadOneWayEntrancePools(settings, allEntrances, allAreas);
-
-        let darkMode = !!(ls.get('DarkMode')) ? true : ls.get('DarkMode');
 
         this.linkEntrance = this.linkEntrance.bind(this);
         this.unLinkEntrance = this.unLinkEntrance.bind(this);
@@ -576,9 +743,49 @@ class Tracker extends React.Component {
         this.toggleMQ = this.toggleMQ.bind(this);
         this.handleItemMenuOpen = this.handleItemMenuOpen.bind(this);
         this.handleItemMenuClose = this.handleItemMenuClose.bind(this);
+        this.handleShopItemMenuOpen = this.handleShopItemMenuOpen.bind(this);
+        this.handleShopItemMenuClose = this.handleShopItemMenuClose.bind(this);
         this.handleEntranceMenuOpen = this.handleEntranceMenuOpen.bind(this);
         this.handleEntranceMenuClose = this.handleEntranceMenuClose.bind(this);
+        this.toggleWalletTiers = this.toggleWalletTiers.bind(this);
+        this.updateShopPrice = this.updateShopPrice.bind(this);
         this.findItem = this.findItem.bind(this);
+        this.handleDungeonTravel = this.handleDungeonTravel.bind(this);
+        this.handleWarpMenu = this.handleWarpMenu.bind(this);
+        this.toggleAreaView = this.toggleAreaView.bind(this);
+
+        let settings = !!(ls.get('RandoSettings')) ? ls.get('RandoSettings') : rsl.Settings;
+        if (!!(ls.get('TrackerVersion'))) {
+            if (ls.get('TrackerVersion') !== trackerVersion) {
+                // outdated, use global reset function until proper upgrade function developed
+                this.resetState(settings);
+            }
+        } else {
+            // no version key
+            this.resetState(settings);
+        }
+        let areaJSON = merge(death_mountain_crater, death_mountain_trail, desert_colossus,
+            gerudo_fortress, gerudo_valley, goron_city, graveyard, haunted_wasteland,
+            hyrule_field, kakariko_village, kokiri_forest, lake_hylia, lon_lon_ranch,
+            lost_woods, market, sacred_forest_meadow, spawn_points, warp_songs,
+            zora_fountain, zora_river, zoras_domain, deku_tree, dodongos_cavern, jabu_jabus_belly,
+            forest_temple, fire_temple, water_temple, shadow_temple, spirit_temple,
+            bottom_of_the_well, ice_cavern, gerudo_training_ground, ganons_castle);
+        //let settings = rsl.Settings;
+        //let allAreas = this.addReverseEntrances(areaJSON);
+        //let allEntrances = merge({}, this.categorizeEntrances(allAreas));
+        let allAreas = !!(ls.get('AllAreas')) ? ls.get('AllAreas') : this.addReverseEntrances(areaJSON);
+        let allEntrances = !!(ls.get('AllEntrances')) ? ls.get('AllEntrances') : merge({}, this.categorizeEntrances(allAreas));
+        this.findVisibleLocations(settings, allAreas);
+        let areas = this.loadAreas(settings, allAreas, allEntrances, true);
+        let entrances = this.loadEntrancePools(settings, allEntrances, allAreas);
+        let oneWayEntrances = this.loadOneWayEntrancePools(settings, allEntrances, allAreas);
+
+        let darkMode = !!(ls.get('DarkMode')) ? true : ls.get('DarkMode');
+
+        this.contextMenuHandler = new ContextMenuHandler(this.handleItemMenuOpen);
+        this.shopContextMenuHandler = new ContextMenuHandler(this.handleShopItemMenuOpen);
+        this.areaMenuHandler = new ContextMenuHandler(this.toggleAreaView);
 
         this.state = {
             enabled_settings: devr.Settings,
@@ -593,22 +800,40 @@ class Tracker extends React.Component {
             alertReset: false,
             itemMenuLocation: null,
             itemMenuOpen: null,
-            overworldEntranceMenuOpen: null,
-            interiorEntranceMenuOpen: null,
-            grottoEntranceMenuOpen: null,
-            dungeonEntranceMenuOpen: null,
-            mixedEntranceMenuOpen: null,
-            spawnEntranceMenuOpen: null,
-            owldropEntranceMenuOpen: null,
-            warpsongEntranceMenuOpen: null,
+            shopItemMenuOpen: null,
+            entranceMenuOpen: null,
             entranceToLink: null,
             entranceConnector: null,
             locationToLink: null,
+            expandWarpMenu: false,
+            expandDungeonMenu: false,
+            expandSongMenu: false,
             entranceType: "",
+            delayedURL: "",
         };
     }
 
-    resetState() {
+    // When swapping between Overworld and Dungeon views, anchors don't
+    // work until after rendering. Ugly workaround incoming.
+    componentDidMount() {
+        if (this.state.delayedURL !== "") {
+            window.location.assign(this.state.delayedURL);
+            this.setState({
+                delayedURL: "",
+            });
+        }
+    }
+
+    componentDidUpdate() {
+        if (this.state.delayedURL !== "") {
+            window.location.assign(this.state.delayedURL);
+            this.setState({
+                delayedURL: "",
+            });
+        }
+    }
+
+    resetState(currentSettings) {
         let settings = rsl.Settings;
         let areaJSON = merge(death_mountain_crater, death_mountain_trail, desert_colossus,
             gerudo_fortress, gerudo_valley, goron_city, graveyard, haunted_wasteland,
@@ -625,10 +850,11 @@ class Tracker extends React.Component {
         let oneWayEntrances = this.loadOneWayEntrancePools(settings, allEntrances, allAreas);
 
         // TODO: Separate tracker and world/preset settings
-        let prevSettings = cloneDeep(this.state.settings);
+        let prevSettings = cloneDeep(currentSettings);
         settings["Show Unshuffled Entrances"] = prevSettings["Show Unshuffled Entrances"];
         settings["Show Locations"] = prevSettings["Show Locations"];
         settings["Show Unshuffled Skulls"] = prevSettings["Show Unshuffled Skulls"];
+        settings["Shop Price Tracking"] = prevSettings["Shop Price Tracking"];
 
         this.setState({
             settings: settings,
@@ -638,10 +864,14 @@ class Tracker extends React.Component {
             allEntrances: allEntrances,
             allAreas: allAreas,
             alertReset: false,
+            expandWarpMenu: false,
+            expandDungeonMenu: false,
+            expandSongMenu: false,
         });
         ls.set('RandoSettings', settings);
         ls.set('AllAreas', allAreas);
         ls.set('AllEntrances', allEntrances);
+        ls.set('TrackerVersion', trackerVersion);
     }
 
     addReverseEntrances(stateAreas) {
@@ -737,7 +967,7 @@ class Tracker extends React.Component {
                 }
                 eEntrance = {};
                 eEntrance[entrance] = allAreas.entrances[entrance];
-                if (!(erSettings.includes(subArea.type))) {
+                if (!(erSettings.includes(subArea.type)) || eEntrance[entrance].shuffled === false) {
                     if (eEntrance[entrance].type !== 'overworld') {
                         if (eEntrance[entrance].type !== 'extra') {
                             eEntrance[entrance].aLink = entrance;
@@ -747,6 +977,9 @@ class Tracker extends React.Component {
                         if (entrance !== 'GV Lower Stream -> Lake Hylia') {
                             eEntrance[entrance].eLink = eEntrance[entrance].reverse;
                             eEntrance[entrance].aLink = eEntrance[entrance].reverse;
+                        } else {
+                            eEntrance[entrance].aLink = entrance;
+                            eEntrance[entrance].eLink = entrance;
                         }
                     }
                 } else {
@@ -785,6 +1018,9 @@ class Tracker extends React.Component {
                         eLocation = {};
                         eLocation[location] = allAreas.locations[location];
                         areas[eDungeon].locations = merge(areas[eDungeon].locations, eLocation);
+                        eEntrance = {};
+                        eEntrance[allAreas.entrances[allAreas.locations[location].lKey].reverse] = allAreas.entrances[allAreas.entrances[allAreas.locations[location].lKey].reverse];
+                        areas[eDungeon].entrances = merge(areas[eDungeon].entrances, eEntrance);
                     }
                 } else {
                     eDungeon = "Ganon's Castle"
@@ -797,6 +1033,9 @@ class Tracker extends React.Component {
                     eLocation = {};
                     eLocation[location] = allAreas.locations[location];
                     areas[eDungeon].locations = merge(areas[eDungeon].locations, eLocation);
+                    eEntrance = {};
+                    eEntrance['Ganons Castle -> Ganons Castle Grounds'] = allAreas.entrances['Ganons Castle -> Ganons Castle Grounds']
+                    areas[eDungeon].entrances = merge(areas[eDungeon].entrances, eEntrance);
                 }
             }
         });
@@ -1008,10 +1247,8 @@ class Tracker extends React.Component {
         if (iGV > -1) {
             eOverworld['Gerudo Valley'].splice(iGV, 1);
         }
-        if (settings['Decoupled Entrances'] === 'On') {
-            eOverworld['Lake Hylia'].push('GV Lower Stream -> Lake Hylia');
-        }
-
+        eOverworld['Lake Hylia'].push('GV Lower Stream -> Lake Hylia');
+        
         let eInteriors = [];
         eInteriors.push(...((allEntrances.interior.filter(int => allAreas.entrances[int].isReverse === false))));
         eInteriors.push(...((allEntrances.specialInterior.filter(int => allAreas.entrances[int].isReverse === false))));
@@ -1077,8 +1314,14 @@ class Tracker extends React.Component {
         let erSettings = this.getShuffledTypes(settings);
         Object.keys(tempAreas.entrances).forEach(entrance => {
             if (erSettings.includes(tempAreas.entrances[entrance].type)) {
-                tempAreas.entrances[entrance].shuffled = true;
+                // Never shuffle Ganon's Castle
+                if (entrance !== 'Ganons Castle -> Ganons Castle Grounds' && entrance !== 'Ganons Castle Grounds -> Ganons Castle') {
+                    tempAreas.entrances[entrance].shuffled = true;
+                }
             } else {
+                tempAreas.entrances[entrance].shuffled = false;
+            }
+            if (settings["Decoupled Entrances"] === "Off" && entrance === "GV Lower Stream -> Lake Hylia") {
                 tempAreas.entrances[entrance].shuffled = false;
             }
         });
@@ -1123,7 +1366,8 @@ class Tracker extends React.Component {
         Object.keys(shownAreas).forEach(targetArea => {
             let linkedTargetEntrances = (Object.filterAreas(shownAreas[targetArea].entrances, (eLink, aLink, isReverse, isOneWay, shuffled, lType, e, oneWayArea, connector) => (
                 /*(isOneWay && aLink !== "" && (lType !== "overworld" && lType !== "owldrop")) ||*/
-                (eLink !== "" && oneWayArea !== targetArea && (((isReverse === true || decoupled) && shuffled === true) || lType === "overworld" || lType === "warpsong" || lType === "owldrop" || lType === "extra"))) ));
+                (eLink !== "" && oneWayArea !== targetArea && (((isReverse === true || decoupled) && shuffled === true) || lType === "overworld" || lType === "warpsong" || lType === "owldrop" || lType === "extra"))
+                && (e !== "GV Lower Stream -> Lake Hylia" || (e === "GV Lower Stream -> Lake Hylia" && settings['Decoupled Entrances'] === 'On'))) ));
             if (linkedTargetEntrances.length === 0 && !(entrances["oneWayAreas"].includes(targetArea))) {
                 shownAreas[targetArea].show = false;
                 allAreas[targetArea].show = false;
@@ -1205,7 +1449,9 @@ class Tracker extends React.Component {
         Object.keys(allAreas.locations).forEach((location) => {
             if (settings["Show Locations"] === "Yes" || settings["Show Locations"] === "Interiors Only") {
                 interiorsOnly = (settings["Show Locations"] === "Interiors Only");
-                if (allAreas.locations[location].settings.length > 0) {
+                if (typeof allAreas.locations[location].settings === "boolean") {
+                    allAreas.locations[location].visible = allAreas.locations[location].settings;
+                } else if (allAreas.locations[location].settings.length > 0) {
                     andVisible = true;
                     orVisible = false;
                     andCount = 0;
@@ -1396,6 +1642,63 @@ class Tracker extends React.Component {
         ls.set('AllEntrances', entrances);
     }
 
+    toggleWalletTiers(location) {
+        let originator = location;
+        console.log(originator,"[wallet tier change]");
+        let areas = cloneDeep(this.state.areas);
+        let allAreas = cloneDeep(this.state.allAreas);
+        let allEntrances = cloneDeep(this.state.allEntrances);
+        let tier;
+        allAreas.locations[originator].walletTier === 2 ?
+            tier = 0
+            : tier = allAreas.locations[originator].walletTier + 1;
+        allAreas.locations[originator].walletTier = tier;
+        if (allAreas.locations[originator].area !== "") {
+            areas[allAreas.locations[originator].area].locations[originator].walletTier = tier;
+        }
+        if (allAreas.locations[originator].lKey !== "") {
+            if (allAreas.locations[originator].lKey === "Ganon's Castle") {
+                areas["Ganon's Castle"].locations[originator].walletTier = tier;
+            } else {
+                allEntrances[allAreas.locations[originator].lKey].locations[originator].walletTier = tier;
+            }
+        }
+        this.setState({
+            allAreas: allAreas,
+            allEntrances: allEntrances,
+            areas: areas,
+        });
+        ls.set('AllAreas', allAreas);
+        ls.set('AllEntrances', allEntrances);
+    }
+
+    updateShopPrice(location, price) {
+        let originator = location;
+        if (price === "") { price = 0; }
+        console.log(originator,"[costs]",price);
+        let areas = cloneDeep(this.state.areas);
+        let allAreas = cloneDeep(this.state.allAreas);
+        let allEntrances = cloneDeep(this.state.allEntrances);
+        allAreas.locations[originator].price = price;
+        if (allAreas.locations[originator].area !== "") {
+            areas[allAreas.locations[originator].area].locations[originator].price = price;
+        }
+        if (allAreas.locations[originator].lKey !== "") {
+            if (allAreas.locations[originator].lKey === "Ganon's Castle") {
+                areas["Ganon's Castle"].locations[originator].price = price;
+            } else {
+                allEntrances[allAreas.locations[originator].lKey].locations[originator].price = price;
+            }
+        }
+        this.setState({
+            allAreas: allAreas,
+            allEntrances: allEntrances,
+            areas: areas,
+        });
+        ls.set('AllAreas', allAreas);
+        ls.set('AllEntrances', allEntrances);
+    }
+
     checkLocation(location) {
         let originator = location;
         console.log(originator, "[Checked]");
@@ -1476,23 +1779,37 @@ class Tracker extends React.Component {
         ls.set('AllAreas', allAreas);
         ls.set('AllEntrances', allEntrances);
         this.handleItemMenuClose();
+        this.handleShopItemMenuClose();
     }
 
     cancelAlert() {
         this.setState({ alertReset: false, });
     }
 
-    handleItemMenuOpen(location) {
-        location.preventDefault();
+    handleItemMenuOpen(location, dataSource) {
         this.setState({
-            itemMenuOpen: location.currentTarget,
-            locationToLink: location.currentTarget.getAttribute('data-source'),
+            itemMenuOpen: location,
+            locationToLink: dataSource,
+        });
+    }
+
+    handleShopItemMenuOpen(location, dataSource) {
+        this.setState({
+            shopItemMenuOpen: location,
+            locationToLink: dataSource,
         });
     }
 
     handleItemMenuClose() {
         this.setState({
             itemMenuOpen: null,
+            locationToLink: null,
+        });
+    }
+
+    handleShopItemMenuClose() {
+        this.setState({
+            shopItemMenuOpen: null,
             locationToLink: null,
         });
     }
@@ -1514,6 +1831,72 @@ class Tracker extends React.Component {
             entranceConnector: null,
             entranceType: "",
         });
+    }
+
+    buildEntranceURL(reverseLink) {
+        let href;
+        if ((this.state.allAreas.entrances[reverseLink].type === "overworld") || (this.state.allAreas.entrances[reverseLink].isReverse)) {
+            href = '#' + this.state.allAreas.entrances[reverseLink].area;
+        }
+        if ((this.state.allAreas.entrances[reverseLink].type === "warpsong") || (this.state.allAreas.entrances[reverseLink].type === "spawn") || (this.state.allAreas.entrances[reverseLink].type === "owldrop")) {
+            if (this.state.allAreas.entrances[reverseLink].connector !== "") {
+                if (this.state.allAreas.entrances[this.state.allAreas.entrances[reverseLink].connector].aLink !== "") {
+                    href = '#' + this.state.allAreas.entrances[this.state.allAreas.entrances[this.state.allAreas.entrances[reverseLink].connector].aLink].area;
+                }
+            } else { 
+                href = '#' + this.state.allAreas.entrances[reverseLink].area;
+            }
+        }
+        if (this.state.allAreas.entrances[reverseLink].type === "dungeon") {
+            if (this.state.allAreas.entrances[reverseLink].isReverse === true) {
+                href = '#' + this.state.allAreas.entrances[reverseLink].area;
+            } else {
+                href = '#' + this.state.allAreas.entrances[reverseLink].alias;
+            }
+        }
+        return href;
+    }
+
+    handleDungeonTravel(entrance) {
+        let eType = this.state.allAreas.entrances[entrance].type;
+        if (this.state.settings["View"] === "Overworld" && eType === "dungeon") {
+            this.changeSetting({"target": { "name": "View", "value": "Dungeons" }});
+        }
+        if (this.state.settings["View"] === "Dungeons") {
+            this.changeSetting({"target": { "name": "View", "value": "Overworld" }});
+        }
+        let href = this.buildEntranceURL(entrance);
+        this.setState({
+            delayedURL: href,
+        });
+    }
+
+    handleWarpMenu(area) {
+        let eType;
+        if (this.state.areas[area].dungeon !== true) {
+            eType = 'overworld';
+        } else {
+            eType = 'dungeon';
+        }
+        if (this.state.settings["View"] === "Overworld" && eType === "dungeon") {
+            this.changeSetting({"target": { "name": "View", "value": "Dungeons" }});
+        } else if (this.state.settings["View"] === "Dungeons" && eType !== "dungeon") {
+            this.changeSetting({"target": { "name": "View", "value": "Overworld" }});
+        }
+        let href = '#' + area;
+        this.setState({
+            delayedURL: href,
+            expandWarpMenu: false,
+            expandDungeonMenu: false,
+        });
+    }
+
+    toggleAreaView() {
+        if (this.state.settings["View"] === "Overworld") {
+            this.changeSetting({"target": { "name": "View", "value": "Dungeons" }});
+        } else {
+            this.changeSetting({"target": { "name": "View", "value": "Overworld" }});
+        }
     }
 
     render() {
@@ -1539,22 +1922,9 @@ class Tracker extends React.Component {
                                     <MenuIcon />
                                 </IconButton>
                                 <div className={classes.title}>
-                                    { (this.state.settings["Show Locations"] === "Yes" || this.state.settings["Show Locations"] === "Interiors Only") ? 
-                                    <div
-                                        onClick={(e) => {
-                                            if (this.state.settings["View"] === "Overworld") {
-                                                this.changeSetting({"target": { "name": "View", "value": "Dungeons" }});
-                                            } else {
-                                                this.changeSetting({"target": { "name": "View", "value": "Overworld" }});
-                                            }
-                                        }}
-                                    >
-                                        <span className={classes.titleText} variant="h4">{this.state.settings["View"]}</span><ExpandMore />
-                                    </div> :
                                     <div>
                                         <div className={classes.titleText} variant="h4">{this.state.settings["View"]}</div>
                                     </div>
-                                    }
                                 </div>
                                 <button
                                     onClick={() => this.setState({alertReset: true,})}
@@ -1590,7 +1960,7 @@ class Tracker extends React.Component {
                                 </DialogContentText>
                             </DialogContent>
                             <DialogActions>
-                                <Button onClick={() => this.resetState()}>Yes</Button>
+                                <Button onClick={() => this.resetState(this.state.settings)}>Yes</Button>
                                 <Button onClick={() => this.cancelAlert()}>No</Button>
                             </DialogActions>
                         </Dialog>
@@ -1643,6 +2013,198 @@ class Tracker extends React.Component {
                             anchorLocation={this.state.itemMenuOpen}
                             sourceLocation={this.state.locationToLink}
                         />
+                        <ShopItemMenu
+                            classes={classes}
+                            handleClose={this.handleShopItemMenuClose}
+                            handleFind={this.findItem}
+                            anchorLocation={this.state.shopItemMenuOpen}
+                            sourceLocation={this.state.locationToLink}
+                        />
+                        <div 
+                            id="warpMenu"
+                            className={classes.warpMenu}
+                        >
+                            <div
+                                id="warpMenuVisible"
+                                className={classes.warpMenuVisible}
+                            >
+                                <OotIcon
+                                    classes={classes}
+                                    itemName="Kokiri Sword"
+                                    className={this.state.allAreas.entrances['Child Spawn -> KF Links House'].aLink !== '' ?
+                                        classes.locationMenuIcon :
+                                        classes.grayscaleMenuIcon}
+                                    onClick={this.state.allAreas.entrances['Child Spawn -> KF Links House'].aLink !== '' ?
+                                        () => this.handleDungeonTravel(this.state.allAreas.entrances['Child Spawn -> KF Links House'].aLink)
+                                        : null}
+                                />
+                                <OotIcon
+                                    classes={classes}
+                                    itemName="Master Sword"
+                                    className={this.state.allAreas.entrances['Adult Spawn -> Temple of Time'].aLink !== '' ?
+                                        classes.locationMenuIcon :
+                                        classes.grayscaleMenuIcon}
+                                    onClick={this.state.allAreas.entrances['Adult Spawn -> Temple of Time'].aLink !== '' ?
+                                        () => this.handleDungeonTravel(this.state.allAreas.entrances['Adult Spawn -> Temple of Time'].aLink)
+                                        : null}
+                                />
+                                <div className={classes.warpSongsBig}>
+                                    <OotIcon
+                                        classes={classes}
+                                        itemName="Minuet of Forest"
+                                        className={this.state.allAreas.entrances['Minuet of Forest Warp -> Sacred Forest Meadow'].aLink !== '' ?
+                                            classes.locationMenuIcon :
+                                            classes.grayscaleMenuIcon}
+                                        onClick={this.state.allAreas.entrances['Minuet of Forest Warp -> Sacred Forest Meadow'].aLink !== '' ?
+                                            () => this.handleDungeonTravel(this.state.allAreas.entrances['Minuet of Forest Warp -> Sacred Forest Meadow'].aLink)
+                                            : null}
+                                    />
+                                    <OotIcon
+                                        classes={classes}
+                                        itemName="Bolero of Fire"
+                                        className={this.state.allAreas.entrances['Bolero of Fire Warp -> DMC Central Local'].aLink !== '' ?
+                                            classes.locationMenuIcon :
+                                            classes.grayscaleMenuIcon}
+                                        onClick={this.state.allAreas.entrances['Bolero of Fire Warp -> DMC Central Local'].aLink !== '' ?
+                                            () => this.handleDungeonTravel(this.state.allAreas.entrances['Bolero of Fire Warp -> DMC Central Local'].aLink)
+                                            : null}
+                                    />
+                                    <OotIcon
+                                        classes={classes}
+                                        itemName="Serenade of Water"
+                                        className={this.state.allAreas.entrances['Serenade of Water Warp -> Lake Hylia'].aLink !== '' ?
+                                            classes.locationMenuIcon :
+                                            classes.grayscaleMenuIcon}
+                                        onClick={this.state.allAreas.entrances['Serenade of Water Warp -> Lake Hylia'].aLink !== '' ?
+                                            () => this.handleDungeonTravel(this.state.allAreas.entrances['Serenade of Water Warp -> Lake Hylia'].aLink)
+                                            : null}
+                                    />
+                                    <OotIcon
+                                        classes={classes}
+                                        itemName="Requiem of Spirit"
+                                        className={this.state.allAreas.entrances['Requiem of Spirit Warp -> Desert Colossus'].aLink !== '' ?
+                                            classes.locationMenuIcon :
+                                            classes.grayscaleMenuIcon}
+                                        onClick={this.state.allAreas.entrances['Requiem of Spirit Warp -> Desert Colossus'].aLink !== '' ?
+                                            () => this.handleDungeonTravel(this.state.allAreas.entrances['Requiem of Spirit Warp -> Desert Colossus'].aLink)
+                                            : null}
+                                    />
+                                    <OotIcon
+                                        classes={classes}
+                                        itemName="Nocturne of Shadow"
+                                        className={this.state.allAreas.entrances['Nocturne of Shadow Warp -> Graveyard Warp Pad Region'].aLink !== '' ?
+                                            classes.locationMenuIcon :
+                                            classes.grayscaleMenuIcon}
+                                        onClick={this.state.allAreas.entrances['Nocturne of Shadow Warp -> Graveyard Warp Pad Region'].aLink !== '' ?
+                                            () => this.handleDungeonTravel(this.state.allAreas.entrances['Nocturne of Shadow Warp -> Graveyard Warp Pad Region'].aLink)
+                                            : null}
+                                    />
+                                    <OotIcon
+                                        classes={classes}
+                                        itemName="Prelude of Light"
+                                        className={this.state.allAreas.entrances['Prelude of Light Warp -> Temple of Time'].aLink !== '' ?
+                                            classes.locationMenuIcon :
+                                            classes.grayscaleMenuIcon}
+                                        onClick={this.state.allAreas.entrances['Prelude of Light Warp -> Temple of Time'].aLink !== '' ?
+                                            () => this.handleDungeonTravel(this.state.allAreas.entrances['Prelude of Light Warp -> Temple of Time'].aLink)
+                                            : null}
+                                    />
+                                </div>
+                                <div className={classes.warpSongsSmall}>
+                                    <ClickAwayListener onClickAway={() => this.setState({ expandSongMenu: false })}>
+                                        <div
+                                            className={classes.iconDiv}
+                                            onClick={() => this.setState({ expandSongMenu: !this.state.expandSongMenu })}
+                                        >
+                                            {<QueueMusicIcon className={Object.keys(this.state.allAreas.entrances).filter((e) => (this.state.allAreas.entrances[e].type === 'warpsong' && this.state.allAreas.entrances[e].aLink !== '')).length > 0 ?
+                                                classes.expandWarpMenu :
+                                                classes.warpSongsBlank}
+                                            />}
+                                        </div>
+                                    </ClickAwayListener>
+                                </div>
+                                <ClickAwayListener onClickAway={() => this.setState({ expandWarpMenu: false })}>
+                                    <div
+                                        className={classes.iconDiv}
+                                        onClick={() => this.setState({ expandWarpMenu: !this.state.expandWarpMenu })}
+                                        onContextMenu={this.areaMenuHandler.onContextMenu}
+                                        onTouchStart={this.areaMenuHandler.onTouchStart}
+                                        onTouchCancel={this.areaMenuHandler.onTouchCancel}
+                                        onTouchEnd={this.areaMenuHandler.onTouchEnd}
+                                        onTouchMove={this.areaMenuHandler.onTouchMove}
+                                    >
+                                        {<PublicIcon className={classes.expandWarpMenu} />}
+                                    </div>
+                                </ClickAwayListener>
+                                <ClickAwayListener onClickAway={() => this.setState({ expandDungeonMenu: false })}>
+                                    <div
+                                        className={classes.iconDiv}
+                                        onClick={() => this.setState({ expandDungeonMenu: !this.state.expandDungeonMenu })}
+                                        onContextMenu={this.areaMenuHandler.onContextMenu}
+                                        onTouchStart={this.areaMenuHandler.onTouchStart}
+                                        onTouchCancel={this.areaMenuHandler.onTouchCancel}
+                                        onTouchEnd={this.areaMenuHandler.onTouchEnd}
+                                        onTouchMove={this.areaMenuHandler.onTouchMove}
+                                    >
+                                        {<MeetingRoomIcon className={classes.expandWarpMenu} />}
+                                    </div>
+                                </ClickAwayListener>
+                            </div>
+                            <Collapse
+                                in={this.state.expandSongMenu}
+                                timeout='auto'
+                                unmountOnExit
+                                className={classes.warpAreaList}
+                            >
+                                { Object.keys(this.state.allAreas.entrances).filter((e) => (this.state.allAreas.entrances[e].type === 'warpsong' && this.state.allAreas.entrances[e].aLink !== '')).map((song, ia) => {
+                                    return (
+                                        <span
+                                            key={'quickSongMenu'+ia}
+                                            className={classes.warpMenuArea}
+                                            onClick={() => this.handleDungeonTravel(this.state.allAreas.entrances[song].aLink)}
+                                        >
+                                            {this.state.allAreas.entrances[song].alias}
+                                        </span>
+                                    );
+                                })}
+                            </Collapse>
+                            <Collapse
+                                in={this.state.expandWarpMenu}
+                                timeout='auto'
+                                unmountOnExit
+                                className={classes.warpAreaList}
+                            >
+                                { Object.keys(this.state.areas).sort().filter((a) => (this.state.areas[a].show)).map((area, ia) => {
+                                    return (
+                                        <span
+                                            key={'quickAreaMenu'+ia}
+                                            className={classes.warpMenuArea}
+                                            onClick={() => this.handleWarpMenu(area)}
+                                        >
+                                            {area}
+                                        </span>
+                                    );
+                                })}
+                            </Collapse>
+                            <Collapse
+                                in={this.state.expandDungeonMenu}
+                                timeout='auto'
+                                unmountOnExit
+                                className={classes.warpAreaList}
+                            >
+                                { Object.keys(this.state.areas).sort().filter((a) => (this.state.areas[a].dungeon)).map((area, ia) => {
+                                    return (
+                                        <span
+                                            key={'quickDungeonMenu'+ia}
+                                            className={classes.warpMenuArea}
+                                            onClick={() => this.handleWarpMenu(area)}
+                                        >
+                                            {area}
+                                        </span>
+                                    );
+                                })}
+                            </Collapse>
+                        </div>
                         <div
                             className={clsx(classes.areaPaper, {
                                 [classes.areaPaperShift]: this.state.openSettings,
@@ -1670,8 +2232,16 @@ class Tracker extends React.Component {
                                             handleUnCheck={this.unCheckLocation}
                                             handleItemMenuOpen={this.handleItemMenuOpen}
                                             handleItemMenuClose={this.handleItemMenuClose}
+                                            handleContextMenu={this.contextMenuHandler}
+                                            handleShopContextMenu={this.shopContextMenuHandler}
                                             handleEntranceMenuOpen={this.handleEntranceMenuOpen}
                                             handleFind={this.findItem}
+                                            toggleWalletTiers={this.toggleWalletTiers}
+                                            updateShopPrice={this.updateShopPrice}
+                                            showShops={this.state.settings["Show Locations"] !== "No"}
+                                            showShopInput={this.state.settings["Shop Price Tracking"] === "Both" || this.state.settings["Shop Price Tracking"] === "Price Only"}
+                                            showShopRupee={this.state.settings["Shop Price Tracking"] === "Both" || this.state.settings["Shop Price Tracking"] === "Wallet Tier"}
+                                            handleDungeonTravel={this.handleDungeonTravel}
                                             classes={classes}
                                             dungeon={false}
                                             showUnshuffledEntrances={this.state.settings["Show Unshuffled Entrances"] === "Yes"}
@@ -1679,7 +2249,7 @@ class Tracker extends React.Component {
                                         />
                                     )
                                 }) :
-                                Object.keys(this.state.areas).sort().filter((a) => (this.state.areas[a].dungeon)).map((area, ia) => { 
+                                Object.keys(this.state.areas).sort().filter((a) => (this.state.areas[a].dungeon)).map((area, ia) => {
                                     return (
                                         <GameArea
                                             title={area}
@@ -1698,7 +2268,16 @@ class Tracker extends React.Component {
                                             handleUnCheck={this.unCheckLocation}
                                             handleItemMenuOpen={this.handleItemMenuOpen}
                                             handleItemMenuClose={this.handleItemMenuClose}
+                                            handleContextMenu={this.contextMenuHandler}
+                                            handleShopContextMenu={this.shopContextMenuHandler}
+                                            handleEntranceMenuOpen={this.handleEntranceMenuOpen}
                                             handleFind={this.findItem}
+                                            toggleWalletTiers={this.toggleWalletTiers}
+                                            updateShopPrice={this.updateShopPrice}
+                                            showShops={this.state.settings["Show Locations"] !== "No"}
+                                            showShopInput={this.state.settings["Shop Price Tracking"] === "Both" || this.state.settings["Shop Price Tracking"] === "Price Only"}
+                                            showShopRupee={this.state.settings["Shop Price Tracking"] === "Both" || this.state.settings["Shop Price Tracking"] === "Wallet Tier"}
+                                            handleDungeonTravel={this.handleDungeonTravel}
                                             classes={classes}
                                             dungeon={true}
                                             showUnshuffledEntrances={this.state.settings["Show Unshuffled Entrances"] === "Yes"}

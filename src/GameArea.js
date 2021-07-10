@@ -68,7 +68,12 @@ class GameArea extends React.Component {
                                 handleUnCheck={this.props.handleUnCheck}
                                 handleItemMenuOpen={this.props.handleItemMenuOpen}
                                 handleItemMenuClose={this.props.handleItemMenuClose}
-                                handleFind={this.findItem}
+                                handleContextMenu={this.props.handleContextMenu}
+                                handleFind={this.props.handleFind}
+                                toggleWalletTiers={this.props.toggleWalletTiers}
+                                updateShopPrice={this.props.updateShopPrice}
+                                showShopInput={this.props.showShopInput}
+                                showShopRupee={this.props.showShopRupee}
                             />
                         </React.Fragment>
                     )})}
@@ -97,8 +102,17 @@ class GameArea extends React.Component {
                                     handleUnCheck={this.props.handleUnCheck}
                                     handleItemMenuOpen={this.props.handleItemMenuOpen}
                                     handleItemMenuClose={this.props.handleItemMenuClose}
+                                    handleContextMenu={this.props.handleContextMenu}
+                                    handleShopContextMenu={this.props.handleShopContextMenu}
                                     handleEntranceMenuOpen={this.props.handleEntranceMenuOpen}
-                                    handleFind={this.findItem}
+                                    handleFind={this.props.handleFind}
+                                    toggleWalletTiers={this.props.toggleWalletTiers}
+                                    updateShopPrice={this.props.updateShopPrice}
+                                    showShops={this.props.showShops}
+                                    showShopInput={this.props.showShopInput}
+                                    showShopRupee={this.props.showShopRupee}
+                                    handleDungeonTravel={this.props.handleDungeonTravel}
+                                    dungeon={this.props.dungeon}
                                     classes={this.props.classes}
                                     ekey={this.props.title + "entrance" + i}
                                     key={this.props.title + "entranceContainer" + i}
