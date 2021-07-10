@@ -1,12 +1,9 @@
 import React from 'react';
-import Card from '@material-ui/core/Card';
 import Switch from '@material-ui/core/Switch';
 import { withStyles } from '@material-ui/core/styles';
 
 import UnknownEntrance from './UnknownEntrance'
 import LocationCheck from './LocationCheck'
-import { Typography, Box } from '@material-ui/core';
-import Link from '@material-ui/core/Link';
 
 const YellowSwitch = withStyles({
     switchBase: {
@@ -23,27 +20,32 @@ const YellowSwitch = withStyles({
 })(Switch);
 
 class GameArea extends React.Component {
+
+    shouldComponentUpdate(nextProps) {
+        return true;
+    }
+
     render() {
         Object.filterLocations = (locations, predicate) =>
             Object.keys(locations)
                 .filter( key => predicate(locations[key].visible) );
         const preventDefault = (event) => event.preventDefault();
         return (
-            <Card className={this.props.classes.areaCard}>
-                <Link className={this.props.classes.entranceAnchor} color="inherit" id={this.props.title} onClick={preventDefault}>
+            <div className={this.props.classes.areaCard}>
+                <a className={this.props.classes.entranceAnchor} href={this.props.title} id={this.props.title} onClick={preventDefault}>
                     {/* Fake text here to make eslint happy.
                         Can't wrap the actual title with the link because the areaTitle class breaks margin collapse needed
                         to offset the anchor below the appbar */}
                     <span className={this.props.classes.entranceAnchorFakeText}>&nbsp;</span>
-                </Link>
+                </a>
                 <div className={this.props.classes.areaHeader} />
-                <Box className={this.props.classes.areaTitle}>
-                    <Typography variant="h6" component="span" className={this.props.classes.areaTitleText}>
+                <div className={this.props.classes.areaTitle}>
+                    <span className={this.props.classes.areaTitleText}>
                             {this.props.title}
-                    </Typography>
+                    </span>
                     {this.props.dungeon ?
                     <React.Fragment>
-                        <Typography className={this.props.classes.mqSwitchLabel} component="span">MQ</Typography>
+                        <span className={this.props.classes.mqSwitchLabel}>MQ</span>
                         <YellowSwitch
                             checked={this.props.isMQ}
                             onChange={() => {this.props.mqSwitch(this.props.title + " MQ")}}
@@ -51,7 +53,7 @@ class GameArea extends React.Component {
                         />
                     </React.Fragment>
                     : null}
-                </Box>
+                </div>
                 <div>
                     <div className={this.props.locationList}>
                     { Object.keys(this.props.locations).map((location, i) => { return (
@@ -64,6 +66,14 @@ class GameArea extends React.Component {
                                 classes={this.props.classes}
                                 handleCheck={this.props.handleCheck}
                                 handleUnCheck={this.props.handleUnCheck}
+                                handleItemMenuOpen={this.props.handleItemMenuOpen}
+                                handleItemMenuClose={this.props.handleItemMenuClose}
+                                handleContextMenu={this.props.handleContextMenu}
+                                handleFind={this.props.handleFind}
+                                toggleWalletTiers={this.props.toggleWalletTiers}
+                                updateShopPrice={this.props.updateShopPrice}
+                                showShopInput={this.props.showShopInput}
+                                showShopRupee={this.props.showShopRupee}
                             />
                         </React.Fragment>
                     )})}
@@ -90,6 +100,19 @@ class GameArea extends React.Component {
                                     handleUnLink={this.props.handleUnLink}
                                     handleCheck={this.props.handleCheck}
                                     handleUnCheck={this.props.handleUnCheck}
+                                    handleItemMenuOpen={this.props.handleItemMenuOpen}
+                                    handleItemMenuClose={this.props.handleItemMenuClose}
+                                    handleContextMenu={this.props.handleContextMenu}
+                                    handleShopContextMenu={this.props.handleShopContextMenu}
+                                    handleEntranceMenuOpen={this.props.handleEntranceMenuOpen}
+                                    handleFind={this.props.handleFind}
+                                    toggleWalletTiers={this.props.toggleWalletTiers}
+                                    updateShopPrice={this.props.updateShopPrice}
+                                    showShops={this.props.showShops}
+                                    showShopInput={this.props.showShopInput}
+                                    showShopRupee={this.props.showShopRupee}
+                                    handleDungeonTravel={this.props.handleDungeonTravel}
+                                    dungeon={this.props.dungeon}
                                     classes={this.props.classes}
                                     ekey={this.props.title + "entrance" + i}
                                     key={this.props.title + "entranceContainer" + i}
@@ -98,7 +121,7 @@ class GameArea extends React.Component {
                         } else { return null }
                     })}
                 </div>
-            </Card>
+            </div>
         );
     }
 }

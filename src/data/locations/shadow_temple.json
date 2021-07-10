@@ -8,7 +8,11 @@
             "type": "map",
             "settings": [{"setting": "Shadow Temple MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Shadow Temple Hover Boots Chest": {
             "area": "",
@@ -17,7 +21,11 @@
             "type": "item",
             "settings": [{"setting": "Shadow Temple MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Shadow Temple Compass Chest": {
             "area": "",
@@ -26,7 +34,11 @@
             "type": "compass",
             "settings": [{"setting": "Shadow Temple MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Shadow Temple Early Silver Rupee Chest": {
             "area": "",
@@ -35,7 +47,11 @@
             "type": "smallKey",
             "settings": [{"setting": "Shadow Temple MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Shadow Temple Invisible Blades Visible Chest": {
             "area": "",
@@ -44,7 +60,11 @@
             "type": "item",
             "settings": [{"setting": "Shadow Temple MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Shadow Temple Invisible Blades Invisible Chest": {
             "area": "",
@@ -53,7 +73,11 @@
             "type": "item",
             "settings": [{"setting": "Shadow Temple MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Shadow Temple GS Like Like Room": {
             "area": "",
@@ -67,7 +91,11 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Shadow Temple Falling Spikes Lower Chest": {
             "area": "",
@@ -76,7 +104,11 @@
             "type": "item",
             "settings": [{"setting": "Shadow Temple MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Shadow Temple GS Falling Spikes Room": {
             "area": "",
@@ -90,7 +122,11 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Shadow Temple Falling Spikes Upper Chest": {
             "area": "",
@@ -99,7 +135,11 @@
             "type": "item",
             "settings": [{"setting": "Shadow Temple MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Shadow Temple Falling Spikes Switch Chest": {
             "area": "",
@@ -108,7 +148,11 @@
             "type": "smallKey",
             "settings": [{"setting": "Shadow Temple MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Shadow Temple Invisible Spikes Chest": {
             "area": "",
@@ -117,7 +161,11 @@
             "type": "item",
             "settings": [{"setting": "Shadow Temple MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Shadow Temple GS Single Giant Pot": {
             "area": "",
@@ -131,7 +179,11 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Shadow Temple Freestanding Key": {
             "area": "",
@@ -140,7 +192,11 @@
             "type": "smallKey",
             "settings": [{"setting": "Shadow Temple MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Shadow Temple Wind Hint Chest": {
             "area": "",
@@ -149,7 +205,11 @@
             "type": "item",
             "settings": [{"setting": "Shadow Temple MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Shadow Temple After Wind Enemy Chest": {
             "area": "",
@@ -158,7 +218,11 @@
             "type": "smallKey",
             "settings": [{"setting": "Shadow Temple MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Shadow Temple After Wind Hidden Chest": {
             "area": "",
@@ -167,7 +231,11 @@
             "type": "item",
             "settings": [{"setting": "Shadow Temple MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Shadow Temple GS Near Ship": {
             "area": "",
@@ -181,7 +249,11 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Shadow Temple Spike Walls Left Chest": {
             "area": "",
@@ -190,7 +262,11 @@
             "type": "item",
             "settings": [{"setting": "Shadow Temple MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Shadow Temple Boss Key Chest": {
             "area": "",
@@ -199,7 +275,11 @@
             "type": "bossKey",
             "settings": [{"setting": "Shadow Temple MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Shadow Temple GS Triple Giant Pot": {
             "area": "",
@@ -213,7 +293,11 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Shadow Temple Invisible Floormaster Chest": {
             "area": "",
@@ -222,7 +306,11 @@
             "type": "smallKey",
             "settings": [{"setting": "Shadow Temple MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Shadow Temple MQ Early Gibdos Chest": {
             "area": "",
@@ -231,7 +319,11 @@
             "type": "smallKey",
             "settings": [{"setting": "Shadow Temple MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Shadow Temple MQ Map Chest": {
             "area": "",
@@ -240,7 +332,11 @@
             "type": "map",
             "settings": [{"setting": "Shadow Temple MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Shadow Temple MQ Near Ship Invisible Chest": {
             "area": "",
@@ -249,7 +345,11 @@
             "type": "smallKey",
             "settings": [{"setting": "Shadow Temple MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Shadow Temple MQ Compass Chest": {
             "area": "",
@@ -258,7 +358,11 @@
             "type": "compass",
             "settings": [{"setting": "Shadow Temple MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Shadow Temple MQ Hover Boots Chest": {
             "area": "",
@@ -267,7 +371,11 @@
             "type": "item",
             "settings": [{"setting": "Shadow Temple MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Shadow Temple MQ Invisible Blades Invisible Chest": {
             "area": "",
@@ -276,7 +384,11 @@
             "type": "smallKey",
             "settings": [{"setting": "Shadow Temple MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Shadow Temple MQ Invisible Blades Visible Chest": {
             "area": "",
@@ -285,7 +397,11 @@
             "type": "item",
             "settings": [{"setting": "Shadow Temple MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Shadow Temple MQ Beamos Silver Rupees Chest": {
             "area": "",
@@ -294,7 +410,11 @@
             "type": "item",
             "settings": [{"setting": "Shadow Temple MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Shadow Temple MQ Falling Spikes Lower Chest": {
             "area": "",
@@ -303,7 +423,11 @@
             "type": "item",
             "settings": [{"setting": "Shadow Temple MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Shadow Temple MQ GS Falling Spikes Room": {
             "area": "",
@@ -317,7 +441,11 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Shadow Temple MQ Falling Spikes Upper Chest": {
             "area": "",
@@ -326,7 +454,11 @@
             "type": "item",
             "settings": [{"setting": "Shadow Temple MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Shadow Temple MQ Falling Spikes Switch Chest": {
             "area": "",
@@ -335,7 +467,11 @@
             "type": "smallKey",
             "settings": [{"setting": "Shadow Temple MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Shadow Temple MQ Invisible Spikes Chest": {
             "area": "",
@@ -344,7 +480,11 @@
             "type": "item",
             "settings": [{"setting": "Shadow Temple MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Shadow Temple MQ Stalfos Room Chest": {
             "area": "",
@@ -353,7 +493,11 @@
             "type": "item",
             "settings": [{"setting": "Shadow Temple MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Shadow Temple MQ Wind Hint Chest": {
             "area": "",
@@ -362,7 +506,11 @@
             "type": "smallKey",
             "settings": [{"setting": "Shadow Temple MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Shadow Temple MQ GS Wind Hint Room": {
             "area": "",
@@ -376,7 +524,11 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Shadow Temple MQ After Wind Hidden Chest": {
             "area": "",
@@ -385,7 +537,11 @@
             "type": "item",
             "settings": [{"setting": "Shadow Temple MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Shadow Temple MQ After Wind Enemy Chest": {
             "area": "",
@@ -394,7 +550,11 @@
             "type": "item",
             "settings": [{"setting": "Shadow Temple MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Shadow Temple MQ GS After Wind": {
             "area": "",
@@ -408,7 +568,11 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Shadow Temple MQ GS After Ship": {
             "area": "",
@@ -422,7 +586,11 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Shadow Temple MQ Boss Key Chest": {
             "area": "",
@@ -431,7 +599,11 @@
             "type": "bossKey",
             "settings": [{"setting": "Shadow Temple MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Shadow Temple MQ Spike Walls Left Chest": {
             "area": "",
@@ -440,7 +612,11 @@
             "type": "item",
             "settings": [{"setting": "Shadow Temple MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Shadow Temple MQ Freestanding Key": {
             "area": "",
@@ -449,7 +625,11 @@
             "type": "smallKey",
             "settings": [{"setting": "Shadow Temple MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Shadow Temple MQ Bomb Flower Chest": {
             "area": "",
@@ -458,7 +638,11 @@
             "type": "item",
             "settings": [{"setting": "Shadow Temple MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Shadow Temple MQ GS Near Boss": {
             "area": "",
@@ -472,7 +656,11 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Shadow Temple Bongo Bongo Heart": {
             "area": "",
@@ -481,7 +669,11 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         }
     }
 }

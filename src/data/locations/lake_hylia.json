@@ -156,7 +156,11 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "LH Freestanding PoH": {
             "area": "Lake Hylia",
@@ -165,7 +169,11 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "LH Sun": {
             "area": "Lake Hylia",
@@ -174,7 +182,11 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "LH Child Fishing": {
             "area": "",
@@ -183,7 +195,11 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "LH Adult Fishing": {
             "area": "",
@@ -192,7 +208,11 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "LH Lab Dive": {
             "area": "",
@@ -201,7 +221,11 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "LH Deku Scrub Grotto Left": {
             "area": "",
@@ -214,7 +238,11 @@
                 {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "LH Deku Scrub Grotto Center": {
             "area": "",
@@ -227,7 +255,11 @@
                 {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "LH Deku Scrub Grotto Right": {
             "area": "",
@@ -240,7 +272,11 @@
                 {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "LH GS Bean Patch": {
             "area": "Lake Hylia",
@@ -253,7 +289,11 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "LH GS Lab Wall": {
             "area": "Lake Hylia",
@@ -266,7 +306,11 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "LH GS Small Island": {
             "area": "Lake Hylia",
@@ -279,7 +323,11 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "LH GS Tree": {
             "area": "Lake Hylia",
@@ -292,7 +340,11 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "LH GS Lab Crate": {
             "area": "",
@@ -305,7 +357,11 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         }
     }
 }

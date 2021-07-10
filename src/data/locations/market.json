@@ -45,7 +45,7 @@
         "ToT Entrance -> Temple of Time": {
             "area": "Temple of Time Entrance",
             "reverse": "Temple of Time -> ToT Entrance",
-            "oneWay": true,
+            "oneWay": false,
             "oneWayArea": "",
             "connector": "",
             "isReverse": false,
@@ -55,27 +55,6 @@
             "tagRep": false,
             "type": "specialInterior",
             "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "Temple of Time -> ToT Entrance": {
-            "area": "Temple of Time",
-            "reverse": "ToT Entrance -> Temple of Time",
-            "oneWay": true,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": true,
-            "alias": "from Temple of Time",
-            "reverseAlias": "Temple of Time",
-            "tag": "",
-            "tagRep": false,
-            "type": "specialInterior",
-            "lKey": "Temple of Time",
             "aLink": "",
             "userALink": "",
             "eLink": "",
@@ -440,26 +419,55 @@
             "oneWayELink": "",
             "userOneWayELink": "",
             "shuffled": true
+        },
+        "Ganons Castle Grounds -> Ganons Castle": {
+            "area": "Castle Grounds",
+            "reverse": "Ganons Castle -> Ganons Castle Grounds",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "",
+            "isReverse": false,
+            "alias": "Ganon's Castle",
+            "reverseAlias": "from Ganon's Castle",
+            "tag": "",
+            "tagRep": false,
+            "type": "dungeon",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": false
         }
     },
     "locations": {
         "Prelude of Light": {
             "area": "Temple of Time",
-            "lKey": "",
+            "lKey": "ToT Entrance -> Temple of Time",
             "alias": "Prelude of Light",
             "type": "song",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Light Arrow Cutscene": {
             "area": "Temple of Time",
-            "lKey": "",
+            "lKey": "ToT Entrance -> Temple of Time",
             "alias": "Light Arrow Cutscene",
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Zelda's Lullaby": {
             "area": "Castle Grounds",
@@ -468,7 +476,11 @@
             "type": "song",
             "settings": [{"setting": "Skip Child Zelda", "value": "Off", "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Market Shooting Gallery Reward": {
             "area": "",
@@ -477,7 +489,11 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Market Bombchu Bowling First Prize": {
             "area": "",
@@ -486,7 +502,11 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Market Bombchu Bowling Second Prize": {
             "area": "",
@@ -495,7 +515,11 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Market Lost Dog": {
             "area": "Market",
@@ -504,7 +528,11 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Market Treasure Chest Game Reward": {
             "area": "",
@@ -513,7 +541,11 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Market 10 Big Poes": {
             "area": "",
@@ -522,7 +554,11 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Market GS Guard House": {
             "area": "",
@@ -535,7 +571,11 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Market Bazaar Item 1": {
             "area": "",
@@ -550,7 +590,11 @@
                 {"setting": "Shopsanity", "value": "Random", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
         },
         "Market Bazaar Item 2": {
             "area": "",
@@ -564,7 +608,11 @@
                 {"setting": "Shopsanity", "value": "Random", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
         },
         "Market Bazaar Item 3": {
             "area": "",
@@ -577,7 +625,11 @@
                 {"setting": "Shopsanity", "value": "Random", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
         },
         "Market Bazaar Item 4": {
             "area": "",
@@ -589,7 +641,63 @@
                 {"setting": "Shopsanity", "value": "Random", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
+        },
+        "Market Bazaar Item 5": {
+            "area": "",
+            "lKey": "Market -> Market Bazaar",
+            "alias": "Shop Item 5",
+            "type": "item",
+            "settings": false,
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
+        },
+        "Market Bazaar Item 6": {
+            "area": "",
+            "lKey": "Market -> Market Bazaar",
+            "alias": "Shop Item 6",
+            "type": "item",
+            "settings": false,
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
+        },
+        "Market Bazaar Item 7": {
+            "area": "",
+            "lKey": "Market -> Market Bazaar",
+            "alias": "Shop Item 7",
+            "type": "item",
+            "settings": false,
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
+        },
+        "Market Bazaar Item 8": {
+            "area": "",
+            "lKey": "Market -> Market Bazaar",
+            "alias": "Shop Item 8",
+            "type": "item",
+            "settings": false,
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
         },
         "Market Potion Shop Item 1": {
             "area": "",
@@ -604,7 +712,11 @@
                 {"setting": "Shopsanity", "value": "Random", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
         },
         "Market Potion Shop Item 2": {
             "area": "",
@@ -618,7 +730,11 @@
                 {"setting": "Shopsanity", "value": "Random", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
         },
         "Market Potion Shop Item 3": {
             "area": "",
@@ -631,7 +747,11 @@
                 {"setting": "Shopsanity", "value": "Random", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
         },
         "Market Potion Shop Item 4": {
             "area": "",
@@ -643,7 +763,63 @@
                 {"setting": "Shopsanity", "value": "Random", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
+        },
+        "Market Potion Shop Item 5": {
+            "area": "",
+            "lKey": "Market -> Market Potion Shop",
+            "alias": "Shop Item 5",
+            "type": "item",
+            "settings": false,
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
+        },
+        "Market Potion Shop Item 6": {
+            "area": "",
+            "lKey": "Market -> Market Potion Shop",
+            "alias": "Shop Item 6",
+            "type": "item",
+            "settings": false,
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
+        },
+        "Market Potion Shop Item 7": {
+            "area": "",
+            "lKey": "Market -> Market Potion Shop",
+            "alias": "Shop Item 7",
+            "type": "item",
+            "settings": false,
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
+        },
+        "Market Potion Shop Item 8": {
+            "area": "",
+            "lKey": "Market -> Market Potion Shop",
+            "alias": "Shop Item 8",
+            "type": "item",
+            "settings": false,
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
         },
         "Market Bombchu Shop Item 1": {
             "area": "",
@@ -658,7 +834,11 @@
                 {"setting": "Shopsanity", "value": "Random", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
         },
         "Market Bombchu Shop Item 2": {
             "area": "",
@@ -672,7 +852,11 @@
                 {"setting": "Shopsanity", "value": "Random", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
         },
         "Market Bombchu Shop Item 3": {
             "area": "",
@@ -685,7 +869,11 @@
                 {"setting": "Shopsanity", "value": "Random", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
         },
         "Market Bombchu Shop Item 4": {
             "area": "",
@@ -697,7 +885,63 @@
                 {"setting": "Shopsanity", "value": "Random", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
+        },
+        "Market Bombchu Shop Item 5": {
+            "area": "",
+            "lKey": "Market Back Alley -> Market Bombchu Shop",
+            "alias": "Shop Item 5",
+            "type": "item",
+            "settings": false,
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
+        },
+        "Market Bombchu Shop Item 6": {
+            "area": "",
+            "lKey": "Market Back Alley -> Market Bombchu Shop",
+            "alias": "Shop Item 6",
+            "type": "item",
+            "settings": false,
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
+        },
+        "Market Bombchu Shop Item 7": {
+            "area": "",
+            "lKey": "Market Back Alley -> Market Bombchu Shop",
+            "alias": "Shop Item 7",
+            "type": "item",
+            "settings": false,
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
+        },
+        "Market Bombchu Shop Item 8": {
+            "area": "",
+            "lKey": "Market Back Alley -> Market Bombchu Shop",
+            "alias": "Shop Item 8",
+            "type": "item",
+            "settings": false,
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
         },
         "HC Malon Egg": {
             "area": "Castle Grounds",
@@ -706,7 +950,11 @@
             "type": "item",
             "settings": [{"setting": "Shuffle Weird Egg", "value": "On", "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "HC Great Fairy Reward": {
             "area": "",
@@ -715,7 +963,11 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "HC GS Tree": {
             "area": "Castle Grounds",
@@ -728,7 +980,11 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "HC GS Storms Grotto": {
             "area": "",
@@ -741,7 +997,11 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "OGC GS": {
             "area": "Castle Grounds",
@@ -754,7 +1014,11 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "OGC Great Fairy Reward": {
             "area": "",
@@ -763,7 +1027,11 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         }
     }
 }

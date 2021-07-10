@@ -8,7 +8,11 @@
             "type": "item",
             "settings": [{"setting": "Ganon's Castle MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Ganons Castle Water Trial Left Chest": {
             "area": "",
@@ -17,7 +21,11 @@
             "type": "item",
             "settings": [{"setting": "Ganon's Castle MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Ganons Castle Water Trial Right Chest": {
             "area": "",
@@ -26,7 +34,11 @@
             "type": "item",
             "settings": [{"setting": "Ganon's Castle MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Ganons Castle Shadow Trial Front Chest": {
             "area": "",
@@ -35,7 +47,11 @@
             "type": "item",
             "settings": [{"setting": "Ganon's Castle MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Ganons Castle Shadow Trial Golden Gauntlets Chest": {
             "area": "",
@@ -44,7 +60,11 @@
             "type": "item",
             "settings": [{"setting": "Ganon's Castle MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Ganons Castle Light Trial First Left Chest": {
             "area": "",
@@ -53,7 +73,11 @@
             "type": "item",
             "settings": [{"setting": "Ganon's Castle MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Ganons Castle Light Trial Second Left Chest": {
             "area": "",
@@ -62,7 +86,11 @@
             "type": "item",
             "settings": [{"setting": "Ganon's Castle MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Ganons Castle Light Trial Third Left Chest": {
             "area": "",
@@ -71,7 +99,11 @@
             "type": "item",
             "settings": [{"setting": "Ganon's Castle MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Ganons Castle Light Trial First Right Chest": {
             "area": "",
@@ -80,7 +112,11 @@
             "type": "item",
             "settings": [{"setting": "Ganon's Castle MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Ganons Castle Light Trial Second Right Chest": {
             "area": "",
@@ -89,7 +125,11 @@
             "type": "item",
             "settings": [{"setting": "Ganon's Castle MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Ganons Castle Light Trial Third Right Chest": {
             "area": "",
@@ -98,7 +138,11 @@
             "type": "item",
             "settings": [{"setting": "Ganon's Castle MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Ganons Castle Light Trial Invisible Enemies Chest": {
             "area": "",
@@ -107,7 +151,11 @@
             "type": "smallKey",
             "settings": [{"setting": "Ganon's Castle MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Ganons Castle Light Trial Lullaby Chest": {
             "area": "",
@@ -116,7 +164,11 @@
             "type": "smallKey",
             "settings": [{"setting": "Ganon's Castle MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Ganons Castle Spirit Trial Crystal Switch Chest": {
             "area": "",
@@ -125,7 +177,11 @@
             "type": "item",
             "settings": [{"setting": "Ganon's Castle MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Ganons Castle Spirit Trial Invisible Chest": {
             "area": "",
@@ -134,7 +190,11 @@
             "type": "item",
             "settings": [{"setting": "Ganon's Castle MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Ganons Castle Deku Scrub Left": {
             "area": "",
@@ -148,7 +208,11 @@
                 {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Ganons Castle Deku Scrub Center-Left": {
             "area": "",
@@ -162,7 +226,11 @@
                 {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Ganons Castle Deku Scrub Center-Right": {
             "area": "",
@@ -176,7 +244,11 @@
                 {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Ganons Castle Deku Scrub Right": {
             "area": "",
@@ -190,7 +262,11 @@
                 {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Ganons Castle MQ Forest Trial Freestanding Key": {
             "area": "",
@@ -199,7 +275,11 @@
             "type": "smallKey",
             "settings": [{"setting": "Ganon's Castle MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Ganons Castle MQ Forest Trial Eye Switch Chest": {
             "area": "",
@@ -208,7 +288,11 @@
             "type": "item",
             "settings": [{"setting": "Ganon's Castle MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Ganons Castle MQ Forest Trial Frozen Eye Switch Chest": {
             "area": "",
@@ -217,7 +301,11 @@
             "type": "item",
             "settings": [{"setting": "Ganon's Castle MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Ganons Castle MQ Water Trial Chest": {
             "area": "",
@@ -226,7 +314,11 @@
             "type": "item",
             "settings": [{"setting": "Ganon's Castle MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Ganons Castle MQ Shadow Trial Bomb Flower Chest": {
             "area": "",
@@ -235,7 +327,11 @@
             "type": "item",
             "settings": [{"setting": "Ganon's Castle MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Ganons Castle MQ Shadow Trial Eye Switch Chest": {
             "area": "",
@@ -244,7 +340,11 @@
             "type": "smallKey",
             "settings": [{"setting": "Ganon's Castle MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Ganons Castle MQ Light Trial Lullaby Chest": {
             "area": "",
@@ -253,7 +353,11 @@
             "type": "item",
             "settings": [{"setting": "Ganon's Castle MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Ganons Castle MQ Spirit Trial First Chest": {
             "area": "",
@@ -262,7 +366,11 @@
             "type": "item",
             "settings": [{"setting": "Ganon's Castle MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Ganons Castle MQ Spirit Trial Invisible Chest": {
             "area": "",
@@ -271,7 +379,11 @@
             "type": "item",
             "settings": [{"setting": "Ganon's Castle MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Ganons Castle MQ Spirit Trial Sun Front Left Chest": {
             "area": "",
@@ -280,7 +392,11 @@
             "type": "smallKey",
             "settings": [{"setting": "Ganon's Castle MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Ganons Castle MQ Spirit Trial Sun Back Left Chest": {
             "area": "",
@@ -289,7 +405,11 @@
             "type": "item",
             "settings": [{"setting": "Ganon's Castle MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Ganons Castle MQ Spirit Trial Sun Back Right Chest": {
             "area": "",
@@ -298,7 +418,11 @@
             "type": "item",
             "settings": [{"setting": "Ganon's Castle MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Ganons Castle MQ Spirit Trial Golden Gauntlets Chest": {
             "area": "",
@@ -307,7 +431,11 @@
             "type": "item",
             "settings": [{"setting": "Ganon's Castle MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Ganons Castle MQ Deku Scrub Left": {
             "area": "",
@@ -321,7 +449,11 @@
                 {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Ganons Castle MQ Deku Scrub Center-Left": {
             "area": "",
@@ -335,7 +467,11 @@
                 {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Ganons Castle MQ Deku Scrub Center": {
             "area": "",
@@ -349,7 +485,11 @@
                 {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Ganons Castle MQ Deku Scrub Center-Right": {
             "area": "",
@@ -363,7 +503,11 @@
                 {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Ganons Castle MQ Deku Scrub Right": {
             "area": "",
@@ -377,7 +521,11 @@
                 {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Ganons Tower Boss Key Chest": {
             "area": "",
@@ -386,7 +534,11 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         }
     }
 }

@@ -345,7 +345,11 @@
             "type": "song",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Nocturne of Shadow": {
             "area": "Kakariko Village",
@@ -354,7 +358,11 @@
             "type": "song",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Kak Anju as Child": {
             "area": "Kakariko Village",
@@ -363,7 +371,11 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Kak Anju as Adult": {
             "area": "Kakariko Village",
@@ -372,7 +384,11 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Kak Impas House Freestanding PoH": {
             "area": "",
@@ -381,7 +397,11 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Kak Impas House Cow": {
             "area": "",
@@ -390,7 +410,11 @@
             "type": "item",
             "settings": [{"setting": "Cowsanity", "value": "On", "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Kak Windmill Freestanding PoH": {
             "area": "",
@@ -399,7 +423,11 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Kak Man on Roof": {
             "area": "Kakariko Village",
@@ -408,7 +436,11 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Kak Open Grotto Chest": {
             "area": "",
@@ -417,7 +449,11 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Kak Redead Grotto Chest": {
             "area": "",
@@ -426,7 +462,11 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Kak Shooting Gallery Reward": {
             "area": "",
@@ -435,7 +475,11 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Kak 10 Gold Skulltula Reward": {
             "area": "",
@@ -444,7 +488,11 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Kak 20 Gold Skulltula Reward": {
             "area": "",
@@ -453,7 +501,11 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Kak 30 Gold Skulltula Reward": {
             "area": "",
@@ -462,7 +514,11 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Kak 40 Gold Skulltula Reward": {
             "area": "",
@@ -471,7 +527,11 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Kak 50 Gold Skulltula Reward": {
             "area": "",
@@ -480,7 +540,11 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Kak GS Tree": {
             "area": "Kakariko Village",
@@ -493,7 +557,11 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Kak GS Guards House": {
             "area": "Kakariko Village",
@@ -506,7 +574,11 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Kak GS Watchtower": {
             "area": "Kakariko Village",
@@ -519,7 +591,11 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Kak GS Skulltula House": {
             "area": "Kakariko Village",
@@ -532,7 +608,11 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Kak GS House Under Construction": {
             "area": "Kakariko Village",
@@ -545,7 +625,11 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Kak GS Above Impas House": {
             "area": "Kakariko Village",
@@ -558,7 +642,11 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Kak Bazaar Item 1": {
             "area": "",
@@ -573,7 +661,11 @@
                 {"setting": "Shopsanity", "value": "Random", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
         },
         "Kak Bazaar Item 2": {
             "area": "",
@@ -587,7 +679,11 @@
                 {"setting": "Shopsanity", "value": "Random", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
         },
         "Kak Bazaar Item 3": {
             "area": "",
@@ -600,7 +696,11 @@
                 {"setting": "Shopsanity", "value": "Random", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
         },
         "Kak Bazaar Item 4": {
             "area": "",
@@ -612,7 +712,63 @@
                 {"setting": "Shopsanity", "value": "Random", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
+        },
+        "Kak Bazaar Item 5": {
+            "area": "",
+            "lKey": "Kakariko Village -> Kak Bazaar",
+            "alias": "Shop Item 5",
+            "type": "item",
+            "settings": false,
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
+        },
+        "Kak Bazaar Item 6": {
+            "area": "",
+            "lKey": "Kakariko Village -> Kak Bazaar",
+            "alias": "Shop Item 6",
+            "type": "item",
+            "settings": false,
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
+        },
+        "Kak Bazaar Item 7": {
+            "area": "",
+            "lKey": "Kakariko Village -> Kak Bazaar",
+            "alias": "Shop Item 7",
+            "type": "item",
+            "settings": false,
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
+        },
+        "Kak Bazaar Item 8": {
+            "area": "",
+            "lKey": "Kakariko Village -> Kak Bazaar",
+            "alias": "Shop Item 8",
+            "type": "item",
+            "settings": false,
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
         },
         "Kak Potion Shop Item 1": {
             "area": "",
@@ -627,7 +783,11 @@
                 {"setting": "Shopsanity", "value": "Random", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
         },
         "Kak Potion Shop Item 2": {
             "area": "",
@@ -641,7 +801,11 @@
                 {"setting": "Shopsanity", "value": "Random", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
         },
         "Kak Potion Shop Item 3": {
             "area": "",
@@ -654,7 +818,11 @@
                 {"setting": "Shopsanity", "value": "Random", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
         },
         "Kak Potion Shop Item 4": {
             "area": "",
@@ -666,7 +834,63 @@
                 {"setting": "Shopsanity", "value": "Random", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
+        },
+        "Kak Potion Shop Item 5": {
+            "area": "",
+            "lKey": "Kakariko Village -> Potion Shop Front",
+            "alias": "Shop Item 5",
+            "type": "item",
+            "settings": false,
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
+        },
+        "Kak Potion Shop Item 6": {
+            "area": "",
+            "lKey": "Kakariko Village -> Potion Shop Front",
+            "alias": "Shop Item 6",
+            "type": "item",
+            "settings": false,
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
+        },
+        "Kak Potion Shop Item 7": {
+            "area": "",
+            "lKey": "Kakariko Village -> Potion Shop Front",
+            "alias": "Shop Item 7",
+            "type": "item",
+            "settings": false,
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
+        },
+        "Kak Potion Shop Item 8": {
+            "area": "",
+            "lKey": "Kakariko Village -> Potion Shop Front",
+            "alias": "Shop Item 8",
+            "type": "item",
+            "settings": false,
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
         }
     }
 }

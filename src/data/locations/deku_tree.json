@@ -8,7 +8,11 @@
             "type": "map",
             "settings": [{"setting": "Deku Tree MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Deku Tree Slingshot Room Side Chest": {
             "area": "",
@@ -17,7 +21,11 @@
             "type": "item",
             "settings": [{"setting": "Deku Tree MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Deku Tree Slingshot Chest": {
             "area": "",
@@ -26,7 +34,11 @@
             "type": "item",
             "settings": [{"setting": "Deku Tree MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Deku Tree Compass Chest": {
             "area": "",
@@ -35,7 +47,11 @@
             "type": "compass",
             "settings": [{"setting": "Deku Tree MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Deku Tree Compass Room Side Chest": {
             "area": "",
@@ -44,7 +60,11 @@
             "type": "item",
             "settings": [{"setting": "Deku Tree MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Deku Tree GS Compass Room": {
             "area": "",
@@ -58,7 +78,11 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Deku Tree Basement Chest": {
             "area": "",
@@ -67,7 +91,11 @@
             "type": "item",
             "settings": [{"setting": "Deku Tree MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Deku Tree GS Basement Vines": {
             "area": "",
@@ -81,7 +109,11 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Deku Tree GS Basement Gate": {
             "area": "",
@@ -95,7 +127,11 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Deku Tree GS Basement Back Room": {
             "area": "",
@@ -109,7 +145,11 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Deku Tree MQ Map Chest": {
             "area": "",
@@ -118,7 +158,11 @@
             "type": "map",
             "settings": [{"setting": "Deku Tree MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Deku Tree MQ GS Lobby": {
             "area": "",
@@ -132,7 +176,11 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Deku Tree MQ Slingshot Chest": {
             "area": "",
@@ -141,7 +189,11 @@
             "type": "item",
             "settings": [{"setting": "Deku Tree MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Deku Tree MQ Slingshot Room Back Chest": {
             "area": "",
@@ -150,7 +202,11 @@
             "type": "item",
             "settings": [{"setting": "Deku Tree MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Deku Tree MQ Compass Chest": {
             "area": "",
@@ -159,7 +215,11 @@
             "type": "compass",
             "settings": [{"setting": "Deku Tree MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Deku Tree MQ GS Compass Room": {
             "area": "",
@@ -173,7 +233,11 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Deku Tree MQ Basement Chest": {
             "area": "",
@@ -182,7 +246,11 @@
             "type": "item",
             "settings": [{"setting": "Deku Tree MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Deku Tree MQ Before Spinning Log Chest": {
             "area": "",
@@ -191,7 +259,11 @@
             "type": "item",
             "settings": [{"setting": "Deku Tree MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Deku Tree MQ After Spinning Log Chest": {
             "area": "",
@@ -200,7 +272,11 @@
             "type": "item",
             "settings": [{"setting": "Deku Tree MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Deku Tree MQ GS Basement Graves Room": {
             "area": "",
@@ -214,7 +290,11 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Deku Tree MQ GS Basement Back Room": {
             "area": "",
@@ -228,7 +308,11 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Deku Tree MQ Deku Scrub": {
             "area": "",
@@ -242,7 +326,11 @@
                 {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Deku Tree Queen Gohma Heart": {
             "area": "",
@@ -251,7 +339,11 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         }
     }
 }

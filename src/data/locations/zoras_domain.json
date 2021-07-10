@@ -133,7 +133,11 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "ZD Chest": {
             "area": "Zora's Domain",
@@ -142,7 +146,11 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "ZD King Zora Thawed": {
             "area": "Zora's Domain",
@@ -151,7 +159,11 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "ZD GS Frozen Waterfall": {
             "area": "Zora's Domain",
@@ -164,7 +176,11 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "ZD Shop Item 1": {
             "area": "",
@@ -179,7 +195,11 @@
                 {"setting": "Shopsanity", "value": "Random", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
         },
         "ZD Shop Item 2": {
             "area": "",
@@ -193,7 +213,11 @@
                 {"setting": "Shopsanity", "value": "Random", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
         },
         "ZD Shop Item 3": {
             "area": "",
@@ -206,7 +230,11 @@
                 {"setting": "Shopsanity", "value": "Random", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
         },
         "ZD Shop Item 4": {
             "area": "",
@@ -218,7 +246,63 @@
                 {"setting": "Shopsanity", "value": "Random", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
+        },
+        "ZD Shop Item 5": {
+            "area": "",
+            "lKey": "Zoras Domain -> ZD Shop",
+            "alias": "Shop Item 5",
+            "type": "item",
+            "settings": false,
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
+        },
+        "ZD Shop Item 6": {
+            "area": "",
+            "lKey": "Zoras Domain -> ZD Shop",
+            "alias": "Shop Item 6",
+            "type": "item",
+            "settings": false,
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
+        },
+        "ZD Shop Item 7": {
+            "area": "",
+            "lKey": "Zoras Domain -> ZD Shop",
+            "alias": "Shop Item 7",
+            "type": "item",
+            "settings": false,
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
+        },
+        "ZD Shop Item 8": {
+            "area": "",
+            "lKey": "Zoras Domain -> ZD Shop",
+            "alias": "Shop Item 8",
+            "type": "item",
+            "settings": false,
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
         }
     }
 }

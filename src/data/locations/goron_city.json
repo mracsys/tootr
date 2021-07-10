@@ -114,7 +114,11 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "GC Pot Freestanding PoH": {
             "area": "Goron City",
@@ -123,7 +127,11 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "GC Rolling Goron as Child": {
             "area": "Goron City",
@@ -132,7 +140,11 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "GC Rolling Goron as Adult": {
             "area": "Goron City",
@@ -141,7 +153,11 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "GC Medigoron": {
             "area": "Goron City",
@@ -150,7 +166,11 @@
             "type": "item",
             "settings": [{"setting": "Shuffle Merchants", "value": "On", "required": false}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "GC Maze Left Chest": {
             "area": "Goron City",
@@ -159,7 +179,11 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "GC Maze Right Chest": {
             "area": "Goron City",
@@ -168,7 +192,11 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "GC Maze Center Chest": {
             "area": "Goron City",
@@ -177,7 +205,11 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "GC Deku Scrub Grotto Left": {
             "area": "",
@@ -190,7 +222,11 @@
                 {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "GC Deku Scrub Grotto Center": {
             "area": "",
@@ -203,7 +239,11 @@
                 {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "GC Deku Scrub Grotto Right": {
             "area": "",
@@ -216,7 +256,11 @@
                 {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "GC GS Center Platform": {
             "area": "Goron City",
@@ -229,7 +273,11 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "GC GS Boulder Maze": {
             "area": "Goron City",
@@ -242,7 +290,11 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "GC Shop Item 1": {
             "area": "",
@@ -257,7 +309,11 @@
                 {"setting": "Shopsanity", "value": "Random", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
         },
         "GC Shop Item 2": {
             "area": "",
@@ -271,7 +327,11 @@
                 {"setting": "Shopsanity", "value": "Random", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
         },
         "GC Shop Item 3": {
             "area": "",
@@ -284,7 +344,11 @@
                 {"setting": "Shopsanity", "value": "Random", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
         },
         "GC Shop Item 4": {
             "area": "",
@@ -296,7 +360,63 @@
                 {"setting": "Shopsanity", "value": "Random", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
+        },
+        "GC Shop Item 5": {
+            "area": "",
+            "lKey": "Goron City -> GC Shop",
+            "alias": "Shop Item 5",
+            "type": "item",
+            "settings": false,
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
+        },
+        "GC Shop Item 6": {
+            "area": "",
+            "lKey": "Goron City -> GC Shop",
+            "alias": "Shop Item 6",
+            "type": "item",
+            "settings": false,
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
+        },
+        "GC Shop Item 7": {
+            "area": "",
+            "lKey": "Goron City -> GC Shop",
+            "alias": "Shop Item 7",
+            "type": "item",
+            "settings": false,
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
+        },
+        "GC Shop Item 8": {
+            "area": "",
+            "lKey": "Goron City -> GC Shop",
+            "alias": "Shop Item 8",
+            "type": "item",
+            "settings": false,
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": true,
+            "price": 0,
+            "walletTier": 0
         }
     }
 }

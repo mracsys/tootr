@@ -156,7 +156,11 @@
             "type": "item",
             "settings": [{"setting": "Shuffle Magic Beans", "value": "On", "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "ZR Open Grotto Chest": {
             "area": "",
@@ -165,7 +169,11 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "ZR Frogs in the Rain": {
             "area": "Zora River",
@@ -174,7 +182,11 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "ZR Frogs Ocarina Game": {
             "area": "Zora River",
@@ -183,7 +195,11 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "ZR Near Open Grotto Freestanding PoH": {
             "area": "Zora River",
@@ -192,7 +208,11 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "ZR Near Domain Freestanding PoH": {
             "area": "Zora River",
@@ -201,7 +221,11 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "ZR Deku Scrub Grotto Front": {
             "area": "",
@@ -214,7 +238,11 @@
                 {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "ZR Deku Scrub Grotto Rear": {
             "area": "",
@@ -227,7 +255,11 @@
                 {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "ZR GS Tree": {
             "area": "Zora River",
@@ -240,7 +272,11 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "ZR GS Ladder": {
             "area": "Zora River",
@@ -253,7 +289,11 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "ZR GS Near Raised Grottos": {
             "area": "Zora River",
@@ -266,7 +306,11 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "ZR GS Above Bridge": {
             "area": "Zora River",
@@ -279,7 +323,11 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         }
     }
 }

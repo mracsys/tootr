@@ -8,7 +8,11 @@
             "type": "smallKey",
             "settings": [{"setting": "Bottom of the Well MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Bottom of the Well Front Center Bombable Chest": {
             "area": "",
@@ -17,7 +21,11 @@
             "type": "item",
             "settings": [{"setting": "Bottom of the Well MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Bottom of the Well Center Skulltula Chest": {
             "area": "",
@@ -26,7 +34,11 @@
             "type": "item",
             "settings": [{"setting": "Bottom of the Well MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Bottom of the Well Back Left Bombable Chest": {
             "area": "",
@@ -35,7 +47,11 @@
             "type": "item",
             "settings": [{"setting": "Bottom of the Well MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Bottom of the Well Underwater Left Chest": {
             "area": "",
@@ -44,7 +60,11 @@
             "type": "item",
             "settings": [{"setting": "Bottom of the Well MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Bottom of the Well Freestanding Key": {
             "area": "",
@@ -53,7 +73,11 @@
             "type": "smallKey",
             "settings": [{"setting": "Bottom of the Well MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Bottom of the Well Compass Chest": {
             "area": "",
@@ -62,7 +86,11 @@
             "type": "compass",
             "settings": [{"setting": "Bottom of the Well MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Bottom of the Well Underwater Front Chest": {
             "area": "",
@@ -71,7 +99,11 @@
             "type": "item",
             "settings": [{"setting": "Bottom of the Well MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Bottom of the Well Invisible Chest": {
             "area": "",
@@ -80,7 +112,11 @@
             "type": "item",
             "settings": [{"setting": "Bottom of the Well MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Bottom of the Well Lens of Truth Chest": {
             "area": "",
@@ -89,7 +125,11 @@
             "type": "item",
             "settings": [{"setting": "Bottom of the Well MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Bottom of the Well Right Bottom Fake Wall Chest": {
             "area": "",
@@ -98,7 +138,11 @@
             "type": "smallKey",
             "settings": [{"setting": "Bottom of the Well MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Bottom of the Well GS West Inner Room": {
             "area": "",
@@ -112,7 +156,11 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Bottom of the Well GS East Inner Room": {
             "area": "",
@@ -126,7 +174,11 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Bottom of the Well Fire Keese Chest": {
             "area": "",
@@ -135,7 +187,11 @@
             "type": "item",
             "settings": [{"setting": "Bottom of the Well MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Bottom of the Well Like Like Chest": {
             "area": "",
@@ -144,7 +200,11 @@
             "type": "item",
             "settings": [{"setting": "Bottom of the Well MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Bottom of the Well GS Like Like Cage": {
             "area": "",
@@ -158,7 +218,11 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Bottom of the Well Map Chest": {
             "area": "",
@@ -167,7 +231,11 @@
             "type": "map",
             "settings": [{"setting": "Bottom of the Well MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Bottom of the Well MQ GS Coffin Room": {
             "area": "",
@@ -181,7 +249,11 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Bottom of the Well MQ Map Chest": {
             "area": "",
@@ -190,7 +262,11 @@
             "type": "map",
             "settings": [{"setting": "Bottom of the Well MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Bottom of the Well MQ East Inner Room Freestanding Key": {
             "area": "",
@@ -199,7 +275,11 @@
             "type": "smallKey",
             "settings": [{"setting": "Bottom of the Well MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Bottom of the Well MQ GS West Inner Room": {
             "area": "",
@@ -213,7 +293,11 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Bottom of the Well MQ Compass Chest": {
             "area": "",
@@ -222,7 +306,11 @@
             "type": "compass",
             "settings": [{"setting": "Bottom of the Well MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Bottom of the Well MQ Dead Hand Freestanding Key": {
             "area": "",
@@ -231,7 +319,11 @@
             "type": "smallKey",
             "settings": [{"setting": "Bottom of the Well MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Bottom of the Well MQ Lens of Truth Chest": {
             "area": "",
@@ -240,7 +332,11 @@
             "type": "item",
             "settings": [{"setting": "Bottom of the Well MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Bottom of the Well MQ GS Basement": {
             "area": "",
@@ -254,7 +350,11 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         }
     }
 }

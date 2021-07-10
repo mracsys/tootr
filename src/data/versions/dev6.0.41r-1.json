@@ -14,6 +14,11 @@
             "Show Unshuffled Skulls": [
                 "Yes",
                 "No"
+            ],
+            "Shop Price Tracking": [
+                "Both",
+                "Price Only",
+                "Wallet Tier"
             ]
         },
         "ER Settings": {

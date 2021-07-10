@@ -8,7 +8,11 @@
             "type": "map",
             "settings": [{"setting": "Dodongo's Cavern MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Dodongos Cavern Deku Scrub Lobby": {
             "area": "",
@@ -22,7 +26,11 @@
                 {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Dodongos Cavern GS Side Room Near Lower Lizalfos": {
             "area": "",
@@ -36,7 +44,11 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Dodongos Cavern GS Scarecrow": {
             "area": "",
@@ -50,7 +62,11 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Dodongos Cavern Deku Scrub Side Room Near Dodongos": {
             "area": "",
@@ -64,7 +80,11 @@
                 {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Dodongos Cavern Compass Chest": {
             "area": "",
@@ -73,7 +93,11 @@
             "type": "compass",
             "settings": [{"setting": "Dodongo's Cavern MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Dodongos Cavern GS Alcove Above Stairs": {
             "area": "",
@@ -87,7 +111,11 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Dodongos Cavern GS Vines Above Stairs": {
             "area": "",
@@ -101,7 +129,11 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Dodongos Cavern Bomb Flower Platform Chest": {
             "area": "",
@@ -110,7 +142,11 @@
             "type": "item",
             "settings": [{"setting": "Dodongo's Cavern MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Dodongos Cavern Bomb Bag Chest": {
             "area": "",
@@ -119,7 +155,11 @@
             "type": "item",
             "settings": [{"setting": "Dodongo's Cavern MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Dodongos Cavern Deku Scrub Near Bomb Bag Left": {
             "area": "",
@@ -133,7 +173,11 @@
                 {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Dodongos Cavern Deku Scrub Near Bomb Bag Right": {
             "area": "",
@@ -147,7 +191,11 @@
                 {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Dodongos Cavern End of Bridge Chest": {
             "area": "",
@@ -156,7 +204,11 @@
             "type": "item",
             "settings": [{"setting": "Dodongo's Cavern MQ", "value": false, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Dodongos Cavern GS Back Room": {
             "area": "",
@@ -170,7 +222,11 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Dodongos Cavern MQ Map Chest": {
             "area": "",
@@ -179,7 +235,11 @@
             "type": "map",
             "settings": [{"setting": "Dodongo's Cavern MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Dodongos Cavern MQ Bomb Bag Chest": {
             "area": "",
@@ -188,7 +248,11 @@
             "type": "item",
             "settings": [{"setting": "Dodongo's Cavern MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Dodongos Cavern MQ Deku Scrub Lobby Front": {
             "area": "",
@@ -202,7 +266,11 @@
                 {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Dodongos Cavern MQ Deku Scrub Lobby Rear": {
             "area": "",
@@ -216,7 +284,11 @@
                 {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Dodongos Cavern MQ Deku Scrub Side Room Near Lower Lizalfos": {
             "area": "",
@@ -230,7 +302,11 @@
                 {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Dodongos Cavern MQ GS Scrub Room": {
             "area": "",
@@ -244,7 +320,11 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Dodongos Cavern MQ Torch Puzzle Room Chest": {
             "area": "",
@@ -253,7 +333,11 @@
             "type": "item",
             "settings": [{"setting": "Dodongo's Cavern MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Dodongos Cavern MQ Larvae Room Chest": {
             "area": "",
@@ -262,7 +346,11 @@
             "type": "item",
             "settings": [{"setting": "Dodongo's Cavern MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Dodongos Cavern MQ GS Larvae Room": {
             "area": "",
@@ -276,7 +364,11 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Dodongos Cavern MQ GS Lizalfos Room": {
             "area": "",
@@ -290,7 +382,11 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Dodongos Cavern MQ Compass Chest": {
             "area": "",
@@ -299,7 +395,11 @@
             "type": "compass",
             "settings": [{"setting": "Dodongo's Cavern MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Dodongos Cavern MQ GS Song of Time Block Room": {
             "area": "",
@@ -313,7 +413,11 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Dodongos Cavern MQ Deku Scrub Staircase": {
             "area": "",
@@ -327,7 +431,11 @@
                 {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Dodongos Cavern MQ GS Back Area": {
             "area": "",
@@ -341,7 +449,11 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Dodongos Cavern MQ Under Grave Chest": {
             "area": "",
@@ -350,7 +462,11 @@
             "type": "item",
             "settings": [{"setting": "Dodongo's Cavern MQ", "value": true, "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Dodongos Cavern Boss Room Chest": {
             "area": "",
@@ -359,7 +475,11 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "Dodongos Cavern King Dodongo Heart": {
             "area": "",
@@ -368,7 +488,11 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         }
     }
 }

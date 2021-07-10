@@ -324,7 +324,11 @@
             "type": "song",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "HF Ocarina of Time Item": {
             "area": "Hyrule Field",
@@ -333,7 +337,11 @@
             "type": "item",
             "settings": [{"setting": "Shuffle Ocarinas", "value": "On", "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "HF Near Market Grotto Chest": {
             "area": "",
@@ -342,7 +350,11 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "HF Southeast Grotto Chest": {
             "area": "",
@@ -351,7 +363,11 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "HF Open Grotto Chest": {
             "area": "",
@@ -360,7 +376,11 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "HF Tektite Grotto Freestanding PoH": {
             "area": "",
@@ -369,7 +389,11 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "HF Deku Scrub Grotto": {
             "area": "",
@@ -378,7 +402,11 @@
             "type": "item",
             "settings": [],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "HF Cow Grotto Cow": {
             "area": "",
@@ -387,7 +415,11 @@
             "type": "item",
             "settings": [{"setting": "Cowsanity", "value": "On", "required": true}],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "HF GS Cow Grotto": {
             "area": "",
@@ -400,7 +432,11 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         },
         "HF GS Near Kak Grotto": {
             "area": "",
@@ -413,7 +449,11 @@
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ],
             "visible": true,
-            "check": ""
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0
         }
     }
 }

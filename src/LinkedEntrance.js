@@ -1,14 +1,11 @@
 import React from 'react';
-import Typography from '@material-ui/core/Typography';
-import { Box } from '@material-ui/core';
 import IconButton from '@material-ui/core/IconButton';
 import ClearIcon from '@material-ui/icons/Clear';
 import SubdirectoryArrowRightIcon from '@material-ui/icons/SubdirectoryArrowRight';
-import Link from '@material-ui/core/Link';
 
 import LocationCheck from './LocationCheck'
 import UnknownEntrance from './UnknownEntrance'
-
+import FixedShopCheck from './FixedShopCheck';
 
 class LinkedEntrance extends React.Component {
     buildExitName(entrance) {
@@ -25,6 +22,7 @@ class LinkedEntrance extends React.Component {
             return this.props.allAreas.entrances[eLink].tag;
         }
     }
+
     buildExitEntranceName(entrance) {
         let eLink = this.props.allAreas.entrances[entrance].aLink;
         if (this.props.allAreas.entrances[eLink].tag === "") {
@@ -39,6 +37,7 @@ class LinkedEntrance extends React.Component {
             return null;
         }
     }
+
     buildEntranceName(entrance) {
         if (this.props.allAreas.entrances[entrance].isReverse) {
             if (this.props.allAreas.entrances[this.props.allAreas.entrances[entrance].reverse].tag !== "") {
@@ -53,6 +52,32 @@ class LinkedEntrance extends React.Component {
                 return this.props.allAreas.entrances[entrance].alias;
             }
         }
+    }
+
+    buildEntranceURL(reverseLink) {
+        let href;
+        if ((this.props.allAreas.entrances[reverseLink].type === "overworld") || (this.props.allAreas.entrances[reverseLink].isReverse)) {
+            href = '#' + this.props.allAreas.entrances[reverseLink].area;
+        }
+        if ((this.props.allAreas.entrances[reverseLink].type === "warpsong") || (this.props.allAreas.entrances[reverseLink].type === "spawn") || (this.props.allAreas.entrances[reverseLink].type === "owldrop")) {
+            if (this.props.allAreas.entrances[reverseLink].connector !== "") {
+                if (this.props.allAreas.entrances[this.props.allAreas.entrances[reverseLink].connector].aLink !== "") {
+                    href = '#' + this.props.allAreas.entrances[this.props.allAreas.entrances[this.props.allAreas.entrances[reverseLink].connector].aLink].area;
+                }
+            } else { 
+                href = '#' + this.props.allAreas.entrances[reverseLink].area;
+            }
+        }
+        if (this.props.allAreas.entrances[reverseLink].type === "dungeon") {
+            if (this.props.dungeon) {
+                href = '#' + this.props.allAreas.entrances[reverseLink].area;
+            } else if (this.props.allAreas.entrances[reverseLink].isReverse === true) {
+                href = '#' + this.props.allAreas.entrances[reverseLink].reverseAlias;
+            } else {
+                href = '#' + this.props.allAreas.entrances[reverseLink].alias;
+            }
+        }
+        return href;
     }
 
     render() {
@@ -78,23 +103,32 @@ class LinkedEntrance extends React.Component {
             <React.Fragment key={this.props.ekey}>
                 <div className={this.props.classes.entranceContainer} key={this.props.entrance + "label"}>
                     { this.props.forceVisible ? <SubdirectoryArrowRightIcon /> : null }
-                    <Typography variant="body1" component="h1" className={this.props.classes.entranceLabel}>
+                    <div className={this.props.classes.entranceLabel}>
                         {this.buildEntranceName(this.props.entrance)}
-                    </Typography>
-                    <Link
-                        color="inherit"
-                        href={(((this.props.allAreas.entrances[reverseLink].type === "overworld") || (this.props.allAreas.entrances[reverseLink].isReverse)) ? '#' + this.props.allAreas.entrances[reverseLink].area : null )}
-                        className={(((this.props.allAreas.entrances[reverseLink].type === "overworld") || (this.props.allAreas.entrances[reverseLink].isReverse)) ? null : this.props.classes.falseLinkAnchor )}
+                    </div>
+                    <a
+                        href={this.buildEntranceURL(reverseLink)}
+                        onClick={(this.props.allAreas.entrances[reverseLink].type === "dungeon" || this.props.dungeon) ?
+                                () => this.props.handleDungeonTravel(reverseLink)
+                                : () => {}}
+                        className={(((this.props.allAreas.entrances[reverseLink].type === "overworld")
+                                    || (this.props.allAreas.entrances[reverseLink].type === "warpsong")
+                                    || (this.props.allAreas.entrances[reverseLink].type === "spawn")
+                                    || (this.props.allAreas.entrances[reverseLink].type === "owldrop")
+                                    || (this.props.allAreas.entrances[reverseLink].type === "dungeon")
+                                    || (this.props.allAreas.entrances[reverseLink].isReverse)) ?
+                                        this.props.classes.overworldLinkAnchor
+                                        : this.props.classes.falseLinkAnchor )}
                     >
-                        <Box className={this.props.classes.entranceLink}>
-                            <Typography variant="body1" component="h2" className={this.props.classes.entranceLink1}>
+                        <div className={this.props.classes.entranceLink}>
+                            <div className={this.props.classes.entranceLink1}>
                                 {this.buildExitName(this.props.entrance)}
-                            </Typography>
-                            <Typography variant="caption" component="h3" className={this.props.classes.entranceLink2}>
+                            </div>
+                            <div className={this.props.classes.entranceLink2}>
                                 {this.buildExitEntranceName(this.props.entrance)}
-                            </Typography>
-                        </Box>
-                    </Link>
+                            </div>
+                        </div>
+                    </a>
                     {
                         (oEntrance.shuffled === true) ?
                             <IconButton className={this.props.classes.areaButton} size="small" component="span" onClick={() => this.props.handleUnLink(this.props.entrance)}><ClearIcon /></IconButton> :
@@ -102,6 +136,40 @@ class LinkedEntrance extends React.Component {
                     }
                 </div>
                 {
+                    ((Object.keys(this.props.allEntrances[reverseLink].locations).filter((a) => ((this.props.allAreas.locations[a].visible === false) && this.props.allAreas.locations[a].merchant)).length > 0) && (this.props.showShops === true)) ?
+                        <React.Fragment>
+                            <div className={this.props.classes.shopContainer}>
+                                {
+                                    /* Shop fixed items */
+                                    Object.keys(this.props.allEntrances[reverseLink].locations).filter((a) => ((this.props.allAreas.locations[a].visible === false) && this.props.allAreas.locations[a].merchant)).map((location, k) => {
+                                        return (
+                                            <FixedShopCheck
+                                                key={this.props.entrance + 'shopfixedlocationcheck' + k}
+                                                lkey={this.props.entrance + k}
+                                                location={location}
+                                                allAreas={this.props.allAreas}
+                                                classes={this.props.classes}
+                                                handleCheck={this.props.handleCheck}
+                                                handleUnCheck={this.props.handleUnCheck}
+                                                handleItemMenuOpen={this.props.handleItemMenuOpen}
+                                                handleItemMenuClose={this.props.handleItemMenuClose}
+                                                handleContextMenu={this.props.handleShopContextMenu}
+                                                handleFind={this.props.handleFind}
+                                                toggleWalletTiers={this.props.toggleWalletTiers}
+                                                updateShopPrice={this.props.updateShopPrice}
+                                                showShopInput={this.props.showShopInput}
+                                                showShopRupee={this.props.showShopRupee}
+                                            />
+                                        );
+                                    })
+                                }
+                            </div>
+                            <hr />
+                        </React.Fragment>
+                        : null
+                }
+                {
+                    /* All other interior locations */
                     ((this.props.decoupled === false && !(oneWayTypes.includes(oEntrance.type))) || (this.props.decoupled)) ?
                     Object.keys(this.props.allEntrances[reverseLink].locations).map((location, k) => {
                         if (this.props.allAreas.entrances[reverseLink].type !== 'dungeon' && this.props.allAreas.locations[location].visible === true) {
@@ -114,6 +182,14 @@ class LinkedEntrance extends React.Component {
                                     classes={this.props.classes}
                                     handleCheck={this.props.handleCheck}
                                     handleUnCheck={this.props.handleUnCheck}
+                                    handleItemMenuOpen={this.props.handleItemMenuOpen}
+                                    handleItemMenuClose={this.props.handleItemMenuClose}
+                                    handleContextMenu={this.props.handleContextMenu}
+                                    handleFind={this.props.handleFind}
+                                    toggleWalletTiers={this.props.toggleWalletTiers}
+                                    updateShopPrice={this.props.updateShopPrice}
+                                    showShopInput={this.props.showShopInput}
+                                    showShopRupee={this.props.showShopRupee}
                                 />
                             );
                         } else {
@@ -137,7 +213,22 @@ class LinkedEntrance extends React.Component {
                             allAreas={this.props.allAreas}
                             allEntrances={this.props.allEntrances}
                             handleLink={this.props.handleLink}
+                            handleEntranceMenuOpen={this.props.handleEntranceMenuOpen}
                             handleUnLink={this.props.handleUnLink}
+                            handleCheck={this.props.handleCheck}
+                            handleUnCheck={this.props.handleUnCheck}
+                            handleItemMenuOpen={this.props.handleItemMenuOpen}
+                            handleItemMenuClose={this.props.handleItemMenuClose}
+                            handleContextMenu={this.props.handleContextMenu}
+                            handleShopContextMenu={this.props.handleShopContextMenu}
+                            handleFind={this.props.handleFind}
+                            toggleWalletTiers={this.props.toggleWalletTiers}
+                            updateShopPrice={this.props.updateShopPrice}
+                            showShops={this.props.showShops}
+                            showShopInput={this.props.showShopInput}
+                            showShopRupee={this.props.showShopRupee}
+                            handleDungeonTravel={this.props.handleDungeonTravel}
+                            dungeon={this.props.dungeon}
                             classes={this.props.classes}
                             ekey={this.props.entrance + otherEntrance.ekey + this.props.ekey}
                             key={this.props.entrance + otherEntrance.ekey + this.props.ekey + i}
