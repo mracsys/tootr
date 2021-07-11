@@ -138,7 +138,6 @@ const useStyles = (theme) => ({
     },
     title: {
         flexGrow: 1,
-        cursor: 'pointer',
         padding: theme.spacing(1.5,2),
     },
     titleText: {
@@ -1840,9 +1839,18 @@ class Tracker extends React.Component {
     }
 
     buildEntranceURL(reverseLink) {
-        let href;
+        let href = '#';
         if ((this.state.allAreas.entrances[reverseLink].type === "overworld") || (this.state.allAreas.entrances[reverseLink].isReverse)) {
             href = '#' + this.state.allAreas.entrances[reverseLink].area;
+        } else if (this.state.allAreas.entrances[reverseLink].reverse !== '') {
+            let reReverseLink = this.state.allAreas.entrances[this.state.allAreas.entrances[reverseLink].reverse].aLink;
+            if (reReverseLink !== '') {
+                if ((this.state.allAreas.entrances[reReverseLink].type === "overworld") || (this.state.allAreas.entrances[reReverseLink].isReverse)) {
+                    href = '#' + this.state.allAreas.entrances[reReverseLink].area;
+                } else {
+                    href = this.buildEntranceURL(reReverseLink);
+                }
+            }
         }
         if ((this.state.allAreas.entrances[reverseLink].type === "warpsong") || (this.state.allAreas.entrances[reverseLink].type === "spawn") || (this.state.allAreas.entrances[reverseLink].type === "owldrop")) {
             if (this.state.allAreas.entrances[reverseLink].connector !== "") {
@@ -1865,16 +1873,29 @@ class Tracker extends React.Component {
 
     handleDungeonTravel(entrance) {
         let eType = this.state.allAreas.entrances[entrance].type;
-        if (this.state.settings["View"] === "Overworld" && eType === "dungeon") {
+        if (this.state.settings["View"] === "Overworld" && eType === "dungeon" && this.state.allAreas.entrances[entrance].isReverse === false) {
             this.changeSetting({"target": { "name": "View", "value": "Dungeons" }});
         }
-        if (this.state.settings["View"] === "Dungeons") {
+        if (this.state.settings["View"] === "Dungeons" && (eType !== "dungeon" || (eType === "dungeon" && this.state.allAreas.entrances[entrance].isReverse === true))) {
             this.changeSetting({"target": { "name": "View", "value": "Overworld" }});
         }
         let href = this.buildEntranceURL(entrance);
-        this.setState({
-            delayedURL: href,
-        });
+        if (href !== '#') {
+            this.setState({
+                delayedURL: href,
+            });
+        }
+    }
+
+    isWarpAreaLinked(entrance) {
+        let linked = false;
+        if (this.state.allAreas.entrances[entrance].aLink !== '') {
+            let href = this.buildEntranceURL(this.state.allAreas.entrances[entrance].aLink);
+            if (href !== '#') {
+                linked = true;
+            }
+        }
+        return linked;
     }
 
     handleWarpMenu(area) {
@@ -1958,6 +1979,7 @@ class Tracker extends React.Component {
                         <Dialog
                             open={this.state.alertReset}
                             onClose={() => this.cancelAlert()}
+                            disableScrollLock={true}
                         >
                             <DialogTitle>{"Reset Tracker?"}</DialogTitle>
                             <DialogContent>
@@ -2041,20 +2063,20 @@ class Tracker extends React.Component {
                                 <OotIcon
                                     classes={classes}
                                     itemName="Kokiri Sword"
-                                    className={this.state.allAreas.entrances['Child Spawn -> KF Links House'].aLink !== '' ?
+                                    className={this.isWarpAreaLinked('Child Spawn -> KF Links House') ?
                                         classes.locationMenuIcon :
                                         classes.grayscaleMenuIcon}
-                                    onClick={this.state.allAreas.entrances['Child Spawn -> KF Links House'].aLink !== '' ?
+                                    onClick={this.isWarpAreaLinked('Child Spawn -> KF Links House') ?
                                         () => this.handleDungeonTravel(this.state.allAreas.entrances['Child Spawn -> KF Links House'].aLink)
                                         : null}
                                 />
                                 <OotIcon
                                     classes={classes}
                                     itemName="Master Sword"
-                                    className={this.state.allAreas.entrances['Adult Spawn -> Temple of Time'].aLink !== '' ?
+                                    className={this.isWarpAreaLinked('Adult Spawn -> Temple of Time') ?
                                         classes.locationMenuIcon :
                                         classes.grayscaleMenuIcon}
-                                    onClick={this.state.allAreas.entrances['Adult Spawn -> Temple of Time'].aLink !== '' ?
+                                    onClick={this.isWarpAreaLinked('Adult Spawn -> Temple of Time') ?
                                         () => this.handleDungeonTravel(this.state.allAreas.entrances['Adult Spawn -> Temple of Time'].aLink)
                                         : null}
                                 />
@@ -2062,60 +2084,60 @@ class Tracker extends React.Component {
                                     <OotIcon
                                         classes={classes}
                                         itemName="Minuet of Forest"
-                                        className={this.state.allAreas.entrances['Minuet of Forest Warp -> Sacred Forest Meadow'].aLink !== '' ?
+                                        className={this.isWarpAreaLinked('Minuet of Forest Warp -> Sacred Forest Meadow') ?
                                             classes.locationMenuIcon :
                                             classes.grayscaleMenuIcon}
-                                        onClick={this.state.allAreas.entrances['Minuet of Forest Warp -> Sacred Forest Meadow'].aLink !== '' ?
+                                        onClick={this.isWarpAreaLinked('Minuet of Forest Warp -> Sacred Forest Meadow') ?
                                             () => this.handleDungeonTravel(this.state.allAreas.entrances['Minuet of Forest Warp -> Sacred Forest Meadow'].aLink)
                                             : null}
                                     />
                                     <OotIcon
                                         classes={classes}
                                         itemName="Bolero of Fire"
-                                        className={this.state.allAreas.entrances['Bolero of Fire Warp -> DMC Central Local'].aLink !== '' ?
+                                        className={this.isWarpAreaLinked('Bolero of Fire Warp -> DMC Central Local') ?
                                             classes.locationMenuIcon :
                                             classes.grayscaleMenuIcon}
-                                        onClick={this.state.allAreas.entrances['Bolero of Fire Warp -> DMC Central Local'].aLink !== '' ?
+                                        onClick={this.isWarpAreaLinked('Bolero of Fire Warp -> DMC Central Local') ?
                                             () => this.handleDungeonTravel(this.state.allAreas.entrances['Bolero of Fire Warp -> DMC Central Local'].aLink)
                                             : null}
                                     />
                                     <OotIcon
                                         classes={classes}
                                         itemName="Serenade of Water"
-                                        className={this.state.allAreas.entrances['Serenade of Water Warp -> Lake Hylia'].aLink !== '' ?
+                                        className={this.isWarpAreaLinked('Serenade of Water Warp -> Lake Hylia') ?
                                             classes.locationMenuIcon :
                                             classes.grayscaleMenuIcon}
-                                        onClick={this.state.allAreas.entrances['Serenade of Water Warp -> Lake Hylia'].aLink !== '' ?
+                                        onClick={this.isWarpAreaLinked('Serenade of Water Warp -> Lake Hylia') ?
                                             () => this.handleDungeonTravel(this.state.allAreas.entrances['Serenade of Water Warp -> Lake Hylia'].aLink)
                                             : null}
                                     />
                                     <OotIcon
                                         classes={classes}
                                         itemName="Requiem of Spirit"
-                                        className={this.state.allAreas.entrances['Requiem of Spirit Warp -> Desert Colossus'].aLink !== '' ?
+                                        className={this.isWarpAreaLinked('Requiem of Spirit Warp -> Desert Colossus') ?
                                             classes.locationMenuIcon :
                                             classes.grayscaleMenuIcon}
-                                        onClick={this.state.allAreas.entrances['Requiem of Spirit Warp -> Desert Colossus'].aLink !== '' ?
+                                        onClick={this.isWarpAreaLinked('Requiem of Spirit Warp -> Desert Colossus') ?
                                             () => this.handleDungeonTravel(this.state.allAreas.entrances['Requiem of Spirit Warp -> Desert Colossus'].aLink)
                                             : null}
                                     />
                                     <OotIcon
                                         classes={classes}
                                         itemName="Nocturne of Shadow"
-                                        className={this.state.allAreas.entrances['Nocturne of Shadow Warp -> Graveyard Warp Pad Region'].aLink !== '' ?
+                                        className={this.isWarpAreaLinked('Nocturne of Shadow Warp -> Graveyard Warp Pad Region') ?
                                             classes.locationMenuIcon :
                                             classes.grayscaleMenuIcon}
-                                        onClick={this.state.allAreas.entrances['Nocturne of Shadow Warp -> Graveyard Warp Pad Region'].aLink !== '' ?
+                                        onClick={this.isWarpAreaLinked('Nocturne of Shadow Warp -> Graveyard Warp Pad Region') ?
                                             () => this.handleDungeonTravel(this.state.allAreas.entrances['Nocturne of Shadow Warp -> Graveyard Warp Pad Region'].aLink)
                                             : null}
                                     />
                                     <OotIcon
                                         classes={classes}
                                         itemName="Prelude of Light"
-                                        className={this.state.allAreas.entrances['Prelude of Light Warp -> Temple of Time'].aLink !== '' ?
+                                        className={this.isWarpAreaLinked('Prelude of Light Warp -> Temple of Time') ?
                                             classes.locationMenuIcon :
                                             classes.grayscaleMenuIcon}
-                                        onClick={this.state.allAreas.entrances['Prelude of Light Warp -> Temple of Time'].aLink !== '' ?
+                                        onClick={this.isWarpAreaLinked('Prelude of Light Warp -> Temple of Time') ?
                                             () => this.handleDungeonTravel(this.state.allAreas.entrances['Prelude of Light Warp -> Temple of Time'].aLink)
                                             : null}
                                     />
