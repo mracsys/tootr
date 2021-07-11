@@ -56,7 +56,7 @@ class LinkedEntrance extends React.Component {
 
     buildEntranceURL(reverseLink) {
         let href;
-        if ((this.props.allAreas.entrances[reverseLink].type === "overworld") || (this.props.allAreas.entrances[reverseLink].isReverse)) {
+        if ((this.props.allAreas.entrances[reverseLink].type === "overworld") || (this.props.allAreas.entrances[reverseLink].isReverse) || (this.props.allAreas.entrances[reverseLink].type === "extra")) {
             href = '#' + this.props.allAreas.entrances[reverseLink].area;
         }
         if ((this.props.allAreas.entrances[reverseLink].type === "warpsong") || (this.props.allAreas.entrances[reverseLink].type === "spawn") || (this.props.allAreas.entrances[reverseLink].type === "owldrop")) {
@@ -114,6 +114,7 @@ class LinkedEntrance extends React.Component {
                                     || (this.props.allAreas.entrances[reverseLink].type === "spawn")
                                     || (this.props.allAreas.entrances[reverseLink].type === "owldrop")
                                     || (this.props.allAreas.entrances[reverseLink].type === "dungeon")
+                                    || (this.props.allAreas.entrances[reverseLink].type === "extra")
                                     || (this.props.allAreas.entrances[reverseLink].isReverse)) ?
                                         this.props.classes.overworldLinkAnchor
                                         : this.props.classes.falseLinkAnchor )}

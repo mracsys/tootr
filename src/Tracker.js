@@ -1386,18 +1386,21 @@ class Tracker extends React.Component {
                 entrances[oneType][aOneWay].forEach(eOneWay => {
                     if (allAreas.entrances[eOneWay].aLink !== "" && allAreas[allAreas.entrances[eOneWay].oneWayArea].show === true) {
                         let eLinked = allAreas.entrances[eOneWay].aLink;
+                        let altLinked = true;
+                        // switch to ToT entrance for Prelude
                         if (allAreas.entrances[eLinked].oneWay === true && allAreas.entrances[eLinked].connector !== "") {
                             if (allAreas.entrances[allAreas.entrances[eLinked].connector].aLink !== "") {
-                                eLinked = allAreas.entrances[eLinked].connector;
-                            }
+                                eLinked = allAreas.entrances[allAreas.entrances[eLinked].connector].aLink;
+                            } else { altLinked = false }
                         }
+                        // use interior exit for area if interior is linked
                         if (allAreas.entrances[eLinked].isReverse === false && allAreas.entrances[eLinked].type !== "overworld" && allAreas.entrances[eLinked].oneWay === false) {
                             if (allAreas.entrances[allAreas.entrances[eLinked].reverse].aLink !== "") {
-                                eLinked = allAreas.entrances[eLinked].reverse;
-                            }
+                                eLinked = allAreas.entrances[allAreas.entrances[eLinked].reverse].aLink;
+                            } else { altLinked = false }
                         }
-                        if (allAreas.entrances[eLinked].isReverse === true || allAreas.entrances[eLinked].type === "overworld" ||
-                        (allAreas.entrances[eLinked].oneWay === true && allAreas.entrances[eLinked].oneWayArea !== "")) {
+                        if (altLinked && (allAreas.entrances[eLinked].isReverse === true || allAreas.entrances[eLinked].type === "overworld" ||
+                        (allAreas.entrances[eLinked].oneWay === true && (allAreas.entrances[eLinked].oneWayArea !== "" || allAreas.entrances[eLinked].type === "extra")))) {
                             shownAreas[allAreas.entrances[eLinked].area].show = true;
                             allAreas[allAreas.entrances[eLinked].area].show = true;
                         }
