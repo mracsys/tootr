@@ -1548,8 +1548,8 @@ class Tracker extends React.Component {
             let tagEntrances = (Object.filterTags(areas.entrances, (eTag, eTagRep, eLink) => (eTag === areas.entrances[eCategory].tag && eTagRep === false && eLink === "")));
             if (tagEntrances.length !== 0) {
                 areas.entrances[tagEntrances[0]].tagRep = true;
+                areas.entrances[eCategory].tagRep = false;
             }
-            areas.entrances[eCategory].tagRep = false;
         }
         this.findVisibleAreas(shownAreas, areas, entrances);
         entrancePools = this.loadEntrancePools(this.state.settings, this.state.allEntrances, areas);

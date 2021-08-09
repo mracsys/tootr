@@ -51,7 +51,8 @@ class EntranceMenu extends React.Component {
                                             entranceList[b].tag;
                                 return aName.localeCompare(bName);
                             }).map((subArea, j) => {
-                                if ((this.props.allAreas.entrances[subArea].tagRep || this.props.allAreas.entrances[subArea].tag === "")) {
+                                if ((this.props.allAreas.entrances[subArea].tagRep || this.props.allAreas.entrances[subArea].tag === "") &&
+                                (!(this.props.oneWay) || (this.props.oneWay && this.props.allAreas.entrances[subArea].oneWayELink === ""))) {
                                     return (<div
                                                 key={this.props.pool + "option" + j}
                                                 className={this.props.classes.entranceText}

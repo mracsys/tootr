@@ -180,7 +180,7 @@
         "Spirit Temple First Mirror Left Chest": {
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
-            "alias": "Rotating Mirro Chest 1",
+            "alias": "Rotating Mirror Chest 1",
             "type": "item",
             "settings": [{"setting": "Spirit Temple MQ", "value": false, "required": true}],
             "visible": true,
