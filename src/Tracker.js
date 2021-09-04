@@ -1281,6 +1281,25 @@ class Tracker extends React.Component {
             eOverworldInteriors[area].push(...((allEntrances.reversespecialInterior[area])))
         });
 
+        let eOverworldDungeons = {};
+        if (settings["Shuffle Dungeons"] === 'On' && (settings['Mixed Pools'] === 'On' || settings['Mixed Pools'] === 'Indoor')) {
+            Object.keys(allEntrances.reversedungeon).forEach(area => {
+                if (!(Object.keys(eOverworldDungeons).includes(area))) {
+                    //if (!(Object.keys(eOverworld).includes(area))) {
+                        eOverworldDungeons[area] = [];
+                    //} else {
+                    //    eOverworldInteriors[area] = clone(eOverworld[area]);
+                    //}
+                }
+                eOverworldDungeons[area].push(...((allEntrances.reversedungeon[area])))
+            });
+            // Hack to hide Ganon's Castle exit from warp menus
+            let iGC = eOverworldDungeons['Castle Grounds'].indexOf('Ganons Castle -> Ganons Castle Grounds');
+            if (iGC > -1) {
+                eOverworldDungeons['Castle Grounds'].splice(iGC, 1);
+            }
+        }
+
         let eOwlDrops = [];
         Object.keys(allEntrances.owldrop).forEach(area => {
             eOwlDrops.push(...((allEntrances.owldrop[area])));
@@ -1304,8 +1323,8 @@ class Tracker extends React.Component {
         }
 
         let oExtOwlDrops = mergeWith(cloneDeep(oWarpSongs), cloneDeep(eOverworld), cloneDeep(oOwlDrops), mergeAreas);
-        let oExtWarpSongs = mergeWith(cloneDeep(oSpawnPoints), cloneDeep(oWarpSongs), cloneDeep(eOverworld), cloneDeep(eOverworldInteriors), cloneDeep(oInteriors), cloneDeep(oOwlDrops), mergeAreas);
-        let oExtSpawnPoints = mergeWith(cloneDeep(oSpawnPoints), cloneDeep(oWarpSongs), cloneDeep(eOverworld), cloneDeep(eOverworldInteriors), cloneDeep(oInteriors), cloneDeep(oOwlDrops), mergeAreas);
+        let oExtWarpSongs = mergeWith(cloneDeep(oSpawnPoints), cloneDeep(oWarpSongs), cloneDeep(eOverworld), cloneDeep(eOverworldInteriors), cloneDeep(oInteriors), cloneDeep(oOwlDrops), cloneDeep(eOverworldDungeons), mergeAreas);
+        let oExtSpawnPoints = mergeWith(cloneDeep(oSpawnPoints), cloneDeep(oWarpSongs), cloneDeep(eOverworld), cloneDeep(eOverworldInteriors), cloneDeep(oInteriors), cloneDeep(oOwlDrops), cloneDeep(eOverworldDungeons), mergeAreas);
         entrances = {
                         "spawn": oExtSpawnPoints,
                         "owldrop": oExtOwlDrops,
@@ -2037,6 +2056,8 @@ class Tracker extends React.Component {
                             connector={this.state.entranceConnector === 'true'}
                             title={this.state.entranceToLink ? this.state.allAreas.entrances[this.state.entranceToLink].area : ''}
                             oneWay={this.state.entranceToLink ? this.state.allAreas.entrances[this.state.entranceToLink].oneWay : false}
+                            decoupled={this.state.settings["Decoupled Entrances"] === "On"}
+                            isReverse={this.state.entranceToLink ? this.state.allAreas.entrances[this.state.entranceToLink].isReverse : false}
                             sourceEntrance={this.state.entranceToLink}
                             classes={classes}
                             id="globalEntranceMenu"
