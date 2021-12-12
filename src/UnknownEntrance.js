@@ -5,6 +5,7 @@ import LinkedEntrance from './LinkedEntrance'
 class UnknownEntrance extends React.Component {
     render() {
         let eType = this.props.allAreas.entrances[this.props.entrance].type;
+        let eExit = this.props.allAreas.entrances[this.props.entrance].aLink;
         if (((this.props.title === "Spawn Points" && eType === "spawn") || (this.props.title === "Warp Songs" && eType === "warpsong") || (eType !== "spawn" && eType !== "warpsong" && eType !== "extra")) &&
            (this.props.allAreas.entrances[this.props.entrance].isReverse === false || this.props.forceVisible === true || this.props.allAreas.entrances[this.props.entrance].oneWay === true || this.props.allAreas.entrances[this.props.entrance].connector !== "" || this.props.dungeon) &&
            ((this.props.entrance === 'GV Lower Stream -> Lake Hylia' && this.props.title === this.props.allAreas.entrances[this.props.entrance].oneWayArea) || (this.props.entrance !== 'GV Lower Stream -> Lake Hylia'))) {
@@ -27,11 +28,18 @@ class UnknownEntrance extends React.Component {
                             handleEntranceMenuOpen={this.props.handleEntranceMenuOpen}
                             forceVisible={this.props.forceVisible}
                             classes={this.props.classes}
+                            scrollRef={this.props.scrollRef}
                             ekey={this.props.ekey}
                         />
                     </React.Fragment>
                 );
-            } else {
+            } else if (Object.keys(this.props.allEntrances[this.props.allAreas.entrances[this.props.entrance].aLink].locations).filter((l) => (this.props.allAreas.locations[l].check === '' || this.props.allAreas[this.props.title].collapse === 'none')).length > 0 ||
+              ['overworld','dungeon','warpsong','extra','spawn','owldrop'].includes(this.props.allEntrances[this.props.allAreas.entrances[this.props.entrance].aLink].type) ||
+              this.props.allAreas.entrances[this.props.allAreas.entrances[this.props.entrance].aLink].isReverse === true ||
+              ['warpsong','spawn','owldrop'].includes(this.props.allEntrances[this.props.entrance].type) ||
+              this.props.allAreas[this.props.title].collapse === 'none' ||
+              (this.props.allAreas.entrances[eExit].connector !== "" && (this.props.allAreas.entrances[this.props.allAreas.entrances[eExit].connector].shuffled || this.props.allAreas.entrances[eExit].shuffled)) || this.props.connector ||
+              (this.props.decoupled && this.props.allAreas.entrances[this.props.entrance].shuffled)) {
                 return (
                     <React.Fragment>
                         { this.props.forceVisible === false ? <hr /> : null }
@@ -41,6 +49,7 @@ class UnknownEntrance extends React.Component {
                             entrances={this.props.entrances}
                             entrancePools={this.props.entrancePools}
                             connector={this.props.connector}
+                            renderedConnectors={this.props.renderedConnectors}
                             oneWayEntrancePools={this.props.oneWayEntrancePools}
                             mixedPools={this.props.mixedPools}
                             decoupled={this.props.decoupled}
@@ -65,10 +74,13 @@ class UnknownEntrance extends React.Component {
                             forceVisible={this.props.forceVisible}
                             dungeon={this.props.dungeon}
                             classes={this.props.classes}
+                            scrollRef={this.props.scrollRef}
                             ekey={this.props.ekey}
                         />
                     </React.Fragment>
                 );
+            } else {
+                return null;
             }
         } else { return null }
     }

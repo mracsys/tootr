@@ -84,17 +84,23 @@ class LinkedEntrance extends React.Component {
         let interiors = ['interior','specialInterior','grotto','grave','dungeon'];
         let oneWayTypes = ['spawn','warpsong','owldrop'];
         let otherEntrances = [];
-        if (this.props.connector === false) {
+        if (this.props.connector === false || this.props.decoupled) {
             if ((interiors.includes(this.props.allAreas.entrances[reverseLink].type) &&
             (oneWayTypes.includes(oEntrance.type) || this.props.decoupled) &&
-            !(this.props.allAreas.entrances[reverseLink].isReverse)) && (this.props.allAreas.entrances[reverseLink].shuffled === true || this.props.decoupled)) {
-                otherEntrances.push({"entrance": this.props.allAreas.entrances[reverseLink].reverse,"ekey":"Reverse","connector": false})
+            !(this.props.allAreas.entrances[reverseLink].isReverse)) &&
+            (this.props.allAreas.entrances[reverseLink].shuffled === true) &&
+            !(this.props.renderedConnectors.includes(this.props.allAreas.entrances[reverseLink].reverse))) {
+                otherEntrances.push({"entrance": this.props.allAreas.entrances[reverseLink].reverse,"ekey":"Reverse","connector": false});
+                this.props.renderedConnectors.push(this.props.allAreas.entrances[reverseLink].reverse);
             }
-            if (this.props.allAreas.entrances[reverseLink].connector !== "" &&
+            if ((this.props.allAreas.entrances[reverseLink].connector !== "" &&
             this.props.allAreas.entrances[this.props.allAreas.entrances[reverseLink].connector].type !== 'overworld' &&
             (this.props.allAreas.entrances[this.props.allAreas.entrances[reverseLink].connector].shuffled === true || 
-            this.props.allAreas.entrances[this.props.allAreas.entrances[reverseLink].connector].eLink === "")) {
+            this.props.allAreas.entrances[this.props.allAreas.entrances[reverseLink].connector].eLink === "" ||
+            (this.props.allAreas.entrances[this.props.allAreas.entrances[reverseLink].connector].area !== this.props.allAreas.entrances[reverseLink].area &&
+            !(oneWayTypes.includes(oEntrance.type))))) && !(this.props.renderedConnectors.includes(this.props.allAreas.entrances[reverseLink].connector))) {
                 otherEntrances.push({"entrance": this.props.allAreas.entrances[reverseLink].connector,"ekey":"ReverseConnector","connector": true});
+                this.props.renderedConnectors.push(this.props.allAreas.entrances[reverseLink].connector);
             }
         }
         return (
@@ -130,7 +136,7 @@ class LinkedEntrance extends React.Component {
                     </a>
                     {
                         (oEntrance.shuffled === true) ?
-                            <IconButton className={this.props.classes.areaButton} size="small" component="span" onClick={() => this.props.handleUnLink(this.props.entrance)}><ClearIcon /></IconButton> :
+                            <IconButton className={this.props.classes.areaButton} size="small" component="span" onClick={() => this.props.handleUnLink(this.props.entrance, this.props.scrollRef)}><ClearIcon /></IconButton> :
                             null
                     }
                 </div>
@@ -170,7 +176,7 @@ class LinkedEntrance extends React.Component {
                 {
                     /* All other interior locations */
                     ((this.props.decoupled === false && !(oneWayTypes.includes(oEntrance.type))) || (this.props.decoupled)) ?
-                    Object.keys(this.props.allEntrances[reverseLink].locations).map((location, k) => {
+                    Object.keys(this.props.allEntrances[reverseLink].locations).filter((l) => (this.props.allEntrances[reverseLink].locations[l].check === '' || this.props.allAreas[this.props.title].collapse === 'none')).map((location, k) => {
                         if (this.props.allAreas.entrances[reverseLink].type !== 'dungeon' && this.props.allAreas.locations[location].visible === true) {
                             return (
                                 <LocationCheck
@@ -205,6 +211,7 @@ class LinkedEntrance extends React.Component {
                             entrance={otherEntrance.entrance}
                             entrances={this.props.entrances}
                             connector={otherEntrance.connector}
+                            renderedConnectors={this.props.renderedConnectors}
                             entrancePools={this.props.entrancePools}
                             oneWayEntrancePools={this.props.oneWayEntrancePools}
                             mixedPools={this.props.mixedPools}
@@ -229,6 +236,7 @@ class LinkedEntrance extends React.Component {
                             handleDungeonTravel={this.props.handleDungeonTravel}
                             dungeon={this.props.dungeon}
                             classes={this.props.classes}
+                            scrollRef={this.props.scrollRef}
                             ekey={this.props.entrance + otherEntrance.ekey + this.props.ekey}
                             key={this.props.entrance + otherEntrance.ekey + this.props.ekey + i}
                         />

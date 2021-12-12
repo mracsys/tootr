@@ -37,6 +37,7 @@ class UnLinkedEntrance extends React.Component {
 
     render() {
         let entrancePool = this.selectEntrancePool(this.props.entrance);
+        let scrollConnector = (this.props.connector) ? 'connector' : '';
         return (
             <div className={this.props.classes.entranceContainer} key={this.props.ekey}>
                 { this.props.forceVisible ? <SubdirectoryArrowRightIcon /> : null }
@@ -47,7 +48,9 @@ class UnLinkedEntrance extends React.Component {
                      data-source={this.props.entrance}
                      data-connector={this.props.connector}
                      data-etype={entrancePool}
-                     onClick={this.props.handleEntranceMenuOpen}
+                     data-el-id={this.props.entrance + 'scroll' + scrollConnector}
+                     id={this.props.entrance + 'scroll' + scrollConnector}
+                     onClick={(e) => this.props.handleEntranceMenuOpen(e, this.props.scrollRef)}
                 >
                     <span>Not Checked</span><ArrowDropDownIcon />
                 </div>

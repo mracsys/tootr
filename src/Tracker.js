@@ -89,6 +89,14 @@ const useStyles = (theme) => ({
     root: {
         display: 'flex',
     },
+    scrollControl: {
+        display: 'block',
+        width: 0,
+        height: 0,
+        margin: 0,
+        padding: 0,
+        border: 0,
+    },
     appBar: {
         zIndex: theme.zIndex.drawer + 1,
         transition: theme.transitions.create(['margin', 'width'], {
@@ -252,15 +260,20 @@ const useStyles = (theme) => ({
         backgroundColor: yellow[200],
         display: 'flex',
         'flex-direction': 'row',
-        padding: theme.spacing(1, 2),
+        padding: theme.spacing(1, 2, 1, 0.5),
         alignItems: 'center',
     },
     areaTitleText: {
-        flexGrow: 1,
         fontFamily: 'Roboto,sans-serif',
         fontSize: '1.25rem',
         fontWeight: 500,
         lineHeight: 1.6,
+    },
+    areaTitleCollapse: {
+        flexGrow: 1,
+        cursor: 'pointer',
+        display: 'flex',
+        alignItems: 'center',
     },
     mqSwitchLabel: {
         marginLeft: theme.spacing(3),
@@ -719,6 +732,9 @@ const useStyles = (theme) => ({
             display: 'none',
         },
     },
+    collapseArea: {
+        cursor: 'pointer',
+    }
 });
 
 //const light = createMuiTheme({
@@ -733,7 +749,7 @@ const useStyles = (theme) => ({
 //    },
 //});
 
-const trackerVersion = '0.2.0';
+const trackerVersion = '0.3.0';
 
 class Tracker extends React.Component {
     constructor(props) {
@@ -746,6 +762,8 @@ class Tracker extends React.Component {
         this.resetState = this.resetState.bind(this);
         this.cancelAlert = this.cancelAlert.bind(this);
         this.toggleMQ = this.toggleMQ.bind(this);
+        this.toggleCollapse = this.toggleCollapse.bind(this);
+        this.toggleCollapseReverse = this.toggleCollapseReverse.bind(this);
         this.handleItemMenuOpen = this.handleItemMenuOpen.bind(this);
         this.handleItemMenuClose = this.handleItemMenuClose.bind(this);
         this.handleShopItemMenuOpen = this.handleShopItemMenuOpen.bind(this);
@@ -758,6 +776,9 @@ class Tracker extends React.Component {
         this.handleDungeonTravel = this.handleDungeonTravel.bind(this);
         this.handleWarpMenu = this.handleWarpMenu.bind(this);
         this.toggleAreaView = this.toggleAreaView.bind(this);
+        this.setRef = this.setRef.bind(this);
+
+        this.scroller = {};
 
         let settings = !!(ls.get('RandoSettings')) ? ls.get('RandoSettings') : rsl.Settings;
         if (!!(ls.get('TrackerVersion'))) {
@@ -791,6 +812,7 @@ class Tracker extends React.Component {
         this.contextMenuHandler = new ContextMenuHandler(this.handleItemMenuOpen);
         this.shopContextMenuHandler = new ContextMenuHandler(this.handleShopItemMenuOpen);
         this.areaMenuHandler = new ContextMenuHandler(this.toggleAreaView);
+        this.reverseCollapseHandler = new ContextMenuHandler(this.toggleCollapseReverse);
 
         this.state = {
             enabled_settings: devr.Settings,
@@ -815,7 +837,13 @@ class Tracker extends React.Component {
             expandSongMenu: false,
             entranceType: "",
             delayedURL: "",
+            entranceRef: null,
+            scrollY: null,
         };
+    }
+
+    setRef(index, element) {
+        this.scroller[index] = element;
     }
 
     // When swapping between Overworld and Dungeon views, anchors don't
@@ -827,6 +855,19 @@ class Tracker extends React.Component {
                 delayedURL: "",
             });
         }
+        if (this.state.scrollY !== null && Object.keys(this.scroller).includes(this.state.entranceRef)) {
+            let eRef = this.scroller[this.state.entranceRef];
+            let rect = eRef.getBoundingClientRect();
+            let oTop = rect.top;
+            let scrollY = this.state.scrollY;
+            window.scrollTo({
+                top: 2 * window.scrollY + oTop - scrollY,
+            })
+            this.setState({
+                scrollY: null,
+                entranceRef: null,
+            })
+        }
     }
 
     componentDidUpdate() {
@@ -835,6 +876,19 @@ class Tracker extends React.Component {
             this.setState({
                 delayedURL: "",
             });
+        }
+        if (this.state.scrollY !== null && Object.keys(this.scroller).includes(this.state.entranceRef)) {
+            let eRef = this.scroller[this.state.entranceRef];
+            let rect = eRef.getBoundingClientRect();
+            let oTop = rect.top;
+            let scrollY = this.state.scrollY;
+            window.scrollTo({
+                top: 2 * window.scrollY + oTop - scrollY,
+            })
+            this.setState({
+                scrollY: null,
+                entranceRef: null,
+            })
         }
     }
 
@@ -884,6 +938,8 @@ class Tracker extends React.Component {
         // change the global state variables
         let allAreas = cloneDeep(stateAreas);
         let rEntrances = {};
+        let oConnectors = {};
+        let eConnector;
         let eEntrance;
         let rEntrance;
         Object.keys(allAreas.entrances).forEach(entrance => {
@@ -901,9 +957,15 @@ class Tracker extends React.Component {
                 eEntrance[rEntrance].lKey = ""
                 rEntrances = merge(rEntrances, eEntrance);
             }
+            if (allAreas.entrances[entrance].connector !== '') {
+                eConnector = {};
+                eConnector[entrance] = clone(allAreas.entrances[entrance]);
+                oConnectors = merge(oConnectors, eConnector);
+            }
         });
         let areas = { entrances: rEntrances };
-        return merge(allAreas, areas);
+        let connectors = { connectors: oConnectors };
+        return merge(allAreas, areas, connectors);
     }
 
     getShuffledTypes(settings) {
@@ -961,14 +1023,14 @@ class Tracker extends React.Component {
                 if ((!(allAreas.hasOwnProperty(eArea))) && init) {
                     if (!(allAreas.hasOwnProperty(eArea))) {
                         if (subArea.oneWay && subArea.oneWayArea !== "" && subArea.type !== "overworld") {
-                            allAreas[eArea] = { show: true, dungeon: false, entrances: {}, locations: {} };
+                            allAreas[eArea] = { show: true, dungeon: false, collapse: 'some', entrances: {}, locations: {} };
                         } else {
-                            allAreas[eArea] = { show: false, dungeon: false, entrances: {}, locations: {} };
+                            allAreas[eArea] = { show: false, dungeon: false, collapse: 'some', entrances: {}, locations: {} };
                         }
                     }
                 }
                 if (!(areas.hasOwnProperty(eArea))) {
-                    areas[eArea] = { show: allAreas[eArea].show, dungeon: false, entrances: {}, locations: {} };
+                    areas[eArea] = { show: allAreas[eArea].show, dungeon: false, collapse: allAreas[eArea].collapse, entrances: {}, locations: {} };
                 }
                 eEntrance = {};
                 eEntrance[entrance] = allAreas.entrances[entrance];
@@ -1004,10 +1066,10 @@ class Tracker extends React.Component {
                     eArea = allAreas.locations[location].area;
                     if (eArea !== "") {
                         if (!(allAreas.hasOwnProperty(eArea)) && init) { 
-                            allAreas[eArea] = { show: false, dungeon: false, entrances: {}, locations: {} };
+                            allAreas[eArea] = { show: false, dungeon: false, collapse: 'some', entrances: {}, locations: {} };
                         }
                         if (!(areas.hasOwnProperty(eArea))) {
-                            areas[eArea] = { show: allAreas[eArea].show, dungeon: false, entrances: {}, locations: {} };
+                            areas[eArea] = { show: allAreas[eArea].show, dungeon: false, collapse: allAreas[eArea].collapse, entrances: {}, locations: {} };
                         }
                         eLocation = {};
                         eLocation[location] = allAreas.locations[location];
@@ -1015,10 +1077,10 @@ class Tracker extends React.Component {
                     } else if (allAreas.entrances[allAreas.locations[location].lKey].type === 'dungeon') {
                         eDungeon = allAreas.entrances[allAreas.locations[location].lKey].alias;
                         if (!(allAreas.hasOwnProperty(eDungeon)) && init) { 
-                            allAreas[eDungeon] = { show: false, dungeon: true, entrances: {}, locations: {} };
+                            allAreas[eDungeon] = { show: false, dungeon: true, collapse: 'some', entrances: {}, locations: {} };
                         }
                         if (!(areas.hasOwnProperty(eDungeon))) {
-                            areas[eDungeon] = { show: false, dungeon: true, entrances: {}, locations: {} };
+                            areas[eDungeon] = { show: false, dungeon: true, collapse: 'some', entrances: {}, locations: {} };
                         }
                         eLocation = {};
                         eLocation[location] = allAreas.locations[location];
@@ -1030,10 +1092,10 @@ class Tracker extends React.Component {
                 } else {
                     eDungeon = "Ganon's Castle"
                     if (!(allAreas.hasOwnProperty(eDungeon)) && init) { 
-                        allAreas[eDungeon] = { show: false, dungeon: true, entrances: {}, locations: {} };
+                        allAreas[eDungeon] = { show: false, dungeon: true, collapse: 'some', entrances: {}, locations: {} };
                     }
                     if (!(areas.hasOwnProperty(eDungeon))) {
-                        areas[eDungeon] = { show: false, dungeon: true, entrances: {}, locations: {} };
+                        areas[eDungeon] = { show: false, dungeon: true, collapse: 'some', entrances: {}, locations: {} };
                     }
                     eLocation = {};
                     eLocation[location] = allAreas.locations[location];
@@ -1381,6 +1443,47 @@ class Tracker extends React.Component {
         this.changeSetting({"target":{"name":dungeon,"value":isMQ}});
     }
 
+    toggleCollapse(area) {
+        let allAreas = cloneDeep(this.state.allAreas);
+        let areas = cloneDeep(this.state.areas);
+        let collapse = areas[area].collapse;
+        if (collapse === 'none') {
+            collapse = 'some';
+        } else if (collapse === 'some') {
+            collapse = 'all';
+        } else {
+            collapse = 'none';
+        }
+        allAreas[area].collapse = collapse;
+        areas[area].collapse = collapse;
+        this.setState({
+            areas: areas,
+            allAreas: allAreas,
+        });
+        ls.set('AllAreas', allAreas);
+    }
+
+    toggleCollapseReverse(areaDiv) {
+        let allAreas = cloneDeep(this.state.allAreas);
+        let areas = cloneDeep(this.state.areas);
+        let area = areaDiv.innerText;
+        let collapse = areas[area].collapse;
+        if (collapse === 'none') {
+            collapse = 'all';
+        } else if (collapse === 'some') {
+            collapse = 'none';
+        } else {
+            collapse = 'some';
+        }
+        allAreas[area].collapse = collapse;
+        areas[area].collapse = collapse;
+        this.setState({
+            areas: areas,
+            allAreas: allAreas,
+        });
+        ls.set('AllAreas', allAreas);
+    }
+
     findVisibleAreas(shownAreas, allAreas, entrances, settings=this.state.settings) {
         let alwaysOneWay = ["spawn","warpsong","owldrop","extra"];
         let decoupled = settings["Decoupled Entrances"] === "On";
@@ -1427,6 +1530,17 @@ class Tracker extends React.Component {
                 });
             });
         });
+        // Another pass for connectors that link to or from unshuffled entrances
+        let connectorOverride = [];
+        Object.keys(allAreas.connectors).forEach(connector => {
+            let exit = allAreas.entrances[connector].connector
+            if (allAreas.entrances[connector].eLink !== '' && allAreas.entrances[exit].aLink !== '' &&
+               (((allAreas.entrances[connector].shuffled || allAreas.entrances[exit].shuffled) && (!decoupled || allAreas.entrances[allAreas.entrances[exit].aLink].isReverse)) || allAreas[allAreas.entrances[connector].area].show)) {
+                shownAreas[allAreas.entrances[allAreas.entrances[exit].aLink].area].show = true;
+                allAreas[allAreas.entrances[allAreas.entrances[exit].aLink].area].show = true;
+                connectorOverride.push(allAreas.entrances[allAreas.entrances[exit].aLink].area);
+            }
+        });
 
         // Hard code Gerudo Valley to Lake with decoupled off
         if (shownAreas['Gerudo Valley'].show === true && (settings['Decoupled Entrances'] === 'Off' || settings['Shuffle Overworld'] === 'Off')) {
@@ -1458,8 +1572,9 @@ class Tracker extends React.Component {
                 let shownLocations = (Object.hideAreaLocations(shownAreas[targetArea].entrances, (shuffled, type) => ( (shuffled || type === 'spawn') && type !== 'extra' )));
                 // Special case for unshuffled spawn points with shuffled interiors all
                 // due to the connector implementation
-                if ((shownEntrances.length === 0 && ((settings["Show Locations"] === "Yes" && shownLocations.length !== 0) || settings["Show Locations"] !== "Yes")) ||
-                (targetArea === 'Spawn Points' && settings["Shuffle Spawn Points"] === "Off" && settings["Shuffle Interiors"] !== "All")) {
+                if (((shownEntrances.length === 0 && ((settings["Show Locations"] === "Yes" && shownLocations.length !== 0) || settings["Show Locations"] !== "Yes")) ||
+                (targetArea === 'Spawn Points' && settings["Shuffle Spawn Points"] === "Off" && settings["Shuffle Interiors"] !== "All")) &&
+                !(connectorOverride.includes(targetArea))) {
                     shownAreas[targetArea].show = false;
                     allAreas[targetArea].show = false;
                 }
@@ -1572,16 +1687,21 @@ class Tracker extends React.Component {
         }
         this.findVisibleAreas(shownAreas, areas, entrances);
         entrancePools = this.loadEntrancePools(this.state.settings, this.state.allEntrances, areas);
+        let eRef = this.scroller[this.state.entranceRef];
+        let rect = eRef.getBoundingClientRect();
+        let oTop = rect.top;
+        let scrollY = oTop + window.scrollY;
         this.setState({
             allAreas: areas,
             areas: shownAreas,
             entrances: entrancePools,
+            scrollY: scrollY,
         });
         ls.set('AllAreas', areas);
-        this.handleEntranceMenuClose();
+        this.handleEntranceMenuClose(false);
     }
 
-    unLinkEntrance(entrance) {
+    unLinkEntrance(entrance, scrollRef) {
         let originator = entrance;
         console.log(originator,"[Disconnected]");
         let areas = cloneDeep(this.state.allAreas);
@@ -1659,11 +1779,17 @@ class Tracker extends React.Component {
 
         this.findVisibleAreas(shownAreas, areas, entrances);
         let entrancePools = this.loadEntrancePools(this.state.settings, entrances, areas);
+        let eRef = this.scroller[scrollRef];
+        let rect = eRef.getBoundingClientRect();
+        let oTop = rect.top;
+        let scrollY = oTop + window.scrollY;
         this.setState({
             allAreas: areas,
             allEntrances: entrances,
             areas: shownAreas,
             entrances: entrancePools,
+            scrollY: scrollY,
+            entranceRef: scrollRef,
         });
         ls.set('AllAreas', areas);
         ls.set('AllEntrances', entrances);
@@ -1841,26 +1967,29 @@ class Tracker extends React.Component {
         });
     }
 
-    handleEntranceMenuOpen(entrance) {
+    handleEntranceMenuOpen(entrance, scrollRef) {
         console.log(entrance.currentTarget.getAttribute('data-source'),'-> Open menu');
         this.setState({
             entranceMenuOpen: entrance.currentTarget,
             entranceToLink: entrance.currentTarget.getAttribute('data-source'),
             entranceConnector: entrance.currentTarget.getAttribute('data-connector'),
             entranceType: entrance.currentTarget.getAttribute('data-etype'),
+            entranceRef: scrollRef,
         });
     }
 
-    handleEntranceMenuClose() {
+    handleEntranceMenuClose(clearRef=true) {
+        let eRef = (clearRef === true) ? null : this.state.entranceRef;
         this.setState({
             entranceMenuOpen: null,
             entranceToLink: null,
             entranceConnector: null,
             entranceType: "",
+            entranceRef: eRef,
         });
     }
 
-    buildEntranceURL(reverseLink) {
+    buildEntranceURL(reverseLink, useConnector=true) {
         let href = '#';
         if ((this.state.allAreas.entrances[reverseLink].type === "overworld") || (this.state.allAreas.entrances[reverseLink].isReverse)) {
             href = '#' + this.state.allAreas.entrances[reverseLink].area;
@@ -1875,12 +2004,16 @@ class Tracker extends React.Component {
             }
         }
         if ((this.state.allAreas.entrances[reverseLink].type === "warpsong") || (this.state.allAreas.entrances[reverseLink].type === "spawn") || (this.state.allAreas.entrances[reverseLink].type === "owldrop") || (this.state.allAreas.entrances[reverseLink].type === "extra")) {
-            if (this.state.allAreas.entrances[reverseLink].connector !== "") {
-                if (this.state.allAreas.entrances[this.state.allAreas.entrances[reverseLink].connector].aLink !== "") {
-                    href = '#' + this.state.allAreas.entrances[this.state.allAreas.entrances[this.state.allAreas.entrances[reverseLink].connector].aLink].area;
+            if (useConnector) {
+                if (this.state.allAreas.entrances[reverseLink].connector !== "") {
+                    if (this.state.allAreas.entrances[this.state.allAreas.entrances[reverseLink].connector].aLink !== "") {
+                        href = '#' + this.state.allAreas.entrances[this.state.allAreas.entrances[this.state.allAreas.entrances[reverseLink].connector].aLink].area;
+                    }
+                } else {
+                    href = '#' + this.state.allAreas.entrances[reverseLink].area;
                 }
-            } else { 
-                href = '#' + this.state.allAreas.entrances[reverseLink].area;
+            } else {
+                href = '#' + this.state.allAreas.entrances[reverseLink].oneWayArea;
             }
         }
         if (this.state.allAreas.entrances[reverseLink].type === "dungeon") {
@@ -1893,7 +2026,7 @@ class Tracker extends React.Component {
         return href;
     }
 
-    handleDungeonTravel(entrance) {
+    handleDungeonTravel(entrance, useConnector=true) {
         let eType = this.state.allAreas.entrances[entrance].type;
         if (this.state.settings["View"] === "Overworld" && eType === "dungeon" && this.state.allAreas.entrances[entrance].isReverse === false) {
             this.changeSetting({"target": { "name": "View", "value": "Dungeons" }});
@@ -1901,7 +2034,7 @@ class Tracker extends React.Component {
         if (this.state.settings["View"] === "Dungeons" && (eType !== "dungeon" || (eType === "dungeon" && this.state.allAreas.entrances[entrance].isReverse === true))) {
             this.changeSetting({"target": { "name": "View", "value": "Overworld" }});
         }
-        let href = this.buildEntranceURL(entrance);
+        let href = this.buildEntranceURL(entrance, useConnector);
         if (href !== '#') {
             this.setState({
                 delayedURL: href,
@@ -2092,7 +2225,7 @@ class Tracker extends React.Component {
                                         classes.grayscaleMenuIcon}
                                     onClick={this.isWarpAreaLinked('Child Spawn -> KF Links House') ?
                                         () => this.handleDungeonTravel(this.state.allAreas.entrances['Child Spawn -> KF Links House'].aLink)
-                                        : null}
+                                        : () => this.handleDungeonTravel('Child Spawn -> KF Links House', false)}
                                 />
                                 <OotIcon
                                     classes={classes}
@@ -2102,7 +2235,7 @@ class Tracker extends React.Component {
                                         classes.grayscaleMenuIcon}
                                     onClick={this.isWarpAreaLinked('Adult Spawn -> Temple of Time') ?
                                         () => this.handleDungeonTravel(this.state.allAreas.entrances['Adult Spawn -> Temple of Time'].aLink)
-                                        : null}
+                                        : () => this.handleDungeonTravel('Adult Spawn -> Temple of Time', false)}
                                 />
                                 <div className={classes.warpSongsBig}>
                                     <OotIcon
@@ -2113,7 +2246,7 @@ class Tracker extends React.Component {
                                             classes.grayscaleMenuIcon}
                                         onClick={this.isWarpAreaLinked('Minuet of Forest Warp -> Sacred Forest Meadow') ?
                                             () => this.handleDungeonTravel(this.state.allAreas.entrances['Minuet of Forest Warp -> Sacred Forest Meadow'].aLink)
-                                            : null}
+                                            : () => this.handleDungeonTravel('Minuet of Forest Warp -> Sacred Forest Meadow', false)}
                                     />
                                     <OotIcon
                                         classes={classes}
@@ -2123,7 +2256,7 @@ class Tracker extends React.Component {
                                             classes.grayscaleMenuIcon}
                                         onClick={this.isWarpAreaLinked('Bolero of Fire Warp -> DMC Central Local') ?
                                             () => this.handleDungeonTravel(this.state.allAreas.entrances['Bolero of Fire Warp -> DMC Central Local'].aLink)
-                                            : null}
+                                            : () => this.handleDungeonTravel('Bolero of Fire Warp -> DMC Central Local', false)}
                                     />
                                     <OotIcon
                                         classes={classes}
@@ -2133,7 +2266,7 @@ class Tracker extends React.Component {
                                             classes.grayscaleMenuIcon}
                                         onClick={this.isWarpAreaLinked('Serenade of Water Warp -> Lake Hylia') ?
                                             () => this.handleDungeonTravel(this.state.allAreas.entrances['Serenade of Water Warp -> Lake Hylia'].aLink)
-                                            : null}
+                                            : () => this.handleDungeonTravel('Serenade of Water Warp -> Lake Hylia', false)}
                                     />
                                     <OotIcon
                                         classes={classes}
@@ -2143,7 +2276,7 @@ class Tracker extends React.Component {
                                             classes.grayscaleMenuIcon}
                                         onClick={this.isWarpAreaLinked('Requiem of Spirit Warp -> Desert Colossus') ?
                                             () => this.handleDungeonTravel(this.state.allAreas.entrances['Requiem of Spirit Warp -> Desert Colossus'].aLink)
-                                            : null}
+                                            : () => this.handleDungeonTravel('Requiem of Spirit Warp -> Desert Colossus', false)}
                                     />
                                     <OotIcon
                                         classes={classes}
@@ -2153,7 +2286,7 @@ class Tracker extends React.Component {
                                             classes.grayscaleMenuIcon}
                                         onClick={this.isWarpAreaLinked('Nocturne of Shadow Warp -> Graveyard Warp Pad Region') ?
                                             () => this.handleDungeonTravel(this.state.allAreas.entrances['Nocturne of Shadow Warp -> Graveyard Warp Pad Region'].aLink)
-                                            : null}
+                                            : () => this.handleDungeonTravel('Nocturne of Shadow Warp -> Graveyard Warp Pad Region', false)}
                                     />
                                     <OotIcon
                                         classes={classes}
@@ -2163,7 +2296,7 @@ class Tracker extends React.Component {
                                             classes.grayscaleMenuIcon}
                                         onClick={this.isWarpAreaLinked('Prelude of Light Warp -> Temple of Time') ?
                                             () => this.handleDungeonTravel(this.state.allAreas.entrances['Prelude of Light Warp -> Temple of Time'].aLink)
-                                            : null}
+                                            : () => this.handleDungeonTravel('Prelude of Light Warp -> Temple of Time', false)}
                                     />
                                 </div>
                                 <div className={classes.warpSongsSmall}>
@@ -2305,6 +2438,9 @@ class Tracker extends React.Component {
                                             classes={classes}
                                             dungeon={false}
                                             showUnshuffledEntrances={this.state.settings["Show Unshuffled Entrances"] === "Yes"}
+                                            collapseSwitch={this.toggleCollapse}
+                                            reverseCollapseSwitch={this.reverseCollapseHandler}
+                                            setRef={this.setRef}
                                             key={ia}
                                         />
                                     )
@@ -2341,8 +2477,11 @@ class Tracker extends React.Component {
                                             classes={classes}
                                             dungeon={true}
                                             showUnshuffledEntrances={this.state.settings["Show Unshuffled Entrances"] === "Yes"}
+                                            collapseSwitch={this.toggleCollapse}
+                                            reverseCollapseSwitch={this.reverseCollapseHandler}
                                             mqSwitch={this.toggleMQ}
                                             isMQ={this.state.settings[area+" MQ"]}
+                                            setRef={this.setRef}
                                             key={ia}
                                         />
                                     )
