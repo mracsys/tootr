@@ -33,7 +33,8 @@ class UnknownEntrance extends React.Component {
                         />
                     </React.Fragment>
                 );
-            } else if (Object.keys(this.props.allEntrances[this.props.allAreas.entrances[this.props.entrance].aLink].locations).filter((l) => (this.props.allAreas.locations[l].check === '' || this.props.allAreas[this.props.title].collapse === 'none')).length > 0 ||
+            } else if (Object.keys(this.props.allEntrances[this.props.allAreas.entrances[this.props.entrance].aLink].locations).filter((l) => 
+                ((this.props.allAreas.locations[l].check === '' && this.props.allAreas.locations[l].visible === true) || this.props.allAreas[this.props.title].collapse === 'none')).length > 0 ||
               ['overworld','dungeon','warpsong','extra','spawn','owldrop'].includes(this.props.allEntrances[this.props.allAreas.entrances[this.props.entrance].aLink].type) ||
               this.props.allAreas.entrances[this.props.allAreas.entrances[this.props.entrance].aLink].isReverse === true ||
               ['warpsong','spawn','owldrop'].includes(this.props.allEntrances[this.props.entrance].type) ||
