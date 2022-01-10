@@ -1032,6 +1032,9 @@ class Tracker extends React.Component {
                 if (!(areas.hasOwnProperty(eArea))) {
                     areas[eArea] = { show: allAreas[eArea].show, dungeon: false, collapse: allAreas[eArea].collapse, entrances: {}, locations: {} };
                 }
+                if (settings["Decoupled Entrances"] === "Off" && entrance === "GV Lower Stream -> Lake Hylia") {
+                    allAreas.entrances[entrance].shuffled = false;
+                }
                 eEntrance = {};
                 eEntrance[entrance] = allAreas.entrances[entrance];
                 if (!(erSettings.includes(subArea.type)) || eEntrance[entrance].shuffled === false) {
@@ -1503,6 +1506,7 @@ class Tracker extends React.Component {
                 allAreas[targetArea].show = true;
             }
         });
+
         alwaysOneWay.forEach(oneType => {
             Object.keys(entrances[oneType]).forEach(aOneWay => {
                 entrances[oneType][aOneWay].forEach(eOneWay => {
@@ -1525,6 +1529,11 @@ class Tracker extends React.Component {
                         (allAreas.entrances[eLinked].oneWay === true && (allAreas.entrances[eLinked].oneWayArea !== "" || allAreas.entrances[eLinked].type === "extra")))) {
                             shownAreas[allAreas.entrances[eLinked].area].show = true;
                             allAreas[allAreas.entrances[eLinked].area].show = true;
+                            // Hard code Gerudo Valley to Lake with decoupled off, necessary for Lake Hylia owl warp to chain off valley visibility
+                            if (allAreas.entrances[eLinked].area === 'Gerudo Valley' && (settings['Decoupled Entrances'] === 'Off' || settings['Shuffle Overworld'] === 'Off')) {
+                                shownAreas['Lake Hylia'].show = true;
+                                allAreas['Lake Hylia'].show = true;
+                            }
                         }
                     }
                 });
@@ -1542,7 +1551,7 @@ class Tracker extends React.Component {
             }
         });
 
-        // Hard code Gerudo Valley to Lake with decoupled off
+        // Hard code Gerudo Valley to Lake with decoupled off again, in case one-way entrance does not lead to Valley
         if (shownAreas['Gerudo Valley'].show === true && (settings['Decoupled Entrances'] === 'Off' || settings['Shuffle Overworld'] === 'Off')) {
             shownAreas['Lake Hylia'].show = true;
             allAreas['Lake Hylia'].show = true;
