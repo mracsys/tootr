@@ -106,7 +106,7 @@
             "shuffled": true
         },
         "Prelude of Light Warp -> Temple of Time": {
-            "area": "Temple of Time",
+            "area": "Temple of Time Entrance",
             "reverse": "",
             "oneWay": true,
             "oneWayArea": "Warp Songs",
