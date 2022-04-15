@@ -1626,13 +1626,16 @@ class Tracker extends React.Component {
     linkEntrance(entrance) {
         let originator = entrance.currentTarget.getAttribute('data-link-from');
         let eCategory = entrance.currentTarget.getAttribute('data-link-to');
-        console.log(originator, "<>", eCategory,"[Connected]");
         let alwaysOneWay = ["spawn","warpsong","owldrop","extra"];
         let areas = cloneDeep(this.state.allAreas);
         let shownAreas = cloneDeep(this.state.areas);
         let entrances = cloneDeep(this.state.allEntrances);
         let area = areas.entrances[originator].area;
         let entrancePools;
+        if (areas.entrances[eCategory].tag !== "" && areas.entrances[eCategory].tag === areas.entrances[originator].tag && areas.entrances[originator].eLink === "") {
+            eCategory = originator;
+        }
+        console.log(originator, "<>", eCategory,"[Connected]");
         if (areas.entrances[originator].oneWay === true && areas.entrances[originator].oneWayArea !== "") {
             area = areas.entrances[originator].oneWayArea;
         }
