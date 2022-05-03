@@ -11,6 +11,8 @@
             "reverseAlias": "Kokiri Forest",
             "tag": "",
             "tagRep": false,
+            "tagRules": [],
+            "enableTag": true,
             "type": "overworld",
             "lKey": "",
             "aLink": "",
@@ -32,6 +34,8 @@
             "reverseAlias": "Kokiri Forest",
             "tag": "",
             "tagRep": false,
+            "tagRules": [],
+            "enableTag": true,
             "type": "overworld",
             "lKey": "",
             "aLink": "",
@@ -53,6 +57,8 @@
             "reverseAlias": "from Deku Tree",
             "tag": "",
             "tagRep": false,
+            "tagRules": [],
+            "enableTag": true,
             "type": "dungeon",
             "lKey": "",
             "aLink": "",
@@ -74,6 +80,8 @@
             "reverseAlias": "from Link's House",
             "tag": "",
             "tagRep": false,
+            "tagRules": [],
+            "enableTag": true,
             "type": "specialInterior",
             "lKey": "",
             "aLink": "",
@@ -95,6 +103,8 @@
             "reverseAlias": "from Mido's House",
             "tag": "",
             "tagRep": false,
+            "tagRules": [],
+            "enableTag": true,
             "type": "interior",
             "lKey": "",
             "aLink": "",
@@ -115,7 +125,12 @@
             "alias": "Saria's House",
             "reverseAlias": "from Saria's House",
             "tag": "House",
-            "tagRep": true,
+            "tagRep": false,
+            "tagRules": [
+                {"setting": "Shuffle Freestanding Items", "value": "Off", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Dungeons", "required": false}
+            ],
+            "enableTag": true,
             "type": "interior",
             "lKey": "",
             "aLink": "",
@@ -136,7 +151,12 @@
             "alias": "House of Twins",
             "reverseAlias": "from House of Twins",
             "tag": "House",
-            "tagRep": false,
+            "tagRep": true,
+            "tagRules": [
+                {"setting": "Shuffle Pots and Crates", "value": "Off", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false}
+            ],
+            "enableTag": true,
             "type": "interior",
             "lKey": "",
             "aLink": "",
@@ -158,6 +178,11 @@
             "reverseAlias": "from Know It All House",
             "tag": "House",
             "tagRep": false,
+            "tagRules": [
+                {"setting": "Shuffle Pots and Crates", "value": "Off", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false}
+            ],
+            "enableTag": true,
             "type": "interior",
             "lKey": "",
             "aLink": "",
@@ -179,6 +204,8 @@
             "reverseAlias": "from Kokiri Shop",
             "tag": "Shop",
             "tagRep": true,
+            "tagRules": [],
+            "enableTag": true,
             "type": "interior",
             "lKey": "Kokiri Shop",
             "aLink": "",
@@ -200,6 +227,8 @@
             "reverseAlias": "from Storms Grotto",
             "tag": "Generic Grotto",
             "tagRep": true,
+            "tagRules": [],
+            "enableTag": true,
             "type": "grotto",
             "lKey": "",
             "aLink": "",
@@ -217,13 +246,15 @@
             "lKey": "",
             "alias": "Kokiri Sword Chest",
             "type": "item",
-            "settings": [],
+            "settings": [{"setting": "Shuffle Kokiri Sword", "value": "On", "required": true}],
             "visible": true,
             "check": "",
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Mido's House Top Left": {
             "area": "",
@@ -236,7 +267,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Mido's House Top Right": {
             "area": "",
@@ -249,7 +282,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Mido's House Bottom Left": {
             "area": "",
@@ -262,7 +297,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Mido's House Bottom Right": {
             "area": "",
@@ -275,7 +312,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Kokiri Storms Grotto": {
             "area": "",
@@ -288,7 +327,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "KF Links House Cow": {
             "area": "",
@@ -301,7 +342,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "KF GS Know It All House": {
             "area": "Kokiri Forest",
@@ -318,7 +361,12 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
         },
         "KF GS Bean Patch": {
             "area": "Kokiri Forest",
@@ -335,7 +383,12 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
         },
         "KF GS House of Twins": {
             "area": "Kokiri Forest",
@@ -352,7 +405,12 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
         },
         "KF Shop Item 1": {
             "area": "",
@@ -371,7 +429,9 @@
             "foundItem": "",
             "merchant": true,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "KF Shop Item 2": {
             "area": "",
@@ -389,7 +449,9 @@
             "foundItem": "",
             "merchant": true,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "KF Shop Item 3": {
             "area": "",
@@ -406,7 +468,9 @@
             "foundItem": "",
             "merchant": true,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "KF Shop Item 4": {
             "area": "",
@@ -422,7 +486,9 @@
             "foundItem": "",
             "merchant": true,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "KF Shop Item 5": {
             "area": "",
@@ -435,7 +501,9 @@
             "foundItem": "",
             "merchant": true,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "KF Shop Item 6": {
             "area": "",
@@ -448,7 +516,9 @@
             "foundItem": "",
             "merchant": true,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "KF Shop Item 7": {
             "area": "",
@@ -461,7 +531,9 @@
             "foundItem": "",
             "merchant": true,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "KF Shop Item 8": {
             "area": "",
@@ -474,7 +546,543 @@
             "foundItem": "",
             "merchant": true,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "KF Behind Midos Blupee": {
+            "area": "Kokiri Forest",
+            "lKey": "",
+            "alias": "Blupee Behind Mido's",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "KF Boulder Maze Blupee 1": {
+            "area": "Kokiri Forest",
+            "lKey": "",
+            "alias": "Boulder Maze Blupee 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "KF Boulder Maze Blupee 2": {
+            "area": "Kokiri Forest",
+            "lKey": "",
+            "alias": "Boulder Maze Blupee 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "KF End of Bridge Blupee": {
+            "area": "Kokiri Forest",
+            "lKey": "",
+            "alias": "End of Bridge Blupee",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "KF Top of Sarias Heart 1": {
+            "area": "Kokiri Forest",
+            "lKey": "",
+            "alias": "Top of Sarias Heart 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "KF Top of Sarias Heart 2": {
+            "area": "Kokiri Forest",
+            "lKey": "",
+            "alias": "Top of Sarias Heart 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "KF Top of Sarias Heart 3": {
+            "area": "Kokiri Forest",
+            "lKey": "",
+            "alias": "Top of Sarias Heart 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "KF Near Ramp Green Rupee 1": {
+            "area": "Kokiri Forest",
+            "lKey": "",
+            "alias": "Grass Near Ramp 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "KF Near Ramp Green Rupee 2": {
+            "area": "Kokiri Forest",
+            "lKey": "",
+            "alias": "Grass Near Ramp 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "KF Near Midos Green Rupee 1": {
+            "area": "Kokiri Forest",
+            "lKey": "",
+            "alias": "Grass Near Mido's 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "KF Near Midos Green Rupee 2": {
+            "area": "Kokiri Forest",
+            "lKey": "",
+            "alias": "Grass Near Mido's 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "KF Bean Platform Rupee 1": {
+            "area": "Kokiri Forest",
+            "lKey": "",
+            "alias": "Bean Platform Green Rupee 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "KF Bean Platform Rupee 2": {
+            "area": "Kokiri Forest",
+            "lKey": "",
+            "alias": "Bean Platform Green Rupee 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "KF Bean Platform Rupee 3": {
+            "area": "Kokiri Forest",
+            "lKey": "",
+            "alias": "Bean Platform Green Rupee 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "KF Bean Platform Rupee 4": {
+            "area": "Kokiri Forest",
+            "lKey": "",
+            "alias": "Bean Platform Green Rupee 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "KF Bean Platform Rupee 5": {
+            "area": "Kokiri Forest",
+            "lKey": "",
+            "alias": "Bean Platform Green Rupee 5",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "KF Bean Platform Rupee 6": {
+            "area": "Kokiri Forest",
+            "lKey": "",
+            "alias": "Bean Platform Green Rupee 6",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "KF Bean Platform Rupee 7": {
+            "area": "Kokiri Forest",
+            "lKey": "",
+            "alias": "Bean Platform Red Rupee",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "KF Shop Rupee": {
+            "area": "",
+            "lKey": "Kokiri Forest -> KF Kokiri Shop",
+            "alias": "Shop Rupee",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "KF Sarias Freestanding Heart 1": {
+            "area": "",
+            "lKey": "Kokiri Forest -> KF Sarias House",
+            "alias": "Sarias Heart 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "KF Sarias Freestanding Heart 2": {
+            "area": "",
+            "lKey": "Kokiri Forest -> KF Sarias House",
+            "alias": "Sarias Heart 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "KF Sarias Freestanding Heart 3": {
+            "area": "",
+            "lKey": "Kokiri Forest -> KF Sarias House",
+            "alias": "Sarias Heart 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "KF Sarias Freestanding Heart 4": {
+            "area": "",
+            "lKey": "Kokiri Forest -> KF Sarias House",
+            "alias": "Sarias Heart 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "KF Storms Grotto Beehive 1": {
+            "area": "",
+            "lKey": "Kokiri Forest -> KF Storms Grotto",
+            "alias": "Beehive 1",
+            "type": "item",
+            "settings": [{"setting": "Shuffle Beehives", "value": "On", "required": true}],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "KF Storms Grotto Beehive 2": {
+            "area": "",
+            "lKey": "Kokiri Forest -> KF Storms Grotto",
+            "alias": "Beehive 2",
+            "type": "item",
+            "settings": [{"setting": "Shuffle Beehives", "value": "On", "required": true}],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "KF Links House Pot": {
+            "area": "",
+            "lKey": "Kokiri Forest -> KF Links House",
+            "alias": "Pot",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "KF Know It All House Pot 1": {
+            "area": "",
+            "lKey": "Kokiri Forest -> KF Know It All House",
+            "alias": "Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "KF Know It All House Pot 2": {
+            "area": "",
+            "lKey": "Kokiri Forest -> KF Know It All House",
+            "alias": "Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "KF Twins House Pot 1": {
+            "area": "",
+            "lKey": "Kokiri Forest -> KF House of Twins",
+            "alias": "Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "KF Twins House Pot 2": {
+            "area": "",
+            "lKey": "Kokiri Forest -> KF House of Twins",
+            "alias": "Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         }
     }
 }

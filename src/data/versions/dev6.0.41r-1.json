@@ -40,6 +40,11 @@
                 "Off",
                 "On"
             ],
+            "Shuffle Bosses": [
+                "Off",
+                "Age-Restricted",
+                "Full"
+            ],
             "Shuffle Owls": [
                 "Off",
                 "On"
@@ -52,11 +57,13 @@
                 "Off",
                 "On"
             ],
-            "Mixed Pools": [
-                "Off",
-                "Indoor",
-                "On"
-            ],
+            "Mixed Pools": {
+                "Interiors": false,
+                "Grottos": false,
+                "Dungeons": false,
+                "Overworld": false,
+                "Boss Rooms": false
+            },
             "Decoupled Entrances": [
                 "Off",
                 "On"
@@ -144,6 +151,26 @@
                 "On"
             ],
             "Free Scarecrow": [
+                "Off",
+                "On"
+            ],
+            "Shuffle Freestanding Items": [
+                "Off",
+                "Overworld",
+                "Dungeons",
+                "All"
+            ],
+            "Shuffle Pots and Crates": [
+                "Off",
+                "Overworld",
+                "Dungeons",
+                "All"
+            ],
+            "Shuffle Beehives": [
+                "Off",
+                "On"
+            ],
+            "Shuffle Frogs": [
                 "Off",
                 "On"
             ]

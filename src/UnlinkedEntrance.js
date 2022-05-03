@@ -5,16 +5,25 @@ import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 
 class UnLinkedEntrance extends React.Component {
     selectEntrancePool(entrance) {
+        let settingAreaTypes = {
+            'interior': 'Interiors',
+            'specialInterior': 'Interiors',
+            'grotto': 'Grottos',
+            'grave': 'Grottos',
+            'dungeon': 'Dungeons',
+            'overworld': 'Overworld',
+            'boss': 'Boss Rooms',
+        }
         let areaType = this.props.allAreas.entrances[entrance].type
         if (areaType === "specialInterior") { areaType = "interior"; }
         let subAreas;
         if (areaType in this.props.oneWayEntrancePools) {
             subAreas = areaType;
         } else {
-            if ((this.props.mixedPools === "Indoor" || this.props.mixedPools === "On") && (areaType !== "overworld" || this.props.decoupled)) { areaType = "mixed"; }
-            if (this.props.mixedPools === "On" && areaType === "overworld" && !(this.props.decoupled)) { areaType = "mixed_overworld" }
+            if ((this.props.mixedPools.includes(settingAreaTypes[areaType])) && (areaType !== "overworld" || this.props.decoupled)) { areaType = "mixed"; }
+            if (this.props.mixedPools.includes(settingAreaTypes[areaType]) && areaType === "overworld" && !(this.props.decoupled)) { areaType = "mixed_overworld" }
             if (this.props.allAreas.entrances[entrance].isReverse && !(this.props.decoupled)) { areaType = areaType + "_reverse" }
-            if (this.props.decoupled && areaType !== "overworld") { areaType = areaType + "_decoupled" }
+            if (this.props.decoupled && areaType !== "overworld" && !(["boss","noBossShuffle"].includes(areaType))) { areaType = areaType + "_decoupled" }
             subAreas = areaType;
         }
         return subAreas;

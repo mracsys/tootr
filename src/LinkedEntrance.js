@@ -10,7 +10,7 @@ import FixedShopCheck from './FixedShopCheck';
 class LinkedEntrance extends React.Component {
     buildExitName(entrance) {
         let eLink = this.props.allAreas.entrances[entrance].aLink;
-        if (this.props.allAreas.entrances[eLink].tag === "") {
+        if (this.props.allAreas.entrances[eLink].tag === "" || this.props.allAreas.entrances[eLink].enableTag === false) {
             if (this.props.allAreas.entrances[eLink].type === "overworld") {
                 return this.props.allAreas.entrances[eLink].reverseAlias;
             } else if (this.props.allAreas.entrances[eLink].isReverse) {
@@ -25,7 +25,7 @@ class LinkedEntrance extends React.Component {
 
     buildExitEntranceName(entrance) {
         let eLink = this.props.allAreas.entrances[entrance].aLink;
-        if (this.props.allAreas.entrances[eLink].tag === "") {
+        if (this.props.allAreas.entrances[eLink].tag === "" || this.props.allAreas.entrances[eLink].enableTag === false) {
             if (this.props.allAreas.entrances[eLink].type === "overworld") {
                 return "from " + this.props.allAreas.entrances[eLink].alias;
             } else if (this.props.allAreas.entrances[eLink].isReverse) {
@@ -40,7 +40,7 @@ class LinkedEntrance extends React.Component {
 
     buildEntranceName(entrance) {
         if (this.props.allAreas.entrances[entrance].isReverse) {
-            if (this.props.allAreas.entrances[this.props.allAreas.entrances[entrance].reverse].tag !== "") {
+            if (this.props.allAreas.entrances[this.props.allAreas.entrances[entrance].reverse].tag !== "" || this.props.allAreas.entrances[this.props.allAreas.entrances[entrance].reverse].enableTag === false) {
                 return "from " + this.props.allAreas.entrances[this.props.allAreas.entrances[entrance].reverse].tag;
             } else {
                 return this.props.allAreas.entrances[entrance].alias;
@@ -81,7 +81,7 @@ class LinkedEntrance extends React.Component {
     render() {
         let oEntrance = this.props.allAreas.entrances[this.props.entrance];
         let reverseLink = oEntrance.aLink;
-        let interiors = ['interior','specialInterior','grotto','grave','dungeon'];
+        let interiors = ['interior','specialInterior','grotto','grave','dungeon','boss','noBossShuffle'];
         let oneWayTypes = ['spawn','warpsong','owldrop'];
         let otherEntrances = [];
         if (this.props.connector === false || this.props.decoupled) {

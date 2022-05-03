@@ -11,6 +11,8 @@
             "reverseAlias": "Haunted Wasteland",
             "tag": "",
             "tagRep": false,
+            "tagRules": [],
+            "enableTag": true,
             "type": "overworld",
             "lKey": "",
             "aLink": "",
@@ -32,6 +34,8 @@
             "reverseAlias": "Haunted Wasteland",
             "tag": "",
             "tagRep": false,
+            "tagRules": [],
+            "enableTag": true,
             "type": "overworld",
             "lKey": "",
             "aLink": "",
@@ -55,7 +59,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Wasteland Chest": {
             "area": "Haunted Wasteland",
@@ -68,7 +74,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Wasteland GS": {
             "area": "Haunted Wasteland",
@@ -85,7 +93,156 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
+        },
+        "Wasteland Near GS Pot 1": {
+            "area": "Haunted Wasteland",
+            "lKey": "",
+            "alias": "Hut Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Wasteland Near GS Pot 2": {
+            "area": "Haunted Wasteland",
+            "lKey": "",
+            "alias": "Hut Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Wasteland Near GS Pot 3": {
+            "area": "Haunted Wasteland",
+            "lKey": "",
+            "alias": "Hut Pot 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Wasteland Crate Before Quicksand": {
+            "area": "Haunted Wasteland",
+            "lKey": "",
+            "alias": "Before Quicksand Crate",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Wasteland Crate After Quicksand 1": {
+            "area": "Haunted Wasteland",
+            "lKey": "",
+            "alias": "After Quicksand Crate 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Wasteland Crate After Quicksand 2": {
+            "area": "Haunted Wasteland",
+            "lKey": "",
+            "alias": "After Quicksand Crate 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Wasteland Crate After Quicksand 3": {
+            "area": "Haunted Wasteland",
+            "lKey": "",
+            "alias": "After Quicksand Crate 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Wasteland Crate Near Colossus": {
+            "area": "Haunted Wasteland",
+            "lKey": "",
+            "alias": "Ghost Guide Crate",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         }
     }
 }

@@ -2,7 +2,10 @@ import React from 'react';
 import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
 import Collapse from '@material-ui/core/Collapse';
-
+import Select from '@material-ui/core/Select';
+import Input from '@material-ui/core/Input';
+import Checkbox from '@material-ui/core/Checkbox'
+import { FormHelperText, ListItemText, MenuItem } from '@material-ui/core';
 
 class GameSetting extends React.Component {
     constructor(props) {
@@ -21,7 +24,7 @@ class GameSetting extends React.Component {
                 </div>
                 <Collapse in={this.state.open} timeout='auto' unmountOnExit>
                         { Object.keys(this.props.settings).map((setting, i) => {
-                            if (setting !== 'open') {
+                            if (setting !== 'open' && setting !== 'Mixed Pools') {
                                 return (
                                 <React.Fragment key={'settingFrag' + i}>
                                     <div className={this.props.classes.wrapperWrapper}>
@@ -42,6 +45,48 @@ class GameSetting extends React.Component {
                                         </div>
                                     </div>
                                 </React.Fragment>
+                                );
+                            } else if (setting === 'Mixed Pools') {
+                                return (
+                                    <React.Fragment key={'settingFrag' + i}>
+                                        <div className={this.props.classes.wrapperWrapper}>
+                                            <div className={this.props.classes.nestedWrapper}>
+                                                <div className={this.props.classes.nested} key={'setting' + i}>
+                                                    <Select
+                                                        id={"multiselect" + i}
+                                                        multiple
+                                                        displayEmpty
+                                                        name={setting}
+                                                        value={Object.keys(this.props.settings[setting]).filter((t) => {
+                                                            return this.props.userSettings[setting].includes(t);
+                                                        })}
+                                                        onChange={this.props.onChange}
+                                                        input={<Input />}
+                                                        renderValue={(selected) => {
+                                                            if (selected.length === 0) {
+                                                                return 'Off';
+                                                            } else if (selected.length === Object.keys(this.props.settings[setting]).length) {
+                                                                return 'All';
+                                                            } else {
+                                                                return 'Some';
+                                                            }
+                                                        }}
+                                                        MenuProps={{
+                                                            getContentAnchorEl: () => null,
+                                                        }}
+                                                    >
+                                                        {Object.keys(this.props.settings[setting]).map((t) => { return (
+                                                            <MenuItem key={'multiselectoption' + i + t} value={t}>
+                                                                <Checkbox checked={this.props.userSettings[setting].includes(t)} />
+                                                                <ListItemText primary={t} />
+                                                            </MenuItem>
+                                                        )})}
+                                                    </Select>
+                                                    <FormHelperText>{setting}</FormHelperText>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </React.Fragment>
                                 );
                             } else { return null }
                         })}

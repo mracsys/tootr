@@ -1,5 +1,29 @@
 {
-    "entrances": {},
+    "entrances": {
+        "Dodongos Cavern -> King Dodongo": {
+            "area": "Dodongo's Cavern",
+            "reverse": "King Dodongo -> Dodongos Cavern",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "",
+            "isReverse": false,
+            "alias": "King Dodongo",
+            "reverseAlias": "from King Dodongo",
+            "tag": "",
+            "tagRep": false,
+            "tagRules": [],
+            "enableTag": true,
+            "type": "boss",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": true
+        }
+    },
     "locations": {
         "Dodongos Cavern Map Chest": {
             "area": "",
@@ -12,7 +36,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Dodongos Cavern Deku Scrub Lobby": {
             "area": "",
@@ -30,7 +56,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Dodongos Cavern GS Side Room Near Lower Lizalfos": {
             "area": "",
@@ -48,7 +76,127 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
+        },
+        "Dodongos Cavern Right Side Pot 1": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Lower Right Side Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Right Side Pot 2": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Lower Right Side Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Right Side Pot 3": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Lower Right Side Pot 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Right Side Pot 4": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Lower Right Side Pot 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Right Side Pot 5": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Lower Right Side Pot 5",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Right Side Pot 6": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Lower Right Side Pot 6",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Dodongos Cavern GS Scarecrow": {
             "area": "",
@@ -66,7 +214,107 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
+        },
+        "Dodongos Cavern Lizalfos Hidden Recovery Heart": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Early Lizalfos Lavafall",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Dungeons", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Lower Lizalfos Pot 1": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Early Lizalfos Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Lower Lizalfos Pot 2": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Early Lizalfos Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Lower Lizalfos Pot 3": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Early Lizalfos Pot 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Lower Lizalfos Pot 4": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Early Lizalfos Pot 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Dodongos Cavern Deku Scrub Side Room Near Dodongos": {
             "area": "",
@@ -84,7 +332,85 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Torch Room Pot 1": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Torch Hallway Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Torch Room Pot 2": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Torch Hallway Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Torch Room Pot 3": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Torch Hallway Pot 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Torch Room Pot 4": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Torch Hallway Pot 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Dodongos Cavern Compass Chest": {
             "area": "",
@@ -97,7 +423,85 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Staircase Pot 1": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Staircase Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Staircase Pot 2": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Staircase Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Staircase Pot 3": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Staircase Pot 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Staircase Pot 4": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Staircase Pot 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Dodongos Cavern GS Alcove Above Stairs": {
             "area": "",
@@ -115,7 +519,13 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
         },
         "Dodongos Cavern GS Vines Above Stairs": {
             "area": "",
@@ -133,7 +543,13 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
         },
         "Dodongos Cavern Bomb Flower Platform Chest": {
             "area": "",
@@ -146,7 +562,180 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Behind Block": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Behind Block",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Blade Room Pot 1": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Blade Room Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Blade Room Pot 2": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Blade Room Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Single Eye Switch Room Pot 1": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Late Lizalfos Lobby Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Single Eye Switch Room Pot 2": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Late Lizalfos Lobby Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Late Lizalfos Recovery Heart 1": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Late Lizalfos Heart 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Late Lizalfos Recovery Heart 2": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Late Lizalfos Heart 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Double Eye Switch Room Pot 1": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Late Lizalfos Exit Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Double Eye Switch Room Pot 2": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Late Lizalfos Exit Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Dodongos Cavern Bomb Bag Chest": {
             "area": "",
@@ -159,7 +748,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Dodongos Cavern Deku Scrub Near Bomb Bag Left": {
             "area": "",
@@ -177,7 +768,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Dodongos Cavern Deku Scrub Near Bomb Bag Right": {
             "area": "",
@@ -195,7 +788,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Dodongos Cavern End of Bridge Chest": {
             "area": "",
@@ -208,7 +803,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Dodongos Cavern GS Back Room": {
             "area": "",
@@ -226,7 +823,70 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
+        },
+        "Dodongos Cavern Last Block Pot 1": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Boss Lobby Block Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Last Block Pot 2": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Boss Lobby Block Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Last Block Pot 3": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Boss Lobby Block Pot 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Dodongos Cavern MQ Map Chest": {
             "area": "",
@@ -239,7 +899,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Dodongos Cavern MQ Bomb Bag Chest": {
             "area": "",
@@ -252,7 +914,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Dodongos Cavern MQ Deku Scrub Lobby Front": {
             "area": "",
@@ -270,7 +934,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Dodongos Cavern MQ Deku Scrub Lobby Rear": {
             "area": "",
@@ -288,7 +954,47 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Right Side Pot 1": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Lower Right Side Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Right Side Pot 2": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Lower Right Side Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Dodongos Cavern MQ Deku Scrub Side Room Near Lower Lizalfos": {
             "area": "",
@@ -306,12 +1012,280 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Right Side Pot 3": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Lower Right Side Pot 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Right Side Pot 4": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Lower Right Side Pot 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Poes Room Pot 1": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Poe Hallway Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Poes Room Pot 2": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Poe Hallway Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Poes Room Pot 3": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Poe Hallway Pot 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Poes Room Pot 4": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Poe Hallway Pot 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Poes Room Crate 1": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Poe Hallway Crate 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Poes Room Crate 2": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Poe Hallway Crate 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Poes Room Crate 3": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Poe Hallway Crate 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Poes Room Crate 4": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Poe Hallway Crate 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Poes Room Crate 5": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Poe Hallway Crate 5",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Poes Room Crate 6": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Poe Hallway Crate 6",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Poes Room Crate 7": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Poe Hallway Crate 7",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Poes Room Crate 8": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Poe Hallway Crate 8",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Dodongos Cavern MQ GS Scrub Room": {
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
-            "alias": "Scrub Room",
+            "alias": "Hostile Scrub Room",
             "type": "skulltula",
             "settings": [
                 {"setting": "Dodongo's Cavern MQ", "value": true, "required": true},
@@ -324,7 +1298,51 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
+        },
+        "Dodongos Cavern MQ 3 Torch Room Pot 1": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Torch Puzzle Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ 3 Torch Room Pot 2": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Torch Puzzle Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Dodongos Cavern MQ Torch Puzzle Room Chest": {
             "area": "",
@@ -337,7 +1355,28 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Block Room Recovery Heart": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Near Push Blocks",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Dodongos Cavern MQ Larvae Room Chest": {
             "area": "",
@@ -350,7 +1389,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Dodongos Cavern MQ GS Larvae Room": {
             "area": "",
@@ -368,7 +1409,279 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
+        },
+        "Dodongos Cavern MQ Larvae Room Crate 1": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Larvae Room Crate 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Larvae Room Crate 2": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Larvae Room Crate 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Larvae Room Crate 3": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Larvae Room Crate 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Larvae Room Crate 4": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Larvae Room Crate 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Larvae Room Crate 5": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Larvae Room Crate 5",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Larvae Room Crate 6": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Larvae Room Crate 6",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ After Upper Lizalfos Pot 1": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Upper Lizalfos Exit Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ After Upper Lizalfos Pot 2": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Upper Lizalfos Exit Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ After Upper Lizalfos Crate 1": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Upper Lizalfos Exit Crate 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ After Upper Lizalfos Crate 2": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Upper Lizalfos Exit Crate 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Upper Lizalfos Pot 1": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Upper Lizalfos Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Upper Lizalfos Pot 2": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Upper Lizalfos Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Upper Lizalfos Pot 3": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Upper Lizalfos Pot 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Upper Lizalfos Pot 4": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Upper Lizalfos Pot 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Dodongos Cavern MQ GS Lizalfos Room": {
             "area": "",
@@ -386,7 +1699,51 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
+        },
+        "Dodongos Cavern MQ Before Upper Lizalfos Pot 1": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Upper Lizalfos Lobby Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Before Upper Lizalfos Pot 2": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Upper Lizalfos Lobby Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Dodongos Cavern MQ Compass Chest": {
             "area": "",
@@ -399,7 +1756,199 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Staircase Room Pot 1": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Staircase Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Staircase Room Pot 2": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Staircase Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Staircase Room Pot 3": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Staircase Pot 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Staircase Room Pot 4": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Staircase Pot 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Staircase Crate 1": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Staircase Crate 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Staircase Crate 2": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Staircase Crate 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Staircase Crate 3": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Staircase Crate 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Staircase Crate 4": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Staircase Crate 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Staircase Crate 5": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Staircase Crate 5",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Staircase Crate 6": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Staircase Crate 6",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Dodongos Cavern MQ GS Song of Time Block Room": {
             "area": "",
@@ -417,7 +1966,13 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
         },
         "Dodongos Cavern MQ Deku Scrub Staircase": {
             "area": "",
@@ -435,7 +1990,104 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Before Boss Room Pot 1": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Boss Lobby Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Before Boss Room Pot 2": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Boss Lobby Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Armos Army Room Pot 1": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Armos Room Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Armos Army Room Pot 2": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Armos Room Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Armos Army Room Pot 3": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Armos Room Pot 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Dodongos Cavern MQ GS Back Area": {
             "area": "",
@@ -453,7 +2105,13 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
         },
         "Dodongos Cavern MQ Under Grave Chest": {
             "area": "",
@@ -466,11 +2124,51 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Back Poe Room Pot 1": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Near Grave Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Back Poe Room Pot 2": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Near Grave Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Dodongos Cavern Boss Room Chest": {
             "area": "",
-            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "lKey": "Dodongos Cavern -> King Dodongo",
             "alias": "Boss Room Chest",
             "type": "item",
             "settings": [],
@@ -479,11 +2177,13 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Dodongos Cavern King Dodongo Heart": {
             "area": "",
-            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "lKey": "Dodongos Cavern -> King Dodongo",
             "alias": "King Dodongo",
             "type": "item",
             "settings": [],
@@ -492,7 +2192,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         }
     }
 }

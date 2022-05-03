@@ -152,6 +152,11 @@ const useStyles = (theme) => ({
         'font-family': 'Hylia Serif Beta',
         fontSize: '2.125rem',
     },
+    checkCount: {
+        'font-family': 'Hylia Serif Beta',
+        fontSize: '1.5rem',
+        marginRight: theme.spacing(2),
+    },
     nested: {
         marginLeft: theme.spacing(4),
         fontSize: '1rem',
@@ -749,7 +754,7 @@ const useStyles = (theme) => ({
 //    },
 //});
 
-const trackerVersion = '0.3.0';
+const trackerVersion = '0.3.1';
 
 class Tracker extends React.Component {
     constructor(props) {
@@ -780,16 +785,18 @@ class Tracker extends React.Component {
 
         this.scroller = {};
 
-        let settings = !!(ls.get('RandoSettings')) ? ls.get('RandoSettings') : rsl.Settings;
         if (!!(ls.get('TrackerVersion'))) {
             if (ls.get('TrackerVersion') !== trackerVersion) {
-                // outdated, use global reset function until proper upgrade function developed
-                this.resetState(settings);
+                // outdated, reset everything until proper upgrade function developed
+                ls.clear();
+                ls.set('TrackerVersion', trackerVersion);
             }
         } else {
             // no version key
-            this.resetState(settings);
+            ls.clear();
+            ls.set('TrackerVersion', trackerVersion);
         }
+        let settings = !!(ls.get('RandoSettings')) ? ls.get('RandoSettings') : rsl.Settings;
         let areaJSON = merge(death_mountain_crater, death_mountain_trail, desert_colossus,
             gerudo_fortress, gerudo_valley, goron_city, graveyard, haunted_wasteland,
             hyrule_field, kakariko_village, kokiri_forest, lake_hylia, lon_lon_ranch,
@@ -983,6 +990,9 @@ class Tracker extends React.Component {
         if (settings["Shuffle Dungeons"] === "On") {
             erSettings.push("dungeon");
         }
+        if (settings["Shuffle Bosses"] === "Age-Restricted" || settings["Shuffle Bosses"] === "Full") {
+            erSettings.push("boss");
+        }
         if (settings["Shuffle Overworld"] === "On") {
             erSettings.push("overworld");
         }
@@ -1008,6 +1018,7 @@ class Tracker extends React.Component {
         let eAreas = [];
         let eLocation;
         let eEntrance;
+        let internalDungeonEntrance = false;
         Object.keys(allAreas.entrances).forEach((entrance) => {
             subArea = allAreas.entrances[entrance];
             eAreas = [];
@@ -1019,18 +1030,20 @@ class Tracker extends React.Component {
             } else {
                 eAreas.push(subArea.area);
             }
+            // noBossShuffle is a permanently unshuffled type for Ganon's Tower until/unless it is added to the randomizer
+            internalDungeonEntrance = subArea.type === 'boss' || subArea.type === 'noBossShuffle';
             eAreas.forEach(eArea => {
                 if ((!(allAreas.hasOwnProperty(eArea))) && init) {
                     if (!(allAreas.hasOwnProperty(eArea))) {
                         if (subArea.oneWay && subArea.oneWayArea !== "" && subArea.type !== "overworld") {
-                            allAreas[eArea] = { show: true, dungeon: false, collapse: 'some', entrances: {}, locations: {} };
+                            allAreas[eArea] = { show: true, dungeon: internalDungeonEntrance, collapse: 'some', entrances: {}, locations: {} };
                         } else {
-                            allAreas[eArea] = { show: false, dungeon: false, collapse: 'some', entrances: {}, locations: {} };
+                            allAreas[eArea] = { show: false, dungeon: internalDungeonEntrance, collapse: 'some', entrances: {}, locations: {} };
                         }
                     }
                 }
                 if (!(areas.hasOwnProperty(eArea))) {
-                    areas[eArea] = { show: allAreas[eArea].show, dungeon: false, collapse: allAreas[eArea].collapse, entrances: {}, locations: {} };
+                    areas[eArea] = { show: allAreas[eArea].show, dungeon: internalDungeonEntrance, collapse: allAreas[eArea].collapse, entrances: {}, locations: {} };
                 }
                 if (settings["Decoupled Entrances"] === "Off" && entrance === "GV Lower Stream -> Lake Hylia") {
                     allAreas.entrances[entrance].shuffled = false;
@@ -1063,37 +1076,19 @@ class Tracker extends React.Component {
         let eDungeon = "";
         Object.keys(allAreas.locations).forEach((location) => {
             if (allAreas.locations[location].visible === true) {
-                // Ganon's Castle is never shuffled, so it doesn't have a key
-                // in allAreas.entrances to activate the dungeon check
-                if (allAreas.locations[location].lKey !== "Ganon's Castle") {
-                    eArea = allAreas.locations[location].area;
-                    if (eArea !== "") {
-                        if (!(allAreas.hasOwnProperty(eArea)) && init) { 
-                            allAreas[eArea] = { show: false, dungeon: false, collapse: 'some', entrances: {}, locations: {} };
-                        }
-                        if (!(areas.hasOwnProperty(eArea))) {
-                            areas[eArea] = { show: allAreas[eArea].show, dungeon: false, collapse: allAreas[eArea].collapse, entrances: {}, locations: {} };
-                        }
-                        eLocation = {};
-                        eLocation[location] = allAreas.locations[location];
-                        areas[eArea].locations = merge(areas[eArea].locations, eLocation);
-                    } else if (allAreas.entrances[allAreas.locations[location].lKey].type === 'dungeon') {
-                        eDungeon = allAreas.entrances[allAreas.locations[location].lKey].alias;
-                        if (!(allAreas.hasOwnProperty(eDungeon)) && init) { 
-                            allAreas[eDungeon] = { show: false, dungeon: true, collapse: 'some', entrances: {}, locations: {} };
-                        }
-                        if (!(areas.hasOwnProperty(eDungeon))) {
-                            areas[eDungeon] = { show: false, dungeon: true, collapse: 'some', entrances: {}, locations: {} };
-                        }
-                        eLocation = {};
-                        eLocation[location] = allAreas.locations[location];
-                        areas[eDungeon].locations = merge(areas[eDungeon].locations, eLocation);
-                        eEntrance = {};
-                        eEntrance[allAreas.entrances[allAreas.locations[location].lKey].reverse] = allAreas.entrances[allAreas.entrances[allAreas.locations[location].lKey].reverse];
-                        areas[eDungeon].entrances = merge(areas[eDungeon].entrances, eEntrance);
+                eArea = allAreas.locations[location].area;
+                if (eArea !== "") {
+                    if (!(allAreas.hasOwnProperty(eArea)) && init) { 
+                        allAreas[eArea] = { show: false, dungeon: false, collapse: 'some', entrances: {}, locations: {} };
                     }
-                } else {
-                    eDungeon = "Ganon's Castle"
+                    if (!(areas.hasOwnProperty(eArea))) {
+                        areas[eArea] = { show: allAreas[eArea].show, dungeon: false, collapse: allAreas[eArea].collapse, entrances: {}, locations: {} };
+                    }
+                    eLocation = {};
+                    eLocation[location] = allAreas.locations[location];
+                    areas[eArea].locations = merge(areas[eArea].locations, eLocation);
+                } else if (allAreas.entrances[allAreas.locations[location].lKey].type === 'dungeon') {
+                    eDungeon = allAreas.entrances[allAreas.locations[location].lKey].alias;
                     if (!(allAreas.hasOwnProperty(eDungeon)) && init) { 
                         allAreas[eDungeon] = { show: false, dungeon: true, collapse: 'some', entrances: {}, locations: {} };
                     }
@@ -1104,7 +1099,7 @@ class Tracker extends React.Component {
                     eLocation[location] = allAreas.locations[location];
                     areas[eDungeon].locations = merge(areas[eDungeon].locations, eLocation);
                     eEntrance = {};
-                    eEntrance['Ganons Castle -> Ganons Castle Grounds'] = allAreas.entrances['Ganons Castle -> Ganons Castle Grounds']
+                    eEntrance[allAreas.entrances[allAreas.locations[location].lKey].reverse] = allAreas.entrances[allAreas.entrances[allAreas.locations[location].lKey].reverse];
                     areas[eDungeon].entrances = merge(areas[eDungeon].entrances, eEntrance);
                 }
             }
@@ -1138,7 +1133,7 @@ class Tracker extends React.Component {
                 }
                 entrances[eType][area].push(entrance);
             }
-            if (eType === "interior" || eType === "specialInterior" || eType === "grave" || eType === "grotto" || eType === "dungeon") {
+            if (eType === "interior" || eType === "specialInterior" || eType === "grave" || eType === "grotto" || eType === "dungeon" || eType === "boss") {
                 if (!(entrances.hasOwnProperty(eType))) {
                     entrances[eType] = [];
                 }
@@ -1159,7 +1154,7 @@ class Tracker extends React.Component {
         let entrance;
         let eLocation;
         Object.keys(allAreas.locations).forEach(location => {
-            if (allAreas.locations[location].lKey !== "" && allAreas.locations[location].lKey !== "Ganon's Castle") {
+            if (allAreas.locations[location].lKey !== "") {
                 entrance = allAreas.locations[location].lKey;
                 eLocation = {};
                 eLocation[location] = allAreas.locations[location];
@@ -1240,6 +1235,16 @@ class Tracker extends React.Component {
         });
         oDungeons = { "Dungeons": eDungeons };
         oDecoupledDungeons = merge(clone(oDungeons), clone(oReverseDungeons));
+        let oBosses = {};
+        let oReverseBosses = {};
+        let oDecoupledBosses = {};
+        let eBosses = [];
+        eBosses.push(...(Object.filterEntrances(allAreas.entrances, (eType, eLink, eReverse) => eType === "boss" && eLink === "" && eReverse === false)));
+        Object.keys(allEntrances.reverseboss).forEach(area => {
+            oReverseBosses[area] = (Object.filterReverseEntrances(allAreas.entrances, (eType, eLink, eArea, eReverse) => eType === "boss" && eLink === "" && eArea === area && eReverse === true));
+        });
+        oBosses = { "Bosses": eBosses };
+        oDecoupledBosses = merge(clone(oBosses), clone(oReverseBosses));
         let oGrottos = {};
         let oReverseGrottos = {};
         let oDecoupledGrottos = {};
@@ -1264,23 +1269,35 @@ class Tracker extends React.Component {
         }
 
         if (settings["Shuffle Overworld"] === "On") {
-            if (settings["Mixed Pools"] === "On") {
+            if (settings["Mixed Pools"].includes("Overworld")) {
                 mixedpool = mergeWith(mixedpool, {"mixed": oOverworld, "mixed_reverse": oOverworld, "mixed_decoupled": oOverworld, "mixed_overworld": oOverworld}, mergeAreas);
             }
             entrances = merge(entrances, {"overworld": oOverworld});
         }
         if (settings["Shuffle Interiors"] === "Simple" || settings["Shuffle Interiors"] === "All") {
-            mixedpool = mergeWith(mixedpool, {"mixed": oInteriors, "mixed_reverse": oReverseInteriors, "mixed_decoupled": oDecoupledInteriors, "mixed_overworld": merge(clone(oInteriors), clone(oReverseInteriors))}, mergeAreas);
+            if (settings["Mixed Pools"].includes("Interiors")) {
+                mixedpool = mergeWith(mixedpool, {"mixed": oInteriors, "mixed_reverse": oReverseInteriors, "mixed_decoupled": oDecoupledInteriors, "mixed_overworld": merge(clone(oInteriors), clone(oReverseInteriors))}, mergeAreas);
+            }
             entrances = merge(entrances, {"interior": oInteriors, "interior_reverse": oReverseInteriors, "interior_decoupled": oDecoupledInteriors});
         }
         if (settings["Shuffle Grottos"] === "On") {
-            mixedpool = mergeWith(mixedpool, {"mixed": oGrottos, "mixed_reverse": oReverseGrottos, "mixed_decoupled": oDecoupledGrottos, "mixed_overworld": merge(clone(oGrottos), clone(oReverseGrottos))}, mergeAreas);
+            if (settings["Mixed Pools"].includes("Grottos")) {
+                mixedpool = mergeWith(mixedpool, {"mixed": oGrottos, "mixed_reverse": oReverseGrottos, "mixed_decoupled": oDecoupledGrottos, "mixed_overworld": merge(clone(oGrottos), clone(oReverseGrottos))}, mergeAreas);
+            }
             entrances = merge(entrances, {"grotto": oGrottos, "grotto_reverse": oReverseGrottos, "grotto_decoupled": oDecoupledGrottos});
             entrances = merge(entrances, {"grave": oGrottos, "grave_reverse": oReverseGrottos, "grave_decoupled": oDecoupledGrottos});
         }
         if (settings["Shuffle Dungeons"] === "On") {
-            mixedpool = mergeWith(mixedpool, {"mixed": oDungeons, "mixed_reverse": oReverseDungeons, "mixed_decoupled": oDecoupledDungeons, "mixed_overworld": merge(clone(oDungeons), clone(oReverseDungeons))}, mergeAreas);
+            if (settings["Mixed Pools"].includes("Dungeons")) {
+                mixedpool = mergeWith(mixedpool, {"mixed": oDungeons, "mixed_reverse": oReverseDungeons, "mixed_decoupled": oDecoupledDungeons, "mixed_overworld": merge(clone(oDungeons), clone(oReverseDungeons))}, mergeAreas);
+            }
             entrances = merge(entrances, {"dungeon": oDungeons, "dungeon_reverse": oReverseDungeons, "dungeon_decoupled": oDecoupledDungeons});
+        }
+        if (settings["Shuffle Bosses"] === "Age-Restricted" || settings["Shuffle Bosses"] === "Full") {
+            if (settings["Mixed Pools"].includes("Boss Rooms")) {
+                mixedpool = mergeWith(mixedpool, {"mixed": oBosses, "mixed_reverse": oReverseBosses, "mixed_decoupled": oDecoupledBosses, "mixed_overworld": merge(clone(oBosses), clone(oReverseBosses))}, mergeAreas);
+            }
+            entrances = merge(entrances, {"boss": oBosses, "boss_reverse": oReverseBosses, "boss_decoupled": oDecoupledBosses});
         }
         if (settings["Shuffle Warp Songs"] === "On") {
             entrances = merge(entrances, {"warpsong": [], "warpsong_reverse": [], "warpsong_decoupled": []});
@@ -1597,11 +1614,14 @@ class Tracker extends React.Component {
         let orVisible;
         let orCount;
         let interiorsOnly;
+        let visibleRules;
+        // Location visibility
         Object.keys(allAreas.locations).forEach((location) => {
             if (settings["Show Locations"] === "Yes" || settings["Show Locations"] === "Interiors Only") {
                 interiorsOnly = (settings["Show Locations"] === "Interiors Only");
                 if (typeof allAreas.locations[location].settings === "boolean") {
                     allAreas.locations[location].visible = allAreas.locations[location].settings;
+                    visibleRules = allAreas.locations[location].settings;
                 } else if (allAreas.locations[location].settings.length > 0) {
                     andVisible = true;
                     orVisible = false;
@@ -1613,12 +1633,60 @@ class Tracker extends React.Component {
                         if (settings[s.setting] !== s.value && s.required === true) { andVisible = false; }
                         if (settings[s.setting] === s.value && s.required === false) { orVisible = true; }
                     });
-                    allAreas.locations[location].visible = (((allAreas.locations[location].area !== "" && !(interiorsOnly)) || allAreas.locations[location].area === "") && (andVisible === (andCount >= 0)) && (orVisible === (orCount > 0)));
+                    visibleRules = ((andVisible === (andCount >= 0)) && (orVisible === (orCount > 0)));
+                    allAreas.locations[location].visible = (((allAreas.locations[location].area !== "" && !(interiorsOnly)) || allAreas.locations[location].area === "") && visibleRules);
                 } else {
                     allAreas.locations[location].visible = ((allAreas.locations[location].area !== "" && !(interiorsOnly)) || allAreas.locations[location].area === "");
+                    visibleRules = true;
                 }
             } else {
+                visibleRules = false;
                 allAreas.locations[location].visible = false;
+            }
+            if (allAreas.locations[location].shuffleRules.length > 0) {andVisible = true;
+                orVisible = false;
+                andCount = 0;
+                orCount = 0;
+                allAreas.locations[location].shuffleRules.forEach(s => {
+                    if (s.required === true) { andCount++; } else { orCount++; }
+                    if (settings[s.setting] === s.value && s.required === true) { andVisible = true && andVisible;  }
+                    if (settings[s.setting] !== s.value && s.required === true) { andVisible = false; }
+                    if (settings[s.setting] === s.value && s.required === false) { orVisible = true; }
+                });
+                allAreas.locations[location].shuffled = ((andVisible === (andCount >= 0)) && (orVisible === (orCount > 0)));
+            } else {
+                allAreas.locations[location].shuffled = visibleRules;
+            }
+        });
+        // Entrance tag usage vs unique name
+        Object.keys(allAreas.entrances).forEach((entrance) => {
+            if (allAreas.entrances[entrance].tagRules.length > 0) {
+                andVisible = true;
+                orVisible = false;
+                andCount = 0;
+                orCount = 0;
+                allAreas.entrances[entrance].tagRules.forEach(s => {
+                    if (s.required === true) { andCount++; } else { orCount++; }
+                    if (settings[s.setting] === s.value && s.required === true) { andVisible = true && andVisible;  }
+                    if (settings[s.setting] !== s.value && s.required === true) { andVisible = false; }
+                    if (settings[s.setting] === s.value && s.required === false) { orVisible = true; }
+                });
+                allAreas.entrances[entrance].enableTag = (andVisible === (andCount >= 0)) && (orVisible === (orCount > 0));
+            }
+        });
+        // Check entrance tags if a new tag representative is needed because the previous one no longer uses a tag
+        Object.keys(allAreas.entrances).forEach((entrance) => {
+            if (allAreas.entrances[entrance].tag !== "") {
+                if (allAreas.entrances[entrance].tagRep && !(allAreas.entrances[entrance].enableTag)) {
+                    allAreas.entrances[entrance].tagRep = false;
+                    Object.filterTags = (entrances, predicate) =>
+                        Object.keys(entrances)
+                            .filter( key => predicate(entrances[key].tag, entrances[key].tagRep, entrances[key].enableTag, entrances[key].eLink) );
+                    let tagEntrances = (Object.filterTags(allAreas.entrances, (eTag, eTagRep, eEnableTag, eLink) => (eTag === allAreas.entrances[entrance].tag && eTagRep === false && eEnableTag && eLink === "")));
+                    if (tagEntrances.length !== 0) {
+                        allAreas.entrances[tagEntrances[0]].tagRep = true;
+                    }
+                }
             }
         });
     }
@@ -1627,12 +1695,15 @@ class Tracker extends React.Component {
         let originator = entrance.currentTarget.getAttribute('data-link-from');
         let eCategory = entrance.currentTarget.getAttribute('data-link-to');
         let alwaysOneWay = ["spawn","warpsong","owldrop","extra"];
+        let unMixedDecoupled = ["boss", "noBossShuffle", "noDungeonShuffle"];
         let areas = cloneDeep(this.state.allAreas);
         let shownAreas = cloneDeep(this.state.areas);
         let entrances = cloneDeep(this.state.allEntrances);
         let area = areas.entrances[originator].area;
         let entrancePools;
-        if (areas.entrances[eCategory].tag !== "" && areas.entrances[eCategory].tag === areas.entrances[originator].tag && areas.entrances[originator].eLink === "") {
+        if (areas.entrances[eCategory].tag !== "" && areas.entrances[eCategory].enableTag &&
+            areas.entrances[eCategory].tag === areas.entrances[originator].tag && 
+            areas.entrances[originator].eLink === "" && areas.entrances[originator].enableTag) {
             eCategory = originator;
         }
         console.log(originator, "<>", eCategory,"[Connected]");
@@ -1643,7 +1714,7 @@ class Tracker extends React.Component {
         if (areas.entrances[eCategory].oneWay === true && areas.entrances[eCategory].oneWayArea !== "") {
             targetArea = areas.entrances[eCategory].oneWayArea;
         }
-        if (this.state.settings["Decoupled Entrances"] === "Off" && !(alwaysOneWay.includes(areas.entrances[originator].type))) {
+        if ((this.state.settings["Decoupled Entrances"] === "Off" && !(alwaysOneWay.includes(areas.entrances[originator].type))) || (unMixedDecoupled.includes(areas.entrances[originator].type))) {
             let revECategory;
             let revTargetE;
             if (areas.entrances[eCategory].type === "overworld") {
@@ -1689,9 +1760,9 @@ class Tracker extends React.Component {
 
         Object.filterTags = (entrances, predicate) =>
             Object.keys(entrances)
-                .filter( key => predicate(entrances[key].tag, entrances[key].tagRep, entrances[key].eLink) );
+                .filter( key => predicate(entrances[key].tag, entrances[key].tagRep, entrances[key].enableTag, entrances[key].eLink) );
         if (areas.entrances[eCategory].tagRep) {
-            let tagEntrances = (Object.filterTags(areas.entrances, (eTag, eTagRep, eLink) => (eTag === areas.entrances[eCategory].tag && eTagRep === false && eLink === "")));
+            let tagEntrances = (Object.filterTags(areas.entrances, (eTag, eTagRep, eEnableTag, eLink) => (eTag === areas.entrances[eCategory].tag && eTagRep === false && eEnableTag && eLink === "")));
             if (tagEntrances.length !== 0) {
                 areas.entrances[tagEntrances[0]].tagRep = true;
                 areas.entrances[eCategory].tagRep = false;
@@ -1725,6 +1796,7 @@ class Tracker extends React.Component {
             area = areas.entrances[originator].oneWayArea;
         }
         let alwaysOneWay = ["spawn","warpsong","owldrop","extra"];
+        let unMixedDecoupled = ["boss", "noBossShuffle", "noDungeonShuffle"];
         let targetArea = areas.entrances[subArea].area;
         if (areas.entrances[subArea].oneWay === true && areas.entrances[subArea].oneWayArea !== "") {
             targetArea = areas.entrances[subArea].oneWayArea;
@@ -1752,7 +1824,7 @@ class Tracker extends React.Component {
             areas.entrances[subArea].userOneWayELink = "";
             shownAreas[targetArea].entrances[subArea].userOneWayELink = "";
         }
-        if (this.state.settings["Decoupled Entrances"] === "Off") {
+        if (this.state.settings["Decoupled Entrances"] === "Off" || (unMixedDecoupled.includes(areas.entrances[originator].type))) {
             if (!(alwaysOneWay.includes(entrances[originator].type))) {
                 let revSubArea;
                 let revTargetE;
@@ -1822,11 +1894,7 @@ class Tracker extends React.Component {
             areas[allAreas.locations[originator].area].locations[originator].walletTier = tier;
         }
         if (allAreas.locations[originator].lKey !== "") {
-            if (allAreas.locations[originator].lKey === "Ganon's Castle") {
-                areas["Ganon's Castle"].locations[originator].walletTier = tier;
-            } else {
-                allEntrances[allAreas.locations[originator].lKey].locations[originator].walletTier = tier;
-            }
+            allEntrances[allAreas.locations[originator].lKey].locations[originator].walletTier = tier;
         }
         this.setState({
             allAreas: allAreas,
@@ -1849,11 +1917,7 @@ class Tracker extends React.Component {
             areas[allAreas.locations[originator].area].locations[originator].price = price;
         }
         if (allAreas.locations[originator].lKey !== "") {
-            if (allAreas.locations[originator].lKey === "Ganon's Castle") {
-                areas["Ganon's Castle"].locations[originator].price = price;
-            } else {
-                allEntrances[allAreas.locations[originator].lKey].locations[originator].price = price;
-            }
+            allEntrances[allAreas.locations[originator].lKey].locations[originator].price = price;
         }
         this.setState({
             allAreas: allAreas,
@@ -1875,11 +1939,7 @@ class Tracker extends React.Component {
             areas[allAreas.locations[originator].area].locations[originator].check = "checked";
         }
         if (allAreas.locations[originator].lKey !== "") {
-            if (allAreas.locations[originator].lKey === "Ganon's Castle") {
-                areas["Ganon's Castle"].locations[originator].check = "checked";
-            } else {
-                allEntrances[allAreas.locations[originator].lKey].locations[originator].check = "checked";
-            }
+            allEntrances[allAreas.locations[originator].lKey].locations[originator].check = "checked";
         }
         this.setState({
             allAreas: allAreas,
@@ -1902,11 +1962,7 @@ class Tracker extends React.Component {
             areas[allAreas.locations[originator].area].locations[originator].check = "";
         }
         if (allAreas.locations[originator].lKey !== "") {
-            if (allAreas.locations[originator].lKey === "Ganon's Castle") {
-                areas["Ganon's Castle"].locations[originator].check = "";
-            } else {
-                allEntrances[allAreas.locations[originator].lKey].locations[originator].check = "";
-            }
+            allEntrances[allAreas.locations[originator].lKey].locations[originator].check = "";
         }
         this.setState({
             allAreas: allAreas,
@@ -1930,11 +1986,7 @@ class Tracker extends React.Component {
             areas[allAreas.locations[originator].area].locations[originator].foundItem = foundItem;
         }
         if (allAreas.locations[originator].lKey !== "") {
-            if (allAreas.locations[originator].lKey === "Ganon's Castle") {
-                areas["Ganon's Castle"].locations[originator].foundItem = foundItem;
-            } else {
-                allEntrances[allAreas.locations[originator].lKey].locations[originator].foundItem = foundItem;
-            }
+            allEntrances[allAreas.locations[originator].lKey].locations[originator].foundItem = foundItem;
         }
         this.setState({
             allAreas: allAreas,
@@ -2119,6 +2171,20 @@ class Tracker extends React.Component {
                                     <div>
                                         <div className={classes.titleText} variant="h4">{this.state.settings["View"]}</div>
                                     </div>
+                                </div>
+                                <div className={classes.checkCount}>
+                                    {
+                                        Object.keys(this.state.allAreas.locations).filter(l => {
+                                            return this.state.allAreas.locations[l].shuffled &&
+                                                   this.state.allAreas.locations[l].check !== "";
+                                        }).length
+                                    }
+                                    /
+                                    {
+                                        Object.keys(this.state.allAreas.locations).filter(l => {
+                                            return this.state.allAreas.locations[l].shuffled;
+                                        }).length
+                                    }
                                 </div>
                                 <button
                                     onClick={() => this.setState({alertReset: true,})}

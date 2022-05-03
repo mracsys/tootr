@@ -7,7 +7,8 @@ class UnknownEntrance extends React.Component {
         let eType = this.props.allAreas.entrances[this.props.entrance].type;
         let eExit = this.props.allAreas.entrances[this.props.entrance].aLink;
         if (((this.props.title === "Spawn Points" && eType === "spawn") || (this.props.title === "Warp Songs" && eType === "warpsong") || (eType !== "spawn" && eType !== "warpsong" && eType !== "extra")) &&
-           (this.props.allAreas.entrances[this.props.entrance].isReverse === false || this.props.forceVisible === true || this.props.allAreas.entrances[this.props.entrance].oneWay === true || this.props.allAreas.entrances[this.props.entrance].connector !== "" || this.props.dungeon) &&
+           (this.props.allAreas.entrances[this.props.entrance].isReverse === false || this.props.forceVisible === true || this.props.allAreas.entrances[this.props.entrance].oneWay === true || this.props.allAreas.entrances[this.props.entrance].connector !== "" ||
+           (this.props.dungeon && eType !== 'boss' && eType !== 'noBossShuffle')) &&
            ((this.props.entrance === 'GV Lower Stream -> Lake Hylia' && this.props.title === this.props.allAreas.entrances[this.props.entrance].oneWayArea) || (this.props.entrance !== 'GV Lower Stream -> Lake Hylia'))) {
 //           ((this.props.entrance === 'GV Lower Stream -> Lake Hylia' && this.props.decoupled && this.props.overworld && this.props.title === this.props.allAreas.entrances[this.props.entrance].oneWayArea) || (this.props.entrance !== 'GV Lower Stream -> Lake Hylia'))) {
             if (this.props.allAreas.entrances[this.props.entrance].aLink === "") {

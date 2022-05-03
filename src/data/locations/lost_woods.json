@@ -11,6 +11,8 @@
             "reverseAlias": "Lost Woods Bridge",
             "tag": "",
             "tagRep": false,
+            "tagRules": [],
+            "enableTag": true,
             "type": "overworld",
             "lKey": "",
             "aLink": "",
@@ -32,6 +34,8 @@
             "reverseAlias": "Lost Woods Bridge",
             "tag": "",
             "tagRep": false,
+            "tagRules": [],
+            "enableTag": true,
             "type": "overworld",
             "lKey": "",
             "aLink": "",
@@ -53,6 +57,8 @@
             "reverseAlias": "Lost Woods",
             "tag": "",
             "tagRep": false,
+            "tagRules": [],
+            "enableTag": true,
             "type": "overworld",
             "lKey": "",
             "aLink": "",
@@ -74,6 +80,8 @@
             "reverseAlias": "Lost Woods",
             "tag": "",
             "tagRep": false,
+            "tagRules": [],
+            "enableTag": true,
             "type": "overworld",
             "lKey": "",
             "aLink": "",
@@ -95,6 +103,8 @@
             "reverseAlias": "Lost Woods",
             "tag": "",
             "tagRep": false,
+            "tagRules": [],
+            "enableTag": true,
             "type": "overworld",
             "lKey": "",
             "aLink": "",
@@ -116,6 +126,8 @@
             "reverseAlias": "Lost Woods",
             "tag": "",
             "tagRep": false,
+            "tagRules": [],
+            "enableTag": true,
             "type": "overworld",
             "lKey": "",
             "aLink": "",
@@ -137,6 +149,8 @@
             "reverseAlias": "from Near Meadow Grotto",
             "tag": "Special 2 Scrub Grotto",
             "tagRep": true,
+            "tagRules": [],
+            "enableTag": true,
             "type": "grotto",
             "lKey": "",
             "aLink": "",
@@ -158,6 +172,8 @@
             "reverseAlias": "from Near GC Shortcut Grotto",
             "tag": "Generic Grotto",
             "tagRep": false,
+            "tagRules": [],
+            "enableTag": true,
             "type": "grotto",
             "lKey": "",
             "aLink": "",
@@ -179,6 +195,8 @@
             "reverseAlias": "from Open Grotto",
             "tag": "Deku Theater",
             "tagRep": true,
+            "tagRules": [],
+            "enableTag": true,
             "type": "grotto",
             "lKey": "",
             "aLink": "",
@@ -202,7 +220,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "LW Ocarina Memory Game": {
             "area": "Lost Woods",
@@ -215,7 +235,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "LW Target in Woods": {
             "area": "Lost Woods",
@@ -228,7 +250,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "LW Skull Kid": {
             "area": "Lost Woods",
@@ -241,7 +265,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "LW Deku Scrub Near Bridge": {
             "area": "Lost Woods",
@@ -254,7 +280,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Deku Theater Skull Mask": {
             "area": "",
@@ -267,7 +295,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Deku Theater Mask of Truth": {
             "area": "",
@@ -280,7 +310,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "LW Near Shortcuts Grotto Chest": {
             "area": "",
@@ -293,7 +325,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "LW Deku Scrub Near Deku Theater Left": {
             "area": "Lost Woods",
@@ -310,7 +344,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "LW Deku Scrub Near Deku Theater Right": {
             "area": "Lost Woods",
@@ -327,7 +363,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "LW Deku Scrub Grotto Front": {
             "area": "",
@@ -340,7 +378,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "LW Deku Scrub Grotto Rear": {
             "area": "",
@@ -357,7 +397,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "LW GS Bean Patch Near Bridge": {
             "area": "Lost Woods",
@@ -374,7 +416,12 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
         },
         "LW GS Bean Patch Near Theater": {
             "area": "Lost Woods",
@@ -391,7 +438,12 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
         },
         "LW GS Above Theater": {
             "area": "Lost Woods",
@@ -408,7 +460,219 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
+        },
+        "LW Under Boulder Rupee": {
+            "area": "Lost Woods",
+            "lKey": "",
+            "alias": "Under Boulder Rupee",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "LW Water Shortcut Rupee 1": {
+            "area": "Lost Woods",
+            "lKey": "",
+            "alias": "Water Shortcut Rupee 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "LW Water Shortcut Rupee 2": {
+            "area": "Lost Woods",
+            "lKey": "",
+            "alias": "Water Shortcut Rupee 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "LW Water Shortcut Rupee 3": {
+            "area": "Lost Woods",
+            "lKey": "",
+            "alias": "Water Shortcut Rupee 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "LW Water Shortcut Rupee 4": {
+            "area": "Lost Woods",
+            "lKey": "",
+            "alias": "Water Shortcut Rupee 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "LW Water Shortcut Rupee 5": {
+            "area": "Lost Woods",
+            "lKey": "",
+            "alias": "Water Shortcut Rupee 5",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "LW Water Shortcut Rupee 6": {
+            "area": "Lost Woods",
+            "lKey": "",
+            "alias": "Water Shortcut Rupee 6",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "LW Water Shortcut Rupee 7": {
+            "area": "Lost Woods",
+            "lKey": "",
+            "alias": "Water Shortcut Rupee 7",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "LW Water Shortcut Rupee 8": {
+            "area": "Lost Woods",
+            "lKey": "",
+            "alias": "Water Shortcut Rupee 8",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "LW Near Shortcuts Grotto Beehive 1": {
+            "area": "",
+            "lKey": "Lost Woods -> LW Near Shortcuts Grotto",
+            "alias": "Beehive 1",
+            "type": "item",
+            "settings": [{"setting": "Shuffle Beehives", "value": "On", "required": true}],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "LW Near Shortcuts Grotto Beehive 2": {
+            "area": "",
+            "lKey": "Lost Woods -> LW Near Shortcuts Grotto",
+            "alias": "Beehive 1",
+            "type": "item",
+            "settings": [{"setting": "Shuffle Beehives", "value": "On", "required": true}],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "LW Scrubs Grotto Beehive": {
+            "area": "",
+            "lKey": "LW Beyond Mido -> LW Scrubs Grotto",
+            "alias": "Beehive",
+            "type": "item",
+            "settings": [{"setting": "Shuffle Beehives", "value": "On", "required": true}],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         }
     }
 }

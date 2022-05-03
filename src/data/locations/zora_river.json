@@ -11,6 +11,8 @@
             "reverseAlias": "",
             "tag": "",
             "tagRep": false,
+            "tagRules": [],
+            "enableTag": true,
             "type": "extra",
             "lKey": "",
             "aLink": "",
@@ -32,6 +34,8 @@
             "reverseAlias": "Zora River",
             "tag": "",
             "tagRep": false,
+            "tagRules": [],
+            "enableTag": true,
             "type": "overworld",
             "lKey": "",
             "aLink": "",
@@ -53,6 +57,8 @@
             "reverseAlias": "Zora River",
             "tag": "",
             "tagRep": false,
+            "tagRules": [],
+            "enableTag": true,
             "type": "overworld",
             "lKey": "",
             "aLink": "",
@@ -74,6 +80,8 @@
             "reverseAlias": "Zora River",
             "tag": "",
             "tagRep": false,
+            "tagRules": [],
+            "enableTag": true,
             "type": "overworld",
             "lKey": "",
             "aLink": "",
@@ -95,6 +103,8 @@
             "reverseAlias": "from Storms Grotto",
             "tag": "2 Scrub Grotto",
             "tagRep": false,
+            "tagRules": [],
+            "enableTag": true,
             "type": "grotto",
             "lKey": "",
             "aLink": "",
@@ -116,6 +126,8 @@
             "reverseAlias": "from Boulder Grotto",
             "tag": "Fairy Fountain",
             "tagRep": true,
+            "tagRules": [],
+            "enableTag": true,
             "type": "grotto",
             "lKey": "",
             "aLink": "",
@@ -137,6 +149,8 @@
             "reverseAlias": "from Open Grotto",
             "tag": "Generic Grotto",
             "tagRep": false,
+            "tagRules": [],
+            "enableTag": true,
             "type": "grotto",
             "lKey": "",
             "aLink": "",
@@ -160,7 +174,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "ZR Open Grotto Chest": {
             "area": "",
@@ -173,7 +189,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "ZR Frogs in the Rain": {
             "area": "Zora River",
@@ -186,7 +204,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "ZR Frogs Ocarina Game": {
             "area": "Zora River",
@@ -199,7 +219,84 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "ZR Frogs Zeldas Lullaby": {
+            "area": "Zora River",
+            "lKey": "",
+            "alias": "Frogs Zeldas Lullaby",
+            "type": "item",
+            "settings": [{"setting": "Shuffle Frogs", "value": "On", "required": true}],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "ZR Frogs Eponas Song": {
+            "area": "Zora River",
+            "lKey": "",
+            "alias": "Frogs Eponas Song",
+            "type": "item",
+            "settings": [{"setting": "Shuffle Frogs", "value": "On", "required": true}],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "ZR Frogs Sarias Song": {
+            "area": "Zora River",
+            "lKey": "",
+            "alias": "Frogs Sarias Song",
+            "type": "item",
+            "settings": [{"setting": "Shuffle Frogs", "value": "On", "required": true}],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "ZR Frogs Suns Song": {
+            "area": "Zora River",
+            "lKey": "",
+            "alias": "Frogs Suns Song",
+            "type": "item",
+            "settings": [{"setting": "Shuffle Frogs", "value": "On", "required": true}],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "ZR Frogs Song of Time": {
+            "area": "Zora River",
+            "lKey": "",
+            "alias": "Frogs Song of Time",
+            "type": "item",
+            "settings": [{"setting": "Shuffle Frogs", "value": "On", "required": true}],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "ZR Near Open Grotto Freestanding PoH": {
             "area": "Zora River",
@@ -212,7 +309,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "ZR Near Domain Freestanding PoH": {
             "area": "Zora River",
@@ -225,7 +324,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "ZR Deku Scrub Grotto Front": {
             "area": "",
@@ -242,7 +343,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "ZR Deku Scrub Grotto Rear": {
             "area": "",
@@ -259,7 +362,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "ZR GS Tree": {
             "area": "Zora River",
@@ -276,7 +381,12 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
         },
         "ZR GS Ladder": {
             "area": "Zora River",
@@ -293,7 +403,12 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
         },
         "ZR GS Near Raised Grottos": {
             "area": "Zora River",
@@ -310,7 +425,12 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
         },
         "ZR GS Above Bridge": {
             "area": "Zora River",
@@ -327,7 +447,129 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
+        },
+        "ZR Waterfall Rupee 1": {
+            "area": "Zora River",
+            "lKey": "",
+            "alias": "Waterfall Rupee 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "ZR Waterfall Rupee 2": {
+            "area": "Zora River",
+            "lKey": "",
+            "alias": "Waterfall Rupee 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "ZR Waterfall Rupee 3": {
+            "area": "Zora River",
+            "lKey": "",
+            "alias": "Waterfall Rupee 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "ZR Waterfall Rupee 4": {
+            "area": "Zora River",
+            "lKey": "",
+            "alias": "Waterfall Rupee 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "ZR Storms Grotto Beehive": {
+            "area": "",
+            "lKey": "Zora River -> ZR Storms Grotto",
+            "alias": "Beehive",
+            "type": "item",
+            "settings": [{"setting": "Shuffle Beehives", "value": "On", "required": true}],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "ZR Open Grotto Beehive 1": {
+            "area": "",
+            "lKey": "Zora River -> ZR Open Grotto",
+            "alias": "Beehive 1",
+            "type": "item",
+            "settings": [{"setting": "Shuffle Beehives", "value": "On", "required": true}],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "ZR Open Grotto Beehive 2": {
+            "area": "",
+            "lKey": "Zora River -> ZR Open Grotto",
+            "alias": "Beehive 2",
+            "type": "item",
+            "settings": [{"setting": "Shuffle Beehives", "value": "On", "required": true}],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         }
     }
 }

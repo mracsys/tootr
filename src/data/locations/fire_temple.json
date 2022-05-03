@@ -1,5 +1,29 @@
 {
-    "entrances": {},
+    "entrances": {
+        "Fire Temple -> Volvagia": {
+            "area": "Fire Temple",
+            "reverse": "Volvagia -> Fire Temple",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "",
+            "isReverse": false,
+            "alias": "Volvagia",
+            "reverseAlias": "from Volvagia",
+            "tag": "",
+            "tagRep": false,
+            "tagRules": [],
+            "enableTag": true,
+            "type": "boss",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": true
+        }
+    },
     "locations": {
         "Fire Temple Near Boss Chest": {
             "area": "",
@@ -12,7 +36,47 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple Near Boss Pot 1": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Boss Lobby Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple Near Boss Pot 2": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Boss Lobby Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Fire Temple GS Boss Key Loop": {
             "area": "",
@@ -30,7 +94,13 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Fire Temple MQ", "value": false, "required": true},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
         },
         "Fire Temple Flare Dancer Chest": {
             "area": "",
@@ -43,7 +113,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Fire Temple Boss Key Chest": {
             "area": "",
@@ -56,7 +128,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Fire Temple Big Lava Room Lower Open Door Chest": {
             "area": "",
@@ -69,7 +143,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Fire Temple GS Song of Time Room": {
             "area": "",
@@ -87,7 +163,70 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Fire Temple MQ", "value": false, "required": true},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
+        },
+        "Fire Temple Big Lava Room Pot 1": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Lava Room Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple Big Lava Room Pot 2": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Lava Room Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple Big Lava Room Pot 3": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Lava Room Pot 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Fire Temple Big Lava Room Blocked Door Chest": {
             "area": "",
@@ -100,7 +239,66 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple Elevator Room Recovery Heart 1": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Elevator Freestanding 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple Elevator Room Recovery Heart 2": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Elevator Freestanding 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple Elevator Room Recovery Heart 3": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Elevator Freestanding 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Fire Temple Boulder Maze Lower Chest": {
             "area": "",
@@ -113,7 +311,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Fire Temple Boulder Maze Side Room Chest": {
             "area": "",
@@ -126,7 +326,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Fire Temple GS Boulder Maze": {
             "area": "",
@@ -144,7 +346,70 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Fire Temple MQ", "value": false, "required": true},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
+        },
+        "Fire Temple Eye Switch Room Recovery Heart 1": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Thin Bridge Freestanding 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple Eye Switch Room Recovery Heart 2": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Thin Bridge Freestanding 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple Eye Switch Room Recovery Heart 3": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Thin Bridge Freestanding 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Fire Temple Map Chest": {
             "area": "",
@@ -157,7 +422,66 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple Moving Fire Room Recovery Heart 1": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Racing Fire Freestanding 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple Moving Fire Room Recovery Heart 2": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Racing Fire Freestanding 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple Moving Fire Room Recovery Heart 3": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Racing Fire Freestanding 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Fire Temple Boulder Maze Shortcut Chest": {
             "area": "",
@@ -170,7 +494,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Fire Temple Boulder Maze Upper Chest": {
             "area": "",
@@ -183,7 +509,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Fire Temple GS Scarecrow Climb": {
             "area": "",
@@ -201,7 +529,13 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Fire Temple MQ", "value": false, "required": true},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
         },
         "Fire Temple GS Scarecrow Top": {
             "area": "",
@@ -219,7 +553,13 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Fire Temple MQ", "value": false, "required": true},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
         },
         "Fire Temple Scarecrow Chest": {
             "area": "",
@@ -232,7 +572,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Fire Temple Compass Chest": {
             "area": "",
@@ -245,7 +587,199 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple Flame Maze Pot 1": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Fire Maze Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple Flame Maze Pot 2": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Fire Maze Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple Flame Maze Pot 3": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Fire Maze Pot 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple Flame Maze Pot 4": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Fire Maze Pot 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple Flame Maze Pot 5": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Fire Maze Pot 5",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple Flame Maze Pot 6": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Fire Maze Pot 6",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple Flame Maze Pot 7": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Fire Maze Pot 7",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple Flame Maze Pot 8": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Fire Maze Pot 8",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple MQ First Room Pot 1": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Entrance Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple MQ First Room Pot 2": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Entrance Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Fire Temple Megaton Hammer Chest": {
             "area": "",
@@ -258,7 +792,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Fire Temple Highest Goron Chest": {
             "area": "",
@@ -271,7 +807,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Fire Temple MQ Map Room Side Chest": {
             "area": "",
@@ -284,7 +822,85 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple MQ Iron Knuckle Room Pot 1": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Iron Knuckle Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple MQ Iron Knuckle Room Pot 2": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Iron Knuckle Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple MQ Iron Knuckle Room Pot 3": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Iron Knuckle Pot 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple MQ Iron Knuckle Room Pot 4": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Iron Knuckle Pot 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Fire Temple MQ Megaton Hammer Chest": {
             "area": "",
@@ -297,7 +913,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Fire Temple MQ Map Chest": {
             "area": "",
@@ -310,7 +928,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Fire Temple MQ Near Boss Chest": {
             "area": "",
@@ -323,7 +943,218 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple MQ Near Boss Pot 1": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Boss Lobby Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple MQ Near Boss Pot 2": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Boss Lobby Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple MQ Before Boss Left Crate 1": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Boss Lobby Crate 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple MQ Before Boss Left Crate 2": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Boss Lobby Crate 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple MQ Before Boss Left Crate 3": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Boss Lobby Crate 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple MQ Before Boss Left Crate 4": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Boss Lobby Crate 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple MQ Before Boss Left Crate 5": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Boss Lobby Crate 5",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple MQ Before Boss Left Crate 6": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Boss Lobby Crate 6",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple MQ Big Lava Room Left Pot": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Big Lava Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple MQ Big Lava Room Right Pot": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Big Lava Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple MQ Big Lava Room Alcove Pot": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Big Lava High Pot",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Fire Temple MQ GS Big Lava Room Open Door": {
             "area": "",
@@ -341,7 +1172,13 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Fire Temple MQ", "value": true, "required": true},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
         },
         "Fire Temple MQ Big Lava Room Blocked Door Chest": {
             "area": "",
@@ -354,7 +1191,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Fire Temple MQ Boss Key Chest": {
             "area": "",
@@ -367,7 +1206,85 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple MQ Boss Key Chest Room Pot 1": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Near Lava Room Torch Chest Pot",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple MQ Elevator Room Recovery Heart 1": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Elevator Freestanding 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple MQ Elevator Room Recovery Heart 2": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Elevator Freestanding 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple MQ Elevator Room Recovery Heart 3": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Elevator Freestanding 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Fire Temple MQ Lizalfos Maze Lower Chest": {
             "area": "",
@@ -380,7 +1297,66 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple MQ Lower Lizalfos Maze Crate 1": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Lizalfos Maze Lower Crate 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple MQ Lower Lizalfos Maze Crate 2": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Lizalfos Maze Lower Crate 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple MQ Lower Lizalfos Maze Crate 3": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Lizalfos Maze Lower Crate 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Fire Temple MQ Lizalfos Maze Side Room Chest": {
             "area": "",
@@ -393,7 +1369,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Fire Temple MQ Compass Chest": {
             "area": "",
@@ -406,7 +1384,123 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple MQ Shortcut Crate 1": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Shortcut Crate 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple MQ Shortcut Crate 2": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Shortcut Crate 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple MQ Shortcut Crate 3": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Shortcut Crate 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple MQ Shortcut Crate 4": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Shortcut Crate 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple MQ Shortcut Crate 5": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Shortcut Crate 5",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple MQ Shortcut Crate 6": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Shortcut Crate 6",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Fire Temple MQ Lizalfos Maze Upper Chest": {
             "area": "",
@@ -419,7 +1513,66 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple MQ Upper Lizalfos Maze Crate 1": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Lizalfos Maze Upper Crate 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple MQ Upper Lizalfos Maze Crate 2": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Lizalfos Maze Upper Crate 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple MQ Upper Lizalfos Maze Crate 3": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Lizalfos Maze Upper Crate 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Fire Temple MQ GS Skull On Fire": {
             "area": "",
@@ -437,7 +1590,184 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Fire Temple MQ", "value": true, "required": true},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
+        },
+        "Fire Temple MQ Shoot Torch On Wall Room Pot 1": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "High Torch Room Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple MQ Shoot Torch On Wall Room Pot 2": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "High Torch Room Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple MQ Shoot Torch On Wall Crate 1": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "High Torch Room Crate 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple MQ Shoot Torch On Wall Crate 2": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "High Torch Room Crate 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple MQ Shoot Torch On Wall Crate 3": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "High Torch Room Crate 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple MQ Shoot Torch On Wall Crate 4": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "High Torch Room Crate 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple MQ Shoot Torch On Wall Crate 5": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "High Torch Room Crate 5",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple MQ Narrow Path Room Pot 1": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Narrow Bridge Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple MQ Narrow Path Room Pot 2": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Narrow Bridge Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Fire Temple MQ GS Fire Wall Maze Side Room": {
             "area": "",
@@ -455,7 +1785,108 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Fire Temple MQ", "value": true, "required": true},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
+        },
+        "Fire Temple MQ Flame Maze Pot 1": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Fire Maze Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple MQ Flame Maze Pot 2": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Fire Maze Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple MQ Flame Maze Pot 3": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Fire Maze Pot 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple MQ Flame Maze Pot 4": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Fire Maze Pot 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple MQ Flame Maze Pot 5": {
+            "area": "",
+            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "alias": "Fire Maze Pot 5",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Fire Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Fire Temple MQ Freestanding Key": {
             "area": "",
@@ -468,7 +1899,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Fire Temple MQ Chest On Fire": {
             "area": "",
@@ -481,7 +1914,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Fire Temple MQ GS Above Fire Wall Maze": {
             "area": "",
@@ -499,7 +1934,13 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Fire Temple MQ", "value": true, "required": true},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
         },
         "Fire Temple MQ GS Fire Wall Maze Center": {
             "area": "",
@@ -517,11 +1958,17 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Fire Temple MQ", "value": true, "required": true},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
         },
         "Fire Temple Volvagia Heart": {
             "area": "",
-            "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
+            "lKey": "Fire Temple -> Volvagia",
             "alias": "Volvagia",
             "type": "item",
             "settings": [],
@@ -530,7 +1977,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         }
     }
 }

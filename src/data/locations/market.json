@@ -11,6 +11,8 @@
             "reverseAlias": "Temple of Time Entrance",
             "tag": "",
             "tagRep": false,
+            "tagRules": [],
+            "enableTag": true,
             "type": "overworld",
             "lKey": "",
             "aLink": "",
@@ -32,6 +34,8 @@
             "reverseAlias": "Market",
             "tag": "",
             "tagRep": false,
+            "tagRules": [],
+            "enableTag": true,
             "type": "overworld",
             "lKey": "",
             "aLink": "",
@@ -53,6 +57,8 @@
             "reverseAlias": "from Temple of Time",
             "tag": "",
             "tagRep": false,
+            "tagRules": [],
+            "enableTag": true,
             "type": "specialInterior",
             "lKey": "",
             "aLink": "",
@@ -74,6 +80,8 @@
             "reverseAlias": "Market Entrance",
             "tag": "",
             "tagRep": false,
+            "tagRules": [],
+            "enableTag": true,
             "type": "overworld",
             "lKey": "",
             "aLink": "",
@@ -95,6 +103,8 @@
             "reverseAlias": "Market Entrance",
             "tag": "",
             "tagRep": false,
+            "tagRules": [],
+            "enableTag": true,
             "type": "overworld",
             "lKey": "",
             "aLink": "",
@@ -116,6 +126,8 @@
             "reverseAlias": "Market",
             "tag": "",
             "tagRep": false,
+            "tagRules": [],
+            "enableTag": true,
             "type": "overworld",
             "lKey": "",
             "aLink": "",
@@ -137,6 +149,8 @@
             "reverseAlias": "Market",
             "tag": "",
             "tagRep": false,
+            "tagRules": [],
+            "enableTag": true,
             "type": "overworld",
             "lKey": "",
             "aLink": "",
@@ -158,6 +172,8 @@
             "reverseAlias": "Castle Grounds",
             "tag": "",
             "tagRep": false,
+            "tagRules": [],
+            "enableTag": true,
             "type": "overworld",
             "lKey": "",
             "aLink": "",
@@ -177,8 +193,10 @@
             "isReverse": false,
             "alias": "Storms Grotto",
             "reverseAlias": "from Storms Grotto",
-            "tag": "Skulltula Grotto",
+            "tag": "Mud Wall Grotto",
             "tagRep": true,
+            "tagRules": [],
+            "enableTag": true,
             "type": "grotto",
             "lKey": "",
             "aLink": "",
@@ -200,6 +218,8 @@
             "reverseAlias": "from Guardhouse/Poe Collector",
             "tag": "",
             "tagRep": false,
+            "tagRules": [],
+            "enableTag": true,
             "type": "interior",
             "lKey": "",
             "aLink": "",
@@ -221,6 +241,8 @@
             "reverseAlias": "from Mask Shop",
             "tag": "",
             "tagRep": false,
+            "tagRules": [],
+            "enableTag": true,
             "type": "interior",
             "lKey": "",
             "aLink": "",
@@ -242,6 +264,8 @@
             "reverseAlias": "from Bombchu Bowling",
             "tag": "",
             "tagRep": false,
+            "tagRules": [],
+            "enableTag": true,
             "type": "interior",
             "lKey": "",
             "aLink": "",
@@ -263,6 +287,8 @@
             "reverseAlias": "from Potion Shop",
             "tag": "Shop",
             "tagRep": false,
+            "tagRules": [],
+            "enableTag": true,
             "type": "interior",
             "lKey": "",
             "aLink": "",
@@ -284,6 +310,8 @@
             "reverseAlias": "from Treasure Chest Game",
             "tag": "",
             "tagRep": false,
+            "tagRules": [],
+            "enableTag": true,
             "type": "interior",
             "lKey": "",
             "aLink": "",
@@ -305,6 +333,8 @@
             "reverseAlias": "from Bombchu Shop",
             "tag": "Shop",
             "tagRep": false,
+            "tagRules": [],
+            "enableTag": true,
             "type": "interior",
             "lKey": "",
             "aLink": "",
@@ -326,6 +356,11 @@
             "reverseAlias": "from Back Alley House",
             "tag": "House",
             "tagRep": false,
+            "tagRules": [
+                {"setting": "Shuffle Pots and Crates", "value": "Off", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false}
+            ],
+            "enableTag": true,
             "type": "interior",
             "lKey": "",
             "aLink": "",
@@ -347,6 +382,8 @@
             "reverseAlias": "from Bazaar",
             "tag": "Shop",
             "tagRep": false,
+            "tagRules": [],
+            "enableTag": true,
             "type": "interior",
             "lKey": "",
             "aLink": "",
@@ -368,6 +405,8 @@
             "reverseAlias": "from Shooting Gallery",
             "tag": "Child Shooting Gallery",
             "tagRep": true,
+            "tagRules": [],
+            "enableTag": true,
             "type": "interior",
             "lKey": "",
             "aLink": "",
@@ -389,6 +428,8 @@
             "reverseAlias": "from Hyrule Castle Fairy Fountain",
             "tag": "Great Fairy Fountain",
             "tagRep": false,
+            "tagRules": [],
+            "enableTag": true,
             "type": "interior",
             "lKey": "",
             "aLink": "",
@@ -410,6 +451,8 @@
             "reverseAlias": "from Ganon's Castle Fairy Fountain",
             "tag": "Great Fairy Fountain",
             "tagRep": false,
+            "tagRules": [],
+            "enableTag": true,
             "type": "interior",
             "lKey": "",
             "aLink": "",
@@ -431,6 +474,8 @@
             "reverseAlias": "from Ganon's Castle",
             "tag": "",
             "tagRep": false,
+            "tagRules": [],
+            "enableTag": true,
             "type": "dungeon",
             "lKey": "",
             "aLink": "",
@@ -454,7 +499,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Light Arrow Cutscene": {
             "area": "",
@@ -467,7 +514,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Zelda's Lullaby": {
             "area": "Castle Grounds",
@@ -480,7 +529,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Market Shooting Gallery Reward": {
             "area": "",
@@ -493,7 +544,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Market Bombchu Bowling First Prize": {
             "area": "",
@@ -506,7 +559,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Market Bombchu Bowling Second Prize": {
             "area": "",
@@ -519,7 +574,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Market Lost Dog": {
             "area": "Market",
@@ -532,7 +589,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Market Treasure Chest Game Reward": {
             "area": "",
@@ -545,7 +604,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Market 10 Big Poes": {
             "area": "",
@@ -558,7 +619,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Market GS Guard House": {
             "area": "",
@@ -575,7 +638,12 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
         },
         "Market Bazaar Item 1": {
             "area": "",
@@ -594,7 +662,9 @@
             "foundItem": "",
             "merchant": true,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Market Bazaar Item 2": {
             "area": "",
@@ -612,7 +682,9 @@
             "foundItem": "",
             "merchant": true,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Market Bazaar Item 3": {
             "area": "",
@@ -629,7 +701,9 @@
             "foundItem": "",
             "merchant": true,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Market Bazaar Item 4": {
             "area": "",
@@ -645,7 +719,9 @@
             "foundItem": "",
             "merchant": true,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Market Bazaar Item 5": {
             "area": "",
@@ -658,7 +734,9 @@
             "foundItem": "",
             "merchant": true,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Market Bazaar Item 6": {
             "area": "",
@@ -671,7 +749,9 @@
             "foundItem": "",
             "merchant": true,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Market Bazaar Item 7": {
             "area": "",
@@ -684,7 +764,9 @@
             "foundItem": "",
             "merchant": true,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Market Bazaar Item 8": {
             "area": "",
@@ -697,7 +779,9 @@
             "foundItem": "",
             "merchant": true,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Market Potion Shop Item 1": {
             "area": "",
@@ -716,7 +800,9 @@
             "foundItem": "",
             "merchant": true,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Market Potion Shop Item 2": {
             "area": "",
@@ -734,7 +820,9 @@
             "foundItem": "",
             "merchant": true,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Market Potion Shop Item 3": {
             "area": "",
@@ -751,7 +839,9 @@
             "foundItem": "",
             "merchant": true,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Market Potion Shop Item 4": {
             "area": "",
@@ -767,7 +857,9 @@
             "foundItem": "",
             "merchant": true,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Market Potion Shop Item 5": {
             "area": "",
@@ -780,7 +872,9 @@
             "foundItem": "",
             "merchant": true,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Market Potion Shop Item 6": {
             "area": "",
@@ -793,7 +887,9 @@
             "foundItem": "",
             "merchant": true,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Market Potion Shop Item 7": {
             "area": "",
@@ -806,7 +902,9 @@
             "foundItem": "",
             "merchant": true,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Market Potion Shop Item 8": {
             "area": "",
@@ -819,7 +917,9 @@
             "foundItem": "",
             "merchant": true,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Market Bombchu Shop Item 1": {
             "area": "",
@@ -838,7 +938,9 @@
             "foundItem": "",
             "merchant": true,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Market Bombchu Shop Item 2": {
             "area": "",
@@ -856,7 +958,9 @@
             "foundItem": "",
             "merchant": true,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Market Bombchu Shop Item 3": {
             "area": "",
@@ -873,7 +977,9 @@
             "foundItem": "",
             "merchant": true,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Market Bombchu Shop Item 4": {
             "area": "",
@@ -889,7 +995,9 @@
             "foundItem": "",
             "merchant": true,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Market Bombchu Shop Item 5": {
             "area": "",
@@ -902,7 +1010,9 @@
             "foundItem": "",
             "merchant": true,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Market Bombchu Shop Item 6": {
             "area": "",
@@ -915,7 +1025,9 @@
             "foundItem": "",
             "merchant": true,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Market Bombchu Shop Item 7": {
             "area": "",
@@ -928,7 +1040,9 @@
             "foundItem": "",
             "merchant": true,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Market Bombchu Shop Item 8": {
             "area": "",
@@ -941,7 +1055,9 @@
             "foundItem": "",
             "merchant": true,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "HC Malon Egg": {
             "area": "Castle Grounds",
@@ -954,7 +1070,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "HC Great Fairy Reward": {
             "area": "",
@@ -967,7 +1085,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "HC GS Tree": {
             "area": "Castle Grounds",
@@ -984,7 +1104,12 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
         },
         "HC GS Storms Grotto": {
             "area": "",
@@ -1001,7 +1126,12 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
         },
         "OGC GS": {
             "area": "Castle Grounds",
@@ -1018,7 +1148,12 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Tokensanity", "value": "Overworld", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
         },
         "OGC Great Fairy Reward": {
             "area": "",
@@ -1031,7 +1166,765 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Market Crate Near Guard": {
+            "area": "Market",
+            "lKey": "",
+            "alias": "Crate Near Guard 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Market Night Crate Green Rupee 1": {
+            "area": "Market",
+            "lKey": "",
+            "alias": "Crate Near Guard 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Market Night Crate Green Rupee 2": {
+            "area": "Market",
+            "lKey": "",
+            "alias": "Crate Near Bazaar 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Market Night Crate Green Rupee 3": {
+            "area": "Market",
+            "lKey": "",
+            "alias": "Crate Near Bazaar 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Market Richards House Crate Rupee": {
+            "area": "Market",
+            "lKey": "",
+            "alias": "Richards House Crate",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Market Guard House Crate Rupee": {
+            "area": "",
+            "lKey": "Market Entrance -> Market Guard House",
+            "alias": "Crate",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Market Guard House Child Pot 1": {
+            "area": "",
+            "lKey": "Market Entrance -> Market Guard House",
+            "alias": "Child Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Market Guard House Child Pot 2": {
+            "area": "",
+            "lKey": "Market Entrance -> Market Guard House",
+            "alias": "Child Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Market Guard House Child Pot 3": {
+            "area": "",
+            "lKey": "Market Entrance -> Market Guard House",
+            "alias": "Child Pot 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Market Guard House Child Pot 4": {
+            "area": "",
+            "lKey": "Market Entrance -> Market Guard House",
+            "alias": "Child Pot 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Market Guard House Child Pot 5": {
+            "area": "",
+            "lKey": "Market Entrance -> Market Guard House",
+            "alias": "Child Pot 5",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Market Guard House Child Pot 6": {
+            "area": "",
+            "lKey": "Market Entrance -> Market Guard House",
+            "alias": "Child Pot 6",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Market Guard House Child Pot 7": {
+            "area": "",
+            "lKey": "Market Entrance -> Market Guard House",
+            "alias": "Child Pot 7",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Market Guard House Child Pot 8": {
+            "area": "",
+            "lKey": "Market Entrance -> Market Guard House",
+            "alias": "Child Pot 8",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Market Guard House Child Pot 9": {
+            "area": "",
+            "lKey": "Market Entrance -> Market Guard House",
+            "alias": "Child Pot 9",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Market Guard House Child Pot 10": {
+            "area": "",
+            "lKey": "Market Entrance -> Market Guard House",
+            "alias": "Child Pot 10",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Market Guard House Child Pot 11": {
+            "area": "",
+            "lKey": "Market Entrance -> Market Guard House",
+            "alias": "Child Pot 11",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Market Guard House Child Pot 12": {
+            "area": "",
+            "lKey": "Market Entrance -> Market Guard House",
+            "alias": "Child Pot 12",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Market Guard House Child Pot 13": {
+            "area": "",
+            "lKey": "Market Entrance -> Market Guard House",
+            "alias": "Child Pot 13",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Market Guard House Child Pot 14": {
+            "area": "",
+            "lKey": "Market Entrance -> Market Guard House",
+            "alias": "Child Pot 14",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Market Guard House Child Pot 15": {
+            "area": "",
+            "lKey": "Market Entrance -> Market Guard House",
+            "alias": "Child Pot 15",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Market Guard House Child Pot 16": {
+            "area": "",
+            "lKey": "Market Entrance -> Market Guard House",
+            "alias": "Child Pot 16",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Market Guard House Child Pot 17": {
+            "area": "",
+            "lKey": "Market Entrance -> Market Guard House",
+            "alias": "Child Pot 17",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Market Guard House Child Pot 18": {
+            "area": "",
+            "lKey": "Market Entrance -> Market Guard House",
+            "alias": "Child Pot 18",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Market Guard House Child Pot 19": {
+            "area": "",
+            "lKey": "Market Entrance -> Market Guard House",
+            "alias": "Child Pot 19",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Market Guard House Child Pot 20": {
+            "area": "",
+            "lKey": "Market Entrance -> Market Guard House",
+            "alias": "Child Pot 20",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Market Guard House Child Pot 21": {
+            "area": "",
+            "lKey": "Market Entrance -> Market Guard House",
+            "alias": "Child Pot 21",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Market Guard House Child Pot 22": {
+            "area": "",
+            "lKey": "Market Entrance -> Market Guard House",
+            "alias": "Child Pot 22",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Market Guard House Adult Pot 1": {
+            "area": "",
+            "lKey": "Market Entrance -> Market Guard House",
+            "alias": "Adult Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Market Guard House Adult Pot 2": {
+            "area": "",
+            "lKey": "Market Entrance -> Market Guard House",
+            "alias": "Adult Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Market Guard House Adult Pot 3": {
+            "area": "",
+            "lKey": "Market Entrance -> Market Guard House",
+            "alias": "Adult Pot 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Market Guard House Adult Pot 4": {
+            "area": "",
+            "lKey": "Market Entrance -> Market Guard House",
+            "alias": "Adult Pot 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Market Guard House Adult Pot 5": {
+            "area": "",
+            "lKey": "Market Entrance -> Market Guard House",
+            "alias": "Adult Pot 5",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Market Guard House Adult Pot 6": {
+            "area": "",
+            "lKey": "Market Entrance -> Market Guard House",
+            "alias": "Adult Pot 6",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Market Guard House Adult Pot 7": {
+            "area": "",
+            "lKey": "Market Entrance -> Market Guard House",
+            "alias": "Adult Pot 7",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Market Green Man House Pot 1": {
+            "area": "",
+            "lKey": "Market Back Alley -> Market Man in Green House",
+            "alias": "Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Market Green Man House Pot 2": {
+            "area": "",
+            "lKey": "Market Back Alley -> Market Man in Green House",
+            "alias": "Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Market Green Man House Pot 3": {
+            "area": "",
+            "lKey": "Market Back Alley -> Market Man in Green House",
+            "alias": "Pot 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "HC Storms Grotto Pot 1": {
+            "area": "",
+            "lKey": "Hyrule Castle Grounds -> HC Storms Grotto",
+            "alias": "Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "HC Storms Grotto Pot 2": {
+            "area": "",
+            "lKey": "Hyrule Castle Grounds -> HC Storms Grotto",
+            "alias": "Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "HC Storms Grotto Pot 3": {
+            "area": "",
+            "lKey": "Hyrule Castle Grounds -> HC Storms Grotto",
+            "alias": "Pot 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "HC Storms Grotto Pot 4": {
+            "area": "",
+            "lKey": "Hyrule Castle Grounds -> HC Storms Grotto",
+            "alias": "Pot 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         }
     }
 }

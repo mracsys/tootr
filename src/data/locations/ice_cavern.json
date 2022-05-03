@@ -1,6 +1,63 @@
 {
     "entrances": {},
     "locations": {
+        "Ice Cavern Freestanding Blue Rupee": {
+            "area": "",
+            "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
+            "alias": "Entrance Red Ice Freestanding",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Dungeons", "required": false},
+                {"setting": "Ice Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ice Cavern Hall Pot 1": {
+            "area": "",
+            "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
+            "alias": "Spinning Blade Hallway Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Ice Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ice Cavern Hall Pot 2": {
+            "area": "",
+            "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
+            "alias": "Spinning Blade Hallway Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Ice Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
         "Ice Cavern GS Spinning Scythe Room": {
             "area": "",
             "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
@@ -17,7 +74,89 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Ice Cavern MQ", "value": false, "required": true},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
+        },
+        "Ice Cavern Spinning Blade Pot 1": {
+            "area": "",
+            "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
+            "alias": "Spinning Blades Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Ice Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ice Cavern Spinning Blade Pot 2": {
+            "area": "",
+            "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
+            "alias": "Spinning Blades Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Ice Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ice Cavern Spinning Blade Pot 3": {
+            "area": "",
+            "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
+            "alias": "Spinning Blades Pot 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Ice Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ice Cavern Spinning Blade Flying Pot": {
+            "area": "",
+            "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
+            "alias": "Spinning Blades Flying Pot",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Ice Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Ice Cavern Map Chest": {
             "area": "",
@@ -30,7 +169,85 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ice Cavern Map Room Recovery Heart 1": {
+            "area": "",
+            "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
+            "alias": "Freezard Freestanding 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Dungeons", "required": false},
+                {"setting": "Ice Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ice Cavern Map Room Recovery Heart 2": {
+            "area": "",
+            "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
+            "alias": "Freezard Freestanding 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Dungeons", "required": false},
+                {"setting": "Ice Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ice Cavern Map Room Recovery Heart 3": {
+            "area": "",
+            "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
+            "alias": "Freezard Freestanding 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Dungeons", "required": false},
+                {"setting": "Ice Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ice Cavern Frozen Pot": {
+            "area": "",
+            "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
+            "alias": "Freezard Pot",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Ice Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Ice Cavern Freestanding PoH": {
             "area": "",
@@ -43,7 +260,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Ice Cavern GS Heart Piece Room": {
             "area": "",
@@ -61,7 +280,13 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Ice Cavern MQ", "value": false, "required": true},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
         },
         "Ice Cavern Compass Chest": {
             "area": "",
@@ -74,7 +299,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Ice Cavern GS Push Block Room": {
             "area": "",
@@ -92,7 +319,108 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Ice Cavern MQ", "value": false, "required": true},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
+        },
+        "Ice Cavern Block Room Red Rupee 1": {
+            "area": "",
+            "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
+            "alias": "Song of Time Freestanding 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Dungeons", "required": false},
+                {"setting": "Ice Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ice Cavern Block Room Red Rupee 2": {
+            "area": "",
+            "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
+            "alias": "Song of Time Freestanding 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Dungeons", "required": false},
+                {"setting": "Ice Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ice Cavern Block Room Red Rupee 3": {
+            "area": "",
+            "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
+            "alias": "Song of Time Freestanding 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Dungeons", "required": false},
+                {"setting": "Ice Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ice Cavern Near End Pot 1": {
+            "area": "",
+            "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
+            "alias": "Wolfos Lobby Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Ice Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ice Cavern Near End Pot 2": {
+            "area": "",
+            "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
+            "alias": "Wolfos Lobby Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Ice Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Ice Cavern Iron Boots Chest": {
             "area": "",
@@ -105,7 +433,104 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ice Cavern MQ First Hall Pot": {
+            "area": "",
+            "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
+            "alias": "Entrance Pot",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Ice Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ice Cavern MQ Tektite Room Pot 1": {
+            "area": "",
+            "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
+            "alias": "Crystal Switch Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Ice Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ice Cavern MQ Tektite Room Pot 2": {
+            "area": "",
+            "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
+            "alias": "Crystal Switch Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Ice Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ice Cavern MQ Center Room Pot 1": {
+            "area": "",
+            "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
+            "alias": "Central Room Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Ice Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ice Cavern MQ Center Room Pot 2": {
+            "area": "",
+            "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
+            "alias": "Central Room Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Ice Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Ice Cavern MQ Map Chest": {
             "area": "",
@@ -118,7 +543,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Ice Cavern MQ Compass Chest": {
             "area": "",
@@ -131,7 +558,47 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ice Cavern MQ Compass Room Pot 1": {
+            "area": "",
+            "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
+            "alias": "Freezard Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Ice Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ice Cavern MQ Compass Room Pot 2": {
+            "area": "",
+            "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
+            "alias": "Freezard Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Ice Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Ice Cavern MQ GS Red Ice": {
             "area": "",
@@ -149,7 +616,13 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Ice Cavern MQ", "value": true, "required": true},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
         },
         "Ice Cavern MQ Freestanding PoH": {
             "area": "",
@@ -162,7 +635,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Ice Cavern MQ GS Ice Block": {
             "area": "",
@@ -180,7 +655,13 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Ice Cavern MQ", "value": true, "required": true},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
         },
         "Ice Cavern MQ GS Scarecrow": {
             "area": "",
@@ -198,7 +679,32 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Ice Cavern MQ", "value": true, "required": true},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
+        },
+        "Ice Cavern MQ Near End Pot": {
+            "area": "",
+            "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
+            "alias": "Stalfos Lobby Pot",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Ice Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Ice Cavern MQ Iron Boots Chest": {
             "area": "",
@@ -211,7 +717,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Serenade of Water": {
             "area": "",
@@ -224,7 +732,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         }
     }
 }

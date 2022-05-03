@@ -10,7 +10,7 @@ The tracker starts out with all entrance pools randomized. The world reveals its
 
 ### Settings
 
-Randomzier and tracker settings can be accessed from the hamburger menu in the upper left. Randomizer settings default to full entrance shuffle plus all *sanity settings enabled without mixed pools or decoupled entrances. This maximizes entrances and locations to discover in the tracker. Settings are divided into 4 menus:
+Randomzier and tracker settings can be accessed from the hamburger menu in the upper left. Randomizer settings default to full entrance shuffle; all *sanity settings except freestanding rupees/hearts, pots/crates, and beehives enabled; and no mixed pools or decoupled entrances. This maximizes entrances and locations to discover in the tracker. Settings are divided into 4 menus:
 
 #### Tracker Settings
 
@@ -49,6 +49,8 @@ To reduce scrolling in the dropdown, functionally similar interiors are grouped 
   * 2 and 3 business scrub grottos, except for the special reversed 2 scrub grotto normally found near the Sacred Forest Meadow entrance
   * Fairy Fountain grottos
   * Skulltula grottos (only 2, the one with bombable walls normally outside Hyrule Castle and the one with a skulltula in a web normally in Hyrule Field near Kakariko Village)
+
+If the shuffle settings add a unique location to a normally grouped interior, that interior is automatically removed from the group. For example, if Shuffle Freestanding Items is enabled for the overworld, Saria's House will no longer be in the House group.
 
 Some interiors function as connectors between two overworld exits, such as the Kakariko Village Potion Shop. If any connectors are shuffled, a secondary entrance to link is automatically added under the original entrance to tell the tracker where the other exit leads. When both ends are linked, the connected overworld areas contain both sides of the connector for easier navigation.
 

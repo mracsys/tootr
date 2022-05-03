@@ -1,6 +1,68 @@
 {
-    "entrances": {},
+    "entrances": {
+        "Water Temple -> Morpha": {
+            "area": "Water Temple",
+            "reverse": "Morpha -> Water Temple",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "",
+            "isReverse": false,
+            "alias": "Morpha",
+            "reverseAlias": "from Morpha",
+            "tag": "",
+            "tagRep": false,
+            "tagRules": [],
+            "enableTag": true,
+            "type": "boss",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": true
+        }
+    },
     "locations": {
+        "Water Temple Main Room L2 Pot 1": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Main Room Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple Main Room L2 Pot 2": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Main Room Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
         "Water Temple Compass Chest": {
             "area": "",
             "lKey": "Lake Hylia -> Water Temple Lobby",
@@ -12,7 +74,66 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple Near Compass Pot 1": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Stinger Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple Near Compass Pot 2": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Stinger Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple Near Compass Pot 3": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Stinger Pot 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Water Temple Map Chest": {
             "area": "",
@@ -25,7 +146,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Water Temple Cracked Wall Chest": {
             "area": "",
@@ -38,7 +161,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Water Temple Torches Chest": {
             "area": "",
@@ -51,7 +176,47 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple L1 Torch Pot 1": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Torches Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple L1 Torch Pot 2": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Torches Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Water Temple GS Behind Gate": {
             "area": "",
@@ -69,7 +234,127 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Water Temple MQ", "value": false, "required": true},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
+        },
+        "Water Temple Behind Gate Pot 1": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Basement Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple Behind Gate Pot 2": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Basement Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple Behind Gate Pot 3": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Basement Pot 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple Behind Gate Pot 4": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Basement Pot 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple North Basement Block Puzzle Pot 1": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Rolling Boulders Loop Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple North Basement Block Puzzle Pot 2": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Rolling Boulders Loop Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Water Temple Boss Key Chest": {
             "area": "",
@@ -82,7 +367,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Water Temple GS Near Boss Key Chest": {
             "area": "",
@@ -100,7 +387,13 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Water Temple MQ", "value": false, "required": true},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
         },
         "Water Temple Central Pillar Chest": {
             "area": "",
@@ -113,7 +406,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Water Temple GS Central Pillar": {
             "area": "",
@@ -131,7 +426,13 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Water Temple MQ", "value": false, "required": true},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
         },
         "Water Temple Central Bow Target Chest": {
             "area": "",
@@ -144,7 +445,47 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple Central Bow Target Pot 1": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Central Bow Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple Central Bow Target Pot 2": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Central Bow Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Water Temple GS Falling Platform Room": {
             "area": "",
@@ -162,7 +503,51 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Water Temple MQ", "value": false, "required": true},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
+        },
+        "Water Temple Like Like Pot 1": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Dark Link Lobby Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple Like Like Pot 2": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Dark Link Lobby Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Water Temple Longshot Chest": {
             "area": "",
@@ -175,7 +560,85 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple River Recovery Heart 1": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "River Freestanding 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple River Recovery Heart 2": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "River Freestanding 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple River Recovery Heart 3": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "River Freestanding 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple River Recovery Heart 4": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "River Freestanding 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Water Temple GS River": {
             "area": "",
@@ -193,7 +656,32 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Water Temple MQ", "value": false, "required": true},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
+        },
+        "Water Temple River Pot 1": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "River Pot",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Water Temple River Chest": {
             "area": "",
@@ -206,7 +694,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Water Temple Dragon Chest": {
             "area": "",
@@ -219,7 +709,313 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Central Pillar Top Crate 1": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Central Pillar Torches Crate 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Central Pillar Top Crate 2": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Central Pillar Torches Crate 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Central Pillar Upper Crate 1": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Central Pillar Crate 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Central Pillar Upper Crate 2": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Central Pillar Crate 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Central Pillar Upper Crate 3": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Central Pillar Crate 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Central Pillar Upper Crate 4": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Central Pillar Crate 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Central Pillar Upper Crate 5": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Central Pillar Crate 5",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Central Pillar Upper Crate 6": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Central Pillar Crate 6",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Central Pillar Upper Crate 7": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Central Pillar Crate 7",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Central Pillar Upper Crate 8": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Central Pillar Crate 8",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Central Pillar Upper Crate 9": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Central Pillar Crate 9",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Central Pillar Upper Crate 10": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Central Pillar Crate 10",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Central Pillar Upper Crate 11": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Central Pillar Crate 11",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Central Pillar Upper Crate 12": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Central Pillar Crate 12",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Central Pillar Upper Crate 13": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Central Pillar Crate 13",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Central Pillar Upper Crate 14": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Central Pillar Crate 14",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Water Temple MQ Central Pillar Chest": {
             "area": "",
@@ -232,7 +1028,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Water Temple MQ Map Chest": {
             "area": "",
@@ -245,7 +1043,47 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ L1 Torch Pot 1": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Torches Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ L1 Torch Pot 2": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Torches Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Water Temple MQ Compass Chest": {
             "area": "",
@@ -258,7 +1096,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Water Temple MQ Longshot Chest": {
             "area": "",
@@ -271,7 +1111,218 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Lizalfos Hallway Pot 1": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Switch Gate Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Lizalfos Hallway Pot 2": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Switch Gate Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Lizalfos Hallway Pot 3": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Switch Gate Pot 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Lizalfos Hallway Room Crate 1": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Switch Gate Crate 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Lizalfos Hallway Room Crate 2": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Switch Gate Crate 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Lizalfos Hallway Room Crate 3": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Switch Gate Crate 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Lizalfos Hallway Room Crate 4": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Switch Gate Crate 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Lizalfos Hallway Room Crate 5": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Switch Gate Crate 5",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Lizalfos Hallway Room Crate 6": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Switch Gate Crate 6",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Lizalfos Hallway Room Crate 7": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Switch Gate Crate 7",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Lizalfos Hallway Room Crate 8": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Switch Gate Crate 8",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Water Temple MQ GS Lizalfos Hallway": {
             "area": "",
@@ -289,7 +1340,488 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Water Temple MQ", "value": true, "required": true},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
+        },
+        "Water Temple MQ Lizalfos Hallway Gate Pot 1": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Behind Torch Gate Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Lizalfos Hallway Gate Pot 2": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Behind Torch Gate Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Lizalfos Hallway Gate Crate 1": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Behind Torch Gate Crate 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Lizalfos Hallway Gate Crate 2": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Behind Torch Gate Crate 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Storage Room Pot 1": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Storage Room Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Storage Room Pot 2": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Storage Room Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Storage Room Pot 3": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Storage Room Pot 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Storage Room Crate 1": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Storage Room Crate 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Storage Room Crate 2": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Storage Room Crate 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Storage Room Crate 3": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Storage Room Crate 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Storage Room Crate 4": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Storage Room Crate 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Storage Room Crate 5": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Storage Room Crate 5",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Storage Room Crate 6": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Storage Room Crate 6",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Storage Room Crate 7": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Storage Room Crate 7",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Before Upper Water Switch Pot 1": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Near Top Water Level Switch Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Before Upper Water Switch Pot 2": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Near Top Water Level Switch Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Before Upper Water Switch Pot 3": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Near Top Water Level Switch Pot 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Before Upper Water Switch Crate 1": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Near Top Water Level Switch Crate 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Before Upper Water Switch Crate 2": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Near Top Water Level Switch Crate 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Before Upper Water Switch Crate 3": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Near Top Water Level Switch Crate 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Before Upper Water Switch Crate 4": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Near Top Water Level Switch Crate 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Before Upper Water Switch Crate 5": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Near Top Water Level Switch Crate 5",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Before Upper Water Switch Crate 6": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Near Top Water Level Switch Crate 6",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Before Upper Water Switch Crate 7": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Near Top Water Level Switch Crate 7",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Before Upper Water Switch Crate 8": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Near Top Water Level Switch Crate 8",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Water Temple MQ GS Before Upper Water Switch": {
             "area": "",
@@ -307,7 +1839,89 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Water Temple MQ", "value": true, "required": true},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
+        },
+        "Water Tempe MQ Before Dark Link Lower Pot": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Dark Link Lobby Ledge Pot",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Tempe MQ Before Dark Link Top Pot 1": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Dark Link Lobby Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Tempe MQ Before Dark Link Top Pot 2": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Dark Link Lobby Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Tempe MQ Room After Dark Link Pot": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "After Dark Link Pot",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Water Temple MQ GS River": {
             "area": "",
@@ -325,7 +1939,184 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Water Temple MQ", "value": true, "required": true},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
+        },
+        "Water Temple MQ River Pot 1": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "River Pot",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Before BK By Torches Crate 1": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Dragon Crate 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Before BK By Torches Crate 2": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Dragon Crate 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Before BK Submerged Crate 1": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Dragon Crate 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Before BK Submerged Crate 2": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Dragon Crate 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Before BK Submerged Crate 3": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Dragon Crate 5",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Before BK Submerged Crate 4": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Dragon Crate 6",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Before BK Near Door Crate 1": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Dragon Crate 7",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Before BK Near Door Crate 2": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Dragon Crate 8",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Water Temple MQ Boss Key Chest": {
             "area": "",
@@ -338,7 +2129,123 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Boss Key Chest Room Pot": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Water Jet Torches Pot",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Boss Key Chest Room Crate 1": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Water Jet Torches Crate 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Boss Key Chest Room Crate 2": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Water Jet Torches Crate 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Boss Key Chest Room Crate 3": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Water Jet Torches Crate 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Boss Key Chest Room Crate 4": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Water Jet Torches Crate 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Boss Key Chest Room Crate 5": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Water Jet Torches Crate 5",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Water Temple MQ GS Triple Wall Torch": {
             "area": "",
@@ -356,7 +2263,260 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Water Temple MQ", "value": true, "required": true},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
+        },
+        "Water Temple MQ Triple Wall Torch Pot 1": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Basement Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Triple Wall Torch Pot 2": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Basement Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Triple Wall Torch Pot 3": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Basement Pot 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Triple Wall Torch Pot 4": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Basement Pot 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Triple Wall Torch Submerged Crate 1": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Basement Crate 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Triple Wall Torch Submerged Crate 2": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Basement Crate 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Triple Wall Torch Submerged Crate 3": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Basement Crate 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Triple Wall Torch Submerged Crate 4": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Basement Crate 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Triple Wall Torch Submerged Crate 5": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Basement Crate 5",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Triple Wall Torch Submerged Crate 6": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Basement Crate 6",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Triple Wall Torch Submerged Crate 7": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Basement Crate 7",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Triple Wall Torch Submerged Crate 8": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Basement Crate 8",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Triple Wall Torch Submerged Crate 9": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Basement Crate 9",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Water Temple MQ Freestanding Key": {
             "area": "",
@@ -369,7 +2529,408 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Freestanding Item Room Pot": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Scarecrow Pot",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Freestanding Item Room Crate 1": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Scarecrow Crate 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Freestanding Item Room Crate 2": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Scarecrow Crate 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Freestanding Item Room Crate 3": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Scarecrow Crate 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Freestanding Item Room Crate 4": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Scarecrow Crate 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Freestanding Item Room Crate 5": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Scarecrow Crate 5",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Freestanding Key Area Front Crate 1": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Back Loop Entrance Crate 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Freestanding Key Area Front Crate 2": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Back Loop Entrance Crate 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Freestanding Key Area Front Crate 3": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Back Loop Entrance Crate 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Freestanding Key Area Front Crate 4": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Back Loop Entrance Crate 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Freestanding Key Area Front Crate 5": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Back Loop Entrance Crate 5",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Freestanding Key Area Front Crate 6": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Back Loop Entrance Crate 6",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Freestanding Key Area Front Crate 7": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Back Loop Entrance Crate 7",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Freestanding Key Area Front Crate 8": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Back Loop Entrance Crate 8",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Dodongo Orgy Room Pot 1": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Back Loop Dodongos Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Dodongo Orgy Room Pot 2": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Back Loop Dodongos Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Dodongo Orgy Lower Crate 1": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Back Loop Dodongos Crate 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Dodongo Orgy Lower Crate 2": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Back Loop Dodongos Crate 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Dodongo Orgy Lower Crate 3": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Back Loop Dodongos Crate 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Dodongo Orgy Lower Crate 4": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Back Loop Dodongos Crate 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Dodongo Orgy Lower Crate 5": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Back Loop Dodongos Crate 5",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Water Temple MQ GS Freestanding Key Area": {
             "area": "",
@@ -387,11 +2948,93 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Water Temple MQ", "value": true, "required": true},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
+        },
+        "Water Temple MQ Freestanding Key Area Behind Gate Crate 1": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Back Loop Skulltula Crate 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Freestanding Key Area Behind Gate Crate 2": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Back Loop Skulltula Crate 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Freestanding Key Area Behind Gate Crate 3": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Back Loop Skulltula Crate 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Water Temple MQ Freestanding Key Area Behind Gate Crate 4": {
+            "area": "",
+            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "alias": "Back Loop Skulltula Crate 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Water Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Water Temple Morpha Heart": {
             "area": "",
-            "lKey": "Lake Hylia -> Water Temple Lobby",
+            "lKey": "Water Temple -> Morpha",
             "alias": "Morpha",
             "type": "item",
             "settings": [],
@@ -400,7 +3043,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         }
     }
 }

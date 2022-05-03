@@ -1,6 +1,49 @@
 {
-    "entrances": {},
+    "entrances": {
+        "Deku Tree -> Queen Gohma": {
+            "area": "Deku Tree",
+            "reverse": "Queen Gohma -> Deku Tree",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "",
+            "isReverse": false,
+            "alias": "Queen Gohma",
+            "reverseAlias": "from Queen Gohma",
+            "tag": "",
+            "tagRep": false,
+            "tagRules": [],
+            "enableTag": true,
+            "type": "boss",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": true
+        }
+    },
     "locations": {
+        "Deku Tree Walk the Plank Recovery Heart": {
+            "area": "",
+            "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
+            "alias": "Walk the Plank",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Dungeons", "required": false},
+                {"setting": "Deku Tree MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
         "Deku Tree Map Chest": {
             "area": "",
             "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
@@ -12,7 +55,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Deku Tree Slingshot Room Side Chest": {
             "area": "",
@@ -25,7 +70,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Deku Tree Slingshot Chest": {
             "area": "",
@@ -38,7 +85,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Deku Tree Compass Chest": {
             "area": "",
@@ -51,7 +100,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Deku Tree Compass Room Side Chest": {
             "area": "",
@@ -64,7 +115,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Deku Tree GS Compass Room": {
             "area": "",
@@ -82,7 +135,32 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Deku Tree MQ", "value": false, "required": true},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
+        },
+        "Deku Tree Leap Recovery Heart": {
+            "area": "",
+            "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
+            "alias": "Jump to Web",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Dungeons", "required": false},
+                {"setting": "Deku Tree MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Deku Tree Basement Chest": {
             "area": "",
@@ -95,7 +173,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Deku Tree GS Basement Vines": {
             "area": "",
@@ -113,7 +193,13 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Deku Tree MQ", "value": false, "required": true},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
         },
         "Deku Tree GS Basement Gate": {
             "area": "",
@@ -131,7 +217,13 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Deku Tree MQ", "value": false, "required": true},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
         },
         "Deku Tree GS Basement Back Room": {
             "area": "",
@@ -149,7 +241,89 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Deku Tree MQ", "value": false, "required": true},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
+        },
+        "Deku Tree 231 Scrubs Recovery Heart 1": {
+            "area": "",
+            "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
+            "alias": "Boss Lobby Heart 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Dungeons", "required": false},
+                {"setting": "Deku Tree MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Deku Tree 231 Scrubs Recovery Heart 2": {
+            "area": "",
+            "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
+            "alias": "Boss Lobby Heart 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Dungeons", "required": false},
+                {"setting": "Deku Tree MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Deku Tree 231 Scrubs Recovery Heart 3": {
+            "area": "",
+            "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
+            "alias": "Boss Lobby Heart 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Dungeons", "required": false},
+                {"setting": "Deku Tree MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Deku Tree MQ Plank Recovery Heart": {
+            "area": "",
+            "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
+            "alias": "Walk the Plank",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Dungeons", "required": false},
+                {"setting": "Deku Tree MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Deku Tree MQ Map Chest": {
             "area": "",
@@ -162,7 +336,28 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Deku Tree MQ Lobby Crate": {
+            "area": "",
+            "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
+            "alias": "Lobby Crate",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Deku Tree MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Deku Tree MQ GS Lobby": {
             "area": "",
@@ -180,7 +375,70 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Deku Tree MQ", "value": true, "required": true},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
+        },
+        "Deku Tree MQ Slingshot Room Recovery Heart": {
+            "area": "",
+            "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
+            "alias": "Slingshot Room Freestanding",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Dungeons", "required": false},
+                {"setting": "Deku Tree MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Deku Tree MQ Slingshot Room Crate 1": {
+            "area": "",
+            "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
+            "alias": "Slingshot Room Crate 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Deku Tree MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Deku Tree MQ Slingshot Room Crate 2": {
+            "area": "",
+            "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
+            "alias": "Slingshot Room Crate 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Deku Tree MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Deku Tree MQ Slingshot Chest": {
             "area": "",
@@ -193,7 +451,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Deku Tree MQ Slingshot Room Back Chest": {
             "area": "",
@@ -206,7 +466,47 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Deku Tree MQ Near Compass Room Recovery Heart": {
+            "area": "",
+            "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
+            "alias": "Spider Room Lobby",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Dungeons", "required": false},
+                {"setting": "Deku Tree MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Deku Tree MQ Compass Room Recovery Heart": {
+            "area": "",
+            "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
+            "alias": "Spider Room Freestanding",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Dungeons", "required": false},
+                {"setting": "Deku Tree MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Deku Tree MQ Compass Chest": {
             "area": "",
@@ -219,7 +519,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Deku Tree MQ GS Compass Room": {
             "area": "",
@@ -237,7 +539,13 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Deku Tree MQ", "value": true, "required": true},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
         },
         "Deku Tree MQ Basement Chest": {
             "area": "",
@@ -250,7 +558,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Deku Tree MQ Before Spinning Log Chest": {
             "area": "",
@@ -263,7 +573,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Deku Tree MQ After Spinning Log Chest": {
             "area": "",
@@ -276,7 +588,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Deku Tree MQ GS Basement Graves Room": {
             "area": "",
@@ -294,7 +608,13 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Deku Tree MQ", "value": true, "required": true},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
         },
         "Deku Tree MQ GS Basement Back Room": {
             "area": "",
@@ -312,7 +632,13 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Deku Tree MQ", "value": true, "required": true},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
         },
         "Deku Tree MQ Deku Scrub": {
             "area": "",
@@ -330,11 +656,70 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Deku Tree MQ Basement Recovery Heart 1": {
+            "area": "",
+            "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
+            "alias": "Boss Lobby Heart 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Dungeons", "required": false},
+                {"setting": "Deku Tree MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Deku Tree MQ Basement Recovery Heart 2": {
+            "area": "",
+            "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
+            "alias": "Boss Lobby Heart 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Dungeons", "required": false},
+                {"setting": "Deku Tree MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Deku Tree MQ Basement Recovery Heart 3": {
+            "area": "",
+            "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
+            "alias": "Boss Lobby Heart 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Dungeons", "required": false},
+                {"setting": "Deku Tree MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Deku Tree Queen Gohma Heart": {
             "area": "",
-            "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
+            "lKey": "Deku Tree -> Queen Gohma",
             "alias": "Queen Gohma",
             "type": "item",
             "settings": [],
@@ -343,7 +728,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         }
     }
 }

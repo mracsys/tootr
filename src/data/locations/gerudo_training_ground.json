@@ -12,7 +12,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Gerudo Training Grounds Lobby Right Chest": {
             "area": "",
@@ -25,7 +27,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Gerudo Training Grounds Stalfos Chest": {
             "area": "",
@@ -38,7 +42,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Gerudo Training Grounds Before Heavy Block Chest": {
             "area": "",
@@ -51,7 +57,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Gerudo Training Grounds Heavy Block First Chest": {
             "area": "",
@@ -64,7 +72,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Gerudo Training Grounds Heavy Block Second Chest": {
             "area": "",
@@ -77,7 +87,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Gerudo Training Grounds Heavy Block Third Chest": {
             "area": "",
@@ -90,7 +102,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Gerudo Training Grounds Heavy Block Fourth Chest": {
             "area": "",
@@ -103,7 +117,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Gerudo Training Grounds Eye Statue Chest": {
             "area": "",
@@ -116,7 +132,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Gerudo Training Grounds Near Scarecrow Chest": {
             "area": "",
@@ -129,7 +147,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Gerudo Training Grounds Hammer Room Clear Chest": {
             "area": "",
@@ -142,7 +162,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Gerudo Training Grounds Hammer Room Switch Chest": {
             "area": "",
@@ -155,7 +177,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Gerudo Training Grounds Freestanding Key": {
             "area": "",
@@ -168,7 +192,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Gerudo Training Grounds Underwater Silver Rupee Chest": {
             "area": "",
@@ -181,7 +207,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Gerudo Training Grounds Beamos Chest": {
             "area": "",
@@ -194,7 +222,47 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground Beamos Recovery Heart 1": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Beamos Room Freestanding 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Dungeons", "required": false},
+                {"setting": "Gerudo Training Ground MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground Beamos Recovery Heart 2": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Beamos Room Freestanding 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Dungeons", "required": false},
+                {"setting": "Gerudo Training Ground MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Gerudo Training Grounds Maze Right Central Chest": {
             "area": "",
@@ -207,7 +275,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Gerudo Training Grounds Maze Right Side Chest": {
             "area": "",
@@ -220,7 +290,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Gerudo Training Grounds Hidden Ceiling Chest": {
             "area": "",
@@ -233,7 +305,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Gerudo Training Grounds Maze Path First Chest": {
             "area": "",
@@ -246,7 +320,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Gerudo Training Grounds Maze Path Second Chest": {
             "area": "",
@@ -259,7 +335,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Gerudo Training Grounds Maze Path Third Chest": {
             "area": "",
@@ -272,7 +350,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Gerudo Training Grounds Maze Path Final Chest": {
             "area": "",
@@ -285,7 +365,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Gerudo Training Grounds MQ Lobby Left Chest": {
             "area": "",
@@ -298,7 +380,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Gerudo Training Grounds MQ Lobby Right Chest": {
             "area": "",
@@ -311,7 +395,85 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground MQ Lobby Pot 1": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Lobby Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Gerudo Training Ground MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground MQ Lobby Pot 2": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Lobby Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Gerudo Training Ground MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground MQ Lobby Pot 3": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Lobby Pot 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Gerudo Training Ground MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground MQ Lobby Pot 4": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Lobby Pot 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Gerudo Training Ground MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Gerudo Training Grounds MQ First Iron Knuckle Chest": {
             "area": "",
@@ -324,7 +486,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Gerudo Training Grounds MQ Before Heavy Block Chest": {
             "area": "",
@@ -337,7 +501,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Gerudo Training Grounds MQ Heavy Block Chest": {
             "area": "",
@@ -350,7 +516,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Gerudo Training Grounds MQ Eye Statue Chest": {
             "area": "",
@@ -363,7 +531,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Gerudo Training Grounds MQ Ice Arrows Chest": {
             "area": "",
@@ -376,7 +546,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Gerudo Training Grounds MQ Second Iron Knuckle Chest": {
             "area": "",
@@ -389,7 +561,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Gerudo Training Grounds MQ Flame Circle Chest": {
             "area": "",
@@ -402,7 +576,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Gerudo Training Grounds MQ Maze Right Central Chest": {
             "area": "",
@@ -415,7 +591,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Gerudo Training Grounds MQ Maze Right Side Chest": {
             "area": "",
@@ -428,7 +606,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Gerudo Training Grounds MQ Underwater Silver Rupee Chest": {
             "area": "",
@@ -441,7 +621,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Gerudo Training Grounds MQ Dinolfos Chest": {
             "area": "",
@@ -454,7 +636,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Gerudo Training Grounds MQ Hidden Ceiling Chest": {
             "area": "",
@@ -467,7 +651,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Gerudo Training Grounds MQ Maze Path First Chest": {
             "area": "",
@@ -480,7 +666,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Gerudo Training Grounds MQ Maze Path Third Chest": {
             "area": "",
@@ -493,7 +681,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Gerudo Training Grounds MQ Maze Path Second Chest": {
             "area": "",
@@ -506,7 +696,28 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground MQ Maze Crate": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Maze Center Crate",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Gerudo Training Ground MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         }
     }
 }

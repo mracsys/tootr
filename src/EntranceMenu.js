@@ -43,15 +43,15 @@ class EntranceMenu extends React.Component {
                             return null;
                         } else {
                             let eOptions = this.props.entrancePool[areaCategory].sort(function(a,b) {
-                                let aName = entranceList[a].tag === "" ?
+                                let aName = entranceList[a].tag === "" || entranceList[a].enableTag === false ?
                                             entranceList[a].alias :
                                             entranceList[a].tag;
-                                let bName = entranceList[b].tag === "" ?
+                                let bName = entranceList[b].tag === "" || entranceList[b].enableTag === false ?
                                             entranceList[b].alias :
                                             entranceList[b].tag;
                                 return aName.localeCompare(bName);
                             }).map((subArea, j) => {
-                                if ((this.props.allAreas.entrances[subArea].tagRep || this.props.allAreas.entrances[subArea].tag === "") &&
+                                if ((this.props.allAreas.entrances[subArea].tagRep || this.props.allAreas.entrances[subArea].tag === "" || this.props.allAreas.entrances[subArea].enableTag === false) &&
                                 (!(this.props.oneWay) || (this.props.oneWay && this.props.allAreas.entrances[subArea].oneWayELink === ""))) {
                                     return (<div
                                                 key={this.props.pool + "option" + j}
@@ -59,7 +59,7 @@ class EntranceMenu extends React.Component {
                                                 data-link-to={subArea}
                                                 data-link-from={this.props.sourceEntrance}
                                                 onClick={this.props.handleLink}>
-                                                {(this.props.allAreas.entrances[subArea].tag === "") ?
+                                                {(this.props.allAreas.entrances[subArea].tag === "" || this.props.allAreas.entrances[subArea].enableTag === false) ?
                                                     this.props.allAreas.entrances[subArea].alias :
                                                     this.props.allAreas.entrances[subArea].tag}
                                             </div>);

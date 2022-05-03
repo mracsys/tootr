@@ -1,6 +1,49 @@
 {
-    "entrances": {},
+    "entrances": {
+        "Jabu Jabus Belly -> Barinade": {
+            "area": "Jabu Jabu's Belly",
+            "reverse": "Barinade -> Jabu Jabus Belly",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "",
+            "isReverse": false,
+            "alias": "Barinade",
+            "reverseAlias": "from Barinade",
+            "tag": "",
+            "tagRep": false,
+            "tagRules": [],
+            "enableTag": true,
+            "type": "boss",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": true
+        }
+    },
     "locations": {
+        "Jabu Jabus Belly Small Wooden Crate": {
+            "area": "",
+            "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
+            "alias": "Lobby Small Crate",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Jabu Jabu's Belly MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
         "Jabu Jabus Belly Deku Scrub": {
             "area": "",
             "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
@@ -17,7 +60,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Jabu Jabus Belly GS Water Switch Room": {
             "area": "",
@@ -35,7 +80,51 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Jabu Jabu's Belly MQ", "value": false, "required": true},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
+        },
+        "Jabu Jabus Belly Basement Switch Room Pot 1": {
+            "area": "",
+            "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
+            "alias": "Basement Vines Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Jabu Jabu's Belly MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Jabu Jabus Belly Basement Switch Room Pot 2": {
+            "area": "",
+            "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
+            "alias": "Basement Vines Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Jabu Jabu's Belly MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Jabu Jabus Belly Boomerang Chest": {
             "area": "",
@@ -48,7 +137,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Jabu Jabus Belly Map Chest": {
             "area": "",
@@ -61,7 +152,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Jabu Jabus Belly Compass Chest": {
             "area": "",
@@ -74,7 +167,85 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Jabu Jabus Belly DLC Pot 1": {
+            "area": "",
+            "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
+            "alias": "Extra Octorock Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Jabu Jabu's Belly MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Jabu Jabus Belly DLC Pot 2": {
+            "area": "",
+            "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
+            "alias": "Extra Octorock Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Jabu Jabu's Belly MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Jabu Jabus Belly DLC Pot 3": {
+            "area": "",
+            "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
+            "alias": "Extra Octorock Pot 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Jabu Jabu's Belly MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Jabu Jabus Belly DLC Pot 4": {
+            "area": "",
+            "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
+            "alias": "Extra Octorock Pot 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Jabu Jabu's Belly MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Jabu Jabus Belly GS Lobby Basement Lower": {
             "area": "",
@@ -92,7 +263,13 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Jabu Jabu's Belly MQ", "value": false, "required": true},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
         },
         "Jabu Jabus Belly GS Lobby Basement Upper": {
             "area": "",
@@ -110,7 +287,51 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Jabu Jabu's Belly MQ", "value": false, "required": true},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
+        },
+        "Jabu Jabus Belly Above Big Octo Pot 1": {
+            "area": "",
+            "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
+            "alias": "Above Big Octo Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Jabu Jabu's Belly MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Jabu Jabus Belly Above Big Octo Pot 2": {
+            "area": "",
+            "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
+            "alias": "Above Big Octo Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Jabu Jabu's Belly MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Jabu Jabus Belly GS Near Boss": {
             "area": "",
@@ -128,7 +349,13 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Jabu Jabu's Belly MQ", "value": false, "required": true},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
         },
         "Jabu Jabus Belly MQ Map Chest": {
             "area": "",
@@ -141,7 +368,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Jabu Jabus Belly MQ First Room Side Chest": {
             "area": "",
@@ -154,7 +383,85 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Jabu Jabus Belly MQ First Room Pot 1": {
+            "area": "",
+            "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
+            "alias": "Lobby Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Jabu Jabu's Belly MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Jabu Jabus Belly MQ First Room Pot 2": {
+            "area": "",
+            "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
+            "alias": "Lobby Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Jabu Jabu's Belly MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Jabu Jabus Belly MQ Recovery Heart 1": {
+            "area": "",
+            "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
+            "alias": "Near Elevator Top Item 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Dungeons", "required": false},
+                {"setting": "Jabu Jabu's Belly MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Jabu Jabus Belly MQ Recovery Heart 2": {
+            "area": "",
+            "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
+            "alias": "Near Elevator Top Item 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Dungeons", "required": false},
+                {"setting": "Jabu Jabu's Belly MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Jabu Jabus Belly MQ Second Room Lower Chest": {
             "area": "",
@@ -167,7 +474,104 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Jabu Jabus Belly MQ Underwater Rupee 1": {
+            "area": "",
+            "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
+            "alias": "Near Diving Cow Item 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Dungeons", "required": false},
+                {"setting": "Jabu Jabu's Belly MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Jabu Jabus Belly MQ Underwater Rupee 2": {
+            "area": "",
+            "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
+            "alias": "Near Diving Cow Item 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Dungeons", "required": false},
+                {"setting": "Jabu Jabu's Belly MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Jabu Jabus Belly MQ Underwater Rupee 3": {
+            "area": "",
+            "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
+            "alias": "Near Diving Cow Item 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
+                {"setting": "Shuffle Freestanding Items", "value": "Dungeons", "required": false},
+                {"setting": "Jabu Jabu's Belly MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Jabu Jabus Belly MQ Elevator Room Pot 1": {
+            "area": "",
+            "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
+            "alias": "Near Diving Cow Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Jabu Jabu's Belly MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Jabu Jabus Belly MQ Elevator Room Pot 2": {
+            "area": "",
+            "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
+            "alias": "Near Diving Cow Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Jabu Jabu's Belly MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Jabu Jabus Belly MQ Compass Chest": {
             "area": "",
@@ -180,7 +584,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Jabu Jabus Belly MQ Basement Near Switches Chest": {
             "area": "",
@@ -193,7 +599,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Jabu Jabus Belly MQ Basement Near Vines Chest": {
             "area": "",
@@ -206,7 +614,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Jabu Jabus Belly MQ GS Invisible Enemies Room": {
             "area": "",
@@ -224,7 +634,13 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Jabu Jabu's Belly MQ", "value": true, "required": true},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
         },
         "Jabu Jabus Belly MQ Boomerang Room Small Chest": {
             "area": "",
@@ -237,7 +653,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Jabu Jabus Belly MQ Boomerang Chest": {
             "area": "",
@@ -250,7 +668,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Jabu Jabus Belly MQ GS Boomerang Chest Room": {
             "area": "",
@@ -268,7 +688,51 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Jabu Jabu's Belly MQ", "value": true, "required": true},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
+        },
+        "Jabu Jabus Belly MQ Boomerang Room Pot 1": {
+            "area": "",
+            "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
+            "alias": "Boomerang Room Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Jabu Jabu's Belly MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Jabu Jabus Belly MQ Boomerang Room Pot 2": {
+            "area": "",
+            "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
+            "alias": "Boomerang Room Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Jabu Jabu's Belly MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Jabu Jabus Belly MQ Falling Like Like Room Chest": {
             "area": "",
@@ -281,7 +745,47 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Jabu Jabus Belly MQ Falling Like Like Room Pot 1": {
+            "area": "",
+            "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
+            "alias": "Like Like Trap Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Jabu Jabu's Belly MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Jabu Jabus Belly MQ Falling Like Like Room Pot 2": {
+            "area": "",
+            "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
+            "alias": "Like Like Trap Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Jabu Jabu's Belly MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Jabu Jabus Belly MQ GS Tailpasaran Room": {
             "area": "",
@@ -299,7 +803,13 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Jabu Jabu's Belly MQ", "value": true, "required": true},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
         },
         "Jabu Jabus Belly MQ Cow": {
             "area": "",
@@ -315,7 +825,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Jabu Jabus Belly MQ Second Room Upper Chest": {
             "area": "",
@@ -328,7 +840,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Jabu Jabus Belly MQ Near Boss Chest": {
             "area": "",
@@ -341,7 +855,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Jabu Jabus Belly MQ GS Near Boss": {
             "area": "",
@@ -359,11 +875,125 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": [
+                {"setting": "Jabu Jabu's Belly MQ", "value": true, "required": true},
+                {"setting": "Tokensanity", "value": "Dungeons", "required": false},
+                {"setting": "Tokensanity", "value": "All", "required": false}
+            ]
+        },
+        "Jabu Jabus Belly Barinade Pot 1": {
+            "area": "",
+            "lKey": "Jabu Jabus Belly -> Barinade",
+            "alias": "Barinade Pot 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Jabu Jabus Belly Barinade Pot 2": {
+            "area": "",
+            "lKey": "Jabu Jabus Belly -> Barinade",
+            "alias": "Barinade Pot 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Jabu Jabus Belly Barinade Pot 3": {
+            "area": "",
+            "lKey": "Jabu Jabus Belly -> Barinade",
+            "alias": "Barinade Pot 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Jabu Jabus Belly Barinade Pot 4": {
+            "area": "",
+            "lKey": "Jabu Jabus Belly -> Barinade",
+            "alias": "Barinade Pot 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Jabu Jabus Belly Barinade Pot 5": {
+            "area": "",
+            "lKey": "Jabu Jabus Belly -> Barinade",
+            "alias": "Barinade Pot 5",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Jabu Jabus Belly Barinade Pot 6": {
+            "area": "",
+            "lKey": "Jabu Jabus Belly -> Barinade",
+            "alias": "Barinade Pot 6",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Jabu Jabus Belly Barinade Heart": {
             "area": "",
-            "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
+            "lKey": "Jabu Jabus Belly -> Barinade",
             "alias": "Barinade",
             "type": "item",
             "settings": [],
@@ -372,7 +1002,9 @@
             "foundItem": "",
             "merchant": false,
             "price": 0,
-            "walletTier": 0
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         }
     }
 }
