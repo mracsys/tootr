@@ -836,7 +836,7 @@ class Tracker extends React.Component {
             openSettings: false,
             themeDark: darkMode,
             alertReset: false,
-            alertUpdate: true,
+            alertUpdate: false,
             itemMenuLocation: null,
             itemMenuOpen: null,
             shopItemMenuOpen: null,
