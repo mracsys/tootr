@@ -97,6 +97,10 @@ const useStyles = (theme) => ({
         padding: 0,
         border: 0,
     },
+    redAlert: {
+        color: 'red',
+        fontSize: '2em',
+    },
     appBar: {
         zIndex: theme.zIndex.drawer + 1,
         transition: theme.transitions.create(['margin', 'width'], {
@@ -825,6 +829,7 @@ class Tracker extends React.Component {
             openSettings: false,
             themeDark: darkMode,
             alertReset: false,
+            alertUpdate: true,
             itemMenuLocation: null,
             itemMenuOpen: null,
             shopItemMenuOpen: null,
@@ -1951,6 +1956,10 @@ class Tracker extends React.Component {
         this.setState({ alertReset: false, });
     }
 
+    cancelUpdate() {
+        this.setState({ alertUpdate: false, });
+    }
+
     handleItemMenuOpen(location, dataSource) {
         this.setState({
             itemMenuOpen: location,
@@ -2157,6 +2166,27 @@ class Tracker extends React.Component {
                             <DialogActions>
                                 <Button onClick={() => this.resetState(this.state.settings)}>Yes</Button>
                                 <Button onClick={() => this.cancelAlert()}>No</Button>
+                            </DialogActions>
+                        </Dialog>
+                        <Dialog
+                            open={this.state.alertUpdate}
+                            onClose={() => this.cancelUpdate()}
+                            disableScrollLock={true}
+                        >
+                            <DialogTitle>{"Scheduled Updates"}</DialogTitle>
+                            <DialogContent>
+                                <DialogContentText>
+                                    Your tracker will update on <b>May 15th at 8PM US Eastern Daylight Time</b>.
+                                </DialogContentText>
+                                <DialogContentText className={classes.redAlert}>
+                                    <em><b>ANY SAVED PROGRESS WILL BE LOST.</b></em>
+                                </DialogContentText>
+                                <DialogContentText>
+                                    This update includes substantial changes for new randomizer features and requires a new data format. Please finish any open seeds you may have by <b>8PM EDT on May 15</b> to avoid losing your notes.
+                                </DialogContentText>
+                            </DialogContent>
+                            <DialogActions>
+                                <Button onClick={() => this.cancelUpdate()}>OK</Button>
                             </DialogActions>
                         </Dialog>
                         <Drawer
