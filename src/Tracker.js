@@ -1955,7 +1955,7 @@ class Tracker extends React.Component {
         let allAreas = cloneDeep(this.state.allAreas);
         let allEntrances = cloneDeep(this.state.allEntrances);
         let tier;
-        allAreas.locations[originator].walletTier === 2 ?
+        allAreas.locations[originator].walletTier === 3 ?
             tier = 0
             : tier = allAreas.locations[originator].walletTier + 1;
         allAreas.locations[originator].walletTier = tier;

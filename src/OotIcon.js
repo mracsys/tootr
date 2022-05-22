@@ -154,6 +154,7 @@ import OoT_Triforce_Icon from './images/OoT_Triforce.png'
 import Green_Rupee from './images/Green_Rupee.png'
 import Blue_Rupee from './images/Blue_Rupee.png'
 import Red_Rupee from './images/Red_Rupee.png'
+import Purple_Rupee from './images/Purple_Rupee.png'
 
 class OotIcon extends React.Component {
     render() {
@@ -231,6 +232,7 @@ class OotIcon extends React.Component {
             'Green Rupee': Green_Rupee,
             'Blue Rupee': Blue_Rupee,
             'Red Rupee': Red_Rupee,
+            'Purple Rupee': Purple_Rupee,
             'Arrows': OoT_Arrows_Icon,
             'Deku Seeds': OoT_Deku_Seeds_Icon,
             'Bombs': OoT_Bomb_Icon,

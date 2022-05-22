@@ -25,7 +25,8 @@ class LocationCheck extends React.Component {
         let walletTiers = [
             "Green Rupee",
             "Blue Rupee",
-            "Red Rupee"
+            "Red Rupee",
+            "Purple Rupee"
         ];
         return (
             <div
