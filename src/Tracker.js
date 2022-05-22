@@ -493,6 +493,68 @@ const useStyles = (theme) => ({
     },
     itemMenuClear: {
     },
+    MenuPadding: {
+        paddingTop: 0,
+        paddingBottom: 0,
+    },
+    entranceAutoOption: {
+        display: 'block',
+        padding: 0,
+        paddingLeft: 0,
+        '&[data-focus="true"]': {
+            textDecoration: 'none',
+            backgroundColor: '#52525E',
+            color: '#FFFFFF',
+        },
+    },
+    entranceAutoUl: {
+        '& .MuiAutocomplete-option': {
+            paddingLeft: 0,
+        },
+    },
+    entranceAutoPaper: {
+        fontSize: '0.875rem',
+        lineHeight: 1.43,
+        letterSpacing: '0.01071em',
+        margin: 0,
+    },
+    entranceAutoListBox: {
+        padding: 0,
+    },
+    entranceAutoPopper: {
+        position: 'relative',
+    },
+    entranceAutoInput: {
+        backgroundColor: '#fff',
+        borderBottom: '1px solid black',
+        "&:after": {
+            borderBottom: '0px solid #000',
+        },
+        "&:before": {
+            borderBottom: '0px solid #000',
+        },
+        "&:hover:before": {
+            borderBottom: '0px solid #000',
+        },
+    },
+    entranceAutoSearchLabel: {
+        "& .Mui-focused": {
+            color: 'rgba(0, 0, 0, 1)',
+        },
+    },
+    entranceAutoNoButton: {
+        display: 'none',
+    },
+    entranceAutoWidthHack: {
+        padding: theme.spacing(0,0.75,0,6.5),
+        fontFamily: 'Tahoma, sans-serif',
+        fontSize: '1rem',
+        fontWeight: '400',
+        lineHeight: 'normal',
+        letterSpacing: '0.00938em',
+        height: 0,
+        color: 'rgba(0, 0, 0, 0)',
+    },
     entranceContainer: {
         display: 'flex',
         'justify-content': 'space-between',
@@ -644,6 +706,8 @@ const useStyles = (theme) => ({
         lineHeight: 'normal',
         letterSpacing: '0.00938em',
         fontWeight: 'bold',
+        fontStyle: 'italic',
+        color: '#000',
         "&:hover": {
             textDecoration: 'none',
             cursor: 'default',
@@ -758,7 +822,7 @@ const useStyles = (theme) => ({
 //    },
 //});
 
-const trackerVersion = '0.3.1';
+const trackerVersion = '0.3.2';
 
 class Tracker extends React.Component {
     constructor(props) {
@@ -1696,9 +1760,9 @@ class Tracker extends React.Component {
         });
     }
 
-    linkEntrance(entrance) {
-        let originator = entrance.currentTarget.getAttribute('data-link-from');
-        let eCategory = entrance.currentTarget.getAttribute('data-link-to');
+    linkEntrance(dataLinkFrom, dataLinkTo) {
+        let originator = dataLinkFrom;
+        let eCategory = dataLinkTo;
         let alwaysOneWay = ["spawn","warpsong","owldrop","extra"];
         let unMixedDecoupled = ["boss", "noBossShuffle", "noDungeonShuffle"];
         let areas = cloneDeep(this.state.allAreas);
