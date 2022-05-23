@@ -1,0 +1,23 @@
+{
+    "Settings": {
+        "Shuffle Freestanding Items": "All",
+        "Shuffle Pots and Crates": "All",
+        "Shuffle Beehives": "On",
+        "Shuffle Frogs": "On",
+        "Shuffle Interiors": "Off",
+        "Shuffle Grottos": "Off",
+        "Shuffle Dungeons": "Off",
+        "Shuffle Overworld": "Off",
+        "Shuffle Owls": "Off",
+        "Shuffle Warp Songs": "Off",
+        "Shuffle Spawn Points": "Off",
+        "Deku Tree MQ": true,
+        "Dodongo's Cavern MQ": true,
+        "Jabu Jabu's Belly MQ": true,
+        "Forest Temple MQ": true,
+        "Fire Temple MQ": true,
+        "Water Temple MQ": true,
+        "Shadow Temple MQ": true,
+        "Spirit Temple MQ": true
+    }
+}

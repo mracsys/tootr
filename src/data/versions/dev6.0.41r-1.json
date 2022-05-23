@@ -2,6 +2,15 @@
     "Settings": {
         "Tracker Settings": {
             "open": true,
+            "Settings Preset": [
+                "RSL",
+                "Mixed Pools",
+                "Standard",
+                "DDR",
+                "League",
+                "Max Chex",
+                "Custom"
+            ],
             "Show Unshuffled Entrances": [
                 "Yes",
                 "No"
@@ -19,7 +28,7 @@
                 "Both",
                 "Price Only",
                 "Wallet Tier"
-            ]
+            ]            
         },
         "ER Settings": {
             "open": true,
@@ -210,9 +219,13 @@
             ],
             "Ganon's Boss Key": [
                 "Remove",
+                "Medallions",
+                "Stones",
+                "Dungeons",
+                "Tokens",
                 "Vanilla",
                 "Castle",
-                "Dungeons",
+                "Any Dungeon",
                 "Overworld",
                 "Anywhere",
                 "LACS"

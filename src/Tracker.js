@@ -79,8 +79,13 @@ import ganons_castle from './data/locations/ganons_castle.json';
 
 
 import devr from './data/versions/dev6.0.41r-1.json';
-//import weekly from './data/settings_presets/standard_weekly.json'
-import rsl from './data/settings_presets/random-settings-league.json';
+import defaultSettings from './data/settings_presets/defaults.json';
+import rslS4 from './data/settings_presets/rsl-s4.json';
+import mixedPoolsTourney from './data/settings_presets/mixed-pools-s1.json';
+import standardS5 from './data/settings_presets/standard-s5.json';
+import ddrS1 from './data/settings_presets/ddr-s1.json';
+import leagueS2 from './data/settings_presets/league-s2.json';
+import maxChex from './data/settings_presets/1175.json';
 import OotIcon from './OotIcon';
 
 const drawerWidth = 240;
@@ -822,7 +827,7 @@ const useStyles = (theme) => ({
 //    },
 //});
 
-const trackerVersion = '0.3.2';
+const trackerVersion = '0.3.3';
 
 class Tracker extends React.Component {
     constructor(props) {
@@ -864,7 +869,9 @@ class Tracker extends React.Component {
             ls.clear();
             ls.set('TrackerVersion', trackerVersion);
         }
-        let settings = !!(ls.get('RandoSettings')) ? ls.get('RandoSettings') : rsl.Settings;
+        let settings = !!(ls.get('RandoSettings')) ? ls.get('RandoSettings') : cloneDeep(defaultSettings.Settings);
+        let presetSettings = this.getPresetSettings(settings['Settings Preset']);
+        this.setPresetSettings(settings, presetSettings);
         let areaJSON = merge(death_mountain_crater, death_mountain_trail, desert_colossus,
             gerudo_fortress, gerudo_valley, goron_city, graveyard, haunted_wasteland,
             hyrule_field, kakariko_village, kokiri_forest, lake_hylia, lon_lon_ranch,
@@ -872,9 +879,6 @@ class Tracker extends React.Component {
             zora_fountain, zora_river, zoras_domain, deku_tree, dodongos_cavern, jabu_jabus_belly,
             forest_temple, fire_temple, water_temple, shadow_temple, spirit_temple,
             bottom_of_the_well, ice_cavern, gerudo_training_ground, ganons_castle);
-        //let settings = rsl.Settings;
-        //let allAreas = this.addReverseEntrances(areaJSON);
-        //let allEntrances = merge({}, this.categorizeEntrances(allAreas));
         let allAreas = !!(ls.get('AllAreas')) ? ls.get('AllAreas') : this.addReverseEntrances(areaJSON);
         let allEntrances = !!(ls.get('AllEntrances')) ? ls.get('AllEntrances') : merge({}, this.categorizeEntrances(allAreas));
         this.findVisibleLocations(settings, allAreas);
@@ -968,8 +972,57 @@ class Tracker extends React.Component {
         }
     }
 
+    getPresetSettings(presetName, customSettings={}) {
+        let presetSettings;
+        switch (presetName) {
+            case "RSL":
+                presetSettings = cloneDeep(rslS4.Settings);
+                break;
+            case "Mixed Pools":
+                presetSettings = cloneDeep(mixedPoolsTourney.Settings);
+                break;
+            case "Standard":
+                presetSettings = cloneDeep(standardS5.Settings);
+                break;
+            case "DDR":
+                presetSettings = cloneDeep(ddrS1.Settings);
+                break;
+            case "League":
+                presetSettings = cloneDeep(leagueS2.Settings);
+                break;
+            case "Max Chex":
+                presetSettings = cloneDeep(maxChex.Settings);
+                break;
+            case "Custom":
+                presetSettings = cloneDeep(customSettings);
+                break;
+            default:
+                presetSettings = cloneDeep(defaultSettings.Settings);
+                break;
+        }
+        return presetSettings;
+    }
+
+    setPresetSettings(gameSettings, presetSettings) {
+        Object.keys(presetSettings).forEach(setting => {
+            gameSettings[setting] = presetSettings[setting];
+        });
+    }
+
     resetState(currentSettings) {
-        let settings = rsl.Settings;
+        let settings = cloneDeep(defaultSettings.Settings);
+
+        // TODO: Separate tracker and world/preset settings
+        let prevSettings = cloneDeep(currentSettings);
+        settings["Settings Preset"] = prevSettings["Settings Preset"];
+        settings["Show Unshuffled Entrances"] = prevSettings["Show Unshuffled Entrances"];
+        settings["Show Locations"] = prevSettings["Show Locations"];
+        settings["Show Unshuffled Skulls"] = prevSettings["Show Unshuffled Skulls"];
+        settings["Shop Price Tracking"] = prevSettings["Shop Price Tracking"];
+        
+        let presetSettings = this.getPresetSettings(settings['Settings Preset'], prevSettings);
+        this.setPresetSettings(settings, presetSettings);
+
         let areaJSON = merge(death_mountain_crater, death_mountain_trail, desert_colossus,
             gerudo_fortress, gerudo_valley, goron_city, graveyard, haunted_wasteland,
             hyrule_field, kakariko_village, kokiri_forest, lake_hylia, lon_lon_ranch,
@@ -983,13 +1036,6 @@ class Tracker extends React.Component {
         let areas = this.loadAreas(settings, allAreas, allEntrances, true);
         let entrances = this.loadEntrancePools(settings, allEntrances, allAreas);
         let oneWayEntrances = this.loadOneWayEntrancePools(settings, allEntrances, allAreas);
-
-        // TODO: Separate tracker and world/preset settings
-        let prevSettings = cloneDeep(currentSettings);
-        settings["Show Unshuffled Entrances"] = prevSettings["Show Unshuffled Entrances"];
-        settings["Show Locations"] = prevSettings["Show Locations"];
-        settings["Show Unshuffled Skulls"] = prevSettings["Show Unshuffled Skulls"];
-        settings["Shop Price Tracking"] = prevSettings["Shop Price Tracking"];
 
         this.setState({
             settings: settings,
@@ -1505,9 +1551,24 @@ class Tracker extends React.Component {
 
     changeSetting(setting) {
         console.log(setting.target.name, setting.target.value);
-        let settings = cloneDeep(this.state.settings);
         let allEntrances = cloneDeep(this.state.allEntrances);
         let allAreas = cloneDeep(this.state.allAreas);
+        let settings;
+        if (setting.target.name === 'Settings Preset') {
+            let prevSettings = cloneDeep(this.state.settings);
+            settings = cloneDeep(defaultSettings.Settings);
+            settings["Settings Preset"] = prevSettings["Settings Preset"];
+            settings["Show Unshuffled Entrances"] = prevSettings["Show Unshuffled Entrances"];
+            settings["Show Locations"] = prevSettings["Show Locations"];
+            settings["Show Unshuffled Skulls"] = prevSettings["Show Unshuffled Skulls"];
+            settings["Shop Price Tracking"] = prevSettings["Shop Price Tracking"];
+            settings["View"] = prevSettings["View"];
+            
+            let presetSettings = this.getPresetSettings(setting.target.value, prevSettings);
+            this.setPresetSettings(settings, presetSettings);
+        } else {
+            settings = cloneDeep(this.state.settings);
+        }
         settings[setting.target.name] = setting.target.value;
         allAreas = this.setShuffledEntrances(settings, allAreas);
         this.findVisibleLocations(settings, allAreas);
