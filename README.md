@@ -14,6 +14,7 @@ Randomzier and tracker settings can be accessed from the hamburger menu in the u
 
 #### Tracker Settings
 
+  * **Settings Preset**: Common racing settings combinations. To preserve your custom settings on tracker reset, select the Custom option.
   * **Show Unshuffled Entrances**: Control visibility of unshuffled entrances. If disabled, unshuffled entrances and any interior locations will be hidden, even if its area collapse is disabled.
   * **Show Locations**: Hide or show locations. If using this as a pure entrance tracker or map, disabling this setting drastically cuts down on scrolling through each area. The `Interiors Only` setting hides only locations in outdoors overworld locations such as the vanilla Kokiri Sword chest.
   * **Show Unshuffled Skulls**: Similar to the entrances setting, controls visibility of unshuffled Gold Skulltula locations. This does nothing by default as Tokensanity is set to All initially.
