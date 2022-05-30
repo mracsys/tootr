@@ -137,6 +137,12 @@
                 "Off",
                 "On"
             ],
+            "Shuffle Silver Rupees": [
+                "Off",
+                "Dungeons",
+                "Overworld",
+                "Anywhere"
+            ],
             "Shuffle Small Keys": [
                 "Off",
                 "Dungeons",

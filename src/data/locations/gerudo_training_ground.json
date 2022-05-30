@@ -46,6 +46,106 @@
             "shuffled": true,
             "shuffleRules": []
         },
+        "Gerudo Training Ground Boulder Room Silver Rupee 1": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Rolling Boulders Silver Rupee 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Gerudo Training Ground MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground Boulder Room Silver Rupee 2": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Rolling Boulders Silver Rupee 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Gerudo Training Ground MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground Boulder Room Silver Rupee 3": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Rolling Boulders Silver Rupee 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Gerudo Training Ground MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground Boulder Room Silver Rupee 4": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Rolling Boulders Silver Rupee 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Gerudo Training Ground MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground Boulder Room Silver Rupee 5": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Rolling Boulders Silver Rupee 5",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Gerudo Training Ground MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
         "Gerudo Training Grounds Before Heavy Block Chest": {
             "area": "",
             "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
@@ -196,12 +296,212 @@
             "shuffled": true,
             "shuffleRules": []
         },
+        "Gerudo Training Ground Lava Room Silver Rupee 1": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Lava Pillars Silver Rupee 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Gerudo Training Ground MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground Lava Room Silver Rupee 2": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Lava Pillars Silver Rupee 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Gerudo Training Ground MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground Lava Room Silver Rupee 3": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Lava Pillars Silver Rupee 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Gerudo Training Ground MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground Lava Room Silver Rupee 4": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Lava Pillars Silver Rupee 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Gerudo Training Ground MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground Lava Room Silver Rupee 5": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Lava Pillars Silver Rupee 5",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Gerudo Training Ground MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
         "Gerudo Training Grounds Underwater Silver Rupee Chest": {
             "area": "",
             "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
             "alias": "Underwater Rupees Chest",
             "type": "smallKey",
             "settings": [{"setting": "Gerudo Training Ground MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground Underwater Silver Rupee 1": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Underwater Silver Rupee 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Gerudo Training Ground MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground Underwater Silver Rupee 2": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Underwater Silver Rupee 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Gerudo Training Ground MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground Underwater Silver Rupee 3": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Underwater Silver Rupee 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Gerudo Training Ground MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground Underwater Silver Rupee 4": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Underwater Silver Rupee 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Gerudo Training Ground MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground Underwater Silver Rupee 5": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Underwater Silver Rupee 5",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Gerudo Training Ground MQ", "value": false, "required": true}
+            ],
             "visible": true,
             "check": "",
             "foundItem": "",
@@ -490,6 +790,106 @@
             "shuffled": true,
             "shuffleRules": []
         },
+        "Gerudo Training Ground MQ Boulder Room Silver Rupee 1": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Ice Ramps Silver Rupee 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Gerudo Training Ground MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground MQ Boulder Room Silver Rupee 2": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Ice Ramps Silver Rupee 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Gerudo Training Ground MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground MQ Boulder Room Silver Rupee 3": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Ice Ramps Silver Rupee 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Gerudo Training Ground MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground MQ Boulder Room Silver Rupee 4": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Ice Ramps Silver Rupee 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Gerudo Training Ground MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground MQ Boulder Room Silver Rupee 5": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Ice Ramps Silver Rupee 5",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Gerudo Training Ground MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
         "Gerudo Training Grounds MQ Before Heavy Block Chest": {
             "area": "",
             "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
@@ -610,12 +1010,192 @@
             "shuffled": true,
             "shuffleRules": []
         },
+        "Gerudo Training Ground MQ Lava Room Silver Rupee 1": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Lava Pillars Silver Rupee 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Gerudo Training Ground MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground MQ Lava Room Silver Rupee 2": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Lava Pillars Silver Rupee 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Gerudo Training Ground MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground MQ Lava Room Silver Rupee 3": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Lava Pillars Silver Rupee 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Gerudo Training Ground MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground MQ Lava Room Silver Rupee 4": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Lava Pillars Silver Rupee 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Gerudo Training Ground MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground MQ Lava Room Silver Rupee 5": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Lava Pillars Silver Rupee 5",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Gerudo Training Ground MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground MQ Lava Room Silver Rupee 6": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Lava Pillars Silver Rupee 6",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Gerudo Training Ground MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
         "Gerudo Training Grounds MQ Underwater Silver Rupee Chest": {
             "area": "",
             "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
             "alias": "Underwater Rupees Chest",
             "type": "smallKey",
             "settings": [{"setting": "Gerudo Training Ground MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground MQ Underwater Silver Rupee 1": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Underwater Silver Rupee 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Gerudo Training Ground MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground MQ Underwater Silver Rupee 2": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Underwater Silver Rupee 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Gerudo Training Ground MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground MQ Underwater Silver Rupee 3": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Underwater Silver Rupee 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Gerudo Training Ground MQ", "value": true, "required": true}
+            ],
             "visible": true,
             "check": "",
             "foundItem": "",

@@ -1760,6 +1760,106 @@
             "shuffled": true,
             "shuffleRules": []
         },
+        "Dodongos Cavern MQ Staircase Silver Rupee 1": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Staircase Silver Rupee 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Staircase Silver Rupee 2": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Staircase Silver Rupee 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Staircase Silver Rupee 3": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Staircase Silver Rupee 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Staircase Silver Rupee 4": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Staircase Silver Rupee 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Staircase Silver Rupee 5": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Staircase Silver Rupee 5",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
         "Dodongos Cavern MQ Staircase Room Pot 1": {
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",

@@ -150,11 +150,12 @@ import OoT_Letter_Icon from './images/OoT_Letter_Icon.png';
 import OoT_Big_Poe_Soul_Icon from './images/OoT_Big_Poe_Soul_Icon.png';
 import OoT_Small_Key_Icon from './images/OoT_Small_Key_Icon.png';
 import OoT_Boss_Key_Icon from './images/OoT_Boss_Key_Icon.png';
-import OoT_Triforce_Icon from './images/OoT_Triforce.png'
-import Green_Rupee from './images/Green_Rupee.png'
-import Blue_Rupee from './images/Blue_Rupee.png'
-import Red_Rupee from './images/Red_Rupee.png'
-import Purple_Rupee from './images/Purple_Rupee.png'
+import OoT_Triforce_Icon from './images/OoT_Triforce.png';
+import Green_Rupee from './images/Green_Rupee.png';
+import Blue_Rupee from './images/Blue_Rupee.png';
+import Red_Rupee from './images/Red_Rupee.png';
+import Purple_Rupee from './images/Purple_Rupee.png';
+import Silver_Rupee from './images/Silver_Rupee.png';
 
 class OotIcon extends React.Component {
     render() {
@@ -233,6 +234,7 @@ class OotIcon extends React.Component {
             'Blue Rupee': Blue_Rupee,
             'Red Rupee': Red_Rupee,
             'Purple Rupee': Purple_Rupee,
+            'Silver Rupee': Silver_Rupee,
             'Arrows': OoT_Arrows_Icon,
             'Deku Seeds': OoT_Deku_Seeds_Icon,
             'Bombs': OoT_Bomb_Icon,

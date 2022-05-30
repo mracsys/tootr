@@ -40,6 +40,106 @@
             "shuffled": true,
             "shuffleRules": []
         },
+        "Ganons Castle Forest Trial Silver Rupee 1": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Forest Trial Silver Rupee 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Ganon's Castle MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle Forest Trial Silver Rupee 2": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Forest Trial Silver Rupee 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Ganon's Castle MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle Forest Trial Silver Rupee 3": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Forest Trial Silver Rupee 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Ganon's Castle MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle Forest Trial Silver Rupee 4": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Forest Trial Silver Rupee 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Ganon's Castle MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle Forest Trial Silver Rupee 5": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Forest Trial Silver Rupee 5",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Ganon's Castle MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
         "Ganons Castle Forest Trial Pot 1": {
             "area": "",
             "lKey": "Ganons Castle Grounds -> Ganons Castle",
@@ -309,6 +409,106 @@
             "shuffled": true,
             "shuffleRules": []
         },
+        "Ganons Castle Fire Trial Silver Rupee 1": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Fire Trial Silver Rupee 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Ganon's Castle MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle Fire Trial Silver Rupee 2": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Fire Trial Silver Rupee 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Ganon's Castle MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle Fire Trial Silver Rupee 3": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Fire Trial Silver Rupee 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Ganon's Castle MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle Fire Trial Silver Rupee 4": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Fire Trial Silver Rupee 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Ganon's Castle MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle Fire Trial Silver Rupee 5": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Fire Trial Silver Rupee 5",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Ganon's Castle MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
         "Ganons Castle Fire Trial Recovery Heart": {
             "area": "",
             "lKey": "Ganons Castle Grounds -> Ganons Castle",
@@ -486,6 +686,106 @@
             "shuffled": true,
             "shuffleRules": []
         },
+        "Ganons Castle Light Trial Silver Rupee 1": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Light Trial Silver Rupee 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Ganon's Castle MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle Light Trial Silver Rupee 2": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Light Trial Silver Rupee 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Ganon's Castle MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle Light Trial Silver Rupee 3": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Light Trial Silver Rupee 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Ganon's Castle MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle Light Trial Silver Rupee 4": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Light Trial Silver Rupee 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Ganon's Castle MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle Light Trial Silver Rupee 5": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Light Trial Silver Rupee 5",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Ganon's Castle MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
         "Ganons Castle Light Trial Boulder Pot": {
             "area": "",
             "lKey": "Ganons Castle Grounds -> Ganons Castle",
@@ -532,6 +832,106 @@
             "settings": [
                 {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
                 {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Ganon's Castle MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle Spirit Trial Silver Rupee 1": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Spirit Trial Silver Rupee 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Ganon's Castle MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle Spirit Trial Silver Rupee 2": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Spirit Trial Silver Rupee 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Ganon's Castle MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle Spirit Trial Silver Rupee 3": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Spirit Trial Silver Rupee 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Ganon's Castle MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle Spirit Trial Silver Rupee 4": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Spirit Trial Silver Rupee 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Ganon's Castle MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle Spirit Trial Silver Rupee 5": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Spirit Trial Silver Rupee 5",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
                 {"setting": "Ganon's Castle MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -827,6 +1227,106 @@
             "shuffled": true,
             "shuffleRules": []
         },
+        "Ganons Castle MQ Water Trial Silver Rupee 1": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Water Trial Silver Rupee 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle MQ Water Trial Silver Rupee 2": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Water Trial Silver Rupee 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle MQ Water Trial Silver Rupee 3": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Water Trial Silver Rupee 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle MQ Water Trial Silver Rupee 4": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Water Trial Silver Rupee 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle MQ Water Trial Silver Rupee 5": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Water Trial Silver Rupee 5",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
         "Ganons Castle MQ Water Trial Pot 1": {
             "area": "",
             "lKey": "Ganons Castle Grounds -> Ganons Castle",
@@ -880,12 +1380,112 @@
             "shuffled": true,
             "shuffleRules": []
         },
+        "Ganons Castle MQ Shadow Trial Silver Rupee 1": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Shadow Trial Silver Rupee 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle MQ Shadow Trial Silver Rupee 2": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Shadow Trial Silver Rupee 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle MQ Shadow Trial Silver Rupee 3": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Shadow Trial Silver Rupee 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
         "Ganons Castle MQ Shadow Trial Eye Switch Chest": {
             "area": "",
             "lKey": "Ganons Castle Grounds -> Ganons Castle",
             "alias": "Shadow Trial 2nd Chest",
             "type": "smallKey",
             "settings": [{"setting": "Ganon's Castle MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle MQ Shadow Trial Silver Rupee 4": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Shadow Trial Silver Rupee 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle MQ Shadow Trial Silver Rupee 5": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Shadow Trial Silver Rupee 5",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true}
+            ],
             "visible": true,
             "check": "",
             "foundItem": "",
@@ -922,6 +1522,106 @@
             "settings": [
                 {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
                 {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle MQ Fire Trial Silver Rupee 1": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Fire Trial Silver Rupee 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle MQ Fire Trial Silver Rupee 2": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Fire Trial Silver Rupee 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle MQ Fire Trial Silver Rupee 3": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Fire Trial Silver Rupee 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle MQ Fire Trial Silver Rupee 4": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Fire Trial Silver Rupee 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle MQ Fire Trial Silver Rupee 5": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Fire Trial Silver Rupee 5",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
                 {"setting": "Ganon's Castle MQ", "value": true, "required": true}
             ],
             "visible": true,

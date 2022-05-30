@@ -158,6 +158,106 @@
             "shuffled": true,
             "shuffleRules": []
         },
+        "Ice Cavern Spinning Scythe Silver Rupee 1": {
+            "area": "",
+            "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
+            "alias": "Spinning Blades Silver Rupee 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Ice Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ice Cavern Spinning Scythe Silver Rupee 2": {
+            "area": "",
+            "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
+            "alias": "Spinning Blades Silver Rupee 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Ice Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ice Cavern Spinning Scythe Silver Rupee 3": {
+            "area": "",
+            "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
+            "alias": "Spinning Blades Silver Rupee 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Ice Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ice Cavern Spinning Scythe Silver Rupee 4": {
+            "area": "",
+            "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
+            "alias": "Spinning Blades Silver Rupee 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Ice Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ice Cavern Spinning Scythe Silver Rupee 5": {
+            "area": "",
+            "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
+            "alias": "Spinning Blades Silver Rupee 5",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Ice Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
         "Ice Cavern Map Chest": {
             "area": "",
             "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
@@ -306,7 +406,7 @@
         "Ice Cavern GS Push Block Room": {
             "area": "",
             "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
-            "alias": "Near Silver Rupees",
+            "alias": "Push Block Room",
             "type": "skulltula",
             "settings": [
                 {"setting": "Ice Cavern MQ", "value": false, "required": true},
@@ -326,6 +426,106 @@
                 {"setting": "Tokensanity", "value": "Dungeons", "required": false},
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ]
+        },
+        "Ice Cavern Push Block Silver Rupee 1": {
+            "area": "",
+            "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
+            "alias": "Push Block Silver Rupee 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Ice Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ice Cavern Push Block Silver Rupee 2": {
+            "area": "",
+            "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
+            "alias": "Push Block Silver Rupee 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Ice Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ice Cavern Push Block Silver Rupee 3": {
+            "area": "",
+            "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
+            "alias": "Push Block Silver Rupee 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Ice Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ice Cavern Push Block Silver Rupee 4": {
+            "area": "",
+            "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
+            "alias": "Push Block Silver Rupee 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Ice Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ice Cavern Push Block Silver Rupee 5": {
+            "area": "",
+            "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
+            "alias": "Push Block Silver Rupee 5",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Ice Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Ice Cavern Block Room Red Rupee 1": {
             "area": "",

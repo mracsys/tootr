@@ -827,7 +827,7 @@ const useStyles = (theme) => ({
 //    },
 //});
 
-const trackerVersion = '0.3.3';
+const trackerVersion = '0.3.4';
 
 class Tracker extends React.Component {
     constructor(props) {

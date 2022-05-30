@@ -241,6 +241,106 @@
             "shuffled": true,
             "shuffleRules": []
         },
+        "Shadow Temple Scythe Shortcut Silver Rupee 1": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Early Blades Silver Rupee 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Shadow Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple Scythe Shortcut Silver Rupee 2": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Early Blades Silver Rupee 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Shadow Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple Scythe Shortcut Silver Rupee 3": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Early Blades Silver Rupee 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Shadow Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple Scythe Shortcut Silver Rupee 4": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Early Blades Silver Rupee 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Shadow Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple Scythe Shortcut Silver Rupee 5": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Early Blades Silver Rupee 5",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Shadow Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
         "Shadow Temple Early Silver Rupee Chest": {
             "area": "",
             "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
@@ -347,6 +447,106 @@
                 {"setting": "Tokensanity", "value": "Dungeons", "required": false},
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ]
+        },
+        "Shadow Temple Huge Pit Silver Rupee 1": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Huge Pit Silver Rupee 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Shadow Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple Huge Pit Silver Rupee 2": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Huge Pit Silver Rupee 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Shadow Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple Huge Pit Silver Rupee 3": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Huge Pit Silver Rupee 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Shadow Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple Huge Pit Silver Rupee 4": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Huge Pit Silver Rupee 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Shadow Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple Huge Pit Silver Rupee 5": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Huge Pit Silver Rupee 5",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Shadow Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Shadow Temple Falling Spikes Lower Pot 1": {
             "area": "",
@@ -499,6 +699,106 @@
             "alias": "Invisible Spikes Chest",
             "type": "item",
             "settings": [{"setting": "Shadow Temple MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple Invisible Spikes Silver Rupee 1": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Invisible Spikes Silver Rupee 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Shadow Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple Invisible Spikes Silver Rupee 2": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Invisible Spikes Silver Rupee 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Shadow Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple Invisible Spikes Silver Rupee 3": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Invisible Spikes Silver Rupee 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Shadow Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple Invisible Spikes Silver Rupee 4": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Invisible Spikes Silver Rupee 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Shadow Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple Invisible Spikes Silver Rupee 5": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Invisible Spikes Silver Rupee 5",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Shadow Temple MQ", "value": false, "required": true}
+            ],
             "visible": true,
             "check": "",
             "foundItem": "",
@@ -1232,6 +1532,106 @@
             "shuffled": true,
             "shuffleRules": []
         },
+        "Shadow Temple MQ Scythe Shortcut Silver Rupee 1": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Early Blades Silver Rupee 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Scythe Shortcut Silver Rupee 2": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Early Blades Silver Rupee 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Scythe Shortcut Silver Rupee 3": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Early Blades Silver Rupee 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Scythe Shortcut Silver Rupee 4": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Early Blades Silver Rupee 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Scythe Shortcut Silver Rupee 5": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Early Blades Silver Rupee 5",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
         "Shadow Temple MQ Map Chest": {
             "area": "",
             "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
@@ -1444,6 +1844,206 @@
             "shuffled": true,
             "shuffleRules": []
         },
+        "Shadow Temple MQ Invisible Blades Silver Rupee 1": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Invisible Blades Silver Rupee 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Invisible Blades Silver Rupee 2": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Invisible Blades Silver Rupee 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Invisible Blades Silver Rupee 3": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Invisible Blades Silver Rupee 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Invisible Blades Silver Rupee 4": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Invisible Blades Silver Rupee 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Invisible Blades Silver Rupee 5": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Invisible Blades Silver Rupee 5",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Invisible Blades Silver Rupee 6": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Invisible Blades Silver Rupee 6",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Invisible Blades Silver Rupee 7": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Invisible Blades Silver Rupee 7",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Invisible Blades Silver Rupee 8": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Invisible Blades Silver Rupee 8",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Invisible Blades Silver Rupee 9": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Invisible Blades Silver Rupee 9",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Invisible Blades Silver Rupee 10": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Invisible Blades Silver Rupee 10",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
         "Shadow Temple MQ Invisible Blades Invisible Chest": {
             "area": "",
             "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
@@ -1501,6 +2101,106 @@
             "settings": [
                 {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
                 {"setting": "Shuffle Freestanding Items", "value": "Dungeons", "required": false},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Huge Pit Silver Rupee 1": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Huge Pit Silver Rupee 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Huge Pit Silver Rupee 2": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Huge Pit Silver Rupee 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Huge Pit Silver Rupee 3": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Huge Pit Silver Rupee 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Huge Pit Silver Rupee 4": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Huge Pit Silver Rupee 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Huge Pit Silver Rupee 5": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Huge Pit Silver Rupee 5",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
                 {"setting": "Shadow Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1678,6 +2378,206 @@
             "alias": "Invisible Spikes Chest",
             "type": "item",
             "settings": [{"setting": "Shadow Temple MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Invisible Spikes Silver Rupee 1": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Invisible Spikes Silver Rupee 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Invisible Spikes Silver Rupee 2": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Invisible Spikes Silver Rupee 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Invisible Spikes Silver Rupee 3": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Invisible Spikes Silver Rupee 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Invisible Spikes Silver Rupee 4": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Invisible Spikes Silver Rupee 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Invisible Spikes Silver Rupee 5": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Invisible Spikes Silver Rupee 5",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Invisible Spikes Silver Rupee 6": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Invisible Spikes Silver Rupee 6",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Invisible Spikes Silver Rupee 7": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Invisible Spikes Silver Rupee 7",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Invisible Spikes Silver Rupee 8": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Invisible Spikes Silver Rupee 8",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Invisible Spikes Silver Rupee 9": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Invisible Spikes Silver Rupee 9",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Invisible Spikes Silver Rupee 10": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Invisible Spikes Silver Rupee 10",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Silver Rupees", "value": "Anywhere", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Silver Rupees", "value": "Overworld", "required": false},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
             "visible": true,
             "check": "",
             "foundItem": "",

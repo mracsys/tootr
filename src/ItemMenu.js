@@ -238,7 +238,8 @@ class ItemMenu extends React.Component {
                     <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Boss Key (Ganons Castle)">
                         <OotIcon classes={this.props.classes} itemName="Boss Key (Ganons Castle)" className={this.props.classes.locationMenuIcon} />
                     </div>
-                    <div style={{width: "48px"}}>
+                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Silver Rupee">
+                        <OotIcon classes={this.props.classes} itemName="Silver Rupee" className={this.props.classes.locationMenuIcon} />
                     </div>
                     <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Small Key (???)">
                         <OotIcon classes={this.props.classes} itemName="Small Key (???)" className={this.props.classes.locationMenuIcon} />
