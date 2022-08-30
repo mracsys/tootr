@@ -18,6 +18,7 @@
             "Grottos",
             "Dungeons",
             "Overworld"
-        ]
+        ],
+        "Excluded Locations": "Mask of Truth"
     }
 }

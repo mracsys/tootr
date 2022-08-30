@@ -18,6 +18,7 @@
         "Shuffle Overworld": "Off",
         "Shuffle Owls": "Off",
         "Shuffle Warp Songs": "Off",
-        "Shuffle Spawn Points": "Off"
+        "Shuffle Spawn Points": "Off",
+        "Excluded Locations": "Mask of Truth"
     }
 }

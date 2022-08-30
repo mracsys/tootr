@@ -304,7 +304,9 @@
             "lKey": "LW Beyond Mido -> Deku Theater",
             "alias": "Mask of Truth",
             "type": "item",
-            "settings": [],
+            "settings": [
+                {"setting": "Excluded Locations", "value": "None", "required": false}
+            ],
             "visible": true,
             "check": "",
             "foundItem": "",

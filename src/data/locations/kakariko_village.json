@@ -585,7 +585,10 @@
             "lKey": "Kakariko Village -> Kak House of Skulltula",
             "alias": "40 Skulls",
             "type": "item",
-            "settings": [],
+            "settings": [
+                {"setting": "Excluded Locations", "value": "None", "required": false},
+                {"setting": "Excluded Locations", "value": "Mask of Truth", "required": false}
+            ],
             "visible": true,
             "check": "",
             "foundItem": "",
@@ -600,7 +603,10 @@
             "lKey": "Kakariko Village -> Kak House of Skulltula",
             "alias": "50 Skulls",
             "type": "item",
-            "settings": [],
+            "settings": [
+                {"setting": "Excluded Locations", "value": "None", "required": false},
+                {"setting": "Excluded Locations", "value": "Mask of Truth", "required": false}
+            ],
             "visible": true,
             "check": "",
             "foundItem": "",

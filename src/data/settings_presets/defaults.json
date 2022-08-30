@@ -50,6 +50,7 @@
         "Item Pool": "Balanced",
         "Earliest Adult Trade Item": "Pocket Egg",
         "Latest Adult Trade Item": "Claim Check",
+        "Excluded Locations": "None",
 
         "Deku Tree MQ": false,
         "Dodongo's Cavern MQ": false,

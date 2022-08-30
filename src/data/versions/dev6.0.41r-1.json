@@ -315,6 +315,11 @@
                 "Useless",
                 "Very Strong",
                 "MW Season 3"
+            ],
+            "Excluded Locations": [
+                "None",
+                "Mask of Truth",
+                "40/50/MoT"
             ]
         }
     },

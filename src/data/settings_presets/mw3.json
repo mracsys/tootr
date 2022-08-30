@@ -21,6 +21,7 @@
         "Shuffle Warp Songs": "Off",
         "Shuffle Spawn Points": "Off",
         "Hint Distribution": "MW Season 3",
-        "Earliest Adult Trade Item": "Claim Check"
+        "Earliest Adult Trade Item": "Claim Check",
+        "Excluded Locations": "40/50/MoT"
     }
 }
