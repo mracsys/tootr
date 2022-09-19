@@ -86,6 +86,7 @@ import standardS5 from './data/settings_presets/standard-s5.json';
 import ddrS1 from './data/settings_presets/ddr-s1.json';
 import leagueS2 from './data/settings_presets/league-s2.json';
 import maxChex from './data/settings_presets/1175.json';
+import mw3 from './data/settings_presets/mw3.json';
 import OotIcon from './OotIcon';
 
 const drawerWidth = 240;
@@ -992,6 +993,9 @@ class Tracker extends React.Component {
                 break;
             case "Max Chex":
                 presetSettings = cloneDeep(maxChex.Settings);
+                break;
+            case "MW Season 3":
+                presetSettings = cloneDeep(mw3.Settings);
                 break;
             case "Custom":
                 presetSettings = cloneDeep(customSettings);
