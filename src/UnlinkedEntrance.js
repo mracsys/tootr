@@ -11,11 +11,13 @@ class UnLinkedEntrance extends React.Component {
             'grotto': 'Grottos',
             'grave': 'Grottos',
             'dungeon': 'Dungeons',
+            'dungeonGanon': 'Dungeons',
             'overworld': 'Overworld',
             'boss': 'Boss Rooms',
         }
         let areaType = this.props.allAreas.entrances[entrance].type
         if (areaType === "specialInterior") { areaType = "interior"; }
+        if (areaType === "dungeonGanon") { areaType = "dungeon"; }
         let subAreas;
         if (areaType in this.props.oneWayEntrancePools) {
             subAreas = areaType;

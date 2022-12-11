@@ -828,7 +828,7 @@ const useStyles = (theme) => ({
 //    },
 //});
 
-const trackerVersion = '0.3.4';
+const trackerVersion = '0.3.5';
 
 class Tracker extends React.Component {
     constructor(props) {
@@ -871,8 +871,9 @@ class Tracker extends React.Component {
             ls.set('TrackerVersion', trackerVersion);
         }
         let settings = !!(ls.get('RandoSettings')) ? ls.get('RandoSettings') : cloneDeep(defaultSettings.Settings);
-        let presetSettings = this.getPresetSettings(settings['Settings Preset']);
-        this.setPresetSettings(settings, presetSettings);
+        // Disable preset settings on load until custom saved settings are handled
+        //let presetSettings = this.getPresetSettings(settings['Settings Preset']);
+        //this.setPresetSettings(settings, presetSettings);
         let areaJSON = merge(death_mountain_crater, death_mountain_trail, desert_colossus,
             gerudo_fortress, gerudo_valley, goron_city, graveyard, haunted_wasteland,
             hyrule_field, kakariko_village, kokiri_forest, lake_hylia, lon_lon_ranch,
@@ -1106,8 +1107,11 @@ class Tracker extends React.Component {
             erSettings.push("grotto");
             erSettings.push("grave");
         }
-        if (settings["Shuffle Dungeons"] === "On") {
+        if (settings["Shuffle Dungeons"] === "Dungeons" || settings["Shuffle Dungeons"] === "Dungeons and Ganon") {
             erSettings.push("dungeon");
+        }
+        if (settings["Shuffle Dungeons"] === "Dungeons and Ganon") {
+            erSettings.push("dungeonGanon");
         }
         if (settings["Shuffle Bosses"] === "Age-Restricted" || settings["Shuffle Bosses"] === "Full") {
             erSettings.push("boss");
@@ -1206,7 +1210,7 @@ class Tracker extends React.Component {
                     eLocation = {};
                     eLocation[location] = allAreas.locations[location];
                     areas[eArea].locations = merge(areas[eArea].locations, eLocation);
-                } else if (allAreas.entrances[allAreas.locations[location].lKey].type === 'dungeon') {
+                } else if (['dungeon', 'dungeonGanon'].includes(allAreas.entrances[allAreas.locations[location].lKey].type)) {
                     eDungeon = allAreas.entrances[allAreas.locations[location].lKey].alias;
                     if (!(allAreas.hasOwnProperty(eDungeon)) && init) { 
                         allAreas[eDungeon] = { show: false, dungeon: true, collapse: 'some', entrances: {}, locations: {} };
@@ -1252,7 +1256,7 @@ class Tracker extends React.Component {
                 }
                 entrances[eType][area].push(entrance);
             }
-            if (eType === "interior" || eType === "specialInterior" || eType === "grave" || eType === "grotto" || eType === "dungeon" || eType === "boss") {
+            if (eType === "interior" || eType === "specialInterior" || eType === "grave" || eType === "grotto" || eType === "dungeon" || eType === "dungeonGanon" || eType === "boss") {
                 if (!(entrances.hasOwnProperty(eType))) {
                     entrances[eType] = [];
                 }
@@ -1352,6 +1356,15 @@ class Tracker extends React.Component {
         Object.keys(allEntrances.reversedungeon).forEach(area => {
             oReverseDungeons[area] = (Object.filterReverseEntrances(allAreas.entrances, (eType, eLink, eArea, eReverse) => eType === "dungeon" && eLink === "" && eArea === area && eReverse === true));
         });
+        if (settings["Shuffle Dungeons"] === "Dungeons and Ganon") {
+            eDungeons.push(...(Object.filterEntrances(allAreas.entrances, (eType, eLink, eReverse) => eType === "dungeonGanon" && eLink === "" && eReverse === false)));
+            Object.keys(allEntrances.reversedungeonGanon).forEach(area => {
+                if (!(oReverseDungeons.hasOwnProperty(area))) {
+                    oReverseDungeons[area] = [];
+                }
+                oReverseDungeons[area].push(...(Object.filterReverseEntrances(allAreas.entrances, (eType, eLink, eArea, eReverse) => eType === "dungeonGanon" && eLink === "" && eArea === area && eReverse === true)));
+            });
+        }
         oDungeons = { "Dungeons": eDungeons };
         oDecoupledDungeons = merge(clone(oDungeons), clone(oReverseDungeons));
         let oBosses = {};
@@ -1406,7 +1419,7 @@ class Tracker extends React.Component {
             entrances = merge(entrances, {"grotto": oGrottos, "grotto_reverse": oReverseGrottos, "grotto_decoupled": oDecoupledGrottos});
             entrances = merge(entrances, {"grave": oGrottos, "grave_reverse": oReverseGrottos, "grave_decoupled": oDecoupledGrottos});
         }
-        if (settings["Shuffle Dungeons"] === "On") {
+        if (settings["Shuffle Dungeons"] === "Dungeons" || settings["Shuffle Dungeons"] === "Dungeons and Ganon") {
             if (settings["Mixed Pools"].includes("Dungeons")) {
                 mixedpool = mergeWith(mixedpool, {"mixed": oDungeons, "mixed_reverse": oReverseDungeons, "mixed_decoupled": oDecoupledDungeons, "mixed_overworld": merge(clone(oDungeons), clone(oReverseDungeons))}, mergeAreas);
             }
@@ -1463,41 +1476,33 @@ class Tracker extends React.Component {
         let eOverworldInteriors = {};
         Object.keys(allEntrances.reverseinterior).forEach(area => {
             if (!(Object.keys(eOverworldInteriors).includes(area))) {
-                //if (!(Object.keys(eOverworld).includes(area))) {
-                    eOverworldInteriors[area] = [];
-                //} else {
-                //    eOverworldInteriors[area] = clone(eOverworld[area]);
-                //}
+                eOverworldInteriors[area] = [];
             }
             eOverworldInteriors[area].push(...((allEntrances.reverseinterior[area])));
         });
         Object.keys(allEntrances.reversespecialInterior).forEach(area => {
             if (!(Object.keys(eOverworldInteriors).includes(area))) {
-                //if (!(Object.keys(eOverworld).includes(area))) {
-                    eOverworldInteriors[area] = [];
-                //} else {
-                //    eOverworldInteriors[area] = clone(eOverworld[area]);
-                //}
+                eOverworldInteriors[area] = [];
             }
             eOverworldInteriors[area].push(...((allEntrances.reversespecialInterior[area])))
         });
 
         let eOverworldDungeons = {};
-        if (settings["Shuffle Dungeons"] === 'On' && (settings['Mixed Pools'] === 'On' || settings['Mixed Pools'] === 'Indoor')) {
+        if ((settings["Shuffle Dungeons"] === 'Dungeons' || settings["Shuffle Dungeons"] === 'Dungeons and Ganon') &&
+            (settings['Mixed Pools'] === 'On' || settings['Mixed Pools'] === 'Indoor')) {
             Object.keys(allEntrances.reversedungeon).forEach(area => {
                 if (!(Object.keys(eOverworldDungeons).includes(area))) {
-                    //if (!(Object.keys(eOverworld).includes(area))) {
-                        eOverworldDungeons[area] = [];
-                    //} else {
-                    //    eOverworldInteriors[area] = clone(eOverworld[area]);
-                    //}
+                    eOverworldDungeons[area] = [];
                 }
                 eOverworldDungeons[area].push(...((allEntrances.reversedungeon[area])))
             });
-            // Hack to hide Ganon's Castle exit from warp menus
-            let iGC = eOverworldDungeons['Castle Grounds'].indexOf('Ganons Castle -> Ganons Castle Grounds');
-            if (iGC > -1) {
-                eOverworldDungeons['Castle Grounds'].splice(iGC, 1);
+            if (settings["Shuffle Dungeons"] === 'Dungeons and Ganon') {
+                Object.keys(allEntrances.reversedungeonGanon).forEach(area => {
+                    if (!(Object.keys(eOverworldDungeons).includes(area))) {
+                        eOverworldDungeons[area] = [];
+                    }
+                    eOverworldDungeons[area].push(...((allEntrances.reversedungeon[area])))
+                });
             }
         }
 
@@ -1539,10 +1544,7 @@ class Tracker extends React.Component {
         let erSettings = this.getShuffledTypes(settings);
         Object.keys(tempAreas.entrances).forEach(entrance => {
             if (erSettings.includes(tempAreas.entrances[entrance].type)) {
-                // Never shuffle Ganon's Castle
-                if (entrance !== 'Ganons Castle -> Ganons Castle Grounds' && entrance !== 'Ganons Castle Grounds -> Ganons Castle') {
-                    tempAreas.entrances[entrance].shuffled = true;
-                }
+                tempAreas.entrances[entrance].shuffled = true;
             } else {
                 tempAreas.entrances[entrance].shuffled = false;
             }
@@ -2218,7 +2220,7 @@ class Tracker extends React.Component {
                 href = '#' + this.state.allAreas.entrances[reverseLink].oneWayArea;
             }
         }
-        if (this.state.allAreas.entrances[reverseLink].type === "dungeon") {
+        if (this.state.allAreas.entrances[reverseLink].type === "dungeon" || this.state.allAreas.entrances[reverseLink].type === "dungeonGanon") {
             if (this.state.allAreas.entrances[reverseLink].isReverse === true) {
                 href = '#' + this.state.allAreas.entrances[reverseLink].area;
             } else {
@@ -2230,10 +2232,10 @@ class Tracker extends React.Component {
 
     handleDungeonTravel(entrance, useConnector=true) {
         let eType = this.state.allAreas.entrances[entrance].type;
-        if (this.state.settings["View"] === "Overworld" && eType === "dungeon" && this.state.allAreas.entrances[entrance].isReverse === false) {
+        if (this.state.settings["View"] === "Overworld" && (eType === "dungeon" || eType === "dungeonGanon") && this.state.allAreas.entrances[entrance].isReverse === false) {
             this.changeSetting({"target": { "name": "View", "value": "Dungeons" }});
         }
-        if (this.state.settings["View"] === "Dungeons" && (eType !== "dungeon" || (eType === "dungeon" && this.state.allAreas.entrances[entrance].isReverse === true))) {
+        if (this.state.settings["View"] === "Dungeons" && ((eType !== "dungeon" && eType !== "dungeonGanon") || ((eType === "dungeon" || eType === "dungeonGanon") && this.state.allAreas.entrances[entrance].isReverse === true))) {
             this.changeSetting({"target": { "name": "View", "value": "Overworld" }});
         }
         let href = this.buildEntranceURL(entrance, useConnector);

@@ -68,7 +68,7 @@ class LinkedEntrance extends React.Component {
                 href = '#' + this.props.allAreas.entrances[reverseLink].area;
             }
         }
-        if (this.props.allAreas.entrances[reverseLink].type === "dungeon") {
+        if (this.props.allAreas.entrances[reverseLink].type === "dungeon" || this.props.allAreas.entrances[reverseLink].type === 'dungeonGanon') {
             if (this.props.allAreas.entrances[reverseLink].isReverse === true) {
                 href = '#' + this.props.allAreas.entrances[reverseLink].area;
             } else {
@@ -81,7 +81,7 @@ class LinkedEntrance extends React.Component {
     render() {
         let oEntrance = this.props.allAreas.entrances[this.props.entrance];
         let reverseLink = oEntrance.aLink;
-        let interiors = ['interior','specialInterior','grotto','grave','dungeon','boss','noBossShuffle'];
+        let interiors = ['interior','specialInterior','grotto','grave','dungeon','dungeonGanon','boss','noBossShuffle'];
         let oneWayTypes = ['spawn','warpsong','owldrop'];
         let otherEntrances = [];
         if (this.props.connector === false || this.props.decoupled) {
@@ -112,7 +112,7 @@ class LinkedEntrance extends React.Component {
                     </div>
                     <a
                         href={this.buildEntranceURL(reverseLink)}
-                        onClick={(this.props.allAreas.entrances[reverseLink].type === "dungeon" || this.props.dungeon) ?
+                        onClick={(this.props.allAreas.entrances[reverseLink].type === "dungeon" || this.props.allAreas.entrances[reverseLink].type === "dungeonGanon" || this.props.dungeon) ?
                                 () => this.props.handleDungeonTravel(reverseLink)
                                 : () => {}}
                         className={(((this.props.allAreas.entrances[reverseLink].type === "overworld")
@@ -120,6 +120,7 @@ class LinkedEntrance extends React.Component {
                                     || (this.props.allAreas.entrances[reverseLink].type === "spawn")
                                     || (this.props.allAreas.entrances[reverseLink].type === "owldrop")
                                     || (this.props.allAreas.entrances[reverseLink].type === "dungeon")
+                                    || (this.props.allAreas.entrances[reverseLink].type === "dungeonGanon")
                                     || (this.props.allAreas.entrances[reverseLink].type === "extra")
                                     || (this.props.allAreas.entrances[reverseLink].isReverse)) ?
                                         this.props.classes.overworldLinkAnchor
@@ -177,7 +178,7 @@ class LinkedEntrance extends React.Component {
                     /* All other interior locations */
                     ((this.props.decoupled === false && !(oneWayTypes.includes(oEntrance.type))) || (this.props.decoupled)) ?
                     Object.keys(this.props.allEntrances[reverseLink].locations).filter((l) => (this.props.allEntrances[reverseLink].locations[l].check === '' || this.props.allAreas[this.props.title].collapse === 'none')).map((location, k) => {
-                        if (this.props.allAreas.entrances[reverseLink].type !== 'dungeon' && this.props.allAreas.locations[location].visible === true) {
+                        if (this.props.allAreas.entrances[reverseLink].type !== 'dungeon' && this.props.allAreas.entrances[reverseLink].type !== 'dungeonGanon' && this.props.allAreas.locations[location].visible === true) {
                             return (
                                 <LocationCheck
                                     key={this.props.entrance + 'entrancelocationcheck' + k}
