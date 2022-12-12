@@ -1025,8 +1025,8 @@ class Tracker extends React.Component {
         settings["Show Unshuffled Skulls"] = prevSettings["Show Unshuffled Skulls"];
         settings["Shop Price Tracking"] = prevSettings["Shop Price Tracking"];
         
-        let presetSettings = this.getPresetSettings(settings['Settings Preset'], prevSettings);
-        this.setPresetSettings(settings, presetSettings);
+        //let presetSettings = this.getPresetSettings(settings['Settings Preset'], prevSettings);
+        //this.setPresetSettings(settings, presetSettings);
 
         let areaJSON = merge(death_mountain_crater, death_mountain_trail, desert_colossus,
             gerudo_fortress, gerudo_valley, goron_city, graveyard, haunted_wasteland,
