@@ -398,6 +398,13 @@ const useStyles = (theme) => ({
         'font-family': 'Hylia Serif Beta',
         lineHeight: '1.43em',
     },
+    iconTradeText: {
+        position: 'absolute',
+        bottom: -8,
+        left: 24,
+        'font-family': 'Hylia Serif Beta',
+        lineHeight: '1.43em',
+    },
     iconContainer: {
         position: 'relative',
     },
@@ -471,6 +478,9 @@ const useStyles = (theme) => ({
         "& $iconKeyText": {
             color: '#FFFFFF',
         },
+        "& $iconTradeText": {
+            color: '#FFFFFF',
+        },
         "& $iconDiv": {
             padding: '8px',
             backgroundColor: grey[900],
@@ -485,7 +495,7 @@ const useStyles = (theme) => ({
         overflowX: 'auto',
         overflowY: 'auto',
         backgroundColor: grey[900],
-        width: '432px',
+        width: '528px',
     },
     itemMenuRow: {
         whiteSpace: 'nowrap',
@@ -494,7 +504,7 @@ const useStyles = (theme) => ({
             display: 'inline-block',
         },
         "& $itemMenuClear": {
-            width: '432px',
+            width: '528px',
         },
     },
     itemMenuClear: {
@@ -734,6 +744,9 @@ const useStyles = (theme) => ({
         display: 'flex',
         flexDirection: 'column',
         "& $iconKeyText": {
+            color: '#FFFFFF',
+        },
+        "& $iconTradeText": {
             color: '#FFFFFF',
         },
         "& $iconDiv": {
@@ -1084,7 +1097,7 @@ class Tracker extends React.Component {
                 eEntrance[rEntrance].lKey = ""
                 rEntrances = merge(rEntrances, eEntrance);
             }
-            if (allAreas.entrances[entrance].connector !== '') {
+            if (Array.isArray(allAreas.entrances[entrance].connector) || allAreas.entrances[entrance].connector !== '') {
                 eConnector = {};
                 eConnector[entrance] = clone(allAreas.entrances[entrance]);
                 oConnectors = merge(oConnectors, eConnector);
@@ -1097,11 +1110,14 @@ class Tracker extends React.Component {
 
     getShuffledTypes(settings) {
         let erSettings = [];
-        if (settings["Shuffle Interiors"] === "Simple" || settings["Shuffle Interiors"] === "All") {
+        if (settings["Shuffle Interiors"].includes("Simple")) {
             erSettings.push("interior");
         }
-        if (settings["Shuffle Interiors"] === "All") {
+        if (settings["Shuffle Interiors"].includes("Special")) {
             erSettings.push("specialInterior");
+        }
+        if (settings["Shuffle Interiors"].includes("Hideout")) {
+            erSettings.push("hideoutInterior");
         }
         if (settings["Shuffle Grottos"] === "On") {
             erSettings.push("grotto");
@@ -1168,7 +1184,7 @@ class Tracker extends React.Component {
                 if (!(areas.hasOwnProperty(eArea))) {
                     areas[eArea] = { show: allAreas[eArea].show, dungeon: internalDungeonEntrance, collapse: allAreas[eArea].collapse, entrances: {}, locations: {} };
                 }
-                if (settings["Decoupled Entrances"] === "Off" && entrance === "GV Lower Stream -> Lake Hylia") {
+                if (settings["Decoupled Entrances"] === "Off" && settings["Shuffle Valley/Lake"] === "Off" && entrance === "GV Lower Stream -> Lake Hylia") {
                     allAreas.entrances[entrance].shuffled = false;
                 }
                 eEntrance = {};
@@ -1256,7 +1272,7 @@ class Tracker extends React.Component {
                 }
                 entrances[eType][area].push(entrance);
             }
-            if (eType === "interior" || eType === "specialInterior" || eType === "grave" || eType === "grotto" || eType === "dungeon" || eType === "dungeonGanon" || eType === "boss") {
+            if (eType === "interior" || eType === "specialInterior" || eType === "hideoutInterior" || eType === "grave" || eType === "grotto" || eType === "dungeon" || eType === "dungeonGanon" || eType === "boss") {
                 if (!(entrances.hasOwnProperty(eType))) {
                     entrances[eType] = [];
                 }
@@ -1311,7 +1327,7 @@ class Tracker extends React.Component {
         Object.keys(allEntrances.overworld).forEach(area => {
             oOverworld[area] = (Object.filterOWEntrances(allAreas.entrances, (eType, eLink, eArea) => eType === "overworld" && eLink === "" && eArea === area));
         });
-        if (settings["Decoupled Entrances"] !== "On") {
+        if (settings["Decoupled Entrances"] !== "On" && settings["Shuffle Valley/Lake"] !== "On") {
             let iGV = oOverworld['Lake Hylia'].indexOf('GV Lower Stream -> Lake Hylia');
             if (iGV > -1) {
                 oOverworld['Lake Hylia'].splice(iGV, 1);
@@ -1329,15 +1345,21 @@ class Tracker extends React.Component {
         Object.keys(allEntrances.owldrop).forEach(area => {
             oOwlDrop[area] = (Object.filterOWEntrances(allAreas.entrances, (eType, eLink, eArea) => eType === "owldrop" && eLink === "" && eArea === area));
         });
+
         let oInteriors = {};
         let oReverseInteriors = {};
         let oDecoupledInteriors = {};
         let eInteriors = [];
-        eInteriors.push(...(Object.filterEntrances(allAreas.entrances, (eType, eLink, eReverse) => eType === "interior" && eLink === "" && eReverse === false)));
-        Object.keys(allEntrances.reverseinterior).forEach(area => {
-            oReverseInteriors[area] = (Object.filterReverseEntrances(allAreas.entrances, (eType, eLink, eArea, eReverse) => eType === "interior" && eLink === "" && eArea === area && eReverse === true));
-        });
-        if (settings["Shuffle Interiors"] === "All") {
+        if (settings["Shuffle Interiors"].includes("Simple")) {
+            eInteriors.push(...(Object.filterEntrances(allAreas.entrances, (eType, eLink, eReverse) => eType === "interior" && eLink === "" && eReverse === false)));
+            Object.keys(allEntrances.reverseinterior).forEach(area => {
+                if (!(oReverseInteriors.hasOwnProperty(area))) {
+                    oReverseInteriors[area] = [];
+                }
+                oReverseInteriors[area] = (Object.filterReverseEntrances(allAreas.entrances, (eType, eLink, eArea, eReverse) => eType === "interior" && eLink === "" && eArea === area && eReverse === true));
+            });
+        }
+        if (settings["Shuffle Interiors"].includes("Special")) {
             eInteriors.push(...(Object.filterEntrances(allAreas.entrances, (eType, eLink, eReverse) => eType === "specialInterior" && eLink === "" && eReverse === false)));
             Object.keys(allEntrances.reversespecialInterior).forEach(area => {
                 if (!(oReverseInteriors.hasOwnProperty(area))) {
@@ -1347,6 +1369,18 @@ class Tracker extends React.Component {
             });
         }
         oInteriors = { "Interiors": eInteriors };
+        let eHideout = [];
+        if (settings["Shuffle Interiors"].includes("Hideout")) {
+            eHideout.push(...(Object.filterEntrances(allAreas.entrances, (eType, eLink, eReverse) => eType === "hideoutInterior" && eLink === "" && eReverse === false)));
+            Object.keys(allEntrances.reversehideoutInterior).forEach(area => {
+                if (!(oReverseInteriors.hasOwnProperty(area))) {
+                    oReverseInteriors[area] = [];
+                }
+                oReverseInteriors[area].push(...(Object.filterReverseEntrances(allAreas.entrances, (eType, eLink, eArea, eReverse) => eType === "hideoutInterior" && eLink === "" && eArea === area && eReverse === true)));
+            });
+            oInteriors = merge(oInteriors, {"Hideout": eHideout });
+        }
+
         oDecoupledInteriors = merge(clone(oInteriors), clone(oReverseInteriors));
         let oDungeons = {};
         let oReverseDungeons = {};
@@ -1406,7 +1440,7 @@ class Tracker extends React.Component {
             }
             entrances = merge(entrances, {"overworld": oOverworld});
         }
-        if (settings["Shuffle Interiors"] === "Simple" || settings["Shuffle Interiors"] === "All") {
+        if (settings["Shuffle Interiors"].includes("Simple") || settings["Shuffle Interiors"].includes("Special") || settings["Shuffle Interiors"].includes("Hideout")) {
             if (settings["Mixed Pools"].includes("Interiors")) {
                 mixedpool = mergeWith(mixedpool, {"mixed": oInteriors, "mixed_reverse": oReverseInteriors, "mixed_decoupled": oDecoupledInteriors, "mixed_overworld": merge(clone(oInteriors), clone(oReverseInteriors))}, mergeAreas);
             }
@@ -1471,6 +1505,7 @@ class Tracker extends React.Component {
         let eInteriors = [];
         eInteriors.push(...((allEntrances.interior.filter(int => allAreas.entrances[int].isReverse === false))));
         eInteriors.push(...((allEntrances.specialInterior.filter(int => allAreas.entrances[int].isReverse === false))));
+        eInteriors.push(...((allEntrances.hideoutInterior.filter(int => allAreas.entrances[int].isReverse === false))));
         let oInteriors = { "Interiors": eInteriors };
 
         let eOverworldInteriors = {};
@@ -1486,10 +1521,16 @@ class Tracker extends React.Component {
             }
             eOverworldInteriors[area].push(...((allEntrances.reversespecialInterior[area])))
         });
+        Object.keys(allEntrances.reversehideoutInterior).forEach(area => {
+            if (!(Object.keys(eOverworldInteriors).includes(area))) {
+                eOverworldInteriors[area] = [];
+            }
+            eOverworldInteriors[area].push(...((allEntrances.reversehideoutInterior[area])))
+        });
 
         let eOverworldDungeons = {};
         if ((settings["Shuffle Dungeons"] === 'Dungeons' || settings["Shuffle Dungeons"] === 'Dungeons and Ganon') &&
-            (settings['Mixed Pools'] === 'On' || settings['Mixed Pools'] === 'Indoor')) {
+            (settings['Mixed Pools'].includes("Dungeons"))) {
             Object.keys(allEntrances.reversedungeon).forEach(area => {
                 if (!(Object.keys(eOverworldDungeons).includes(area))) {
                     eOverworldDungeons[area] = [];
@@ -1501,7 +1542,7 @@ class Tracker extends React.Component {
                     if (!(Object.keys(eOverworldDungeons).includes(area))) {
                         eOverworldDungeons[area] = [];
                     }
-                    eOverworldDungeons[area].push(...((allEntrances.reversedungeon[area])))
+                    eOverworldDungeons[area].push(...((allEntrances.reversedungeonGanon[area])))
                 });
             }
         }
@@ -1548,7 +1589,7 @@ class Tracker extends React.Component {
             } else {
                 tempAreas.entrances[entrance].shuffled = false;
             }
-            if (settings["Decoupled Entrances"] === "Off" && entrance === "GV Lower Stream -> Lake Hylia") {
+            if (settings["Decoupled Entrances"] === "Off" && settings["Shuffle Valley/Lake"] === "Off" && entrance === "GV Lower Stream -> Lake Hylia") {
                 tempAreas.entrances[entrance].shuffled = false;
             }
         });
@@ -1643,6 +1684,7 @@ class Tracker extends React.Component {
     findVisibleAreas(shownAreas, allAreas, entrances, settings=this.state.settings) {
         let alwaysOneWay = ["spawn","warpsong","owldrop","extra"];
         let decoupled = settings["Decoupled Entrances"] === "On";
+        let overworldOneWays = settings["Shuffle Valley/Lake"] === "On";
         Object.filterAreas = (entrances, predicate) =>
             Object.keys(entrances)
                 .filter( key => predicate(entrances[key].eLink, entrances[key].aLink, entrances[key].isReverse, entrances[key].oneWay, entrances[key].shuffled, entrances[key].type, key, entrances[key].oneWayArea, entrances[key].connector) );
@@ -1650,7 +1692,7 @@ class Tracker extends React.Component {
             let linkedTargetEntrances = (Object.filterAreas(shownAreas[targetArea].entrances, (eLink, aLink, isReverse, isOneWay, shuffled, lType, e, oneWayArea, connector) => (
                 /*(isOneWay && aLink !== "" && (lType !== "overworld" && lType !== "owldrop")) ||*/
                 (eLink !== "" && oneWayArea !== targetArea && (((isReverse === true) && shuffled === true) || lType === "overworld" || lType === "warpsong" || lType === "owldrop" || lType === "extra"))
-                && (e !== "GV Lower Stream -> Lake Hylia" || (e === "GV Lower Stream -> Lake Hylia" && decoupled))) ));
+                && (e !== "GV Lower Stream -> Lake Hylia" || (e === "GV Lower Stream -> Lake Hylia" && (decoupled || overworldOneWays)))) ));
             if (linkedTargetEntrances.length === 0 && !(entrances["oneWayAreas"].includes(targetArea))) {
                 shownAreas[targetArea].show = false;
                 allAreas[targetArea].show = false;
@@ -1683,7 +1725,7 @@ class Tracker extends React.Component {
                             shownAreas[allAreas.entrances[eLinked].area].show = true;
                             allAreas[allAreas.entrances[eLinked].area].show = true;
                             // Hard code Gerudo Valley to Lake with decoupled off, necessary for Lake Hylia owl warp to chain off valley visibility
-                            if (allAreas.entrances[eLinked].area === 'Gerudo Valley' && (settings['Decoupled Entrances'] === 'Off' || settings['Shuffle Overworld'] === 'Off')) {
+                            if (allAreas.entrances[eLinked].area === 'Gerudo Valley' && (!(decoupled || overworldOneWays) || settings['Shuffle Overworld'] === 'Off')) {
                                 shownAreas['Lake Hylia'].show = true;
                                 allAreas['Lake Hylia'].show = true;
                             }
@@ -1695,17 +1737,24 @@ class Tracker extends React.Component {
         // Another pass for connectors that link to or from unshuffled entrances
         let connectorOverride = [];
         Object.keys(allAreas.connectors).forEach(connector => {
-            let exit = allAreas.entrances[connector].connector
-            if (allAreas.entrances[connector].eLink !== '' && allAreas.entrances[exit].aLink !== '' &&
-               (((allAreas.entrances[connector].shuffled || allAreas.entrances[exit].shuffled) && (!decoupled || allAreas.entrances[allAreas.entrances[exit].aLink].isReverse)) || allAreas[allAreas.entrances[connector].area].show)) {
-                shownAreas[allAreas.entrances[allAreas.entrances[exit].aLink].area].show = true;
-                allAreas[allAreas.entrances[allAreas.entrances[exit].aLink].area].show = true;
-                connectorOverride.push(allAreas.entrances[allAreas.entrances[exit].aLink].area);
+            let connectorList;
+            if (Array.isArray(allAreas.entrances[connector].connector)) {
+                connectorList = allAreas.entrances[connector].connector;
+            } else {
+                connectorList = [allAreas.entrances[connector].connector];
             }
+            connectorList.forEach(exit => {
+                if (allAreas.entrances[connector].eLink !== '' && allAreas.entrances[exit].aLink !== '' &&
+                (((allAreas.entrances[connector].shuffled || allAreas.entrances[exit].shuffled) && (!decoupled || allAreas.entrances[allAreas.entrances[exit].aLink].isReverse)) || allAreas[allAreas.entrances[connector].area].show)) {
+                    shownAreas[allAreas.entrances[allAreas.entrances[exit].aLink].area].show = true;
+                    allAreas[allAreas.entrances[allAreas.entrances[exit].aLink].area].show = true;
+                    connectorOverride.push(allAreas.entrances[allAreas.entrances[exit].aLink].area);
+                }
+            })
         });
 
         // Hard code Gerudo Valley to Lake with decoupled off again, in case one-way entrance does not lead to Valley
-        if (shownAreas['Gerudo Valley'].show === true && (settings['Decoupled Entrances'] === 'Off' || settings['Shuffle Overworld'] === 'Off')) {
+        if (shownAreas['Gerudo Valley'].show === true && (!(decoupled || overworldOneWays) || settings['Shuffle Overworld'] === 'Off')) {
             shownAreas['Lake Hylia'].show = true;
             allAreas['Lake Hylia'].show = true;
         }
@@ -1719,6 +1768,13 @@ class Tracker extends React.Component {
         } else if (shownAreas['Lost Woods Bridge'].show === true) {
             shownAreas['Lost Woods'].show = true;
             allAreas['Lost Woods'].show = true;
+        }
+
+        // Hard code Colossus from Spirit Temple so that we don't have to add dummy
+        // unshuffled entrances to the hands
+        if (allAreas.entrances['Desert Colossus -> Spirit Temple Lobby'].eLink !== '') {
+            shownAreas['Desert Colossus'].show = true;
+            allAreas['Desert Colossus'].show = true;
         }
 
         // Filter areas with no visible entrances or locations
@@ -1735,7 +1791,7 @@ class Tracker extends React.Component {
                 // Special case for unshuffled spawn points with shuffled interiors all
                 // due to the connector implementation
                 if (((shownEntrances.length === 0 && ((settings["Show Locations"] === "Yes" && shownLocations.length !== 0) || settings["Show Locations"] !== "Yes")) ||
-                (targetArea === 'Spawn Points' && settings["Shuffle Spawn Points"] === "Off" && settings["Shuffle Interiors"] !== "All")) &&
+                (targetArea === 'Spawn Points' && settings["Shuffle Spawn Points"] === "Off" && !settings["Shuffle Interiors"].includes("Special"))) &&
                 !(connectorOverride.includes(targetArea))) {
                     shownAreas[targetArea].show = false;
                     allAreas[targetArea].show = false;

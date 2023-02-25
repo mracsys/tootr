@@ -106,8 +106,8 @@
             "alias": "Hut Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -124,8 +124,8 @@
             "alias": "Hut Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -142,8 +142,8 @@
             "alias": "Hut Pot 3",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -160,8 +160,8 @@
             "alias": "Before Quicksand Crate",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -178,8 +178,8 @@
             "alias": "After Quicksand Crate 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -196,8 +196,8 @@
             "alias": "After Quicksand Crate 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -214,8 +214,8 @@
             "alias": "After Quicksand Crate 3",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -232,8 +232,8 @@
             "alias": "Ghost Guide Crate",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",

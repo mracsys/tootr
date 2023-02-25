@@ -81,9 +81,11 @@ class LinkedEntrance extends React.Component {
     render() {
         let oEntrance = this.props.allAreas.entrances[this.props.entrance];
         let reverseLink = oEntrance.aLink;
-        let interiors = ['interior','specialInterior','grotto','grave','dungeon','dungeonGanon','boss','noBossShuffle'];
+        let interiors = ['interior','specialInterior','hideoutInterior','grotto','grave','dungeon','dungeonGanon','boss','noBossShuffle'];
         let oneWayTypes = ['spawn','warpsong','owldrop'];
         let otherEntrances = [];
+        let shopLocations = Object.keys(this.props.allEntrances[reverseLink].locations).filter((a) => ((this.props.allAreas.locations[a].visible === false) && this.props.allAreas.locations[a].merchant));
+        let internalLocations = Object.keys(this.props.allEntrances[reverseLink].locations).filter((l) => (this.props.allEntrances[reverseLink].locations[l].check === '' || this.props.allAreas[this.props.title].collapse === 'none'));
         if (this.props.connector === false || this.props.decoupled) {
             if ((interiors.includes(this.props.allAreas.entrances[reverseLink].type) &&
             (oneWayTypes.includes(oEntrance.type) || this.props.decoupled) &&
@@ -93,15 +95,25 @@ class LinkedEntrance extends React.Component {
                 otherEntrances.push({"entrance": this.props.allAreas.entrances[reverseLink].reverse,"ekey":"Reverse","connector": false});
                 this.props.renderedConnectors.push(this.props.allAreas.entrances[reverseLink].reverse);
             }
-            if ((this.props.allAreas.entrances[reverseLink].connector !== "" &&
-            this.props.allAreas.entrances[this.props.allAreas.entrances[reverseLink].connector].type !== 'overworld' &&
-            (this.props.allAreas.entrances[this.props.allAreas.entrances[reverseLink].connector].shuffled === true || 
-            this.props.allAreas.entrances[this.props.allAreas.entrances[reverseLink].connector].eLink === "" ||
-            (this.props.allAreas.entrances[this.props.allAreas.entrances[reverseLink].connector].area !== this.props.allAreas.entrances[reverseLink].area &&
-            !(oneWayTypes.includes(oEntrance.type))))) && !(this.props.renderedConnectors.includes(this.props.allAreas.entrances[reverseLink].connector))) {
-                otherEntrances.push({"entrance": this.props.allAreas.entrances[reverseLink].connector,"ekey":"ReverseConnector","connector": true});
-                this.props.renderedConnectors.push(this.props.allAreas.entrances[reverseLink].connector);
+            let connectorList = [];
+            if (!Array.isArray(this.props.allAreas.entrances[reverseLink].connector)) {
+                connectorList = [this.props.allAreas.entrances[reverseLink].connector];
+            } else {
+                connectorList = this.props.allAreas.entrances[reverseLink].connector;
             }
+            connectorList.forEach((connector) => {
+                if ((connector !== "" &&
+                this.props.allAreas.entrances[connector].type !== 'overworld' &&
+                (this.props.allAreas.entrances[connector].shuffled === true || 
+                this.props.allAreas.entrances[connector].eLink === "" ||
+                (this.props.allAreas.entrances[connector].area !== this.props.allAreas.entrances[reverseLink].area &&
+                !(oneWayTypes.includes(oEntrance.type))))) && !(this.props.renderedConnectors.includes(connector))) {
+                    otherEntrances.push({"entrance": connector,"ekey":"ReverseConnector","connector": true});
+                    this.props.renderedConnectors.push(connector);
+                    shopLocations = shopLocations.concat(Object.keys(this.props.allEntrances[this.props.allAreas.entrances[connector].reverse].locations).filter((a) => ((this.props.allAreas.locations[a].visible === false) && this.props.allAreas.locations[a].merchant)));
+                    internalLocations = internalLocations.concat(Object.keys(this.props.allEntrances[this.props.allAreas.entrances[connector].reverse].locations).filter((l) => (this.props.allEntrances[this.props.allAreas.entrances[connector].reverse].locations[l].check === '' || this.props.allAreas[this.props.title].collapse === 'none')))
+                }
+            });
         }
         return (
             <React.Fragment key={this.props.ekey}>
@@ -142,12 +154,12 @@ class LinkedEntrance extends React.Component {
                     }
                 </div>
                 {
-                    ((Object.keys(this.props.allEntrances[reverseLink].locations).filter((a) => ((this.props.allAreas.locations[a].visible === false) && this.props.allAreas.locations[a].merchant)).length > 0) && (this.props.showShops === true)) ?
+                    ((shopLocations.length > 0) && (this.props.showShops === true)) ?
                         <React.Fragment>
                             <div className={this.props.classes.shopContainer}>
                                 {
                                     /* Shop fixed items */
-                                    Object.keys(this.props.allEntrances[reverseLink].locations).filter((a) => ((this.props.allAreas.locations[a].visible === false) && this.props.allAreas.locations[a].merchant)).map((location, k) => {
+                                    shopLocations.map((location, k) => {
                                         return (
                                             <FixedShopCheck
                                                 key={this.props.entrance + 'shopfixedlocationcheck' + k}
@@ -177,7 +189,7 @@ class LinkedEntrance extends React.Component {
                 {
                     /* All other interior locations */
                     ((this.props.decoupled === false && !(oneWayTypes.includes(oEntrance.type))) || (this.props.decoupled)) ?
-                    Object.keys(this.props.allEntrances[reverseLink].locations).filter((l) => (this.props.allEntrances[reverseLink].locations[l].check === '' || this.props.allAreas[this.props.title].collapse === 'none')).map((location, k) => {
+                    internalLocations.map((location, k) => {
                         if (this.props.allAreas.entrances[reverseLink].type !== 'dungeon' && this.props.allAreas.entrances[reverseLink].type !== 'dungeonGanon' && this.props.allAreas.locations[location].visible === true) {
                             return (
                                 <LocationCheck

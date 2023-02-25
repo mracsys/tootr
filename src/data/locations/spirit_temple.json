@@ -31,8 +31,8 @@
             "alias": "Lobby Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Spirit Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -50,8 +50,8 @@
             "alias": "Lobby Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Spirit Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -69,8 +69,8 @@
             "alias": "Lobby Flying Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Spirit Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -88,8 +88,8 @@
             "alias": "Lobby Flying Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Spirit Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -122,8 +122,8 @@
             "alias": "Child Loop Flying Pot",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Spirit Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -141,8 +141,8 @@
             "alias": "Child Anubis Pot",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Spirit Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -299,8 +299,8 @@
             "alias": "Before Child Climb Small Crate 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
                 {"setting": "Spirit Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -318,8 +318,8 @@
             "alias": "Before Child Climb Small Crate 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
                 {"setting": "Spirit Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -337,8 +337,8 @@
             "alias": "Child Climb Pot",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Spirit Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -425,8 +425,8 @@
             "alias": "Statue Flying Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Spirit Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -444,8 +444,8 @@
             "alias": "Statue Flying Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Spirit Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -602,8 +602,8 @@
             "alias": "Child Knuckle Lobby Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Spirit Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -621,8 +621,8 @@
             "alias": "Child Knuckle Lobby Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Spirit Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -794,8 +794,8 @@
             "alias": "Adult Climb Flying Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Spirit Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -813,8 +813,8 @@
             "alias": "Adult Climb Flying Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Spirit Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -916,8 +916,8 @@
             "alias": "Adult Curving Hall Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Spirit Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -1048,8 +1048,8 @@
             "alias": "Boss Mirror Flying Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Spirit Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -1067,8 +1067,8 @@
             "alias": "Boss Mirror Flying Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Spirit Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -1086,8 +1086,8 @@
             "alias": "Boss Mirror Flying Pot 3",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Spirit Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -1105,8 +1105,8 @@
             "alias": "Boss Mirror Flying Pot 4",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Spirit Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -1124,8 +1124,8 @@
             "alias": "Boss Mirror Flying Pot 5",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Spirit Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -1143,8 +1143,8 @@
             "alias": "Boss Mirror Flying Pot 6",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Spirit Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -1162,8 +1162,8 @@
             "alias": "Lobby Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Spirit Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1181,8 +1181,8 @@
             "alias": "Lobby Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Spirit Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1200,8 +1200,8 @@
             "alias": "Lobby Pot 3",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Spirit Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1219,8 +1219,8 @@
             "alias": "Lobby Pot 4",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Spirit Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1338,8 +1338,8 @@
             "alias": "Child Torch Slug Pot",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Spirit Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1410,8 +1410,8 @@
             "alias": "Child Gibdo Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Spirit Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1429,8 +1429,8 @@
             "alias": "Child Gibdo Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Spirit Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1448,8 +1448,8 @@
             "alias": "Child Stalfos Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Spirit Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1467,8 +1467,8 @@
             "alias": "Child Stalfos Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Spirit Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1486,8 +1486,8 @@
             "alias": "Child Stalfos Pot 3",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Spirit Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1520,8 +1520,8 @@
             "alias": "Child Climb Pot",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Spirit Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1569,8 +1569,8 @@
             "alias": "Statue Floor Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Spirit Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1588,8 +1588,8 @@
             "alias": "Statue Floor Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Spirit Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1607,8 +1607,8 @@
             "alias": "Statue Floor Pot 3",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Spirit Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1626,8 +1626,8 @@
             "alias": "Statue Floor Crate 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
                 {"setting": "Spirit Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1645,8 +1645,8 @@
             "alias": "Statue Floor Crate 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
                 {"setting": "Spirit Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1709,8 +1709,8 @@
             "alias": "Sun Block Room Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Spirit Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1728,8 +1728,8 @@
             "alias": "Sun Block Room Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Spirit Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1816,8 +1816,8 @@
             "alias": "Central Room Ledge Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Spirit Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1835,8 +1835,8 @@
             "alias": "Central Room Ledge Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Spirit Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1854,8 +1854,8 @@
             "alias": "Adult Descent Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Spirit Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1873,8 +1873,8 @@
             "alias": "Adult Descent Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Spirit Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -2175,8 +2175,8 @@
             "alias": "Shifting Walls Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Spirit Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -2194,8 +2194,8 @@
             "alias": "Shifting Walls Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Spirit Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -2213,8 +2213,8 @@
             "alias": "Thrones Lobby Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Spirit Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -2232,8 +2232,8 @@
             "alias": "Thrones Lobby Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Spirit Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -2299,8 +2299,8 @@
             "alias": "Boss Mirror Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Spirit Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -2318,8 +2318,8 @@
             "alias": "Boss Mirror Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Spirit Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -2337,8 +2337,8 @@
             "alias": "Boss Mirror Pot 3",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Spirit Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -2356,8 +2356,8 @@
             "alias": "Boss Mirror Pot 4",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Spirit Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -2375,8 +2375,8 @@
             "alias": "Boss Mirror Crate 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
                 {"setting": "Spirit Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -2394,8 +2394,8 @@
             "alias": "Boss Mirror Crate 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
                 {"setting": "Spirit Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -2413,8 +2413,8 @@
             "alias": "Boss Mirror Crate 3",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
                 {"setting": "Spirit Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -2432,8 +2432,8 @@
             "alias": "Boss Mirror Crate 4",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
                 {"setting": "Spirit Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -2493,9 +2493,24 @@
         "Spirit Temple Twinrova Heart": {
             "area": "",
             "lKey": "Spirit Temple -> Twinrova",
-            "alias": "Twinrova",
+            "alias": "Twinrova Heart",
             "type": "item",
             "settings": [],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Twinrova Dungeon Reward": {
+            "area": "",
+            "lKey": "Spirit Temple -> Twinrova",
+            "alias": "Twinrova Blue Warp",
+            "type": "item",
+            "settings": [{"setting": "Shuffle Dungeon Rewards", "value": "On", "required": true}],
             "visible": true,
             "check": "",
             "foundItem": "",

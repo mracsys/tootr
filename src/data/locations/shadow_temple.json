@@ -31,8 +31,8 @@
             "alias": "Early Redead Lobby Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Shadow Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -50,8 +50,8 @@
             "alias": "Early Redead Lobby Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Shadow Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -84,8 +84,8 @@
             "alias": "Early Redead Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Shadow Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -103,8 +103,8 @@
             "alias": "Early Redead Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Shadow Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -122,8 +122,8 @@
             "alias": "Dead Hand Lobby Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Shadow Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -141,8 +141,8 @@
             "alias": "Dead Hand Lobby Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Shadow Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -160,8 +160,8 @@
             "alias": "Dead Hand Lobby Pot 3",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Shadow Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -179,8 +179,8 @@
             "alias": "Dead Hand Lobby Pot 4",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Shadow Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -198,8 +198,8 @@
             "alias": "Dead Hand Lobby Flying Pot",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Shadow Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -554,8 +554,8 @@
             "alias": "Falling Spikes Lower Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Shadow Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -573,8 +573,8 @@
             "alias": "Falling Spikes Lower Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Shadow Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -661,8 +661,8 @@
             "alias": "Falling Spikes Upper Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Shadow Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -680,8 +680,8 @@
             "alias": "Falling Spikes Upper Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Shadow Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -898,8 +898,8 @@
             "alias": "Late Gibdo Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Shadow Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -917,8 +917,8 @@
             "alias": "Late Gibdo Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Shadow Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -936,8 +936,8 @@
             "alias": "Late Gibdo Flying Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Shadow Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -955,8 +955,8 @@
             "alias": "Late Gibdo Flying Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Shadow Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -1066,8 +1066,8 @@
             "alias": "Flammable Walls Pot",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Shadow Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -1295,8 +1295,8 @@
             "alias": "Floormaster Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Shadow Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -1314,8 +1314,8 @@
             "alias": "Floormaster Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Shadow Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -1390,8 +1390,8 @@
             "alias": "Fallen Pillar Pot",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Shadow Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -1409,8 +1409,8 @@
             "alias": "Boss Lobby Entrance Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Shadow Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -1428,8 +1428,8 @@
             "alias": "Boss Lobby Entrance Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Shadow Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -1447,8 +1447,8 @@
             "alias": "Entrance Small Crate 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
                 {"setting": "Shadow Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1466,8 +1466,8 @@
             "alias": "Entrance Small Crate 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
                 {"setting": "Shadow Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1485,8 +1485,8 @@
             "alias": "Entrance Small Crate 3",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
                 {"setting": "Shadow Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1504,8 +1504,8 @@
             "alias": "Entrance Small Crate 4",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
                 {"setting": "Shadow Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1668,8 +1668,8 @@
             "alias": "Early Redead Lobby Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Shadow Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1687,8 +1687,8 @@
             "alias": "Early Redead Lobby Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Shadow Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1721,8 +1721,8 @@
             "alias": "Early Redead Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Shadow Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1740,8 +1740,8 @@
             "alias": "Early Redead Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Shadow Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1759,8 +1759,8 @@
             "alias": "Dead Hand 1 Lobby Flying Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Shadow Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1778,8 +1778,8 @@
             "alias": "Dead Hand 1 Lobby Flying Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Shadow Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1797,8 +1797,8 @@
             "alias": "Dead Hand 1 Lobby Flying Pot 3",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Shadow Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1816,8 +1816,8 @@
             "alias": "Dead Hand 1 Lobby Flying Pot 4",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Shadow Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -2233,8 +2233,8 @@
             "alias": "Falling Spikes Lower Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Shadow Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -2252,8 +2252,8 @@
             "alias": "Falling Spikes Lower Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Shadow Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -2340,8 +2340,8 @@
             "alias": "Falling Spikes Upper Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Shadow Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -2359,8 +2359,8 @@
             "alias": "Falling Spikes Upper Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Shadow Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -2701,8 +2701,8 @@
             "alias": "Late Gibdo Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Shadow Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -2720,8 +2720,8 @@
             "alias": "Late Gibdo Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Shadow Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -2739,8 +2739,8 @@
             "alias": "Late Gibdo Flying Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Shadow Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -2758,8 +2758,8 @@
             "alias": "Late Gibdo Flying Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Shadow Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -2869,8 +2869,8 @@
             "alias": "Flammable Walls Pot",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Shadow Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -3089,8 +3089,8 @@
             "alias": "Dead Hand 2 Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Shadow Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -3108,8 +3108,8 @@
             "alias": "Dead Hand 2 Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Shadow Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -3184,8 +3184,8 @@
             "alias": "Fallen Pillar Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Shadow Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -3203,8 +3203,8 @@
             "alias": "Fallen Pillar Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Shadow Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -3222,8 +3222,8 @@
             "alias": "Boss Lobby Entrance Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Shadow Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -3241,8 +3241,8 @@
             "alias": "Boss Lobby Entrance Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Shadow Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -3281,9 +3281,24 @@
         "Shadow Temple Bongo Bongo Heart": {
             "area": "",
             "lKey": "Shadow Temple -> Bongo Bongo",
-            "alias": "Bongo Bongo",
+            "alias": "Bongo Bongo Heart",
             "type": "item",
             "settings": [],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple Bongo Bongo Dungeon Reward": {
+            "area": "",
+            "lKey": "Shadow Temple -> Bongo Bongo",
+            "alias": "Bongo Bongo Blue Warp",
+            "type": "item",
+            "settings": [{"setting": "Shuffle Dungeon Rewards", "value": "On", "required": true}],
             "visible": true,
             "check": "",
             "foundItem": "",

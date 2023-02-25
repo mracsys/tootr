@@ -611,8 +611,8 @@
             "alias": "Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -629,8 +629,8 @@
             "alias": "Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -647,8 +647,8 @@
             "alias": "Pot 3",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -665,8 +665,8 @@
             "alias": "Pot 4",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",

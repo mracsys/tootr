@@ -641,8 +641,8 @@
             "alias": "Darunia Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -659,8 +659,8 @@
             "alias": "Darunia Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -677,8 +677,8 @@
             "alias": "Darunia Pot 3",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -695,8 +695,8 @@
             "alias": "Medigoron Pot",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -713,8 +713,8 @@
             "alias": "Staircase Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -731,8 +731,8 @@
             "alias": "Staircase Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -749,8 +749,8 @@
             "alias": "Staircase Pot 3",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -767,8 +767,8 @@
             "alias": "Staircase Pot 4",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -785,8 +785,8 @@
             "alias": "Staircase Pot 5",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -803,8 +803,8 @@
             "alias": "Boulder Maze Crate",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",

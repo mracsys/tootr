@@ -430,6 +430,21 @@
             "shuffled": true,
             "shuffleRules": []
         },
+        "Kak Anju Cojiro": {
+            "area": "Kakariko Village",
+            "lKey": "",
+            "alias": "Anju Trade for Pocket Cucco",
+            "type": "item",
+            "settings": [{"setting": "Shuffle Adult Trade", "value": "On", "required": true}],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
         "Kak Impas House Freestanding PoH": {
             "area": "",
             "lKey": "Kak Impas Ledge -> Kak Impas House Back",
@@ -1018,6 +1033,36 @@
             "shuffled": true,
             "shuffleRules": []
         },
+        "Kak Grannys Potion Shop": {
+            "area": "",
+            "lKey": "Kak Backyard -> Kak Odd Medicine Building",
+            "alias": "Granny Shop Item",
+            "type": "item",
+            "settings": [{"setting": "Shuffle Merchants", "value": "On", "required": true}],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Kak Granny Trade Item": {
+            "area": "",
+            "lKey": "Kak Backyard -> Kak Odd Medicine Building",
+            "alias": "Granny Trade for Odd Mushroom",
+            "type": "item",
+            "settings": [{"setting": "Shuffle Adult Trade", "value": "On", "required": true}],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
         "Kak Open Grotto Beehive 1": {
             "area": "",
             "lKey": "Kak Backyard -> Kak Open Grotto",
@@ -1054,8 +1099,8 @@
             "alias": "Near Potion Shop Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -1072,8 +1117,8 @@
             "alias": "Near Potion Shop Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -1090,8 +1135,8 @@
             "alias": "Near Potion Shop Pot 3",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -1108,8 +1153,8 @@
             "alias": "Near Impa's House Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -1126,8 +1171,8 @@
             "alias": "Near Impa's House Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -1144,8 +1189,8 @@
             "alias": "Near Impa's House Pot 3",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -1162,8 +1207,8 @@
             "alias": "Near Bazaar Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -1180,8 +1225,8 @@
             "alias": "Near Bazaar Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -1198,8 +1243,8 @@
             "alias": "Near Bazaar Pot 3",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -1216,8 +1261,8 @@
             "alias": "Near Granny Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -1234,8 +1279,8 @@
             "alias": "Near Granny Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -1252,8 +1297,8 @@
             "alias": "Adult Near Grotto Crate",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -1270,8 +1315,8 @@
             "alias": "Adult Near Shooting Gallery Crate",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",

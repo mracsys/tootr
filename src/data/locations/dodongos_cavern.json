@@ -90,8 +90,8 @@
             "alias": "Lower Right Side Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -109,8 +109,8 @@
             "alias": "Lower Right Side Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -128,8 +128,8 @@
             "alias": "Lower Right Side Pot 3",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -147,8 +147,8 @@
             "alias": "Lower Right Side Pot 4",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -166,8 +166,8 @@
             "alias": "Lower Right Side Pot 5",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -185,8 +185,8 @@
             "alias": "Lower Right Side Pot 6",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -246,8 +246,8 @@
             "alias": "Early Lizalfos Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -265,8 +265,8 @@
             "alias": "Early Lizalfos Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -284,8 +284,8 @@
             "alias": "Early Lizalfos Pot 3",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -303,8 +303,8 @@
             "alias": "Early Lizalfos Pot 4",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -342,8 +342,8 @@
             "alias": "Torch Hallway Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -361,8 +361,8 @@
             "alias": "Torch Hallway Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -380,8 +380,8 @@
             "alias": "Torch Hallway Pot 3",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -399,8 +399,8 @@
             "alias": "Torch Hallway Pot 4",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -433,8 +433,8 @@
             "alias": "Staircase Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -452,8 +452,8 @@
             "alias": "Staircase Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -471,8 +471,8 @@
             "alias": "Staircase Pot 3",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -490,8 +490,8 @@
             "alias": "Staircase Pot 4",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -591,8 +591,8 @@
             "alias": "Blade Room Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -610,8 +610,8 @@
             "alias": "Blade Room Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -629,8 +629,8 @@
             "alias": "Late Lizalfos Lobby Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -648,8 +648,8 @@
             "alias": "Late Lizalfos Lobby Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -705,8 +705,8 @@
             "alias": "Late Lizalfos Exit Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -724,8 +724,8 @@
             "alias": "Late Lizalfos Exit Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -837,8 +837,8 @@
             "alias": "Boss Lobby Block Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -856,8 +856,8 @@
             "alias": "Boss Lobby Block Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -875,8 +875,8 @@
             "alias": "Boss Lobby Block Pot 3",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -964,8 +964,8 @@
             "alias": "Lower Right Side Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -983,8 +983,8 @@
             "alias": "Lower Right Side Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1022,8 +1022,8 @@
             "alias": "Lower Right Side Pot 3",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1041,8 +1041,8 @@
             "alias": "Lower Right Side Pot 4",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1060,8 +1060,8 @@
             "alias": "Poe Hallway Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1079,8 +1079,8 @@
             "alias": "Poe Hallway Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1098,8 +1098,8 @@
             "alias": "Poe Hallway Pot 3",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1117,8 +1117,8 @@
             "alias": "Poe Hallway Pot 4",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1136,8 +1136,8 @@
             "alias": "Poe Hallway Crate 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1155,8 +1155,8 @@
             "alias": "Poe Hallway Crate 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1174,8 +1174,8 @@
             "alias": "Poe Hallway Crate 3",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1193,8 +1193,8 @@
             "alias": "Poe Hallway Crate 4",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1212,8 +1212,8 @@
             "alias": "Poe Hallway Crate 5",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1231,8 +1231,8 @@
             "alias": "Poe Hallway Crate 6",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1250,8 +1250,8 @@
             "alias": "Poe Hallway Crate 7",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1269,8 +1269,8 @@
             "alias": "Poe Hallway Crate 8",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1312,8 +1312,8 @@
             "alias": "Torch Puzzle Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1331,8 +1331,8 @@
             "alias": "Torch Puzzle Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1423,8 +1423,8 @@
             "alias": "Larvae Room Crate 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1442,8 +1442,8 @@
             "alias": "Larvae Room Crate 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1461,8 +1461,8 @@
             "alias": "Larvae Room Crate 3",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1480,8 +1480,8 @@
             "alias": "Larvae Room Crate 4",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1499,8 +1499,8 @@
             "alias": "Larvae Room Crate 5",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1518,8 +1518,8 @@
             "alias": "Larvae Room Crate 6",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1537,8 +1537,8 @@
             "alias": "Upper Lizalfos Exit Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1556,8 +1556,8 @@
             "alias": "Upper Lizalfos Exit Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1575,8 +1575,8 @@
             "alias": "Upper Lizalfos Exit Crate 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1594,8 +1594,8 @@
             "alias": "Upper Lizalfos Exit Crate 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1613,8 +1613,8 @@
             "alias": "Upper Lizalfos Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1632,8 +1632,8 @@
             "alias": "Upper Lizalfos Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1651,8 +1651,8 @@
             "alias": "Upper Lizalfos Pot 3",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1670,8 +1670,8 @@
             "alias": "Upper Lizalfos Pot 4",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1713,8 +1713,8 @@
             "alias": "Upper Lizalfos Lobby Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1732,8 +1732,8 @@
             "alias": "Upper Lizalfos Lobby Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1866,8 +1866,8 @@
             "alias": "Staircase Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1885,8 +1885,8 @@
             "alias": "Staircase Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1904,8 +1904,8 @@
             "alias": "Staircase Pot 3",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1923,8 +1923,8 @@
             "alias": "Staircase Pot 4",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1942,8 +1942,8 @@
             "alias": "Staircase Crate 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1961,8 +1961,8 @@
             "alias": "Staircase Crate 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1980,8 +1980,8 @@
             "alias": "Staircase Crate 3",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1999,8 +1999,8 @@
             "alias": "Staircase Crate 4",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -2018,8 +2018,8 @@
             "alias": "Staircase Crate 5",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -2037,8 +2037,8 @@
             "alias": "Staircase Crate 6",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -2100,8 +2100,8 @@
             "alias": "Boss Lobby Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -2119,8 +2119,8 @@
             "alias": "Boss Lobby Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -2138,8 +2138,8 @@
             "alias": "Armos Room Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -2157,8 +2157,8 @@
             "alias": "Armos Room Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -2176,8 +2176,8 @@
             "alias": "Armos Room Pot 3",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -2234,8 +2234,8 @@
             "alias": "Near Grave Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -2253,8 +2253,8 @@
             "alias": "Near Grave Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -2284,9 +2284,24 @@
         "Dodongos Cavern King Dodongo Heart": {
             "area": "",
             "lKey": "Dodongos Cavern -> King Dodongo",
-            "alias": "King Dodongo",
+            "alias": "King Dodongo Heart",
             "type": "item",
             "settings": [],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern King Dodongo Dungeon Reward": {
+            "area": "",
+            "lKey": "Dodongos Cavern -> King Dodongo",
+            "alias": "King Dodongo Blue Warp",
+            "type": "item",
+            "settings": [{"setting": "Shuffle Dungeon Rewards", "value": "On", "required": true}],
             "visible": true,
             "check": "",
             "foundItem": "",

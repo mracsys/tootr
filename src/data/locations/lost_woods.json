@@ -269,6 +269,36 @@
             "shuffled": true,
             "shuffleRules": []
         },
+        "LW Grog Trade Item": {
+            "area": "Lost Woods",
+            "lKey": "",
+            "alias": "Grog Trade for Cojiro",
+            "type": "item",
+            "settings": [{"setting": "Shuffle Adult Trade", "value": "On", "required": true}],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "LW Fado Trade Item": {
+            "area": "Lost Woods",
+            "lKey": "",
+            "alias": "Fado Trade for Odd Potion",
+            "type": "item",
+            "settings": [{"setting": "Shuffle Adult Trade", "value": "On", "required": true}],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
         "LW Deku Scrub Near Bridge": {
             "area": "Lost Woods",
             "lKey": "",

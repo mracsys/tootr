@@ -91,12 +91,327 @@
             "oneWayELink": "",
             "userOneWayELink": "",
             "shuffled": true
+        },
+        "Gerudo Fortress -> Hideout 1 Torch Jail Angled": {
+            "area": "Gerudo Fortress",
+            "reverse": "Hideout 1 Torch Jail Angled -> Gerudo Fortress",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "Hideout 1 Torch Jail Straight -> GF Entrances Behind Crates",
+            "isReverse": false,
+            "alias": "1F North",
+            "reverseAlias": "from 1F Far North",
+            "tag": "1 Torch Jail Angled",
+            "tagRep": true,
+            "tagRules": [],
+            "enableTag": true,
+            "type": "hideoutInterior",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": false
+        },
+        "GF Entrances Behind Crates -> Hideout 1 Torch Jail Straight": {
+            "area": "Gerudo Fortress",
+            "reverse": "Hideout 1 Torch Jail Straight -> GF Entrances Behind Crates",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "Hideout 1 Torch Jail Angled -> Gerudo Fortress",
+            "isReverse": false,
+            "alias": "1F Crates North",
+            "reverseAlias": "from 1F Crates North",
+            "tag": "1 Torch Jail Straight",
+            "tagRep": true,
+            "tagRules": [],
+            "enableTag": true,
+            "type": "hideoutInterior",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": false
+        },
+        "GF Lower Vines -> Hideout 4 Torch Jail U Tunnel": {
+            "area": "Gerudo Fortress",
+            "reverse": "Hideout 4 Torch Jail U Tunnel -> GF Lower Vines",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "Hideout 4 Torch Jail L Tunnel -> Gerudo Fortress by GTG",
+            "isReverse": false,
+            "alias": "1F Near Toll Gate",
+            "reverseAlias": "from 1F Near Toll Gate",
+            "tag": "4 Torch Jail U Tunnel",
+            "tagRep": true,
+            "tagRules": [],
+            "enableTag": true,
+            "type": "hideoutInterior",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": false
+        },
+        "Gerudo Fortress by GTG -> Hideout 4 Torch Jail L Tunnel": {
+            "area": "Gerudo Fortress",
+            "reverse": "Hideout 4 Torch Jail L Tunnel -> Gerudo Fortress by GTG",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "Hideout 4 Torch Jail U Tunnel -> GF Lower Vines",
+            "isReverse": false,
+            "alias": "2F North Vines",
+            "reverseAlias": "from 2F North Vines",
+            "tag": "4 Torch Jail L Tunnel",
+            "tagRep": true,
+            "tagRules": [],
+            "enableTag": true,
+            "type": "hideoutInterior",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": false
+        },
+        "GF Entrances Behind Crates -> Hideout Kitchen Hallway Lower": {
+            "area": "Gerudo Fortress",
+            "reverse": "Hideout Kitchen Hallway Lower -> GF Entrances Behind Crates",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": [
+                "Hideout Kitchen Hallway Upper -> GF Entrances Behind Crates",
+                "Hideout Kitchen Upper Left -> GF Upper Vines",
+                "Hideout Kitchen Upper Right -> GF Rooftop"
+            ],
+            "isReverse": false,
+            "alias": "1F Crates East",
+            "reverseAlias": "from 1F Crates East",
+            "tag": "Kitchen Hallway Lower",
+            "tagRep": true,
+            "tagRules": [],
+            "enableTag": true,
+            "type": "hideoutInterior",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": false
+        },
+        "GF Entrances Behind Crates -> Hideout Kitchen Hallway Upper": {
+            "area": "Gerudo Fortress",
+            "reverse": "Hideout Kitchen Hallway Upper -> GF Entrances Behind Crates",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": [
+                "Hideout Kitchen Hallway Lower -> GF Entrances Behind Crates",
+                "Hideout Kitchen Upper Left -> GF Upper Vines",
+                "Hideout Kitchen Upper Right -> GF Rooftop"
+            ],
+            "isReverse": false,
+            "alias": "2F East Vines",
+            "reverseAlias": "from 2F East Vines",
+            "tag": "Kitchen Hallway Upper",
+            "tagRep": true,
+            "tagRules": [],
+            "enableTag": true,
+            "type": "hideoutInterior",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": false
+        },
+        "GF Upper Vines -> Hideout Kitchen Upper Left": {
+            "area": "Gerudo Fortress",
+            "reverse": "Hideout Kitchen Upper Left -> GF Upper Vines",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": [
+                "Hideout Kitchen Hallway Lower -> GF Entrances Behind Crates",
+                "Hideout Kitchen Hallway Upper -> GF Entrances Behind Crates",
+                "Hideout Kitchen Upper Right -> GF Rooftop"
+            ],
+            "isReverse": false,
+            "alias": "3F East Vines",
+            "reverseAlias": "from 3F East Vines",
+            "tag": "Kitchen Upper Left",
+            "tagRep": true,
+            "tagRules": [],
+            "enableTag": true,
+            "type": "hideoutInterior",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": false
+        },
+        "GF Rooftop -> Hideout Kitchen Upper Right": {
+            "area": "Gerudo Fortress",
+            "reverse": "Hideout Kitchen Upper Right -> GF Rooftop",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": [
+                "Hideout Kitchen Hallway Lower -> GF Entrances Behind Crates",
+                "Hideout Kitchen Hallway Upper -> GF Entrances Behind Crates",
+                "Hideout Kitchen Upper Left -> GF Upper Vines"
+            ],
+            "isReverse": false,
+            "alias": "3F East Roof",
+            "reverseAlias": "from 3F East Roof",
+            "tag": "Kitchen Upper Right",
+            "tagRep": true,
+            "tagRules": [],
+            "enableTag": true,
+            "type": "hideoutInterior",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": false
+        },
+        "GF Upper Vines -> Hideout 2 Torch Jail Upper": {
+            "area": "Gerudo Fortress",
+            "reverse": "Hideout 2 Torch Jail Upper -> GF Upper Vines",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "Hideout 2 Torch Jail Lower -> GF Above Dungeon",
+            "isReverse": false,
+            "alias": "3F South Vines",
+            "reverseAlias": "from 3F South Vines",
+            "tag": "2 Torch Jail Upper",
+            "tagRep": true,
+            "tagRules": [],
+            "enableTag": true,
+            "type": "hideoutInterior",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": false
+        },
+        "GF Above Dungeon -> Hideout 2 Torch Jail Lower": {
+            "area": "Gerudo Fortress",
+            "reverse": "Hideout 2 Torch Jail Lower -> GF Above Dungeon",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "Hideout 2 Torch Jail Upper -> GF Upper Vines",
+            "isReverse": false,
+            "alias": "2F Above Toll Gate",
+            "reverseAlias": "from 2F Above Toll Gate",
+            "tag": "2 Torch Jail Lower",
+            "tagRep": true,
+            "tagRules": [],
+            "enableTag": true,
+            "type": "hideoutInterior",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": false
+        },
+        "GF Rooftop -> Hideout 3 Torch Jail": {
+            "area": "Gerudo Fortress",
+            "reverse": "Hideout 3 Torch Jail -> GF Rooftop",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "",
+            "isReverse": false,
+            "alias": "3F North Roof",
+            "reverseAlias": "from 3F North Roof",
+            "tag": "3 Torch Jail",
+            "tagRep": true,
+            "tagRules": [],
+            "enableTag": true,
+            "type": "hideoutInterior",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": false
+        },
+        "GF North Roof -> Hideout Break Room Lower": {
+            "area": "Gerudo Fortress",
+            "reverse": "Hideout Break Room Lower -> GF North Roof",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "Hideout Break Room Upper -> GF Jail Roof",
+            "isReverse": false,
+            "alias": "2F Far North",
+            "reverseAlias": "from 2F Far North",
+            "tag": "Break Room Lower",
+            "tagRep": true,
+            "tagRules": [],
+            "enableTag": true,
+            "type": "hideoutInterior",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": false
+        },
+        "GF Jail Roof -> Hideout Break Room Upper": {
+            "area": "Gerudo Fortress",
+            "reverse": "Hideout Break Room Upper -> GF Jail Roof",
+            "oneWay": false,
+            "oneWayArea": "",
+            "connector": "Hideout Break Room Lower -> GF North Roof",
+            "isReverse": false,
+            "alias": "Jail Roof",
+            "reverseAlias": "from Jail Roof",
+            "tag": "Break Room Upper",
+            "tagRep": true,
+            "tagRules": [],
+            "enableTag": true,
+            "type": "hideoutInterior",
+            "lKey": "",
+            "aLink": "",
+            "userALink": "",
+            "eLink": "",
+            "userELink": "",
+            "oneWayELink": "",
+            "userOneWayELink": "",
+            "shuffled": false
         }
     },
     "locations": {
         "GF North F2 Carpenter": {
-            "area": "Gerudo Fortress",
-            "lKey": "",
+            "area": "",
+            "lKey": "GF Lower Vines -> Hideout 4 Torch Jail U Tunnel",
             "alias": "Ichiro's Key",
             "type": "key",
             "settings": [{"setting": "Gerudo Fortress", "value": "4 Carpenters", "required": true}],
@@ -110,8 +425,8 @@
             "shuffleRules": []
         },
         "GF South F1 Carpenter": {
-            "area": "Gerudo Fortress",
-            "lKey": "",
+            "area": "",
+            "lKey": "GF Above Dungeon -> Hideout 2 Torch Jail Lower",
             "alias": "Jiro's Key",
             "type": "key",
             "settings": [{"setting": "Gerudo Fortress", "value": "4 Carpenters", "required": true}],
@@ -125,8 +440,8 @@
             "shuffleRules": []
         },
         "GF South F2 Carpenter": {
-            "area": "Gerudo Fortress",
-            "lKey": "",
+            "area": "",
+            "lKey": "GF Rooftop -> Hideout 3 Torch Jail",
             "alias": "Sabooru's Key",
             "type": "key",
             "settings": [{"setting": "Gerudo Fortress", "value": "4 Carpenters", "required": true}],
@@ -140,8 +455,8 @@
             "shuffleRules": []
         },
         "GF North F1 Carpenter": {
-            "area": "Gerudo Fortress",
-            "lKey": "",
+            "area": "",
+            "lKey": "Gerudo Fortress -> Hideout 1 Torch Jail Angled",
             "alias": "Shiro's Key",
             "type": "key",
             "settings": [
@@ -158,8 +473,8 @@
             "shuffleRules": []
         },
         "GF Gerudo Membership Card": {
-            "area": "Gerudo Fortress",
-            "lKey": "",
+            "area": "",
+            "lKey": "Gerudo Fortress -> Hideout 1 Torch Jail Angled",
             "alias": "Gerudo Membership Card",
             "type": "item",
             "settings": [
@@ -271,8 +586,8 @@
             "alias": "Top of Jail Crate",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -284,13 +599,13 @@
             "shuffleRules": []
         },
         "Hideout Break Room Pot 1": {
-            "area": "Gerudo Fortress",
-            "lKey": "",
-            "alias": "Break Room Pot 1",
+            "area": "",
+            "lKey": "GF North Roof -> Hideout Break Room Lower",
+            "alias": "Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -302,13 +617,13 @@
             "shuffleRules": []
         },
         "Hideout Break Room Pot 2": {
-            "area": "Gerudo Fortress",
-            "lKey": "",
-            "alias": "Break Room Pot 2",
+            "area": "",
+            "lKey": "GF North Roof -> Hideout Break Room Lower",
+            "alias": "Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -320,13 +635,13 @@
             "shuffleRules": []
         },
         "Hideout Break Room Crate 1": {
-            "area": "Gerudo Fortress",
-            "lKey": "",
-            "alias": "Break Room Crate 1",
+            "area": "",
+            "lKey": "GF North Roof -> Hideout Break Room Lower",
+            "alias": "Crate 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -338,13 +653,13 @@
             "shuffleRules": []
         },
         "Hideout Break Room Crate 2": {
-            "area": "Gerudo Fortress",
-            "lKey": "",
-            "alias": "Break Room Crate 2",
+            "area": "",
+            "lKey": "GF North Roof -> Hideout Break Room Lower",
+            "alias": "Crate 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -356,13 +671,13 @@
             "shuffleRules": []
         },
         "Hideout Break Room Crate 3": {
-            "area": "Gerudo Fortress",
-            "lKey": "",
-            "alias": "Break Room Crate 3",
+            "area": "",
+            "lKey": "GF North Roof -> Hideout Break Room Lower",
+            "alias": "Crate 3",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -374,13 +689,13 @@
             "shuffleRules": []
         },
         "Hideout Break Room Crate 4": {
-            "area": "Gerudo Fortress",
-            "lKey": "",
-            "alias": "Break Room Crate 4",
+            "area": "",
+            "lKey": "GF North Roof -> Hideout Break Room Lower",
+            "alias": "Crate 4",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -392,13 +707,13 @@
             "shuffleRules": []
         },
         "Hideout 1 Torch Jail Pot 1": {
-            "area": "Gerudo Fortress",
-            "lKey": "",
-            "alias": "Bottom Left Cell Pot 1",
+            "area": "",
+            "lKey": "Gerudo Fortress -> Hideout 1 Torch Jail Angled",
+            "alias": "Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -410,13 +725,13 @@
             "shuffleRules": []
         },
         "Hideout 1 Torch Jail Pot 2": {
-            "area": "Gerudo Fortress",
-            "lKey": "",
-            "alias": "Bottom Left Cell Pot 2",
+            "area": "",
+            "lKey": "Gerudo Fortress -> Hideout 1 Torch Jail Angled",
+            "alias": "Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -428,13 +743,13 @@
             "shuffleRules": []
         },
         "Hideout 1 Torch Jail Pot 3": {
-            "area": "Gerudo Fortress",
-            "lKey": "",
-            "alias": "Bottom Left Cell Pot 3",
+            "area": "",
+            "lKey": "Gerudo Fortress -> Hideout 1 Torch Jail Angled",
+            "alias": "Pot 3",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -446,13 +761,13 @@
             "shuffleRules": []
         },
         "Hideout 1 Torch Jail Crate": {
-            "area": "Gerudo Fortress",
-            "lKey": "",
-            "alias": "Bottom Left Cell Crate",
+            "area": "",
+            "lKey": "Gerudo Fortress -> Hideout 1 Torch Jail Angled",
+            "alias": "Crate",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -464,13 +779,13 @@
             "shuffleRules": []
         },
         "Hideout Kitchen Pot 1": {
-            "area": "Gerudo Fortress",
-            "lKey": "",
-            "alias": "Kitchen Pot 1",
+            "area": "",
+            "lKey": "GF Entrances Behind Crates -> Hideout Kitchen Hallway Lower",
+            "alias": "Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -482,13 +797,13 @@
             "shuffleRules": []
         },
         "Hideout Kitchen Pot 2": {
-            "area": "Gerudo Fortress",
-            "lKey": "",
-            "alias": "Kitchen Pot 2",
+            "area": "",
+            "lKey": "GF Entrances Behind Crates -> Hideout Kitchen Hallway Lower",
+            "alias": "Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -500,13 +815,13 @@
             "shuffleRules": []
         },
         "Hideout Near Kitchen Crate 1": {
-            "area": "Gerudo Fortress",
-            "lKey": "",
-            "alias": "Kitchen Crate 1",
+            "area": "",
+            "lKey": "GF Entrances Behind Crates -> Hideout Kitchen Hallway Lower",
+            "alias": "Crate 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -518,13 +833,13 @@
             "shuffleRules": []
         },
         "Hideout Near Kitchen Crate 2": {
-            "area": "Gerudo Fortress",
-            "lKey": "",
-            "alias": "Kitchen Crate 2",
+            "area": "",
+            "lKey": "GF Entrances Behind Crates -> Hideout Kitchen Hallway Lower",
+            "alias": "Crate 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -536,13 +851,13 @@
             "shuffleRules": []
         },
         "Hideout Near Kitchen Crate 3": {
-            "area": "Gerudo Fortress",
-            "lKey": "",
-            "alias": "Kitchen Crate 3",
+            "area": "",
+            "lKey": "GF Entrances Behind Crates -> Hideout Kitchen Hallway Lower",
+            "alias": "Crate 3",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -554,13 +869,13 @@
             "shuffleRules": []
         },
         "Hideout Near Kitchen Crate 4": {
-            "area": "Gerudo Fortress",
-            "lKey": "",
-            "alias": "Kitchen Crate 4",
+            "area": "",
+            "lKey": "GF Entrances Behind Crates -> Hideout Kitchen Hallway Lower",
+            "alias": "Crate 4",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -572,13 +887,13 @@
             "shuffleRules": []
         },
         "Hideout Near Kitchen Crate 5": {
-            "area": "Gerudo Fortress",
-            "lKey": "",
-            "alias": "Kitchen Crate 5",
+            "area": "",
+            "lKey": "GF Entrances Behind Crates -> Hideout Kitchen Hallway Lower",
+            "alias": "Crate 5",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -590,13 +905,13 @@
             "shuffleRules": []
         },
         "Hideout 4 Torch Jail Pot 1": {
-            "area": "Gerudo Fortress",
-            "lKey": "",
-            "alias": "Bottom Right Cell Pot 1",
+            "area": "",
+            "lKey": "GF Lower Vines -> Hideout 4 Torch Jail U Tunnel",
+            "alias": "Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -608,13 +923,13 @@
             "shuffleRules": []
         },
         "Hideout 4 Torch Jail Pot 2": {
-            "area": "Gerudo Fortress",
-            "lKey": "",
-            "alias": "Bottom Right Cell Pot 2",
+            "area": "",
+            "lKey": "GF Lower Vines -> Hideout 4 Torch Jail U Tunnel",
+            "alias": "Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -626,13 +941,13 @@
             "shuffleRules": []
         },
         "Hideout 3 Torch Crate": {
-            "area": "Gerudo Fortress",
-            "lKey": "",
-            "alias": "Upper Left Cell Crate",
+            "area": "",
+            "lKey": "GF Rooftop -> Hideout 3 Torch Jail",
+            "alias": "Crate",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -644,13 +959,13 @@
             "shuffleRules": []
         },
         "Hideout 2 Torch Jail Pot 1": {
-            "area": "Gerudo Fortress",
-            "lKey": "",
-            "alias": "Upper Right Cell Pot 1",
+            "area": "",
+            "lKey": "GF Above Dungeon -> Hideout 2 Torch Jail Lower",
+            "alias": "Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -662,13 +977,13 @@
             "shuffleRules": []
         },
         "Hideout 2 Torch Jail Pot 2": {
-            "area": "Gerudo Fortress",
-            "lKey": "",
-            "alias": "Upper Right Cell Pot 2",
+            "area": "",
+            "lKey": "GF Above Dungeon -> Hideout 2 Torch Jail Lower",
+            "alias": "Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -680,13 +995,13 @@
             "shuffleRules": []
         },
         "Hideout 2 Torch Jail Pot 3": {
-            "area": "Gerudo Fortress",
-            "lKey": "",
-            "alias": "Upper Right Cell Pot 3",
+            "area": "",
+            "lKey": "GF Above Dungeon -> Hideout 2 Torch Jail Lower",
+            "alias": "Pot 3",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -698,13 +1013,13 @@
             "shuffleRules": []
         },
         "Hideout 2 Torch Jail In Cell Pot 1": {
-            "area": "Gerudo Fortress",
-            "lKey": "",
-            "alias": "Upper Right Cell In Cell Pot 1",
+            "area": "",
+            "lKey": "GF Above Dungeon -> Hideout 2 Torch Jail Lower",
+            "alias": "In Cell Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -716,13 +1031,13 @@
             "shuffleRules": []
         },
         "Hideout 2 Torch Jail In Cell Pot 2": {
-            "area": "Gerudo Fortress",
-            "lKey": "",
-            "alias": "Upper Right Cell In Cell Pot 2",
+            "area": "",
+            "lKey": "GF Above Dungeon -> Hideout 2 Torch Jail Lower",
+            "alias": "In Cell Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -734,13 +1049,13 @@
             "shuffleRules": []
         },
         "Hideout 2 Torch Jail In Cell Pot 3": {
-            "area": "Gerudo Fortress",
-            "lKey": "",
-            "alias": "Upper Right Cell In Cell Pot 3",
+            "area": "",
+            "lKey": "GF Above Dungeon -> Hideout 2 Torch Jail Lower",
+            "alias": "In Cell Pot 3",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -752,13 +1067,13 @@
             "shuffleRules": []
         },
         "Hideout 2 Torch Jail In Cell Pot 4": {
-            "area": "Gerudo Fortress",
-            "lKey": "",
-            "alias": "Upper Right Cell In Cell Pot 4",
+            "area": "",
+            "lKey": "GF Above Dungeon -> Hideout 2 Torch Jail Lower",
+            "alias": "In Cell Pot 4",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -770,13 +1085,13 @@
             "shuffleRules": []
         },
         "Hideout 2 Torch Crate 1": {
-            "area": "Gerudo Fortress",
-            "lKey": "",
-            "alias": "Upper Right Cell Crate 1",
+            "area": "",
+            "lKey": "GF Above Dungeon -> Hideout 2 Torch Jail Lower",
+            "alias": "Crate 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -788,13 +1103,13 @@
             "shuffleRules": []
         },
         "Hideout 2 Torch Crate 2": {
-            "area": "Gerudo Fortress",
-            "lKey": "",
-            "alias": "Upper Right Cell Crate 2",
+            "area": "",
+            "lKey": "GF Above Dungeon -> Hideout 2 Torch Jail Lower",
+            "alias": "Crate 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",

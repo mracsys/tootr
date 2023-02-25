@@ -27,7 +27,8 @@ class EntranceMenu extends React.Component {
                     return aName.localeCompare(bName);
                 }).map((subArea, j) => {
                     if ((this.props.allAreas.entrances[subArea].tagRep || this.props.allAreas.entrances[subArea].tag === "" || this.props.allAreas.entrances[subArea].enableTag === false) &&
-                    (!(this.props.oneWay) || (this.props.oneWay && this.props.allAreas.entrances[subArea].oneWayELink === ""))) {
+                    (!(this.props.oneWay) || (this.props.oneWay && this.props.allAreas.entrances[subArea].oneWayELink === "")) &&
+                    !(((areaCategory === this.props.title && !(this.props.oneWay || this.props.isReverse)) || areaCategory === "Warp Songs" || this.props.entrancePool[areaCategory].length === 0) && this.props.connector === false)) {
                         let optionLabel = (this.props.allAreas.entrances[subArea].tag === "" || this.props.allAreas.entrances[subArea].enableTag === false) ?
                                         this.props.allAreas.entrances[subArea].alias :
                                         this.props.allAreas.entrances[subArea].tag;

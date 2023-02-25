@@ -17,11 +17,11 @@ class ItemMenu extends React.Component {
                 classes={{paper: this.props.classes.itemMenuPaper}}
             >
                 <div className={this.props.classes.itemMenuRow}>
-                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Deku Stick Capacity">
-                        <OotIcon classes={this.props.classes} itemName="Deku Stick Capacity" className={this.props.classes.locationMenuIcon} />
+                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Bottle">
+                        <OotIcon classes={this.props.classes} itemName="Bottle" className={this.props.classes.locationMenuIcon} />
                     </div>
-                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Deku Nut Capacity">
-                        <OotIcon classes={this.props.classes} itemName="Deku Nut Capacity" className={this.props.classes.locationMenuIcon} />
+                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Bottle with Letter">
+                        <OotIcon classes={this.props.classes} itemName="Bottle with Letter" className={this.props.classes.locationMenuIcon} />
                     </div>
                     <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Bomb Bag">
                         <OotIcon classes={this.props.classes} itemName="Bomb Bag" className={this.props.classes.locationMenuIcon} />
@@ -35,14 +35,20 @@ class ItemMenu extends React.Component {
                     <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Dins Fire">
                         <OotIcon classes={this.props.classes} itemName="Dins Fire" className={this.props.classes.locationMenuIcon} />
                     </div>
+                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Deku Shield">
+                        <OotIcon classes={this.props.classes} itemName="Deku Shield" className={this.props.classes.locationMenuIcon} />
+                    </div>
                     <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Kokiri Sword">
                         <OotIcon classes={this.props.classes} itemName="Kokiri Sword" className={this.props.classes.locationMenuIcon} />
                     </div>
-                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Master Sword">
-                        <OotIcon classes={this.props.classes} itemName="Master Sword" className={this.props.classes.locationMenuIcon} />
-                    </div>
                     <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Biggoron Sword">
                         <OotIcon classes={this.props.classes} itemName="Biggoron Sword" className={this.props.classes.locationMenuIcon} />
+                    </div>
+                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Chicken">
+                        <OotIcon classes={this.props.classes} itemName="Chicken" className={this.props.classes.locationMenuIcon} />
+                    </div>
+                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Zeldas Letter">
+                        <OotIcon classes={this.props.classes} itemName="Zeldas Letter" className={this.props.classes.locationMenuIcon} />
                     </div>
                 </div>
                 <div className={this.props.classes.itemMenuRow}>
@@ -64,14 +70,20 @@ class ItemMenu extends React.Component {
                     <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Farores Wind">
                         <OotIcon classes={this.props.classes} itemName="Farores Wind" className={this.props.classes.locationMenuIcon} />
                     </div>
-                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Deku Shield">
-                        <OotIcon classes={this.props.classes} itemName="Deku Shield" className={this.props.classes.locationMenuIcon} />
-                    </div>
                     <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Hylian Shield">
                         <OotIcon classes={this.props.classes} itemName="Hylian Shield" className={this.props.classes.locationMenuIcon} />
                     </div>
-                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Mirror Shield">
-                        <OotIcon classes={this.props.classes} itemName="Mirror Shield" className={this.props.classes.locationMenuIcon} />
+                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Goron Tunic">
+                        <OotIcon classes={this.props.classes} itemName="Goron Tunic" className={this.props.classes.locationMenuIcon} />
+                    </div>
+                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Zora Tunic">
+                        <OotIcon classes={this.props.classes} itemName="Zora Tunic" className={this.props.classes.locationMenuIcon} />
+                    </div>
+                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Keaton Mask">
+                        <OotIcon classes={this.props.classes} itemName="Keaton Mask" className={this.props.classes.locationMenuIcon} />
+                    </div>
+                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Skull Mask">
+                        <OotIcon classes={this.props.classes} itemName="Skull Mask" className={this.props.classes.locationMenuIcon} />
                     </div>
                 </div>
                 <div className={this.props.classes.itemMenuRow}>
@@ -93,43 +105,20 @@ class ItemMenu extends React.Component {
                     <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Nayrus Love">
                         <OotIcon classes={this.props.classes} itemName="Nayrus Love" className={this.props.classes.locationMenuIcon} />
                     </div>
-                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Progressive Strength Upgrade">
-                        <OotIcon classes={this.props.classes} itemName="Progressive Strength Upgrade" className={this.props.classes.locationMenuIcon} />
-                    </div>
-                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Goron Tunic">
-                        <OotIcon classes={this.props.classes} itemName="Goron Tunic" className={this.props.classes.locationMenuIcon} />
-                    </div>
-                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Zora Tunic">
-                        <OotIcon classes={this.props.classes} itemName="Zora Tunic" className={this.props.classes.locationMenuIcon} />
-                    </div>
-                </div>
-                <div className={this.props.classes.itemMenuRow}>
-                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Bottle">
-                        <OotIcon classes={this.props.classes} itemName="Bottle" className={this.props.classes.locationMenuIcon} />
-                    </div>
-                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Bottle with Letter">
-                        <OotIcon classes={this.props.classes} itemName="Bottle with Letter" className={this.props.classes.locationMenuIcon} />
-                    </div>
-                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Bottle with Big Poe">
-                        <OotIcon classes={this.props.classes} itemName="Bottle with Big Poe" className={this.props.classes.locationMenuIcon} />
-                    </div>
-                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Bottle">
-                        <OotIcon classes={this.props.classes} itemName="Bottle" className={this.props.classes.locationMenuIcon} />
-                    </div>
-                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Adult Trade Item">
-                        <OotIcon classes={this.props.classes} itemName="Adult Trade Item" className={this.props.classes.locationMenuIcon} />
-                    </div>
-                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Child Trade Item">
-                        <OotIcon classes={this.props.classes} itemName="Child Trade Item" className={this.props.classes.locationMenuIcon} />
-                    </div>
-                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Progressive Scale">
-                        <OotIcon classes={this.props.classes} itemName="Progressive Scale" className={this.props.classes.locationMenuIcon} />
+                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Mirror Shield">
+                        <OotIcon classes={this.props.classes} itemName="Mirror Shield" className={this.props.classes.locationMenuIcon} />
                     </div>
                     <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Iron Boots">
                         <OotIcon classes={this.props.classes} itemName="Iron Boots" className={this.props.classes.locationMenuIcon} />
                     </div>
                     <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Hover Boots">
                         <OotIcon classes={this.props.classes} itemName="Hover Boots" className={this.props.classes.locationMenuIcon} />
+                    </div>
+                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Spooky Mask">
+                        <OotIcon classes={this.props.classes} itemName="Spooky Mask" className={this.props.classes.locationMenuIcon} />
+                    </div>
+                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Bunny Hood">
+                        <OotIcon classes={this.props.classes} itemName="Bunny Hood" className={this.props.classes.locationMenuIcon} />
                     </div>
                 </div>
                 <div className={this.props.classes.itemMenuRow}>
@@ -151,14 +140,20 @@ class ItemMenu extends React.Component {
                     <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Song of Storms">
                         <OotIcon classes={this.props.classes} itemName="Song of Storms" className={this.props.classes.locationMenuIcon} />
                     </div>
+                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Progressive Strength Upgrade">
+                        <OotIcon classes={this.props.classes} itemName="Progressive Strength Upgrade" className={this.props.classes.locationMenuIcon} />
+                    </div>
                     <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Progressive Wallet">
                         <OotIcon classes={this.props.classes} itemName="Progressive Wallet" className={this.props.classes.locationMenuIcon} />
                     </div>
                     <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Magic Meter">
                         <OotIcon classes={this.props.classes} itemName="Magic Meter" className={this.props.classes.locationMenuIcon} />
                     </div>
-                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Gold Skulltula Token">
-                        <OotIcon classes={this.props.classes} itemName="Gold Skulltula Token" className={this.props.classes.locationMenuIcon} />
+                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Mask of Truth">
+                        <OotIcon classes={this.props.classes} itemName="Mask of Truth" className={this.props.classes.locationMenuIcon} />
+                    </div>
+                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Pocket Cucco">
+                        <OotIcon classes={this.props.classes} itemName="Pocket Cucco" className={this.props.classes.locationMenuIcon} />
                     </div>
                 </div>
                 <div className={this.props.classes.itemMenuRow}>
@@ -180,14 +175,20 @@ class ItemMenu extends React.Component {
                     <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Prelude of Light">
                         <OotIcon classes={this.props.classes} itemName="Prelude of Light" className={this.props.classes.locationMenuIcon} />
                     </div>
+                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Progressive Scale">
+                        <OotIcon classes={this.props.classes} itemName="Progressive Scale" className={this.props.classes.locationMenuIcon} />
+                    </div>
                     <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Gerudo Membership Card">
                         <OotIcon classes={this.props.classes} itemName="Gerudo Membership Card" className={this.props.classes.locationMenuIcon} />
                     </div>
                     <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Stone of Agony">
                         <OotIcon classes={this.props.classes} itemName="Stone of Agony" className={this.props.classes.locationMenuIcon} />
                     </div>
-                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Piece of the Triforce">
-                        <OotIcon classes={this.props.classes} itemName="Piece of the Triforce" className={this.props.classes.locationMenuIcon} />
+                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Cojiro">
+                        <OotIcon classes={this.props.classes} itemName="Cojiro" className={this.props.classes.locationMenuIcon} />
+                    </div>
+                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Odd Mushroom">
+                        <OotIcon classes={this.props.classes} itemName="Odd Mushroom" className={this.props.classes.locationMenuIcon} />
                     </div>
                 </div>
                 <div className={this.props.classes.itemMenuRow}>
@@ -218,6 +219,12 @@ class ItemMenu extends React.Component {
                     <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Small Key (Gerudo Fortress)">
                         <OotIcon classes={this.props.classes} itemName="Small Key (Gerudo Fortress)" className={this.props.classes.locationMenuIcon} />
                     </div>
+                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Small Key (???)">
+                        <OotIcon classes={this.props.classes} itemName="Small Key (???)" className={this.props.classes.locationMenuIcon} />
+                    </div>
+                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Odd Potion">
+                        <OotIcon classes={this.props.classes} itemName="Odd Potion" className={this.props.classes.locationMenuIcon} />
+                    </div>
                 </div>
                 <div className={this.props.classes.itemMenuRow}>
                     <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Boss Key (Forest Temple)">
@@ -238,14 +245,125 @@ class ItemMenu extends React.Component {
                     <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Boss Key (Ganons Castle)">
                         <OotIcon classes={this.props.classes} itemName="Boss Key (Ganons Castle)" className={this.props.classes.locationMenuIcon} />
                     </div>
-                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Silver Rupee">
-                        <OotIcon classes={this.props.classes} itemName="Silver Rupee" className={this.props.classes.locationMenuIcon} />
+                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Silver Rupee (Ganons Castle Forest Trial)">
+                        <OotIcon classes={this.props.classes} itemName="Silver Rupee (Ganons Castle Forest Trial)" className={this.props.classes.locationMenuIcon} />
                     </div>
-                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Small Key (???)">
-                        <OotIcon classes={this.props.classes} itemName="Small Key (???)" className={this.props.classes.locationMenuIcon} />
+                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Silver Rupee (Ganons Castle Fire Trial)">
+                        <OotIcon classes={this.props.classes} itemName="Silver Rupee (Ganons Castle Fire Trial)" className={this.props.classes.locationMenuIcon} />
+                    </div>
+                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Silver Rupee (Ganons Castle Water Trial)">
+                        <OotIcon classes={this.props.classes} itemName="Silver Rupee (Ganons Castle Water Trial)" className={this.props.classes.locationMenuIcon} />
                     </div>
                     <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Boss Key (???)">
                         <OotIcon classes={this.props.classes} itemName="Boss Key (???)" className={this.props.classes.locationMenuIcon} />
+                    </div>
+                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Poachers Saw">
+                        <OotIcon classes={this.props.classes} itemName="Poachers Saw" className={this.props.classes.locationMenuIcon} />
+                    </div>
+                </div>
+                <div className={this.props.classes.itemMenuRow}>
+                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Silver Rupee (Dodongos Cavern Staircase)">
+                        <OotIcon classes={this.props.classes} itemName="Silver Rupee (Dodongos Cavern Staircase)" className={this.props.classes.locationMenuIcon} />
+                    </div>
+                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Silver Rupee (Gerudo Training Ground Slopes)">
+                        <OotIcon classes={this.props.classes} itemName="Silver Rupee (Gerudo Training Ground Slopes)" className={this.props.classes.locationMenuIcon} />
+                    </div>
+                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Silver Rupee (Ice Cavern Spinning Scythe)">
+                        <OotIcon classes={this.props.classes} itemName="Silver Rupee (Ice Cavern Spinning Scythe)" className={this.props.classes.locationMenuIcon} />
+                    </div>
+                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Silver Rupee (Spirit Temple Child Early Torches)">
+                        <OotIcon classes={this.props.classes} itemName="Silver Rupee (Spirit Temple Child Early Torches)" className={this.props.classes.locationMenuIcon} />
+                    </div>
+                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Silver Rupee (Shadow Temple Scythe Shortcut)">
+                        <OotIcon classes={this.props.classes} itemName="Silver Rupee (Shadow Temple Scythe Shortcut)" className={this.props.classes.locationMenuIcon} />
+                    </div>
+                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Silver Rupee (Bottom of the Well Basement)">
+                        <OotIcon classes={this.props.classes} itemName="Silver Rupee (Bottom of the Well Basement)" className={this.props.classes.locationMenuIcon} />
+                    </div>
+                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Silver Rupee (Ganons Castle Spirit Trial)">
+                        <OotIcon classes={this.props.classes} itemName="Silver Rupee (Ganons Castle Spirit Trial)" className={this.props.classes.locationMenuIcon} />
+                    </div>
+                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Silver Rupee (Ganons Castle Shadow Trial)">
+                        <OotIcon classes={this.props.classes} itemName="Silver Rupee (Ganons Castle Shadow Trial)" className={this.props.classes.locationMenuIcon} />
+                    </div>
+                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Silver Rupee (Ganons Castle Light Trial)">
+                        <OotIcon classes={this.props.classes} itemName="Silver Rupee (Ganons Castle Light Trial)" className={this.props.classes.locationMenuIcon} />
+                    </div>
+                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Silver Rupee (???)">
+                        <OotIcon classes={this.props.classes} itemName="Silver Rupee (???)" className={this.props.classes.locationMenuIcon} />
+                    </div>
+                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Broken Sword">
+                        <OotIcon classes={this.props.classes} itemName="Broken Sword" className={this.props.classes.locationMenuIcon} />
+                    </div>
+                </div>
+                <div className={this.props.classes.itemMenuRow}>
+                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Kokiri Emerald">
+                        <OotIcon classes={this.props.classes} itemName="Kokiri Emerald" className={this.props.classes.locationMenuIcon} />
+                    </div>
+                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Goron Ruby">
+                        <OotIcon classes={this.props.classes} itemName="Goron Ruby" className={this.props.classes.locationMenuIcon} />
+                    </div>
+                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Zora Sapphire">
+                        <OotIcon classes={this.props.classes} itemName="Zora Sapphire" className={this.props.classes.locationMenuIcon} />
+                    </div>
+                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Forest Medallion">
+                        <OotIcon classes={this.props.classes} itemName="Forest Medallion" className={this.props.classes.locationMenuIcon} />
+                    </div>
+                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Fire Medallion">
+                        <OotIcon classes={this.props.classes} itemName="Fire Medallion" className={this.props.classes.locationMenuIcon} />
+                    </div>
+                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Water Medallion">
+                        <OotIcon classes={this.props.classes} itemName="Water Medallion" className={this.props.classes.locationMenuIcon} />
+                    </div>
+                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Spirit Medallion">
+                        <OotIcon classes={this.props.classes} itemName="Spirit Medallion" className={this.props.classes.locationMenuIcon} />
+                    </div>
+                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Shadow Medallion">
+                        <OotIcon classes={this.props.classes} itemName="Shadow Medallion" className={this.props.classes.locationMenuIcon} />
+                    </div>
+                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Light Medallion">
+                        <OotIcon classes={this.props.classes} itemName="Light Medallion" className={this.props.classes.locationMenuIcon} />
+                    </div>
+                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Prescription">
+                        <OotIcon classes={this.props.classes} itemName="Prescription" className={this.props.classes.locationMenuIcon} />
+                    </div>
+                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Eyeball Frog">
+                        <OotIcon classes={this.props.classes} itemName="Eyeball Frog" className={this.props.classes.locationMenuIcon} />
+                    </div>
+                </div>
+                <div className={this.props.classes.itemMenuRow}>
+                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Ocarina Note A">
+                        <OotIcon classes={this.props.classes} itemName="Ocarina Note A" className={this.props.classes.locationMenuIcon} />
+                    </div>
+                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Ocarina Note C Down">
+                        <OotIcon classes={this.props.classes} itemName="Ocarina Note C Down" className={this.props.classes.locationMenuIcon} />
+                    </div>
+                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Ocarina Note C Left">
+                        <OotIcon classes={this.props.classes} itemName="Ocarina Note C Left" className={this.props.classes.locationMenuIcon} />
+                    </div>
+                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Ocarina Note C Right">
+                        <OotIcon classes={this.props.classes} itemName="Ocarina Note C Right" className={this.props.classes.locationMenuIcon} />
+                    </div>
+                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Ocarina Note C Up">
+                        <OotIcon classes={this.props.classes} itemName="Ocarina Note C Up" className={this.props.classes.locationMenuIcon} />
+                    </div>
+                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Gold Skulltula Token">
+                        <OotIcon classes={this.props.classes} itemName="Gold Skulltula Token" className={this.props.classes.locationMenuIcon} />
+                    </div>
+                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Piece of the Triforce">
+                        <OotIcon classes={this.props.classes} itemName="Piece of the Triforce" className={this.props.classes.locationMenuIcon} />
+                    </div>
+                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Heart Piece">
+                        <OotIcon classes={this.props.classes} itemName="Heart Piece" className={this.props.classes.locationMenuIcon} />
+                    </div>
+                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Heart Container">
+                        <OotIcon classes={this.props.classes} itemName="Heart Container" className={this.props.classes.locationMenuIcon} />
+                    </div>
+                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Eyedrops">
+                        <OotIcon classes={this.props.classes} itemName="Eyedrops" className={this.props.classes.locationMenuIcon} />
+                    </div>
+                    <div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Claim Check">
+                        <OotIcon classes={this.props.classes} itemName="Claim Check" className={this.props.classes.locationMenuIcon} />
                     </div>
                 </div>
                 <div className={this.props.classes.itemMenuRow}>

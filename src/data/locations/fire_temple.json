@@ -46,8 +46,8 @@
             "alias": "Boss Lobby Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Fire Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -65,8 +65,8 @@
             "alias": "Boss Lobby Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Fire Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -177,8 +177,8 @@
             "alias": "Lava Room Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Fire Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -196,8 +196,8 @@
             "alias": "Lava Room Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Fire Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -215,8 +215,8 @@
             "alias": "Lava Room Pot 3",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Fire Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -597,8 +597,8 @@
             "alias": "Fire Maze Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Fire Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -616,8 +616,8 @@
             "alias": "Fire Maze Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Fire Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -635,8 +635,8 @@
             "alias": "Fire Maze Pot 3",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Fire Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -654,8 +654,8 @@
             "alias": "Fire Maze Pot 4",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Fire Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -673,8 +673,8 @@
             "alias": "Fire Maze Pot 5",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Fire Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -692,8 +692,8 @@
             "alias": "Fire Maze Pot 6",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Fire Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -711,8 +711,8 @@
             "alias": "Fire Maze Pot 7",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Fire Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -730,8 +730,8 @@
             "alias": "Fire Maze Pot 8",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Fire Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -749,8 +749,8 @@
             "alias": "Entrance Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Fire Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -768,8 +768,8 @@
             "alias": "Entrance Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Fire Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -832,8 +832,8 @@
             "alias": "Iron Knuckle Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Fire Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -851,8 +851,8 @@
             "alias": "Iron Knuckle Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Fire Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -870,8 +870,8 @@
             "alias": "Iron Knuckle Pot 3",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Fire Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -889,8 +889,8 @@
             "alias": "Iron Knuckle Pot 4",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Fire Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -953,8 +953,8 @@
             "alias": "Boss Lobby Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Fire Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -972,8 +972,8 @@
             "alias": "Boss Lobby Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Fire Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -991,8 +991,8 @@
             "alias": "Boss Lobby Crate 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
                 {"setting": "Fire Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1010,8 +1010,8 @@
             "alias": "Boss Lobby Crate 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
                 {"setting": "Fire Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1029,8 +1029,8 @@
             "alias": "Boss Lobby Crate 3",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
                 {"setting": "Fire Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1048,8 +1048,8 @@
             "alias": "Boss Lobby Crate 4",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
                 {"setting": "Fire Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1067,8 +1067,8 @@
             "alias": "Boss Lobby Crate 5",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
                 {"setting": "Fire Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1086,8 +1086,8 @@
             "alias": "Boss Lobby Crate 6",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
                 {"setting": "Fire Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1105,8 +1105,8 @@
             "alias": "Big Lava Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Fire Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1124,8 +1124,8 @@
             "alias": "Big Lava Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Fire Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1143,8 +1143,8 @@
             "alias": "Big Lava High Pot",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Fire Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1216,8 +1216,8 @@
             "alias": "Near Lava Room Torch Chest Pot",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Fire Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1307,8 +1307,8 @@
             "alias": "Lizalfos Maze Lower Crate 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
                 {"setting": "Fire Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1326,8 +1326,8 @@
             "alias": "Lizalfos Maze Lower Crate 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
                 {"setting": "Fire Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1345,8 +1345,8 @@
             "alias": "Lizalfos Maze Lower Crate 3",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
                 {"setting": "Fire Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1394,8 +1394,8 @@
             "alias": "Shortcut Crate 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
                 {"setting": "Fire Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1413,8 +1413,8 @@
             "alias": "Shortcut Crate 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
                 {"setting": "Fire Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1432,8 +1432,8 @@
             "alias": "Shortcut Crate 3",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
                 {"setting": "Fire Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1451,8 +1451,8 @@
             "alias": "Shortcut Crate 4",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
                 {"setting": "Fire Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1470,8 +1470,8 @@
             "alias": "Shortcut Crate 5",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
                 {"setting": "Fire Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1489,8 +1489,8 @@
             "alias": "Shortcut Crate 6",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
                 {"setting": "Fire Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1523,8 +1523,8 @@
             "alias": "Lizalfos Maze Upper Crate 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
                 {"setting": "Fire Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1542,8 +1542,8 @@
             "alias": "Lizalfos Maze Upper Crate 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
                 {"setting": "Fire Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1561,8 +1561,8 @@
             "alias": "Lizalfos Maze Upper Crate 3",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
                 {"setting": "Fire Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1604,8 +1604,8 @@
             "alias": "High Torch Room Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Fire Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1623,8 +1623,8 @@
             "alias": "High Torch Room Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Fire Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1642,8 +1642,8 @@
             "alias": "High Torch Room Crate 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
                 {"setting": "Fire Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1661,8 +1661,8 @@
             "alias": "High Torch Room Crate 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
                 {"setting": "Fire Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1680,8 +1680,8 @@
             "alias": "High Torch Room Crate 3",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
                 {"setting": "Fire Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1699,8 +1699,8 @@
             "alias": "High Torch Room Crate 4",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
                 {"setting": "Fire Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1718,8 +1718,8 @@
             "alias": "High Torch Room Crate 5",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
                 {"setting": "Fire Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1737,8 +1737,8 @@
             "alias": "Narrow Bridge Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Fire Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1756,8 +1756,8 @@
             "alias": "Narrow Bridge Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Fire Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1799,8 +1799,8 @@
             "alias": "Fire Maze Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Fire Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1818,8 +1818,8 @@
             "alias": "Fire Maze Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Fire Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1837,8 +1837,8 @@
             "alias": "Fire Maze Pot 3",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Fire Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1856,8 +1856,8 @@
             "alias": "Fire Maze Pot 4",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Fire Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1875,8 +1875,8 @@
             "alias": "Fire Maze Pot 5",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Fire Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1969,9 +1969,24 @@
         "Fire Temple Volvagia Heart": {
             "area": "",
             "lKey": "Fire Temple -> Volvagia",
-            "alias": "Volvagia",
+            "alias": "Volvagia Heart",
             "type": "item",
             "settings": [],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Fire Temple Volvagia Dungeon Reward": {
+            "area": "",
+            "lKey": "Fire Temple -> Volvagia",
+            "alias": "Volvagia Blue Warp",
+            "type": "item",
+            "settings": [{"setting": "Shuffle Dungeon Rewards", "value": "On", "required": true}],
             "visible": true,
             "check": "",
             "foundItem": "",

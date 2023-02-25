@@ -8,6 +8,7 @@ class UnLinkedEntrance extends React.Component {
         let settingAreaTypes = {
             'interior': 'Interiors',
             'specialInterior': 'Interiors',
+            'hideoutInterior': 'Interiors',
             'grotto': 'Grottos',
             'grave': 'Grottos',
             'dungeon': 'Dungeons',
@@ -16,7 +17,7 @@ class UnLinkedEntrance extends React.Component {
             'boss': 'Boss Rooms',
         }
         let areaType = this.props.allAreas.entrances[entrance].type
-        if (areaType === "specialInterior") { areaType = "interior"; }
+        if (areaType === "specialInterior" || areaType === "hideoutInterior") { areaType = "interior"; }
         if (areaType === "dungeonGanon") { areaType = "dungeon"; }
         let subAreas;
         if (areaType in this.props.oneWayEntrancePools) {

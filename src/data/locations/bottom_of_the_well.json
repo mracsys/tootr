@@ -7,8 +7,8 @@
             "alias": "Entrance Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Bottom of the Well MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -26,8 +26,8 @@
             "alias": "Entrance Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Bottom of the Well MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -45,8 +45,8 @@
             "alias": "Near Basement Ladder Top Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Bottom of the Well MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -64,8 +64,8 @@
             "alias": "Near Basement Ladder Top Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Bottom of the Well MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -83,8 +83,8 @@
             "alias": "Near Basement Ladder Top Pot 3",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Bottom of the Well MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -147,8 +147,8 @@
             "alias": "Underwater Pot",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Bottom of the Well MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -348,8 +348,8 @@
             "alias": "Left Inner Room Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Bottom of the Well MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -367,8 +367,8 @@
             "alias": "Left Inner Room Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Bottom of the Well MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -386,8 +386,8 @@
             "alias": "Left Inner Room Pot 3",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Bottom of the Well MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -444,8 +444,8 @@
             "alias": "Fire Keese Pot",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Bottom of the Well MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -697,8 +697,8 @@
             "alias": "Basement Pot Corridor Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Bottom of the Well MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -716,8 +716,8 @@
             "alias": "Basement Pot Corridor Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Bottom of the Well MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -735,8 +735,8 @@
             "alias": "Basement Pot Corridor Pot 3",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Bottom of the Well MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -754,8 +754,8 @@
             "alias": "Basement Pot Corridor Pot 4",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Bottom of the Well MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -773,8 +773,8 @@
             "alias": "Basement Pot Corridor Pot 5",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Bottom of the Well MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -792,8 +792,8 @@
             "alias": "Basement Pot Corridor Pot 6",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Bottom of the Well MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -811,8 +811,8 @@
             "alias": "Basement Pot Corridor Pot 7",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Bottom of the Well MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -830,8 +830,8 @@
             "alias": "Basement Pot Corridor Pot 8",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Bottom of the Well MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -849,8 +849,8 @@
             "alias": "Basement Pot Corridor Pot 9",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Bottom of the Well MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -868,8 +868,8 @@
             "alias": "Basement Pot Corridor Pot 10",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Bottom of the Well MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -887,8 +887,8 @@
             "alias": "Basement Pot Corridor Pot 11",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Bottom of the Well MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -906,8 +906,8 @@
             "alias": "Basement Pot Corridor Pot 12",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Bottom of the Well MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -1055,8 +1055,8 @@
             "alias": "Central Room Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Bottom of the Well MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1074,8 +1074,8 @@
             "alias": "Central Room Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Bottom of the Well MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1093,8 +1093,8 @@
             "alias": "Central Room Pot 3",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Bottom of the Well MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1127,8 +1127,8 @@
             "alias": "Right Center Room Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Bottom of the Well MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1146,8 +1146,8 @@
             "alias": "Right Center Room Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Bottom of the Well MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1165,8 +1165,8 @@
             "alias": "Right Center Room Pot 3",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Bottom of the Well MQ", "value": true, "required": true}
             ],
             "visible": true,

@@ -33,11 +33,11 @@
         },
         "ER Settings": {
             "open": true,
-            "Shuffle Interiors": [
-                "Off",
-                "Simple",
-                "All"
-            ],
+            "Shuffle Interiors": {
+                "Simple": true,
+                "Special": true,
+                "Hideout": false
+            },
             "Shuffle Grottos": [
                 "Off",
                 "On"
@@ -48,6 +48,10 @@
                 "Dungeons and Ganon"
             ],
             "Shuffle Overworld": [
+                "Off",
+                "On"
+            ],
+            "Shuffle Valley/Lake": [
                 "Off",
                 "On"
             ],
@@ -119,7 +123,11 @@
                 "Off",
                 "On"
             ],
-            "Shuffle Weird Egg": [
+            "Shuffle Child Trade": [
+                "Off",
+                "On"
+            ],
+            "Shuffle Adult Trade": [
                 "Off",
                 "On"
             ],
@@ -132,6 +140,10 @@
                 "On"
             ],
             "Shuffle Merchants": [
+                "Off",
+                "On"
+            ],
+            "Shuffle Dungeon Rewards": [
                 "Off",
                 "On"
             ],
@@ -163,21 +175,19 @@
                 "Overworld",
                 "Anywhere"
             ],
-            "Skip Child Zelda": [
-                "Off",
-                "On"
-            ],
-            "Free Scarecrow": [
-                "Off",
-                "On"
-            ],
             "Shuffle Freestanding Items": [
                 "Off",
                 "Overworld",
                 "Dungeons",
                 "All"
             ],
-            "Shuffle Pots and Crates": [
+            "Shuffle Pots": [
+                "Off",
+                "Overworld",
+                "Dungeons",
+                "All"
+            ],
+            "Shuffle Crates": [
                 "Off",
                 "Overworld",
                 "Dungeons",
@@ -216,6 +226,14 @@
                 "4 Carpenters",
                 "1 Carpenter",
                 "Open Fortress"
+            ],
+            "Skip Child Zelda": [
+                "Off",
+                "On"
+            ],
+            "Free Scarecrow": [
+                "Off",
+                "On"
             ],
             "Rainbow Bridge": [
                 "Open",

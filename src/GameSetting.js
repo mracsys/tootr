@@ -24,7 +24,7 @@ class GameSetting extends React.Component {
                 </div>
                 <Collapse in={this.state.open} timeout='auto' unmountOnExit>
                         { Object.keys(this.props.settings).map((setting, i) => {
-                            if (setting !== 'open' && setting !== 'Mixed Pools') {
+                            if (setting !== 'open' && setting !== 'Mixed Pools' && setting !== 'Shuffle Interiors') {
                                 return (
                                 <React.Fragment key={'settingFrag' + i}>
                                     <div className={this.props.classes.wrapperWrapper}>
@@ -46,7 +46,7 @@ class GameSetting extends React.Component {
                                     </div>
                                 </React.Fragment>
                                 );
-                            } else if (setting === 'Mixed Pools') {
+                            } else if (setting === 'Mixed Pools' || setting === 'Shuffle Interiors') {
                                 return (
                                     <React.Fragment key={'settingFrag' + i}>
                                         <div className={this.props.classes.wrapperWrapper}>

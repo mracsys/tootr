@@ -104,8 +104,20 @@ class GameArea extends React.Component {
                         })}
                         </div>
                         { Object.keys(this.props.entrances).map((entrance, i) => {
+                            let connectorShuffled = false;
+                            let areaEntrances = this.props.allAreas.entrances;
+                            function isConnectorShuffled(entrance, index, array) {
+                                return areaEntrances[entrance].shuffled || areaEntrances[entrance].shuffled;
+                            }
+                            if (this.props.allAreas.entrances[entrance].connector !== "") {
+                                if (Array.isArray(this.props.allAreas.entrances[entrance].connector)) {
+                                    connectorShuffled = this.props.allAreas.entrances[entrance].connector.some(isConnectorShuffled);
+                                } else {
+                                    connectorShuffled = [this.props.allAreas.entrances[entrance].connector].some(isConnectorShuffled);
+                                }
+                            }
                             if ((!(this.props.showUnshuffledEntrances) && this.props.allAreas.entrances[entrance].shuffled === true) ||
-                            (this.props.allAreas.entrances[entrance].connector !== "" && this.props.allAreas.entrances[this.props.allAreas.entrances[entrance].connector].shuffled && !(this.props.showUnshuffledEntrances)) ||
+                            (connectorShuffled && !(this.props.showUnshuffledEntrances)) ||
                             (this.props.showUnshuffledEntrances)) {
                                 return (
                                     <React.Fragment key={this.props.title + "entranceScrollContainer" + i}>

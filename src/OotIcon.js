@@ -155,7 +155,38 @@ import Green_Rupee from './images/Green_Rupee.png';
 import Blue_Rupee from './images/Blue_Rupee.png';
 import Red_Rupee from './images/Red_Rupee.png';
 import Purple_Rupee from './images/Purple_Rupee.png';
-import Silver_Rupee from './images/Silver_Rupee.png';
+import Silver_Rupee from './images/rupee_counter_icon.png';
+import OoT_Piece_of_Heart_Icon from './images/OoT_Piece_of_Heart_Icon.png';
+import OoT_Heart_Container_Icon from './images/OoT_Heart_Container_Icon.png';
+import OoT_Worlds_Finest_Eye_Drops_Icon from './images/OoT_Worlds_Finest_Eye_Drops_Icon.png';
+import OoT_Zeldas_Letter_Icon from './images/OoT_Zeldas_Letter_Icon.png';
+import OoT_Spiritual_Stone_of_Fire_Icon from './images/OoT_Spiritual_Stone_of_Fire_Icon.png';
+import OoT_Spiritual_Stone_of_the_Forest_Icon from './images/OoT_Spiritual_Stone_of_the_Forest_Icon.png';
+import OoT_Spiritual_Stone_of_Water_Icon from './images/OoT_Spiritual_Stone_of_Water_Icon.png';
+import OoT_Spirit_Medallion_Icon from './images/OoT_Spirit_Medallion_Icon.png';
+import OoT_Spooky_Mask_Icon from './images/OoT_Spooky_Mask_Icon.png';
+import OoT_Skull_Mask_Icon from './images/OoT_Skull_Mask_Icon.png';
+import OoT_Shadow_Medallion_Icon from './images/OoT_Shadow_Medallion_Icon.png';
+import OoT_Prescription_Icon from './images/OoT_Prescription_Icon.png';
+import OoT_Odd_Mushroom_Icon from './images/OoT_Odd_Mushroom_Icon.png';
+import OoT_Odd_Potion_Icon from './images/OoT_Odd_Potion_Icon.png';
+import OoT_Poachers_Saw_Icon from './images/OoT_Poachers_Saw_Icon.png';
+import OoT_Mask_of_Truth_Icon from './images/OoT_Mask_of_Truth_Icon.png';
+import OoT_Light_Medallion_Icon from './images/OoT_Light_Medallion_Icon.png';
+import OoT_Keaton_Mask_Icon from './images/OoT_Keaton_Mask_Icon.png';
+import OoT_Forest_Medallion_Icon from './images/OoT_Forest_Medallion_Icon.png';
+import OoT_Fire_Medallion_Icon from './images/OoT_Fire_Medallion_Icon.png';
+import OoT_Eyeball_Frog_Icon from './images/OoT_Eyeball_Frog_Icon.png';
+import OoT_Bunny_Hood_Icon from './images/OoT_Bunny_Hood_Icon.png';
+import OoT_Claim_Check_Icon from './images/OoT_Claim_Check_Icon.png';
+import OoT_Broken_Gorons_Sword_Icon from './images/OoT_Broken_Gorons_Sword_Icon.png';
+import OoT_Water_Medallion_Icon from './images/OoT_Water_Medallion_Icon.png';
+import OoT_A_Icon from './images/ocarina_a.blue.png';
+import OoT_C_Up_Icon from './images/ocarina_c_up.yellow.png';
+import OoT_C_Down_Icon from './images/ocarina_c_down.yellow.png';
+import OoT_C_Left_Icon from './images/ocarina_c_left.yellow.png';
+import OoT_C_Right_Icon from './images/ocarina_c_right.yellow.png';
+
 
 class OotIcon extends React.Component {
     render() {
@@ -234,12 +265,67 @@ class OotIcon extends React.Component {
             'Blue Rupee': Blue_Rupee,
             'Red Rupee': Red_Rupee,
             'Purple Rupee': Purple_Rupee,
-            'Silver Rupee': Silver_Rupee,
             'Arrows': OoT_Arrows_Icon,
             'Deku Seeds': OoT_Deku_Seeds_Icon,
             'Bombs': OoT_Bomb_Icon,
             'Deku Stick': OoT_Deku_Stick_Icon,
             'Blue Fire': OoT_Blue_Fire_Icon,
+            'Heart Piece': OoT_Piece_of_Heart_Icon,
+            'Heart Container': OoT_Heart_Container_Icon,
+            'Chicken': OoT_Cucco_Icon,
+            'Zeldas Letter': OoT_Zeldas_Letter_Icon,
+            'Keaton Mask': OoT_Keaton_Mask_Icon,
+            'Skull Mask': OoT_Skull_Mask_Icon,
+            'Spooky Mask': OoT_Spooky_Mask_Icon,
+            'Bunny Hood': OoT_Bunny_Hood_Icon,
+            'Mask of Truth': OoT_Mask_of_Truth_Icon,
+            'Pocket Cucco': OoT_Cucco_Icon,
+            'Cojiro': OoT_Cojiro_Icon,
+            'Odd Mushroom': OoT_Odd_Mushroom_Icon,
+            'Odd Potion': OoT_Odd_Potion_Icon,
+            'Poachers Saw': OoT_Poachers_Saw_Icon,
+            'Broken Sword': OoT_Broken_Gorons_Sword_Icon,
+            'Prescription': OoT_Prescription_Icon,
+            'Eyeball Frog': OoT_Eyeball_Frog_Icon,
+            'Eyedrops': OoT_Worlds_Finest_Eye_Drops_Icon,
+            'Claim Check': OoT_Claim_Check_Icon,
+            'Kokiri Emerald': OoT_Spiritual_Stone_of_the_Forest_Icon,
+            'Goron Ruby': OoT_Spiritual_Stone_of_Fire_Icon,
+            'Zora Sapphire': OoT_Spiritual_Stone_of_Water_Icon,
+            'Forest Medallion': OoT_Forest_Medallion_Icon,
+            'Fire Medallion': OoT_Fire_Medallion_Icon,
+            'Water Medallion': OoT_Water_Medallion_Icon,
+            'Spirit Medallion': OoT_Spirit_Medallion_Icon,
+            'Shadow Medallion': OoT_Shadow_Medallion_Icon,
+            'Light Medallion': OoT_Light_Medallion_Icon,
+            'Silver Rupee (Dodongos Cavern Staircase)': Silver_Rupee,
+            'Silver Rupee (Ice Cavern Spinning Scythe)': Silver_Rupee,
+            'Silver Rupee (Ice Cavern Push Block)': Silver_Rupee,
+            'Silver Rupee (Bottom of the Well Basement)': Silver_Rupee,
+            'Silver Rupee (Shadow Temple Scythe Shortcut)': Silver_Rupee,
+            'Silver Rupee (Shadow Temple Invisible Blades)': Silver_Rupee,
+            'Silver Rupee (Shadow Temple Huge Pit)': Silver_Rupee,
+            'Silver Rupee (Shadow Temple Invisible Spikes)': Silver_Rupee,
+            'Silver Rupee (Gerudo Training Ground Slopes)': Silver_Rupee,
+            'Silver Rupee (Gerudo Training Ground Lava)': Silver_Rupee,
+            'Silver Rupee (Gerudo Training Ground Water)': Silver_Rupee,
+            'Silver Rupee (Spirit Temple Child Early Torches)': Silver_Rupee,
+            'Silver Rupee (Spirit Temple Adult Boulders)': Silver_Rupee,
+            'Silver Rupee (Spirit Temple Lobby and Lower Adult)': Silver_Rupee,
+            'Silver Rupee (Spirit Temple Sun Block)': Silver_Rupee,
+            'Silver Rupee (Spirit Temple Adult Climb)': Silver_Rupee,
+            'Silver Rupee (Ganons Castle Spirit Trial)': Silver_Rupee,
+            'Silver Rupee (Ganons Castle Light Trial)': Silver_Rupee,
+            'Silver Rupee (Ganons Castle Fire Trial)': Silver_Rupee,
+            'Silver Rupee (Ganons Castle Shadow Trial)': Silver_Rupee,
+            'Silver Rupee (Ganons Castle Water Trial)': Silver_Rupee,
+            'Silver Rupee (Ganons Castle Forest Trial)': Silver_Rupee,
+            'Silver Rupee (???)': Silver_Rupee,
+            'Ocarina Note A': OoT_A_Icon,
+            'Ocarina Note C Up': OoT_C_Up_Icon,
+            'Ocarina Note C Down': OoT_C_Down_Icon,
+            'Ocarina Note C Right': OoT_C_Right_Icon,
+            'Ocarina Note C Left': OoT_C_Left_Icon,
         };
         let keyMap = {
             'Forest Temple': 'Fo',
@@ -250,7 +336,7 @@ class OotIcon extends React.Component {
             'Ganons Castle': 'GC',
             'Bottom of the Well': 'We',
             'Gerudo Training Ground': 'GTG',
-            'Gerudo Fortress': 'GF',
+            'Gerudo Fortress': 'Hi',
             '???': '?'
         };
         let songMap = {
@@ -266,6 +352,31 @@ class OotIcon extends React.Component {
             'Requiem of Spirit': "R",
             'Nocturne of Shadow': "N",
             'Prelude of Light': "P",
+        };
+        let rupeeMap = {
+            'Dodongos Cavern Staircase': 'DC',
+            'Ice Cavern Spinning Scythe': 'Ice',
+            'Ice Cavern Push Block': 'Ice',
+            'Bottom of the Well Basement': 'We',
+            'Shadow Temple Scythe Shortcut': 'Sh',
+            'Shadow Temple Invisible Blades': 'Sh',
+            'Shadow Temple Huge Pit': 'Sh',
+            'Shadow Temple Invisible Spikes': 'Sh',
+            'Gerudo Training Ground Slopes': 'GTG',
+            'Gerudo Training Ground Lava': 'GTG',
+            'Gerudo Training Ground Water': 'GTG',
+            'Spirit Temple Child Early Torches': 'Sp',
+            'Spirit Temple Adult Boulders': 'Sp',
+            'Spirit Temple Lobby and Lower Adult': 'Sp',
+            'Spirit Temple Sun Block': 'Sp',
+            'Spirit Temple Adult Climb': 'Sp',
+            'Ganons Castle Spirit Trial': 'SpT',
+            'Ganons Castle Light Trial': 'LiT',
+            'Ganons Castle Fire Trial': 'FiT',
+            'Ganons Castle Shadow Trial': 'ShT',
+            'Ganons Castle Water Trial': 'WaT',
+            'Ganons Castle Forest Trial': 'FoT',
+            '???': '?',
         };
         return (
             <div onClick={this.props.onClick ? this.props.onClick : null} data-source={this.props.dataSource} className={this.props.classes.iconDiv}>
@@ -286,8 +397,23 @@ class OotIcon extends React.Component {
                         : null
                 }
                 { 
+                    this.props.itemName.includes('Silver Rupee') ?
+                        <span className={this.props.classes.iconKeyText}>{rupeeMap[this.props.itemName.substring(14, this.props.itemName.length - 1)]}</span>
+                        : null
+                }
+                { 
                     (this.props.itemName in songMap) ?
                         <span className={this.props.classes.iconKeyText}>{songMap[this.props.itemName]}</span>
+                        : null
+                }
+                { 
+                    this.props.itemName === 'Chicken' ?
+                        <span className={this.props.classes.iconTradeText}>C</span>
+                        : null
+                }
+                { 
+                    this.props.itemName === 'Pocket Cucco' ?
+                        <span className={this.props.classes.iconTradeText}>A</span>
                         : null
                 }
                 </div>

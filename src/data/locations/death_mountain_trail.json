@@ -216,10 +216,40 @@
             "shuffled": true,
             "shuffleRules": []
         },
-        "DMT Biggoron": {
+        "DMT Biggoron Prescription": {
             "area": "Death Mountain Trail",
             "lKey": "",
-            "alias": "Biggoron",
+            "alias": "Biggoron Trade for Broken Sword",
+            "type": "item",
+            "settings": [{"setting": "Shuffle Adult Trade", "value": "On", "required": true}],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "DMT Biggoron Claim Check": {
+            "area": "Death Mountain Trail",
+            "lKey": "",
+            "alias": "Biggoron Trade for Eyedrops",
+            "type": "item",
+            "settings": [{"setting": "Shuffle Adult Trade", "value": "On", "required": true}],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "DMT Biggoron Biggoron Sword": {
+            "area": "Death Mountain Trail",
+            "lKey": "",
+            "alias": "Biggoron Trade for Claim Check",
             "type": "item",
             "settings": [],
             "visible": true,

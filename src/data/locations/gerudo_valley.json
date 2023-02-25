@@ -200,6 +200,21 @@
             "shuffled": true,
             "shuffleRules": []
         },
+        "GV Boss Trade Item": {
+            "area": "Gerudo Valley",
+            "lKey": "",
+            "alias": "Carpenter Boss Trade for Poachers Saw",
+            "type": "item",
+            "settings": [{"setting": "Shuffle Adult Trade", "value": "On", "required": true}],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
         "GV Deku Scrub Grotto Front": {
             "area": "",
             "lKey": "GV Fortress Side -> GV Storms Grotto",
@@ -332,8 +347,8 @@
             "alias": "Crate Near Cow",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -350,8 +365,8 @@
             "alias": "Ledge Crate",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",

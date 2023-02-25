@@ -253,6 +253,21 @@
             "shuffled": true,
             "shuffleRules": []
         },
+        "LH Lab Trade for Frog": {
+            "area": "",
+            "lKey": "Lake Hylia -> LH Lab",
+            "alias": "Professor Trade for Eyeball Frog",
+            "type": "item",
+            "settings": [{"setting": "Shuffle Adult Trade", "value": "On", "required": true}],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
         "LH Deku Scrub Grotto Left": {
             "area": "",
             "lKey": "Lake Hylia -> LH Grotto",

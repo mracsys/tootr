@@ -153,8 +153,8 @@
             "tag": "House",
             "tagRep": true,
             "tagRules": [
-                {"setting": "Shuffle Pots and Crates", "value": "Off", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false}
+                {"setting": "Shuffle Pots", "value": "Off", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false}
             ],
             "enableTag": true,
             "type": "interior",
@@ -179,8 +179,8 @@
             "tag": "House",
             "tagRep": false,
             "tagRules": [
-                {"setting": "Shuffle Pots and Crates", "value": "Off", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false}
+                {"setting": "Shuffle Pots", "value": "Off", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false}
             ],
             "enableTag": true,
             "type": "interior",
@@ -1000,8 +1000,8 @@
             "alias": "Pot",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -1018,8 +1018,8 @@
             "alias": "Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -1036,8 +1036,8 @@
             "alias": "Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -1054,8 +1054,8 @@
             "alias": "Pot 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",
@@ -1072,8 +1072,8 @@
             "alias": "Pot 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Overworld", "required": false}
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
             ],
             "visible": true,
             "check": "",

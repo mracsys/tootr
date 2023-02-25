@@ -346,8 +346,8 @@
             "alias": "Lobby Crate",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
                 {"setting": "Deku Tree MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -408,8 +408,8 @@
             "alias": "Slingshot Room Crate 1",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
                 {"setting": "Deku Tree MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -427,8 +427,8 @@
             "alias": "Slingshot Room Crate 2",
             "type": "item",
             "settings": [
-                {"setting": "Shuffle Pots and Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Pots and Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
                 {"setting": "Deku Tree MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -720,9 +720,24 @@
         "Deku Tree Queen Gohma Heart": {
             "area": "",
             "lKey": "Deku Tree -> Queen Gohma",
-            "alias": "Queen Gohma",
+            "alias": "Queen Gohma Heart",
             "type": "item",
             "settings": [],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Deku Tree Queen Gohma Dungeon Reward": {
+            "area": "",
+            "lKey": "Deku Tree -> Queen Gohma",
+            "alias": "Queen Gohma Blue Warp",
+            "type": "item",
+            "settings": [{"setting": "Shuffle Dungeon Rewards", "value": "On", "required": true}],
             "visible": true,
             "check": "",
             "foundItem": "",

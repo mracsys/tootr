@@ -1,11 +1,12 @@
 {
     "Settings": {
         "Shuffle Freestanding Items": "All",
-        "Shuffle Pots and Crates": "All",
+        "Shuffle Pots": "All",
+        "Shuffle Crates": "All",
         "Shuffle Beehives": "On",
         "Shuffle Frogs": "On",
         "Shuffle Silver Rupees": "Anywhere",
-        "Shuffle Interiors": "Off",
+        "Shuffle Interiors": [],
         "Shuffle Grottos": "Off",
         "Shuffle Dungeons": "Off",
         "Shuffle Overworld": "Off",

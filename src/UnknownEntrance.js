@@ -11,6 +11,20 @@ class UnknownEntrance extends React.Component {
            (this.props.dungeon && eType !== 'boss' && eType !== 'noBossShuffle')) &&
            ((this.props.entrance === 'GV Lower Stream -> Lake Hylia' && this.props.title === this.props.allAreas.entrances[this.props.entrance].oneWayArea) || (this.props.entrance !== 'GV Lower Stream -> Lake Hylia'))) {
 //           ((this.props.entrance === 'GV Lower Stream -> Lake Hylia' && this.props.decoupled && this.props.overworld && this.props.title === this.props.allAreas.entrances[this.props.entrance].oneWayArea) || (this.props.entrance !== 'GV Lower Stream -> Lake Hylia'))) {
+            let connectorShuffled = false;
+            let areaEntrances = this.props.allAreas.entrances;
+            function isConnectorShuffled(entrance, index, array) {
+                return areaEntrances[entrance].shuffled || areaEntrances[eExit].shuffled;
+            }
+            if (eExit !== "") {
+                if (this.props.allAreas.entrances[eExit].connector !== "") {
+                    if (Array.isArray(this.props.allAreas.entrances[eExit].connector)) {
+                        connectorShuffled = this.props.allAreas.entrances[eExit].connector.some(isConnectorShuffled);
+                    } else {
+                        connectorShuffled = [this.props.allAreas.entrances[eExit].connector].some(isConnectorShuffled);
+                    }
+                }
+            }
             if (this.props.allAreas.entrances[this.props.entrance].aLink === "") {
                 return (
                     <React.Fragment>
@@ -42,7 +56,7 @@ class UnknownEntrance extends React.Component {
               this.props.allAreas.entrances[this.props.allAreas.entrances[this.props.entrance].aLink].isReverse === true ||
               ['warpsong','spawn','owldrop'].includes(this.props.allEntrances[this.props.entrance].type) ||
               this.props.allAreas[this.props.title].collapse === 'none' ||
-              (this.props.allAreas.entrances[eExit].connector !== "" && (this.props.allAreas.entrances[this.props.allAreas.entrances[eExit].connector].shuffled || this.props.allAreas.entrances[eExit].shuffled)) || this.props.connector ||
+              connectorShuffled || this.props.connector ||
               (this.props.decoupled && this.props.allAreas.entrances[this.props.entrance].shuffled)) {
                 return (
                     <React.Fragment>
