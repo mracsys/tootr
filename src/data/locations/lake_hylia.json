@@ -238,6 +238,21 @@
             "shuffled": true,
             "shuffleRules": []
         },
+        "LH Fishing Loach": {
+            "area": "",
+            "lKey": "LH Fishing Island -> LH Fishing Hole",
+            "alias": "Hylian Loach",
+            "type": "item",
+            "settings": [{"setting": "Shuffle Hylian Loach", "value": "On", "required": true}],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
         "LH Lab Dive": {
             "area": "",
             "lKey": "Lake Hylia -> LH Lab",

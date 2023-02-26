@@ -200,6 +200,10 @@
             "Shuffle Frogs": [
                 "Off",
                 "On"
+            ],
+            "Shuffle Hylian Loach": [
+                "Off",
+                "On"
             ]
         },
         "World Settings": {
