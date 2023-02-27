@@ -1102,7 +1102,7 @@
         "Fire Temple MQ Big Lava Room Left Pot": {
             "area": "",
             "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
-            "alias": "Big Lava Pot 1",
+            "alias": "Big Lava Pot",
             "type": "item",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
@@ -1121,7 +1121,7 @@
         "Fire Temple MQ Big Lava Room Right Pot": {
             "area": "",
             "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
-            "alias": "Big Lava Pot 1",
+            "alias": "Big Lava Flame Wall Pot",
             "type": "item",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
