@@ -1772,7 +1772,8 @@ class Tracker extends React.Component {
 
         // Hard code Colossus from Spirit Temple so that we don't have to add dummy
         // unshuffled entrances to the hands
-        if (allAreas.entrances['Desert Colossus -> Spirit Temple Lobby'].eLink !== '') {
+        if ((allAreas.entrances['Desert Colossus -> Spirit Temple Lobby'].eLink !== '') ||
+            (allAreas.entrances['Twinrova -> Spirit Temple'].eLink !== '')) {
             shownAreas['Desert Colossus'].show = true;
             allAreas['Desert Colossus'].show = true;
         }
