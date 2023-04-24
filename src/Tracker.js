@@ -841,7 +841,7 @@ const useStyles = (theme) => ({
 //    },
 //});
 
-const trackerVersion = '0.3.6';
+const trackerVersion = '0.3.7';
 
 class Tracker extends React.Component {
     constructor(props) {
@@ -1144,7 +1144,10 @@ class Tracker extends React.Component {
         if (settings["Shuffle Owls"] === "On") {
             erSettings.push("owldrop");
         }
-        if (settings["Shuffle Warp Songs"] === "On" || settings["Shuffle Spawn Points"] === "On" || settings["Shuffle Owls"] === "On") {
+        if (settings["Shuffle Valley/Lake"] === "On") {
+            erSettings.push("overworldoneway");
+        }
+        if (settings["Shuffle Warp Songs"] === "On" || settings["Shuffle Spawn Points"] === "On" || settings["Shuffle Owls"] === "On" || settings["Shuffle Valley/Lake"] === "On") {
             erSettings.push("extra");
         }
         return erSettings;
@@ -1184,9 +1187,6 @@ class Tracker extends React.Component {
                 if (!(areas.hasOwnProperty(eArea))) {
                     areas[eArea] = { show: allAreas[eArea].show, dungeon: internalDungeonEntrance, collapse: allAreas[eArea].collapse, entrances: {}, locations: {} };
                 }
-                if (settings["Decoupled Entrances"] === "Off" && settings["Shuffle Valley/Lake"] === "Off" && entrance === "GV Lower Stream -> Lake Hylia") {
-                    allAreas.entrances[entrance].shuffled = false;
-                }
                 eEntrance = {};
                 eEntrance[entrance] = allAreas.entrances[entrance];
                 if (!(erSettings.includes(subArea.type)) || eEntrance[entrance].shuffled === false) {
@@ -1196,13 +1196,8 @@ class Tracker extends React.Component {
                             eEntrance[entrance].eLink = entrance;
                         }
                     } else {
-                        if (entrance !== 'GV Lower Stream -> Lake Hylia') {
-                            eEntrance[entrance].eLink = eEntrance[entrance].reverse;
-                            eEntrance[entrance].aLink = eEntrance[entrance].reverse;
-                        } else {
-                            eEntrance[entrance].aLink = entrance;
-                            eEntrance[entrance].eLink = entrance;
-                        }
+                        eEntrance[entrance].aLink = entrance;
+                        eEntrance[entrance].eLink = entrance;
                     }
                 } else {
                     eEntrance[entrance].eLink = allAreas.entrances[entrance].userELink;
@@ -1258,7 +1253,7 @@ class Tracker extends React.Component {
             eType = allAreas.entrances[entrance].type;
             entrances[entrance] = { type: eType, category: "", locations: {} };
             entrances[allAreas.entrances[entrance].reverse] = { type: eType, category: "", locations: {} };
-            if (eType === "overworld" || eType === "spawn" || eType === "warpsong" || eType === "owldrop" || eType === "extra") {
+            if (eType === "overworld" || eType === "spawn" || eType === "warpsong" || eType === "owldrop" || eType === "extra" || eType === "overworldoneway") {
                 if (!(entrances.hasOwnProperty(eType))) {
                     entrances[eType] = {};
                 }
@@ -1327,12 +1322,6 @@ class Tracker extends React.Component {
         Object.keys(allEntrances.overworld).forEach(area => {
             oOverworld[area] = (Object.filterOWEntrances(allAreas.entrances, (eType, eLink, eArea) => eType === "overworld" && eLink === "" && eArea === area));
         });
-        if (settings["Decoupled Entrances"] !== "On" && settings["Shuffle Valley/Lake"] !== "On") {
-            let iGV = oOverworld['Lake Hylia'].indexOf('GV Lower Stream -> Lake Hylia');
-            if (iGV > -1) {
-                oOverworld['Lake Hylia'].splice(iGV, 1);
-            }
-        }
         let oExtra = {};
         Object.keys(allEntrances.extra).forEach(area => {
             oExtra[area] = (Object.filterOWEntrances(allAreas.entrances, (eType, eLink, eArea) => eType === "extra" && eLink === "" && eArea === area));
@@ -1344,6 +1333,10 @@ class Tracker extends React.Component {
         let oOwlDrop = {};
         Object.keys(allEntrances.owldrop).forEach(area => {
             oOwlDrop[area] = (Object.filterOWEntrances(allAreas.entrances, (eType, eLink, eArea) => eType === "owldrop" && eLink === "" && eArea === area));
+        });
+        let oOverworldOneway = {};
+        Object.keys(allEntrances.overworldoneway).forEach(area => {
+            oOverworldOneway[area] = (Object.filterOWEntrances(allAreas.entrances, (eType, eLink, eArea) => eType === "overworldoneway" && eLink === "" && eArea === area));
         });
 
         let oInteriors = {};
@@ -1474,6 +1467,9 @@ class Tracker extends React.Component {
         if (settings["Shuffle Spawn Points"] === "On") {
             entrances = merge(entrances, {"spawn": [], "spawn_reverse": [], "spawn_decoupled": []});
         }
+        if (settings["Shuffle Valley/Lake"] === "On") {
+            entrances = merge(entrances, {"overworldoneway": [], "overworldoneway_reverse": [], "overworldoneway_decoupled": []});
+        }
         entrances = merge(entrances, mixedpool);
         return entrances;
     }
@@ -1496,11 +1492,16 @@ class Tracker extends React.Component {
             }
             eOverworld[area].push(...((allEntrances.extra[area])));
         });
-        let iGV = eOverworld['Gerudo Valley'].indexOf('GV Lower Stream -> Lake Hylia');
-        if (iGV > -1) {
-            eOverworld['Gerudo Valley'].splice(iGV, 1);
-        }
-        eOverworld['Lake Hylia'].push('GV Lower Stream -> Lake Hylia');
+
+        Object.keys(allEntrances.overworldoneway).forEach(area => {
+            allEntrances.overworldoneway[area].forEach(e => {
+                let destArea = allAreas.entrances[e].area
+                if (!(Object.keys(eOverworld).includes(destArea))) {
+                    eOverworld[destArea] = [];
+                }
+                eOverworld[destArea].push(e);
+            });
+        });
         
         let eInteriors = [];
         eInteriors.push(...((allEntrances.interior.filter(int => allAreas.entrances[int].isReverse === false))));
@@ -1572,10 +1573,12 @@ class Tracker extends React.Component {
         let oExtOwlDrops = mergeWith(cloneDeep(oWarpSongs), cloneDeep(eOverworld), cloneDeep(oOwlDrops), mergeAreas);
         let oExtWarpSongs = mergeWith(cloneDeep(oSpawnPoints), cloneDeep(oWarpSongs), cloneDeep(eOverworld), cloneDeep(eOverworldInteriors), cloneDeep(oInteriors), cloneDeep(oOwlDrops), cloneDeep(eOverworldDungeons), mergeAreas);
         let oExtSpawnPoints = mergeWith(cloneDeep(oSpawnPoints), cloneDeep(oWarpSongs), cloneDeep(eOverworld), cloneDeep(eOverworldInteriors), cloneDeep(oInteriors), cloneDeep(oOwlDrops), cloneDeep(eOverworldDungeons), mergeAreas);
+        let oExtOverworldOneway = mergeWith(cloneDeep(oSpawnPoints), cloneDeep(oWarpSongs), cloneDeep(eOverworld), cloneDeep(eOverworldInteriors), cloneDeep(oInteriors), cloneDeep(oOwlDrops), cloneDeep(eOverworldDungeons), mergeAreas);
         entrances = {
                         "spawn": oExtSpawnPoints,
                         "owldrop": oExtOwlDrops,
-                        "warpsong": oExtWarpSongs
+                        "warpsong": oExtWarpSongs,
+                        "overworldoneway": oExtOverworldOneway,
                     };
         return entrances;
     }
@@ -1587,9 +1590,6 @@ class Tracker extends React.Component {
             if (erSettings.includes(tempAreas.entrances[entrance].type)) {
                 tempAreas.entrances[entrance].shuffled = true;
             } else {
-                tempAreas.entrances[entrance].shuffled = false;
-            }
-            if (settings["Decoupled Entrances"] === "Off" && settings["Shuffle Valley/Lake"] === "Off" && entrance === "GV Lower Stream -> Lake Hylia") {
                 tempAreas.entrances[entrance].shuffled = false;
             }
         });
@@ -1682,7 +1682,7 @@ class Tracker extends React.Component {
     }
 
     findVisibleAreas(shownAreas, allAreas, entrances, settings=this.state.settings) {
-        let alwaysOneWay = ["spawn","warpsong","owldrop","extra"];
+        let alwaysOneWay = ["spawn","warpsong","owldrop","extra","overworldoneway"];
         let decoupled = settings["Decoupled Entrances"] === "On";
         let overworldOneWays = settings["Shuffle Valley/Lake"] === "On";
         Object.filterAreas = (entrances, predicate) =>
@@ -1691,8 +1691,7 @@ class Tracker extends React.Component {
         Object.keys(shownAreas).forEach(targetArea => {
             let linkedTargetEntrances = (Object.filterAreas(shownAreas[targetArea].entrances, (eLink, aLink, isReverse, isOneWay, shuffled, lType, e, oneWayArea, connector) => (
                 /*(isOneWay && aLink !== "" && (lType !== "overworld" && lType !== "owldrop")) ||*/
-                (eLink !== "" && oneWayArea !== targetArea && (((isReverse === true) && shuffled === true) || lType === "overworld" || lType === "warpsong" || lType === "owldrop" || lType === "extra"))
-                && (e !== "GV Lower Stream -> Lake Hylia" || (e === "GV Lower Stream -> Lake Hylia" && (decoupled || overworldOneWays)))) ));
+                (eLink !== "" && oneWayArea !== targetArea && (((isReverse === true) && shuffled === true) || lType === "overworld" || lType === "warpsong" || lType === "owldrop" || lType === "extra" || lType === "overworldoneway"))) ));
             if (linkedTargetEntrances.length === 0 && !(entrances["oneWayAreas"].includes(targetArea))) {
                 shownAreas[targetArea].show = false;
                 allAreas[targetArea].show = false;
@@ -1725,7 +1724,7 @@ class Tracker extends React.Component {
                             shownAreas[allAreas.entrances[eLinked].area].show = true;
                             allAreas[allAreas.entrances[eLinked].area].show = true;
                             // Hard code Gerudo Valley to Lake with decoupled off, necessary for Lake Hylia owl warp to chain off valley visibility
-                            if (allAreas.entrances[eLinked].area === 'Gerudo Valley' && (!(decoupled || overworldOneWays) || settings['Shuffle Overworld'] === 'Off')) {
+                            if (allAreas.entrances[eLinked].area === 'Gerudo Valley' && !(decoupled || overworldOneWays)) {
                                 shownAreas['Lake Hylia'].show = true;
                                 allAreas['Lake Hylia'].show = true;
                             }
@@ -1754,7 +1753,7 @@ class Tracker extends React.Component {
         });
 
         // Hard code Gerudo Valley to Lake with decoupled off again, in case one-way entrance does not lead to Valley
-        if (shownAreas['Gerudo Valley'].show === true && (!(decoupled || overworldOneWays) || settings['Shuffle Overworld'] === 'Off')) {
+        if (shownAreas['Gerudo Valley'].show === true && !(decoupled || overworldOneWays)) {
             shownAreas['Lake Hylia'].show = true;
             allAreas['Lake Hylia'].show = true;
         }
@@ -1773,7 +1772,7 @@ class Tracker extends React.Component {
         // Hard code Colossus from Spirit Temple so that we don't have to add dummy
         // unshuffled entrances to the hands
         if ((allAreas.entrances['Desert Colossus -> Spirit Temple Lobby'].eLink !== '') ||
-            (allAreas.entrances['Twinrova -> Spirit Temple'].eLink !== '')) {
+            (allAreas.entrances['Twinrova -> Spirit Temple'].eLink !== '' && settings["Shuffle Bosses"] !== "Off")) {
             shownAreas['Desert Colossus'].show = true;
             allAreas['Desert Colossus'].show = true;
         }
@@ -1887,7 +1886,7 @@ class Tracker extends React.Component {
     linkEntrance(dataLinkFrom, dataLinkTo) {
         let originator = dataLinkFrom;
         let eCategory = dataLinkTo;
-        let alwaysOneWay = ["spawn","warpsong","owldrop","extra"];
+        let alwaysOneWay = ["spawn","warpsong","owldrop","extra","overworldoneway"];
         let unMixedDecoupled = ["boss", "noBossShuffle", "noDungeonShuffle"];
         let areas = cloneDeep(this.state.allAreas);
         let shownAreas = cloneDeep(this.state.areas);
@@ -1988,7 +1987,7 @@ class Tracker extends React.Component {
         if (areas.entrances[originator].oneWay === true && areas.entrances[originator].oneWayArea !== "") {
             area = areas.entrances[originator].oneWayArea;
         }
-        let alwaysOneWay = ["spawn","warpsong","owldrop","extra"];
+        let alwaysOneWay = ["spawn","warpsong","owldrop","extra","overworldoneway"];
         let unMixedDecoupled = ["boss", "noBossShuffle", "noDungeonShuffle"];
         let targetArea = areas.entrances[subArea].area;
         if (areas.entrances[subArea].oneWay === true && areas.entrances[subArea].oneWayArea !== "") {
@@ -2264,7 +2263,7 @@ class Tracker extends React.Component {
                 }
             }
         }
-        if ((this.state.allAreas.entrances[reverseLink].type === "warpsong") || (this.state.allAreas.entrances[reverseLink].type === "spawn") || (this.state.allAreas.entrances[reverseLink].type === "owldrop") || (this.state.allAreas.entrances[reverseLink].type === "extra")) {
+        if (['warpsong', 'spawn', 'owldrop', 'extra', 'overworldoneway'].includes(this.state.allAreas.entrances[reverseLink].type)) {
             if (useConnector) {
                 if (this.state.allAreas.entrances[reverseLink].connector !== "") {
                     if (this.state.allAreas.entrances[this.state.allAreas.entrances[reverseLink].connector].aLink !== "") {

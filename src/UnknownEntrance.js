@@ -52,9 +52,9 @@ class UnknownEntrance extends React.Component {
                 ((this.props.allAreas.locations[l].check === '' && this.props.allAreas.locations[l].visible === true)
                 || (this.props.allAreas.locations[l].visible === false && this.props.allAreas.locations[l].merchant === true && this.props.allAreas.locations[l].foundItem !== '')
                 || this.props.allAreas[this.props.title].collapse === 'none')).length > 0 ||
-              ['overworld','dungeon','warpsong','extra','spawn','owldrop'].includes(this.props.allEntrances[this.props.allAreas.entrances[this.props.entrance].aLink].type) ||
+              ['overworld','dungeon','warpsong','extra','spawn','owldrop','overworldoneway'].includes(this.props.allEntrances[this.props.allAreas.entrances[this.props.entrance].aLink].type) ||
               this.props.allAreas.entrances[this.props.allAreas.entrances[this.props.entrance].aLink].isReverse === true ||
-              ['warpsong','spawn','owldrop'].includes(this.props.allEntrances[this.props.entrance].type) ||
+              ['warpsong','spawn','owldrop','overworldoneway'].includes(this.props.allEntrances[this.props.entrance].type) ||
               this.props.allAreas[this.props.title].collapse === 'none' ||
               connectorShuffled || this.props.connector ||
               (this.props.decoupled && this.props.allAreas.entrances[this.props.entrance].shuffled)) {

@@ -59,7 +59,7 @@ class LinkedEntrance extends React.Component {
         if ((this.props.allAreas.entrances[reverseLink].type === "overworld") || (this.props.allAreas.entrances[reverseLink].isReverse) || (this.props.allAreas.entrances[reverseLink].type === "extra")) {
             href = '#' + this.props.allAreas.entrances[reverseLink].area;
         }
-        if ((this.props.allAreas.entrances[reverseLink].type === "warpsong") || (this.props.allAreas.entrances[reverseLink].type === "spawn") || (this.props.allAreas.entrances[reverseLink].type === "owldrop")) {
+        if (['warpsong', 'spawn', 'owldrop', 'overworldoneway'].includes(this.props.allAreas.entrances[reverseLink].type)) {
             if (this.props.allAreas.entrances[reverseLink].connector !== "") {
                 if (this.props.allAreas.entrances[this.props.allAreas.entrances[reverseLink].connector].aLink !== "") {
                     href = '#' + this.props.allAreas.entrances[this.props.allAreas.entrances[this.props.allAreas.entrances[reverseLink].connector].aLink].area;
@@ -82,7 +82,7 @@ class LinkedEntrance extends React.Component {
         let oEntrance = this.props.allAreas.entrances[this.props.entrance];
         let reverseLink = oEntrance.aLink;
         let interiors = ['interior','specialInterior','hideoutInterior','grotto','grave','dungeon','dungeonGanon','boss','noBossShuffle'];
-        let oneWayTypes = ['spawn','warpsong','owldrop'];
+        let oneWayTypes = ['spawn','warpsong','owldrop','overworldoneway'];
         let otherEntrances = [];
         let shopLocations = Object.keys(this.props.allEntrances[reverseLink].locations).filter((a) => ((this.props.allAreas.locations[a].visible === false) && this.props.allAreas.locations[a].merchant));
         let internalLocations = Object.keys(this.props.allEntrances[reverseLink].locations).filter((l) => (this.props.allEntrances[reverseLink].locations[l].check === '' || this.props.allAreas[this.props.title].collapse === 'none'));
@@ -131,6 +131,7 @@ class LinkedEntrance extends React.Component {
                                     || (this.props.allAreas.entrances[reverseLink].type === "warpsong")
                                     || (this.props.allAreas.entrances[reverseLink].type === "spawn")
                                     || (this.props.allAreas.entrances[reverseLink].type === "owldrop")
+                                    || (this.props.allAreas.entrances[reverseLink].type === "overworldoneway")
                                     || (this.props.allAreas.entrances[reverseLink].type === "dungeon")
                                     || (this.props.allAreas.entrances[reverseLink].type === "dungeonGanon")
                                     || (this.props.allAreas.entrances[reverseLink].type === "extra")
