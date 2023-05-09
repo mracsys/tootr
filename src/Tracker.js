@@ -1196,8 +1196,8 @@ class Tracker extends React.Component {
                             eEntrance[entrance].eLink = entrance;
                         }
                     } else {
-                        eEntrance[entrance].aLink = entrance;
-                        eEntrance[entrance].eLink = entrance;
+                        eEntrance[entrance].aLink = eEntrance[entrance].reverse;
+                        eEntrance[entrance].eLink = eEntrance[entrance].reverse;
                     }
                 } else {
                     eEntrance[entrance].eLink = allAreas.entrances[entrance].userELink;
