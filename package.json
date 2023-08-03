@@ -1,44 +1,35 @@
 {
   "name": "tootr",
-  "version": "0.3.7",
+  "version": "0.1.0",
   "private": true,
-  "homepage": "https://mracsys.github.io/tootr",
-  "dependencies": {
-    "@material-ui/core": "^4.11.3",
-    "@material-ui/icons": "^4.11.2",
-    "@material-ui/lab": "^4.0.0-alpha.61",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.5.0",
-    "@testing-library/user-event": "^7.2.1",
-    "fontsource-roboto": "^4.0.0",
-    "gh-pages": "^3.1.0",
-    "local-storage": "^2.0.0",
-    "node-sass": "^4.14.1",
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0",
-    "react-scripts": "3.4.3"
-  },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "next dev",
+    "build": "next build",
+    "export": "next export",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mracsys/randomizer-graph-tool": "^1.0.0",
+    "@mui/icons-material": "^5.14.3",
+    "@mui/material": "^5.14.3",
+    "@types/node": "20.4.5",
+    "@types/react": "18.2.18",
+    "@types/react-dom": "18.2.7",
+    "autoprefixer": "10.4.14",
+    "eslint": "8.46.0",
+    "eslint-config-next": "13.4.12",
+    "lodash": "^4.17.21",
+    "next": "13.4.12",
+    "postcss": "8.4.27",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "tailwindcss": "3.3.3",
+    "typescript": "5.1.6"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "browser": {
+    "fs": false
   }
 }

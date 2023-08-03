@@ -1,0 +1,635 @@
+{
+  "Tabs": [
+    {
+      "name": "general_tab",
+      "text": "ROM Options",
+      "app_type": ["generator"],
+      "sections": [
+        {
+          "name": "general_section_electron",
+          "text": "",
+          "exclude_from_web": true,
+          "col_span": 4,
+          "row_span": [2,2,3],
+          "settings": [
+            "rom",
+            "output_dir",
+            "enable_distribution_file",
+            "enable_cosmetic_file",
+            "distribution_file",
+            "cosmetic_file",
+            "count",
+            "create_spoiler",
+            "create_cosmetics_log",
+            "output_types",
+            "create_patch_file",
+            "create_compressed_rom",
+            "create_wad_file",
+            "create_uncompressed_rom",
+            "wad_file",
+            "wad_channel_id",
+            "wad_channel_title",
+            "show_seed_info",
+            "user_message",
+            "open_output_dir",
+            "open_python_dir"
+          ]
+        },
+        {
+          "name": "general_section_web_generator",
+          "text": "",
+          "exclude_from_electron": true,
+          "col_span": 4,
+          "row_span": [1,1,1],
+          "settings": [
+            "enable_distribution_file",
+            "enable_cosmetic_file",
+            "distribution_file",
+            "cosmetic_file",
+            "create_spoiler",
+            "web_output_type",
+            "rom",
+            "web_wad_file",
+            "web_common_key_file",
+            "web_common_key_string",
+            "web_wad_channel_id",
+            "web_wad_channel_title",
+            "web_wad_legacy_mode",
+            "show_seed_info",
+            "user_message"
+          ]
+        },
+        {
+          "name": "multiworld_section",
+          "text": "Multi-World Generation",
+          "subheader": "Play interconnected seeds with multiple players. Each player receives one of the worlds, which can contain items for other players. See <a href='https://wiki.ootrandomizer.com/index.php?title=Multiworld' target='_blank'>the wiki article on multiworld</a> for details.<br>You will need a plugin like <a href='https://github.com/TestRunnerSRL/bizhawk-co-op' target='_blank'>bizhawk-co-op</a> or <a href='https://midos.house/mw' target='_blank'>Mido's House Multiworld</a> to connect the worlds together.<br>Increasing Player Count will drastically increase the generation time.",
+          "row_span": [1,1,1],
+          "settings": [
+            "world_count",
+            "player_num"
+          ]
+        },
+        {
+          "name": "preset_section",
+          "text": "Settings Presets",
+          "subheader": "Presets are settings that can be saved and loaded from.<br>Loading a preset will overwrite all settings that affect the seed.",
+          "row_span": [1,1,1],
+          "settings": [
+            "presets"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "general_tab_web_patcher",
+      "text": "ROM Generation",
+      "app_type": ["patcher", "patcher_only"],
+      "exclude_from_electron": true,
+      "sections": [
+        {
+          "name": "general_section",
+          "text": "",
+          "col_span": 4,
+          "row_span": [1,1,1],
+          "settings": [
+            "enable_cosmetic_file",
+            "cosmetic_file",
+            "web_output_type",
+            "rom",
+            "web_wad_file",
+            "web_common_key_file",
+            "web_common_key_string",
+            "web_wad_channel_id",
+            "web_wad_channel_title",
+            "web_wad_legacy_mode"
+          ]
+        },
+        {
+          "name": "multiworld_section",
+          "text": "Multi-World Generation",
+          "subheader": "Play interconnected seeds with multiple players. Each player receives one of the worlds, which can contain items for other players. See <a href='https://wiki.ootrandomizer.com/index.php?title=Multiworld' target='_blank'>the wiki article on multiworld</a> for details.<br>You will need a plugin like <a href='https://github.com/TestRunnerSRL/bizhawk-co-op' target='_blank'>bizhawk-co-op</a> or <a href='https://midos.house/mw' target='_blank'>Mido's House Multiworld</a> to connect the worlds together.",
+          "row_span": [1,1,1],
+          "settings": [
+            "player_num"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "main_tab",
+      "text": "Main Rules",
+      "app_type": ["generator"],
+      "sections": [
+        {
+          "name": "main_section",
+          "text": "",
+          "col_span": 4,
+          "row_span": [2,2,2],
+          "settings": [
+            "randomize_settings",
+            "logic_rules"
+          ]
+        },
+        {
+          "name": "open_section",
+          "text": "Open",
+          "row_span": [6,6,9],
+          "settings": [
+            "open_forest",
+            "open_kakariko",
+            "open_door_of_time",
+            "zora_fountain",
+            "gerudo_fortress",
+            "dungeon_shortcuts_choice",
+            "dungeon_shortcuts",
+            "bridge",
+            "bridge_medallions",
+            "bridge_stones",
+            "bridge_rewards",
+            "bridge_tokens",
+            "bridge_hearts",
+            "trials_random",
+            "trials"
+          ]
+        },
+        {
+          "name": "world_section",
+          "text": "World",
+          "row_span": [6,6,9],
+          "settings": [
+            "starting_age",
+            "mq_dungeons_mode",
+            "mq_dungeons_specific",
+            "mq_dungeons_count",
+            "empty_dungeons_mode",
+            "empty_dungeons_specific",
+            "empty_dungeons_count",
+            "shuffle_interior_entrances",
+            "shuffle_hideout_entrances",
+            "shuffle_grotto_entrances",
+            "shuffle_dungeon_entrances",
+            "shuffle_bosses",
+            "shuffle_overworld_entrances",
+            "shuffle_gerudo_valley_river_exit",
+            "owl_drops",
+            "warp_songs",
+            "spawn_positions",
+            "triforce_hunt",
+            "triforce_count_per_world",
+            "triforce_goal_per_world",
+            "free_bombchu_drops",
+            "one_item_per_dungeon"
+          ]
+        },
+        {
+          "name": "shuffle_section",
+          "text": "Shuffle",
+          "row_span": [6,6,9],
+          "settings": [
+            "shuffle_song_items",
+            "shopsanity",
+            "shopsanity_prices",
+            "tokensanity",
+            "shuffle_scrubs",
+            "shuffle_child_trade",
+            "adult_trade_shuffle",
+            "adult_trade_start",
+            "shuffle_freestanding_items",
+            "shuffle_pots",
+            "shuffle_crates",
+            "shuffle_cows",
+            "shuffle_beehives",
+            "shuffle_kokiri_sword",
+            "shuffle_ocarinas",
+            "shuffle_gerudo_card",
+            "shuffle_beans",
+            "shuffle_expensive_merchants",
+            "shuffle_frog_song_rupees",
+            "shuffle_loach_reward",
+            "shuffle_individual_ocarina_notes"
+          ]
+        },
+        {
+          "name": "shuffle_dungeon_section",
+          "text": "Shuffle Dungeon Items",
+          "row_span": [6,6,9],
+          "settings": [
+            "shuffle_mapcompass",
+            "shuffle_smallkeys",
+            "shuffle_hideoutkeys",
+            "shuffle_tcgkeys",
+            "key_rings_choice",
+            "key_rings",
+            "keyring_give_bk",
+            "shuffle_bosskeys",
+            "shuffle_ganon_bosskey",
+            "ganon_bosskey_medallions",
+            "ganon_bosskey_stones",
+            "ganon_bosskey_rewards",
+            "ganon_bosskey_tokens",
+            "ganon_bosskey_hearts",
+            "shuffle_silver_rupees",
+            "silver_rupee_pouches_choice",
+            "silver_rupee_pouches",
+            "enhance_map_compass"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "detailed_tab",
+      "text": "Detailed Logic",
+      "app_type": ["generator"],
+      "sections": [
+        {
+          "name": "main_section",
+          "text": "",
+          "col_span": 4,
+          "row_span": [2,2,2],
+          "settings": [
+            "reachable_locations",
+            "logic_no_night_tokens_without_suns_song"
+          ]
+        },
+        {
+          "name": "disabled_locations_section",
+          "text": "Exclude Locations",
+          "row_span": [8,10,10],
+          "settings": [
+            "disabled_locations"
+          ]
+        },
+        {
+          "name": "allowed_tricks_section",
+          "text": "Enable Tricks",
+          "row_span": [8,10,10],
+          "settings": [
+            "allowed_tricks",
+            "tricks_list_msg"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "starting_tab",
+      "text": "Starting Inventory",
+      "app_type": "generator",
+      "sections": [
+        {
+          "name": "starting_equipment_section",
+          "text": "Starting Equipment",
+          "col_span": 2,
+          "row_span": [2,2,2],
+          "settings": [
+            "starting_equipment"
+          ]
+        },
+        {
+          "name": "starting_items_section",
+          "text": "Starting Items",
+          "col_span": 2,
+          "row_span": [3,3,3],
+          "settings": [
+            "starting_inventory"
+          ]
+        },
+        {
+          "name": "starting_songs_section",
+          "text": "Starting Songs",
+          "col_span": 2,
+          "row_span": [2,2,2],
+          "settings": [
+            "starting_songs"
+          ]
+        },
+        {
+          "name": "starting_other_section",
+          "text": "Other",
+          "col_span": 2,
+          "row_span": [1,1,1],
+          "settings": [
+            "start_with_consumables",
+            "start_with_rupees",
+            "starting_hearts"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "other_tab",
+      "text": "Other",
+      "app_type": ["generator"],
+      "sections": [
+        {
+          "name": "speedup_section",
+          "text": "Timesavers",
+          "row_span": [1,1,1],
+          "settings": [
+            "no_escape_sequence",
+            "no_guard_stealth",
+            "no_epona_race",
+            "skip_some_minigame_phases",
+            "complete_mask_quest",
+            "useful_cutscenes",
+            "fast_chests",
+            "free_scarecrow",
+            "fast_bunny_hood",
+            "auto_equip_masks",
+            "plant_beans",
+            "chicken_count_random",
+            "chicken_count",
+            "big_poe_count_random",
+            "big_poe_count",
+            "easier_fire_arrow_entry",
+            "fae_torch_count",
+            "ruto_already_f1_jabu"
+          ]
+        },
+        {
+          "name": "misc_section",
+          "text": "Misc",
+          "row_span": [1,1,1],
+          "settings": [
+            "ocarina_songs",
+            "correct_chest_appearances",
+            "minor_items_as_major_chest",
+            "invisible_chests",
+            "correct_potcrate_appearances",
+            "key_appearance_match_dungeon",
+            "clearer_hints",
+            "hints",
+            "hint_dist",
+            "bingosync_url",
+            "misc_hints",
+            "text_shuffle",
+            "damage_multiplier",
+            "deadly_bonks",
+            "no_collectible_hearts",
+            "starting_tod",
+            "blue_fire_arrows",
+            "fix_broken_drops"
+          ]
+        },
+        {
+          "name": "item_pool_section",
+          "text": "Item Pool",
+          "row_span": [1,1,1],
+          "settings": [
+            "item_pool_value",
+            "junk_ice_traps",
+            "ice_trap_appearance"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "cosmetics_tab",
+      "text": "Cosmetics",
+      "app_type": ["generator", "patcher"],
+      "is_cosmetics": true,
+      "sections": [
+        {
+          "name": "generalcosmetics_section",
+          "text": "General Cosmetics",
+          "col_span": 2,
+          "row_span": [2,2,2],
+          "settings": [
+            "default_targeting",
+            "display_dpad",
+            "dpad_dungeon_menu",
+            "correct_model_colors",
+            "randomize_all_cosmetics"
+          ]
+        },
+        {
+          "name": "playermodels_section_generator",
+          "text": "Player Models",
+          "app_type": ["generator"],
+          "col_span": 2,
+          "row_span": [2,2,2],
+          "settings": [
+            "model_adult",
+            "model_adult_filepicker",
+            "model_child",
+            "model_child_filepicker",
+            "model_unavailable_msg"
+          ]
+        },
+        {
+          "name": "playermodels_section_patcher",
+          "text": "Player Models",
+          "exclude_from_electron": true,
+          "app_type": ["patcher"],
+          "col_span": 2,
+          "row_span": [2,2,2],
+          "settings": [
+            "model_adult_filepicker",
+            "model_child_filepicker"
+          ]
+        },
+        {
+          "name": "equipment_color_section",
+          "text": "Equipment Colors",
+          "is_colors": true,
+          "col_span": 1,
+          "row_span": [5,5,5],
+          "settings": [
+            "kokiri_color",
+            "goron_color",
+            "zora_color",
+            "silver_gauntlets_color",
+            "golden_gauntlets_color",
+            "mirror_shield_frame_color"
+          ]
+        },
+        {
+          "name": "ui_color_section",
+          "text": "UI Colors",
+          "is_colors": true,
+          "col_span": 1,
+          "row_span": [5,5,5],
+          "settings": [
+            "heart_color",
+            "magic_color",
+            "a_button_color",
+            "b_button_color",
+            "c_button_color",
+            "start_button_color"
+          ]
+        },
+        {
+          "name": "misc_color_section",
+          "text": "Misc. Colors",
+          "is_colors": true,
+          "col_span": 2,
+          "row_span": [5,5,5],
+          "settings": [
+            "navi_color_default_inner",
+            "navi_color_default_outer",
+            "navi_color_enemy_inner",
+            "navi_color_enemy_outer",
+            "navi_color_npc_inner",
+            "navi_color_npc_outer",
+            "navi_color_prop_inner",
+            "navi_color_prop_outer",
+            "bombchu_trail_color_inner",
+            "bombchu_trail_color_outer",
+            "boomerang_trail_color_inner",
+            "boomerang_trail_color_outer",
+            "sword_trail_color_inner",
+            "sword_trail_color_outer",
+            "sword_trail_duration"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "sfx_tab",
+      "text": "SFX",
+      "app_type": ["generator", "patcher"],
+      "is_cosmetics": true,
+      "sections": [
+        {
+          "name": "sfx_main_section",
+          "text": "General",
+          "is_sfx": true,
+          "col_span": 2,
+          "row_span": [2,2,2],
+          "settings": [
+            "randomize_all_sfx",
+            "disable_battle_music",
+            "speedup_music_for_last_triforce_piece",
+            "slowdown_music_when_lowhp"
+          ]
+        },
+        {
+          "name": "musicsfx_section",
+          "text": "Music",
+          "is_sfx": true,
+          "col_span": 2,
+          "row_span": [2,2,2],
+          "settings": [
+            "background_music",
+            "fanfares",
+            "ocarina_fanfares"
+          ]
+        },
+        {
+          "name": "itemsfx_section",
+          "text": "Items",
+          "col_span": 2,
+          "row_span": [5,5,5],
+          "settings": [     
+            "sfx_ocarina",
+            "sfx_bombchu_move",
+            "sfx_hover_boots",
+            "sfx_iron_boots",
+            "sfx_boomerang_throw",
+            "sfx_hookshot_chain",
+            "sfx_arrow_shot",
+            "sfx_slingshot_shot",
+            "sfx_magic_arrow_shot",
+            "sfx_explosion"
+          ]
+        },
+        {
+          "name": "voicesfx_section_generator",
+          "text": "Voices",
+          "app_type": ["generator"],
+          "is_sfx": true,
+          "col_span": 1,
+          "row_span": [5,5,5],
+          "settings": [
+            "sfx_link_adult",
+            "sfx_link_child",
+            "sfx_link_unavailable_msg",         
+            "sfx_navi_overworld",
+            "sfx_navi_enemy",
+            "sfx_horse_neigh",
+            "sfx_cucco"
+          ]
+        },
+        {
+          "name": "voicesfx_section_patcher",
+          "text": "Voices",
+          "exclude_from_electron": true,
+          "app_type": ["patcher"],
+          "is_sfx": true,
+          "col_span": 1,
+          "row_span": [5,5,5],
+          "settings": [
+            "sfx_link_adult",
+            "sfx_link_child",
+            "sfx_navi_overworld",
+            "sfx_navi_enemy",
+            "sfx_horse_neigh",
+            "sfx_cucco"
+          ]
+        },
+        {
+          "name": "generalsfx_section",
+          "text": "Misc Sound Effects",
+          "is_sfx": true,
+          "col_span": 1,
+          "row_span": [5,5,5],
+          "settings": [
+            "sfx_daybreak",
+            "sfx_nightfall",
+            "sfx_menu_cursor",
+            "sfx_menu_select",
+            "sfx_low_hp",
+            "sfx_silver_rupee",
+            "sfx_get_small_item"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "footer_tab_electron",
+      "text": "",
+      "exclude_from_web": true,
+      "footer": true,
+      "sections": [
+        {
+          "name": "seed_section",
+          "text": "",
+          "settings": [
+            "generate_from_file"
+          ]
+        },
+        {
+          "name": "file_section",
+          "text": "",
+          "settings": [
+            "patch_file",
+            "repatch_cosmetics"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "footer_tab_web",
+      "text": "",
+      "exclude_from_electron": true,
+      "footer": true,
+      "sections": [
+        {
+          "name": "seed_section",
+          "text": "",
+          "settings": [
+            "generate_from_file"
+          ]
+        },
+        {
+          "name": "file_section",
+          "text": "",
+          "settings": [
+            "patch_file",
+            "repatch_cosmetics",
+            "web_persist_in_cache"
+          ]
+        }
+      ]
+    }
+  ]
+}
