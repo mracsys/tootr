@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react';
+import React, { useEffect, useState, useLayoutEffect } from 'react';
 import clsx from 'clsx';
 //import ls from 'local-storage';
 import merge from 'lodash/merge';
@@ -9,6 +9,7 @@ import isArray from 'lodash/isArray';
 import cloneDeep from 'lodash/cloneDeep';
 import clone from 'lodash/clone';
 //import { createMuiTheme, withStyles, ThemeProvider } from '@mui/material/styles';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
@@ -17,8 +18,8 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import List from '@mui/material/List';
 import Button from '@mui/material/Button';
-//import Brightness7Icon from '@mui/icons-material/Brightness7';
-//import Brightness3Icon from '@mui/icons-material/Brightness3';
+import Brightness7Icon from '@mui/icons-material/Brightness7';
+import Brightness3Icon from '@mui/icons-material/Brightness3';
 import ListItem from '@mui/material/ListItem';
 import PublicIcon from '@mui/icons-material/Public';
 import MeetingRoomIcon from '@mui/icons-material/MeetingRoom';
@@ -34,9 +35,7 @@ import { Link } from '@mui/material';
 import Collapse from '@mui/material/Collapse';
 import '/public/index.css';
 import CssBaseline from '@mui/material/CssBaseline';
-import blueGrey from '@mui/material/colors/blueGrey';
-import grey from '@mui/material/colors/grey';
-import yellow from '@mui/material/colors/yellow';
+
 
 import GameSetting from './GameSetting';
 import GameArea from './GameArea';
@@ -44,6 +43,7 @@ import EntranceMenu from './EntranceMenu';
 import ItemMenu from './ItemMenu';
 import ShopItemMenu from './ShopItemMenu.js';
 import ContextMenuHandler from './ContextMenuHandler';
+
 
 import death_mountain_crater from '@/data/locations/death_mountain_crater.json';
 import death_mountain_trail from '@/data/locations/death_mountain_trail.json';
@@ -91,789 +91,39 @@ import maxChex from '@/data/settings_presets/1175.json';
 import mw3 from '@/data/settings_presets/mw3.json';
 import OotIcon from './OotIcon';
 
-const drawerWidth = 240;
+const trackerVersion = '1.0.0';
 
-/*const useStyles = (theme) => ({
-    root: {
-        display: 'flex',
-    },
-    scrollControl: {
-        display: 'block',
-        width: 0,
-        height: 0,
-        margin: 0,
-        padding: 0,
-        border: 0,
-    },
-    redAlert: {
-        color: 'red',
-        fontSize: '2em',
-    },
-    appBar: {
-        zIndex: theme.zIndex.drawer + 1,
-        transition: theme.transitions.create(['margin', 'width'], {
-            easing: theme.transitions.easing.sharp,
-            duration: theme.transitions.duration.leavingScreen,
-        }),
-        backgroundColor: blueGrey[600],
-    },
-    appBarShift: {
-        width: `calc(100% - ${drawerWidth}px)`,
-        marginLeft: drawerWidth,
-        transition: theme.transitions.create(['margin', 'width'], {
-            easing: theme.transitions.easing.easeOut,
-            duration: theme.transitions.duration.enteringScreen,
-        }),
-    },
-    hide: {
-        display: 'none',
-    },
-    menuButton: {
-        color: 'rgba(0, 0, 0, 0.87)',
-        backgroundColor: '#e0e0e0',
-        boxShadow: '0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12)',
-        padding: '6px 16px',
-        fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
-        fontSize: '0.875rem',
-        fontWeight: '500',
-        lineHeight: '1.75',
-        borderRadius: '4px',
-        textTransform: 'uppercase',
-        transition: 'background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms',
-        cursor: 'pointer',
-        border: 0,
-        margin: 0,
-        display: 'inline-flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        textDecoration: 'none',
-        verticalAlign: 'middle',
-        position: 'relative',
-        outline: 0,
-    },
-    menuButtonLabel: {
-        fontSize: '0.875rem',
-        fontWeight: '500',
-        lineHeight: '1.75',
-    },
-    title: {
-        flexGrow: 1,
-        padding: theme.spacing(1.5,2),
-    },
-    titleText: {
-        'font-family': 'Hylia Serif Beta',
-        fontSize: '2.125rem',
-    },
-    checkCount: {
-        'font-family': 'Hylia Serif Beta',
-        fontSize: '1.5rem',
-        marginRight: theme.spacing(2),
-    },
-    nested: {
-        marginLeft: theme.spacing(4),
-        fontSize: '1rem',
-        color: 'rgba(0, 0, 0, 0.87)',
-        boxSizing: 'border-box',
-        position: 'relative',
-        lineHeight: '1.1876em',
-        letterSpacing: '0.00938em',
-        display: 'flex',
-        flexDirection: 'column',
-    },
-    nestedWrapper: {
-        display: 'inline-block',
-    },
-    wrapperWrapper: {
-        display: 'block',
-    },
-    settingSelect: {
-        font: 'inherit',
-        borderRadius: 0,
-        border: 0,
-        minWidth: theme.spacing(2),
-        cursor: 'pointer',
-        paddingRight: theme.spacing(3),
-        display: 'block',
-        height: '1.1876em',
-        margin: 0,
-        padding: '6px 0px 7px 0.25em',
-        boxSizing: 'content-box',
-        '-webkit-appearance': 'none',
-        '-moz-appearance': 'none',
-        appearance: 'none',
-        background: 'url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'128\' height=\'128\' fill=\'black\'><polygon points=\'0,0 96,0 48,48\'/></svg>") no-repeat',
-        backgroundSize: '12px',
-        backgroundPosition: 'right 0.5em top 70%',
-        backgroundRepeat: 'no-repeat',
-    },
-    settingText: {
-        color: 'rgba(0, 0, 0, 0.54)',
-        margin: 0,
-        paddingTop: '3px',
-        marginBottom: theme.spacing(2),
-        textAlign: 'left',
-        fontSize: '0.75rem',
-        fontWeight: '400',
-        lineHeight: '1.66',
-        letterSpacing: '0.03333em',
-        borderTop: '1px solid rgba(0, 0, 0, 0.42)',
-    },
-    drawer: {
-        width: drawerWidth,
-        flexShrink: 0,
-    },
-    drawerPaper: {
-        width: drawerWidth,
-    },
-    drawerHeader: {
-        display: 'flex',
-        alignItems: 'center',
-        padding: theme.spacing(0,1),
-        // necessary for content to be below app bar
-        ...theme.mixins.toolbar,
-        justifyContent: 'flex-end',
-    },
-    drawerContainer: {
-        overflow: 'auto',
-    },
-    areaPaper: {
-        flexGrow: 1,
-        //padding: theme.spacing(3),
-        transition: theme.transitions.create('margin', {
-          easing: theme.transitions.easing.sharp,
-          duration: theme.transitions.duration.leavingScreen,
-        }),
-        marginLeft: -drawerWidth,
-        padding: '20px 20px 56px 20px',
-    },
-    areaPaperShift: {
-        transition: theme.transitions.create('margin', {
-            easing: theme.transitions.easing.easeOut,
-            duration: theme.transitions.duration.enteringScreen,
-        }),
-        marginLeft: 0,
-        padding: 20,
-    },
-    areaCard: {
-        [theme.breakpoints.down('xs')]: {
-            width: '100%',
-        },
-        [theme.breakpoints.up('sm')]: {
-            marginRight: 20,
-        },
-        display: 'inline-block',
-        maxWidth: '100%',
-        marginBottom: 20,
-        'vertical-align': 'top',
-        backgroundColor: '#cbc26d',
-        borderRadius: 4,
-        overflow: 'hidden',
-        boxShadow: '0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12)',
-    },
-    areaHeader: {
-        padding: theme.spacing(0.75),
-    },
-    areaTitle: {
-        backgroundColor: yellow[200],
-        display: 'flex',
-        'flex-direction': 'row',
-        padding: theme.spacing(1, 2, 1, 0.5),
-        alignItems: 'center',
-    },
-    areaTitleText: {
-        fontFamily: 'Roboto,sans-serif',
-        fontSize: '1.25rem',
-        fontWeight: 500,
-        lineHeight: 1.6,
-    },
-    areaTitleCollapse: {
-        flexGrow: 1,
-        cursor: 'pointer',
-        display: 'flex',
-        alignItems: 'center',
-    },
-    mqSwitchLabel: {
-        marginLeft: theme.spacing(3),
-        fontSize: '1rem',
-        lineHeight: '1.5',
-        letterSpacing: '0.00938em',
-    },
-    areaButton: {
-        marginLeft: theme.spacing(1),
-    },
-    areaContent: {
-        padding: 0,
-    },
-    locationList: {
-        margin: 0,
-        padding: 0,
-    },
-    locationContainer: {
-        padding: theme.spacing(1,2),
-        backgroundColor: grey[200],
-        display: 'flex',
-        position: 'relative',
-        boxSizing: 'border-box',
-        alignItems: 'center',
-        justifyContent: 'flex-start',
-        cursor: 'pointer',
-        "&:hover": {
-            backgroundColor: 'rgba(0, 0, 0, 0.04)',
-        },
-        "& $iconDiv": {
-            padding: '0px 1em 0px 0px',
-        },
-    },
-    shopContainer: {
-        padding: theme.spacing(1,2),
-        backgroundColor: grey[200],
-        display: 'flex',
-        boxSizing: 'border-box',
-        alignItems: 'center',
-        justifyContent: 'center',
-        textAlign: 'center',
-        verticalAlign: 'center',
-        "& $iconDiv": {
-            padding: '0px 1em 0px 0px',
-        },
-        "& div": {
-            lineHeight: 0,
-        }
-    },
-    fixedShopIcon: {
-        lineHeight: 0,
-        margin: 0,
-        padding: 0,
-        cursor: 'pointer',
-        width: '24px',
-        height: '24px',
-        marginLeft: theme.spacing(1),
-        marginRight: theme.spacing(1.75),
-    },
-    locationIcon: {
-        marginRight: theme.spacing(2),
-        width: '24px',
-        height: '24px',
-    },
-    locationIconBlank: {
-        marginRight: theme.spacing(2)+24,
-    },
-    locationText: {
-        flexGrow: 1,
-        margin: 0,
-        textAlign: 'left',
-        fontSize: '0.875rem',
-        fontWeight: '400',
-        lineHeight: '1.43',
-    },
-    locationMark: {
-        marginRight: 2,
-        marginLeft: theme.spacing(1),
-    },
-    locationPeek: {
-        marginLeft: theme.spacing(3),
-    },
-    locationUnknownItem: {
-        marginLeft: theme.spacing(1),
-        width: theme.spacing(4),
-        height: theme.spacing(4),
-        border: 2,
-        borderColor: '#000000',
-        borderStyle: 'dashed',
-        borderRadius: '5px',
-        "&:hover": {
-            cursor: 'pointer',
-        }
-    },
-    itemIcon: {
-        width: '24px',
-        height: '24px',
-        verticalAlign: 'middle',
-    },
-    iconDiv: {
-        cursor: 'pointer',
-    },
-    iconKeyText: {
-        position: 'absolute',
-        bottom: -8,
-        left: 16,
-        'font-family': 'Hylia Serif Beta',
-        lineHeight: '1.43em',
-    },
-    iconTradeText: {
-        position: 'absolute',
-        bottom: -8,
-        left: 24,
-        'font-family': 'Hylia Serif Beta',
-        lineHeight: '1.43em',
-    },
-    iconContainer: {
-        position: 'relative',
-    },
-    locationKnownItem: {
-        marginLeft: theme.spacing(1),
-        position: 'relative',
-        color: 'black',
-        marginTop: 0,
-        marginBottom: 0,
-        "& img": {
-            width: '24px',
-            height: '24px',
-            verticalAlign: 'middle',
-        },
-    },
-    locationWalletTier: {
-        "& $iconDiv": {
-            marginLeft: theme.spacing(1),
-            padding: 0,
-            position: 'relative',
-            color: 'black',
-            "& img": {
-                width: '16px',
-                height: '16px',
-                verticalAlign: 'middle',
-            },
-        }
-    },
-    priceBox: {
-        width: '3em',
-        marginLeft: theme.spacing(1),
-        textAlign: 'right',
-    },
-    locationMenuIcon: {
-        position: 'relative',
-        "& img": {
-            width: '32px',
-            height: '32px',
-        },
-    },
-    grayscaleMenuIcon: {
-        position: 'relative',
-        "& img": {
-            width: '32px',
-            height: '32px',
-            filter: 'grayscale(100%)',
-        },
-    },
-    locationMenuIconContainer: {
-    },
-    locationMenuClear: {
-        padding: theme.spacing(2),
-        margin: 0,
-        textAlign: 'center',
-        fontSize: '0.875rem',
-        fontWeight: '400',
-        lineHeight: '1.43',
-        color: '#FFFFFF',
-        "&:hover": {
-            backgroundColor: grey[800],
-            cursor: 'pointer',
-        }
-    },
-    locationItemMenu: {
-        lineHeight: 0,
-        padding: 0,
-        "& ul": {
-            padding: 0,
-            backgroundColor: grey[900],
-        },
-        "& $iconKeyText": {
-            color: '#FFFFFF',
-        },
-        "& $iconTradeText": {
-            color: '#FFFFFF',
-        },
-        "& $iconDiv": {
-            padding: '8px',
-            backgroundColor: grey[900],
-        },
-        "& $iconDiv:hover": {
-            backgroundColor: grey[800],
-            cursor: 'pointer',
-            margin: '0 auto',
-        },
-    },
-    itemMenuPaper: {
-        overflowX: 'auto',
-        overflowY: 'auto',
-        backgroundColor: grey[900],
-        width: '528px',
-    },
-    itemMenuRow: {
-        whiteSpace: 'nowrap',
-        backgroundColor: grey[900],
-        "& div": {
-            display: 'inline-block',
-        },
-        "& $itemMenuClear": {
-            width: '528px',
-        },
-    },
-    itemMenuClear: {
-    },
-    MenuPadding: {
-        paddingTop: 0,
-        paddingBottom: 0,
-    },
-    entranceAutoOption: {
-        display: 'block',
-        padding: 0,
-        paddingLeft: 0,
-        '&[data-focus="true"]': {
-            textDecoration: 'none',
-            backgroundColor: '#52525E',
-            color: '#FFFFFF',
-        },
-    },
-    entranceAutoUl: {
-        '& .MuiAutocomplete-option': {
-            paddingLeft: 0,
-        },
-    },
-    entranceAutoPaper: {
-        fontSize: '0.875rem',
-        lineHeight: 1.43,
-        letterSpacing: '0.01071em',
-        margin: 0,
-    },
-    entranceAutoListBox: {
-        padding: 0,
-    },
-    entranceAutoPopper: {
-        position: 'relative',
-    },
-    entranceAutoInput: {
-        backgroundColor: '#fff',
-        borderBottom: '1px solid black',
-        "&:after": {
-            borderBottom: '0px solid #000',
-        },
-        "&:before": {
-            borderBottom: '0px solid #000',
-        },
-        "&:hover:before": {
-            borderBottom: '0px solid #000',
-        },
-    },
-    entranceAutoSearchLabel: {
-        "& .Mui-focused": {
-            color: 'rgba(0, 0, 0, 1)',
-        },
-    },
-    entranceAutoNoButton: {
-        display: 'none',
-    },
-    entranceAutoWidthHack: {
-        padding: theme.spacing(0,0.75,0,6.5),
-        fontFamily: 'Tahoma, sans-serif',
-        fontSize: '1rem',
-        fontWeight: '400',
-        lineHeight: 'normal',
-        letterSpacing: '0.00938em',
-        height: 0,
-        color: 'rgba(0, 0, 0, 0)',
-    },
-    entranceContainer: {
-        display: 'flex',
-        'justify-content': 'space-between',
-        padding: theme.spacing(1,2),
-        alignItems: 'center',
-        backgroundColor: grey[50],
-    },
-    entranceLabel: {
-        'vertical-align': 'center',
-        'margin-right': 20,
-        'font-weight': 'bold',
-        flexGrow: 1,
-        fontSize: '1rem',
-        lineHeight: '1.5',
-        letterSpacing: '0.00938em',
-    },
-    unlinkedEntranceLabel: {
-        'vertical-align': 'center',
-        'margin-right': 20,
-        'font-weight': 'bold',
-        flexGrow: 1,
-        color: '#FF0000',
-        fontSize: '1rem',
-        lineHeight: '1.5',
-        letterSpacing: '0.00938em',
-    },
-    unlinkedEntranceMenu: {
-        display: 'flex',
-        alignItems: 'center',
-        margin: 0,
-        padding: theme.spacing(0.5,0),
-        cursor: 'pointer',
-        marginLeft: theme.spacing(2),
-        fontSize: '1rem',
-        fontWeight: '400',
-        lineHeight: '1.1876em',
-        letterSpacing: '0.00938em',
-        position: 'relative',
-        "&:before": {
-            content: '""',
-            display: "block",
-            borderBottom: '1px solid rgba(0, 0, 0, 0.42)',
-            transition: 'border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms',
-            position: 'absolute',
-            left: 0,
-            right: 0,
-            bottom: 0,
-        },
-        "&:hover:before": {
-            borderBottom: '2px solid rgba(0, 0, 0, 0.87)',
-        },
-        "& span": {
-            marginRight: theme.spacing(1),
-        }
-    },
-    linkLabel: {
-        'vertical-align': 'center',
-        textAlign: 'right',
-    },
-    entranceLink: {
-        textAlign: 'right',
-    },
-    entranceLink1: {
-        'font-weight': 'bold',
-        fontSize: '1rem',
-        lineHeight: '1.5',
-        letterSpacing: '0.00938em',
-    },
-    entranceLink2: {
-        fontSize: '0.75rem',
-        lineHeight: '1.66',
-        letterSpacing: '0.03333em',
-    },
-    settingCategory: {
-        display: 'flex',
-        alignItems: 'center',
-        fontSize: '1rem',
-        fontWeight: '400',
-        lineHeight: '1.5',
-        letterSpacing: '0.00938em',
-        padding: theme.spacing(1.5,2),
-        cursor: 'pointer',
-        transition: 'background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms',
-        backgroundColor: 'transparent',
-        "&:hover": {
-            backgroundColor: 'rgba(0, 0, 0, 0.04)'
-        },
-        "& span": {
-            flex: '1 1 auto',
-        }
-    },
-    devLink: {
-        padding: theme.spacing(1, 0),
-    },
-    entranceAnchor: {
-        textDecoration: 'none',
-        height: 0,
-        position: "relative",
-        top: -theme.spacing(10),
-        "&:hover": {
-            textDecoration: 'none',
-            cursor: 'default',
-        },
-        "&:before": {
-            content: '""',
-            display: "block",
-            //height: theme.spacing(10),
-            //marginTop: -theme.spacing(10),
-        }
-    },
-    entranceAnchorFakeText: {
-        height: 1,
-        width: 1,
-        position: "absolute",
-        overflow: "hidden",
-        top: -10,
-    },
-    overworldLinkAnchor: {
-        color: 'inherit',
-        textDecoration: 'none',
-        "&:hover": {
-            textDecoration: 'underline',
-        }
-    },
-    falseLinkAnchor: {
-        textDecoration: 'none',
-        "&:hover": {
-            textDecoration: 'none',
-            cursor: 'default',
-        }
-    },
-    entranceText: {
-        padding: theme.spacing(0.75,0.75,0.75,3),
-        fontFamily: 'Tahoma, sans-serif',
-        fontSize: '1rem',
-        fontWeight: '400',
-        lineHeight: 'normal',
-        letterSpacing: '0.00938em',
-        "&:hover": {
-            textDecoration: 'none',
-            backgroundColor: '#52525E',
-            color: '#FFFFFF',
-        }
-    },
-    entranceAreaText: {
-        padding: theme.spacing(0.75,0.75),
-        fontFamily: 'Tahoma, sans-serif',
-        fontSize: '1rem',
-        lineHeight: 'normal',
-        letterSpacing: '0.00938em',
-        fontWeight: 'bold',
-        fontStyle: 'italic',
-        color: '#000',
-        "&:hover": {
-            textDecoration: 'none',
-            cursor: 'default',
-        }
-    },
-    warpMenu: {
-        [theme.breakpoints.down('xs')]: {
-            width: '100%',
-        },
-        [theme.breakpoints.up('sm')]: {
-            borderRadius: '8px 0 0 0',
-            overflow: 'hidden',
-        },
-        position: 'fixed',
-        bottom: 0,
-        right: 0,
-        zIndex: 10,
-        display: 'flex',
-        flexDirection: 'column',
-        "& $iconKeyText": {
-            color: '#FFFFFF',
-        },
-        "& $iconTradeText": {
-            color: '#FFFFFF',
-        },
-        "& $iconDiv": {
-            padding: '8px',
-            lineHeight: 0,
-        },
-        "& $iconDiv:hover": {
-            backgroundColor: blueGrey[800],
-            cursor: 'pointer',
-        },
-        backgroundColor: blueGrey[600],
-        boxShadow: '-2px -2px 4px -1px rgba(0,0,0,0.2),-4px -4px 5px 0px rgba(0,0,0,0.14),-1px -1px 10px 0px rgba(0,0,0,0.12)',
-        maxHeight: '50%',
-    },
-    warpMenuVisible: {
-        flexShrink: 0,
-        display: 'flex',
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    expandWarpMenu: {
-        color: 'white',
-        width: '32px',
-        height: '100%',
-        cursor: 'pointer',
-        "&:hover": {
-            backgroundColor: blueGrey[800],
-        }
-    },
-    warpAreaList: {
-        overflowY: 'auto',
-        flexGrow: 1,
-    },
-    warpMenuArea: {
-        display: 'block',
-        color: 'white',
-        fontWeight: 'bold',
-        padding: theme.spacing(1),
-        cursor: 'pointer',
-        "&:hover": {
-            backgroundColor: blueGrey[800],
-        }
-    },
-    warpMenuAreaHidden: {
-        display: 'block',
-        color: grey[500],
-        fontWeight: 'bold',
-        padding: theme.spacing(1),
-    },
-    warpSongsBig: {
-        [theme.breakpoints.down('xs')]: {
-            display: 'none',
-        },
-        [theme.breakpoints.up('sm')]: {
-            display: 'flex',
-        },
-    },
-    warpSongsSmall: {
-        [theme.breakpoints.down('xs')]: {
-            display: 'flex',
-        },
-        [theme.breakpoints.up('sm')]: {
-            display: 'none',
-        },
-    },
-    warpSongsBlank: {
-        [theme.breakpoints.down('xs')]: {
-            color: grey[500],
-            width: '32px',
-            height: '100%',
-            cursor: 'pointer',
-        },
-        [theme.breakpoints.up('sm')]: {
-            display: 'none',
-        },
-    },
-    collapseArea: {
-        cursor: 'pointer',
-    }
-});*/
+const Tracker = (props) => {
+    let [enabled_settings, setEnabledSettings] = useState({});
+    let [settings, setSettings] = useState({});
+    let [areas, setAreas] = useState({});
+    let [entrances, setEntrances] = useState({});
+    let [oneWayEntrances, setOneWayEntrances] = useState({});
+    let [allEntrances, setAllEntrances] = useState({});
+    let [allAreas, setAllAreas] = useState({});
+    let [openSettings, setOpenSettings] = useState(false);
+    let [themeDark, setThemeDark] = useState(false);
+    let [alertReset, setAlertReset] = useState(false);
+    let [alertUpdate, setAlertUpdate] = useState(false);
+    let [itemMenuLocation, setItemMenuLocation] = useState(null);
+    let [itemMenuOpen, setItemMenuOpen] = useState(null);
+    let [shopItemMenuOpen, setShopItemMenuOpen] = useState(null);
+    let [entranceMenuOpen, setEntranceMenuOpen] = useState(null);
+    let [entranceToLink, setEntranceToLink] = useState(null);
+    let [entranceConnector, setEntranceConnector] = useState(null);
+    let [locationToLink, setLocationToLink] = useState(null);
+    let [expandWarpMenu, setExpandWarpMenu] = useState(false);
+    let [expandDungeonMenu, setExpandDungeonMenu] = useState(false);
+    let [expandSongMenu, setExpandSongMenu] = useState(false);
+    let [entranceType, setEntranceType] = useState('');
+    let [delayedURL, setDelayedURL] = useState('');
+    let [entranceRef, setEntranceRef] = useState(null);
+    let [scrollY, setScrollY] = useState(null);
+    let [trackerInitialized, setTrackerInitialized] = useState(false);
+    let [scroller, setScroller] = useState({});
 
-//const light = createMuiTheme({
-//    palette: {
-//        type: 'light',
-//    },
-//});
-
-//const dark = createMuiTheme({
-//    palette: {
-//        type: 'dark',
-//    },
-//});
-
-const trackerVersion = '0.3.7';
-
-class Tracker extends React.Component {
-    constructor(props) {
-        super(props);
-
-        this.linkEntrance = this.linkEntrance.bind(this);
-        this.unLinkEntrance = this.unLinkEntrance.bind(this);
-        this.checkLocation = this.checkLocation.bind(this);
-        this.unCheckLocation = this.unCheckLocation.bind(this);
-        this.resetState = this.resetState.bind(this);
-        this.cancelAlert = this.cancelAlert.bind(this);
-        this.toggleMQ = this.toggleMQ.bind(this);
-        this.toggleCollapse = this.toggleCollapse.bind(this);
-        this.toggleCollapseReverse = this.toggleCollapseReverse.bind(this);
-        this.handleItemMenuOpen = this.handleItemMenuOpen.bind(this);
-        this.handleItemMenuClose = this.handleItemMenuClose.bind(this);
-        this.handleShopItemMenuOpen = this.handleShopItemMenuOpen.bind(this);
-        this.handleShopItemMenuClose = this.handleShopItemMenuClose.bind(this);
-        this.handleEntranceMenuOpen = this.handleEntranceMenuOpen.bind(this);
-        this.handleEntranceMenuClose = this.handleEntranceMenuClose.bind(this);
-        this.toggleWalletTiers = this.toggleWalletTiers.bind(this);
-        this.updateShopPrice = this.updateShopPrice.bind(this);
-        this.findItem = this.findItem.bind(this);
-        this.handleDungeonTravel = this.handleDungeonTravel.bind(this);
-        this.handleWarpMenu = this.handleWarpMenu.bind(this);
-        this.toggleAreaView = this.toggleAreaView.bind(this);
-        this.setRef = this.setRef.bind(this);
-
-        this.scroller = {};
-
+    // run on mount and unmount
+    useEffect(() => {
         /*if (!!(localStorage.getItem('TrackerVersion'))) {
             if (localStorage.getItem('TrackerVersion') !== trackerVersion) {
                 // outdated, reset everything until proper upgrade function developed
@@ -886,10 +136,10 @@ class Tracker extends React.Component {
             localStorage.setItem('TrackerVersion', trackerVersion);
         }*/
         //let settings = !!(localStorage.getItem('RandoSettings')) ? localStorage.getItem('RandoSettings') : cloneDeep(defaultSettings.Settings);
-        let settings = cloneDeep(defaultSettings.Settings);
+        let settingsInit = cloneDeep(defaultSettings.Settings);
         // Disable preset settings on load until custom saved settings are handled
-        //let presetSettings = this.getPresetSettings(settings['Settings Preset']);
-        //this.setPresetSettings(settings, presetSettings);
+        //let presetSettings = getPresetSettings(settings['Settings Preset']);
+        //setPresetSettings(settings, presetSettings);
         let areaJSON = merge(death_mountain_crater, death_mountain_trail, desert_colossus,
             gerudo_fortress, gerudo_valley, goron_city, graveyard, haunted_wasteland,
             hyrule_field, kakariko_village, kokiri_forest, lake_hylia, lon_lon_ranch,
@@ -897,103 +147,57 @@ class Tracker extends React.Component {
             zora_fountain, zora_river, zoras_domain, deku_tree, dodongos_cavern, jabu_jabus_belly,
             forest_temple, fire_temple, water_temple, shadow_temple, spirit_temple,
             bottom_of_the_well, ice_cavern, gerudo_training_ground, ganons_castle);
-        //let allAreas = !!(localStorage.getItem('AllAreas')) ? localStorage.getItem('AllAreas') : this.addReverseEntrances(areaJSON);
-        //let allEntrances = !!(localStorage.getItem('AllEntrances')) ? localStorage.getItem('AllEntrances') : merge({}, this.categorizeEntrances(allAreas));
-        let allAreas = this.addReverseEntrances(areaJSON);
-        let allEntrances = merge({}, this.categorizeEntrances(allAreas));
-        this.findVisibleLocations(settings, allAreas);
-        let areas = this.loadAreas(settings, allAreas, allEntrances, true);
-        let entrances = this.loadEntrancePools(settings, allEntrances, allAreas);
-        let oneWayEntrances = this.loadOneWayEntrancePools(settings, allEntrances, allAreas);
+        //let allAreas = !!(localStorage.getItem('AllAreas')) ? localStorage.getItem('AllAreas') : addReverseEntrances(areaJSON);
+        //let allEntrances = !!(localStorage.getItem('AllEntrances')) ? localStorage.getItem('AllEntrances') : merge({}, categorizeEntrances(allAreas));
+        let allAreasInit = addReverseEntrances(areaJSON);
+        let allEntrancesInit = merge({}, categorizeEntrances(allAreasInit));
+        findVisibleLocations(settingsInit, allAreasInit);
+        let areasInit = loadAreas(settingsInit, allAreasInit, allEntrancesInit, true);
+        let entrancesInit = loadEntrancePools(settingsInit, allEntrancesInit, allAreasInit);
+        let oneWayEntrancesInit = loadOneWayEntrancePools(settingsInit, allEntrancesInit, allAreasInit);
 
         //let darkMode = !!(localStorage.getItem('DarkMode')) ? true : localStorage.getItem('DarkMode');
-        let darkMode = false;
+        const darkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-        this.contextMenuHandler = new ContextMenuHandler(this.handleItemMenuOpen);
-        this.shopContextMenuHandler = new ContextMenuHandler(this.handleShopItemMenuOpen);
-        this.areaMenuHandler = new ContextMenuHandler(this.toggleAreaView);
-        this.reverseCollapseHandler = new ContextMenuHandler(this.toggleCollapseReverse);
-
-        this.state = {
-            enabled_settings: devr.Settings,
-            settings: settings,
-            areas: areas,
-            entrances: entrances,
-            oneWayEntrances: oneWayEntrances,
-            allEntrances: allEntrances,
-            allAreas: allAreas,
-            openSettings: false,
-            themeDark: darkMode,
-            alertReset: false,
-            alertUpdate: false,
-            itemMenuLocation: null,
-            itemMenuOpen: null,
-            shopItemMenuOpen: null,
-            entranceMenuOpen: null,
-            entranceToLink: null,
-            entranceConnector: null,
-            locationToLink: null,
-            expandWarpMenu: false,
-            expandDungeonMenu: false,
-            expandSongMenu: false,
-            entranceType: "",
-            delayedURL: "",
-            entranceRef: null,
-            scrollY: null,
-        };
-    }
-
-    setRef(index, element) {
-        this.scroller[index] = element;
-    }
+        setEnabledSettings(devr.Settings);
+        setSettings(settingsInit);
+        setAreas(areasInit);
+        setEntrances(entrancesInit);
+        setOneWayEntrances(oneWayEntrancesInit);
+        setAllEntrances(allEntrancesInit);
+        setAllAreas(allAreasInit);
+        setThemeDark(darkMode);
+        setTrackerInitialized(true);
+    }, []);
 
     // When swapping between Overworld and Dungeon views, anchors don't
     // work until after rendering. Ugly workaround incoming.
-    componentDidMount() {
-        if (this.state.delayedURL !== "") {
-            window.location.assign(this.state.delayedURL);
-            this.setState({
-                delayedURL: "",
-            });
+    // run every render
+    useEffect(() => {
+        if (delayedURL !== '') {
+            window.location.assign(delayedURL);
+            setDelayedURL('');
         }
-        if (this.state.scrollY !== null && Object.keys(this.scroller).includes(this.state.entranceRef)) {
-            let eRef = this.scroller[this.state.entranceRef];
+        if (scrollY !== null && Object.keys(scroller).includes(entranceRef)) {
+            let eRef = scroller[entranceRef];
             let rect = eRef.getBoundingClientRect();
             let oTop = rect.top;
-            let scrollY = this.state.scrollY;
+            let scrollToY = scrollY;
             window.scrollTo({
-                top: 2 * window.scrollY + oTop - scrollY,
-            })
-            this.setState({
-                scrollY: null,
-                entranceRef: null,
-            })
-        }
-    }
-
-    componentDidUpdate() {
-        if (this.state.delayedURL !== "") {
-            window.location.assign(this.state.delayedURL);
-            this.setState({
-                delayedURL: "",
+                top: 2 * window.scrollY + oTop - scrollToY,
             });
+            setScrollY(null);
+            setEntranceRef(null);
         }
-        if (this.state.scrollY !== null && Object.keys(this.scroller).includes(this.state.entranceRef)) {
-            let eRef = this.scroller[this.state.entranceRef];
-            let rect = eRef.getBoundingClientRect();
-            let oTop = rect.top;
-            let scrollY = this.state.scrollY;
-            window.scrollTo({
-                top: 2 * window.scrollY + oTop - scrollY,
-            })
-            this.setState({
-                scrollY: null,
-                entranceRef: null,
-            })
-        }
+    });
+
+    const setRef = (index, element) => {
+        let tempScroller = cloneDeep(scroller);
+        tempScroller[index] = element;
+        setScroller(tempScroller);
     }
 
-    getPresetSettings(presetName, customSettings={}) {
+    const getPresetSettings = (presetName, customSettings={}) => {
         let presetSettings;
         switch (presetName) {
             case "RSL":
@@ -1027,25 +231,25 @@ class Tracker extends React.Component {
         return presetSettings;
     }
 
-    setPresetSettings(gameSettings, presetSettings) {
+    const setPresetSettings = (gameSettings, presetSettings) => {
         Object.keys(presetSettings).forEach(setting => {
             gameSettings[setting] = presetSettings[setting];
         });
     }
 
-    resetState(currentSettings) {
-        let settings = cloneDeep(defaultSettings.Settings);
+    const resetState = (currentSettings) => {
+        let settingsReset = cloneDeep(defaultSettings.Settings);
 
         // TODO: Separate tracker and world/preset settings
         let prevSettings = cloneDeep(currentSettings);
-        settings["Settings Preset"] = prevSettings["Settings Preset"];
-        settings["Show Unshuffled Entrances"] = prevSettings["Show Unshuffled Entrances"];
-        settings["Show Locations"] = prevSettings["Show Locations"];
-        settings["Show Unshuffled Skulls"] = prevSettings["Show Unshuffled Skulls"];
-        settings["Shop Price Tracking"] = prevSettings["Shop Price Tracking"];
+        settingsReset["Settings Preset"] = prevSettings["Settings Preset"];
+        settingsReset["Show Unshuffled Entrances"] = prevSettings["Show Unshuffled Entrances"];
+        settingsReset["Show Locations"] = prevSettings["Show Locations"];
+        settingsReset["Show Unshuffled Skulls"] = prevSettings["Show Unshuffled Skulls"];
+        settingsReset["Shop Price Tracking"] = prevSettings["Shop Price Tracking"];
         
-        //let presetSettings = this.getPresetSettings(settings['Settings Preset'], prevSettings);
-        //this.setPresetSettings(settings, presetSettings);
+        //let presetSettings = getPresetSettings(settingsReset['Settings Preset'], prevSettings);
+        //setPresetSettings(settingsReset, presetSettings);
 
         let areaJSON = merge(death_mountain_crater, death_mountain_trail, desert_colossus,
             gerudo_fortress, gerudo_valley, goron_city, graveyard, haunted_wasteland,
@@ -1054,121 +258,120 @@ class Tracker extends React.Component {
             zora_fountain, zora_river, zoras_domain, deku_tree, dodongos_cavern, jabu_jabus_belly,
             forest_temple, fire_temple, water_temple, shadow_temple, spirit_temple,
             bottom_of_the_well, ice_cavern, gerudo_training_ground, ganons_castle);
-        let allAreas = this.addReverseEntrances(areaJSON);
-        let allEntrances = merge({}, this.categorizeEntrances(allAreas));
-        this.findVisibleLocations(settings, allAreas);
-        let areas = this.loadAreas(settings, allAreas, allEntrances, true);
-        let entrances = this.loadEntrancePools(settings, allEntrances, allAreas);
-        let oneWayEntrances = this.loadOneWayEntrancePools(settings, allEntrances, allAreas);
+        let allAreasReset = addReverseEntrances(areaJSON);
+        let allEntrancesReset = merge({}, categorizeEntrances(allAreasReset));
+        findVisibleLocations(settingsReset, allAreasReset);
+        let areasReset = loadAreas(settingsReset, allAreasReset, allEntrancesReset, true);
+        let entrancesReset = loadEntrancePools(settingsReset, allEntrancesReset, allAreasReset);
+        let oneWayEntrancesReset = loadOneWayEntrancePools(settingsReset, allEntrancesReset, allAreasReset);
 
-        this.setState({
-            settings: settings,
-            areas: areas,
-            entrances: entrances,
-            oneWayEntrances: oneWayEntrances,
-            allEntrances: allEntrances,
-            allAreas: allAreas,
-            alertReset: false,
-            expandWarpMenu: false,
-            expandDungeonMenu: false,
-            expandSongMenu: false,
-        });
-        //localStorage.setItem('RandoSettings', settings);
-        //localStorage.setItem('AllAreas', allAreas);
-        //localStorage.setItem('AllEntrances', allEntrances);
+        setSettings(settingsReset);
+        setAreas(areasReset);
+        setEntrances(entrancesReset);
+        setOneWayEntrances(oneWayEntrancesReset);
+        setAllEntrances(allEntrancesReset);
+        setAllAreas(allAreasReset);
+        setAlertReset(false);
+        setExpandWarpMenu(false);
+        setExpandDungeonMenu(false);
+        setExpandSongMenu(false);
+
+        //localStorage.setItem('RandoSettings', settingsReset);
+        //localStorage.setItem('AllAreas', allAreasReset);
+        //localStorage.setItem('AllEntrances', allEntrancesReset);
         //localStorage.setItem('TrackerVersion', trackerVersion);
     }
 
-    addReverseEntrances(stateAreas) {
+    const addReverseEntrances = (stateAreas) => {
         // make sure the returned variable is a copy and doesn't
         // change the global state variables
-        let allAreas = cloneDeep(stateAreas);
+        let allAreasCopy = cloneDeep(stateAreas);
         let rEntrances = {};
         let oConnectors = {};
         let eConnector;
         let eEntrance;
         let rEntrance;
-        Object.keys(allAreas.entrances).forEach(entrance => {
-            if (allAreas.entrances[entrance].reverse !== "" && allAreas.entrances[entrance].oneWay === false && allAreas.entrances[entrance].type !== "overworld") {
-                rEntrance = allAreas.entrances[entrance].reverse;
+        Object.keys(allAreasCopy.entrances).forEach(entrance => {
+            if (allAreasCopy.entrances[entrance].reverse !== "" && allAreasCopy.entrances[entrance].oneWay === false && allAreasCopy.entrances[entrance].type !== "overworld") {
+                rEntrance = allAreasCopy.entrances[entrance].reverse;
                 eEntrance = {};
-                eEntrance[rEntrance] = clone(allAreas.entrances[entrance]);
+                eEntrance[rEntrance] = clone(allAreasCopy.entrances[entrance]);
                 eEntrance[rEntrance].reverse = entrance;
                 eEntrance[rEntrance].isReverse = true;
                 eEntrance[rEntrance].tagRep = false;
                 eEntrance[rEntrance].tag = ""
                 eEntrance[rEntrance].connector = ""
-                eEntrance[rEntrance].alias = allAreas.entrances[entrance].reverseAlias
-                eEntrance[rEntrance].reverseAlias = allAreas.entrances[entrance].alias
+                eEntrance[rEntrance].alias = allAreasCopy.entrances[entrance].reverseAlias
+                eEntrance[rEntrance].reverseAlias = allAreasCopy.entrances[entrance].alias
                 eEntrance[rEntrance].lKey = ""
                 rEntrances = merge(rEntrances, eEntrance);
             }
-            if (Array.isArray(allAreas.entrances[entrance].connector) || allAreas.entrances[entrance].connector !== '') {
+            if (Array.isArray(allAreasCopy.entrances[entrance].connector) || allAreasCopy.entrances[entrance].connector !== '') {
                 eConnector = {};
-                eConnector[entrance] = clone(allAreas.entrances[entrance]);
+                eConnector[entrance] = clone(allAreasCopy.entrances[entrance]);
                 oConnectors = merge(oConnectors, eConnector);
             }
         });
-        let areas = { entrances: rEntrances };
-        let connectors = { connectors: oConnectors };
-        return merge(allAreas, areas, connectors);
+        let areasMerge = { entrances: rEntrances };
+        let connectorsMerge = { connectors: oConnectors };
+        return merge(allAreasCopy, areasMerge, connectorsMerge);
     }
 
-    getShuffledTypes(settings) {
+    const getShuffledTypes = (globalSettings) => {
         let erSettings = [];
-        if (settings["Shuffle Interiors"].includes("Simple")) {
+        if (globalSettings["Shuffle Interiors"].includes("Simple")) {
             erSettings.push("interior");
         }
-        if (settings["Shuffle Interiors"].includes("Special")) {
+        if (globalSettings["Shuffle Interiors"].includes("Special")) {
             erSettings.push("specialInterior");
         }
-        if (settings["Shuffle Interiors"].includes("Hideout")) {
+        if (globalSettings["Shuffle Interiors"].includes("Hideout")) {
             erSettings.push("hideoutInterior");
         }
-        if (settings["Shuffle Grottos"] === "On") {
+        if (globalSettings["Shuffle Grottos"] === "On") {
             erSettings.push("grotto");
             erSettings.push("grave");
         }
-        if (settings["Shuffle Dungeons"] === "Dungeons" || settings["Shuffle Dungeons"] === "Dungeons and Ganon") {
+        if (globalSettings["Shuffle Dungeons"] === "Dungeons" || globalSettings["Shuffle Dungeons"] === "Dungeons and Ganon") {
             erSettings.push("dungeon");
         }
-        if (settings["Shuffle Dungeons"] === "Dungeons and Ganon") {
+        if (globalSettings["Shuffle Dungeons"] === "Dungeons and Ganon") {
             erSettings.push("dungeonGanon");
         }
-        if (settings["Shuffle Bosses"] === "Age-Restricted" || settings["Shuffle Bosses"] === "Full") {
+        if (globalSettings["Shuffle Bosses"] === "Age-Restricted" || globalSettings["Shuffle Bosses"] === "Full") {
             erSettings.push("boss");
         }
-        if (settings["Shuffle Overworld"] === "On") {
+        if (globalSettings["Shuffle Overworld"] === "On") {
             erSettings.push("overworld");
         }
-        if (settings["Shuffle Warp Songs"] === "On") {
+        if (globalSettings["Shuffle Warp Songs"] === "On") {
             erSettings.push("warpsong");
         }
-        if (settings["Shuffle Spawn Points"] === "On") {
+        if (globalSettings["Shuffle Spawn Points"] === "On") {
             erSettings.push("spawn");
         }
-        if (settings["Shuffle Owls"] === "On") {
+        if (globalSettings["Shuffle Owls"] === "On") {
             erSettings.push("owldrop");
         }
-        if (settings["Shuffle Valley/Lake"] === "On") {
+        if (globalSettings["Shuffle Valley/Lake"] === "On") {
             erSettings.push("overworldoneway");
         }
-        if (settings["Shuffle Warp Songs"] === "On" || settings["Shuffle Spawn Points"] === "On" || settings["Shuffle Owls"] === "On" || settings["Shuffle Valley/Lake"] === "On") {
+        if (globalSettings["Shuffle Warp Songs"] === "On" || globalSettings["Shuffle Spawn Points"] === "On" || globalSettings["Shuffle Owls"] === "On" || globalSettings["Shuffle Valley/Lake"] === "On") {
             erSettings.push("extra");
         }
         return erSettings;
     }
 
-    loadAreas(settings, allAreas, allEntrances, init = false) {
+    const loadAreas = (settingsLoad, allAreasLoad, allEntrancesLoad, init = false) => {
         let areas = {};
-        let erSettings = this.getShuffledTypes(settings);
+        let erSettings = getShuffledTypes(settingsLoad);
         let subArea;
         let eAreas = [];
         let eLocation;
         let eEntrance;
         let internalDungeonEntrance = false;
-        Object.keys(allAreas.entrances).forEach((entrance) => {
-            subArea = allAreas.entrances[entrance];
+        Object.keys(allAreasLoad.entrances).forEach((entrance) => {
+            subArea = allAreasLoad.entrances[entrance];
             eAreas = [];
             if (subArea.oneWay && subArea.oneWayArea !== "" && subArea.type === "overworld") {
                 eAreas.push(subArea.oneWayArea);
@@ -1181,20 +384,20 @@ class Tracker extends React.Component {
             // noBossShuffle is a permanently unshuffled type for Ganon's Tower until/unless it is added to the randomizer
             internalDungeonEntrance = subArea.type === 'boss' || subArea.type === 'noBossShuffle';
             eAreas.forEach(eArea => {
-                if ((!(allAreas.hasOwnProperty(eArea))) && init) {
-                    if (!(allAreas.hasOwnProperty(eArea))) {
+                if ((!(allAreasLoad.hasOwnProperty(eArea))) && init) {
+                    if (!(allAreasLoad.hasOwnProperty(eArea))) {
                         if (subArea.oneWay && subArea.oneWayArea !== "" && subArea.type !== "overworld") {
-                            allAreas[eArea] = { show: true, dungeon: internalDungeonEntrance, collapse: 'some', entrances: {}, locations: {} };
+                            allAreasLoad[eArea] = { show: true, dungeon: internalDungeonEntrance, collapse: 'some', entrances: {}, locations: {} };
                         } else {
-                            allAreas[eArea] = { show: false, dungeon: internalDungeonEntrance, collapse: 'some', entrances: {}, locations: {} };
+                            allAreasLoad[eArea] = { show: false, dungeon: internalDungeonEntrance, collapse: 'some', entrances: {}, locations: {} };
                         }
                     }
                 }
                 if (!(areas.hasOwnProperty(eArea))) {
-                    areas[eArea] = { show: allAreas[eArea].show, dungeon: internalDungeonEntrance, collapse: allAreas[eArea].collapse, entrances: {}, locations: {} };
+                    areas[eArea] = { show: allAreasLoad[eArea].show, dungeon: internalDungeonEntrance, collapse: allAreasLoad[eArea].collapse, entrances: {}, locations: {} };
                 }
                 eEntrance = {};
-                eEntrance[entrance] = allAreas.entrances[entrance];
+                eEntrance[entrance] = allAreasLoad.entrances[entrance];
                 if (!(erSettings.includes(subArea.type)) || eEntrance[entrance].shuffled === false) {
                     if (eEntrance[entrance].type !== 'overworld') {
                         if (eEntrance[entrance].type !== 'extra') {
@@ -1206,40 +409,40 @@ class Tracker extends React.Component {
                         eEntrance[entrance].eLink = eEntrance[entrance].reverse;
                     }
                 } else {
-                    eEntrance[entrance].eLink = allAreas.entrances[entrance].userELink;
-                    eEntrance[entrance].aLink = allAreas.entrances[entrance].userALink;
+                    eEntrance[entrance].eLink = allAreasLoad.entrances[entrance].userELink;
+                    eEntrance[entrance].aLink = allAreasLoad.entrances[entrance].userALink;
                 }
                 areas[eArea].entrances = merge(areas[eArea].entrances, eEntrance);
             });
         });
         let eArea = "";
         let eDungeon = "";
-        Object.keys(allAreas.locations).forEach((location) => {
-            if (allAreas.locations[location].visible === true) {
-                eArea = allAreas.locations[location].area;
+        Object.keys(allAreasLoad.locations).forEach((location) => {
+            if (allAreasLoad.locations[location].visible === true) {
+                eArea = allAreasLoad.locations[location].area;
                 if (eArea !== "") {
-                    if (!(allAreas.hasOwnProperty(eArea)) && init) { 
-                        allAreas[eArea] = { show: false, dungeon: false, collapse: 'some', entrances: {}, locations: {} };
+                    if (!(allAreasLoad.hasOwnProperty(eArea)) && init) { 
+                        allAreasLoad[eArea] = { show: false, dungeon: false, collapse: 'some', entrances: {}, locations: {} };
                     }
                     if (!(areas.hasOwnProperty(eArea))) {
-                        areas[eArea] = { show: allAreas[eArea].show, dungeon: false, collapse: allAreas[eArea].collapse, entrances: {}, locations: {} };
+                        areas[eArea] = { show: allAreasLoad[eArea].show, dungeon: false, collapse: allAreasLoad[eArea].collapse, entrances: {}, locations: {} };
                     }
                     eLocation = {};
-                    eLocation[location] = allAreas.locations[location];
+                    eLocation[location] = allAreasLoad.locations[location];
                     areas[eArea].locations = merge(areas[eArea].locations, eLocation);
-                } else if (['dungeon', 'dungeonGanon'].includes(allAreas.entrances[allAreas.locations[location].lKey].type)) {
-                    eDungeon = allAreas.entrances[allAreas.locations[location].lKey].alias;
-                    if (!(allAreas.hasOwnProperty(eDungeon)) && init) { 
-                        allAreas[eDungeon] = { show: false, dungeon: true, collapse: 'some', entrances: {}, locations: {} };
+                } else if (['dungeon', 'dungeonGanon'].includes(allAreasLoad.entrances[allAreasLoad.locations[location].lKey].type)) {
+                    eDungeon = allAreasLoad.entrances[allAreasLoad.locations[location].lKey].alias;
+                    if (!(allAreasLoad.hasOwnProperty(eDungeon)) && init) { 
+                        allAreasLoad[eDungeon] = { show: false, dungeon: true, collapse: 'some', entrances: {}, locations: {} };
                     }
                     if (!(areas.hasOwnProperty(eDungeon))) {
                         areas[eDungeon] = { show: false, dungeon: true, collapse: 'some', entrances: {}, locations: {} };
                     }
                     eLocation = {};
-                    eLocation[location] = allAreas.locations[location];
+                    eLocation[location] = allAreasLoad.locations[location];
                     areas[eDungeon].locations = merge(areas[eDungeon].locations, eLocation);
                     eEntrance = {};
-                    eEntrance[allAreas.entrances[allAreas.locations[location].lKey].reverse] = allAreas.entrances[allAreas.entrances[allAreas.locations[location].lKey].reverse];
+                    eEntrance[allAreasLoad.entrances[allAreasLoad.locations[location].lKey].reverse] = allAreasLoad.entrances[allAreasLoad.entrances[allAreasLoad.locations[location].lKey].reverse];
                     areas[eDungeon].entrances = merge(areas[eDungeon].entrances, eEntrance);
                 }
             }
@@ -1247,72 +450,72 @@ class Tracker extends React.Component {
         return areas;
     }
 
-    categorizeEntrances(stateAreas) {
+    const categorizeEntrances = (stateAreas) => {
         // make sure the returned variable is a copy and doesn't
         // change the global state variables
-        let allAreas = cloneDeep(stateAreas);
-        let entrances = {};
+        let allAreasCat = cloneDeep(stateAreas);
+        let entrancesCat = {};
         let eType;
         let eRevType;
         let area;
-        Object.keys(allAreas.entrances).forEach(entrance => {
-            eType = allAreas.entrances[entrance].type;
-            entrances[entrance] = { type: eType, category: "", locations: {} };
-            entrances[allAreas.entrances[entrance].reverse] = { type: eType, category: "", locations: {} };
+        Object.keys(allAreasCat.entrances).forEach(entrance => {
+            eType = allAreasCat.entrances[entrance].type;
+            entrancesCat[entrance] = { type: eType, category: "", locations: {} };
+            entrancesCat[allAreasCat.entrances[entrance].reverse] = { type: eType, category: "", locations: {} };
             if (eType === "overworld" || eType === "spawn" || eType === "warpsong" || eType === "owldrop" || eType === "extra" || eType === "overworldoneway") {
-                if (!(entrances.hasOwnProperty(eType))) {
-                    entrances[eType] = {};
+                if (!(entrancesCat.hasOwnProperty(eType))) {
+                    entrancesCat[eType] = {};
                 }
-                if (allAreas.entrances[entrance].oneWay && allAreas.entrances[entrance].oneWayArea !== "") {
-                    area = allAreas.entrances[entrance].oneWayArea;
+                if (allAreasCat.entrances[entrance].oneWay && allAreasCat.entrances[entrance].oneWayArea !== "") {
+                    area = allAreasCat.entrances[entrance].oneWayArea;
                 } else {
-                    area = allAreas.entrances[entrance].area;
+                    area = allAreasCat.entrances[entrance].area;
                 }
-                if (!(entrances[eType].hasOwnProperty(area))) {
-                    entrances[eType][area] = [];
+                if (!(entrancesCat[eType].hasOwnProperty(area))) {
+                    entrancesCat[eType][area] = [];
                 }
-                entrances[eType][area].push(entrance);
+                entrancesCat[eType][area].push(entrance);
             }
             if (eType === "interior" || eType === "specialInterior" || eType === "hideoutInterior" || eType === "grave" || eType === "grotto" || eType === "dungeon" || eType === "dungeonGanon" || eType === "boss") {
-                if (!(entrances.hasOwnProperty(eType))) {
-                    entrances[eType] = [];
+                if (!(entrancesCat.hasOwnProperty(eType))) {
+                    entrancesCat[eType] = [];
                 }
-                entrances[eType].push(entrance);
-                if (allAreas.entrances[entrance].isReverse) {
+                entrancesCat[eType].push(entrance);
+                if (allAreasCat.entrances[entrance].isReverse) {
                     eRevType = "reverse" + eType;
-                    area = allAreas.entrances[entrance].area;
-                    if (!(entrances.hasOwnProperty(eRevType))) {
-                        entrances[eRevType] = {};
+                    area = allAreasCat.entrances[entrance].area;
+                    if (!(entrancesCat.hasOwnProperty(eRevType))) {
+                        entrancesCat[eRevType] = {};
                     }
-                    if (!(entrances[eRevType].hasOwnProperty(area))) {
-                        entrances[eRevType][area] = [];
+                    if (!(entrancesCat[eRevType].hasOwnProperty(area))) {
+                        entrancesCat[eRevType][area] = [];
                     }
-                    entrances[eRevType][area].push(entrance);
+                    entrancesCat[eRevType][area].push(entrance);
                 }
             }
         });
         let entrance;
         let eLocation;
-        Object.keys(allAreas.locations).forEach(location => {
-            if (allAreas.locations[location].lKey !== "") {
-                entrance = allAreas.locations[location].lKey;
+        Object.keys(allAreasCat.locations).forEach(location => {
+            if (allAreasCat.locations[location].lKey !== "") {
+                entrance = allAreasCat.locations[location].lKey;
                 eLocation = {};
-                eLocation[location] = allAreas.locations[location];
-                entrances[entrance].locations = merge(entrances[entrance].locations, eLocation);
+                eLocation[location] = allAreasCat.locations[location];
+                entrancesCat[entrance].locations = merge(entrancesCat[entrance].locations, eLocation);
             }
         });
-        entrances["linked"] = [];
-        entrances["oneWayAreas"] = [];
-        entrances["oneWayAreas"].push("Spawn Points");
-        entrances["oneWayAreas"].push("Warp Songs");
-        return entrances;
+        entrancesCat["linked"] = [];
+        entrancesCat["oneWayAreas"] = [];
+        entrancesCat["oneWayAreas"].push("Spawn Points");
+        entrancesCat["oneWayAreas"].push("Warp Songs");
+        return entrancesCat;
     }
 
-    loadEntrancePools(settings, stateEntrances, stateAreas) {
+    const loadEntrancePools = (settingsPools, stateEntrances, stateAreas) => {
         // make sure the returned variable is a copy and doesn't
         // change the global state variables
-        let allEntrances = cloneDeep(stateEntrances);
-        let allAreas = cloneDeep(stateAreas);
+        let allEntrancesPools = cloneDeep(stateEntrances);
+        let allAreasPools = cloneDeep(stateAreas);
         Object.filterOWEntrances = (entrances, predicate) =>
             Object.keys(entrances)
                 .filter( key => predicate(entrances[key].type, entrances[key].eLink, entrances[key].area) );
@@ -1322,60 +525,60 @@ class Tracker extends React.Component {
         Object.filterEntrances = (entrances, predicate) =>
             Object.keys(entrances)
                 .filter( key => predicate(entrances[key].type, entrances[key].eLink, entrances[key].isReverse) );
-        let entrances = {};
+        let entrancesPools = {};
         let mixedpool = {};
         let oOverworld = {};
-        Object.keys(allEntrances.overworld).forEach(area => {
-            oOverworld[area] = (Object.filterOWEntrances(allAreas.entrances, (eType, eLink, eArea) => eType === "overworld" && eLink === "" && eArea === area));
+        Object.keys(allEntrancesPools.overworld).forEach(area => {
+            oOverworld[area] = (Object.filterOWEntrances(allAreasPools.entrances, (eType, eLink, eArea) => eType === "overworld" && eLink === "" && eArea === area));
         });
         let oExtra = {};
-        Object.keys(allEntrances.extra).forEach(area => {
-            oExtra[area] = (Object.filterOWEntrances(allAreas.entrances, (eType, eLink, eArea) => eType === "extra" && eLink === "" && eArea === area));
+        Object.keys(allEntrancesPools.extra).forEach(area => {
+            oExtra[area] = (Object.filterOWEntrances(allAreasPools.entrances, (eType, eLink, eArea) => eType === "extra" && eLink === "" && eArea === area));
         });
         let oWarpSong = {};
-        Object.keys(allEntrances.warpsong).forEach(area => {
-            oWarpSong[area] = (Object.filterOWEntrances(allAreas.entrances, (eType, eLink, eArea) => eType === "warpsong" && eLink === "" && eArea === area));
+        Object.keys(allEntrancesPools.warpsong).forEach(area => {
+            oWarpSong[area] = (Object.filterOWEntrances(allAreasPools.entrances, (eType, eLink, eArea) => eType === "warpsong" && eLink === "" && eArea === area));
         });
         let oOwlDrop = {};
-        Object.keys(allEntrances.owldrop).forEach(area => {
-            oOwlDrop[area] = (Object.filterOWEntrances(allAreas.entrances, (eType, eLink, eArea) => eType === "owldrop" && eLink === "" && eArea === area));
+        Object.keys(allEntrancesPools.owldrop).forEach(area => {
+            oOwlDrop[area] = (Object.filterOWEntrances(allAreasPools.entrances, (eType, eLink, eArea) => eType === "owldrop" && eLink === "" && eArea === area));
         });
         let oOverworldOneway = {};
-        Object.keys(allEntrances.overworldoneway).forEach(area => {
-            oOverworldOneway[area] = (Object.filterOWEntrances(allAreas.entrances, (eType, eLink, eArea) => eType === "overworldoneway" && eLink === "" && eArea === area));
+        Object.keys(allEntrancesPools.overworldoneway).forEach(area => {
+            oOverworldOneway[area] = (Object.filterOWEntrances(allAreasPools.entrances, (eType, eLink, eArea) => eType === "overworldoneway" && eLink === "" && eArea === area));
         });
 
         let oInteriors = {};
         let oReverseInteriors = {};
         let oDecoupledInteriors = {};
         let eInteriors = [];
-        if (settings["Shuffle Interiors"].includes("Simple")) {
-            eInteriors.push(...(Object.filterEntrances(allAreas.entrances, (eType, eLink, eReverse) => eType === "interior" && eLink === "" && eReverse === false)));
-            Object.keys(allEntrances.reverseinterior).forEach(area => {
+        if (settingsPools["Shuffle Interiors"].includes("Simple")) {
+            eInteriors.push(...(Object.filterEntrances(allAreasPools.entrances, (eType, eLink, eReverse) => eType === "interior" && eLink === "" && eReverse === false)));
+            Object.keys(allEntrancesPools.reverseinterior).forEach(area => {
                 if (!(oReverseInteriors.hasOwnProperty(area))) {
                     oReverseInteriors[area] = [];
                 }
-                oReverseInteriors[area] = (Object.filterReverseEntrances(allAreas.entrances, (eType, eLink, eArea, eReverse) => eType === "interior" && eLink === "" && eArea === area && eReverse === true));
+                oReverseInteriors[area] = (Object.filterReverseEntrances(allAreasPools.entrances, (eType, eLink, eArea, eReverse) => eType === "interior" && eLink === "" && eArea === area && eReverse === true));
             });
         }
-        if (settings["Shuffle Interiors"].includes("Special")) {
-            eInteriors.push(...(Object.filterEntrances(allAreas.entrances, (eType, eLink, eReverse) => eType === "specialInterior" && eLink === "" && eReverse === false)));
-            Object.keys(allEntrances.reversespecialInterior).forEach(area => {
+        if (settingsPools["Shuffle Interiors"].includes("Special")) {
+            eInteriors.push(...(Object.filterEntrances(allAreasPools.entrances, (eType, eLink, eReverse) => eType === "specialInterior" && eLink === "" && eReverse === false)));
+            Object.keys(allEntrancesPools.reversespecialInterior).forEach(area => {
                 if (!(oReverseInteriors.hasOwnProperty(area))) {
                     oReverseInteriors[area] = [];
                 }
-                oReverseInteriors[area].push(...(Object.filterReverseEntrances(allAreas.entrances, (eType, eLink, eArea, eReverse) => eType === "specialInterior" && eLink === "" && eArea === area && eReverse === true)));
+                oReverseInteriors[area].push(...(Object.filterReverseEntrances(allAreasPools.entrances, (eType, eLink, eArea, eReverse) => eType === "specialInterior" && eLink === "" && eArea === area && eReverse === true)));
             });
         }
         oInteriors = { "Interiors": eInteriors };
         let eHideout = [];
-        if (settings["Shuffle Interiors"].includes("Hideout")) {
-            eHideout.push(...(Object.filterEntrances(allAreas.entrances, (eType, eLink, eReverse) => eType === "hideoutInterior" && eLink === "" && eReverse === false)));
-            Object.keys(allEntrances.reversehideoutInterior).forEach(area => {
+        if (settingsPools["Shuffle Interiors"].includes("Hideout")) {
+            eHideout.push(...(Object.filterEntrances(allAreasPools.entrances, (eType, eLink, eReverse) => eType === "hideoutInterior" && eLink === "" && eReverse === false)));
+            Object.keys(allEntrancesPools.reversehideoutInterior).forEach(area => {
                 if (!(oReverseInteriors.hasOwnProperty(area))) {
                     oReverseInteriors[area] = [];
                 }
-                oReverseInteriors[area].push(...(Object.filterReverseEntrances(allAreas.entrances, (eType, eLink, eArea, eReverse) => eType === "hideoutInterior" && eLink === "" && eArea === area && eReverse === true)));
+                oReverseInteriors[area].push(...(Object.filterReverseEntrances(allAreasPools.entrances, (eType, eLink, eArea, eReverse) => eType === "hideoutInterior" && eLink === "" && eArea === area && eReverse === true)));
             });
             oInteriors = merge(oInteriors, {"Hideout": eHideout });
         }
@@ -1385,17 +588,17 @@ class Tracker extends React.Component {
         let oReverseDungeons = {};
         let oDecoupledDungeons = {};
         let eDungeons = [];
-        eDungeons.push(...(Object.filterEntrances(allAreas.entrances, (eType, eLink, eReverse) => eType === "dungeon" && eLink === "" && eReverse === false)));
-        Object.keys(allEntrances.reversedungeon).forEach(area => {
-            oReverseDungeons[area] = (Object.filterReverseEntrances(allAreas.entrances, (eType, eLink, eArea, eReverse) => eType === "dungeon" && eLink === "" && eArea === area && eReverse === true));
+        eDungeons.push(...(Object.filterEntrances(allAreasPools.entrances, (eType, eLink, eReverse) => eType === "dungeon" && eLink === "" && eReverse === false)));
+        Object.keys(allEntrancesPools.reversedungeon).forEach(area => {
+            oReverseDungeons[area] = (Object.filterReverseEntrances(allAreasPools.entrances, (eType, eLink, eArea, eReverse) => eType === "dungeon" && eLink === "" && eArea === area && eReverse === true));
         });
-        if (settings["Shuffle Dungeons"] === "Dungeons and Ganon") {
-            eDungeons.push(...(Object.filterEntrances(allAreas.entrances, (eType, eLink, eReverse) => eType === "dungeonGanon" && eLink === "" && eReverse === false)));
-            Object.keys(allEntrances.reversedungeonGanon).forEach(area => {
+        if (settingsPools["Shuffle Dungeons"] === "Dungeons and Ganon") {
+            eDungeons.push(...(Object.filterEntrances(allAreasPools.entrances, (eType, eLink, eReverse) => eType === "dungeonGanon" && eLink === "" && eReverse === false)));
+            Object.keys(allEntrancesPools.reversedungeonGanon).forEach(area => {
                 if (!(oReverseDungeons.hasOwnProperty(area))) {
                     oReverseDungeons[area] = [];
                 }
-                oReverseDungeons[area].push(...(Object.filterReverseEntrances(allAreas.entrances, (eType, eLink, eArea, eReverse) => eType === "dungeonGanon" && eLink === "" && eArea === area && eReverse === true)));
+                oReverseDungeons[area].push(...(Object.filterReverseEntrances(allAreasPools.entrances, (eType, eLink, eArea, eReverse) => eType === "dungeonGanon" && eLink === "" && eArea === area && eReverse === true)));
             });
         }
         oDungeons = { "Dungeons": eDungeons };
@@ -1404,9 +607,9 @@ class Tracker extends React.Component {
         let oReverseBosses = {};
         let oDecoupledBosses = {};
         let eBosses = [];
-        eBosses.push(...(Object.filterEntrances(allAreas.entrances, (eType, eLink, eReverse) => eType === "boss" && eLink === "" && eReverse === false)));
-        Object.keys(allEntrances.reverseboss).forEach(area => {
-            oReverseBosses[area] = (Object.filterReverseEntrances(allAreas.entrances, (eType, eLink, eArea, eReverse) => eType === "boss" && eLink === "" && eArea === area && eReverse === true));
+        eBosses.push(...(Object.filterEntrances(allAreasPools.entrances, (eType, eLink, eReverse) => eType === "boss" && eLink === "" && eReverse === false)));
+        Object.keys(allEntrancesPools.reverseboss).forEach(area => {
+            oReverseBosses[area] = (Object.filterReverseEntrances(allAreasPools.entrances, (eType, eLink, eArea, eReverse) => eType === "boss" && eLink === "" && eArea === area && eReverse === true));
         });
         oBosses = { "Bosses": eBosses };
         oDecoupledBosses = merge(clone(oBosses), clone(oReverseBosses));
@@ -1414,15 +617,15 @@ class Tracker extends React.Component {
         let oReverseGrottos = {};
         let oDecoupledGrottos = {};
         let eGrottos = [];
-        eGrottos.push(...(Object.filterEntrances(allAreas.entrances, (eType, eLink, eReverse) => (eType === "grotto" || eType === "grave") && eLink === "" && eReverse === false)));
-        Object.keys(allEntrances.reversegrotto).forEach(area => {
-            oReverseGrottos[area] = (Object.filterReverseEntrances(allAreas.entrances, (eType, eLink, eArea, eReverse) => (eType === "grotto") && eLink === "" && eArea === area && eReverse === true));
+        eGrottos.push(...(Object.filterEntrances(allAreasPools.entrances, (eType, eLink, eReverse) => (eType === "grotto" || eType === "grave") && eLink === "" && eReverse === false)));
+        Object.keys(allEntrancesPools.reversegrotto).forEach(area => {
+            oReverseGrottos[area] = (Object.filterReverseEntrances(allAreasPools.entrances, (eType, eLink, eArea, eReverse) => (eType === "grotto") && eLink === "" && eArea === area && eReverse === true));
         });
-        Object.keys(allEntrances.reversegrave).forEach(area => {
+        Object.keys(allEntrancesPools.reversegrave).forEach(area => {
             if (!(oReverseGrottos.hasOwnProperty(area))) {
                 oReverseGrottos[area] = [];
             }
-            oReverseGrottos[area].push(...(Object.filterReverseEntrances(allAreas.entrances, (eType, eLink, eArea, eReverse) => (eType === "grave") && eLink === "" && eArea === area && eReverse === true)));
+            oReverseGrottos[area].push(...(Object.filterReverseEntrances(allAreasPools.entrances, (eType, eLink, eArea, eReverse) => (eType === "grave") && eLink === "" && eArea === area && eReverse === true)));
         });
         oGrottos = { "Grottos": eGrottos };
         oDecoupledGrottos = merge(clone(oGrottos), clone(oReverseGrottos));
@@ -1433,75 +636,75 @@ class Tracker extends React.Component {
             }
         }
 
-        if (settings["Shuffle Overworld"] === "On") {
-            if (settings["Mixed Pools"].includes("Overworld")) {
+        if (settingsPools["Shuffle Overworld"] === "On") {
+            if (settingsPools["Mixed Pools"].includes("Overworld")) {
                 mixedpool = mergeWith(mixedpool, {"mixed": oOverworld, "mixed_reverse": oOverworld, "mixed_decoupled": oOverworld, "mixed_overworld": oOverworld}, mergeAreas);
             }
-            entrances = merge(entrances, {"overworld": oOverworld});
+            entrancesPools = merge(entrancesPools, {"overworld": oOverworld});
         }
-        if (settings["Shuffle Interiors"].includes("Simple") || settings["Shuffle Interiors"].includes("Special") || settings["Shuffle Interiors"].includes("Hideout")) {
-            if (settings["Mixed Pools"].includes("Interiors")) {
+        if (settingsPools["Shuffle Interiors"].includes("Simple") || settingsPools["Shuffle Interiors"].includes("Special") || settingsPools["Shuffle Interiors"].includes("Hideout")) {
+            if (settingsPools["Mixed Pools"].includes("Interiors")) {
                 mixedpool = mergeWith(mixedpool, {"mixed": oInteriors, "mixed_reverse": oReverseInteriors, "mixed_decoupled": oDecoupledInteriors, "mixed_overworld": merge(clone(oInteriors), clone(oReverseInteriors))}, mergeAreas);
             }
-            entrances = merge(entrances, {"interior": oInteriors, "interior_reverse": oReverseInteriors, "interior_decoupled": oDecoupledInteriors});
+            entrancesPools = merge(entrancesPools, {"interior": oInteriors, "interior_reverse": oReverseInteriors, "interior_decoupled": oDecoupledInteriors});
         }
-        if (settings["Shuffle Grottos"] === "On") {
-            if (settings["Mixed Pools"].includes("Grottos")) {
+        if (settingsPools["Shuffle Grottos"] === "On") {
+            if (settingsPools["Mixed Pools"].includes("Grottos")) {
                 mixedpool = mergeWith(mixedpool, {"mixed": oGrottos, "mixed_reverse": oReverseGrottos, "mixed_decoupled": oDecoupledGrottos, "mixed_overworld": merge(clone(oGrottos), clone(oReverseGrottos))}, mergeAreas);
             }
-            entrances = merge(entrances, {"grotto": oGrottos, "grotto_reverse": oReverseGrottos, "grotto_decoupled": oDecoupledGrottos});
-            entrances = merge(entrances, {"grave": oGrottos, "grave_reverse": oReverseGrottos, "grave_decoupled": oDecoupledGrottos});
+            entrancesPools = merge(entrancesPools, {"grotto": oGrottos, "grotto_reverse": oReverseGrottos, "grotto_decoupled": oDecoupledGrottos});
+            entrancesPools = merge(entrancesPools, {"grave": oGrottos, "grave_reverse": oReverseGrottos, "grave_decoupled": oDecoupledGrottos});
         }
-        if (settings["Shuffle Dungeons"] === "Dungeons" || settings["Shuffle Dungeons"] === "Dungeons and Ganon") {
-            if (settings["Mixed Pools"].includes("Dungeons")) {
+        if (settingsPools["Shuffle Dungeons"] === "Dungeons" || settingsPools["Shuffle Dungeons"] === "Dungeons and Ganon") {
+            if (settingsPools["Mixed Pools"].includes("Dungeons")) {
                 mixedpool = mergeWith(mixedpool, {"mixed": oDungeons, "mixed_reverse": oReverseDungeons, "mixed_decoupled": oDecoupledDungeons, "mixed_overworld": merge(clone(oDungeons), clone(oReverseDungeons))}, mergeAreas);
             }
-            entrances = merge(entrances, {"dungeon": oDungeons, "dungeon_reverse": oReverseDungeons, "dungeon_decoupled": oDecoupledDungeons});
+            entrancesPools = merge(entrancesPools, {"dungeon": oDungeons, "dungeon_reverse": oReverseDungeons, "dungeon_decoupled": oDecoupledDungeons});
         }
-        if (settings["Shuffle Bosses"] === "Age-Restricted" || settings["Shuffle Bosses"] === "Full") {
-            if (settings["Mixed Pools"].includes("Boss Rooms")) {
+        if (settingsPools["Shuffle Bosses"] === "Age-Restricted" || settingsPools["Shuffle Bosses"] === "Full") {
+            if (settingsPools["Mixed Pools"].includes("Boss Rooms")) {
                 mixedpool = mergeWith(mixedpool, {"mixed": oBosses, "mixed_reverse": oReverseBosses, "mixed_decoupled": oDecoupledBosses, "mixed_overworld": merge(clone(oBosses), clone(oReverseBosses))}, mergeAreas);
             }
-            entrances = merge(entrances, {"boss": oBosses, "boss_reverse": oReverseBosses, "boss_decoupled": oDecoupledBosses});
+            entrancesPools = merge(entrancesPools, {"boss": oBosses, "boss_reverse": oReverseBosses, "boss_decoupled": oDecoupledBosses});
         }
-        if (settings["Shuffle Warp Songs"] === "On") {
-            entrances = merge(entrances, {"warpsong": [], "warpsong_reverse": [], "warpsong_decoupled": []});
+        if (settingsPools["Shuffle Warp Songs"] === "On") {
+            entrancesPools = merge(entrancesPools, {"warpsong": [], "warpsong_reverse": [], "warpsong_decoupled": []});
         }
-        if (settings["Shuffle Owls"] === "On") {
-            entrances = merge(entrances, {"owldrop": [], "owldrop_reverse": [], "owldrop_decoupled": []});
+        if (settingsPools["Shuffle Owls"] === "On") {
+            entrancesPools = merge(entrancesPools, {"owldrop": [], "owldrop_reverse": [], "owldrop_decoupled": []});
         }
-        if (settings["Shuffle Spawn Points"] === "On") {
-            entrances = merge(entrances, {"spawn": [], "spawn_reverse": [], "spawn_decoupled": []});
+        if (settingsPools["Shuffle Spawn Points"] === "On") {
+            entrancesPools = merge(entrancesPools, {"spawn": [], "spawn_reverse": [], "spawn_decoupled": []});
         }
-        if (settings["Shuffle Valley/Lake"] === "On") {
-            entrances = merge(entrances, {"overworldoneway": [], "overworldoneway_reverse": [], "overworldoneway_decoupled": []});
+        if (settingsPools["Shuffle Valley/Lake"] === "On") {
+            entrancesPools = merge(entrancesPools, {"overworldoneway": [], "overworldoneway_reverse": [], "overworldoneway_decoupled": []});
         }
-        entrances = merge(entrances, mixedpool);
-        return entrances;
+        entrancesPools = merge(entrancesPools, mixedpool);
+        return entrancesPools;
     }
 
-    loadOneWayEntrancePools(settings, stateEntrances, stateAreas) {
+    const loadOneWayEntrancePools = (settingsPools, stateEntrances, stateAreas) => {
         // make sure the returned variable is a copy and doesn't
         // change the global state variables
-        let allEntrances = cloneDeep(stateEntrances);
-        let allAreas = cloneDeep(stateAreas);
-        let entrances = {};
+        let allEntrancesPools = cloneDeep(stateEntrances);
+        let allAreasPools = cloneDeep(stateAreas);
+        let entrancesPools = {};
 
         let eOverworld = {};
-        Object.keys(allEntrances.overworld).forEach(area => {
-            eOverworld[area] = (clone(allEntrances.overworld[area]));
+        Object.keys(allEntrancesPools.overworld).forEach(area => {
+            eOverworld[area] = (clone(allEntrancesPools.overworld[area]));
         });
 
-        Object.keys(allEntrances.extra).forEach(area => {
+        Object.keys(allEntrancesPools.extra).forEach(area => {
             if (!(Object.keys(eOverworld).includes(area))) {
                 eOverworld[area] = [];
             }
-            eOverworld[area].push(...((allEntrances.extra[area])));
+            eOverworld[area].push(...((allEntrancesPools.extra[area])));
         });
 
-        Object.keys(allEntrances.overworldoneway).forEach(area => {
-            allEntrances.overworldoneway[area].forEach(e => {
-                let destArea = allAreas.entrances[e].area
+        Object.keys(allEntrancesPools.overworldoneway).forEach(area => {
+            allEntrancesPools.overworldoneway[area].forEach(e => {
+                let destArea = allAreasPools.entrances[e].area
                 if (!(Object.keys(eOverworld).includes(destArea))) {
                     eOverworld[destArea] = [];
                 }
@@ -1510,63 +713,63 @@ class Tracker extends React.Component {
         });
         
         let eInteriors = [];
-        eInteriors.push(...((allEntrances.interior.filter(int => allAreas.entrances[int].isReverse === false))));
-        eInteriors.push(...((allEntrances.specialInterior.filter(int => allAreas.entrances[int].isReverse === false))));
-        eInteriors.push(...((allEntrances.hideoutInterior.filter(int => allAreas.entrances[int].isReverse === false))));
+        eInteriors.push(...((allEntrancesPools.interior.filter(int => allAreasPools.entrances[int].isReverse === false))));
+        eInteriors.push(...((allEntrancesPools.specialInterior.filter(int => allAreasPools.entrances[int].isReverse === false))));
+        eInteriors.push(...((allEntrancesPools.hideoutInterior.filter(int => allAreasPools.entrances[int].isReverse === false))));
         let oInteriors = { "Interiors": eInteriors };
 
         let eOverworldInteriors = {};
-        Object.keys(allEntrances.reverseinterior).forEach(area => {
+        Object.keys(allEntrancesPools.reverseinterior).forEach(area => {
             if (!(Object.keys(eOverworldInteriors).includes(area))) {
                 eOverworldInteriors[area] = [];
             }
-            eOverworldInteriors[area].push(...((allEntrances.reverseinterior[area])));
+            eOverworldInteriors[area].push(...((allEntrancesPools.reverseinterior[area])));
         });
-        Object.keys(allEntrances.reversespecialInterior).forEach(area => {
+        Object.keys(allEntrancesPools.reversespecialInterior).forEach(area => {
             if (!(Object.keys(eOverworldInteriors).includes(area))) {
                 eOverworldInteriors[area] = [];
             }
-            eOverworldInteriors[area].push(...((allEntrances.reversespecialInterior[area])))
+            eOverworldInteriors[area].push(...((allEntrancesPools.reversespecialInterior[area])))
         });
-        Object.keys(allEntrances.reversehideoutInterior).forEach(area => {
+        Object.keys(allEntrancesPools.reversehideoutInterior).forEach(area => {
             if (!(Object.keys(eOverworldInteriors).includes(area))) {
                 eOverworldInteriors[area] = [];
             }
-            eOverworldInteriors[area].push(...((allEntrances.reversehideoutInterior[area])))
+            eOverworldInteriors[area].push(...((allEntrancesPools.reversehideoutInterior[area])))
         });
 
         let eOverworldDungeons = {};
-        if ((settings["Shuffle Dungeons"] === 'Dungeons' || settings["Shuffle Dungeons"] === 'Dungeons and Ganon') &&
-            (settings['Mixed Pools'].includes("Dungeons"))) {
-            Object.keys(allEntrances.reversedungeon).forEach(area => {
+        if ((settingsPools["Shuffle Dungeons"] === 'Dungeons' || settingsPools["Shuffle Dungeons"] === 'Dungeons and Ganon') &&
+            (settingsPools['Mixed Pools'].includes("Dungeons"))) {
+            Object.keys(allEntrancesPools.reversedungeon).forEach(area => {
                 if (!(Object.keys(eOverworldDungeons).includes(area))) {
                     eOverworldDungeons[area] = [];
                 }
-                eOverworldDungeons[area].push(...((allEntrances.reversedungeon[area])))
+                eOverworldDungeons[area].push(...((allEntrancesPools.reversedungeon[area])))
             });
-            if (settings["Shuffle Dungeons"] === 'Dungeons and Ganon') {
-                Object.keys(allEntrances.reversedungeonGanon).forEach(area => {
+            if (settingsPools["Shuffle Dungeons"] === 'Dungeons and Ganon') {
+                Object.keys(allEntrancesPools.reversedungeonGanon).forEach(area => {
                     if (!(Object.keys(eOverworldDungeons).includes(area))) {
                         eOverworldDungeons[area] = [];
                     }
-                    eOverworldDungeons[area].push(...((allEntrances.reversedungeonGanon[area])))
+                    eOverworldDungeons[area].push(...((allEntrancesPools.reversedungeonGanon[area])))
                 });
             }
         }
 
         let eOwlDrops = [];
-        Object.keys(allEntrances.owldrop).forEach(area => {
-            eOwlDrops.push(...((allEntrances.owldrop[area])));
+        Object.keys(allEntrancesPools.owldrop).forEach(area => {
+            eOwlDrops.push(...((allEntrancesPools.owldrop[area])));
         });
         let oOwlDrops = { "Owl Drops": eOwlDrops };
 
         let eSpawnPoints = [];
-        eSpawnPoints.push(...((allEntrances.spawn["Spawn Points"])));
+        eSpawnPoints.push(...((allEntrancesPools.spawn["Spawn Points"])));
         let oSpawnPoints = { "Spawn Points": eSpawnPoints };
         
         let eWarpSongs = [];
-        Object.keys(allEntrances.warpsong).forEach(area => {
-            eWarpSongs.push(...((allEntrances.warpsong[area])));
+        Object.keys(allEntrancesPools.warpsong).forEach(area => {
+            eWarpSongs.push(...((allEntrancesPools.warpsong[area])));
         });
         let oWarpSongs = { "Warp Song Pads": eWarpSongs };
         
@@ -1580,18 +783,18 @@ class Tracker extends React.Component {
         let oExtWarpSongs = mergeWith(cloneDeep(oSpawnPoints), cloneDeep(oWarpSongs), cloneDeep(eOverworld), cloneDeep(eOverworldInteriors), cloneDeep(oInteriors), cloneDeep(oOwlDrops), cloneDeep(eOverworldDungeons), mergeAreas);
         let oExtSpawnPoints = mergeWith(cloneDeep(oSpawnPoints), cloneDeep(oWarpSongs), cloneDeep(eOverworld), cloneDeep(eOverworldInteriors), cloneDeep(oInteriors), cloneDeep(oOwlDrops), cloneDeep(eOverworldDungeons), mergeAreas);
         let oExtOverworldOneway = mergeWith(cloneDeep(oSpawnPoints), cloneDeep(oWarpSongs), cloneDeep(eOverworld), cloneDeep(eOverworldInteriors), cloneDeep(oInteriors), cloneDeep(oOwlDrops), cloneDeep(eOverworldDungeons), mergeAreas);
-        entrances = {
+        entrancesPools = {
                         "spawn": oExtSpawnPoints,
                         "owldrop": oExtOwlDrops,
                         "warpsong": oExtWarpSongs,
                         "overworldoneway": oExtOverworldOneway,
                     };
-        return entrances;
+        return entrancesPools;
     }
 
-    setShuffledEntrances(settings, allAreas) {
-        let tempAreas = cloneDeep(allAreas);
-        let erSettings = this.getShuffledTypes(settings);
+    const setShuffledEntrances = (settingsLocal, allAreasLocal) => {
+        let tempAreas = cloneDeep(allAreasLocal);
+        let erSettings = getShuffledTypes(settingsLocal);
         Object.keys(tempAreas.entrances).forEach(entrance => {
             if (erSettings.includes(tempAreas.entrances[entrance].type)) {
                 tempAreas.entrances[entrance].shuffled = true;
@@ -1602,54 +805,52 @@ class Tracker extends React.Component {
         return tempAreas; 
     }
 
-    changeSetting(setting) {
+    const changeSetting = (setting) => {
         console.log(setting.target.name, setting.target.value);
-        let allEntrances = cloneDeep(this.state.allEntrances);
-        let allAreas = cloneDeep(this.state.allAreas);
-        let settings;
+        let allEntrancesLocal = cloneDeep(allEntrances);
+        let allAreasLocal = cloneDeep(allAreas);
+        let settingsLocal;
         if (setting.target.name === 'Settings Preset') {
-            let prevSettings = cloneDeep(this.state.settings);
-            settings = cloneDeep(defaultSettings.Settings);
-            settings["Settings Preset"] = prevSettings["Settings Preset"];
-            settings["Show Unshuffled Entrances"] = prevSettings["Show Unshuffled Entrances"];
-            settings["Show Locations"] = prevSettings["Show Locations"];
-            settings["Show Unshuffled Skulls"] = prevSettings["Show Unshuffled Skulls"];
-            settings["Shop Price Tracking"] = prevSettings["Shop Price Tracking"];
-            settings["View"] = prevSettings["View"];
+            let prevSettings = cloneDeep(settings);
+            settingsLocal = cloneDeep(defaultSettings.Settings);
+            settingsLocal["Settings Preset"] = prevSettings["Settings Preset"];
+            settingsLocal["Show Unshuffled Entrances"] = prevSettings["Show Unshuffled Entrances"];
+            settingsLocal["Show Locations"] = prevSettings["Show Locations"];
+            settingsLocal["Show Unshuffled Skulls"] = prevSettings["Show Unshuffled Skulls"];
+            settingsLocal["Shop Price Tracking"] = prevSettings["Shop Price Tracking"];
+            settingsLocal["View"] = prevSettings["View"];
             
-            let presetSettings = this.getPresetSettings(setting.target.value, prevSettings);
-            this.setPresetSettings(settings, presetSettings);
+            let presetSettings = getPresetSettings(setting.target.value, prevSettings);
+            setPresetSettings(settingsLocal, presetSettings);
         } else {
-            settings = cloneDeep(this.state.settings);
+            settingsLocal = cloneDeep(settings);
         }
-        settings[setting.target.name] = setting.target.value;
-        allAreas = this.setShuffledEntrances(settings, allAreas);
-        this.findVisibleLocations(settings, allAreas);
-        let areas = this.loadAreas(settings, allAreas, allEntrances);
-        let entrances = this.loadEntrancePools(settings, allEntrances, allAreas);
-        let oneWayEntrances = this.loadOneWayEntrancePools(settings, allEntrances, allAreas);
-        this.findVisibleAreas(areas, allAreas, allEntrances, settings);
-        this.setState({
-            settings: settings,
-            entrances: entrances,
-            oneWayEntrances: oneWayEntrances,
-            areas: areas,
-            allAreas: allAreas,
-        });
-        //localStorage.setItem('RandoSettings', settings);
-        //localStorage.setItem('AllAreas', allAreas);
+        settingsLocal[setting.target.name] = setting.target.value;
+        allAreasLocal = setShuffledEntrances(settingsLocal, allAreasLocal);
+        let areasLocal = loadAreas(settingsLocal, allAreasLocal, allEntrancesLocal);
+        let entrancesLocal = loadEntrancePools(settingsLocal, allEntrancesLocal, allAreasLocal);
+        let oneWayEntrancesLocal = loadOneWayEntrancePools(settingsLocal, allEntrancesLocal, allAreasLocal);
+        findVisibleLocations(settingsLocal, allAreasLocal);
+        findVisibleAreas(areasLocal, allAreasLocal, allEntrancesLocal, settingsLocal);
+        setSettings(settingsLocal);
+        setEntrances(entrancesLocal);
+        setOneWayEntrances(oneWayEntrancesLocal);
+        setAreas(areasLocal);
+        setAllAreas(allAreasLocal);
+        //localStorage.setItem('RandoSettings', settingsLocal);
+        //localStorage.setItem('allAreasLocal', allAreasLocal);
     }
 
-    toggleMQ(dungeon) {
-        let settings = cloneDeep(this.state.settings);
-        let isMQ = !(settings[dungeon]);
-        this.changeSetting({"target":{"name":dungeon,"value":isMQ}});
+    const toggleMQ = (dungeon) => {
+        let settingsLocal = cloneDeep(settings);
+        let isMQ = !(settingsLocal[dungeon]);
+        changeSetting({"target":{"name":dungeon,"value":isMQ}});
     }
 
-    toggleCollapse(area) {
-        let allAreas = cloneDeep(this.state.allAreas);
-        let areas = cloneDeep(this.state.areas);
-        let collapse = areas[area].collapse;
+    const toggleCollapse = (area) => {
+        let allAreasLocal = cloneDeep(allAreas);
+        let areasLocal = cloneDeep(areas);
+        let collapse = areasLocal[area].collapse;
         if (collapse === 'none') {
             collapse = 'some';
         } else if (collapse === 'some') {
@@ -1657,20 +858,18 @@ class Tracker extends React.Component {
         } else {
             collapse = 'none';
         }
-        allAreas[area].collapse = collapse;
-        areas[area].collapse = collapse;
-        this.setState({
-            areas: areas,
-            allAreas: allAreas,
-        });
-        //localStorage.setItem('AllAreas', allAreas);
+        allAreasLocal[area].collapse = collapse;
+        areasLocal[area].collapse = collapse;
+        setAreas(areasLocal);
+        setAllAreas(allAreasLocal);
+        //localStorage.setItem('AllAreas', allAreasLocal);
     }
 
-    toggleCollapseReverse(areaDiv) {
-        let allAreas = cloneDeep(this.state.allAreas);
-        let areas = cloneDeep(this.state.areas);
+    const toggleCollapseReverse = (areaDiv) => {
+        let allAreasLocal = cloneDeep(allAreas);
+        let areasLocal = cloneDeep(areas);
         let area = areaDiv.innerText;
-        let collapse = areas[area].collapse;
+        let collapse = areasLocal[area].collapse;
         if (collapse === 'none') {
             collapse = 'all';
         } else if (collapse === 'some') {
@@ -1678,16 +877,20 @@ class Tracker extends React.Component {
         } else {
             collapse = 'some';
         }
-        allAreas[area].collapse = collapse;
-        areas[area].collapse = collapse;
-        this.setState({
-            areas: areas,
-            allAreas: allAreas,
-        });
-        //localStorage.setItem('AllAreas', allAreas);
+        allAreasLocal[area].collapse = collapse;
+        areasLocal[area].collapse = collapse;
+        setAreas(areasLocal);
+        setAllAreas(allAreasLocal);
+        //localStorage.setItem('AllAreas', allAreasLocal);
     }
 
-    findVisibleAreas(shownAreas, allAreas, entrances, settings=this.state.settings) {
+    const findVisibleAreas = (shownAreas, allAreasLocal, entrancesLocal, settingsParam = false) => {
+        let settingsLocal;
+        if (settingsParam) {
+            settingsLocal = settingsParam;
+        } else {
+            settingsLocal = settings;
+        }
         let alwaysOneWay = ["spawn","warpsong","owldrop","extra","overworldoneway"];
         let decoupled = settings["Decoupled Entrances"] === "On";
         let overworldOneWays = settings["Shuffle Valley/Lake"] === "On";
@@ -1698,41 +901,41 @@ class Tracker extends React.Component {
             let linkedTargetEntrances = (Object.filterAreas(shownAreas[targetArea].entrances, (eLink, aLink, isReverse, isOneWay, shuffled, lType, e, oneWayArea, connector) => (
                 /*(isOneWay && aLink !== "" && (lType !== "overworld" && lType !== "owldrop")) ||*/
                 (eLink !== "" && oneWayArea !== targetArea && (((isReverse === true) && shuffled === true) || lType === "overworld" || lType === "warpsong" || lType === "owldrop" || lType === "extra" || lType === "overworldoneway"))) ));
-            if (linkedTargetEntrances.length === 0 && !(entrances["oneWayAreas"].includes(targetArea))) {
+            if (linkedTargetEntrances.length === 0 && !(entrancesLocal["oneWayAreas"].includes(targetArea))) {
                 shownAreas[targetArea].show = false;
-                allAreas[targetArea].show = false;
+                allAreasLocal[targetArea].show = false;
             } else {
                 shownAreas[targetArea].show = true;
-                allAreas[targetArea].show = true;
+                allAreasLocal[targetArea].show = true;
             }
         });
 
         alwaysOneWay.forEach(oneType => {
-            Object.keys(entrances[oneType]).forEach(aOneWay => {
-                entrances[oneType][aOneWay].forEach(eOneWay => {
-                    if (allAreas.entrances[eOneWay].aLink !== "" && allAreas[allAreas.entrances[eOneWay].oneWayArea].show === true) {
-                        let eLinked = allAreas.entrances[eOneWay].aLink;
+            Object.keys(entrancesLocal[oneType]).forEach(aOneWay => {
+                entrancesLocal[oneType][aOneWay].forEach(eOneWay => {
+                    if (allAreasLocal.entrances[eOneWay].aLink !== "" && allAreasLocal[allAreasLocal.entrances[eOneWay].oneWayArea].show === true) {
+                        let eLinked = allAreasLocal.entrances[eOneWay].aLink;
                         let altLinked = true;
                         // switch to ToT entrance for Prelude
-                        if (allAreas.entrances[eLinked].oneWay === true && allAreas.entrances[eLinked].connector !== "") {
-                            if (allAreas.entrances[allAreas.entrances[eLinked].connector].aLink !== "") {
-                                eLinked = allAreas.entrances[allAreas.entrances[eLinked].connector].aLink;
+                        if (allAreasLocal.entrances[eLinked].oneWay === true && allAreasLocal.entrances[eLinked].connector !== "") {
+                            if (allAreasLocal.entrances[allAreasLocal.entrances[eLinked].connector].aLink !== "") {
+                                eLinked = allAreasLocal.entrances[allAreasLocal.entrances[eLinked].connector].aLink;
                             } else { altLinked = false }
                         }
                         // use interior exit for area if interior is linked
-                        if (allAreas.entrances[eLinked].isReverse === false && allAreas.entrances[eLinked].type !== "overworld" && allAreas.entrances[eLinked].oneWay === false) {
-                            if (allAreas.entrances[allAreas.entrances[eLinked].reverse].aLink !== "") {
-                                eLinked = allAreas.entrances[allAreas.entrances[eLinked].reverse].aLink;
+                        if (allAreasLocal.entrances[eLinked].isReverse === false && allAreasLocal.entrances[eLinked].type !== "overworld" && allAreasLocal.entrances[eLinked].oneWay === false) {
+                            if (allAreasLocal.entrances[allAreasLocal.entrances[eLinked].reverse].aLink !== "") {
+                                eLinked = allAreasLocal.entrances[allAreasLocal.entrances[eLinked].reverse].aLink;
                             } else { altLinked = false }
                         }
-                        if (altLinked && (allAreas.entrances[eLinked].isReverse === true || allAreas.entrances[eLinked].type === "overworld" ||
-                        (allAreas.entrances[eLinked].oneWay === true && (allAreas.entrances[eLinked].oneWayArea !== "" || allAreas.entrances[eLinked].type === "extra")))) {
-                            shownAreas[allAreas.entrances[eLinked].area].show = true;
-                            allAreas[allAreas.entrances[eLinked].area].show = true;
+                        if (altLinked && (allAreasLocal.entrances[eLinked].isReverse === true || allAreasLocal.entrances[eLinked].type === "overworld" ||
+                        (allAreasLocal.entrances[eLinked].oneWay === true && (allAreasLocal.entrances[eLinked].oneWayArea !== "" || allAreasLocal.entrances[eLinked].type === "extra")))) {
+                            shownAreas[allAreasLocal.entrances[eLinked].area].show = true;
+                            allAreasLocal[allAreasLocal.entrances[eLinked].area].show = true;
                             // Hard code Gerudo Valley to Lake with decoupled off, necessary for Lake Hylia owl warp to chain off valley visibility
-                            if (allAreas.entrances[eLinked].area === 'Gerudo Valley' && !(decoupled || overworldOneWays)) {
+                            if (allAreasLocal.entrances[eLinked].area === 'Gerudo Valley' && !(decoupled || overworldOneWays)) {
                                 shownAreas['Lake Hylia'].show = true;
-                                allAreas['Lake Hylia'].show = true;
+                                allAreasLocal['Lake Hylia'].show = true;
                             }
                         }
                     }
@@ -1741,19 +944,19 @@ class Tracker extends React.Component {
         });
         // Another pass for connectors that link to or from unshuffled entrances
         let connectorOverride = [];
-        Object.keys(allAreas.connectors).forEach(connector => {
+        Object.keys(allAreasLocal.connectors).forEach(connector => {
             let connectorList;
-            if (Array.isArray(allAreas.entrances[connector].connector)) {
-                connectorList = allAreas.entrances[connector].connector;
+            if (Array.isArray(allAreasLocal.entrances[connector].connector)) {
+                connectorList = allAreasLocal.entrances[connector].connector;
             } else {
-                connectorList = [allAreas.entrances[connector].connector];
+                connectorList = [allAreasLocal.entrances[connector].connector];
             }
             connectorList.forEach(exit => {
-                if (allAreas.entrances[connector].eLink !== '' && allAreas.entrances[exit].aLink !== '' &&
-                (((allAreas.entrances[connector].shuffled || allAreas.entrances[exit].shuffled) && (!decoupled || allAreas.entrances[allAreas.entrances[exit].aLink].isReverse)) || allAreas[allAreas.entrances[connector].area].show)) {
-                    shownAreas[allAreas.entrances[allAreas.entrances[exit].aLink].area].show = true;
-                    allAreas[allAreas.entrances[allAreas.entrances[exit].aLink].area].show = true;
-                    connectorOverride.push(allAreas.entrances[allAreas.entrances[exit].aLink].area);
+                if (allAreasLocal.entrances[connector].eLink !== '' && allAreasLocal.entrances[exit].aLink !== '' &&
+                (((allAreasLocal.entrances[connector].shuffled || allAreasLocal.entrances[exit].shuffled) && (!decoupled || allAreasLocal.entrances[allAreasLocal.entrances[exit].aLink].isReverse)) || allAreasLocal[allAreasLocal.entrances[connector].area].show)) {
+                    shownAreas[allAreasLocal.entrances[allAreasLocal.entrances[exit].aLink].area].show = true;
+                    allAreasLocal[allAreasLocal.entrances[allAreasLocal.entrances[exit].aLink].area].show = true;
+                    connectorOverride.push(allAreasLocal.entrances[allAreasLocal.entrances[exit].aLink].area);
                 }
             })
         });
@@ -1761,7 +964,7 @@ class Tracker extends React.Component {
         // Hard code Gerudo Valley to Lake with decoupled off again, in case one-way entrance does not lead to Valley
         if (shownAreas['Gerudo Valley'].show === true && !(decoupled || overworldOneWays)) {
             shownAreas['Lake Hylia'].show = true;
-            allAreas['Lake Hylia'].show = true;
+            allAreasLocal['Lake Hylia'].show = true;
         }
 
         // Hard code LW Bridge and LW visibility if one or the other is visible
@@ -1769,18 +972,18 @@ class Tracker extends React.Component {
         // causing possible naming confusion. This is important if/when logic is added
         if (shownAreas['Lost Woods'].show === true) {
             shownAreas['Lost Woods Bridge'].show = true;
-            allAreas['Lost Woods Bridge'].show = true;
+            allAreasLocal['Lost Woods Bridge'].show = true;
         } else if (shownAreas['Lost Woods Bridge'].show === true) {
             shownAreas['Lost Woods'].show = true;
-            allAreas['Lost Woods'].show = true;
+            allAreasLocal['Lost Woods'].show = true;
         }
 
         // Hard code Colossus from Spirit Temple so that we don't have to add dummy
         // unshuffled entrances to the hands
-        if ((allAreas.entrances['Desert Colossus -> Spirit Temple Lobby'].eLink !== '') ||
-            (allAreas.entrances['Twinrova -> Spirit Temple'].eLink !== '' && settings["Shuffle Bosses"] !== "Off")) {
+        if ((allAreasLocal.entrances['Desert Colossus -> Spirit Temple Lobby'].eLink !== '') ||
+            (allAreasLocal.entrances['Twinrova -> Spirit Temple'].eLink !== '' && settings["Shuffle Bosses"] !== "Off")) {
             shownAreas['Desert Colossus'].show = true;
-            allAreas['Desert Colossus'].show = true;
+            allAreasLocal['Desert Colossus'].show = true;
         }
 
         // Filter areas with no visible entrances or locations
@@ -1800,13 +1003,13 @@ class Tracker extends React.Component {
                 (targetArea === 'Spawn Points' && settings["Shuffle Spawn Points"] === "Off" && !settings["Shuffle Interiors"].includes("Special"))) &&
                 !(connectorOverride.includes(targetArea))) {
                     shownAreas[targetArea].show = false;
-                    allAreas[targetArea].show = false;
+                    allAreasLocal[targetArea].show = false;
                 }
             });
         }
     }
 
-    findVisibleLocations(settings, allAreas) {
+    const findVisibleLocations = (settingsLocal, allAreasLocal) => {
         let andVisible;
         let andCount;
         let orVisible;
@@ -1814,237 +1017,235 @@ class Tracker extends React.Component {
         let interiorsOnly;
         let visibleRules;
         // Location visibility
-        Object.keys(allAreas.locations).forEach((location) => {
-            if (settings["Show Locations"] === "Yes" || settings["Show Locations"] === "Interiors Only") {
-                interiorsOnly = (settings["Show Locations"] === "Interiors Only");
-                if (typeof allAreas.locations[location].settings === "boolean") {
-                    allAreas.locations[location].visible = allAreas.locations[location].settings;
-                    visibleRules = allAreas.locations[location].settings;
-                } else if (allAreas.locations[location].settings.length > 0) {
+        Object.keys(allAreasLocal.locations).forEach((location) => {
+            if (settingsLocal["Show Locations"] === "Yes" || settingsLocal["Show Locations"] === "Interiors Only") {
+                interiorsOnly = (settingsLocal["Show Locations"] === "Interiors Only");
+                if (typeof allAreasLocal.locations[location].settings === "boolean") {
+                    allAreasLocal.locations[location].visible = allAreasLocal.locations[location].settings;
+                    visibleRules = allAreasLocal.locations[location].settings;
+                } else if (allAreasLocal.locations[location].settings.length > 0) {
                     andVisible = true;
                     orVisible = false;
                     andCount = 0;
                     orCount = 0;
-                    allAreas.locations[location].settings.forEach(s => {
+                    allAreasLocal.locations[location].settings.forEach(s => {
                         if (s.required === true) { andCount++; } else { orCount++; }
-                        if (settings[s.setting] === s.value && s.required === true) { andVisible = true && andVisible;  }
-                        if (settings[s.setting] !== s.value && s.required === true) { andVisible = false; }
-                        if (settings[s.setting] === s.value && s.required === false) { orVisible = true; }
+                        if (settingsLocal[s.setting] === s.value && s.required === true) { andVisible = true && andVisible;  }
+                        if (settingsLocal[s.setting] !== s.value && s.required === true) { andVisible = false; }
+                        if (settingsLocal[s.setting] === s.value && s.required === false) { orVisible = true; }
                     });
                     visibleRules = ((andVisible === (andCount >= 0)) && (orVisible === (orCount > 0)));
-                    allAreas.locations[location].visible = (((allAreas.locations[location].area !== "" && !(interiorsOnly)) || allAreas.locations[location].area === "") && visibleRules);
+                    allAreasLocal.locations[location].visible = (((allAreasLocal.locations[location].area !== "" && !(interiorsOnly)) || allAreasLocal.locations[location].area === "") && visibleRules);
                 } else {
-                    allAreas.locations[location].visible = ((allAreas.locations[location].area !== "" && !(interiorsOnly)) || allAreas.locations[location].area === "");
+                    allAreasLocal.locations[location].visible = ((allAreasLocal.locations[location].area !== "" && !(interiorsOnly)) || allAreasLocal.locations[location].area === "");
                     visibleRules = true;
                 }
             } else {
                 visibleRules = false;
-                allAreas.locations[location].visible = false;
+                allAreasLocal.locations[location].visible = false;
             }
-            if (allAreas.locations[location].shuffleRules.length > 0) {andVisible = true;
+            if (allAreasLocal.locations[location].shuffleRules.length > 0) {andVisible = true;
                 orVisible = false;
                 andCount = 0;
                 orCount = 0;
-                allAreas.locations[location].shuffleRules.forEach(s => {
+                allAreasLocal.locations[location].shuffleRules.forEach(s => {
                     if (s.required === true) { andCount++; } else { orCount++; }
-                    if (settings[s.setting] === s.value && s.required === true) { andVisible = true && andVisible;  }
-                    if (settings[s.setting] !== s.value && s.required === true) { andVisible = false; }
-                    if (settings[s.setting] === s.value && s.required === false) { orVisible = true; }
+                    if (settingsLocal[s.setting] === s.value && s.required === true) { andVisible = true && andVisible;  }
+                    if (settingsLocal[s.setting] !== s.value && s.required === true) { andVisible = false; }
+                    if (settingsLocal[s.setting] === s.value && s.required === false) { orVisible = true; }
                 });
-                allAreas.locations[location].shuffled = ((andVisible === (andCount >= 0)) && (orVisible === (orCount > 0)));
+                allAreasLocal.locations[location].shuffled = ((andVisible === (andCount >= 0)) && (orVisible === (orCount > 0)));
             } else {
-                allAreas.locations[location].shuffled = visibleRules;
+                allAreasLocal.locations[location].shuffled = visibleRules;
             }
         });
         // Entrance tag usage vs unique name
-        Object.keys(allAreas.entrances).forEach((entrance) => {
-            if (allAreas.entrances[entrance].tagRules.length > 0) {
+        Object.keys(allAreasLocal.entrances).forEach((entrance) => {
+            if (allAreasLocal.entrances[entrance].tagRules.length > 0) {
                 andVisible = true;
                 orVisible = false;
                 andCount = 0;
                 orCount = 0;
-                allAreas.entrances[entrance].tagRules.forEach(s => {
+                allAreasLocal.entrances[entrance].tagRules.forEach(s => {
                     if (s.required === true) { andCount++; } else { orCount++; }
-                    if (settings[s.setting] === s.value && s.required === true) { andVisible = true && andVisible;  }
-                    if (settings[s.setting] !== s.value && s.required === true) { andVisible = false; }
-                    if (settings[s.setting] === s.value && s.required === false) { orVisible = true; }
+                    if (settingsLocal[s.setting] === s.value && s.required === true) { andVisible = true && andVisible;  }
+                    if (settingsLocal[s.setting] !== s.value && s.required === true) { andVisible = false; }
+                    if (settingsLocal[s.setting] === s.value && s.required === false) { orVisible = true; }
                 });
-                allAreas.entrances[entrance].enableTag = (andVisible === (andCount >= 0)) && (orVisible === (orCount > 0));
+                allAreasLocal.entrances[entrance].enableTag = (andVisible === (andCount >= 0)) && (orVisible === (orCount > 0));
             }
         });
         // Check entrance tags if a new tag representative is needed because the previous one no longer uses a tag
-        Object.keys(allAreas.entrances).forEach((entrance) => {
-            if (allAreas.entrances[entrance].tag !== "") {
-                if (allAreas.entrances[entrance].tagRep && !(allAreas.entrances[entrance].enableTag)) {
-                    allAreas.entrances[entrance].tagRep = false;
+        Object.keys(allAreasLocal.entrances).forEach((entrance) => {
+            if (allAreasLocal.entrances[entrance].tag !== "") {
+                if (allAreasLocal.entrances[entrance].tagRep && !(allAreasLocal.entrances[entrance].enableTag)) {
+                    allAreasLocal.entrances[entrance].tagRep = false;
                     Object.filterTags = (entrances, predicate) =>
                         Object.keys(entrances)
                             .filter( key => predicate(entrances[key].tag, entrances[key].tagRep, entrances[key].enableTag, entrances[key].eLink) );
-                    let tagEntrances = (Object.filterTags(allAreas.entrances, (eTag, eTagRep, eEnableTag, eLink) => (eTag === allAreas.entrances[entrance].tag && eTagRep === false && eEnableTag && eLink === "")));
+                    let tagEntrances = (Object.filterTags(allAreasLocal.entrances, (eTag, eTagRep, eEnableTag, eLink) => (eTag === allAreasLocal.entrances[entrance].tag && eTagRep === false && eEnableTag && eLink === "")));
                     if (tagEntrances.length !== 0) {
-                        allAreas.entrances[tagEntrances[0]].tagRep = true;
+                        allAreasLocal.entrances[tagEntrances[0]].tagRep = true;
                     }
                 }
             }
         });
     }
 
-    linkEntrance(dataLinkFrom, dataLinkTo) {
+    const linkEntrance = (dataLinkFrom, dataLinkTo) => {
         let originator = dataLinkFrom;
         let eCategory = dataLinkTo;
         let alwaysOneWay = ["spawn","warpsong","owldrop","extra","overworldoneway"];
         let unMixedDecoupled = ["boss", "noBossShuffle", "noDungeonShuffle"];
-        let areas = cloneDeep(this.state.allAreas);
-        let shownAreas = cloneDeep(this.state.areas);
-        let entrances = cloneDeep(this.state.allEntrances);
-        let area = areas.entrances[originator].area;
+        let areasLocal = cloneDeep(allAreas);
+        let shownAreas = cloneDeep(areas);
+        let entrancesLocal = cloneDeep(allEntrances);
+        let area = areasLocal.entrances[originator].area;
         let entrancePools;
-        if (areas.entrances[eCategory].tag !== "" && areas.entrances[eCategory].enableTag &&
-            areas.entrances[eCategory].tag === areas.entrances[originator].tag && 
-            areas.entrances[originator].eLink === "" && areas.entrances[originator].enableTag) {
+        if (areasLocal.entrances[eCategory].tag !== "" && areasLocal.entrances[eCategory].enableTag &&
+            areasLocal.entrances[eCategory].tag === areasLocal.entrances[originator].tag && 
+            areasLocal.entrances[originator].eLink === "" && areasLocal.entrances[originator].enableTag) {
             eCategory = originator;
         }
         console.log(originator, "<>", eCategory,"[Connected]");
-        if (areas.entrances[originator].oneWay === true && areas.entrances[originator].oneWayArea !== "") {
-            area = areas.entrances[originator].oneWayArea;
+        if (areasLocal.entrances[originator].oneWay === true && areasLocal.entrances[originator].oneWayArea !== "") {
+            area = areasLocal.entrances[originator].oneWayArea;
         }
-        let targetArea = areas.entrances[eCategory].area;
-        if (areas.entrances[eCategory].oneWay === true && areas.entrances[eCategory].oneWayArea !== "") {
-            targetArea = areas.entrances[eCategory].oneWayArea;
+        let targetArea = areasLocal.entrances[eCategory].area;
+        if (areasLocal.entrances[eCategory].oneWay === true && areasLocal.entrances[eCategory].oneWayArea !== "") {
+            targetArea = areasLocal.entrances[eCategory].oneWayArea;
         }
-        if ((this.state.settings["Decoupled Entrances"] === "Off" && !(alwaysOneWay.includes(areas.entrances[originator].type))) || (unMixedDecoupled.includes(areas.entrances[originator].type))) {
+        if ((settings["Decoupled Entrances"] === "Off" && !(alwaysOneWay.includes(areasLocal.entrances[originator].type))) || (unMixedDecoupled.includes(areasLocal.entrances[originator].type))) {
             let revECategory;
             let revTargetE;
-            if (areas.entrances[eCategory].type === "overworld") {
+            if (areasLocal.entrances[eCategory].type === "overworld") {
                 revECategory = eCategory;
             } else {
-                revECategory = areas.entrances[eCategory].reverse;
+                revECategory = areasLocal.entrances[eCategory].reverse;
             }
-            if (areas.entrances[originator].type === "overworld") {
+            if (areasLocal.entrances[originator].type === "overworld") {
                 revTargetE = originator;
             } else {
-                revTargetE = areas.entrances[originator].reverse;
+                revTargetE = areasLocal.entrances[originator].reverse;
             }
-            let revArea = areas.entrances[revECategory].area;
-            let revTargetArea = areas.entrances[revTargetE].area;
-            areas.entrances[revECategory].aLink = revTargetE;
+            let revArea = areasLocal.entrances[revECategory].area;
+            let revTargetArea = areasLocal.entrances[revTargetE].area;
+            areasLocal.entrances[revECategory].aLink = revTargetE;
             shownAreas[revArea].entrances[revECategory].aLink = revTargetE;
-            areas.entrances[revECategory].userALink = revTargetE;
+            areasLocal.entrances[revECategory].userALink = revTargetE;
             shownAreas[revArea].entrances[revECategory].userALink = revTargetE;
-            areas.entrances[revTargetE].eLink = revECategory;
+            areasLocal.entrances[revTargetE].eLink = revECategory;
             shownAreas[revTargetArea].entrances[revTargetE].eLink = revECategory;
-            areas.entrances[revTargetE].userELink = revECategory;
+            areasLocal.entrances[revTargetE].userELink = revECategory;
             shownAreas[revTargetArea].entrances[revTargetE].userELink = revECategory;
         }
-        areas.entrances[originator].aLink = eCategory;
+        areasLocal.entrances[originator].aLink = eCategory;
         shownAreas[area].entrances[originator].aLink = eCategory;
-        areas.entrances[originator].userALink = eCategory;
+        areasLocal.entrances[originator].userALink = eCategory;
         shownAreas[area].entrances[originator].userALink = eCategory;
-        if (!(alwaysOneWay.includes(areas.entrances[originator].type))) {
-            areas.entrances[eCategory].eLink = originator;
+        if (!(alwaysOneWay.includes(areasLocal.entrances[originator].type))) {
+            areasLocal.entrances[eCategory].eLink = originator;
             shownAreas[targetArea].entrances[eCategory].eLink = originator;
-            areas.entrances[eCategory].userELink = originator;
+            areasLocal.entrances[eCategory].userELink = originator;
             shownAreas[targetArea].entrances[eCategory].userELink = originator;
-            if (areas.entrances[eCategory].type === "overworld" && areas.entrances[eCategory].oneWay && areas.entrances[eCategory].oneWayArea !== "") {
-                shownAreas[areas.entrances[eCategory].area].entrances[eCategory].eLink = originator;
-                shownAreas[areas.entrances[eCategory].area].entrances[eCategory].userELink = originator;
+            if (areasLocal.entrances[eCategory].type === "overworld" && areasLocal.entrances[eCategory].oneWay && areasLocal.entrances[eCategory].oneWayArea !== "") {
+                shownAreas[areasLocal.entrances[eCategory].area].entrances[eCategory].eLink = originator;
+                shownAreas[areasLocal.entrances[eCategory].area].entrances[eCategory].userELink = originator;
             }
         } else {
-            areas.entrances[eCategory].oneWayELink = originator;
+            areasLocal.entrances[eCategory].oneWayELink = originator;
             shownAreas[targetArea].entrances[eCategory].oneWayELink = originator;
-            areas.entrances[eCategory].userOneWayELink = originator;
+            areasLocal.entrances[eCategory].userOneWayELink = originator;
             shownAreas[targetArea].entrances[eCategory].userOneWayELink = originator;
         }
 
         Object.filterTags = (entrances, predicate) =>
             Object.keys(entrances)
                 .filter( key => predicate(entrances[key].tag, entrances[key].tagRep, entrances[key].enableTag, entrances[key].eLink) );
-        if (areas.entrances[eCategory].tagRep) {
-            let tagEntrances = (Object.filterTags(areas.entrances, (eTag, eTagRep, eEnableTag, eLink) => (eTag === areas.entrances[eCategory].tag && eTagRep === false && eEnableTag && eLink === "")));
+        if (areasLocal.entrances[eCategory].tagRep) {
+            let tagEntrances = (Object.filterTags(areasLocal.entrances, (eTag, eTagRep, eEnableTag, eLink) => (eTag === areasLocal.entrances[eCategory].tag && eTagRep === false && eEnableTag && eLink === "")));
             if (tagEntrances.length !== 0) {
-                areas.entrances[tagEntrances[0]].tagRep = true;
-                areas.entrances[eCategory].tagRep = false;
+                areasLocal.entrances[tagEntrances[0]].tagRep = true;
+                areasLocal.entrances[eCategory].tagRep = false;
             }
         }
-        this.findVisibleAreas(shownAreas, areas, entrances);
-        entrancePools = this.loadEntrancePools(this.state.settings, this.state.allEntrances, areas);
-        let eRef = this.scroller[this.state.entranceRef];
+        findVisibleAreas(shownAreas, areasLocal, entrancesLocal);
+        entrancePools = loadEntrancePools(settings, allEntrances, areasLocal);
+        let eRef = entranceRef;
         let rect = eRef.getBoundingClientRect();
         let oTop = rect.top;
-        let scrollY = oTop + window.scrollY;
-        this.setState({
-            allAreas: areas,
-            areas: shownAreas,
-            entrances: entrancePools,
-            scrollY: scrollY,
-        });
-        //localStorage.setItem('AllAreas', areas);
-        this.handleEntranceMenuClose(false);
+        let scrollYLocal = oTop + window.scrollY;
+        setAllAreas(areasLocal);
+        setAreas(shownAreas);
+        setEntrances(entrancePools);
+        setScrollY(scrollYLocal);
+        //localStorage.setItem('AllAreas', areasLocal);
+        handleEntranceMenuClose(false);
     }
 
-    unLinkEntrance(entrance, scrollRef) {
+    const unLinkEntrance = (entrance, scrollRef) => {
         let originator = entrance;
         console.log(originator,"[Disconnected]");
-        let areas = cloneDeep(this.state.allAreas);
-        let shownAreas = cloneDeep(this.state.areas);
-        let entrances = cloneDeep(this.state.allEntrances);
-        let subArea = areas.entrances[originator].aLink;
-        let area = areas.entrances[originator].area;
-        if (areas.entrances[originator].oneWay === true && areas.entrances[originator].oneWayArea !== "") {
-            area = areas.entrances[originator].oneWayArea;
+        let areasLocal = cloneDeep(allAreas);
+        let shownAreas = cloneDeep(areas);
+        let entrancesLocal = cloneDeep(allEntrances);
+        let subArea = areasLocal.entrances[originator].aLink;
+        let area = areasLocal.entrances[originator].area;
+        if (areasLocal.entrances[originator].oneWay === true && areasLocal.entrances[originator].oneWayArea !== "") {
+            area = areasLocal.entrances[originator].oneWayArea;
         }
         let alwaysOneWay = ["spawn","warpsong","owldrop","extra","overworldoneway"];
         let unMixedDecoupled = ["boss", "noBossShuffle", "noDungeonShuffle"];
-        let targetArea = areas.entrances[subArea].area;
-        if (areas.entrances[subArea].oneWay === true && areas.entrances[subArea].oneWayArea !== "") {
-            targetArea = areas.entrances[subArea].oneWayArea;
+        let targetArea = areasLocal.entrances[subArea].area;
+        if (areasLocal.entrances[subArea].oneWay === true && areasLocal.entrances[subArea].oneWayArea !== "") {
+            targetArea = areasLocal.entrances[subArea].oneWayArea;
         }
         Object.filterAreas = (entrances, predicate) =>
             Object.keys(entrances)
                 .filter( key => predicate(entrances[key].aLink, entrances[key].shuffled, entrances[key].type) );
-        areas.entrances[originator].aLink = "";
+        areasLocal.entrances[originator].aLink = "";
         shownAreas[area].entrances[originator].aLink = "";
-        areas.entrances[originator].userALink = "";
+        areasLocal.entrances[originator].userALink = "";
         shownAreas[area].entrances[originator].userALink = "";
         
-        if (!(alwaysOneWay.includes(areas.entrances[originator].type))) {
-            areas.entrances[subArea].eLink = "";
+        if (!(alwaysOneWay.includes(areasLocal.entrances[originator].type))) {
+            areasLocal.entrances[subArea].eLink = "";
             shownAreas[targetArea].entrances[subArea].eLink = "";
-            areas.entrances[subArea].userELink = "";
+            areasLocal.entrances[subArea].userELink = "";
             shownAreas[targetArea].entrances[subArea].userELink = "";
-            if (areas.entrances[subArea].type === "overworld" && areas.entrances[subArea].oneWay && areas.entrances[subArea].oneWayArea !== "") {
-                shownAreas[areas.entrances[subArea].area].entrances[subArea].eLink = "";
-                shownAreas[areas.entrances[subArea].area].entrances[subArea].userELink = "";
+            if (areasLocal.entrances[subArea].type === "overworld" && areasLocal.entrances[subArea].oneWay && areasLocal.entrances[subArea].oneWayArea !== "") {
+                shownAreas[areasLocal.entrances[subArea].area].entrances[subArea].eLink = "";
+                shownAreas[areasLocal.entrances[subArea].area].entrances[subArea].userELink = "";
             }
         } else {
-            areas.entrances[subArea].oneWayELink = "";
+            areasLocal.entrances[subArea].oneWayELink = "";
             shownAreas[targetArea].entrances[subArea].oneWayELink = "";
-            areas.entrances[subArea].userOneWayELink = "";
+            areasLocal.entrances[subArea].userOneWayELink = "";
             shownAreas[targetArea].entrances[subArea].userOneWayELink = "";
         }
-        if (this.state.settings["Decoupled Entrances"] === "Off" || (unMixedDecoupled.includes(areas.entrances[originator].type))) {
-            if (!(alwaysOneWay.includes(entrances[originator].type))) {
+        if (settings["Decoupled Entrances"] === "Off" || (unMixedDecoupled.includes(areasLocal.entrances[originator].type))) {
+            if (!(alwaysOneWay.includes(areasLocal.entrances[originator].type))) {
                 let revSubArea;
                 let revTargetE;
-                if (areas.entrances[subArea].type === "overworld") {
+                if (areasLocal.entrances[subArea].type === "overworld") {
                     revSubArea = subArea;
                 } else {
-                    revSubArea = areas.entrances[subArea].reverse;
+                    revSubArea = areasLocal.entrances[subArea].reverse;
                 }
-                if (areas.entrances[originator].type === "overworld") {
+                if (areasLocal.entrances[originator].type === "overworld") {
                     revTargetE = originator;
                 } else {
-                    revTargetE = areas.entrances[originator].reverse;
+                    revTargetE = areasLocal.entrances[originator].reverse;
                 }
-                let revArea = areas.entrances[revSubArea].area;
-                let revTargetArea = areas.entrances[revTargetE].area;
-                areas.entrances[revSubArea].aLink = "";
+                let revArea = areasLocal.entrances[revSubArea].area;
+                let revTargetArea = areasLocal.entrances[revTargetE].area;
+                areasLocal.entrances[revSubArea].aLink = "";
                 shownAreas[revArea].entrances[revSubArea].aLink = "";
-                areas.entrances[revTargetE].eLink = "";
+                areasLocal.entrances[revTargetE].eLink = "";
                 shownAreas[revTargetArea].entrances[revTargetE].eLink = "";
-                areas.entrances[revSubArea].userALink = "";
+                areasLocal.entrances[revSubArea].userALink = "";
                 shownAreas[revArea].entrances[revSubArea].userALink = "";
-                areas.entrances[revTargetE].userELink = "";
+                areasLocal.entrances[revTargetE].userELink = "";
                 shownAreas[revTargetArea].entrances[revTargetE].userELink = "";
             }
         }
@@ -2052,266 +1253,240 @@ class Tracker extends React.Component {
         Object.filterTags = (entrances, predicate) =>
             Object.keys(entrances)
                 .filter( key => predicate(entrances[key].tag, entrances[key].tagRep, entrances[key].eLink) );
-        if (areas.entrances[subArea].tag !== "") {
-            let tagEntrances = (Object.filterTags(areas.entrances, (eTag, eTagRep, eLink) => (eTag === areas.entrances[subArea].tag && eTagRep === true && eLink === "")));
+        if (areasLocal.entrances[subArea].tag !== "") {
+            let tagEntrances = (Object.filterTags(areasLocal.entrances, (eTag, eTagRep, eLink) => (eTag === areasLocal.entrances[subArea].tag && eTagRep === true && eLink === "")));
             if (tagEntrances.length === 0) {
-                areas.entrances[subArea].tagRep = true;
+                areasLocal.entrances[subArea].tagRep = true;
             }
         }
 
-        this.findVisibleAreas(shownAreas, areas, entrances);
-        let entrancePools = this.loadEntrancePools(this.state.settings, entrances, areas);
-        let eRef = this.scroller[scrollRef];
-        let rect = eRef.getBoundingClientRect();
-        let oTop = rect.top;
-        let scrollY = oTop + window.scrollY;
-        this.setState({
-            allAreas: areas,
-            allEntrances: entrances,
-            areas: shownAreas,
-            entrances: entrancePools,
-            scrollY: scrollY,
-            entranceRef: scrollRef,
-        });
-        //localStorage.setItem('AllAreas', areas);
+        findVisibleAreas(shownAreas, areasLocal, entrancesLocal);
+        let entrancePools = loadEntrancePools(settings, entrancesLocal, areasLocal);
+        //let eRef = entranceRef;
+        //let rect = eRef.getBoundingClientRect();
+        //let oTop = rect.top;
+        //let scrollYLocal = oTop + window.scrollY;
+        setAllAreas(areasLocal);
+        setAllEntrances(entrancesLocal);
+        setAreas(shownAreas);
+        setEntrances(entrancePools);
+        //setScrollY(scrollYLocal);
+        //setEntranceRef(scrollRef.target);
+        //localStorage.setItem('AllAreas', areasLocal);
         //localStorage.setItem('AllEntrances', entrances);
     }
 
-    toggleWalletTiers(location) {
+    const toggleWalletTiers = (location) => {
         let originator = location;
         console.log(originator,"[wallet tier change]");
-        let areas = cloneDeep(this.state.areas);
-        let allAreas = cloneDeep(this.state.allAreas);
-        let allEntrances = cloneDeep(this.state.allEntrances);
+        let areasLocal = cloneDeep(areas);
+        let allAreasLocal = cloneDeep(allAreas);
+        let allEntrancesLocal = cloneDeep(allEntrances);
         let tier;
-        allAreas.locations[originator].walletTier === 3 ?
+        allAreasLocal.locations[originator].walletTier === 3 ?
             tier = 0
-            : tier = allAreas.locations[originator].walletTier + 1;
-        allAreas.locations[originator].walletTier = tier;
-        if (allAreas.locations[originator].area !== "") {
-            areas[allAreas.locations[originator].area].locations[originator].walletTier = tier;
+            : tier = allAreasLocal.locations[originator].walletTier + 1;
+        allAreasLocal.locations[originator].walletTier = tier;
+        if (allAreasLocal.locations[originator].area !== "") {
+            areasLocal[allAreasLocal.locations[originator].area].locations[originator].walletTier = tier;
         }
-        if (allAreas.locations[originator].lKey !== "") {
-            allEntrances[allAreas.locations[originator].lKey].locations[originator].walletTier = tier;
+        if (allAreasLocal.locations[originator].lKey !== "") {
+            allEntrancesLocal[allAreasLocal.locations[originator].lKey].locations[originator].walletTier = tier;
         }
-        this.setState({
-            allAreas: allAreas,
-            allEntrances: allEntrances,
-            areas: areas,
-        });
+        setAllAreas(allAreasLocal);
+        setAllEntrances(allEntrancesLocal);
+        setAreas(areasLocal);
         //localStorage.setItem('AllAreas', allAreas);
         //localStorage.setItem('AllEntrances', allEntrances);
     }
 
-    updateShopPrice(location, price) {
+    const updateShopPrice = (location, price) => {
         let originator = location;
         if (price === "") { price = 0; }
         console.log(originator,"[costs]",price);
-        let areas = cloneDeep(this.state.areas);
-        let allAreas = cloneDeep(this.state.allAreas);
-        let allEntrances = cloneDeep(this.state.allEntrances);
-        allAreas.locations[originator].price = price;
-        if (allAreas.locations[originator].area !== "") {
-            areas[allAreas.locations[originator].area].locations[originator].price = price;
+        let areasLocal = cloneDeep(areas);
+        let allAreasLocal = cloneDeep(allAreas);
+        let allEntrancesLocal = cloneDeep(allEntrances);
+        allAreasLocal.locations[originator].price = price;
+        if (allAreasLocal.locations[originator].area !== "") {
+            areasLocal[allAreasLocal.locations[originator].area].locations[originator].price = price;
         }
-        if (allAreas.locations[originator].lKey !== "") {
-            allEntrances[allAreas.locations[originator].lKey].locations[originator].price = price;
+        if (allAreasLocal.locations[originator].lKey !== "") {
+            allEntrancesLocal[allAreasLocal.locations[originator].lKey].locations[originator].price = price;
         }
-        this.setState({
-            allAreas: allAreas,
-            allEntrances: allEntrances,
-            areas: areas,
-        });
-        //localStorage.setItem('AllAreas', allAreas);
-        //localStorage.setItem('AllEntrances', allEntrances);
+        setAllAreas(allAreasLocal);
+        setAllEntrances(allEntrancesLocal);
+        setAreas(areasLocal);
+        //localStorage.setItem('allAreas', allAreasLocal);
+        //localStorage.setItem('allEntrances', allEntrancesLocal);
     }
 
-    checkLocation(location) {
+    const checkLocation = (location) => {
         let originator = location;
         console.log(originator, "[Checked]");
-        let areas = cloneDeep(this.state.areas);
-        let allAreas = cloneDeep(this.state.allAreas);
-        let allEntrances = cloneDeep(this.state.allEntrances);
-        allAreas.locations[originator].check = "checked";
-        if (allAreas.locations[originator].area !== "") {
-            areas[allAreas.locations[originator].area].locations[originator].check = "checked";
+        let areasLocal = cloneDeep(areas);
+        let allAreasLocal = cloneDeep(allAreas);
+        let allEntrancesLocal = cloneDeep(allEntrances);
+        allAreasLocal.locations[originator].check = "checked";
+        if (allAreasLocal.locations[originator].area !== "") {
+            areasLocal[allAreasLocal.locations[originator].area].locations[originator].check = "checked";
         }
-        if (allAreas.locations[originator].lKey !== "") {
-            allEntrances[allAreas.locations[originator].lKey].locations[originator].check = "checked";
+        if (allAreasLocal.locations[originator].lKey !== "") {
+            allEntrancesLocal[allAreasLocal.locations[originator].lKey].locations[originator].check = "checked";
         }
-        this.setState({
-            allAreas: allAreas,
-            allEntrances: allEntrances,
-            areas: areas,
-        });
-        //localStorage.setItem('AllAreas', allAreas);
-        //localStorage.setItem('AllEntrances', allEntrances);
-        this.handleItemMenuClose();
+        setAllAreas(allAreasLocal);
+        setAllEntrances(allEntrancesLocal);
+        setAreas(areasLocal);
+        //localStorage.setItem('allAreas', allAreasLocal);
+        //localStorage.setItem('allEntrances', allEntrancesLocal);
+        handleItemMenuClose();
     }
 
-    unCheckLocation(location) {
+    const unCheckLocation = (location) => {
         let originator = location;
         console.log(originator, "[Unchecked]");
-        let areas = cloneDeep(this.state.areas);
-        let allAreas = cloneDeep(this.state.allAreas);
-        let allEntrances = cloneDeep(this.state.allEntrances);
-        allAreas.locations[originator].check = "";
-        if (allAreas.locations[originator].area !== "") {
-            areas[allAreas.locations[originator].area].locations[originator].check = "";
+        let areasLocal = cloneDeep(areas);
+        let allAreasLocal = cloneDeep(allAreas);
+        let allEntrancesLocal = cloneDeep(allEntrances);
+        allAreasLocal.locations[originator].check = "";
+        if (allAreasLocal.locations[originator].area !== "") {
+            areasLocal[allAreasLocal.locations[originator].area].locations[originator].check = "";
         }
-        if (allAreas.locations[originator].lKey !== "") {
-            allEntrances[allAreas.locations[originator].lKey].locations[originator].check = "";
+        if (allAreasLocal.locations[originator].lKey !== "") {
+            allEntrancesLocal[allAreasLocal.locations[originator].lKey].locations[originator].check = "";
         }
-        this.setState({
-            allAreas: allAreas,
-            allEntrances: allEntrances,
-            areas: areas,
-        });
-        //localStorage.setItem('AllAreas', allAreas);
-        //localStorage.setItem('AllEntrances', allEntrances);
+        setAllAreas(allAreasLocal);
+        setAllEntrances(allEntrancesLocal);
+        setAreas(areasLocal);
+        //localStorage.setItem('allAreas', allAreasLocal);
+        //localStorage.setItem('allEntrances', allEntrancesLocal);
     }
 
-    findItem(ootItem) {
+    const findItem = (ootItem) => {
         let originator = ootItem.currentTarget.getAttribute('data-found-in');
         let foundItem = ootItem.currentTarget.getAttribute('data-found-item');
         foundItem === "" ? console.log(originator,"[cleared]") :
         console.log(originator,"[holds]",foundItem);
-        let areas = cloneDeep(this.state.areas);
-        let allAreas = cloneDeep(this.state.allAreas);
-        let allEntrances = cloneDeep(this.state.allEntrances);
-        allAreas.locations[originator].foundItem = foundItem;
-        if (allAreas.locations[originator].area !== "") {
-            areas[allAreas.locations[originator].area].locations[originator].foundItem = foundItem;
+        let areasLocal = cloneDeep(areas);
+        let allAreasLocal = cloneDeep(allAreas);
+        let allEntrancesLocal = cloneDeep(allEntrances);
+        allAreasLocal.locations[originator].foundItem = foundItem;
+        if (allAreasLocal.locations[originator].area !== "") {
+            areasLocal[allAreasLocal.locations[originator].area].locations[originator].foundItem = foundItem;
         }
-        if (allAreas.locations[originator].lKey !== "") {
-            allEntrances[allAreas.locations[originator].lKey].locations[originator].foundItem = foundItem;
+        if (allAreasLocal.locations[originator].lKey !== "") {
+            allEntrancesLocal[allAreasLocal.locations[originator].lKey].locations[originator].foundItem = foundItem;
         }
-        this.setState({
-            allAreas: allAreas,
-            allEntrances: allEntrances,
-            areas: areas,
-        });
-        //localStorage.setItem('AllAreas', allAreas);
-        //localStorage.setItem('AllEntrances', allEntrances);
-        this.handleItemMenuClose();
-        this.handleShopItemMenuClose();
+        setAllAreas(allAreasLocal);
+        setAllEntrances(allEntrancesLocal);
+        setAreas(areasLocal);
+        //localStorage.setItem('allAreas', allAreasLocal);
+        //localStorage.setItem('allEntrances', allEntrancesLocal);
+        handleItemMenuClose();
+        handleShopItemMenuClose();
     }
 
-    cancelAlert() {
-        this.setState({ alertReset: false, });
+    const cancelAlert = () => {
+        setAlertReset(false);
     }
 
-    cancelUpdate() {
-        this.setState({ alertUpdate: false, });
+    const cancelUpdate = () => {
+        setAlertUpdate(false);
     }
 
-    handleItemMenuOpen(location, dataSource) {
-        this.setState({
-            itemMenuOpen: location,
-            locationToLink: dataSource,
-        });
+    const handleItemMenuOpen = (location, dataSource) => {
+        setItemMenuOpen(location);
+        setLocationToLink(dataSource);
     }
 
-    handleShopItemMenuOpen(location, dataSource) {
-        this.setState({
-            shopItemMenuOpen: location,
-            locationToLink: dataSource,
-        });
+    const handleShopItemMenuOpen = (location, dataSource) => {
+        setShopItemMenuOpen(location);
+        setLocationToLink(dataSource);
     }
 
-    handleItemMenuClose() {
-        this.setState({
-            itemMenuOpen: null,
-            locationToLink: null,
-        });
+    const handleItemMenuClose = () => {
+        setItemMenuOpen(null);
+        setLocationToLink(null);
     }
 
-    handleShopItemMenuClose() {
-        this.setState({
-            shopItemMenuOpen: null,
-            locationToLink: null,
-        });
+    const handleShopItemMenuClose = () => {
+        setShopItemMenuOpen(null);
+        setLocationToLink(null);
     }
 
-    handleEntranceMenuOpen(entrance, scrollRef) {
+    const handleEntranceMenuOpen = (entrance, scrollRef) => {
         console.log(entrance.currentTarget.getAttribute('data-source'),'-> Open menu');
-        this.setState({
-            entranceMenuOpen: entrance.currentTarget,
-            entranceToLink: entrance.currentTarget.getAttribute('data-source'),
-            entranceConnector: entrance.currentTarget.getAttribute('data-connector'),
-            entranceType: entrance.currentTarget.getAttribute('data-etype'),
-            entranceRef: scrollRef,
-        });
+        setEntranceMenuOpen(entrance.currentTarget);
+        setEntranceToLink(entrance.currentTarget.getAttribute('data-source'));
+        setEntranceConnector(entrance.currentTarget.getAttribute('data-connector'));
+        setEntranceType(entrance.currentTarget.getAttribute('data-etype'));
+        setEntranceRef(entrance.target);
     }
 
-    handleEntranceMenuClose(clearRef=true) {
-        let eRef = (clearRef === true) ? null : this.state.entranceRef;
-        this.setState({
-            entranceMenuOpen: null,
-            entranceToLink: null,
-            entranceConnector: null,
-            entranceType: "",
-            entranceRef: eRef,
-        });
+    const handleEntranceMenuClose = (clearRef=true) => {
+        let eRef = (clearRef === true) ? null : entranceRef;
+        setEntranceMenuOpen(null);
+        setEntranceToLink(null);
+        setEntranceConnector(null);
+        setEntranceType('');
+        setEntranceRef(eRef);
     }
 
-    buildEntranceURL(reverseLink, useConnector=true) {
+    const buildEntranceURL = (reverseLink, useConnector=true) => {
         let href = '#';
-        if ((this.state.allAreas.entrances[reverseLink].type === "overworld") || (this.state.allAreas.entrances[reverseLink].isReverse)) {
-            href = '#' + this.state.allAreas.entrances[reverseLink].area;
-        } else if (this.state.allAreas.entrances[reverseLink].reverse !== '') {
-            let reReverseLink = this.state.allAreas.entrances[this.state.allAreas.entrances[reverseLink].reverse].aLink;
+        if ((allAreas.entrances[reverseLink].type === "overworld") || (allAreas.entrances[reverseLink].isReverse)) {
+            href = '#' + allAreas.entrances[reverseLink].area;
+        } else if (allAreas.entrances[reverseLink].reverse !== '') {
+            let reReverseLink = allAreas.entrances[allAreas.entrances[reverseLink].reverse].aLink;
             if (reReverseLink !== '') {
-                if ((this.state.allAreas.entrances[reReverseLink].type === "overworld") || (this.state.allAreas.entrances[reReverseLink].isReverse)) {
-                    href = '#' + this.state.allAreas.entrances[reReverseLink].area;
+                if ((allAreas.entrances[reReverseLink].type === "overworld") || (allAreas.entrances[reReverseLink].isReverse)) {
+                    href = '#' + allAreas.entrances[reReverseLink].area;
                 } else {
-                    href = this.buildEntranceURL(reReverseLink);
+                    href = buildEntranceURL(reReverseLink);
                 }
             }
         }
-        if (['warpsong', 'spawn', 'owldrop', 'extra', 'overworldoneway'].includes(this.state.allAreas.entrances[reverseLink].type)) {
+        if (['warpsong', 'spawn', 'owldrop', 'extra', 'overworldoneway'].includes(allAreas.entrances[reverseLink].type)) {
             if (useConnector) {
-                if (this.state.allAreas.entrances[reverseLink].connector !== "") {
-                    if (this.state.allAreas.entrances[this.state.allAreas.entrances[reverseLink].connector].aLink !== "") {
-                        href = '#' + this.state.allAreas.entrances[this.state.allAreas.entrances[this.state.allAreas.entrances[reverseLink].connector].aLink].area;
+                if (allAreas.entrances[reverseLink].connector !== "") {
+                    if (allAreas.entrances[allAreas.entrances[reverseLink].connector].aLink !== "") {
+                        href = '#' + allAreas.entrances[allAreas.entrances[allAreas.entrances[reverseLink].connector].aLink].area;
                     }
                 } else {
-                    href = '#' + this.state.allAreas.entrances[reverseLink].area;
+                    href = '#' + allAreas.entrances[reverseLink].area;
                 }
             } else {
-                href = '#' + this.state.allAreas.entrances[reverseLink].oneWayArea;
+                href = '#' + allAreas.entrances[reverseLink].oneWayArea;
             }
         }
-        if (this.state.allAreas.entrances[reverseLink].type === "dungeon" || this.state.allAreas.entrances[reverseLink].type === "dungeonGanon") {
-            if (this.state.allAreas.entrances[reverseLink].isReverse === true) {
-                href = '#' + this.state.allAreas.entrances[reverseLink].area;
+        if (allAreas.entrances[reverseLink].type === "dungeon" || allAreas.entrances[reverseLink].type === "dungeonGanon") {
+            if (allAreas.entrances[reverseLink].isReverse === true) {
+                href = '#' + allAreas.entrances[reverseLink].area;
             } else {
-                href = '#' + this.state.allAreas.entrances[reverseLink].alias;
+                href = '#' + allAreas.entrances[reverseLink].alias;
             }
         }
         return href;
     }
 
-    handleDungeonTravel(entrance, useConnector=true) {
-        let eType = this.state.allAreas.entrances[entrance].type;
-        if (this.state.settings["View"] === "Overworld" && (eType === "dungeon" || eType === "dungeonGanon") && this.state.allAreas.entrances[entrance].isReverse === false) {
-            this.changeSetting({"target": { "name": "View", "value": "Dungeons" }});
+    const handleDungeonTravel = (entrance, useConnector=true) => {
+        let eType = allAreas.entrances[entrance].type;
+        if (settings["View"] === "Overworld" && (eType === "dungeon" || eType === "dungeonGanon") && allAreas.entrances[entrance].isReverse === false) {
+            changeSetting({"target": { "name": "View", "value": "Dungeons" }});
         }
-        if (this.state.settings["View"] === "Dungeons" && ((eType !== "dungeon" && eType !== "dungeonGanon") || ((eType === "dungeon" || eType === "dungeonGanon") && this.state.allAreas.entrances[entrance].isReverse === true))) {
-            this.changeSetting({"target": { "name": "View", "value": "Overworld" }});
+        if (settings["View"] === "Dungeons" && ((eType !== "dungeon" && eType !== "dungeonGanon") || ((eType === "dungeon" || eType === "dungeonGanon") && allAreas.entrances[entrance].isReverse === true))) {
+            changeSetting({"target": { "name": "View", "value": "Overworld" }});
         }
-        let href = this.buildEntranceURL(entrance, useConnector);
+        let href = buildEntranceURL(entrance, useConnector);
         if (href !== '#') {
-            this.setState({
-                delayedURL: href,
-            });
+            setDelayedURL(href);
         }
     }
 
-    isWarpAreaLinked(entrance) {
+    const isWarpAreaLinked = (entrance) => {
         let linked = false;
-        if (this.state.allAreas.entrances[entrance].aLink !== '') {
-            let href = this.buildEntranceURL(this.state.allAreas.entrances[entrance].aLink);
+        if (allAreas.entrances[entrance].aLink !== '') {
+            let href = buildEntranceURL(allAreas.entrances[entrance].aLink);
             if (href !== '#') {
                 linked = true;
             }
@@ -2319,102 +1494,124 @@ class Tracker extends React.Component {
         return linked;
     }
 
-    handleWarpMenu(area) {
+    const handleWarpMenu = (area) => {
         let eType;
-        if (this.state.areas[area].dungeon !== true) {
+        if (areas[area].dungeon !== true) {
             eType = 'overworld';
         } else {
             eType = 'dungeon';
         }
-        if (this.state.settings["View"] === "Overworld" && eType === "dungeon") {
-            this.changeSetting({"target": { "name": "View", "value": "Dungeons" }});
-        } else if (this.state.settings["View"] === "Dungeons" && eType !== "dungeon") {
-            this.changeSetting({"target": { "name": "View", "value": "Overworld" }});
+        if (settings["View"] === "Overworld" && eType === "dungeon") {
+            changeSetting({"target": { "name": "View", "value": "Dungeons" }});
+        } else if (settings["View"] === "Dungeons" && eType !== "dungeon") {
+            changeSetting({"target": { "name": "View", "value": "Overworld" }});
         }
         let href = '#' + area;
-        this.setState({
-            delayedURL: href,
-            expandWarpMenu: false,
-            expandDungeonMenu: false,
-        });
+        setDelayedURL(href);
+        setExpandWarpMenu(false);
+        setExpandDungeonMenu(false);
     }
 
-    toggleAreaView() {
-        if (this.state.settings["View"] === "Overworld") {
-            this.changeSetting({"target": { "name": "View", "value": "Dungeons" }});
+    const toggleAreaView = () => {
+        if (settings["View"] === "Overworld") {
+            changeSetting({"target": { "name": "View", "value": "Dungeons" }});
         } else {
-            this.changeSetting({"target": { "name": "View", "value": "Overworld" }});
+            changeSetting({"target": { "name": "View", "value": "Overworld" }});
         }
     }
 
-    render() {
-        // Revisit after conversion to functional components
-        //const customTheme = this.state.themeDark ? dark : light;
-        //const { classes } = this.props;
-        //const customTheme = createMuiTheme();
-        const classes = {};
+    const contextMenuHandler = new ContextMenuHandler(handleItemMenuOpen);
+    const shopContextMenuHandler = new ContextMenuHandler(handleShopItemMenuOpen);
+    const areaMenuHandler = new ContextMenuHandler(toggleAreaView);
+    const reverseCollapseHandler = new ContextMenuHandler(toggleCollapseReverse);
+
+    // Revisit after conversion to functional components
+    //const customTheme = themeDark ? dark : light;
+    //const { classes } = this.props;
+    const customTheme = createTheme({
+        components: {
+            MuiSwitch: {
+                variants: [
+                    {
+                        props: { variant: 'dungeon' },
+                        style: {
+                            color: '#ffffcf',
+                            '& .Mui-checked': {
+                                color: '#cbc26d',
+                            },
+                            '& .Mui-checked + .MuiSwitch-track': {
+                                backgroundColor: '#cbc693',
+                            },                    
+                        },
+                    },
+                ],
+            },
+        },
+    });
+    const classes = {};
+    if (trackerInitialized) {
         return (
             <React.Fragment>
-                {/*<ThemeProvider theme={customTheme}>
-                    <CssBaseline />*/}
-                    <div className={classes.root}>
+                <ThemeProvider theme={customTheme}>
+                    <CssBaseline />
+                    <div className={themeDark ? "root dark" : "root"}>
                         <AppBar
                             position="fixed"
-                            className={classes.appBar}
                         >
                             <Toolbar>
                                 <IconButton
                                     edge="start"
                                     aria-label="open drawer"
-                                    onClick={() => this.setState({ openSettings: !this.state.openSettings })}
+                                    onClick={() => setOpenSettings(!openSettings)}
                                 >
                                     <MenuIcon />
                                 </IconButton>
-                                <div className={classes.title}>
+                                <div className="title">
                                     <div>
-                                        <div className={classes.titleText} variant="h4">{this.state.settings["View"]}</div>
+                                        <div className="titleText" variant="h4">{settings["View"]}</div>
                                     </div>
                                 </div>
-                                <div className={classes.checkCount}>
+                                <div className="checkCount">
                                     {
-                                        Object.keys(this.state.allAreas.locations).filter(l => {
-                                            return this.state.allAreas.locations[l].shuffled &&
-                                                   this.state.allAreas.locations[l].check !== "";
-                                        }).length
+                                        !!allAreas && !!(allAreas.locations) ?
+                                        Object.keys(allAreas.locations).filter(l => {
+                                            return allAreas.locations[l].shuffled &&
+                                                    allAreas.locations[l].check !== "";
+                                        }).length : 0
                                     }
                                     /
                                     {
-                                        Object.keys(this.state.allAreas.locations).filter(l => {
-                                            return this.state.allAreas.locations[l].shuffled;
-                                        }).length
+                                        !!allAreas && !!(allAreas.locations) ?
+                                        Object.keys(allAreas.locations).filter(l => {
+                                            return allAreas.locations[l].shuffled;
+                                        }).length : 0
                                     }
                                 </div>
                                 <button
-                                    onClick={() => this.setState({alertReset: true,})}
-                                    className={classes.menuButton}
+                                    onClick={() => setAlertReset(true)}
+                                    className="menuButton"
                                 >
-                                    <span className={classes.menuButtonLabel}>Reset</span>
+                                    <span className="menuButtonLabel">Reset</span>
                                 </button>
-                                {/*<Button
-                                    variant="contained"
+                                <button
                                     onClick={() => {
-                                        let darkMode = !this.state.themeDark;
-                                        this.setState({ themeDark: darkMode, });
-                                        localStorage.setItem('DarkMode',darkMode);
+                                        let darkMode = !themeDark;
+                                        setThemeDark(darkMode);
+                                        //localStorage.setItem('DarkMode',darkMode);
                                     }}
-                                    className={classes.menuButton}
+                                    className="menuButton"
                                 >
                                     {
-                                        this.state.themeDark ?
-                                            <React.Fragment><Brightness7Icon />Light Mode</React.Fragment> :
-                                            <React.Fragment><Brightness3Icon />Dark Mode</React.Fragment>
+                                        themeDark ?
+                                            <span className="menuButtonLabel"><Brightness7Icon />Light Mode</span> :
+                                            <span className="menuButtonLabel"><Brightness3Icon />Dark Mode</span>
                                     }
-                                </Button>*/}
+                                </button>
                             </Toolbar>
                         </AppBar>
                         <Dialog
-                            open={this.state.alertReset}
-                            onClose={() => this.cancelAlert()}
+                            open={alertReset}
+                            onClose={() => cancelAlert()}
                             disableScrollLock={true}
                         >
                             <DialogTitle>{"Reset Tracker?"}</DialogTitle>
@@ -2424,13 +1621,13 @@ class Tracker extends React.Component {
                                 </DialogContentText>
                             </DialogContent>
                             <DialogActions>
-                                <Button onClick={() => this.resetState(this.state.settings)}>Yes</Button>
-                                <Button onClick={() => this.cancelAlert()}>No</Button>
+                                <Button onClick={() => resetState(settings)}>Yes</Button>
+                                <Button onClick={() => cancelAlert()}>No</Button>
                             </DialogActions>
                         </Dialog>
                         <Dialog
-                            open={this.state.alertUpdate}
-                            onClose={() => this.cancelUpdate()}
+                            open={alertUpdate}
+                            onClose={() => cancelUpdate()}
                             disableScrollLock={true}
                         >
                             <DialogTitle>{"Scheduled Updates"}</DialogTitle>
@@ -2438,7 +1635,7 @@ class Tracker extends React.Component {
                                 <DialogContentText>
                                     Your tracker will update on <b>May 15th at 8PM US Eastern Daylight Time</b>.
                                 </DialogContentText>
-                                <DialogContentText className={classes.redAlert}>
+                                <DialogContentText className="redAlert">
                                     <em><b>ANY SAVED PROGRESS WILL BE LOST.</b></em>
                                 </DialogContentText>
                                 <DialogContentText>
@@ -2446,29 +1643,29 @@ class Tracker extends React.Component {
                                 </DialogContentText>
                             </DialogContent>
                             <DialogActions>
-                                <Button onClick={() => this.cancelUpdate()}>OK</Button>
+                                <Button onClick={() => cancelUpdate()}>OK</Button>
                             </DialogActions>
                         </Dialog>
                         <Drawer
-                            className={classes.drawer}
+                            className="settingsDrawer"
                             variant="persistent"
                             anchor="left"
-                            open={this.state.openSettings}
-                            classes={{paper: classes.drawerPaper}}
+                            open={openSettings}
+                            classes={{paper: "drawerPaper"}}
                             SlideProps={{
                                 unmountOnExit: true,
                             }}
                         >
-                            <div className={classes.drawerHeader} />
-                            <List className={classes.drawerContainer}>
+                            <div className="drawerHeader" />
+                            <List className="drawerContainer">
                                 {
-                                    Object.keys(this.state.enabled_settings).map((setting,si) => {
+                                    Object.keys(enabled_settings).map((setting,si) => {
                                         return (
                                             <GameSetting
                                                 title={setting}
-                                                settings={this.state.enabled_settings[setting]}
-                                                userSettings={this.state.settings}
-                                                onChange={(s) => this.changeSetting(s)}
+                                                settings={enabled_settings[setting]}
+                                                userSettings={settings}
+                                                onChange={(s) => changeSetting(s)}
                                                 classes={classes}
                                                 key={si}
                                             />
@@ -2476,204 +1673,204 @@ class Tracker extends React.Component {
                                     })
                                 }
                                 <ListItem>
-                                    <Link className={classes.devLink} href="https://github.com/mracsys/tootr"><Typography>Github</Typography></Link>
+                                    <Link className="devLink" href="https://github.com/mracsys/tootr"><Typography>Github</Typography></Link>
                                 </ListItem>
                             </List>
                         </Drawer>
                         <EntranceMenu
-                            anchorLocation={this.state.entranceMenuOpen}
-                            handleClose={this.handleEntranceMenuClose}
-                            handleLink={this.linkEntrance}
-                            entrancePool={this.state.entranceType in this.state.oneWayEntrances ?
-                                          this.state.oneWayEntrances[this.state.entranceType] :
-                                          this.state.entrances[this.state.entranceType]}
-                            allAreas={this.state.allAreas}
-                            connector={this.state.entranceConnector === 'true'}
-                            title={this.state.entranceToLink ? this.state.allAreas.entrances[this.state.entranceToLink].area : ''}
-                            oneWay={this.state.entranceToLink ? this.state.allAreas.entrances[this.state.entranceToLink].oneWay : false}
-                            decoupled={this.state.settings["Decoupled Entrances"] === "On"}
-                            isReverse={this.state.entranceToLink ? this.state.allAreas.entrances[this.state.entranceToLink].isReverse : false}
-                            sourceEntrance={this.state.entranceToLink}
+                            anchorLocation={entranceMenuOpen}
+                            handleClose={handleEntranceMenuClose}
+                            handleLink={linkEntrance}
+                            entrancePool={entranceType in oneWayEntrances ?
+                                            oneWayEntrances[entranceType] :
+                                            entrances[entranceType]}
+                            allAreas={allAreas}
+                            connector={entranceConnector === 'true'}
+                            title={entranceToLink ? allAreas.entrances[entranceToLink].area : ''}
+                            oneWay={entranceToLink ? allAreas.entrances[entranceToLink].oneWay : false}
+                            decoupled={settings["Decoupled Entrances"] === "On"}
+                            isReverse={entranceToLink ? allAreas.entrances[entranceToLink].isReverse : false}
+                            sourceEntrance={entranceToLink}
                             classes={classes}
                             id="globalEntranceMenu"
                         />
                         <ItemMenu
                             classes={classes}
-                            handleClose={this.handleItemMenuClose}
-                            handleFind={this.findItem}
-                            anchorLocation={this.state.itemMenuOpen}
-                            sourceLocation={this.state.locationToLink}
+                            handleClose={handleItemMenuClose}
+                            handleFind={findItem}
+                            anchorLocation={itemMenuOpen}
+                            sourceLocation={locationToLink}
                         />
                         <ShopItemMenu
                             classes={classes}
-                            handleClose={this.handleShopItemMenuClose}
-                            handleFind={this.findItem}
-                            anchorLocation={this.state.shopItemMenuOpen}
-                            sourceLocation={this.state.locationToLink}
+                            handleClose={handleShopItemMenuClose}
+                            handleFind={findItem}
+                            anchorLocation={shopItemMenuOpen}
+                            sourceLocation={locationToLink}
                         />
                         <div 
                             id="warpMenu"
-                            className={classes.warpMenu}
+                            className="warpMenu"
                         >
                             <div
                                 id="warpMenuVisible"
-                                className={classes.warpMenuVisible}
+                                className="warpMenuVisible"
                             >
                                 <OotIcon
                                     classes={classes}
                                     itemName="Kokiri Sword"
-                                    className={this.isWarpAreaLinked('Child Spawn -> KF Links House') ?
-                                        classes.locationMenuIcon :
-                                        classes.grayscaleMenuIcon}
-                                    onClick={this.isWarpAreaLinked('Child Spawn -> KF Links House') ?
-                                        () => this.handleDungeonTravel(this.state.allAreas.entrances['Child Spawn -> KF Links House'].aLink)
-                                        : () => this.handleDungeonTravel('Child Spawn -> KF Links House', false)}
+                                    className={isWarpAreaLinked('Child Spawn -> KF Links House') ?
+                                        "locationMenuIcon" :
+                                        "grayscaleMenuIcon"}
+                                    onClick={isWarpAreaLinked('Child Spawn -> KF Links House') ?
+                                        () => handleDungeonTravel(allAreas.entrances['Child Spawn -> KF Links House'].aLink)
+                                        : () => handleDungeonTravel('Child Spawn -> KF Links House', false)}
                                 />
                                 <OotIcon
                                     classes={classes}
                                     itemName="Master Sword"
-                                    className={this.isWarpAreaLinked('Adult Spawn -> Temple of Time') ?
-                                        classes.locationMenuIcon :
-                                        classes.grayscaleMenuIcon}
-                                    onClick={this.isWarpAreaLinked('Adult Spawn -> Temple of Time') ?
-                                        () => this.handleDungeonTravel(this.state.allAreas.entrances['Adult Spawn -> Temple of Time'].aLink)
-                                        : () => this.handleDungeonTravel('Adult Spawn -> Temple of Time', false)}
+                                    className={isWarpAreaLinked('Adult Spawn -> Temple of Time') ?
+                                        "locationMenuIcon" :
+                                        "grayscaleMenuIcon"}
+                                    onClick={isWarpAreaLinked('Adult Spawn -> Temple of Time') ?
+                                        () => handleDungeonTravel(allAreas.entrances['Adult Spawn -> Temple of Time'].aLink)
+                                        : () => handleDungeonTravel('Adult Spawn -> Temple of Time', false)}
                                 />
-                                <div className={classes.warpSongsBig}>
+                                <div className="warpSongsBig">
                                     <OotIcon
                                         classes={classes}
                                         itemName="Minuet of Forest"
-                                        className={this.isWarpAreaLinked('Minuet of Forest Warp -> Sacred Forest Meadow') ?
-                                            classes.locationMenuIcon :
-                                            classes.grayscaleMenuIcon}
-                                        onClick={this.isWarpAreaLinked('Minuet of Forest Warp -> Sacred Forest Meadow') ?
-                                            () => this.handleDungeonTravel(this.state.allAreas.entrances['Minuet of Forest Warp -> Sacred Forest Meadow'].aLink)
-                                            : () => this.handleDungeonTravel('Minuet of Forest Warp -> Sacred Forest Meadow', false)}
+                                        className={isWarpAreaLinked('Minuet of Forest Warp -> Sacred Forest Meadow') ?
+                                            "locationMenuIcon" :
+                                            "grayscaleMenuIcon"}
+                                        onClick={isWarpAreaLinked('Minuet of Forest Warp -> Sacred Forest Meadow') ?
+                                            () => handleDungeonTravel(allAreas.entrances['Minuet of Forest Warp -> Sacred Forest Meadow'].aLink)
+                                            : () => handleDungeonTravel('Minuet of Forest Warp -> Sacred Forest Meadow', false)}
                                     />
                                     <OotIcon
                                         classes={classes}
                                         itemName="Bolero of Fire"
-                                        className={this.isWarpAreaLinked('Bolero of Fire Warp -> DMC Central Local') ?
-                                            classes.locationMenuIcon :
-                                            classes.grayscaleMenuIcon}
-                                        onClick={this.isWarpAreaLinked('Bolero of Fire Warp -> DMC Central Local') ?
-                                            () => this.handleDungeonTravel(this.state.allAreas.entrances['Bolero of Fire Warp -> DMC Central Local'].aLink)
-                                            : () => this.handleDungeonTravel('Bolero of Fire Warp -> DMC Central Local', false)}
+                                        className={isWarpAreaLinked('Bolero of Fire Warp -> DMC Central Local') ?
+                                            "locationMenuIcon" :
+                                            "grayscaleMenuIcon"}
+                                        onClick={isWarpAreaLinked('Bolero of Fire Warp -> DMC Central Local') ?
+                                            () => handleDungeonTravel(allAreas.entrances['Bolero of Fire Warp -> DMC Central Local'].aLink)
+                                            : () => handleDungeonTravel('Bolero of Fire Warp -> DMC Central Local', false)}
                                     />
                                     <OotIcon
                                         classes={classes}
                                         itemName="Serenade of Water"
-                                        className={this.isWarpAreaLinked('Serenade of Water Warp -> Lake Hylia') ?
-                                            classes.locationMenuIcon :
-                                            classes.grayscaleMenuIcon}
-                                        onClick={this.isWarpAreaLinked('Serenade of Water Warp -> Lake Hylia') ?
-                                            () => this.handleDungeonTravel(this.state.allAreas.entrances['Serenade of Water Warp -> Lake Hylia'].aLink)
-                                            : () => this.handleDungeonTravel('Serenade of Water Warp -> Lake Hylia', false)}
+                                        className={isWarpAreaLinked('Serenade of Water Warp -> Lake Hylia') ?
+                                            "locationMenuIcon" :
+                                            "grayscaleMenuIcon"}
+                                        onClick={isWarpAreaLinked('Serenade of Water Warp -> Lake Hylia') ?
+                                            () => handleDungeonTravel(allAreas.entrances['Serenade of Water Warp -> Lake Hylia'].aLink)
+                                            : () => handleDungeonTravel('Serenade of Water Warp -> Lake Hylia', false)}
                                     />
                                     <OotIcon
                                         classes={classes}
                                         itemName="Requiem of Spirit"
-                                        className={this.isWarpAreaLinked('Requiem of Spirit Warp -> Desert Colossus') ?
-                                            classes.locationMenuIcon :
-                                            classes.grayscaleMenuIcon}
-                                        onClick={this.isWarpAreaLinked('Requiem of Spirit Warp -> Desert Colossus') ?
-                                            () => this.handleDungeonTravel(this.state.allAreas.entrances['Requiem of Spirit Warp -> Desert Colossus'].aLink)
-                                            : () => this.handleDungeonTravel('Requiem of Spirit Warp -> Desert Colossus', false)}
+                                        className={isWarpAreaLinked('Requiem of Spirit Warp -> Desert Colossus') ?
+                                            "locationMenuIcon" :
+                                            "grayscaleMenuIcon"}
+                                        onClick={isWarpAreaLinked('Requiem of Spirit Warp -> Desert Colossus') ?
+                                            () => handleDungeonTravel(allAreas.entrances['Requiem of Spirit Warp -> Desert Colossus'].aLink)
+                                            : () => handleDungeonTravel('Requiem of Spirit Warp -> Desert Colossus', false)}
                                     />
                                     <OotIcon
                                         classes={classes}
                                         itemName="Nocturne of Shadow"
-                                        className={this.isWarpAreaLinked('Nocturne of Shadow Warp -> Graveyard Warp Pad Region') ?
-                                            classes.locationMenuIcon :
-                                            classes.grayscaleMenuIcon}
-                                        onClick={this.isWarpAreaLinked('Nocturne of Shadow Warp -> Graveyard Warp Pad Region') ?
-                                            () => this.handleDungeonTravel(this.state.allAreas.entrances['Nocturne of Shadow Warp -> Graveyard Warp Pad Region'].aLink)
-                                            : () => this.handleDungeonTravel('Nocturne of Shadow Warp -> Graveyard Warp Pad Region', false)}
+                                        className={isWarpAreaLinked('Nocturne of Shadow Warp -> Graveyard Warp Pad Region') ?
+                                            "locationMenuIcon" :
+                                            "grayscaleMenuIcon"}
+                                        onClick={isWarpAreaLinked('Nocturne of Shadow Warp -> Graveyard Warp Pad Region') ?
+                                            () => handleDungeonTravel(allAreas.entrances['Nocturne of Shadow Warp -> Graveyard Warp Pad Region'].aLink)
+                                            : () => handleDungeonTravel('Nocturne of Shadow Warp -> Graveyard Warp Pad Region', false)}
                                     />
                                     <OotIcon
                                         classes={classes}
                                         itemName="Prelude of Light"
-                                        className={this.isWarpAreaLinked('Prelude of Light Warp -> Temple of Time') ?
-                                            classes.locationMenuIcon :
-                                            classes.grayscaleMenuIcon}
-                                        onClick={this.isWarpAreaLinked('Prelude of Light Warp -> Temple of Time') ?
-                                            () => this.handleDungeonTravel(this.state.allAreas.entrances['Prelude of Light Warp -> Temple of Time'].aLink)
-                                            : () => this.handleDungeonTravel('Prelude of Light Warp -> Temple of Time', false)}
+                                        className={isWarpAreaLinked('Prelude of Light Warp -> Temple of Time') ?
+                                            "locationMenuIcon" :
+                                            "grayscaleMenuIcon"}
+                                        onClick={isWarpAreaLinked('Prelude of Light Warp -> Temple of Time') ?
+                                            () => handleDungeonTravel(allAreas.entrances['Prelude of Light Warp -> Temple of Time'].aLink)
+                                            : () => handleDungeonTravel('Prelude of Light Warp -> Temple of Time', false)}
                                     />
                                 </div>
-                                <div className={classes.warpSongsSmall}>
-                                    <ClickAwayListener onClickAway={() => this.state.expandSongMenu ? this.setState({ expandSongMenu: false }) : null}>
+                                <div className="warpSongsSmall">
+                                    <ClickAwayListener onClickAway={() => expandSongMenu ? setExpandSongMenu(false) : null}>
                                         <div
-                                            className={classes.iconDiv}
-                                            onClick={() => this.setState({ expandSongMenu: !this.state.expandSongMenu })}
+                                            className="iconDiv"
+                                            onClick={() => setExpandSongMenu(!expandSongMenu)}
                                         >
-                                            {<QueueMusicIcon className={Object.keys(this.state.allAreas.entrances).filter((e) => (this.state.allAreas.entrances[e].type === 'warpsong' && this.state.allAreas.entrances[e].aLink !== '')).length > 0 ?
-                                                classes.expandWarpMenu :
-                                                classes.warpSongsBlank}
+                                            {<QueueMusicIcon className={Object.keys(allAreas.entrances).filter((e) => (allAreas.entrances[e].type === 'warpsong' && allAreas.entrances[e].aLink !== '')).length > 0 ?
+                                                "expandWarpMenu" :
+                                                "warpSongsBlank"}
                                             />}
                                         </div>
                                     </ClickAwayListener>
                                 </div>
-                                <ClickAwayListener onClickAway={() => this.state.expandWarpMenu ? this.setState({ expandWarpMenu: false }) : null}>
+                                <ClickAwayListener onClickAway={() => expandWarpMenu ? setExpandWarpMenu(false) : null}>
                                     <div
-                                        className={classes.iconDiv}
-                                        onClick={() => this.setState({ expandWarpMenu: !this.state.expandWarpMenu })}
-                                        onContextMenu={this.areaMenuHandler.onContextMenu}
-                                        onTouchStart={this.areaMenuHandler.onTouchStart}
-                                        onTouchCancel={this.areaMenuHandler.onTouchCancel}
-                                        onTouchEnd={this.areaMenuHandler.onTouchEnd}
-                                        onTouchMove={this.areaMenuHandler.onTouchMove}
+                                        className="iconDiv"
+                                        onClick={() => setExpandWarpMenu(!expandWarpMenu)}
+                                        onContextMenu={areaMenuHandler.onContextMenu}
+                                        onTouchStart={areaMenuHandler.onTouchStart}
+                                        onTouchCancel={areaMenuHandler.onTouchCancel}
+                                        onTouchEnd={areaMenuHandler.onTouchEnd}
+                                        onTouchMove={areaMenuHandler.onTouchMove}
                                     >
-                                        {<PublicIcon className={classes.expandWarpMenu} />}
+                                        {<PublicIcon className="expandWarpMenu" />}
                                     </div>
                                 </ClickAwayListener>
-                                <ClickAwayListener onClickAway={() => this.state.expandDungeonMenu ? this.setState({ expandDungeonMenu: false }) : null}>
+                                <ClickAwayListener onClickAway={() => expandDungeonMenu ? setExpandDungeonMenu(false) : null}>
                                     <div
-                                        className={classes.iconDiv}
-                                        onClick={() => this.setState({ expandDungeonMenu: !this.state.expandDungeonMenu })}
-                                        onContextMenu={this.areaMenuHandler.onContextMenu}
-                                        onTouchStart={this.areaMenuHandler.onTouchStart}
-                                        onTouchCancel={this.areaMenuHandler.onTouchCancel}
-                                        onTouchEnd={this.areaMenuHandler.onTouchEnd}
-                                        onTouchMove={this.areaMenuHandler.onTouchMove}
+                                        className="iconDiv"
+                                        onClick={() => setExpandDungeonMenu(!expandDungeonMenu)}
+                                        onContextMenu={areaMenuHandler.onContextMenu}
+                                        onTouchStart={areaMenuHandler.onTouchStart}
+                                        onTouchCancel={areaMenuHandler.onTouchCancel}
+                                        onTouchEnd={areaMenuHandler.onTouchEnd}
+                                        onTouchMove={areaMenuHandler.onTouchMove}
                                     >
-                                        {<MeetingRoomIcon className={classes.expandWarpMenu} />}
+                                        {<MeetingRoomIcon className="expandWarpMenu" />}
                                     </div>
                                 </ClickAwayListener>
                             </div>
                             <Collapse
-                                in={this.state.expandSongMenu}
+                                in={expandSongMenu}
                                 timeout='auto'
                                 unmountOnExit
-                                className={classes.warpAreaList}
+                                className="warpAreaList"
                             >
-                                { Object.keys(this.state.allAreas.entrances).filter((e) => (this.state.allAreas.entrances[e].type === 'warpsong' && this.state.allAreas.entrances[e].aLink !== '')).map((song, ia) => {
+                                { Object.keys(allAreas.entrances).filter((e) => (allAreas.entrances[e].type === 'warpsong' && allAreas.entrances[e].aLink !== '')).map((song, ia) => {
                                     return (
                                         <span
                                             key={'quickSongMenu'+ia}
-                                            className={classes.warpMenuArea}
-                                            onClick={() => this.handleDungeonTravel(this.state.allAreas.entrances[song].aLink)}
+                                            className="warpMenuArea"
+                                            onClick={() => handleDungeonTravel(allAreas.entrances[song].aLink)}
                                         >
-                                            {this.state.allAreas.entrances[song].alias}
+                                            {allAreas.entrances[song].alias}
                                         </span>
                                     );
                                 })}
                             </Collapse>
                             <Collapse
-                                in={this.state.expandWarpMenu}
+                                in={expandWarpMenu}
                                 timeout='auto'
                                 unmountOnExit
-                                className={classes.warpAreaList}
+                                className="warpAreaList"
                             >
-                                { Object.keys(this.state.areas).sort().filter((a) => (!(this.state.areas[a].dungeon))).map((area, ia) => {
+                                { Object.keys(areas).sort().filter((a) => (!(areas[a].dungeon))).map((area, ia) => {
                                     return (
                                         <span
                                             key={'quickAreaMenu'+ia}
-                                            className={this.state.areas[area].show ? 
-                                                classes.warpMenuArea :
-                                                classes.warpMenuAreaHidden}
-                                            onClick={this.state.areas[area].show ?
-                                                () => this.handleWarpMenu(area)
+                                            className={areas[area].show ? 
+                                                "warpMenuArea" :
+                                                "warpMenuAreaHidden"}
+                                            onClick={areas[area].show ?
+                                                () => handleWarpMenu(area)
                                                 : null}
                                         >
                                             {area}
@@ -2682,17 +1879,17 @@ class Tracker extends React.Component {
                                 })}
                             </Collapse>
                             <Collapse
-                                in={this.state.expandDungeonMenu}
+                                in={expandDungeonMenu}
                                 timeout='auto'
                                 unmountOnExit
-                                className={classes.warpAreaList}
+                                className="warpAreaList"
                             >
-                                { Object.keys(this.state.areas).sort().filter((a) => (this.state.areas[a].dungeon)).map((area, ia) => {
+                                { Object.keys(areas).sort().filter((a) => (areas[a].dungeon)).map((area, ia) => {
                                     return (
                                         <span
                                             key={'quickDungeonMenu'+ia}
-                                            className={classes.warpMenuArea}
-                                            onClick={() => this.handleWarpMenu(area)}
+                                            className="warpMenuArea"
+                                            onClick={() => handleWarpMenu(area)}
                                         >
                                             {area}
                                         </span>
@@ -2701,89 +1898,87 @@ class Tracker extends React.Component {
                             </Collapse>
                         </div>
                         <div
-                            className={clsx(classes.areaPaper, {
-                                [classes.areaPaperShift]: this.state.openSettings,
-                            })}
+                            className={openSettings ? "areaPaper areaPaperShift" : "areaPaper"}
                         >
-                            <div className={classes.drawerHeader} />
+                            <div className="drawerHeader" />
                             {
-                                this.state.settings["View"] === "Overworld" ?
-                                Object.keys(this.state.areas).sort().filter((a) => (this.state.areas[a].show && !(this.state.areas[a].dungeon))).map((area, ia) => { 
+                                settings["View"] === "Overworld" ?
+                                Object.keys(areas).sort().filter((a) => (areas[a].show && !(areas[a].dungeon))).map((area, ia) => { 
                                     return (
                                         <GameArea
                                             title={area}
-                                            entrances={this.state.areas[area].entrances}
-                                            entrancePools={this.state.entrances}
-                                            oneWayEntrancePools={this.state.oneWayEntrances}
-                                            mixedPools={this.state.settings["Mixed Pools"]}
-                                            decoupled={this.state.settings["Decoupled Entrances"] === "On"}
-                                            overworld={this.state.settings["Shuffle Overworld"] === "On"}
-                                            allEntrances={this.state.allEntrances}
-                                            allAreas={this.state.allAreas}
-                                            locations={this.state.areas[area].locations}
-                                            handleLink={this.linkEntrance}
-                                            handleUnLink={this.unLinkEntrance}
-                                            handleCheck={this.checkLocation}
-                                            handleUnCheck={this.unCheckLocation}
-                                            handleItemMenuOpen={this.handleItemMenuOpen}
-                                            handleItemMenuClose={this.handleItemMenuClose}
-                                            handleContextMenu={this.contextMenuHandler}
-                                            handleShopContextMenu={this.shopContextMenuHandler}
-                                            handleEntranceMenuOpen={this.handleEntranceMenuOpen}
-                                            handleFind={this.findItem}
-                                            toggleWalletTiers={this.toggleWalletTiers}
-                                            updateShopPrice={this.updateShopPrice}
-                                            showShops={this.state.settings["Show Locations"] !== "No"}
-                                            showShopInput={this.state.settings["Shop Price Tracking"] === "Both" || this.state.settings["Shop Price Tracking"] === "Price Only"}
-                                            showShopRupee={this.state.settings["Shop Price Tracking"] === "Both" || this.state.settings["Shop Price Tracking"] === "Wallet Tier"}
-                                            handleDungeonTravel={this.handleDungeonTravel}
+                                            entrances={areas[area].entrances}
+                                            entrancePools={entrances}
+                                            oneWayEntrancePools={oneWayEntrances}
+                                            mixedPools={settings["Mixed Pools"]}
+                                            decoupled={settings["Decoupled Entrances"] === "On"}
+                                            overworld={settings["Shuffle Overworld"] === "On"}
+                                            allEntrances={allEntrances}
+                                            allAreas={allAreas}
+                                            locations={areas[area].locations}
+                                            handleLink={linkEntrance}
+                                            handleUnLink={unLinkEntrance}
+                                            handleCheck={checkLocation}
+                                            handleUnCheck={unCheckLocation}
+                                            handleItemMenuOpen={handleItemMenuOpen}
+                                            handleItemMenuClose={handleItemMenuClose}
+                                            handleContextMenu={contextMenuHandler}
+                                            handleShopContextMenu={shopContextMenuHandler}
+                                            handleEntranceMenuOpen={handleEntranceMenuOpen}
+                                            handleFind={findItem}
+                                            toggleWalletTiers={toggleWalletTiers}
+                                            updateShopPrice={updateShopPrice}
+                                            showShops={settings["Show Locations"] !== "No"}
+                                            showShopInput={settings["Shop Price Tracking"] === "Both" || settings["Shop Price Tracking"] === "Price Only"}
+                                            showShopRupee={settings["Shop Price Tracking"] === "Both" || settings["Shop Price Tracking"] === "Wallet Tier"}
+                                            handleDungeonTravel={handleDungeonTravel}
                                             classes={classes}
                                             dungeon={false}
-                                            showUnshuffledEntrances={this.state.settings["Show Unshuffled Entrances"] === "Yes"}
-                                            collapseSwitch={this.toggleCollapse}
-                                            reverseCollapseSwitch={this.reverseCollapseHandler}
-                                            setRef={this.setRef}
+                                            showUnshuffledEntrances={settings["Show Unshuffled Entrances"] === "Yes"}
+                                            collapseSwitch={toggleCollapse}
+                                            reverseCollapseSwitch={reverseCollapseHandler}
+                                            setRef={setRef}
                                             key={ia}
                                         />
                                     )
                                 }) :
-                                Object.keys(this.state.areas).sort().filter((a) => (this.state.areas[a].dungeon)).map((area, ia) => {
+                                Object.keys(areas).sort().filter((a) => (areas[a].dungeon)).map((area, ia) => {
                                     return (
                                         <GameArea
                                             title={area}
-                                            entrances={this.state.areas[area].entrances}
-                                            entrancePools={this.state.entrances}
-                                            oneWayEntrancePools={this.state.oneWayEntrances}
-                                            mixedPools={this.state.settings["Mixed Pools"]}
-                                            decoupled={this.state.settings["Decoupled Entrances"] === "On"}
-                                            overworld={this.state.settings["Shuffle Overworld"] === "On"}
-                                            allEntrances={this.state.allEntrances}
-                                            allAreas={this.state.allAreas}
-                                            locations={this.state.areas[area].locations}
-                                            handleLink={this.linkEntrance}
-                                            handleUnLink={this.unLinkEntrance}
-                                            handleCheck={this.checkLocation}
-                                            handleUnCheck={this.unCheckLocation}
-                                            handleItemMenuOpen={this.handleItemMenuOpen}
-                                            handleItemMenuClose={this.handleItemMenuClose}
-                                            handleContextMenu={this.contextMenuHandler}
-                                            handleShopContextMenu={this.shopContextMenuHandler}
-                                            handleEntranceMenuOpen={this.handleEntranceMenuOpen}
-                                            handleFind={this.findItem}
-                                            toggleWalletTiers={this.toggleWalletTiers}
-                                            updateShopPrice={this.updateShopPrice}
-                                            showShops={this.state.settings["Show Locations"] !== "No"}
-                                            showShopInput={this.state.settings["Shop Price Tracking"] === "Both" || this.state.settings["Shop Price Tracking"] === "Price Only"}
-                                            showShopRupee={this.state.settings["Shop Price Tracking"] === "Both" || this.state.settings["Shop Price Tracking"] === "Wallet Tier"}
-                                            handleDungeonTravel={this.handleDungeonTravel}
+                                            entrances={areas[area].entrances}
+                                            entrancePools={entrances}
+                                            oneWayEntrancePools={oneWayEntrances}
+                                            mixedPools={settings["Mixed Pools"]}
+                                            decoupled={settings["Decoupled Entrances"] === "On"}
+                                            overworld={settings["Shuffle Overworld"] === "On"}
+                                            allEntrances={allEntrances}
+                                            allAreas={allAreas}
+                                            locations={areas[area].locations}
+                                            handleLink={linkEntrance}
+                                            handleUnLink={unLinkEntrance}
+                                            handleCheck={checkLocation}
+                                            handleUnCheck={unCheckLocation}
+                                            handleItemMenuOpen={handleItemMenuOpen}
+                                            handleItemMenuClose={handleItemMenuClose}
+                                            handleContextMenu={contextMenuHandler}
+                                            handleShopContextMenu={shopContextMenuHandler}
+                                            handleEntranceMenuOpen={handleEntranceMenuOpen}
+                                            handleFind={findItem}
+                                            toggleWalletTiers={toggleWalletTiers}
+                                            updateShopPrice={updateShopPrice}
+                                            showShops={settings["Show Locations"] !== "No"}
+                                            showShopInput={settings["Shop Price Tracking"] === "Both" || settings["Shop Price Tracking"] === "Price Only"}
+                                            showShopRupee={settings["Shop Price Tracking"] === "Both" || settings["Shop Price Tracking"] === "Wallet Tier"}
+                                            handleDungeonTravel={handleDungeonTravel}
                                             classes={classes}
                                             dungeon={true}
-                                            showUnshuffledEntrances={this.state.settings["Show Unshuffled Entrances"] === "Yes"}
-                                            collapseSwitch={this.toggleCollapse}
-                                            reverseCollapseSwitch={this.reverseCollapseHandler}
-                                            mqSwitch={this.toggleMQ}
-                                            isMQ={this.state.settings[area+" MQ"]}
-                                            setRef={this.setRef}
+                                            showUnshuffledEntrances={settings["Show Unshuffled Entrances"] === "Yes"}
+                                            collapseSwitch={toggleCollapse}
+                                            reverseCollapseSwitch={reverseCollapseHandler}
+                                            mqSwitch={toggleMQ}
+                                            isMQ={settings[area+" MQ"]}
+                                            setRef={setRef}
                                             key={ia}
                                         />
                                     )
@@ -2791,7 +1986,13 @@ class Tracker extends React.Component {
                             }
                         </div>
                     </div>
-                {/*</ThemeProvider>*/}
+                </ThemeProvider>
+            </React.Fragment>
+        )
+    } else {
+        return (
+            <React.Fragment>
+                Loading
             </React.Fragment>
         )
     }

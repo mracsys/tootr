@@ -22,151 +22,150 @@ import LocationCheck from './LocationCheck'
     track: {},
 })(Switch);*/
 
-class GameArea extends React.Component {
-    constructor(props) {
-        super(props);
-        this.currentRef = React.createRef();
-    }
+const GameArea = (props) => {
+    //constructor(props) {
+    //    super(props);
+    //    this.currentRef = React.createRef();
+    //}
 
-    shouldComponentUpdate(nextProps) {
-        return true;
-    }
+    //shouldComponentUpdate(nextProps) {
+    //    return true;
+    //}
 
-    render() {
-        Object.filterLocations = (locations, predicate) =>
-            Object.keys(locations)
-                .filter( key => predicate(locations[key].visible) );
-        const preventDefault = (event) => event.preventDefault();
-        return (
-            <div className={this.props.classes.areaCard}>
-                <a className={this.props.classes.entranceAnchor} href={this.props.title} id={this.props.title} onClick={preventDefault}>
-                    {/* Fake text here to make eslint happy.
-                        Can't wrap the actual title with the link because the areaTitle class breaks margin collapse needed
-                        to offset the anchor below the appbar */}
-                    <span className={this.props.classes.entranceAnchorFakeText}>&nbsp;</span>
-                </a>
-                <div className={this.props.classes.areaHeader} />
-                <div className={this.props.classes.areaTitle}>
-                    <div
-                        className={this.props.classes.areaTitleCollapse}
-                        onClick={() => this.props.collapseSwitch(this.props.title)}
-                        onContextMenu={this.props.reverseCollapseSwitch.onContextMenu}
-                        data-source={this.props.title}
-                    >
-                        {
-                            (this.props.allAreas[this.props.title].collapse === 'none') ?
-                                <ExpandMore className={this.props.classes.collapseArea} />
-                                : (this.props.allAreas[this.props.title].collapse === 'some') ?
-                                <ChevronRightIcon className={this.props.classes.collapseArea} /> :
-                                <ExpandLess className={this.props.classes.collapseArea} />
-                        }
-                        <span className={this.props.classes.areaTitleText}>
-                            {this.props.title}
-                        </span>
-                    </div>
-                    {this.props.dungeon ?
-                    <React.Fragment>
-                        <span className={this.props.classes.mqSwitchLabel}>MQ</span>
-                        <Switch
-                            checked={this.props.isMQ}
-                            onChange={() => {this.props.mqSwitch(this.props.title + " MQ")}}
-                            name={this.props.title + "MQ"}
-                        />
-                    </React.Fragment>
-                    : null}
+    Object.filterLocations = (locations, predicate) =>
+        Object.keys(locations)
+            .filter( key => predicate(locations[key].visible) );
+    const preventDefault = (event) => event.preventDefault();
+    return (
+        <div className="areaCard">
+            <a className="entranceAnchor" href={props.title} id={props.title} onClick={preventDefault}>
+                {/* Fake text here to make eslint happy.
+                    Can't wrap the actual title with the link because the areaTitle class breaks margin collapse needed
+                    to offset the anchor below the appbar */}
+                <span className="entranceAnchorFakeText">&nbsp;</span>
+            </a>
+            <div className="areaHeader" />
+            <div className="areaTitle">
+                <div
+                    className="areaTitleCollapse"
+                    onClick={() => props.collapseSwitch(props.title)}
+                    onContextMenu={props.reverseCollapseSwitch.onContextMenu}
+                    data-source={props.title}
+                >
+                    {
+                        (props.allAreas[props.title].collapse === 'none') ?
+                            <ExpandMore className="collapseArea" />
+                            : (props.allAreas[props.title].collapse === 'some') ?
+                            <ChevronRightIcon className="collapseArea" /> :
+                            <ExpandLess className="collapseArea" />
+                    }
+                    <span className="areaTitleText">
+                        {props.title}
+                    </span>
                 </div>
-                {
-                    (this.props.allAreas[this.props.title].collapse !== 'all') ?
-                    <div>
-                        <div>
-                        { Object.keys(this.props.locations).map((location, i) => { 
-                            if (this.props.allAreas.locations[location].check === '' || this.props.allAreas[this.props.title].collapse === 'none') { 
-                                return (<React.Fragment key={this.props.title + 'locationcheckcontainer' + i}>
-                                    <LocationCheck
-                                        key={this.props.title + "locationcheck" + i}
-                                        lkey={this.props.title + "location" + i}
-                                        location={location}
-                                        allAreas={this.props.allAreas}
-                                        classes={this.props.classes}
-                                        handleCheck={this.props.handleCheck}
-                                        handleUnCheck={this.props.handleUnCheck}
-                                        handleItemMenuOpen={this.props.handleItemMenuOpen}
-                                        handleItemMenuClose={this.props.handleItemMenuClose}
-                                        handleContextMenu={this.props.handleContextMenu}
-                                        handleFind={this.props.handleFind}
-                                        toggleWalletTiers={this.props.toggleWalletTiers}
-                                        updateShopPrice={this.props.updateShopPrice}
-                                        showShopInput={this.props.showShopInput}
-                                        showShopRupee={this.props.showShopRupee}
-                                    />
-                                </React.Fragment>)
-                            } else { return null; }
-                        })}
-                        </div>
-                        { Object.keys(this.props.entrances).map((entrance, i) => {
-                            let connectorShuffled = false;
-                            let areaEntrances = this.props.allAreas.entrances;
-                            function isConnectorShuffled(entrance, index, array) {
-                                return areaEntrances[entrance].shuffled || areaEntrances[entrance].shuffled;
-                            }
-                            if (this.props.allAreas.entrances[entrance].connector !== "") {
-                                if (Array.isArray(this.props.allAreas.entrances[entrance].connector)) {
-                                    connectorShuffled = this.props.allAreas.entrances[entrance].connector.some(isConnectorShuffled);
-                                } else {
-                                    connectorShuffled = [this.props.allAreas.entrances[entrance].connector].some(isConnectorShuffled);
-                                }
-                            }
-                            if ((!(this.props.showUnshuffledEntrances) && this.props.allAreas.entrances[entrance].shuffled === true) ||
-                            (connectorShuffled && !(this.props.showUnshuffledEntrances)) ||
-                            (this.props.showUnshuffledEntrances)) {
-                                return (
-                                    <React.Fragment key={this.props.title + "entranceScrollContainer" + i}>
-                                        <div className={this.props.classes.scrollControl} ref={(e) => this.props.setRef(this.props.title + entrance, e)} id={this.props.title + "entranceScrollContainer" + i} key={this.props.title + "entranceScrollContainer" + i} />
-                                        <UnknownEntrance
-                                            forceVisible={false}
-                                            title={this.props.title}
-                                            entrance={entrance}
-                                            entrances={this.props.entrances}
-                                            connector={false}
-                                            renderedConnectors={[]}
-                                            entrancePools={this.props.entrancePools}
-                                            oneWayEntrancePools={this.props.oneWayEntrancePools}
-                                            mixedPools={this.props.mixedPools}
-                                            decoupled={this.props.decoupled}
-                                            overworld={this.props.overworld}
-                                            allAreas={this.props.allAreas}
-                                            allEntrances={this.props.allEntrances}
-                                            handleLink={this.props.handleLink}
-                                            handleUnLink={this.props.handleUnLink}
-                                            handleCheck={this.props.handleCheck}
-                                            handleUnCheck={this.props.handleUnCheck}
-                                            handleItemMenuOpen={this.props.handleItemMenuOpen}
-                                            handleItemMenuClose={this.props.handleItemMenuClose}
-                                            handleContextMenu={this.props.handleContextMenu}
-                                            handleShopContextMenu={this.props.handleShopContextMenu}
-                                            handleEntranceMenuOpen={this.props.handleEntranceMenuOpen}
-                                            handleFind={this.props.handleFind}
-                                            toggleWalletTiers={this.props.toggleWalletTiers}
-                                            updateShopPrice={this.props.updateShopPrice}
-                                            showShops={this.props.showShops}
-                                            showShopInput={this.props.showShopInput}
-                                            showShopRupee={this.props.showShopRupee}
-                                            handleDungeonTravel={this.props.handleDungeonTravel}
-                                            dungeon={this.props.dungeon}
-                                            classes={this.props.classes}
-                                            ekey={this.props.title + "entrance" + i}
-                                            key={this.props.title + "entranceContainer" + i}
-                                            scrollRef={this.props.title + entrance}
-                                        />
-                                    </React.Fragment>
-                                );
-                            } else { return null }
-                        })}
-                    </div> : null
-                }
+                {props.dungeon ?
+                <React.Fragment>
+                    <span className="mqSwitchLabel">MQ</span>
+                    <Switch
+                        variant="dungeon"
+                        checked={props.isMQ}
+                        onChange={() => {props.mqSwitch(props.title + " MQ")}}
+                        name={props.title + "MQ"}
+                    />
+                </React.Fragment>
+                : null}
             </div>
-        );
-    }
+            {
+                (props.allAreas[props.title].collapse !== 'all') ?
+                <div>
+                    <div>
+                    { Object.keys(props.locations).map((location, i) => { 
+                        if (props.allAreas.locations[location].check === '' || props.allAreas[props.title].collapse === 'none') { 
+                            return (<React.Fragment key={props.title + 'locationcheckcontainer' + i}>
+                                <LocationCheck
+                                    key={props.title + "locationcheck" + i}
+                                    lkey={props.title + "location" + i}
+                                    location={location}
+                                    allAreas={props.allAreas}
+                                    classes={props.classes}
+                                    handleCheck={props.handleCheck}
+                                    handleUnCheck={props.handleUnCheck}
+                                    handleItemMenuOpen={props.handleItemMenuOpen}
+                                    handleItemMenuClose={props.handleItemMenuClose}
+                                    handleContextMenu={props.handleContextMenu}
+                                    handleFind={props.handleFind}
+                                    toggleWalletTiers={props.toggleWalletTiers}
+                                    updateShopPrice={props.updateShopPrice}
+                                    showShopInput={props.showShopInput}
+                                    showShopRupee={props.showShopRupee}
+                                />
+                            </React.Fragment>)
+                        } else { return null; }
+                    })}
+                    </div>
+                    { Object.keys(props.entrances).map((entrance, i) => {
+                        let connectorShuffled = false;
+                        let areaEntrances = props.allAreas.entrances;
+                        function isConnectorShuffled(entrance, index, array) {
+                            return areaEntrances[entrance].shuffled || areaEntrances[entrance].shuffled;
+                        }
+                        if (props.allAreas.entrances[entrance].connector !== "") {
+                            if (Array.isArray(props.allAreas.entrances[entrance].connector)) {
+                                connectorShuffled = props.allAreas.entrances[entrance].connector.some(isConnectorShuffled);
+                            } else {
+                                connectorShuffled = [props.allAreas.entrances[entrance].connector].some(isConnectorShuffled);
+                            }
+                        }
+                        if ((!(props.showUnshuffledEntrances) && props.allAreas.entrances[entrance].shuffled === true) ||
+                        (connectorShuffled && !(props.showUnshuffledEntrances)) ||
+                        (props.showUnshuffledEntrances)) {
+                            return (
+                                <React.Fragment key={props.title + "entranceScrollContainer" + i}>
+                                    <div className="scrollControl" id={props.title + "entranceScrollContainer" + i} key={props.title + "entranceScrollContainer" + i} />
+                                    <UnknownEntrance
+                                        forceVisible={false}
+                                        title={props.title}
+                                        entrance={entrance}
+                                        entrances={props.entrances}
+                                        connector={false}
+                                        renderedConnectors={[]}
+                                        entrancePools={props.entrancePools}
+                                        oneWayEntrancePools={props.oneWayEntrancePools}
+                                        mixedPools={props.mixedPools}
+                                        decoupled={props.decoupled}
+                                        overworld={props.overworld}
+                                        allAreas={props.allAreas}
+                                        allEntrances={props.allEntrances}
+                                        handleLink={props.handleLink}
+                                        handleUnLink={props.handleUnLink}
+                                        handleCheck={props.handleCheck}
+                                        handleUnCheck={props.handleUnCheck}
+                                        handleItemMenuOpen={props.handleItemMenuOpen}
+                                        handleItemMenuClose={props.handleItemMenuClose}
+                                        handleContextMenu={props.handleContextMenu}
+                                        handleShopContextMenu={props.handleShopContextMenu}
+                                        handleEntranceMenuOpen={props.handleEntranceMenuOpen}
+                                        handleFind={props.handleFind}
+                                        toggleWalletTiers={props.toggleWalletTiers}
+                                        updateShopPrice={props.updateShopPrice}
+                                        showShops={props.showShops}
+                                        showShopInput={props.showShopInput}
+                                        showShopRupee={props.showShopRupee}
+                                        handleDungeonTravel={props.handleDungeonTravel}
+                                        dungeon={props.dungeon}
+                                        classes={props.classes}
+                                        ekey={props.title + "entrance" + i}
+                                        key={props.title + "entranceContainer" + i}
+                                        scrollRef={props.title + entrance}
+                                    />
+                                </React.Fragment>
+                            );
+                        } else { return null }
+                    })}
+                </div> : null
+            }
+        </div>
+    );
 }
 
 export default GameArea

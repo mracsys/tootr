@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import Collapse from '@mui/material/Collapse';
@@ -7,94 +7,84 @@ import Input from '@mui/material/Input';
 import Checkbox from '@mui/material/Checkbox'
 import { FormHelperText, ListItemText, MenuItem } from '@mui/material';
 
-class GameSetting extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            open: this.props.settings.open,
-        };
-    }
+const GameSetting = (props) => {
+    let [open, setOpen] = useState(props.settings.open);
 
-    render() {
-        return (
-            <React.Fragment>
-                <div className={this.props.classes.settingCategory} onClick={() => this.setState({ open: !this.state.open })}>
-                    <span>{this.props.title}</span>
-                    {this.state.open ? <ExpandLess /> : <ExpandMore />}
-                </div>
-                <Collapse in={this.state.open} timeout='auto' unmountOnExit>
-                        { Object.keys(this.props.settings).map((setting, i) => {
-                            if (setting !== 'open' && setting !== 'Mixed Pools' && setting !== 'Shuffle Interiors') {
-                                return (
+    return (
+        <React.Fragment>
+            <div className="settingCategory" onClick={() => setOpen(!open)}>
+                <span>{props.title}</span>
+                {open ? <ExpandLess /> : <ExpandMore />}
+            </div>
+            <Collapse in={open} timeout='auto' unmountOnExit>
+                    { Object.keys(props.settings).map((setting, i) => {
+                        if (setting !== 'open' && setting !== 'Mixed Pools' && setting !== 'Shuffle Interiors') {
+                            return (
+                            <React.Fragment key={'settingFrag' + i}>
+                                <div className="wrapperWrapper">
+                                    <div className="nestedWrapper">
+                                        <div className="nested" key={'setting' + i}>
+                                            <select
+                                                id={setting}
+                                                className="settingSelect"
+                                                name={setting}
+                                                value={props.userSettings[setting]}
+                                                onChange={props.onChange}>
+                                                    {props.settings[setting].map((s, i) => { return (
+                                                        <option key={i} value={s}>{s}</option>
+                                                    )})}
+                                            </select>
+                                            <p className="settingText">{setting}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </React.Fragment>
+                            );
+                        } else if (setting === 'Mixed Pools' || setting === 'Shuffle Interiors') {
+                            return (
                                 <React.Fragment key={'settingFrag' + i}>
-                                    <div className={this.props.classes.wrapperWrapper}>
-                                        <div className={this.props.classes.nestedWrapper}>
-                                            <div className={this.props.classes.nested} key={'setting' + i}>
-                                                <select
-                                                    id={setting}
-                                                    className={this.props.classes.settingSelect}
+                                    <div className="wrapperWrapper">
+                                        <div className="nestedWrapper">
+                                            <div className="nested" key={'setting' + i}>
+                                                <Select
+                                                    id={"multiselect" + i}
+                                                    multiple
+                                                    displayEmpty
                                                     name={setting}
-                                                    value={this.props.userSettings[setting]}
-                                                    onChange={this.props.onChange}>
-                                                        {this.props.settings[setting].map((s, i) => { return (
-                                                            <option key={i} value={s}>{s}</option>
-                                                        )})}
-                                                </select>
-                                                <p className={this.props.classes.settingText}>{setting}</p>
+                                                    value={Object.keys(props.settings[setting]).filter((t) => {
+                                                        return props.userSettings[setting].includes(t);
+                                                    })}
+                                                    onChange={props.onChange}
+                                                    input={<Input />}
+                                                    renderValue={(selected) => {
+                                                        if (selected.length === 0) {
+                                                            return 'Off';
+                                                        } else if (selected.length === Object.keys(props.settings[setting]).length) {
+                                                            return 'All';
+                                                        } else {
+                                                            return 'Some';
+                                                        }
+                                                    }}
+                                                >
+                                                    {Object.keys(props.settings[setting]).map((t) => { return (
+                                                        <MenuItem key={'multiselectoption' + i + t} value={t}>
+                                                            <Checkbox checked={props.userSettings[setting].includes(t)} />
+                                                            <ListItemText primary={t} />
+                                                        </MenuItem>
+                                                    )})}
+                                                </Select>
+                                                <FormHelperText>{setting}</FormHelperText>
                                             </div>
                                         </div>
                                     </div>
                                 </React.Fragment>
-                                );
-                            } else if (setting === 'Mixed Pools' || setting === 'Shuffle Interiors') {
-                                return (
-                                    <React.Fragment key={'settingFrag' + i}>
-                                        <div className={this.props.classes.wrapperWrapper}>
-                                            <div className={this.props.classes.nestedWrapper}>
-                                                <div className={this.props.classes.nested} key={'setting' + i}>
-                                                    <Select
-                                                        id={"multiselect" + i}
-                                                        multiple
-                                                        displayEmpty
-                                                        name={setting}
-                                                        value={Object.keys(this.props.settings[setting]).filter((t) => {
-                                                            return this.props.userSettings[setting].includes(t);
-                                                        })}
-                                                        onChange={this.props.onChange}
-                                                        input={<Input />}
-                                                        renderValue={(selected) => {
-                                                            if (selected.length === 0) {
-                                                                return 'Off';
-                                                            } else if (selected.length === Object.keys(this.props.settings[setting]).length) {
-                                                                return 'All';
-                                                            } else {
-                                                                return 'Some';
-                                                            }
-                                                        }}
-                                                        MenuProps={{
-                                                            getContentAnchorEl: () => null,
-                                                        }}
-                                                    >
-                                                        {Object.keys(this.props.settings[setting]).map((t) => { return (
-                                                            <MenuItem key={'multiselectoption' + i + t} value={t}>
-                                                                <Checkbox checked={this.props.userSettings[setting].includes(t)} />
-                                                                <ListItemText primary={t} />
-                                                            </MenuItem>
-                                                        )})}
-                                                    </Select>
-                                                    <FormHelperText>{setting}</FormHelperText>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </React.Fragment>
-                                );
-                            } else { return null }
-                        })}
-                </Collapse>
-                <hr />
-            </React.Fragment>
-        );
-    }
+                            );
+                        } else { return null }
+                    })}
+            </Collapse>
+            <hr />
+        </React.Fragment>
+    );
 }
 
 export default GameSetting

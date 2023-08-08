@@ -3,8 +3,8 @@ import SubdirectoryArrowRightIcon from '@mui/icons-material/SubdirectoryArrowRig
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 
-class UnLinkedEntrance extends React.Component {
-    selectEntrancePool(entrance) {
+const UnLinkedEntrance = (props) => {
+    const selectEntrancePool = (entrance) => {
         let settingAreaTypes = {
             'interior': 'Interiors',
             'specialInterior': 'Interiors',
@@ -16,59 +16,57 @@ class UnLinkedEntrance extends React.Component {
             'overworld': 'Overworld',
             'boss': 'Boss Rooms',
         }
-        let areaType = this.props.allAreas.entrances[entrance].type
+        let areaType = props.allAreas.entrances[entrance].type
         if (areaType === "specialInterior" || areaType === "hideoutInterior") { areaType = "interior"; }
         if (areaType === "dungeonGanon") { areaType = "dungeon"; }
         let subAreas;
-        if (areaType in this.props.oneWayEntrancePools) {
+        if (areaType in props.oneWayEntrancePools) {
             subAreas = areaType;
         } else {
-            if ((this.props.mixedPools.includes(settingAreaTypes[areaType])) && (areaType !== "overworld" || this.props.decoupled)) { areaType = "mixed"; }
-            if (this.props.mixedPools.includes(settingAreaTypes[areaType]) && areaType === "overworld" && !(this.props.decoupled)) { areaType = "mixed_overworld" }
-            if (this.props.allAreas.entrances[entrance].isReverse && !(this.props.decoupled)) { areaType = areaType + "_reverse" }
-            if (this.props.decoupled && areaType !== "overworld" && !(["boss","noBossShuffle"].includes(areaType))) { areaType = areaType + "_decoupled" }
+            if ((props.mixedPools.includes(settingAreaTypes[areaType])) && (areaType !== "overworld" || props.decoupled)) { areaType = "mixed"; }
+            if (props.mixedPools.includes(settingAreaTypes[areaType]) && areaType === "overworld" && !(props.decoupled)) { areaType = "mixed_overworld" }
+            if (props.allAreas.entrances[entrance].isReverse && !(props.decoupled)) { areaType = areaType + "_reverse" }
+            if (props.decoupled && areaType !== "overworld" && !(["boss","noBossShuffle"].includes(areaType))) { areaType = areaType + "_decoupled" }
             subAreas = areaType;
         }
         return subAreas;
     }
-    buildEntranceName(entrance) {
-        if (this.props.allAreas.entrances[entrance].isReverse) {
-            if (this.props.allAreas.entrances[this.props.allAreas.entrances[entrance].reverse].tag !== "") {
-                return "from " + this.props.allAreas.entrances[this.props.allAreas.entrances[entrance].reverse].tag;
+    const buildEntranceName = (entrance) => {
+        if (props.allAreas.entrances[entrance].isReverse) {
+            if (props.allAreas.entrances[props.allAreas.entrances[entrance].reverse].tag !== "") {
+                return "from " + props.allAreas.entrances[props.allAreas.entrances[entrance].reverse].tag;
             } else {
-                return this.props.allAreas.entrances[entrance].alias;
+                return props.allAreas.entrances[entrance].alias;
             }
         } else {
             if (entrance === 'GV Lower Stream -> Lake Hylia') {
                 return 'Lake Hylia';
             } else {
-                return this.props.allAreas.entrances[entrance].alias;
+                return props.allAreas.entrances[entrance].alias;
             }
         }
     }
 
-    render() {
-        let entrancePool = this.selectEntrancePool(this.props.entrance);
-        let scrollConnector = (this.props.connector) ? 'connector' : '';
-        return (
-            <div className={this.props.classes.entranceContainer} key={this.props.ekey}>
-                { this.props.forceVisible ? <SubdirectoryArrowRightIcon /> : null }
-                <div className={this.props.classes.unlinkedEntranceLabel}>
-                    {this.buildEntranceName(this.props.entrance)}
-                </div>
-                <div className={this.props.classes.unlinkedEntranceMenu}
-                     data-source={this.props.entrance}
-                     data-connector={this.props.connector}
-                     data-etype={entrancePool}
-                     data-el-id={this.props.entrance + 'scroll' + scrollConnector}
-                     id={this.props.entrance + 'scroll' + scrollConnector}
-                     onClick={(e) => this.props.handleEntranceMenuOpen(e, this.props.scrollRef)}
-                >
-                    <span>Not Checked</span><ArrowDropDownIcon />
-                </div>
+    let entrancePool = selectEntrancePool(props.entrance);
+    let scrollConnector = (props.connector) ? 'connector' : '';
+    return (
+        <div className="entranceContainer" key={props.ekey}>
+            { props.forceVisible ? <SubdirectoryArrowRightIcon /> : null }
+            <div className="unlinkedEntranceLabel">
+                {buildEntranceName(props.entrance)}
             </div>
-        );
-    }
+            <div className="unlinkedEntranceMenu"
+                    data-source={props.entrance}
+                    data-connector={props.connector}
+                    data-etype={entrancePool}
+                    data-el-id={props.entrance + 'scroll' + scrollConnector}
+                    id={props.entrance + 'scroll' + scrollConnector}
+                    onClick={(e) => props.handleEntranceMenuOpen(e, props.scrollRef)}
+            >
+                <span>Not Checked</span><ArrowDropDownIcon />
+            </div>
+        </div>
+    );
 }
 
 export default UnLinkedEntrance
