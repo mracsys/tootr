@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect, useState, useLayoutEffect } from 'react';
+import React, { useEffect, useState, useLayoutEffect, useRef } from 'react';
 import clsx from 'clsx';
 //import ls from 'local-storage';
 import merge from 'lodash/merge';
@@ -120,7 +120,7 @@ const Tracker = (props) => {
     let [entranceRef, setEntranceRef] = useState(null);
     let [scrollY, setScrollY] = useState(null);
     let [trackerInitialized, setTrackerInitialized] = useState(false);
-    let [scroller, setScroller] = useState({});
+    const scroller = useRef({});
 
     // run on mount and unmount
     useEffect(() => {
@@ -178,8 +178,8 @@ const Tracker = (props) => {
             window.location.assign(delayedURL);
             setDelayedURL('');
         }
-        if (scrollY !== null && Object.keys(scroller).includes(entranceRef)) {
-            let eRef = scroller[entranceRef];
+        if (scrollY !== null && Object.keys(scroller.current).includes(entranceRef)) {
+            let eRef = scroller.current[entranceRef];
             let rect = eRef.getBoundingClientRect();
             let oTop = rect.top;
             let scrollToY = scrollY;
@@ -192,9 +192,7 @@ const Tracker = (props) => {
     });
 
     const setRef = (index, element) => {
-        let tempScroller = cloneDeep(scroller);
-        tempScroller[index] = element;
-        setScroller(tempScroller);
+        scroller.current[index] = element;
     }
 
     const getPresetSettings = (presetName, customSettings={}) => {
@@ -1171,7 +1169,7 @@ const Tracker = (props) => {
         }
         findVisibleAreas(shownAreas, areasLocal, entrancesLocal);
         entrancePools = loadEntrancePools(settings, allEntrances, areasLocal);
-        let eRef = entranceRef;
+        let eRef = scroller.current[entranceRef];
         let rect = eRef.getBoundingClientRect();
         let oTop = rect.top;
         let scrollYLocal = oTop + window.scrollY;
@@ -1262,16 +1260,16 @@ const Tracker = (props) => {
 
         findVisibleAreas(shownAreas, areasLocal, entrancesLocal);
         let entrancePools = loadEntrancePools(settings, entrancesLocal, areasLocal);
-        //let eRef = entranceRef;
-        //let rect = eRef.getBoundingClientRect();
-        //let oTop = rect.top;
-        //let scrollYLocal = oTop + window.scrollY;
+        let eRef = scroller.current[scrollRef];
+        let rect = eRef.getBoundingClientRect();
+        let oTop = rect.top;
+        let scrollYLocal = oTop + window.scrollY;
         setAllAreas(areasLocal);
         setAllEntrances(entrancesLocal);
         setAreas(shownAreas);
         setEntrances(entrancePools);
-        //setScrollY(scrollYLocal);
-        //setEntranceRef(scrollRef.target);
+        setScrollY(scrollYLocal);
+        setEntranceRef(scrollRef);
         //localStorage.setItem('AllAreas', areasLocal);
         //localStorage.setItem('AllEntrances', entrances);
     }
@@ -1420,7 +1418,7 @@ const Tracker = (props) => {
         setEntranceToLink(entrance.currentTarget.getAttribute('data-source'));
         setEntranceConnector(entrance.currentTarget.getAttribute('data-connector'));
         setEntranceType(entrance.currentTarget.getAttribute('data-etype'));
-        setEntranceRef(entrance.target);
+        setEntranceRef(scrollRef);
     }
 
     const handleEntranceMenuClose = (clearRef=true) => {

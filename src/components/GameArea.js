@@ -121,7 +121,7 @@ const GameArea = (props) => {
                         (props.showUnshuffledEntrances)) {
                             return (
                                 <React.Fragment key={props.title + "entranceScrollContainer" + i}>
-                                    <div className="scrollControl" id={props.title + "entranceScrollContainer" + i} key={props.title + "entranceScrollContainer" + i} />
+                                    <div className="scrollControl" ref={(e) => props.setRef(props.title + entrance, e)} id={props.title + "entranceScrollContainer" + i} key={props.title + "entranceScrollContainer" + i} />
                                     <UnknownEntrance
                                         forceVisible={false}
                                         title={props.title}

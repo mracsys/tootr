@@ -490,7 +490,7 @@ body.dark {
 }
 .entranceLabel {
     vertical-align: center;
-    margin-right: 20;
+    margin-right: 20px;
     font-weight: bold;
     flex-grow: 1;
     font-size: 1rem;
