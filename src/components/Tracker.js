@@ -1591,7 +1591,7 @@ const Tracker = (props) => {
                                 >
                                     <span className="menuButtonLabel">Reset</span>
                                 </button>
-                                <button
+                                {/*<button
                                     onClick={() => {
                                         let darkMode = !themeDark;
                                         setThemeDark(darkMode);
@@ -1604,7 +1604,7 @@ const Tracker = (props) => {
                                             <span className="menuButtonLabel"><Brightness7Icon />Light Mode</span> :
                                             <span className="menuButtonLabel"><Brightness3Icon />Dark Mode</span>
                                     }
-                                </button>
+                                </button>*/}
                             </Toolbar>
                         </AppBar>
                         <Dialog
