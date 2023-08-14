@@ -1,7 +1,6 @@
 {
     "Settings": {
         "Tracker Settings": {
-            "open": true,
             "Settings Preset": [
                 "RSL",
                 "Mixed Pools",
@@ -32,7 +31,6 @@
             ]            
         },
         "ER Settings": {
-            "open": true,
             "Shuffle Interiors": {
                 "Simple": true,
                 "Special": true,
@@ -85,7 +83,6 @@
             ]
         },
         "Shuffled Items": {
-            "open": false,
             "Shopsanity": [
                 "Off",
                 "0 Items",
@@ -207,7 +204,6 @@
             ]
         },
         "World Settings": {
-            "open": false,
             "Starting Age": [
                 "Child",
                 "Adult"

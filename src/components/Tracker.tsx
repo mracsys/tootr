@@ -1,23 +1,21 @@
 'use client'
 
-import React, { useEffect, useState, useLayoutEffect, useRef } from 'react';
-import clsx from 'clsx';
+import React, { useEffect, useState, useRef, useMemo, ChangeEvent, MouseEventHandler, MouseEvent } from 'react';
 //import ls from 'local-storage';
 import merge from 'lodash/merge';
 import mergeWith from 'lodash/mergeWith';
 import isArray from 'lodash/isArray';
 import cloneDeep from 'lodash/cloneDeep';
 import clone from 'lodash/clone';
-//import { createMuiTheme, withStyles, ThemeProvider } from '@mui/material/styles';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import PropTypes from 'prop-types';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import List from '@mui/material/List';
 import Button from '@mui/material/Button';
+import GitHubIcon from '@mui/icons-material/GitHub';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
 import Brightness3Icon from '@mui/icons-material/Brightness3';
 import ListItem from '@mui/material/ListItem';
@@ -33,6 +31,7 @@ import ClickAwayListener from '@mui/material/ClickAwayListener';
 import { Drawer } from '@mui/material';
 import { Link } from '@mui/material';
 import Collapse from '@mui/material/Collapse';
+import { SelectChangeEvent } from '@mui/material/Select';
 import '/public/index.css';
 import CssBaseline from '@mui/material/CssBaseline';
 
@@ -41,7 +40,7 @@ import GameSetting from './GameSetting';
 import GameArea from './GameArea';
 import EntranceMenu from './EntranceMenu';
 import ItemMenu from './ItemMenu';
-import ShopItemMenu from './ShopItemMenu.js';
+import ShopItemMenu from './ShopItemMenu';
 import ContextMenuHandler from './ContextMenuHandler';
 
 
@@ -91,52 +90,182 @@ import maxChex from '@/data/settings_presets/1175.json';
 import mw3 from '@/data/settings_presets/mw3.json';
 import OotIcon from './OotIcon';
 
+
+import { WorldGraphFactory, ExternalFileCacheFactory, ExternalFileCache } from '@mracsys/randomizer-graph-tool';
+import plando from '@/data/seed143.json';
+
+
+export type SettingTypes = string[] | {[s: string]: boolean};
+export interface SettingCategory {
+    [settingName: string]: SettingTypes,
+}
+export interface GameSettings {
+    [settingCategory: string]: SettingCategory,
+}
+interface RandoVersionData {
+    Settings: GameSettings,
+    Locations: {[locationName: string]: string},
+}
+
+export type SettingSelectionTypes = string | string[] | boolean;
+export interface SelectedSettings {
+    [settingName: string]: SettingSelectionTypes
+}
+
+interface SettingPreset {
+    Settings: SelectedSettings,
+}
+
+export interface Entrance {
+    area: string,
+    reverse: string,
+    oneWay: boolean,
+    oneWayArea: string,
+    connector: string | string[],
+    isReverse: boolean,
+    alias: string,
+    reverseAlias: string,
+    tag: string,
+    tagRep: boolean,
+    tagRules: TagRule[],
+    enableTag: boolean,
+    type: string,
+    lKey: string,
+    aLink: string,
+    eLink: string,
+    userALink: string,
+    userELink: string,
+    oneWayELink: string,
+    userOneWayELink: string,
+    shuffled: boolean,
+}
+
+export interface EntrancePool {
+    [categoryName: string]: string[],
+}
+
+export interface Entrances {
+    [entranceType: string]: EntrancePool,
+}
+
+export interface Location {
+    area: string,
+    lKey: string,
+    alias: string,
+    type: string,
+    settings: TagRule[],
+    visible: boolean,
+    check: string,
+    foundItem: string,
+    merchant: boolean,
+    price: number,
+    walletTier: number,
+    shuffled: boolean,
+    shuffleRules: TagRule[],
+}
+
+export interface TagRule {
+    setting: string,
+    value: string,
+    required: boolean,
+}
+
+export interface Area {
+    show: boolean,
+    dungeon: boolean,
+    collapse: string,
+    entrances: {[entranceName: string]: Entrance},
+    locations: {[locationName: string]: Location},
+}
+
+export interface Areas {
+    [areaName: string]: Area,
+}
+
+export interface AllAreas {
+    areas: Areas,
+    entrances: {[entranceName: string]: Entrance},
+    locations: {[locationName: string]: Location},
+    connectors: {[connectorName: string]: Entrance},
+}
+
+export interface AllEntrances {
+    oneWayAreas: string[], // Warp Songs and Spawn Points hard coded visibility
+    entrances: {
+        [entranceName: string]: {
+            type: string,
+            category: string,
+            locations: {[locationName: string]: Location},
+        }
+    },
+    areaEntranceTypes: {
+        [entranceType: string]: {
+            [areaName: string]: string[],
+        },
+    },
+    interiorEntranceTypes: {
+        [entranceType: string]: string[],
+    },
+}
+
+interface ScrollerRef {
+    [scrollRef: string]: HTMLDivElement,
+}
+
 const trackerVersion = '1.0.0';
 
-const Tracker = (props) => {
-    let [enabled_settings, setEnabledSettings] = useState({});
-    let [settings, setSettings] = useState({});
-    let [areas, setAreas] = useState({});
-    let [entrances, setEntrances] = useState({});
-    let [oneWayEntrances, setOneWayEntrances] = useState({});
-    let [allEntrances, setAllEntrances] = useState({});
-    let [allAreas, setAllAreas] = useState({});
-    let [openSettings, setOpenSettings] = useState(false);
-    let [themeDark, setThemeDark] = useState(false);
-    let [alertReset, setAlertReset] = useState(false);
-    let [alertUpdate, setAlertUpdate] = useState(false);
-    let [itemMenuLocation, setItemMenuLocation] = useState(null);
-    let [itemMenuOpen, setItemMenuOpen] = useState(null);
-    let [shopItemMenuOpen, setShopItemMenuOpen] = useState(null);
-    let [entranceMenuOpen, setEntranceMenuOpen] = useState(null);
-    let [entranceToLink, setEntranceToLink] = useState(null);
-    let [entranceConnector, setEntranceConnector] = useState(null);
-    let [locationToLink, setLocationToLink] = useState(null);
-    let [expandWarpMenu, setExpandWarpMenu] = useState(false);
-    let [expandDungeonMenu, setExpandDungeonMenu] = useState(false);
-    let [expandSongMenu, setExpandSongMenu] = useState(false);
-    let [entranceType, setEntranceType] = useState('');
-    let [delayedURL, setDelayedURL] = useState('');
-    let [entranceRef, setEntranceRef] = useState(null);
-    let [scrollY, setScrollY] = useState(null);
-    let [trackerInitialized, setTrackerInitialized] = useState(false);
-    const scroller = useRef({});
+const Tracker = (props: {}) => {
+    let [enabled_settings, setEnabledSettings] = useState<GameSettings>({});
+    let [settings, setSettings] = useState<SelectedSettings>({});
+    let [areas, setAreas] = useState<Areas>({});
+    let [entrances, setEntrances] = useState<Entrances>({});
+    let [oneWayEntrances, setOneWayEntrances] = useState<Entrances>({});
+    let [allEntrances, setAllEntrances] = useState<AllEntrances>({ entrances: {}, areaEntranceTypes: {}, interiorEntranceTypes: {}, oneWayAreas: [] });
+    let [allAreas, setAllAreas] = useState<AllAreas>({areas: {}, entrances: {}, locations: {}, connectors: {}});
+    let [openSettings, setOpenSettings] = useState<boolean>(false);
+    let [themeDark, setThemeDark] = useState<boolean>(false);
+    let [alertReset, setAlertReset] = useState<boolean>(false);
+    let [alertUpdate, setAlertUpdate] = useState<boolean>(false);
+    let [itemMenuOpen, setItemMenuOpen] = useState<Element | null>(null);
+    let [shopItemMenuOpen, setShopItemMenuOpen] = useState<Element | null>(null);
+    let [entranceMenuOpen, setEntranceMenuOpen] = useState<Element | null>(null);
+    let [entranceToLink, setEntranceToLink] = useState<string>('');
+    let [entranceConnector, setEntranceConnector] = useState<string>('');
+    let [locationToLink, setLocationToLink] = useState<string>('');
+    let [expandWarpMenu, setExpandWarpMenu] = useState<boolean>(false);
+    let [expandDungeonMenu, setExpandDungeonMenu] = useState<boolean>(false);
+    let [expandSongMenu, setExpandSongMenu] = useState<boolean>(false);
+    let [entranceType, setEntranceType] = useState<string>('');
+    let [delayedURL, setDelayedURL] = useState<string>('');
+    let [entranceRef, setEntranceRef] = useState<string>('');
+    let [scrollY, setScrollY] = useState<number | null>(null);
+    let [trackerInitialized, setTrackerInitialized] = useState<boolean>(false);
+    let [graphInitialized, setGraphInitialized] = useState<boolean>(false);
+    const scroller = useRef<ScrollerRef>({});
+    const [_fileCache, setFileCache] = useState<ExternalFileCache>({files: {}});
+
+    let graph = useMemo(
+        () => WorldGraphFactory('ootr', plando, '7.1.143', _fileCache),
+        [_fileCache]
+    );
 
     // run on mount and unmount
     useEffect(() => {
-        /*if (!!(localStorage.getItem('TrackerVersion'))) {
+        let clientTrackerVersion = localStorage.getItem('TrackerVersion');
+        if (!!(clientTrackerVersion)) {
             if (localStorage.getItem('TrackerVersion') !== trackerVersion) {
                 // outdated, reset everything until proper upgrade function developed
-                ls.clear();
+                localStorage.clear();
                 localStorage.setItem('TrackerVersion', trackerVersion);
             }
         } else {
             // no version key
-            ls.clear();
+            localStorage.clear();
             localStorage.setItem('TrackerVersion', trackerVersion);
-        }*/
-        //let settings = !!(localStorage.getItem('RandoSettings')) ? localStorage.getItem('RandoSettings') : cloneDeep(defaultSettings.Settings);
-        let settingsInit = cloneDeep(defaultSettings.Settings);
+        }
+        let clientSettings = localStorage.getItem('RandoSettings');
+        let settingsInit: SelectedSettings = !!(clientSettings) ? JSON.parse(clientSettings) : cloneDeep(defaultSettings.Settings);
+        //let settingsInit: SelectedSettings = cloneDeep(defaultSettings.Settings);
         // Disable preset settings on load until custom saved settings are handled
         //let presetSettings = getPresetSettings(settings['Settings Preset']);
         //setPresetSettings(settings, presetSettings);
@@ -147,17 +276,20 @@ const Tracker = (props) => {
             zora_fountain, zora_river, zoras_domain, deku_tree, dodongos_cavern, jabu_jabus_belly,
             forest_temple, fire_temple, water_temple, shadow_temple, spirit_temple,
             bottom_of_the_well, ice_cavern, gerudo_training_ground, ganons_castle);
-        //let allAreas = !!(localStorage.getItem('AllAreas')) ? localStorage.getItem('AllAreas') : addReverseEntrances(areaJSON);
-        //let allEntrances = !!(localStorage.getItem('AllEntrances')) ? localStorage.getItem('AllEntrances') : merge({}, categorizeEntrances(allAreas));
-        let allAreasInit = addReverseEntrances(areaJSON);
-        let allEntrancesInit = merge({}, categorizeEntrances(allAreasInit));
+        let clientAllAreas = localStorage.getItem('AllAreas');
+        let allAreasInit: AllAreas = !!(clientAllAreas) ? JSON.parse(clientAllAreas) : addReverseEntrances(areaJSON);
+        let clientAllEntrances = localStorage.getItem('AllEntrances');
+        let allEntrancesInit: AllEntrances = !!(clientAllEntrances) ? JSON.parse(clientAllEntrances) : merge({}, categorizeEntrances(allAreasInit));
+        //let allAreasInit = addReverseEntrances(areaJSON);
+        //let allEntrancesInit = merge({}, categorizeEntrances(allAreasInit));
         findVisibleLocations(settingsInit, allAreasInit);
         let areasInit = loadAreas(settingsInit, allAreasInit, allEntrancesInit, true);
         let entrancesInit = loadEntrancePools(settingsInit, allEntrancesInit, allAreasInit);
         let oneWayEntrancesInit = loadOneWayEntrancePools(settingsInit, allEntrancesInit, allAreasInit);
 
         //let darkMode = !!(localStorage.getItem('DarkMode')) ? true : localStorage.getItem('DarkMode');
-        const darkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        let clientDarkMode = localStorage.getItem('DarkMode');
+        const darkMode: boolean = !!(clientDarkMode) ? JSON.parse(clientDarkMode) : window.matchMedia("(prefers-color-scheme: dark)").matches;
 
         setEnabledSettings(devr.Settings);
         setSettings(settingsInit);
@@ -170,6 +302,20 @@ const Tracker = (props) => {
         setTrackerInitialized(true);
     }, []);
 
+    // hooks to keep state saved in localstorage
+    useEffect(() => {
+        if (trackerInitialized) localStorage.setItem('RandoSettings', JSON.stringify(settings));
+    }, [settings]);
+    useEffect(() => {
+        if (trackerInitialized) localStorage.setItem('AllAreas', JSON.stringify(allAreas));
+    }, [allAreas]);
+    useEffect(() => {
+        if (trackerInitialized) localStorage.setItem('AllEntrances', JSON.stringify(allEntrances));
+    }, [allEntrances]);
+    useEffect(() => {
+        if (trackerInitialized) localStorage.setItem('DarkMode', JSON.stringify(themeDark));
+    }, [themeDark]);
+
     // When swapping between Overworld and Dungeon views, anchors don't
     // work until after rendering. Ugly workaround incoming.
     // run every render
@@ -178,7 +324,7 @@ const Tracker = (props) => {
             window.location.assign(delayedURL);
             setDelayedURL('');
         }
-        if (scrollY !== null && Object.keys(scroller.current).includes(entranceRef)) {
+        if (scrollY !== null && entranceRef !== null && Object.keys(scroller.current).includes(entranceRef)) {
             let eRef = scroller.current[entranceRef];
             let rect = eRef.getBoundingClientRect();
             let oTop = rect.top;
@@ -187,15 +333,33 @@ const Tracker = (props) => {
                 top: 2 * window.scrollY + oTop - scrollToY,
             });
             setScrollY(null);
-            setEntranceRef(null);
+            setEntranceRef('');
         }
+
+        let ignore = false;
+
+        const getGraph = async () => {
+            if (Object.keys(_fileCache.files).length === 0) {
+                let graphFileCache = await ExternalFileCacheFactory('ootr', '7.1.143', { local_url: '/ootr-local' });
+                if (!ignore) {
+                    setFileCache(graphFileCache);
+                }
+            }
+            if (graph.initialized && !ignore) {
+                console.log(`World graph initialized with ${graph.get_locations_for_world(graph.worlds[0]).length} locations and ${graph.get_entrances_for_world(graph.worlds[0]).length} entrances`);
+                setGraphInitialized(true);
+            }
+        }
+        //getGraph();
+    
+        return () => { ignore = true; };    
     });
 
-    const setRef = (index, element) => {
-        scroller.current[index] = element;
+    const setRef = (index: string, element: HTMLDivElement | null): void => {
+        if (!!element) scroller.current[index] = element;
     }
 
-    const getPresetSettings = (presetName, customSettings={}) => {
+    const getPresetSettings = (presetName: string, customSettings: SelectedSettings = {}): SelectedSettings => {
         let presetSettings;
         switch (presetName) {
             case "RSL":
@@ -229,14 +393,14 @@ const Tracker = (props) => {
         return presetSettings;
     }
 
-    const setPresetSettings = (gameSettings, presetSettings) => {
+    const setPresetSettings = (gameSettings: SelectedSettings, presetSettings: SelectedSettings): void => {
         Object.keys(presetSettings).forEach(setting => {
             gameSettings[setting] = presetSettings[setting];
         });
     }
 
-    const resetState = (currentSettings) => {
-        let settingsReset = cloneDeep(defaultSettings.Settings);
+    const resetState = (currentSettings: SelectedSettings): void => {
+        let settingsReset: SelectedSettings = cloneDeep(defaultSettings.Settings);
 
         // TODO: Separate tracker and world/preset settings
         let prevSettings = cloneDeep(currentSettings);
@@ -273,22 +437,17 @@ const Tracker = (props) => {
         setExpandWarpMenu(false);
         setExpandDungeonMenu(false);
         setExpandSongMenu(false);
-
-        //localStorage.setItem('RandoSettings', settingsReset);
-        //localStorage.setItem('AllAreas', allAreasReset);
-        //localStorage.setItem('AllEntrances', allEntrancesReset);
-        //localStorage.setItem('TrackerVersion', trackerVersion);
     }
 
-    const addReverseEntrances = (stateAreas) => {
+    const addReverseEntrances = (stateAreas: AllAreas): AllAreas => {
         // make sure the returned variable is a copy and doesn't
         // change the global state variables
         let allAreasCopy = cloneDeep(stateAreas);
-        let rEntrances = {};
-        let oConnectors = {};
-        let eConnector;
-        let eEntrance;
-        let rEntrance;
+        let rEntrances: {[entranceName: string]: Entrance} = {};
+        let oConnectors: {[entranceName: string]: Entrance} = {};
+        let eConnector: {[entranceName: string]: Entrance};
+        let eEntrance: {[entranceName: string]: Entrance};
+        let rEntrance: string;
         Object.keys(allAreasCopy.entrances).forEach(entrance => {
             if (allAreasCopy.entrances[entrance].reverse !== "" && allAreasCopy.entrances[entrance].oneWay === false && allAreasCopy.entrances[entrance].type !== "overworld") {
                 rEntrance = allAreasCopy.entrances[entrance].reverse;
@@ -312,18 +471,18 @@ const Tracker = (props) => {
         });
         let areasMerge = { entrances: rEntrances };
         let connectorsMerge = { connectors: oConnectors };
-        return merge(allAreasCopy, areasMerge, connectorsMerge);
+        return merge(allAreasCopy, areasMerge, connectorsMerge, { areas: {} });
     }
 
-    const getShuffledTypes = (globalSettings) => {
+    const getShuffledTypes = (globalSettings: SelectedSettings): string[] => {
         let erSettings = [];
-        if (globalSettings["Shuffle Interiors"].includes("Simple")) {
+        if (Array.isArray(globalSettings["Shuffle Interiors"]) && globalSettings["Shuffle Interiors"].includes("Simple")) {
             erSettings.push("interior");
         }
-        if (globalSettings["Shuffle Interiors"].includes("Special")) {
+        if (Array.isArray(globalSettings["Shuffle Interiors"]) && globalSettings["Shuffle Interiors"].includes("Special")) {
             erSettings.push("specialInterior");
         }
-        if (globalSettings["Shuffle Interiors"].includes("Hideout")) {
+        if (Array.isArray(globalSettings["Shuffle Interiors"]) && globalSettings["Shuffle Interiors"].includes("Hideout")) {
             erSettings.push("hideoutInterior");
         }
         if (globalSettings["Shuffle Grottos"] === "On") {
@@ -360,13 +519,13 @@ const Tracker = (props) => {
         return erSettings;
     }
 
-    const loadAreas = (settingsLoad, allAreasLoad, allEntrancesLoad, init = false) => {
-        let areas = {};
+    const loadAreas = (settingsLoad: SelectedSettings, allAreasLoad: AllAreas, allEntrancesLoad: AllEntrances, init: boolean = false): Areas => {
+        let areasLocal: Areas = {};
         let erSettings = getShuffledTypes(settingsLoad);
-        let subArea;
+        let subArea: Entrance;
         let eAreas = [];
-        let eLocation;
-        let eEntrance;
+        let eLocation: {[locationName: string]: Location};
+        let eEntrance: {[entranceName: string]: Entrance};
         let internalDungeonEntrance = false;
         Object.keys(allAreasLoad.entrances).forEach((entrance) => {
             subArea = allAreasLoad.entrances[entrance];
@@ -382,17 +541,17 @@ const Tracker = (props) => {
             // noBossShuffle is a permanently unshuffled type for Ganon's Tower until/unless it is added to the randomizer
             internalDungeonEntrance = subArea.type === 'boss' || subArea.type === 'noBossShuffle';
             eAreas.forEach(eArea => {
-                if ((!(allAreasLoad.hasOwnProperty(eArea))) && init) {
-                    if (!(allAreasLoad.hasOwnProperty(eArea))) {
+                if ((!(allAreasLoad.areas.hasOwnProperty(eArea))) && init) {
+                    if (!(allAreasLoad.areas.hasOwnProperty(eArea))) {
                         if (subArea.oneWay && subArea.oneWayArea !== "" && subArea.type !== "overworld") {
-                            allAreasLoad[eArea] = { show: true, dungeon: internalDungeonEntrance, collapse: 'some', entrances: {}, locations: {} };
+                            allAreasLoad.areas[eArea] = { show: true, dungeon: internalDungeonEntrance, collapse: 'some', entrances: {}, locations: {} };
                         } else {
-                            allAreasLoad[eArea] = { show: false, dungeon: internalDungeonEntrance, collapse: 'some', entrances: {}, locations: {} };
+                            allAreasLoad.areas[eArea] = { show: false, dungeon: internalDungeonEntrance, collapse: 'some', entrances: {}, locations: {} };
                         }
                     }
                 }
-                if (!(areas.hasOwnProperty(eArea))) {
-                    areas[eArea] = { show: allAreasLoad[eArea].show, dungeon: internalDungeonEntrance, collapse: allAreasLoad[eArea].collapse, entrances: {}, locations: {} };
+                if (!(areasLocal.hasOwnProperty(eArea))) {
+                    areasLocal[eArea] = { show: allAreasLoad.areas[eArea].show, dungeon: internalDungeonEntrance, collapse: allAreasLoad.areas[eArea].collapse, entrances: {}, locations: {} };
                 }
                 eEntrance = {};
                 eEntrance[entrance] = allAreasLoad.entrances[entrance];
@@ -410,7 +569,7 @@ const Tracker = (props) => {
                     eEntrance[entrance].eLink = allAreasLoad.entrances[entrance].userELink;
                     eEntrance[entrance].aLink = allAreasLoad.entrances[entrance].userALink;
                 }
-                areas[eArea].entrances = merge(areas[eArea].entrances, eEntrance);
+                areasLocal[eArea].entrances = merge(areasLocal[eArea].entrances, eEntrance);
             });
         });
         let eArea = "";
@@ -419,290 +578,290 @@ const Tracker = (props) => {
             if (allAreasLoad.locations[location].visible === true) {
                 eArea = allAreasLoad.locations[location].area;
                 if (eArea !== "") {
-                    if (!(allAreasLoad.hasOwnProperty(eArea)) && init) { 
-                        allAreasLoad[eArea] = { show: false, dungeon: false, collapse: 'some', entrances: {}, locations: {} };
+                    if (!(allAreasLoad.areas.hasOwnProperty(eArea)) && init) { 
+                        allAreasLoad.areas[eArea] = { show: false, dungeon: false, collapse: 'some', entrances: {}, locations: {} };
                     }
-                    if (!(areas.hasOwnProperty(eArea))) {
-                        areas[eArea] = { show: allAreasLoad[eArea].show, dungeon: false, collapse: allAreasLoad[eArea].collapse, entrances: {}, locations: {} };
+                    if (!(areasLocal.hasOwnProperty(eArea))) {
+                        areasLocal[eArea] = { show: allAreasLoad.areas[eArea].show, dungeon: false, collapse: allAreasLoad.areas[eArea].collapse, entrances: {}, locations: {} };
                     }
                     eLocation = {};
                     eLocation[location] = allAreasLoad.locations[location];
-                    areas[eArea].locations = merge(areas[eArea].locations, eLocation);
+                    areasLocal[eArea].locations = merge(areasLocal[eArea].locations, eLocation);
                 } else if (['dungeon', 'dungeonGanon'].includes(allAreasLoad.entrances[allAreasLoad.locations[location].lKey].type)) {
                     eDungeon = allAreasLoad.entrances[allAreasLoad.locations[location].lKey].alias;
-                    if (!(allAreasLoad.hasOwnProperty(eDungeon)) && init) { 
-                        allAreasLoad[eDungeon] = { show: false, dungeon: true, collapse: 'some', entrances: {}, locations: {} };
+                    if (!(allAreasLoad.areas.hasOwnProperty(eDungeon)) && init) { 
+                        allAreasLoad.areas[eDungeon] = { show: false, dungeon: true, collapse: 'some', entrances: {}, locations: {} };
                     }
-                    if (!(areas.hasOwnProperty(eDungeon))) {
-                        areas[eDungeon] = { show: false, dungeon: true, collapse: 'some', entrances: {}, locations: {} };
+                    if (!(areasLocal.hasOwnProperty(eDungeon))) {
+                        areasLocal[eDungeon] = { show: false, dungeon: true, collapse: 'some', entrances: {}, locations: {} };
                     }
                     eLocation = {};
                     eLocation[location] = allAreasLoad.locations[location];
-                    areas[eDungeon].locations = merge(areas[eDungeon].locations, eLocation);
+                    areasLocal[eDungeon].locations = merge(areasLocal[eDungeon].locations, eLocation);
                     eEntrance = {};
                     eEntrance[allAreasLoad.entrances[allAreasLoad.locations[location].lKey].reverse] = allAreasLoad.entrances[allAreasLoad.entrances[allAreasLoad.locations[location].lKey].reverse];
-                    areas[eDungeon].entrances = merge(areas[eDungeon].entrances, eEntrance);
+                    areasLocal[eDungeon].entrances = merge(areasLocal[eDungeon].entrances, eEntrance);
                 }
             }
         });
-        return areas;
+        return areasLocal;
     }
 
-    const categorizeEntrances = (stateAreas) => {
+    const categorizeEntrances = (stateAreas: AllAreas): AllEntrances => {
         // make sure the returned variable is a copy and doesn't
         // change the global state variables
         let allAreasCat = cloneDeep(stateAreas);
-        let entrancesCat = {};
-        let eType;
-        let eRevType;
-        let area;
+        let entrancesCat: AllEntrances = { entrances: {}, areaEntranceTypes: {}, interiorEntranceTypes: {}, oneWayAreas: [] };
+        let eType: string;
+        let eRevType: string;
+        let area: string;
         Object.keys(allAreasCat.entrances).forEach(entrance => {
             eType = allAreasCat.entrances[entrance].type;
-            entrancesCat[entrance] = { type: eType, category: "", locations: {} };
-            entrancesCat[allAreasCat.entrances[entrance].reverse] = { type: eType, category: "", locations: {} };
+            entrancesCat.entrances[entrance] = { type: eType, category: "", locations: {} };
+            entrancesCat.entrances[allAreasCat.entrances[entrance].reverse] = { type: eType, category: "", locations: {} };
             if (eType === "overworld" || eType === "spawn" || eType === "warpsong" || eType === "owldrop" || eType === "extra" || eType === "overworldoneway") {
-                if (!(entrancesCat.hasOwnProperty(eType))) {
-                    entrancesCat[eType] = {};
+                if (!(entrancesCat.areaEntranceTypes.hasOwnProperty(eType))) {
+                    entrancesCat.areaEntranceTypes[eType] = {};
                 }
                 if (allAreasCat.entrances[entrance].oneWay && allAreasCat.entrances[entrance].oneWayArea !== "") {
                     area = allAreasCat.entrances[entrance].oneWayArea;
                 } else {
                     area = allAreasCat.entrances[entrance].area;
                 }
-                if (!(entrancesCat[eType].hasOwnProperty(area))) {
-                    entrancesCat[eType][area] = [];
+                if (!(entrancesCat.areaEntranceTypes[eType].hasOwnProperty(area))) {
+                    entrancesCat.areaEntranceTypes[eType][area] = [];
                 }
-                entrancesCat[eType][area].push(entrance);
+                entrancesCat.areaEntranceTypes[eType][area].push(entrance);
             }
             if (eType === "interior" || eType === "specialInterior" || eType === "hideoutInterior" || eType === "grave" || eType === "grotto" || eType === "dungeon" || eType === "dungeonGanon" || eType === "boss") {
-                if (!(entrancesCat.hasOwnProperty(eType))) {
-                    entrancesCat[eType] = [];
+                if (!(entrancesCat.interiorEntranceTypes.hasOwnProperty(eType))) {
+                    entrancesCat.interiorEntranceTypes[eType] = [];
                 }
-                entrancesCat[eType].push(entrance);
+                entrancesCat.interiorEntranceTypes[eType].push(entrance);
                 if (allAreasCat.entrances[entrance].isReverse) {
                     eRevType = "reverse" + eType;
                     area = allAreasCat.entrances[entrance].area;
-                    if (!(entrancesCat.hasOwnProperty(eRevType))) {
-                        entrancesCat[eRevType] = {};
+                    if (!(entrancesCat.areaEntranceTypes.hasOwnProperty(eRevType))) {
+                        entrancesCat.areaEntranceTypes[eRevType] = {};
                     }
-                    if (!(entrancesCat[eRevType].hasOwnProperty(area))) {
-                        entrancesCat[eRevType][area] = [];
+                    if (!(entrancesCat.areaEntranceTypes[eRevType].hasOwnProperty(area))) {
+                        entrancesCat.areaEntranceTypes[eRevType][area] = [];
                     }
-                    entrancesCat[eRevType][area].push(entrance);
+                    entrancesCat.areaEntranceTypes[eRevType][area].push(entrance);
                 }
             }
         });
-        let entrance;
-        let eLocation;
+        let entrance: string;
+        let eLocation: {[locationName: string]: Location};
         Object.keys(allAreasCat.locations).forEach(location => {
             if (allAreasCat.locations[location].lKey !== "") {
                 entrance = allAreasCat.locations[location].lKey;
                 eLocation = {};
                 eLocation[location] = allAreasCat.locations[location];
-                entrancesCat[entrance].locations = merge(entrancesCat[entrance].locations, eLocation);
+                entrancesCat.entrances[entrance].locations = merge(entrancesCat.entrances[entrance].locations, eLocation);
             }
         });
-        entrancesCat["linked"] = [];
-        entrancesCat["oneWayAreas"] = [];
-        entrancesCat["oneWayAreas"].push("Spawn Points");
-        entrancesCat["oneWayAreas"].push("Warp Songs");
+        //entrancesCat["linked"] = [];
+        entrancesCat.oneWayAreas = [];
+        entrancesCat.oneWayAreas.push("Spawn Points");
+        entrancesCat.oneWayAreas.push("Warp Songs");
         return entrancesCat;
     }
 
-    const loadEntrancePools = (settingsPools, stateEntrances, stateAreas) => {
+    const loadEntrancePools = (settingsLocal: SelectedSettings, stateEntrances: AllEntrances, stateAreas: AllAreas): Entrances => {
         // make sure the returned variable is a copy and doesn't
         // change the global state variables
-        let allEntrancesPools = cloneDeep(stateEntrances);
-        let allAreasPools = cloneDeep(stateAreas);
-        Object.filterOWEntrances = (entrances, predicate) =>
+        let allEntrancesLocal = cloneDeep(stateEntrances);
+        let allAreasLocal = cloneDeep(stateAreas);
+        let filterOWEntrances = (entrances: {[entranceName: string]: Entrance}, predicate: (eType: string, eLink: string, eArea: string) => boolean): string[] =>
             Object.keys(entrances)
                 .filter( key => predicate(entrances[key].type, entrances[key].eLink, entrances[key].area) );
-        Object.filterReverseEntrances = (entrances, predicate) =>
+        let filterReverseEntrances = (entrances: {[entranceName: string]: Entrance}, predicate: (eType: string, eLink: string, eArea: string, eReverse: boolean) => boolean): string[] =>
             Object.keys(entrances)
                 .filter( key => predicate(entrances[key].type, entrances[key].eLink, entrances[key].area, entrances[key].isReverse) );
-        Object.filterEntrances = (entrances, predicate) =>
+        let filterEntrances = (entrances: {[entranceName: string]: Entrance}, predicate: (eType: string, eLink: string, eReverse: boolean) => boolean): string[] =>
             Object.keys(entrances)
                 .filter( key => predicate(entrances[key].type, entrances[key].eLink, entrances[key].isReverse) );
         let entrancesPools = {};
         let mixedpool = {};
-        let oOverworld = {};
-        Object.keys(allEntrancesPools.overworld).forEach(area => {
-            oOverworld[area] = (Object.filterOWEntrances(allAreasPools.entrances, (eType, eLink, eArea) => eType === "overworld" && eLink === "" && eArea === area));
+        let oOverworld: EntrancePool = {};
+        Object.keys(allEntrancesLocal.areaEntranceTypes.overworld).forEach(area => {
+            oOverworld[area] = (filterOWEntrances(allAreasLocal.entrances, (eType, eLink, eArea) => eType === "overworld" && eLink === "" && eArea === area));
         });
-        let oExtra = {};
-        Object.keys(allEntrancesPools.extra).forEach(area => {
-            oExtra[area] = (Object.filterOWEntrances(allAreasPools.entrances, (eType, eLink, eArea) => eType === "extra" && eLink === "" && eArea === area));
+        let oExtra: EntrancePool = {};
+        Object.keys(allEntrancesLocal.areaEntranceTypes.extra).forEach(area => {
+            oExtra[area] = (filterOWEntrances(allAreasLocal.entrances, (eType, eLink, eArea) => eType === "extra" && eLink === "" && eArea === area));
         });
-        let oWarpSong = {};
-        Object.keys(allEntrancesPools.warpsong).forEach(area => {
-            oWarpSong[area] = (Object.filterOWEntrances(allAreasPools.entrances, (eType, eLink, eArea) => eType === "warpsong" && eLink === "" && eArea === area));
+        let oWarpSong: EntrancePool = {};
+        Object.keys(allEntrancesLocal.areaEntranceTypes.warpsong).forEach(area => {
+            oWarpSong[area] = (filterOWEntrances(allAreasLocal.entrances, (eType, eLink, eArea) => eType === "warpsong" && eLink === "" && eArea === area));
         });
-        let oOwlDrop = {};
-        Object.keys(allEntrancesPools.owldrop).forEach(area => {
-            oOwlDrop[area] = (Object.filterOWEntrances(allAreasPools.entrances, (eType, eLink, eArea) => eType === "owldrop" && eLink === "" && eArea === area));
+        let oOwlDrop: EntrancePool = {};
+        Object.keys(allEntrancesLocal.areaEntranceTypes.owldrop).forEach(area => {
+            oOwlDrop[area] = (filterOWEntrances(allAreasLocal.entrances, (eType, eLink, eArea) => eType === "owldrop" && eLink === "" && eArea === area));
         });
-        let oOverworldOneway = {};
-        Object.keys(allEntrancesPools.overworldoneway).forEach(area => {
-            oOverworldOneway[area] = (Object.filterOWEntrances(allAreasPools.entrances, (eType, eLink, eArea) => eType === "overworldoneway" && eLink === "" && eArea === area));
+        let oOverworldOneway: EntrancePool = {};
+        Object.keys(allEntrancesLocal.areaEntranceTypes.overworldoneway).forEach(area => {
+            oOverworldOneway[area] = (filterOWEntrances(allAreasLocal.entrances, (eType, eLink, eArea) => eType === "overworldoneway" && eLink === "" && eArea === area));
         });
 
-        let oInteriors = {};
-        let oReverseInteriors = {};
-        let oDecoupledInteriors = {};
-        let eInteriors = [];
-        if (settingsPools["Shuffle Interiors"].includes("Simple")) {
-            eInteriors.push(...(Object.filterEntrances(allAreasPools.entrances, (eType, eLink, eReverse) => eType === "interior" && eLink === "" && eReverse === false)));
-            Object.keys(allEntrancesPools.reverseinterior).forEach(area => {
+        let oInteriors: EntrancePool = {} = {};
+        let oReverseInteriors: EntrancePool = {} = {};
+        let oDecoupledInteriors: EntrancePool = {} = {};
+        let eInteriors: string[] = [];
+        if (Array.isArray(settingsLocal["Shuffle Interiors"]) && settingsLocal["Shuffle Interiors"].includes("Simple")) {
+            eInteriors.push(...(filterEntrances(allAreasLocal.entrances, (eType, eLink, eReverse) => eType === "interior" && eLink === "" && eReverse === false)));
+            Object.keys(allEntrancesLocal.areaEntranceTypes.reverseinterior).forEach(area => {
                 if (!(oReverseInteriors.hasOwnProperty(area))) {
                     oReverseInteriors[area] = [];
                 }
-                oReverseInteriors[area] = (Object.filterReverseEntrances(allAreasPools.entrances, (eType, eLink, eArea, eReverse) => eType === "interior" && eLink === "" && eArea === area && eReverse === true));
+                oReverseInteriors[area] = (filterReverseEntrances(allAreasLocal.entrances, (eType, eLink, eArea, eReverse) => eType === "interior" && eLink === "" && eArea === area && eReverse === true));
             });
         }
-        if (settingsPools["Shuffle Interiors"].includes("Special")) {
-            eInteriors.push(...(Object.filterEntrances(allAreasPools.entrances, (eType, eLink, eReverse) => eType === "specialInterior" && eLink === "" && eReverse === false)));
-            Object.keys(allEntrancesPools.reversespecialInterior).forEach(area => {
+        if (Array.isArray(settingsLocal["Shuffle Interiors"]) && settingsLocal["Shuffle Interiors"].includes("Special")) {
+            eInteriors.push(...(filterEntrances(allAreasLocal.entrances, (eType, eLink, eReverse) => eType === "specialInterior" && eLink === "" && eReverse === false)));
+            Object.keys(allEntrancesLocal.areaEntranceTypes.reversespecialInterior).forEach(area => {
                 if (!(oReverseInteriors.hasOwnProperty(area))) {
                     oReverseInteriors[area] = [];
                 }
-                oReverseInteriors[area].push(...(Object.filterReverseEntrances(allAreasPools.entrances, (eType, eLink, eArea, eReverse) => eType === "specialInterior" && eLink === "" && eArea === area && eReverse === true)));
+                oReverseInteriors[area].push(...(filterReverseEntrances(allAreasLocal.entrances, (eType, eLink, eArea, eReverse) => eType === "specialInterior" && eLink === "" && eArea === area && eReverse === true)));
             });
         }
         oInteriors = { "Interiors": eInteriors };
-        let eHideout = [];
-        if (settingsPools["Shuffle Interiors"].includes("Hideout")) {
-            eHideout.push(...(Object.filterEntrances(allAreasPools.entrances, (eType, eLink, eReverse) => eType === "hideoutInterior" && eLink === "" && eReverse === false)));
-            Object.keys(allEntrancesPools.reversehideoutInterior).forEach(area => {
+        let eHideout: string[] = [];
+        if (Array.isArray(settingsLocal["Shuffle Interiors"]) && settingsLocal["Shuffle Interiors"].includes("Hideout")) {
+            eHideout.push(...(filterEntrances(allAreasLocal.entrances, (eType, eLink, eReverse) => eType === "hideoutInterior" && eLink === "" && eReverse === false)));
+            Object.keys(allEntrancesLocal.areaEntranceTypes.reversehideoutInterior).forEach(area => {
                 if (!(oReverseInteriors.hasOwnProperty(area))) {
                     oReverseInteriors[area] = [];
                 }
-                oReverseInteriors[area].push(...(Object.filterReverseEntrances(allAreasPools.entrances, (eType, eLink, eArea, eReverse) => eType === "hideoutInterior" && eLink === "" && eArea === area && eReverse === true)));
+                oReverseInteriors[area].push(...(filterReverseEntrances(allAreasLocal.entrances, (eType, eLink, eArea, eReverse) => eType === "hideoutInterior" && eLink === "" && eArea === area && eReverse === true)));
             });
             oInteriors = merge(oInteriors, {"Hideout": eHideout });
         }
 
         oDecoupledInteriors = merge(clone(oInteriors), clone(oReverseInteriors));
-        let oDungeons = {};
-        let oReverseDungeons = {};
-        let oDecoupledDungeons = {};
-        let eDungeons = [];
-        eDungeons.push(...(Object.filterEntrances(allAreasPools.entrances, (eType, eLink, eReverse) => eType === "dungeon" && eLink === "" && eReverse === false)));
-        Object.keys(allEntrancesPools.reversedungeon).forEach(area => {
-            oReverseDungeons[area] = (Object.filterReverseEntrances(allAreasPools.entrances, (eType, eLink, eArea, eReverse) => eType === "dungeon" && eLink === "" && eArea === area && eReverse === true));
+        let oDungeons: EntrancePool = {} = {};
+        let oReverseDungeons: EntrancePool = {} = {};
+        let oDecoupledDungeons: EntrancePool = {} = {};
+        let eDungeons: string[] = [];
+        eDungeons.push(...(filterEntrances(allAreasLocal.entrances, (eType, eLink, eReverse) => eType === "dungeon" && eLink === "" && eReverse === false)));
+        Object.keys(allEntrancesLocal.areaEntranceTypes.reversedungeon).forEach(area => {
+            oReverseDungeons[area] = (filterReverseEntrances(allAreasLocal.entrances, (eType, eLink, eArea, eReverse) => eType === "dungeon" && eLink === "" && eArea === area && eReverse === true));
         });
-        if (settingsPools["Shuffle Dungeons"] === "Dungeons and Ganon") {
-            eDungeons.push(...(Object.filterEntrances(allAreasPools.entrances, (eType, eLink, eReverse) => eType === "dungeonGanon" && eLink === "" && eReverse === false)));
-            Object.keys(allEntrancesPools.reversedungeonGanon).forEach(area => {
+        if (settingsLocal["Shuffle Dungeons"] === "Dungeons and Ganon") {
+            eDungeons.push(...(filterEntrances(allAreasLocal.entrances, (eType, eLink, eReverse) => eType === "dungeonGanon" && eLink === "" && eReverse === false)));
+            Object.keys(allEntrancesLocal.areaEntranceTypes.reversedungeonGanon).forEach(area => {
                 if (!(oReverseDungeons.hasOwnProperty(area))) {
                     oReverseDungeons[area] = [];
                 }
-                oReverseDungeons[area].push(...(Object.filterReverseEntrances(allAreasPools.entrances, (eType, eLink, eArea, eReverse) => eType === "dungeonGanon" && eLink === "" && eArea === area && eReverse === true)));
+                oReverseDungeons[area].push(...(filterReverseEntrances(allAreasLocal.entrances, (eType, eLink, eArea, eReverse) => eType === "dungeonGanon" && eLink === "" && eArea === area && eReverse === true)));
             });
         }
         oDungeons = { "Dungeons": eDungeons };
         oDecoupledDungeons = merge(clone(oDungeons), clone(oReverseDungeons));
-        let oBosses = {};
-        let oReverseBosses = {};
-        let oDecoupledBosses = {};
-        let eBosses = [];
-        eBosses.push(...(Object.filterEntrances(allAreasPools.entrances, (eType, eLink, eReverse) => eType === "boss" && eLink === "" && eReverse === false)));
-        Object.keys(allEntrancesPools.reverseboss).forEach(area => {
-            oReverseBosses[area] = (Object.filterReverseEntrances(allAreasPools.entrances, (eType, eLink, eArea, eReverse) => eType === "boss" && eLink === "" && eArea === area && eReverse === true));
+        let oBosses: EntrancePool = {} = {};
+        let oReverseBosses: EntrancePool = {} = {};
+        let oDecoupledBosses: EntrancePool = {} = {};
+        let eBosses: string[] = [];
+        eBosses.push(...(filterEntrances(allAreasLocal.entrances, (eType, eLink, eReverse) => eType === "boss" && eLink === "" && eReverse === false)));
+        Object.keys(allEntrancesLocal.areaEntranceTypes.reverseboss).forEach(area => {
+            oReverseBosses[area] = (filterReverseEntrances(allAreasLocal.entrances, (eType, eLink, eArea, eReverse) => eType === "boss" && eLink === "" && eArea === area && eReverse === true));
         });
         oBosses = { "Bosses": eBosses };
         oDecoupledBosses = merge(clone(oBosses), clone(oReverseBosses));
-        let oGrottos = {};
-        let oReverseGrottos = {};
-        let oDecoupledGrottos = {};
-        let eGrottos = [];
-        eGrottos.push(...(Object.filterEntrances(allAreasPools.entrances, (eType, eLink, eReverse) => (eType === "grotto" || eType === "grave") && eLink === "" && eReverse === false)));
-        Object.keys(allEntrancesPools.reversegrotto).forEach(area => {
-            oReverseGrottos[area] = (Object.filterReverseEntrances(allAreasPools.entrances, (eType, eLink, eArea, eReverse) => (eType === "grotto") && eLink === "" && eArea === area && eReverse === true));
+        let oGrottos: EntrancePool = {} = {};
+        let oReverseGrottos: EntrancePool = {} = {};
+        let oDecoupledGrottos: EntrancePool = {} = {};
+        let eGrottos: string[] = [];
+        eGrottos.push(...(filterEntrances(allAreasLocal.entrances, (eType, eLink, eReverse) => (eType === "grotto" || eType === "grave") && eLink === "" && eReverse === false)));
+        Object.keys(allEntrancesLocal.areaEntranceTypes.reversegrotto).forEach(area => {
+            oReverseGrottos[area] = (filterReverseEntrances(allAreasLocal.entrances, (eType, eLink, eArea, eReverse) => (eType === "grotto") && eLink === "" && eArea === area && eReverse === true));
         });
-        Object.keys(allEntrancesPools.reversegrave).forEach(area => {
+        Object.keys(allEntrancesLocal.areaEntranceTypes.reversegrave).forEach(area => {
             if (!(oReverseGrottos.hasOwnProperty(area))) {
                 oReverseGrottos[area] = [];
             }
-            oReverseGrottos[area].push(...(Object.filterReverseEntrances(allAreasPools.entrances, (eType, eLink, eArea, eReverse) => (eType === "grave") && eLink === "" && eArea === area && eReverse === true)));
+            oReverseGrottos[area].push(...(filterReverseEntrances(allAreasLocal.entrances, (eType, eLink, eArea, eReverse) => (eType === "grave") && eLink === "" && eArea === area && eReverse === true)));
         });
         oGrottos = { "Grottos": eGrottos };
         oDecoupledGrottos = merge(clone(oGrottos), clone(oReverseGrottos));
 
-        function mergeAreas(objValue, srcValue) {
+        function mergeAreas(objValue: any, srcValue: any) {
             if (isArray(objValue)) {
                 return objValue.concat(srcValue);
             }
         }
 
-        if (settingsPools["Shuffle Overworld"] === "On") {
-            if (settingsPools["Mixed Pools"].includes("Overworld")) {
+        if (settingsLocal["Shuffle Overworld"] === "On") {
+            if (Array.isArray(settingsLocal["Mixed Pools"]) && settingsLocal["Mixed Pools"].includes("Overworld")) {
                 mixedpool = mergeWith(mixedpool, {"mixed": oOverworld, "mixed_reverse": oOverworld, "mixed_decoupled": oOverworld, "mixed_overworld": oOverworld}, mergeAreas);
             }
             entrancesPools = merge(entrancesPools, {"overworld": oOverworld});
         }
-        if (settingsPools["Shuffle Interiors"].includes("Simple") || settingsPools["Shuffle Interiors"].includes("Special") || settingsPools["Shuffle Interiors"].includes("Hideout")) {
-            if (settingsPools["Mixed Pools"].includes("Interiors")) {
+        if (Array.isArray(settingsLocal["Shuffle Interiors"]) && (settingsLocal["Shuffle Interiors"].includes("Simple") || settingsLocal["Shuffle Interiors"].includes("Special") || settingsLocal["Shuffle Interiors"].includes("Hideout"))) {
+            if (Array.isArray(settingsLocal["Mixed Pools"]) && settingsLocal["Mixed Pools"].includes("Interiors")) {
                 mixedpool = mergeWith(mixedpool, {"mixed": oInteriors, "mixed_reverse": oReverseInteriors, "mixed_decoupled": oDecoupledInteriors, "mixed_overworld": merge(clone(oInteriors), clone(oReverseInteriors))}, mergeAreas);
             }
             entrancesPools = merge(entrancesPools, {"interior": oInteriors, "interior_reverse": oReverseInteriors, "interior_decoupled": oDecoupledInteriors});
         }
-        if (settingsPools["Shuffle Grottos"] === "On") {
-            if (settingsPools["Mixed Pools"].includes("Grottos")) {
+        if (settingsLocal["Shuffle Grottos"] === "On") {
+            if (Array.isArray(settingsLocal["Mixed Pools"]) && settingsLocal["Mixed Pools"].includes("Grottos")) {
                 mixedpool = mergeWith(mixedpool, {"mixed": oGrottos, "mixed_reverse": oReverseGrottos, "mixed_decoupled": oDecoupledGrottos, "mixed_overworld": merge(clone(oGrottos), clone(oReverseGrottos))}, mergeAreas);
             }
             entrancesPools = merge(entrancesPools, {"grotto": oGrottos, "grotto_reverse": oReverseGrottos, "grotto_decoupled": oDecoupledGrottos});
             entrancesPools = merge(entrancesPools, {"grave": oGrottos, "grave_reverse": oReverseGrottos, "grave_decoupled": oDecoupledGrottos});
         }
-        if (settingsPools["Shuffle Dungeons"] === "Dungeons" || settingsPools["Shuffle Dungeons"] === "Dungeons and Ganon") {
-            if (settingsPools["Mixed Pools"].includes("Dungeons")) {
+        if (settingsLocal["Shuffle Dungeons"] === "Dungeons" || settingsLocal["Shuffle Dungeons"] === "Dungeons and Ganon") {
+            if (Array.isArray(settingsLocal["Mixed Pools"]) && settingsLocal["Mixed Pools"].includes("Dungeons")) {
                 mixedpool = mergeWith(mixedpool, {"mixed": oDungeons, "mixed_reverse": oReverseDungeons, "mixed_decoupled": oDecoupledDungeons, "mixed_overworld": merge(clone(oDungeons), clone(oReverseDungeons))}, mergeAreas);
             }
             entrancesPools = merge(entrancesPools, {"dungeon": oDungeons, "dungeon_reverse": oReverseDungeons, "dungeon_decoupled": oDecoupledDungeons});
         }
-        if (settingsPools["Shuffle Bosses"] === "Age-Restricted" || settingsPools["Shuffle Bosses"] === "Full") {
-            if (settingsPools["Mixed Pools"].includes("Boss Rooms")) {
+        if (settingsLocal["Shuffle Bosses"] === "Age-Restricted" || settingsLocal["Shuffle Bosses"] === "Full") {
+            if (Array.isArray(settingsLocal["Mixed Pools"]) && settingsLocal["Mixed Pools"].includes("Boss Rooms")) {
                 mixedpool = mergeWith(mixedpool, {"mixed": oBosses, "mixed_reverse": oReverseBosses, "mixed_decoupled": oDecoupledBosses, "mixed_overworld": merge(clone(oBosses), clone(oReverseBosses))}, mergeAreas);
             }
             entrancesPools = merge(entrancesPools, {"boss": oBosses, "boss_reverse": oReverseBosses, "boss_decoupled": oDecoupledBosses});
         }
-        if (settingsPools["Shuffle Warp Songs"] === "On") {
+        if (settingsLocal["Shuffle Warp Songs"] === "On") {
             entrancesPools = merge(entrancesPools, {"warpsong": [], "warpsong_reverse": [], "warpsong_decoupled": []});
         }
-        if (settingsPools["Shuffle Owls"] === "On") {
+        if (settingsLocal["Shuffle Owls"] === "On") {
             entrancesPools = merge(entrancesPools, {"owldrop": [], "owldrop_reverse": [], "owldrop_decoupled": []});
         }
-        if (settingsPools["Shuffle Spawn Points"] === "On") {
+        if (settingsLocal["Shuffle Spawn Points"] === "On") {
             entrancesPools = merge(entrancesPools, {"spawn": [], "spawn_reverse": [], "spawn_decoupled": []});
         }
-        if (settingsPools["Shuffle Valley/Lake"] === "On") {
+        if (settingsLocal["Shuffle Valley/Lake"] === "On") {
             entrancesPools = merge(entrancesPools, {"overworldoneway": [], "overworldoneway_reverse": [], "overworldoneway_decoupled": []});
         }
         entrancesPools = merge(entrancesPools, mixedpool);
         return entrancesPools;
     }
 
-    const loadOneWayEntrancePools = (settingsPools, stateEntrances, stateAreas) => {
+    const loadOneWayEntrancePools = (settingsLocal: SelectedSettings, stateEntrances: AllEntrances, stateAreas: AllAreas): Entrances => {
         // make sure the returned variable is a copy and doesn't
         // change the global state variables
-        let allEntrancesPools = cloneDeep(stateEntrances);
-        let allAreasPools = cloneDeep(stateAreas);
-        let entrancesPools = {};
+        let allEntrancesLocal = cloneDeep(stateEntrances);
+        let allAreasLocal = cloneDeep(stateAreas);
+        let entrancesPools: Entrances = {};
 
-        let eOverworld = {};
-        Object.keys(allEntrancesPools.overworld).forEach(area => {
-            eOverworld[area] = (clone(allEntrancesPools.overworld[area]));
+        let eOverworld: EntrancePool = {};
+        Object.keys(allEntrancesLocal.areaEntranceTypes.overworld).forEach(area => {
+            eOverworld[area] = (clone(allEntrancesLocal.areaEntranceTypes.overworld[area]));
         });
 
-        Object.keys(allEntrancesPools.extra).forEach(area => {
+        Object.keys(allEntrancesLocal.areaEntranceTypes.extra).forEach(area => {
             if (!(Object.keys(eOverworld).includes(area))) {
                 eOverworld[area] = [];
             }
-            eOverworld[area].push(...((allEntrancesPools.extra[area])));
+            eOverworld[area].push(...((allEntrancesLocal.areaEntranceTypes.extra[area])));
         });
 
-        Object.keys(allEntrancesPools.overworldoneway).forEach(area => {
-            allEntrancesPools.overworldoneway[area].forEach(e => {
-                let destArea = allAreasPools.entrances[e].area
+        Object.keys(allEntrancesLocal.areaEntranceTypes.overworldoneway).forEach(area => {
+            allEntrancesLocal.areaEntranceTypes.overworldoneway[area].forEach(e => {
+                let destArea = allAreasLocal.entrances[e].area
                 if (!(Object.keys(eOverworld).includes(destArea))) {
                     eOverworld[destArea] = [];
                 }
@@ -710,77 +869,77 @@ const Tracker = (props) => {
             });
         });
         
-        let eInteriors = [];
-        eInteriors.push(...((allEntrancesPools.interior.filter(int => allAreasPools.entrances[int].isReverse === false))));
-        eInteriors.push(...((allEntrancesPools.specialInterior.filter(int => allAreasPools.entrances[int].isReverse === false))));
-        eInteriors.push(...((allEntrancesPools.hideoutInterior.filter(int => allAreasPools.entrances[int].isReverse === false))));
-        let oInteriors = { "Interiors": eInteriors };
+        let eInteriors: string[] = [];
+        eInteriors.push(...((allEntrancesLocal.interiorEntranceTypes.interior.filter(int => allAreasLocal.entrances[int].isReverse === false))));
+        eInteriors.push(...((allEntrancesLocal.interiorEntranceTypes.specialInterior.filter(int => allAreasLocal.entrances[int].isReverse === false))));
+        eInteriors.push(...((allEntrancesLocal.interiorEntranceTypes.hideoutInterior.filter(int => allAreasLocal.entrances[int].isReverse === false))));
+        let oInteriors: EntrancePool = { "Interiors": eInteriors };
 
-        let eOverworldInteriors = {};
-        Object.keys(allEntrancesPools.reverseinterior).forEach(area => {
+        let eOverworldInteriors: EntrancePool = {};
+        Object.keys(allEntrancesLocal.areaEntranceTypes.reverseinterior).forEach(area => {
             if (!(Object.keys(eOverworldInteriors).includes(area))) {
                 eOverworldInteriors[area] = [];
             }
-            eOverworldInteriors[area].push(...((allEntrancesPools.reverseinterior[area])));
+            eOverworldInteriors[area].push(...((allEntrancesLocal.areaEntranceTypes.reverseinterior[area])));
         });
-        Object.keys(allEntrancesPools.reversespecialInterior).forEach(area => {
+        Object.keys(allEntrancesLocal.areaEntranceTypes.reversespecialInterior).forEach(area => {
             if (!(Object.keys(eOverworldInteriors).includes(area))) {
                 eOverworldInteriors[area] = [];
             }
-            eOverworldInteriors[area].push(...((allEntrancesPools.reversespecialInterior[area])))
+            eOverworldInteriors[area].push(...((allEntrancesLocal.areaEntranceTypes.reversespecialInterior[area])))
         });
-        Object.keys(allEntrancesPools.reversehideoutInterior).forEach(area => {
+        Object.keys(allEntrancesLocal.areaEntranceTypes.reversehideoutInterior).forEach(area => {
             if (!(Object.keys(eOverworldInteriors).includes(area))) {
                 eOverworldInteriors[area] = [];
             }
-            eOverworldInteriors[area].push(...((allEntrancesPools.reversehideoutInterior[area])))
+            eOverworldInteriors[area].push(...((allEntrancesLocal.areaEntranceTypes.reversehideoutInterior[area])))
         });
 
-        let eOverworldDungeons = {};
-        if ((settingsPools["Shuffle Dungeons"] === 'Dungeons' || settingsPools["Shuffle Dungeons"] === 'Dungeons and Ganon') &&
-            (settingsPools['Mixed Pools'].includes("Dungeons"))) {
-            Object.keys(allEntrancesPools.reversedungeon).forEach(area => {
+        let eOverworldDungeons: EntrancePool = {};
+        if ((settingsLocal["Shuffle Dungeons"] === 'Dungeons' || settingsLocal["Shuffle Dungeons"] === 'Dungeons and Ganon') &&
+            (Array.isArray(settingsLocal['Mixed Pools']) && settingsLocal['Mixed Pools'].includes("Dungeons"))) {
+            Object.keys(allEntrancesLocal.areaEntranceTypes.reversedungeon).forEach(area => {
                 if (!(Object.keys(eOverworldDungeons).includes(area))) {
                     eOverworldDungeons[area] = [];
                 }
-                eOverworldDungeons[area].push(...((allEntrancesPools.reversedungeon[area])))
+                eOverworldDungeons[area].push(...((allEntrancesLocal.areaEntranceTypes.reversedungeon[area])))
             });
-            if (settingsPools["Shuffle Dungeons"] === 'Dungeons and Ganon') {
-                Object.keys(allEntrancesPools.reversedungeonGanon).forEach(area => {
+            if (settingsLocal["Shuffle Dungeons"] === 'Dungeons and Ganon') {
+                Object.keys(allEntrancesLocal.areaEntranceTypes.reversedungeonGanon).forEach(area => {
                     if (!(Object.keys(eOverworldDungeons).includes(area))) {
                         eOverworldDungeons[area] = [];
                     }
-                    eOverworldDungeons[area].push(...((allEntrancesPools.reversedungeonGanon[area])))
+                    eOverworldDungeons[area].push(...((allEntrancesLocal.areaEntranceTypes.reversedungeonGanon[area])))
                 });
             }
         }
 
-        let eOwlDrops = [];
-        Object.keys(allEntrancesPools.owldrop).forEach(area => {
-            eOwlDrops.push(...((allEntrancesPools.owldrop[area])));
+        let eOwlDrops: string[] = [];
+        Object.keys(allEntrancesLocal.areaEntranceTypes.owldrop).forEach(area => {
+            eOwlDrops.push(...((allEntrancesLocal.areaEntranceTypes.owldrop[area])));
         });
-        let oOwlDrops = { "Owl Drops": eOwlDrops };
+        let oOwlDrops: EntrancePool = { "Owl Drops": eOwlDrops };
 
-        let eSpawnPoints = [];
-        eSpawnPoints.push(...((allEntrancesPools.spawn["Spawn Points"])));
-        let oSpawnPoints = { "Spawn Points": eSpawnPoints };
+        let eSpawnPoints: string[] = [];
+        eSpawnPoints.push(...((allEntrancesLocal.areaEntranceTypes.spawn["Spawn Points"])));
+        let oSpawnPoints: EntrancePool = { "Spawn Points": eSpawnPoints };
         
-        let eWarpSongs = [];
-        Object.keys(allEntrancesPools.warpsong).forEach(area => {
-            eWarpSongs.push(...((allEntrancesPools.warpsong[area])));
+        let eWarpSongs: string[] = [];
+        Object.keys(allEntrancesLocal.areaEntranceTypes.warpsong).forEach(area => {
+            eWarpSongs.push(...((allEntrancesLocal.areaEntranceTypes.warpsong[area])));
         });
-        let oWarpSongs = { "Warp Song Pads": eWarpSongs };
+        let oWarpSongs: EntrancePool = { "Warp Song Pads": eWarpSongs };
         
-        function mergeAreas(objValue, srcValue) {
+        function mergeAreas(objValue: any, srcValue: any) {
             if (isArray(objValue)) {
                 return objValue.concat(srcValue);
             }
         }
 
-        let oExtOwlDrops = mergeWith(cloneDeep(oWarpSongs), cloneDeep(eOverworld), cloneDeep(oOwlDrops), mergeAreas);
-        let oExtWarpSongs = mergeWith(cloneDeep(oSpawnPoints), cloneDeep(oWarpSongs), cloneDeep(eOverworld), cloneDeep(eOverworldInteriors), cloneDeep(oInteriors), cloneDeep(oOwlDrops), cloneDeep(eOverworldDungeons), mergeAreas);
-        let oExtSpawnPoints = mergeWith(cloneDeep(oSpawnPoints), cloneDeep(oWarpSongs), cloneDeep(eOverworld), cloneDeep(eOverworldInteriors), cloneDeep(oInteriors), cloneDeep(oOwlDrops), cloneDeep(eOverworldDungeons), mergeAreas);
-        let oExtOverworldOneway = mergeWith(cloneDeep(oSpawnPoints), cloneDeep(oWarpSongs), cloneDeep(eOverworld), cloneDeep(eOverworldInteriors), cloneDeep(oInteriors), cloneDeep(oOwlDrops), cloneDeep(eOverworldDungeons), mergeAreas);
+        let oExtOwlDrops: EntrancePool = mergeWith(cloneDeep(oWarpSongs), cloneDeep(eOverworld), cloneDeep(oOwlDrops), mergeAreas);
+        let oExtWarpSongs: EntrancePool = mergeWith(cloneDeep(oSpawnPoints), cloneDeep(oWarpSongs), cloneDeep(eOverworld), cloneDeep(eOverworldInteriors), cloneDeep(oInteriors), cloneDeep(oOwlDrops), cloneDeep(eOverworldDungeons), mergeAreas);
+        let oExtSpawnPoints: EntrancePool = mergeWith(cloneDeep(oSpawnPoints), cloneDeep(oWarpSongs), cloneDeep(eOverworld), cloneDeep(eOverworldInteriors), cloneDeep(oInteriors), cloneDeep(oOwlDrops), cloneDeep(eOverworldDungeons), mergeAreas);
+        let oExtOverworldOneway: EntrancePool = mergeWith(cloneDeep(oSpawnPoints), cloneDeep(oWarpSongs), cloneDeep(eOverworld), cloneDeep(eOverworldInteriors), cloneDeep(oInteriors), cloneDeep(oOwlDrops), cloneDeep(eOverworldDungeons), mergeAreas);
         entrancesPools = {
                         "spawn": oExtSpawnPoints,
                         "owldrop": oExtOwlDrops,
@@ -790,7 +949,7 @@ const Tracker = (props) => {
         return entrancesPools;
     }
 
-    const setShuffledEntrances = (settingsLocal, allAreasLocal) => {
+    const setShuffledEntrances = (settingsLocal: SelectedSettings, allAreasLocal: AllAreas): AllAreas => {
         let tempAreas = cloneDeep(allAreasLocal);
         let erSettings = getShuffledTypes(settingsLocal);
         Object.keys(tempAreas.entrances).forEach(entrance => {
@@ -803,12 +962,12 @@ const Tracker = (props) => {
         return tempAreas; 
     }
 
-    const changeSetting = (setting) => {
+    const changeSetting = (setting: ChangeEvent<HTMLSelectElement> | SelectChangeEvent<string[]> | {target: {name: string, value: boolean | string}}) => {
         console.log(setting.target.name, setting.target.value);
         let allEntrancesLocal = cloneDeep(allEntrances);
         let allAreasLocal = cloneDeep(allAreas);
-        let settingsLocal;
-        if (setting.target.name === 'Settings Preset') {
+        let settingsLocal: SelectedSettings;
+        if (setting.target.name === 'Settings Preset' && typeof setting.target.value === 'string') {
             let prevSettings = cloneDeep(settings);
             settingsLocal = cloneDeep(defaultSettings.Settings);
             settingsLocal["Settings Preset"] = prevSettings["Settings Preset"];
@@ -825,27 +984,26 @@ const Tracker = (props) => {
         }
         settingsLocal[setting.target.name] = setting.target.value;
         allAreasLocal = setShuffledEntrances(settingsLocal, allAreasLocal);
+        findVisibleLocations(settingsLocal, allAreasLocal);
         let areasLocal = loadAreas(settingsLocal, allAreasLocal, allEntrancesLocal);
         let entrancesLocal = loadEntrancePools(settingsLocal, allEntrancesLocal, allAreasLocal);
         let oneWayEntrancesLocal = loadOneWayEntrancePools(settingsLocal, allEntrancesLocal, allAreasLocal);
-        findVisibleLocations(settingsLocal, allAreasLocal);
         findVisibleAreas(areasLocal, allAreasLocal, allEntrancesLocal, settingsLocal);
         setSettings(settingsLocal);
         setEntrances(entrancesLocal);
         setOneWayEntrances(oneWayEntrancesLocal);
         setAreas(areasLocal);
         setAllAreas(allAreasLocal);
-        //localStorage.setItem('RandoSettings', settingsLocal);
-        //localStorage.setItem('allAreasLocal', allAreasLocal);
     }
 
-    const toggleMQ = (dungeon) => {
+    const toggleMQ = (dungeon: string): void => {
         let settingsLocal = cloneDeep(settings);
         let isMQ = !(settingsLocal[dungeon]);
+        let mqEvent = Event
         changeSetting({"target":{"name":dungeon,"value":isMQ}});
     }
 
-    const toggleCollapse = (area) => {
+    const toggleCollapse = (area: string): void => {
         let allAreasLocal = cloneDeep(allAreas);
         let areasLocal = cloneDeep(areas);
         let collapse = areasLocal[area].collapse;
@@ -856,14 +1014,13 @@ const Tracker = (props) => {
         } else {
             collapse = 'none';
         }
-        allAreasLocal[area].collapse = collapse;
+        allAreasLocal.areas[area].collapse = collapse;
         areasLocal[area].collapse = collapse;
         setAreas(areasLocal);
         setAllAreas(allAreasLocal);
-        //localStorage.setItem('AllAreas', allAreasLocal);
     }
 
-    const toggleCollapseReverse = (areaDiv) => {
+    const toggleCollapseReverse = (areaDiv: HTMLDivElement) => {
         let allAreasLocal = cloneDeep(allAreas);
         let areasLocal = cloneDeep(areas);
         let area = areaDiv.innerText;
@@ -875,49 +1032,49 @@ const Tracker = (props) => {
         } else {
             collapse = 'some';
         }
-        allAreasLocal[area].collapse = collapse;
+        allAreasLocal.areas[area].collapse = collapse;
         areasLocal[area].collapse = collapse;
         setAreas(areasLocal);
         setAllAreas(allAreasLocal);
-        //localStorage.setItem('AllAreas', allAreasLocal);
     }
 
-    const findVisibleAreas = (shownAreas, allAreasLocal, entrancesLocal, settingsParam = false) => {
-        let settingsLocal;
-        if (settingsParam) {
+    const findVisibleAreas = (shownAreas: Areas, allAreasLocal: AllAreas, entrancesLocal: AllEntrances, settingsParam?: SelectedSettings): void => {
+        let settingsLocal: SelectedSettings;
+        if (settingsParam !== undefined) {
             settingsLocal = settingsParam;
         } else {
-            settingsLocal = settings;
+            settingsLocal = cloneDeep(settings);
         }
-        let alwaysOneWay = ["spawn","warpsong","owldrop","extra","overworldoneway"];
-        let decoupled = settings["Decoupled Entrances"] === "On";
-        let overworldOneWays = settings["Shuffle Valley/Lake"] === "On";
-        Object.filterAreas = (entrances, predicate) =>
+        let alwaysOneWay: string[] = ["spawn","warpsong","owldrop","extra","overworldoneway"];
+        let decoupled: boolean = settingsLocal["Decoupled Entrances"] === "On";
+        let overworldOneWays: boolean = settingsLocal["Shuffle Valley/Lake"] === "On";
+        let filterAreas = (entrances: {[entranceName: string]: Entrance}, predicate: (eLink: string, aLink: string, isReverse: boolean, isOneWay: boolean, shuffled: boolean, lType: string, e: string, oneWayArea: string, connector: string | string[]) => boolean) =>
             Object.keys(entrances)
                 .filter( key => predicate(entrances[key].eLink, entrances[key].aLink, entrances[key].isReverse, entrances[key].oneWay, entrances[key].shuffled, entrances[key].type, key, entrances[key].oneWayArea, entrances[key].connector) );
         Object.keys(shownAreas).forEach(targetArea => {
-            let linkedTargetEntrances = (Object.filterAreas(shownAreas[targetArea].entrances, (eLink, aLink, isReverse, isOneWay, shuffled, lType, e, oneWayArea, connector) => (
+            let linkedTargetEntrances = (filterAreas(shownAreas[targetArea].entrances, (eLink, aLink, isReverse, isOneWay, shuffled, lType, e, oneWayArea, connector) => (
                 /*(isOneWay && aLink !== "" && (lType !== "overworld" && lType !== "owldrop")) ||*/
                 (eLink !== "" && oneWayArea !== targetArea && (((isReverse === true) && shuffled === true) || lType === "overworld" || lType === "warpsong" || lType === "owldrop" || lType === "extra" || lType === "overworldoneway"))) ));
-            if (linkedTargetEntrances.length === 0 && !(entrancesLocal["oneWayAreas"].includes(targetArea))) {
+            if (linkedTargetEntrances.length === 0 && !(entrancesLocal.oneWayAreas.includes(targetArea))) {
                 shownAreas[targetArea].show = false;
-                allAreasLocal[targetArea].show = false;
+                allAreasLocal.areas[targetArea].show = false;
             } else {
                 shownAreas[targetArea].show = true;
-                allAreasLocal[targetArea].show = true;
+                allAreasLocal.areas[targetArea].show = true;
             }
         });
 
         alwaysOneWay.forEach(oneType => {
-            Object.keys(entrancesLocal[oneType]).forEach(aOneWay => {
-                entrancesLocal[oneType][aOneWay].forEach(eOneWay => {
-                    if (allAreasLocal.entrances[eOneWay].aLink !== "" && allAreasLocal[allAreasLocal.entrances[eOneWay].oneWayArea].show === true) {
+            Object.keys(entrancesLocal.areaEntranceTypes[oneType]).forEach(aOneWay => {
+                entrancesLocal.areaEntranceTypes[oneType][aOneWay].forEach(eOneWay => {
+                    if (allAreasLocal.entrances[eOneWay].aLink !== "" && allAreasLocal.areas[allAreasLocal.entrances[eOneWay].oneWayArea].show === true) {
                         let eLinked = allAreasLocal.entrances[eOneWay].aLink;
                         let altLinked = true;
                         // switch to ToT entrance for Prelude
                         if (allAreasLocal.entrances[eLinked].oneWay === true && allAreasLocal.entrances[eLinked].connector !== "") {
-                            if (allAreasLocal.entrances[allAreasLocal.entrances[eLinked].connector].aLink !== "") {
-                                eLinked = allAreasLocal.entrances[allAreasLocal.entrances[eLinked].connector].aLink;
+                            let totConnector = allAreasLocal.entrances[eLinked].connector;
+                            if (!(Array.isArray(totConnector)) && allAreasLocal.entrances[totConnector].aLink !== "") {
+                                eLinked = allAreasLocal.entrances[totConnector].aLink;
                             } else { altLinked = false }
                         }
                         // use interior exit for area if interior is linked
@@ -929,11 +1086,11 @@ const Tracker = (props) => {
                         if (altLinked && (allAreasLocal.entrances[eLinked].isReverse === true || allAreasLocal.entrances[eLinked].type === "overworld" ||
                         (allAreasLocal.entrances[eLinked].oneWay === true && (allAreasLocal.entrances[eLinked].oneWayArea !== "" || allAreasLocal.entrances[eLinked].type === "extra")))) {
                             shownAreas[allAreasLocal.entrances[eLinked].area].show = true;
-                            allAreasLocal[allAreasLocal.entrances[eLinked].area].show = true;
+                            allAreasLocal.areas[allAreasLocal.entrances[eLinked].area].show = true;
                             // Hard code Gerudo Valley to Lake with decoupled off, necessary for Lake Hylia owl warp to chain off valley visibility
                             if (allAreasLocal.entrances[eLinked].area === 'Gerudo Valley' && !(decoupled || overworldOneWays)) {
                                 shownAreas['Lake Hylia'].show = true;
-                                allAreasLocal['Lake Hylia'].show = true;
+                                allAreasLocal.areas['Lake Hylia'].show = true;
                             }
                         }
                     }
@@ -941,19 +1098,20 @@ const Tracker = (props) => {
             });
         });
         // Another pass for connectors that link to or from unshuffled entrances
-        let connectorOverride = [];
+        let connectorOverride: string[] = [];
         Object.keys(allAreasLocal.connectors).forEach(connector => {
-            let connectorList;
-            if (Array.isArray(allAreasLocal.entrances[connector].connector)) {
-                connectorList = allAreasLocal.entrances[connector].connector;
+            let connectorList: string[];
+            let connectorTypeCheck = allAreasLocal.entrances[connector].connector;
+            if (Array.isArray(connectorTypeCheck)) {
+                connectorList = connectorTypeCheck;
             } else {
-                connectorList = [allAreasLocal.entrances[connector].connector];
+                connectorList = [connectorTypeCheck];
             }
             connectorList.forEach(exit => {
                 if (allAreasLocal.entrances[connector].eLink !== '' && allAreasLocal.entrances[exit].aLink !== '' &&
-                (((allAreasLocal.entrances[connector].shuffled || allAreasLocal.entrances[exit].shuffled) && (!decoupled || allAreasLocal.entrances[allAreasLocal.entrances[exit].aLink].isReverse)) || allAreasLocal[allAreasLocal.entrances[connector].area].show)) {
+                (((allAreasLocal.entrances[connector].shuffled || allAreasLocal.entrances[exit].shuffled) && (!decoupled || allAreasLocal.entrances[allAreasLocal.entrances[exit].aLink].isReverse)) || allAreasLocal.areas[allAreasLocal.entrances[connector].area].show)) {
                     shownAreas[allAreasLocal.entrances[allAreasLocal.entrances[exit].aLink].area].show = true;
-                    allAreasLocal[allAreasLocal.entrances[allAreasLocal.entrances[exit].aLink].area].show = true;
+                    allAreasLocal.areas[allAreasLocal.entrances[allAreasLocal.entrances[exit].aLink].area].show = true;
                     connectorOverride.push(allAreasLocal.entrances[allAreasLocal.entrances[exit].aLink].area);
                 }
             })
@@ -962,7 +1120,7 @@ const Tracker = (props) => {
         // Hard code Gerudo Valley to Lake with decoupled off again, in case one-way entrance does not lead to Valley
         if (shownAreas['Gerudo Valley'].show === true && !(decoupled || overworldOneWays)) {
             shownAreas['Lake Hylia'].show = true;
-            allAreasLocal['Lake Hylia'].show = true;
+            allAreasLocal.areas['Lake Hylia'].show = true;
         }
 
         // Hard code LW Bridge and LW visibility if one or the other is visible
@@ -970,63 +1128,64 @@ const Tracker = (props) => {
         // causing possible naming confusion. This is important if/when logic is added
         if (shownAreas['Lost Woods'].show === true) {
             shownAreas['Lost Woods Bridge'].show = true;
-            allAreasLocal['Lost Woods Bridge'].show = true;
+            allAreasLocal.areas['Lost Woods Bridge'].show = true;
         } else if (shownAreas['Lost Woods Bridge'].show === true) {
             shownAreas['Lost Woods'].show = true;
-            allAreasLocal['Lost Woods'].show = true;
+            allAreasLocal.areas['Lost Woods'].show = true;
         }
 
         // Hard code Colossus from Spirit Temple so that we don't have to add dummy
         // unshuffled entrances to the hands
         if ((allAreasLocal.entrances['Desert Colossus -> Spirit Temple Lobby'].eLink !== '') ||
-            (allAreasLocal.entrances['Twinrova -> Spirit Temple'].eLink !== '' && settings["Shuffle Bosses"] !== "Off")) {
+            (allAreasLocal.entrances['Twinrova -> Spirit Temple'].eLink !== '' && settingsLocal["Shuffle Bosses"] !== "Off")) {
             shownAreas['Desert Colossus'].show = true;
-            allAreasLocal['Desert Colossus'].show = true;
+            allAreasLocal.areas['Desert Colossus'].show = true;
         }
 
         // Filter areas with no visible entrances or locations
-        Object.hideAreas = (entrances, predicate) =>
+        const hideAreas = (entrances: {[entranceName: string]: Entrance}, predicate: (shuffled: boolean, eType: string) => boolean) =>
             Object.keys(entrances)
                 .filter( key => predicate(entrances[key].shuffled, entrances[key].type) );
-        Object.hideAreaLocations = (locations, predicate) =>
+        const hideAreaLocations = (locations: {[locationName: string]: Location}, predicate: (visible: boolean) => boolean) =>
             Object.keys(locations)
                 .filter( key => predicate(locations[key].visible) );
-        if (settings["Show Unshuffled Entrances"] === "No") {
+        if (settingsLocal["Show Unshuffled Entrances"] === "No") {
             Object.keys(shownAreas).filter((a) => (shownAreas[a].show)).forEach(targetArea => {
-                let shownEntrances = (Object.hideAreas(shownAreas[targetArea].entrances, (shuffled, type) => ( (shuffled || type === 'spawn') && type !== 'extra' )));
-                let shownLocations = (Object.hideAreaLocations(shownAreas[targetArea].entrances, (shuffled, type) => ( (shuffled || type === 'spawn') && type !== 'extra' )));
+                let shownEntrances = (hideAreas(shownAreas[targetArea].entrances, (shuffled, type) => ( (shuffled || type === 'spawn') && type !== 'extra' )));
+                let shownLocations = []; //(hideAreaLocations(shownAreas[targetArea].locations, (visible) => visible ));
                 // Special case for unshuffled spawn points with shuffled interiors all
                 // due to the connector implementation
-                if (((shownEntrances.length === 0 && ((settings["Show Locations"] === "Yes" && shownLocations.length !== 0) || settings["Show Locations"] !== "Yes")) ||
-                (targetArea === 'Spawn Points' && settings["Shuffle Spawn Points"] === "Off" && !settings["Shuffle Interiors"].includes("Special"))) &&
+                if (((shownEntrances.length === 0 && ((settingsLocal["Show Locations"] === "Yes" && shownLocations.length !== 0) || settingsLocal["Show Locations"] !== "Yes")) ||
+                (targetArea === 'Spawn Points' && settingsLocal["Shuffle Spawn Points"] === "Off" && (Array.isArray(settingsLocal["Shuffle Interiors"]) && !settingsLocal["Shuffle Interiors"].includes("Special")))) &&
                 !(connectorOverride.includes(targetArea))) {
                     shownAreas[targetArea].show = false;
-                    allAreasLocal[targetArea].show = false;
+                    allAreasLocal.areas[targetArea].show = false;
                 }
             });
         }
     }
 
-    const findVisibleLocations = (settingsLocal, allAreasLocal) => {
-        let andVisible;
-        let andCount;
-        let orVisible;
-        let orCount;
-        let interiorsOnly;
-        let visibleRules;
+    const findVisibleLocations = (settingsLocal: SelectedSettings, allAreasLocal: AllAreas): void => {
+        let andVisible: boolean;
+        let andCount: number;
+        let orVisible: boolean;
+        let orCount: number;
+        let interiorsOnly: boolean;
+        let visibleRules: boolean;
         // Location visibility
         Object.keys(allAreasLocal.locations).forEach((location) => {
             if (settingsLocal["Show Locations"] === "Yes" || settingsLocal["Show Locations"] === "Interiors Only") {
                 interiorsOnly = (settingsLocal["Show Locations"] === "Interiors Only");
-                if (typeof allAreasLocal.locations[location].settings === "boolean") {
-                    allAreasLocal.locations[location].visible = allAreasLocal.locations[location].settings;
-                    visibleRules = allAreasLocal.locations[location].settings;
-                } else if (allAreasLocal.locations[location].settings.length > 0) {
+                let locationRules = allAreasLocal.locations[location].settings;
+                if (typeof locationRules === "boolean") {
+                    allAreasLocal.locations[location].visible = locationRules;
+                    visibleRules = locationRules;
+                } else if (locationRules.length > 0) {
                     andVisible = true;
                     orVisible = false;
                     andCount = 0;
                     orCount = 0;
-                    allAreasLocal.locations[location].settings.forEach(s => {
+                    locationRules.forEach(s => {
                         if (s.required === true) { andCount++; } else { orCount++; }
                         if (settingsLocal[s.setting] === s.value && s.required === true) { andVisible = true && andVisible;  }
                         if (settingsLocal[s.setting] !== s.value && s.required === true) { andVisible = false; }
@@ -1078,10 +1237,7 @@ const Tracker = (props) => {
             if (allAreasLocal.entrances[entrance].tag !== "") {
                 if (allAreasLocal.entrances[entrance].tagRep && !(allAreasLocal.entrances[entrance].enableTag)) {
                     allAreasLocal.entrances[entrance].tagRep = false;
-                    Object.filterTags = (entrances, predicate) =>
-                        Object.keys(entrances)
-                            .filter( key => predicate(entrances[key].tag, entrances[key].tagRep, entrances[key].enableTag, entrances[key].eLink) );
-                    let tagEntrances = (Object.filterTags(allAreasLocal.entrances, (eTag, eTagRep, eEnableTag, eLink) => (eTag === allAreasLocal.entrances[entrance].tag && eTagRep === false && eEnableTag && eLink === "")));
+                    let tagEntrances = (filterTags(allAreasLocal.entrances, (eTag, eTagRep, eEnableTag, eLink) => (eTag === allAreasLocal.entrances[entrance].tag && eTagRep === false && eEnableTag && eLink === "")));
                     if (tagEntrances.length !== 0) {
                         allAreasLocal.entrances[tagEntrances[0]].tagRep = true;
                     }
@@ -1090,7 +1246,10 @@ const Tracker = (props) => {
         });
     }
 
-    const linkEntrance = (dataLinkFrom, dataLinkTo) => {
+    const filterTags = (entrances: {[entranceName: string]: Entrance}, predicate: (eTag: string, eTagRep: boolean, enableTag: boolean, eLink: string) => boolean) =>
+        Object.keys(entrances).filter( key => predicate(entrances[key].tag, entrances[key].tagRep, entrances[key].enableTag, entrances[key].eLink) );
+
+    const linkEntrance = (dataLinkFrom: string, dataLinkTo: string): void => {
         let originator = dataLinkFrom;
         let eCategory = dataLinkTo;
         let alwaysOneWay = ["spawn","warpsong","owldrop","extra","overworldoneway"];
@@ -1157,11 +1316,8 @@ const Tracker = (props) => {
             shownAreas[targetArea].entrances[eCategory].userOneWayELink = originator;
         }
 
-        Object.filterTags = (entrances, predicate) =>
-            Object.keys(entrances)
-                .filter( key => predicate(entrances[key].tag, entrances[key].tagRep, entrances[key].enableTag, entrances[key].eLink) );
         if (areasLocal.entrances[eCategory].tagRep) {
-            let tagEntrances = (Object.filterTags(areasLocal.entrances, (eTag, eTagRep, eEnableTag, eLink) => (eTag === areasLocal.entrances[eCategory].tag && eTagRep === false && eEnableTag && eLink === "")));
+            let tagEntrances = (filterTags(areasLocal.entrances, (eTag, eTagRep, eEnableTag, eLink) => (eTag === areasLocal.entrances[eCategory].tag && eTagRep === false && eEnableTag && eLink === "")));
             if (tagEntrances.length !== 0) {
                 areasLocal.entrances[tagEntrances[0]].tagRep = true;
                 areasLocal.entrances[eCategory].tagRep = false;
@@ -1177,11 +1333,10 @@ const Tracker = (props) => {
         setAreas(shownAreas);
         setEntrances(entrancePools);
         setScrollY(scrollYLocal);
-        //localStorage.setItem('AllAreas', areasLocal);
         handleEntranceMenuClose(false);
     }
 
-    const unLinkEntrance = (entrance, scrollRef) => {
+    const unLinkEntrance = (entrance: string, scrollRef: string): void => {
         let originator = entrance;
         console.log(originator,"[Disconnected]");
         let areasLocal = cloneDeep(allAreas);
@@ -1198,9 +1353,6 @@ const Tracker = (props) => {
         if (areasLocal.entrances[subArea].oneWay === true && areasLocal.entrances[subArea].oneWayArea !== "") {
             targetArea = areasLocal.entrances[subArea].oneWayArea;
         }
-        Object.filterAreas = (entrances, predicate) =>
-            Object.keys(entrances)
-                .filter( key => predicate(entrances[key].aLink, entrances[key].shuffled, entrances[key].type) );
         areasLocal.entrances[originator].aLink = "";
         shownAreas[area].entrances[originator].aLink = "";
         areasLocal.entrances[originator].userALink = "";
@@ -1247,12 +1399,9 @@ const Tracker = (props) => {
                 shownAreas[revTargetArea].entrances[revTargetE].userELink = "";
             }
         }
-        
-        Object.filterTags = (entrances, predicate) =>
-            Object.keys(entrances)
-                .filter( key => predicate(entrances[key].tag, entrances[key].tagRep, entrances[key].eLink) );
+
         if (areasLocal.entrances[subArea].tag !== "") {
-            let tagEntrances = (Object.filterTags(areasLocal.entrances, (eTag, eTagRep, eLink) => (eTag === areasLocal.entrances[subArea].tag && eTagRep === true && eLink === "")));
+            let tagEntrances = (filterTags(areasLocal.entrances, (eTag, eTagRep, eEnableTag, eLink) => (eTag === areasLocal.entrances[subArea].tag && eTagRep === true && eLink === "")));
             if (tagEntrances.length === 0) {
                 areasLocal.entrances[subArea].tagRep = true;
             }
@@ -1270,11 +1419,9 @@ const Tracker = (props) => {
         setEntrances(entrancePools);
         setScrollY(scrollYLocal);
         setEntranceRef(scrollRef);
-        //localStorage.setItem('AllAreas', areasLocal);
-        //localStorage.setItem('AllEntrances', entrances);
     }
 
-    const toggleWalletTiers = (location) => {
+    const toggleWalletTiers = (location: string): void => {
         let originator = location;
         console.log(originator,"[wallet tier change]");
         let areasLocal = cloneDeep(areas);
@@ -1289,18 +1436,21 @@ const Tracker = (props) => {
             areasLocal[allAreasLocal.locations[originator].area].locations[originator].walletTier = tier;
         }
         if (allAreasLocal.locations[originator].lKey !== "") {
-            allEntrancesLocal[allAreasLocal.locations[originator].lKey].locations[originator].walletTier = tier;
+            allEntrancesLocal.entrances[allAreasLocal.locations[originator].lKey].locations[originator].walletTier = tier;
         }
         setAllAreas(allAreasLocal);
         setAllEntrances(allEntrancesLocal);
         setAreas(areasLocal);
-        //localStorage.setItem('AllAreas', allAreas);
-        //localStorage.setItem('AllEntrances', allEntrances);
     }
 
-    const updateShopPrice = (location, price) => {
+    const updateShopPrice = (location: string, priceValue: string): void => {
         let originator = location;
-        if (price === "") { price = 0; }
+        let price: number;
+        if (priceValue === "") {
+            price = 0;
+        } else {
+            price = parseInt(priceValue);
+        }
         console.log(originator,"[costs]",price);
         let areasLocal = cloneDeep(areas);
         let allAreasLocal = cloneDeep(allAreas);
@@ -1310,16 +1460,14 @@ const Tracker = (props) => {
             areasLocal[allAreasLocal.locations[originator].area].locations[originator].price = price;
         }
         if (allAreasLocal.locations[originator].lKey !== "") {
-            allEntrancesLocal[allAreasLocal.locations[originator].lKey].locations[originator].price = price;
+            allEntrancesLocal.entrances[allAreasLocal.locations[originator].lKey].locations[originator].price = price;
         }
         setAllAreas(allAreasLocal);
         setAllEntrances(allEntrancesLocal);
         setAreas(areasLocal);
-        //localStorage.setItem('allAreas', allAreasLocal);
-        //localStorage.setItem('allEntrances', allEntrancesLocal);
     }
 
-    const checkLocation = (location) => {
+    const checkLocation = (location: string): void => {
         let originator = location;
         console.log(originator, "[Checked]");
         let areasLocal = cloneDeep(areas);
@@ -1330,17 +1478,15 @@ const Tracker = (props) => {
             areasLocal[allAreasLocal.locations[originator].area].locations[originator].check = "checked";
         }
         if (allAreasLocal.locations[originator].lKey !== "") {
-            allEntrancesLocal[allAreasLocal.locations[originator].lKey].locations[originator].check = "checked";
+            allEntrancesLocal.entrances[allAreasLocal.locations[originator].lKey].locations[originator].check = "checked";
         }
         setAllAreas(allAreasLocal);
         setAllEntrances(allEntrancesLocal);
         setAreas(areasLocal);
-        //localStorage.setItem('allAreas', allAreasLocal);
-        //localStorage.setItem('allEntrances', allEntrancesLocal);
         handleItemMenuClose();
     }
 
-    const unCheckLocation = (location) => {
+    const unCheckLocation = (location: string): void => {
         let originator = location;
         console.log(originator, "[Unchecked]");
         let areasLocal = cloneDeep(areas);
@@ -1351,20 +1497,19 @@ const Tracker = (props) => {
             areasLocal[allAreasLocal.locations[originator].area].locations[originator].check = "";
         }
         if (allAreasLocal.locations[originator].lKey !== "") {
-            allEntrancesLocal[allAreasLocal.locations[originator].lKey].locations[originator].check = "";
+            allEntrancesLocal.entrances[allAreasLocal.locations[originator].lKey].locations[originator].check = "";
         }
         setAllAreas(allAreasLocal);
         setAllEntrances(allEntrancesLocal);
         setAreas(areasLocal);
-        //localStorage.setItem('allAreas', allAreasLocal);
-        //localStorage.setItem('allEntrances', allEntrancesLocal);
     }
 
-    const findItem = (ootItem) => {
+    const findItem: MouseEventHandler<HTMLDivElement> = (ootItem): void => {
         let originator = ootItem.currentTarget.getAttribute('data-found-in');
         let foundItem = ootItem.currentTarget.getAttribute('data-found-item');
-        foundItem === "" ? console.log(originator,"[cleared]") :
-        console.log(originator,"[holds]",foundItem);
+        if (originator === null || foundItem === null) return;
+        foundItem === "" ?  console.log(originator,"[cleared]") :
+                            console.log(originator,"[holds]",foundItem);
         let areasLocal = cloneDeep(areas);
         let allAreasLocal = cloneDeep(allAreas);
         let allEntrancesLocal = cloneDeep(allEntrances);
@@ -1373,13 +1518,11 @@ const Tracker = (props) => {
             areasLocal[allAreasLocal.locations[originator].area].locations[originator].foundItem = foundItem;
         }
         if (allAreasLocal.locations[originator].lKey !== "") {
-            allEntrancesLocal[allAreasLocal.locations[originator].lKey].locations[originator].foundItem = foundItem;
+            allEntrancesLocal.entrances[allAreasLocal.locations[originator].lKey].locations[originator].foundItem = foundItem;
         }
         setAllAreas(allAreasLocal);
         setAllEntrances(allEntrancesLocal);
         setAreas(areasLocal);
-        //localStorage.setItem('allAreas', allAreasLocal);
-        //localStorage.setItem('allEntrances', allEntrancesLocal);
         handleItemMenuClose();
         handleShopItemMenuClose();
     }
@@ -1392,45 +1535,50 @@ const Tracker = (props) => {
         setAlertUpdate(false);
     }
 
-    const handleItemMenuOpen = (location, dataSource) => {
+    const handleItemMenuOpen = (location: HTMLDivElement, dataSource: string | null) => {
+        if (dataSource === null) return;
         setItemMenuOpen(location);
         setLocationToLink(dataSource);
     }
 
-    const handleShopItemMenuOpen = (location, dataSource) => {
+    const handleShopItemMenuOpen = (location: HTMLDivElement, dataSource: string | null) => {
+        if (dataSource === null) return;
         setShopItemMenuOpen(location);
         setLocationToLink(dataSource);
     }
 
     const handleItemMenuClose = () => {
         setItemMenuOpen(null);
-        setLocationToLink(null);
+        setLocationToLink('');
     }
 
     const handleShopItemMenuClose = () => {
         setShopItemMenuOpen(null);
-        setLocationToLink(null);
+        setLocationToLink('');
     }
 
-    const handleEntranceMenuOpen = (entrance, scrollRef) => {
+    const handleEntranceMenuOpen = (entrance: MouseEvent<HTMLDivElement>, scrollRef: string): void => {
         console.log(entrance.currentTarget.getAttribute('data-source'),'-> Open menu');
+        let dataSource = entrance.currentTarget.getAttribute('data-source');
+        let dataConnector = entrance.currentTarget.getAttribute('data-connector');
+        let dataEType = entrance.currentTarget.getAttribute('data-etype');
         setEntranceMenuOpen(entrance.currentTarget);
-        setEntranceToLink(entrance.currentTarget.getAttribute('data-source'));
-        setEntranceConnector(entrance.currentTarget.getAttribute('data-connector'));
-        setEntranceType(entrance.currentTarget.getAttribute('data-etype'));
+        setEntranceToLink(!!dataSource ? dataSource : '');
+        setEntranceConnector(!!dataConnector ? dataConnector : '');
+        setEntranceType(!!dataEType ? dataEType : '');
         setEntranceRef(scrollRef);
     }
 
     const handleEntranceMenuClose = (clearRef=true) => {
-        let eRef = (clearRef === true) ? null : entranceRef;
+        let eRef = (clearRef === true) ? '' : entranceRef;
         setEntranceMenuOpen(null);
-        setEntranceToLink(null);
-        setEntranceConnector(null);
+        setEntranceToLink('');
+        setEntranceConnector('');
         setEntranceType('');
         setEntranceRef(eRef);
     }
 
-    const buildEntranceURL = (reverseLink, useConnector=true) => {
+    const buildEntranceURL = (reverseLink: string, useConnector: boolean = true): string => {
         let href = '#';
         if ((allAreas.entrances[reverseLink].type === "overworld") || (allAreas.entrances[reverseLink].isReverse)) {
             href = '#' + allAreas.entrances[reverseLink].area;
@@ -1446,9 +1594,10 @@ const Tracker = (props) => {
         }
         if (['warpsong', 'spawn', 'owldrop', 'extra', 'overworldoneway'].includes(allAreas.entrances[reverseLink].type)) {
             if (useConnector) {
-                if (allAreas.entrances[reverseLink].connector !== "") {
-                    if (allAreas.entrances[allAreas.entrances[reverseLink].connector].aLink !== "") {
-                        href = '#' + allAreas.entrances[allAreas.entrances[allAreas.entrances[reverseLink].connector].aLink].area;
+                let connectorList = allAreas.entrances[reverseLink].connector;
+                if (!(Array.isArray(connectorList)) && connectorList !== "") {
+                    if (allAreas.entrances[connectorList].aLink !== "") {
+                        href = '#' + allAreas.entrances[allAreas.entrances[connectorList].aLink].area;
                     }
                 } else {
                     href = '#' + allAreas.entrances[reverseLink].area;
@@ -1467,7 +1616,7 @@ const Tracker = (props) => {
         return href;
     }
 
-    const handleDungeonTravel = (entrance, useConnector=true) => {
+    const handleDungeonTravel = (entrance: string, useConnector: boolean = true) => {
         let eType = allAreas.entrances[entrance].type;
         if (settings["View"] === "Overworld" && (eType === "dungeon" || eType === "dungeonGanon") && allAreas.entrances[entrance].isReverse === false) {
             changeSetting({"target": { "name": "View", "value": "Dungeons" }});
@@ -1481,7 +1630,7 @@ const Tracker = (props) => {
         }
     }
 
-    const isWarpAreaLinked = (entrance) => {
+    const isWarpAreaLinked = (entrance: string) => {
         let linked = false;
         if (allAreas.entrances[entrance].aLink !== '') {
             let href = buildEntranceURL(allAreas.entrances[entrance].aLink);
@@ -1492,7 +1641,7 @@ const Tracker = (props) => {
         return linked;
     }
 
-    const handleWarpMenu = (area) => {
+    const handleWarpMenu = (area: string) => {
         let eType;
         if (areas[area].dungeon !== true) {
             eType = 'overworld';
@@ -1526,28 +1675,17 @@ const Tracker = (props) => {
     // Revisit after conversion to functional components
     //const customTheme = themeDark ? dark : light;
     //const { classes } = this.props;
-    const customTheme = createTheme({
-        components: {
-            MuiSwitch: {
-                variants: [
-                    {
-                        props: { variant: 'dungeon' },
-                        style: {
-                            color: '#ffffcf',
-                            '& .Mui-checked': {
-                                color: '#cbc26d',
-                            },
-                            '& .Mui-checked + .MuiSwitch-track': {
-                                backgroundColor: '#cbc693',
-                            },                    
-                        },
-                    },
-                ],
-            },
-        },
-    });
-    const classes = {};
+    const customTheme = createTheme({});
     if (trackerInitialized) {
+        let mixedPoolsType = settings["Mixed Pools"];
+        let mixedPools: string[];
+        if (!Array.isArray(mixedPoolsType) && typeof mixedPoolsType === 'string') {
+            mixedPools = [mixedPoolsType];
+        } else if (typeof mixedPoolsType === 'boolean') {
+            mixedPools = [];
+        } else {
+            mixedPools = mixedPoolsType;
+        }
         return (
             <React.Fragment>
                 <ThemeProvider theme={customTheme}>
@@ -1566,7 +1704,7 @@ const Tracker = (props) => {
                                 </IconButton>
                                 <div className="title">
                                     <div>
-                                        <div className="titleText" variant="h4">{settings["View"]}</div>
+                                        <div className="titleText">{settings["View"]}</div>
                                     </div>
                                 </div>
                                 <div className="checkCount">
@@ -1595,7 +1733,6 @@ const Tracker = (props) => {
                                     onClick={() => {
                                         let darkMode = !themeDark;
                                         setThemeDark(darkMode);
-                                        //localStorage.setItem('DarkMode',darkMode);
                                     }}
                                     className="menuButton"
                                 >
@@ -1663,15 +1800,14 @@ const Tracker = (props) => {
                                                 title={setting}
                                                 settings={enabled_settings[setting]}
                                                 userSettings={settings}
-                                                onChange={(s) => changeSetting(s)}
-                                                classes={classes}
+                                                onChange={(s: ChangeEvent<HTMLSelectElement> | SelectChangeEvent<string[]>) => changeSetting(s)}
                                                 key={si}
                                             />
                                         )
                                     })
                                 }
                                 <ListItem>
-                                    <Link className="devLink" href="https://github.com/mracsys/tootr"><Typography>Github</Typography></Link>
+                                    <Link className="devLink" href="https://github.com/mracsys/tootr"><GitHubIcon /><Typography>Github</Typography></Link>
                                 </ListItem>
                             </List>
                         </Drawer>
@@ -1689,18 +1825,15 @@ const Tracker = (props) => {
                             decoupled={settings["Decoupled Entrances"] === "On"}
                             isReverse={entranceToLink ? allAreas.entrances[entranceToLink].isReverse : false}
                             sourceEntrance={entranceToLink}
-                            classes={classes}
                             id="globalEntranceMenu"
                         />
                         <ItemMenu
-                            classes={classes}
                             handleClose={handleItemMenuClose}
                             handleFind={findItem}
                             anchorLocation={itemMenuOpen}
                             sourceLocation={locationToLink}
                         />
                         <ShopItemMenu
-                            classes={classes}
                             handleClose={handleShopItemMenuClose}
                             handleFind={findItem}
                             anchorLocation={shopItemMenuOpen}
@@ -1715,7 +1848,6 @@ const Tracker = (props) => {
                                 className="warpMenuVisible"
                             >
                                 <OotIcon
-                                    classes={classes}
                                     itemName="Kokiri Sword"
                                     className={isWarpAreaLinked('Child Spawn -> KF Links House') ?
                                         "locationMenuIcon" :
@@ -1725,7 +1857,6 @@ const Tracker = (props) => {
                                         : () => handleDungeonTravel('Child Spawn -> KF Links House', false)}
                                 />
                                 <OotIcon
-                                    classes={classes}
                                     itemName="Master Sword"
                                     className={isWarpAreaLinked('Adult Spawn -> Temple of Time') ?
                                         "locationMenuIcon" :
@@ -1736,7 +1867,6 @@ const Tracker = (props) => {
                                 />
                                 <div className="warpSongsBig">
                                     <OotIcon
-                                        classes={classes}
                                         itemName="Minuet of Forest"
                                         className={isWarpAreaLinked('Minuet of Forest Warp -> Sacred Forest Meadow') ?
                                             "locationMenuIcon" :
@@ -1746,7 +1876,6 @@ const Tracker = (props) => {
                                             : () => handleDungeonTravel('Minuet of Forest Warp -> Sacred Forest Meadow', false)}
                                     />
                                     <OotIcon
-                                        classes={classes}
                                         itemName="Bolero of Fire"
                                         className={isWarpAreaLinked('Bolero of Fire Warp -> DMC Central Local') ?
                                             "locationMenuIcon" :
@@ -1756,7 +1885,6 @@ const Tracker = (props) => {
                                             : () => handleDungeonTravel('Bolero of Fire Warp -> DMC Central Local', false)}
                                     />
                                     <OotIcon
-                                        classes={classes}
                                         itemName="Serenade of Water"
                                         className={isWarpAreaLinked('Serenade of Water Warp -> Lake Hylia') ?
                                             "locationMenuIcon" :
@@ -1766,7 +1894,6 @@ const Tracker = (props) => {
                                             : () => handleDungeonTravel('Serenade of Water Warp -> Lake Hylia', false)}
                                     />
                                     <OotIcon
-                                        classes={classes}
                                         itemName="Requiem of Spirit"
                                         className={isWarpAreaLinked('Requiem of Spirit Warp -> Desert Colossus') ?
                                             "locationMenuIcon" :
@@ -1776,7 +1903,6 @@ const Tracker = (props) => {
                                             : () => handleDungeonTravel('Requiem of Spirit Warp -> Desert Colossus', false)}
                                     />
                                     <OotIcon
-                                        classes={classes}
                                         itemName="Nocturne of Shadow"
                                         className={isWarpAreaLinked('Nocturne of Shadow Warp -> Graveyard Warp Pad Region') ?
                                             "locationMenuIcon" :
@@ -1786,7 +1912,6 @@ const Tracker = (props) => {
                                             : () => handleDungeonTravel('Nocturne of Shadow Warp -> Graveyard Warp Pad Region', false)}
                                     />
                                     <OotIcon
-                                        classes={classes}
                                         itemName="Prelude of Light"
                                         className={isWarpAreaLinked('Prelude of Light Warp -> Temple of Time') ?
                                             "locationMenuIcon" :
@@ -1869,7 +1994,7 @@ const Tracker = (props) => {
                                                 "warpMenuAreaHidden"}
                                             onClick={areas[area].show ?
                                                 () => handleWarpMenu(area)
-                                                : null}
+                                                : undefined}
                                         >
                                             {area}
                                         </span>
@@ -1908,9 +2033,8 @@ const Tracker = (props) => {
                                             entrances={areas[area].entrances}
                                             entrancePools={entrances}
                                             oneWayEntrancePools={oneWayEntrances}
-                                            mixedPools={settings["Mixed Pools"]}
+                                            mixedPools={mixedPools}
                                             decoupled={settings["Decoupled Entrances"] === "On"}
-                                            overworld={settings["Shuffle Overworld"] === "On"}
                                             allEntrances={allEntrances}
                                             allAreas={allAreas}
                                             locations={areas[area].locations}
@@ -1918,38 +2042,42 @@ const Tracker = (props) => {
                                             handleUnLink={unLinkEntrance}
                                             handleCheck={checkLocation}
                                             handleUnCheck={unCheckLocation}
-                                            handleItemMenuOpen={handleItemMenuOpen}
-                                            handleItemMenuClose={handleItemMenuClose}
                                             handleContextMenu={contextMenuHandler}
                                             handleShopContextMenu={shopContextMenuHandler}
                                             handleEntranceMenuOpen={handleEntranceMenuOpen}
-                                            handleFind={findItem}
                                             toggleWalletTiers={toggleWalletTiers}
                                             updateShopPrice={updateShopPrice}
                                             showShops={settings["Show Locations"] !== "No"}
                                             showShopInput={settings["Shop Price Tracking"] === "Both" || settings["Shop Price Tracking"] === "Price Only"}
                                             showShopRupee={settings["Shop Price Tracking"] === "Both" || settings["Shop Price Tracking"] === "Wallet Tier"}
                                             handleDungeonTravel={handleDungeonTravel}
-                                            classes={classes}
                                             dungeon={false}
                                             showUnshuffledEntrances={settings["Show Unshuffled Entrances"] === "Yes"}
                                             collapseSwitch={toggleCollapse}
                                             reverseCollapseSwitch={reverseCollapseHandler}
+                                            mqSwitch={toggleMQ}
+                                            isMQ={false}
                                             setRef={setRef}
                                             key={ia}
                                         />
                                     )
                                 }) :
                                 Object.keys(areas).sort().filter((a) => (areas[a].dungeon)).map((area, ia) => {
+                                    let isMQType = settings[area+" MQ"];
+                                    let isMQ: boolean;
+                                    if (typeof isMQType !== 'boolean') {
+                                        isMQ = false;
+                                    } else {
+                                        isMQ = isMQType;
+                                    }
                                     return (
                                         <GameArea
                                             title={area}
                                             entrances={areas[area].entrances}
                                             entrancePools={entrances}
                                             oneWayEntrancePools={oneWayEntrances}
-                                            mixedPools={settings["Mixed Pools"]}
+                                            mixedPools={mixedPools}
                                             decoupled={settings["Decoupled Entrances"] === "On"}
-                                            overworld={settings["Shuffle Overworld"] === "On"}
                                             allEntrances={allEntrances}
                                             allAreas={allAreas}
                                             locations={areas[area].locations}
@@ -1957,25 +2085,21 @@ const Tracker = (props) => {
                                             handleUnLink={unLinkEntrance}
                                             handleCheck={checkLocation}
                                             handleUnCheck={unCheckLocation}
-                                            handleItemMenuOpen={handleItemMenuOpen}
-                                            handleItemMenuClose={handleItemMenuClose}
                                             handleContextMenu={contextMenuHandler}
                                             handleShopContextMenu={shopContextMenuHandler}
                                             handleEntranceMenuOpen={handleEntranceMenuOpen}
-                                            handleFind={findItem}
                                             toggleWalletTiers={toggleWalletTiers}
                                             updateShopPrice={updateShopPrice}
                                             showShops={settings["Show Locations"] !== "No"}
                                             showShopInput={settings["Shop Price Tracking"] === "Both" || settings["Shop Price Tracking"] === "Price Only"}
                                             showShopRupee={settings["Shop Price Tracking"] === "Both" || settings["Shop Price Tracking"] === "Wallet Tier"}
                                             handleDungeonTravel={handleDungeonTravel}
-                                            classes={classes}
                                             dungeon={true}
                                             showUnshuffledEntrances={settings["Show Unshuffled Entrances"] === "Yes"}
                                             collapseSwitch={toggleCollapse}
                                             reverseCollapseSwitch={reverseCollapseHandler}
                                             mqSwitch={toggleMQ}
-                                            isMQ={settings[area+" MQ"]}
+                                            isMQ={isMQ}
                                             setRef={setRef}
                                             key={ia}
                                         />

@@ -227,6 +227,12 @@ body.dark {
     line-height: 1.5;
     letter-spacing: 0.00938em;
 }
+.dungeonMQSwitch .Mui-checked {
+    color: #cbc26d !important;
+}
+.dungeonMQSwitch .Mui-checked + .MuiSwitch-track {
+    background-color: #cbc693 !important;
+}
 .areaButton {
     margin-left: var(--theme-spacing) !important;
 }
@@ -581,6 +587,12 @@ body.dark {
 }
 .MuiLink-root.devLink {
     padding: var(--theme-spacing) 0 !important;
+    color:rgba(0, 0, 0, 0.87) !important;
+    display: flex;
+    align-items: center;
+}
+.MuiLink-root.devLink svg {
+    margin: var(--theme-spacing);
 }
 .entranceAnchor {
     text-decoration: none;
@@ -612,6 +624,7 @@ body.dark {
 }
 .falseLinkAnchor {
     text-decoration: none;
+    color:rgba(0, 0, 0, 0.87);
 }
 .falseLinkAnchor:hover {
     text-decoration: none;

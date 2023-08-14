@@ -3,21 +3,54 @@ import Menu from '@mui/material/Menu';
 //import useAutocomplete from '@mui/material/useAutocomplete';
 import Autocomplete, { createFilterOptions } from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
+import type { EntrancePool, AllAreas } from './Tracker';
 
-const EntranceMenu = (props) => {
-    //shouldComponentUpdate(nextProps) {
-    //    return true;
-    //}
+interface AutoOption {
+    areaGroup: string,
+    eName: string,
+    dataLinkTo: string,
+    dataLinkFrom: string,
+    handleLink: (dataLinkFrom: string, dataLinkTo: string) => void,
+}
 
-    let entranceList = props.allAreas.entrances;
-    let eAutoOptions = [];
+interface EntranceMenuProps {
+    anchorLocation?: Element | null,
+    sourceEntrance: string,
+    entrancePool: EntrancePool,
+    allAreas: AllAreas,
+    connector: boolean,
+    title: string,
+    oneWay: boolean,
+    decoupled: boolean,
+    isReverse: boolean,
+    id: string,
+    handleClose: () => void,
+    handleLink: (dataLinkFrom: string, dataLinkTo: string) => void,
+}
+
+const EntranceMenu = ({
+    anchorLocation,
+    sourceEntrance,
+    entrancePool,
+    allAreas,
+    connector,
+    title,
+    oneWay,
+    decoupled,
+    isReverse,
+    id,
+    handleClose,
+    handleLink,
+}: EntranceMenuProps) => {
+    let entranceList = allAreas.entrances;
+    let eAutoOptions: AutoOption[] = [];
     let longestOption = "";
-    let handleLink = props.handleLink;
-    if (typeof props.entrancePool === "undefined") {
+    if (typeof entrancePool === "undefined") {
         return null;
     } else {
-        Object.keys(props.entrancePool).sort().map((areaCategory, l) => {
-            props.entrancePool[areaCategory].sort(function(a,b) {
+        Object.keys(entrancePool).sort().map((areaCategory, l) => {
+            let entrances: string[] = entrancePool[areaCategory];
+            entrances.sort(function(a,b) {
                 let aName = entranceList[a].tag === "" || entranceList[a].enableTag === false ?
                             entranceList[a].alias :
                             entranceList[a].tag;
@@ -26,17 +59,17 @@ const EntranceMenu = (props) => {
                             entranceList[b].tag;
                 return aName.localeCompare(bName);
             }).map((subArea, j) => {
-                if ((props.allAreas.entrances[subArea].tagRep || props.allAreas.entrances[subArea].tag === "" || props.allAreas.entrances[subArea].enableTag === false) &&
-                (!(props.oneWay) || (props.oneWay && props.allAreas.entrances[subArea].oneWayELink === "")) &&
-                !(((areaCategory === props.title && !(props.oneWay || props.isReverse)) || areaCategory === "Warp Songs" || props.entrancePool[areaCategory].length === 0) && props.connector === false)) {
-                    let optionLabel = (props.allAreas.entrances[subArea].tag === "" || props.allAreas.entrances[subArea].enableTag === false) ?
-                                    props.allAreas.entrances[subArea].alias :
-                                    props.allAreas.entrances[subArea].tag;
+                if ((allAreas.entrances[subArea].tagRep || allAreas.entrances[subArea].tag === "" || allAreas.entrances[subArea].enableTag === false) &&
+                (!(oneWay) || (oneWay && allAreas.entrances[subArea].oneWayELink === "")) &&
+                !(((areaCategory === title && !(oneWay || isReverse)) || areaCategory === "Warp Songs" || entrancePool[areaCategory].length === 0) && connector === false)) {
+                    let optionLabel = (allAreas.entrances[subArea].tag === "" || allAreas.entrances[subArea].enableTag === false) ?
+                                    allAreas.entrances[subArea].alias :
+                                    allAreas.entrances[subArea].tag;
                     eAutoOptions.push({
                         areaGroup: areaCategory,
                         eName: optionLabel,
                         dataLinkTo: subArea,
-                        dataLinkFrom: props.sourceEntrance,
+                        dataLinkFrom: sourceEntrance,
                         handleLink: handleLink,
                     });
                     if (optionLabel.length > longestOption.length) {
@@ -47,15 +80,15 @@ const EntranceMenu = (props) => {
         }); return null;});
 
         const filterOptions = createFilterOptions({
-            stringify: (option) => option.eName + " " + option.areaGroup,
+            stringify: (option: AutoOption) => option.eName + " " + option.areaGroup,
         });
 
         return (
             <Menu
-                id={props.id + "Element"}
-                anchorEl={props.anchorLocation}
-                open={Boolean(props.anchorLocation)}
-                onClose={props.handleClose}
+                id={id + "Element"}
+                anchorEl={anchorLocation}
+                open={Boolean(anchorLocation)}
+                onClose={handleClose}
                 PaperProps={{
                     style: {
                         border: '1px black solid',
@@ -77,7 +110,7 @@ const EntranceMenu = (props) => {
                 }}
             >
                 <Autocomplete
-                    id={props.id + "autocomplete"}
+                    id={id + "autocomplete"}
                     options={eAutoOptions}
                     groupBy={(option) => option.areaGroup}
                     getOptionLabel={(option) => option.eName}
@@ -85,11 +118,12 @@ const EntranceMenu = (props) => {
                     renderInput={(params) => 
                         <div>
                         <div className="entranceAutoWidthHack">{longestOption}</div>
-                        <TextField {...params} key={props.id + "autocomplete-input"} label="Search Entrances" variant="filled" />
+                        <TextField {...params} key={id + "autocomplete-input"} label="Search Entrances" variant="filled" />
                         </div>
                     }
-                    onChange={(event, newValue, reason) => {
-                        handleLink(newValue.dataLinkFrom, newValue.dataLinkTo);
+                    onChange={(event, newValue: AutoOption | null, reason) => {
+                        if (!!newValue)
+                            handleLink(newValue.dataLinkFrom, newValue.dataLinkTo);
                     }}
                     onKeyDown={(e) => e.stopPropagation()}
                     open={true}

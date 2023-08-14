@@ -31,5 +31,8 @@
   },
   "browser": {
     "fs": false
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.197"
   }
 }
