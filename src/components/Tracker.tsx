@@ -1,7 +1,4 @@
-'use client'
-
 import React, { useEffect, useState, useRef, useMemo, ChangeEvent, MouseEventHandler, MouseEvent } from 'react';
-//import ls from 'local-storage';
 import merge from 'lodash/merge';
 import mergeWith from 'lodash/mergeWith';
 import isArray from 'lodash/isArray';
@@ -16,8 +13,8 @@ import Toolbar from '@mui/material/Toolbar';
 import List from '@mui/material/List';
 import Button from '@mui/material/Button';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import Brightness7Icon from '@mui/icons-material/Brightness7';
-import Brightness3Icon from '@mui/icons-material/Brightness3';
+//import Brightness7Icon from '@mui/icons-material/Brightness7';
+//import Brightness3Icon from '@mui/icons-material/Brightness3';
 import ListItem from '@mui/material/ListItem';
 import PublicIcon from '@mui/icons-material/Public';
 import MeetingRoomIcon from '@mui/icons-material/MeetingRoom';
@@ -32,7 +29,6 @@ import { Drawer } from '@mui/material';
 import { Link } from '@mui/material';
 import Collapse from '@mui/material/Collapse';
 import { SelectChangeEvent } from '@mui/material/Select';
-import '/public/index.css';
 import CssBaseline from '@mui/material/CssBaseline';
 
 
@@ -102,19 +98,23 @@ export interface SettingCategory {
 export interface GameSettings {
     [settingCategory: string]: SettingCategory,
 }
+/*
 interface RandoVersionData {
     Settings: GameSettings,
     Locations: {[locationName: string]: string},
 }
+*/
 
 export type SettingSelectionTypes = string | string[] | boolean;
 export interface SelectedSettings {
     [settingName: string]: SettingSelectionTypes
 }
 
+/*
 interface SettingPreset {
     Settings: SelectedSettings,
 }
+*/
 
 export interface Entrance {
     area: string,
@@ -214,7 +214,7 @@ interface ScrollerRef {
 
 const trackerVersion = '1.0.0';
 
-const Tracker = (props: {}) => {
+const Tracker = (_props: {}) => {
     let [enabled_settings, setEnabledSettings] = useState<GameSettings>({});
     let [settings, setSettings] = useState<SelectedSettings>({});
     let [areas, setAreas] = useState<Areas>({});
@@ -337,7 +337,7 @@ const Tracker = (props: {}) => {
         }
 
         let ignore = false;
-
+        
         const getGraph = async () => {
             if (Object.keys(_fileCache.files).length === 0) {
                 let graphFileCache = await ExternalFileCacheFactory('ootr', '7.1.143', { local_url: '/ootr-local' });
@@ -350,8 +350,8 @@ const Tracker = (props: {}) => {
                 setGraphInitialized(true);
             }
         }
-        //getGraph();
-    
+        getGraph();
+        
         return () => { ignore = true; };    
     });
 
@@ -519,7 +519,7 @@ const Tracker = (props: {}) => {
         return erSettings;
     }
 
-    const loadAreas = (settingsLoad: SelectedSettings, allAreasLoad: AllAreas, allEntrancesLoad: AllEntrances, init: boolean = false): Areas => {
+    const loadAreas = (settingsLoad: SelectedSettings, allAreasLoad: AllAreas, _allEntrancesLoad: AllEntrances, init: boolean = false): Areas => {
         let areasLocal: Areas = {};
         let erSettings = getShuffledTypes(settingsLoad);
         let subArea: Entrance;
@@ -999,7 +999,6 @@ const Tracker = (props: {}) => {
     const toggleMQ = (dungeon: string): void => {
         let settingsLocal = cloneDeep(settings);
         let isMQ = !(settingsLocal[dungeon]);
-        let mqEvent = Event
         changeSetting({"target":{"name":dungeon,"value":isMQ}});
     }
 
@@ -1052,7 +1051,7 @@ const Tracker = (props: {}) => {
             Object.keys(entrances)
                 .filter( key => predicate(entrances[key].eLink, entrances[key].aLink, entrances[key].isReverse, entrances[key].oneWay, entrances[key].shuffled, entrances[key].type, key, entrances[key].oneWayArea, entrances[key].connector) );
         Object.keys(shownAreas).forEach(targetArea => {
-            let linkedTargetEntrances = (filterAreas(shownAreas[targetArea].entrances, (eLink, aLink, isReverse, isOneWay, shuffled, lType, e, oneWayArea, connector) => (
+            let linkedTargetEntrances = (filterAreas(shownAreas[targetArea].entrances, (eLink, _aLink, isReverse, _isOneWay, shuffled, lType, _e, oneWayArea, _connector) => (
                 /*(isOneWay && aLink !== "" && (lType !== "overworld" && lType !== "owldrop")) ||*/
                 (eLink !== "" && oneWayArea !== targetArea && (((isReverse === true) && shuffled === true) || lType === "overworld" || lType === "warpsong" || lType === "owldrop" || lType === "extra" || lType === "overworldoneway"))) ));
             if (linkedTargetEntrances.length === 0 && !(entrancesLocal.oneWayAreas.includes(targetArea))) {
@@ -1146,9 +1145,9 @@ const Tracker = (props: {}) => {
         const hideAreas = (entrances: {[entranceName: string]: Entrance}, predicate: (shuffled: boolean, eType: string) => boolean) =>
             Object.keys(entrances)
                 .filter( key => predicate(entrances[key].shuffled, entrances[key].type) );
-        const hideAreaLocations = (locations: {[locationName: string]: Location}, predicate: (visible: boolean) => boolean) =>
-            Object.keys(locations)
-                .filter( key => predicate(locations[key].visible) );
+        //const hideAreaLocations = (locations: {[locationName: string]: Location}, predicate: (visible: boolean) => boolean) =>
+        //    Object.keys(locations)
+        //        .filter( key => predicate(locations[key].visible) );
         if (settingsLocal["Show Unshuffled Entrances"] === "No") {
             Object.keys(shownAreas).filter((a) => (shownAreas[a].show)).forEach(targetArea => {
                 let shownEntrances = (hideAreas(shownAreas[targetArea].entrances, (shuffled, type) => ( (shuffled || type === 'spawn') && type !== 'extra' )));
@@ -1401,7 +1400,7 @@ const Tracker = (props: {}) => {
         }
 
         if (areasLocal.entrances[subArea].tag !== "") {
-            let tagEntrances = (filterTags(areasLocal.entrances, (eTag, eTagRep, eEnableTag, eLink) => (eTag === areasLocal.entrances[subArea].tag && eTagRep === true && eLink === "")));
+            let tagEntrances = (filterTags(areasLocal.entrances, (eTag, eTagRep, _eEnableTag, eLink) => (eTag === areasLocal.entrances[subArea].tag && eTagRep === true && eLink === "")));
             if (tagEntrances.length === 0) {
                 areasLocal.entrances[subArea].tagRep = true;
             }
@@ -1722,6 +1721,10 @@ const Tracker = (props: {}) => {
                                             return allAreas.locations[l].shuffled;
                                         }).length : 0
                                     }
+                                    /
+                                    {
+                                        graphInitialized ? graph.get_locations_for_world(graph.worlds[0]).length : 0
+                                    }
                                 </div>
                                 <button
                                     onClick={() => setAlertReset(true)}
@@ -1822,7 +1825,6 @@ const Tracker = (props: {}) => {
                             connector={entranceConnector === 'true'}
                             title={entranceToLink ? allAreas.entrances[entranceToLink].area : ''}
                             oneWay={entranceToLink ? allAreas.entrances[entranceToLink].oneWay : false}
-                            decoupled={settings["Decoupled Entrances"] === "On"}
                             isReverse={entranceToLink ? allAreas.entrances[entranceToLink].isReverse : false}
                             sourceEntrance={entranceToLink}
                             id="globalEntranceMenu"

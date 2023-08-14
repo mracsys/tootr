@@ -1,4 +1,3 @@
-import React from 'react';
 import { Menu, Grid } from '@mui/material';
 
 import OotIcon from './OotIcon';

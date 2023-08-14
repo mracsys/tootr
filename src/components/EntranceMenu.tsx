@@ -1,6 +1,4 @@
-import React from 'react';
 import Menu from '@mui/material/Menu';
-//import useAutocomplete from '@mui/material/useAutocomplete';
 import Autocomplete, { createFilterOptions } from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
 import type { EntrancePool, AllAreas } from './Tracker';
@@ -21,7 +19,6 @@ interface EntranceMenuProps {
     connector: boolean,
     title: string,
     oneWay: boolean,
-    decoupled: boolean,
     isReverse: boolean,
     id: string,
     handleClose: () => void,
@@ -36,7 +33,6 @@ const EntranceMenu = ({
     connector,
     title,
     oneWay,
-    decoupled,
     isReverse,
     id,
     handleClose,
@@ -48,7 +44,7 @@ const EntranceMenu = ({
     if (typeof entrancePool === "undefined") {
         return null;
     } else {
-        Object.keys(entrancePool).sort().map((areaCategory, l) => {
+        Object.keys(entrancePool).sort().map((areaCategory) => {
             let entrances: string[] = entrancePool[areaCategory];
             entrances.sort(function(a,b) {
                 let aName = entranceList[a].tag === "" || entranceList[a].enableTag === false ?
@@ -58,7 +54,7 @@ const EntranceMenu = ({
                             entranceList[b].alias :
                             entranceList[b].tag;
                 return aName.localeCompare(bName);
-            }).map((subArea, j) => {
+            }).map((subArea) => {
                 if ((allAreas.entrances[subArea].tagRep || allAreas.entrances[subArea].tag === "" || allAreas.entrances[subArea].enableTag === false) &&
                 (!(oneWay) || (oneWay && allAreas.entrances[subArea].oneWayELink === "")) &&
                 !(((areaCategory === title && !(oneWay || isReverse)) || areaCategory === "Warp Songs" || entrancePool[areaCategory].length === 0) && connector === false)) {
@@ -121,7 +117,7 @@ const EntranceMenu = ({
                         <TextField {...params} key={id + "autocomplete-input"} label="Search Entrances" variant="filled" />
                         </div>
                     }
-                    onChange={(event, newValue: AutoOption | null, reason) => {
+                    onChange={(_event, newValue: AutoOption | null, _reason) => {
                         if (!!newValue)
                             handleLink(newValue.dataLinkFrom, newValue.dataLinkTo);
                     }}

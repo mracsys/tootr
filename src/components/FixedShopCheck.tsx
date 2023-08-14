@@ -1,5 +1,3 @@
-import React from 'react';
-
 import OotIcon from './OotIcon';
 import AddIcon from '@mui/icons-material/Add';
 import type { AllAreas } from './Tracker';

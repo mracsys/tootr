@@ -6,7 +6,7 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 
 import UnknownEntrance from './UnknownEntrance'
 import LocationCheck from './LocationCheck'
-import type { AllAreas, AllEntrances, EntrancePool, Entrance, Entrances, Location } from './Tracker';
+import type { AllAreas, AllEntrances, Entrance, Entrances, Location } from './Tracker';
 import type ContextMenuHandler from './ContextMenuHandler';
 
 /*const YellowSwitch = withStyles({
@@ -157,7 +157,7 @@ const GameArea = ({
                     { Object.keys(entrances).map((entrance, i) => {
                         let connectorShuffled = false;
                         let areaEntrances = allAreas.entrances;
-                        function isConnectorShuffled(entrance: string, index: number, array: string[]) {
+                        function isConnectorShuffled(entrance: string, _index: number, _array: string[]) {
                             return areaEntrances[entrance].shuffled || areaEntrances[entrance].shuffled;
                         }
                         if (allAreas.entrances[entrance].connector !== "") {

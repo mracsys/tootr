@@ -1,4 +1,4 @@
-import type { MouseEvent, MouseEventHandler, TouchEventHandler, TouchEvent } from 'react';
+import type { MouseEventHandler, TouchEventHandler } from 'react';
 
 const longPressDuration = 300;
 
@@ -25,18 +25,18 @@ export default class ContextMenuHandler {
     }, longPressDuration);
   };
 
-  onTouchMove: TouchEventHandler<HTMLDivElement> = (e) => {
+  onTouchMove: TouchEventHandler<HTMLDivElement> = () => {
     if (!!(this.longPressCountdown))
       clearTimeout(this.longPressCountdown);
   };
 
-  onTouchCancel: TouchEventHandler<HTMLDivElement> = (e) => {
+  onTouchCancel: TouchEventHandler<HTMLDivElement> = () => {
     this.contextMenuPossible = false;
     if (!!(this.longPressCountdown))
       clearTimeout(this.longPressCountdown);
   };
 
-  onTouchEnd: TouchEventHandler<HTMLDivElement> = (e) => {
+  onTouchEnd: TouchEventHandler<HTMLDivElement> = () => {
     this.contextMenuPossible = false;
     if (!!(this.longPressCountdown))
       clearTimeout(this.longPressCountdown);

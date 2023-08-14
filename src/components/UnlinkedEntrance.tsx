@@ -1,4 +1,3 @@
-import React from 'react';
 import SubdirectoryArrowRightIcon from '@mui/icons-material/SubdirectoryArrowRight';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import type { AllAreas, Entrances } from './Tracker';

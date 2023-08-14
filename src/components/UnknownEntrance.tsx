@@ -1,7 +1,7 @@
 import React, { MouseEvent } from 'react';
 import UnLinkedEntrance from './UnlinkedEntrance'
 import LinkedEntrance from './LinkedEntrance'
-import type { AllAreas, AllEntrances, EntrancePool, Entrance, Entrances } from './Tracker';
+import type { AllAreas, AllEntrances, Entrance, Entrances } from './Tracker';
 import type ContextMenuHandler from './ContextMenuHandler';
 
 interface UnknownEntranceProps {
@@ -68,7 +68,7 @@ const UnknownEntrance = ({
     let eType = allAreas.entrances[entrance].type;
     let eExit = allAreas.entrances[entrance].aLink;
     let areaEntrances = allAreas.entrances;
-    function isConnectorShuffled(entrance: string, index: number, array: string[]) {
+    function isConnectorShuffled(entrance: string, _index: number, _array: string[]) {
         return areaEntrances[entrance].shuffled || areaEntrances[eExit].shuffled;
     }
     if (((title === "Spawn Points" && eType === "spawn") || (title === "Warp Songs" && eType === "warpsong") || (eType !== "spawn" && eType !== "warpsong" && eType !== "extra")) &&

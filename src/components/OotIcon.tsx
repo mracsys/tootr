@@ -1,5 +1,3 @@
-import React from 'react';
-
 export interface OotIconProps {
     itemName: string,
     className?: string,

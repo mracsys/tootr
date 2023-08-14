@@ -1,8 +1,8 @@
-name: Node.js CI
+name: Node CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
 
 jobs:
   build:
@@ -11,24 +11,23 @@ jobs:
 
     steps:
       # https://github.com/actions/checkout
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       # https://github.com/actions/setup-node
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: npm
+          cache: yarn
 
       - name: Build
         run: |
-          npm ci
-          npm run build
-          npm run export
-          touch out/.nojekyll
+          rm -rf node_modules && yarn install --frozen-lockfile
+          yarn build
+          touch dist/.nojekyll
 
       - name: Deploy
         # https://github.com/JamesIves/github-pages-deploy-action
-        uses: JamesIves/github-pages-deploy-action@4.4.0 
+        uses: JamesIves/github-pages-deploy-action@4.4.3
         with:
           branch: gh-pages
-          folder: out
+          folder: dist
