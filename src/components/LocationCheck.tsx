@@ -1,16 +1,16 @@
 import React from 'react';
 
-import OotIcon from './OotIcon';
+import OotItemIcon from './OotItemIcon';
 
 import CheckBoxOutlineBlankIcon from '@mui/icons-material/CheckBoxOutlineBlank';
 import DoneIcon from '@mui/icons-material/Done';
-import { AllAreas } from './Tracker';
 import ContextMenuHandler from './ContextMenuHandler';
+
+import { GraphLocation } from '@mracsys/randomizer-graph-tool';
 
 interface LocationCheckProps {
     lkey: string,
-    location: string,
-    allAreas: AllAreas,
+    location: GraphLocation,
     handleCheck: (locationName: string) => void,
     handleUnCheck: (locationName: string) => void,
     handleContextMenu: ContextMenuHandler,
@@ -23,7 +23,6 @@ interface LocationCheckProps {
 const LocationCheck = ({
     lkey,
     location,
-    allAreas,
     handleCheck,
     handleUnCheck,
     handleContextMenu,
@@ -33,82 +32,87 @@ const LocationCheck = ({
     showShopRupee,
 }: LocationCheckProps) => {
     let locationIcons: {[locationType: string]: string} = {
-        "skulltula": '/images/OoT_Token_Icon.png',
-        "map": '/images/OoT_Dungeon_Map_Icon.png',
-        "compass": '/images/OoT_Compass_Icon.png',
-        "smallKey": '/images/OoT_Compass_Icon.png',
-        "bossKey": '/images/OoT_Boss_Key_Icon.png',
-        "song": '/images/Grey_Note.png'
+        "Gold Skulltula Token": '/images/OoT_Token_Icon.png',
+        "Map": '/images/OoT_Dungeon_Map_Icon.png',
+        "Compass": '/images/OoT_Compass_Icon.png',
+        "Small Key": '/images/OoT_Small_Key_Icon.png',
+        "Boss Key": '/images/OoT_Boss_Key_Icon.png',
     };
-    let walletTiers = [
-        "Green Rupee",
-        "Blue Rupee",
-        "Red Rupee",
-        "Purple Rupee"
-    ];
+    let logicColor: string;
+    if (location.visited) {
+        logicColor = 'logicalGreen';
+    } else if (location.visited_with_other_tricks) {
+        logicColor = 'logicalYellow';
+    } else {
+        logicColor = 'logicalBlank';
+    }
     return (
-        <div
-            className="locationContainer"
-            key={lkey}
-            onClick={ allAreas.locations[location].check === "" ?
-                        () => handleCheck(location) :
-                        () => handleUnCheck(location)
-                    }
-            onContextMenu={handleContextMenu.onContextMenu}
-            onTouchStart={handleContextMenu.onTouchStart}
-            onTouchCancel={handleContextMenu.onTouchCancel}
-            onTouchEnd={handleContextMenu.onTouchEnd}
-            onTouchMove={handleContextMenu.onTouchMove}
-            data-source={location}
-        >
-            {
-                locationIcons.hasOwnProperty(allAreas.locations[location].type) ?
-                <img src={locationIcons[allAreas.locations[location].type]} alt="Gold Skulltula" className="locationIcon" /> :
-                <div className="locationIconBlank" />
-            }
-            <p className="locationText"><em>{allAreas.locations[location].alias}</em></p>
-            {
-                (allAreas.locations[location].merchant === true && allAreas.locations[location].foundItem !== "") ?
-                    <React.Fragment>
-                        { showShopInput ?
-                            <input
-                                name={location + "shopprice"}
-                                onClick={(e) => {e.stopPropagation()}}
-                                className="priceBox"
-                                defaultValue={allAreas.locations[location].price === 0 ? "" : allAreas.locations[location].price}
-                                onBlur={(e) => {
-                                    updateShopPrice(location,e.currentTarget.value);
-                                }}
-                            /> : null
+        <div className='logicContainer'>
+            <div className={logicColor} />
+            <div
+                className="locationContainer"
+                key={lkey}
+                onClick={ location.checked ?
+                            () => handleUnCheck(location.name) :
+                            () => handleCheck(location.name)
                         }
-                        { showShopRupee ?
-                            <div 
-                                className="locationWalletTier"
-                                onClick={(e) => {
-                                    e.stopPropagation();
-                                    toggleWalletTiers(location);
-                                }}>
-                                <OotIcon
-                                    itemName={walletTiers[allAreas.locations[location].walletTier]}
-                                />
-                            </div> : null
-                        }
-                    </React.Fragment>
-                    : null
-            }
-            {
-                allAreas.locations[location].foundItem === "" ?
-                    null :
-                    <OotIcon
-                        itemName={allAreas.locations[location].foundItem}
-                        className="locationKnownItem"
-                    />
-            }
-            {
-                allAreas.locations[location].check === "" ?
-                    <CheckBoxOutlineBlankIcon className="locationMark" /> :
-                    <DoneIcon className="locationMark" />
-            }
+                onContextMenu={handleContextMenu.onContextMenu}
+                onTouchStart={handleContextMenu.onTouchStart}
+                onTouchCancel={handleContextMenu.onTouchCancel}
+                onTouchEnd={handleContextMenu.onTouchEnd}
+                onTouchMove={handleContextMenu.onTouchMove}
+                data-source={location.name}
+            >
+                {
+                    location.vanilla_item !== null && locationIcons.hasOwnProperty(location.vanilla_item.name.split(' (')[0]) ?
+                    <img src={locationIcons[location.vanilla_item.name.split(' (')[0]]} alt={location.vanilla_item.name} className="locationIcon" /> :
+                    <div className="locationIconBlank" />
+                }
+                <p className="locationText"><em>{location.alias}</em></p>
+                {
+                    (location.type === 'Shop' && location.item !== null) ?
+                        <React.Fragment>
+                            { showShopInput ?
+                                <input
+                                    name={location + "shopprice"}
+                                    onClick={(e) => {e.stopPropagation()}}
+                                    className="priceBox"
+                                    defaultValue={!!(location.price) ? location.price : ""}
+                                    onBlur={(e) => {
+                                        updateShopPrice(location.name, e.currentTarget.value);
+                                    }}
+                                /> : null
+                            }
+                            { showShopRupee ?
+                                <div 
+                                    className="locationWalletTier"
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                        toggleWalletTiers(location.name);
+                                    }}>
+                                    <OotItemIcon
+                                        itemName=''
+                                        price={!!location.price ? location.price : 0}
+                                    />
+                                </div> : null
+                            }
+                        </React.Fragment>
+                        : null
+                }
+                {
+                    location.item === null ?
+                        null :
+                        <OotItemIcon
+                            itemName={location.item.name}
+                            className="locationKnownItem"
+                        />
+                }
+                {
+                    location.checked ?
+                        <DoneIcon className="locationMark" /> :
+                        <CheckBoxOutlineBlankIcon className="locationMark" />
+                }
+            </div>
         </div>
     );
 }

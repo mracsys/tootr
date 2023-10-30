@@ -1,19 +1,17 @@
-import OotIcon from './OotIcon';
+import OotItemIcon, { haveOotItemIcon } from './OotItemIcon';
 import AddIcon from '@mui/icons-material/Add';
-import type { AllAreas } from './Tracker';
 import type ContextMenuHandler from './ContextMenuHandler';
+import { GraphLocation } from '@mracsys/randomizer-graph-tool';
 
 interface FixedShopCheckProps {
     lkey: string,
-    location: string,
-    allAreas: AllAreas,
+    location: GraphLocation,
     handleContextMenu: ContextMenuHandler,
 }
 
 const FixedShopCheck = ({
     lkey,
     location,
-    allAreas,
     handleContextMenu,
 }: FixedShopCheckProps) => {
     return (
@@ -25,14 +23,14 @@ const FixedShopCheck = ({
             onTouchCancel={handleContextMenu.onTouchCancel}
             onTouchEnd={handleContextMenu.onTouchEnd}
             onTouchMove={handleContextMenu.onTouchMove}
-            data-source={location}
+            data-source={location.name}
         >
             {
-                allAreas.locations[location].foundItem === "" ?
+                location.item === null || !haveOotItemIcon(location.item.name) ?
                     <AddIcon className="fixedShopIcon" />
                     /*<p className="fixedShopIcon">+</p>*/ :
-                    <OotIcon
-                        itemName={allAreas.locations[location].foundItem}
+                    <OotItemIcon
+                        itemName={location.item.name}
                         className="locationKnownItem"
                     />
             }

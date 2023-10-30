@@ -11,7 +11,9 @@ body {
     background-color: rgb(215, 215, 215) !important;
     --theme-spacing: 8px;
     --drawer-width: 240px;
+    --game-info-width: 528px;
     --color-header: #546e7a;
+    --area-column-width: 540px;
 }
 body.dark {
     --color-header: #546e7a;
@@ -153,7 +155,7 @@ body.dark {
         easing: theme.transitions.easing.sharp;
         duration: theme.transitions.duration.leavingScreen;
     });*/
-    margin-left: calc(var(--drawer-width) * -1);
+    margin-left: calc(var(--drawer-width) * -1 + var(--game-info-width) + 2 * var(--theme-spacing));
     padding: 20px 20px 56px 20px;
 }
 .areaPaperShift {
@@ -162,8 +164,74 @@ body.dark {
         easing: theme.transitions.easing.easeOut;
         duration: theme.transitions.duration.enteringScreen;
     });*/
-    margin-left: 0;
+    margin-left: var(--game-info-width);
     padding: 20px;
+}
+.infoSeparator {
+    color: #FFFFFF;
+    background-color: #FFFFFF;
+    margin: var(--theme-spacing) 0px;
+}
+@media screen and (max-width: 600px) {
+    .gameInfo {
+        display: none;
+    }
+}
+@media screen and (min-width: 600px) {
+    .gameInfo {
+        transition: left 195ms cubic-bezier(0.4, 0, 0.6, 1) 0ms;
+        position: fixed;
+        top: 64px;
+        left: 0;
+        width: calc(var(--game-info-width) + 2 * var(--theme-spacing));
+        height: calc(100vh - 64px);
+        background-color: #212121;
+        padding: var(--theme-spacing);
+    }
+    .gameInfoShift {
+        transition: left 225ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;
+        left: var(--drawer-width);
+    }
+}
+/*
+    window-padding = game-info-width + theme-spacing * 2 + areaPaper.padding(20px) * 2
+    cutoff = window-padding + (column-width + column-gap) * column-count
+    max-width = column-width + (column-width + column-gap) * (column-count - 1)
+*/
+@media screen and (max-width: 1704px) {
+    .worldInfo {
+        max-width: 540px;
+        columns: 1 540px;
+        column-gap: 20px;
+    }
+}
+@media screen and (min-width: 1704px) {
+    .worldInfo {
+        max-width: 1100px;
+        columns: 2 540px;
+        column-gap: 20px;
+    }
+}
+@media screen and (min-width: 2264px) {
+    .worldInfo {
+        max-width: 1660px;
+        columns: 3 540px;
+        column-gap: 20px;
+    }
+}
+@media screen and (min-width: 2824px) {
+    .worldInfo {
+        max-width: 2220px;
+        columns: 4 540px;
+        column-gap: 20px;
+    }
+}
+@media screen and (min-width: 3384px) {
+    .worldInfo {
+        max-width: 2780px;
+        columns: 5 540px;
+        column-gap: 20px;
+    }
 }
 /*[theme.breakpoints.down('xs')] {
     width: '100%';
@@ -171,10 +239,9 @@ body.dark {
 @media screen and (max-width: 600px) {
     .areaCard {
         width: 100%;
-        display: inline-block;
+        display: block;
         max-width: 100%;
         margin-bottom: 20px;
-        vertical-align: top;
         background-color: #cbc26d;
         border-radius: 4px;
         overflow: hidden;
@@ -187,11 +254,9 @@ body.dark {
 }*/
 @media screen and (min-width: 600px) {
     .areaCard {
-        margin-right: 20px;
-        display: inline-block;
+        display: block;
         max-width: 100%;
         margin-bottom: 20px;
-        vertical-align: top;
         background-color: #cbc26d;
         border-radius: 4px;
         overflow: hidden;
@@ -214,6 +279,9 @@ body.dark {
     font-size: 1.25rem;
     font-weight: 500;
     line-height: 1.6;
+}
+.areaRefreshCounter {
+    color: #fff59d; /*yellow[200]*/
 }
 .areaTitleCollapse {
     flex-grow: 1;
@@ -247,7 +315,7 @@ body.dark {
     padding: var(--theme-spacing) calc(var(--theme-spacing) * 2);
     background-color: #eeeeee; /*grey[200]*/
     display: flex;
-    position: relative;
+    flex-grow: 1;
     box-sizing: border-box;
     align-items: center;
     justify-content: flex-start;
@@ -258,6 +326,9 @@ body.dark {
 }
 .locationContainer .iconDiv {
     padding: 0px 1em 0px 0px;
+}
+.logicContainer {
+    display: flex;
 }
 .shopContainer {
     padding: var(--theme-spacing) calc(var(--theme-spacing) * 2);
@@ -327,23 +398,131 @@ body.dark {
 }
 .iconDiv {
     cursor: pointer;
+    position: relative;
 }
-.iconKeyText {
+.iconRightText {
     position: absolute;
-    bottom: -8px;
-    left: 16px;
+    bottom: -4px;
+    right: 0px;
+    width: 16px;
     font-family: 'Hylia Serif Beta';
     line-height: 1.43em;
+    text-align: right;
+    text-shadow: 0px 0px 6px #000000, 0px 0px 2px #000000, 0px 0px 2px #000000, 0px 0px 2px #000000, 0px 0px 2px #000000;
 }
-.iconTradeText {
+.iconLeftText {
     position: absolute;
-    bottom: -8px;
-    left: 24px;
+    bottom: -4px;
+    left: 0px;
+    width: 16px;
     font-family: 'Hylia Serif Beta';
     line-height: 1.43em;
+    text-align: left;
+    text-shadow: 0px 0px 6px #000000, 0px 0px 2px #000000, 0px 0px 2px #000000, 0px 0px 2px #000000, 0px 0px 2px #000000;
+}
+.svgIcon.iconRightSub,
+.iconRightSub {
+    position: absolute;
+    bottom: -4px;
+    right: 0px;
+    width: 16px !important;
+    height: 16px !important;
+    color: white !important;
+}
+.svgIcon.iconLeftSub,
+.iconLeftSub {
+    position: absolute;
+    bottom: -4px;
+    left: 0px;
+    width: 16px !important;
+    height: 16px !important;
+    color: white !important;
 }
 .iconContainer {
     position: relative;
+    width: 32px;
+    height: 32px;
+}
+.svgIcon {
+    position: relative;
+    color: white !important;
+    width: 32px !important;
+    height: 100% !important;
+}
+.svgIcon.disabledSettingIcon,
+.iconContainer.disabledSettingIcon {
+    opacity: 20%;
+}
+.iconRightText.disabledSettingIcon,
+.iconLeftText.disabledSettingIcon,
+.iconRightSub.disabledSettingIcon,
+.iconLeftSub.disabledSettingIcon {
+    display: none;
+}
+.iconTooltip {
+    position: absolute;
+    top: calc(-1px - var(--theme-spacing));
+    left: 48px;
+    color: white;
+    font-family: 'Hylia Serif Beta';
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: var(--theme-spacing);
+    border: #FFFFFF 1px solid;
+    background-color: #000000;
+    box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);
+    z-index: 1300;
+    display: none !important;
+}
+.iconDiv:hover + .iconTooltip {
+    display: flex !important;
+}
+.iconTooltip div {
+    height: 24px;
+    text-align: center;
+    line-height: 1.43em;
+}
+.iconTooltipOptionDisabled {
+    opacity: 20%;
+}
+.iconTooltipContainer {
+    position: relative;
+}
+.multiselectSettingMenu {
+    color: white;
+    font-family: 'Hylia Serif Beta';
+    padding: var(--theme-spacing);
+    background-color: #000000;
+}
+.multiselectSettingMenuTitle {
+    border-bottom: #FFFFFF 1px solid;
+    font-size: larger;
+}
+.multiselectSettingMenu div {
+    cursor: pointer;
+}
+.multiselectSettingMenu div.multiselectSettingMenuTitle {
+    cursor: auto;
+}
+.multiselectSettingMenuAll {
+    margin-right: calc(var(--theme-spacing) * 1);
+}
+.settingsContainer {
+    font-family: 'Hylia Serif Beta';
+    color: white;
+}
+.settingTabContainer {
+    display: block;
+    border-top: white 1px solid;
+}
+.settingSectionContainer {
+    display: block;
+}
+.settingTabName {
+    color: white;
+}
+.settingSectionName {
+    color: white;
 }
 .locationKnownItem {
     margin-left: var(--theme-spacing);
@@ -356,6 +535,9 @@ body.dark {
     width: 24px;
     height: 24px;
     vertical-align: middle;
+}
+.locationKnownItem .iconRightText {
+    text-shadow: 0px 0px 6px #EEEEEE, 0px 0px 2px #EEEEEE, 0px 0px 2px #EEEEEE, 0px 0px 2px #EEEEEE, 0px 0px 2px #EEEEEE;
 }
 .locationWalletTier .iconDiv {
     margin-left: var(--theme-spacing);
@@ -375,10 +557,6 @@ body.dark {
 }
 .locationMenuIcon {
     position: relative;
-}
-.locationMenuIcon img {
-    width: 32px;
-    height: 32px;
 }
 .grayscaleMenuIcon {
     position: relative;
@@ -409,10 +587,10 @@ body.dark {
     padding: 0;
     background-color: #212121; /*grey[900]*/
 }
-.locationItemMenu .iconKeyText {
+.locationItemMenu .iconLeftText {
     color: #FFFFFF;
 }
-.locationItemMenu .iconTradeText {
+.locationItemMenu .iconRightText {
     color: #FFFFFF;
 }
 .locationItemMenu .iconDiv {
@@ -496,6 +674,7 @@ body.dark {
 }
 .entranceContainer {
     display: flex;
+    flex-grow: 1;
     justify-content: space-between;
     padding: var(--theme-spacing) calc(var(--theme-spacing) * 2);
     align-items: center;
@@ -657,6 +836,26 @@ body.dark {
     text-decoration: none;
     cursor: default;
 }
+.logicalGreen {
+    background-color: #66bb6a;
+    width: 10px;
+    cursor: help;
+}
+.logicalYellow {
+    background-color: #eeff41;
+    width: 10px;
+    cursor: help;
+}
+.logicalRed {
+    background-color: #f44336;
+    width: 10px;
+    cursor: help;
+}
+.logicalBlank {
+    background-color: #bdbdbd;
+    width: 10px;
+    cursor: help;
+}
 /*[theme.breakpoints.down('xs')] {
     width: '100%';
 }*/
@@ -693,7 +892,7 @@ body.dark {
         max-height: 50%;
     }    
 }
-.warpMenu .iconKeyText {
+.warpMenu .iconRightText {
     color: #FFFFFF;
 }
 .warpMenu .iconTradeText {

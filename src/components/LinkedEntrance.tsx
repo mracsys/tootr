@@ -6,22 +6,23 @@ import SubdirectoryArrowRightIcon from '@mui/icons-material/SubdirectoryArrowRig
 import LocationCheck from './LocationCheck'
 import UnknownEntrance from './UnknownEntrance'
 import FixedShopCheck from './FixedShopCheck';
-import type { AllAreas, AllEntrances, Entrance, Entrances } from './Tracker';
+import type { CollapsedRegions } from './Tracker';
 import type ContextMenuHandler from './ContextMenuHandler';
 import type { MouseEvent } from 'react';
+import { buildEntranceName } from './UnknownEntrance';
+
+import { GraphRegion, GraphEntrance, GraphLocation } from '@mracsys/randomizer-graph-tool';
 
 interface LinkedEntranceProps {
     title: string,
-    entrance: string,
-    entrances: {[entranceName: string]: Entrance},
-    entrancePools: Entrances,
-    connector: boolean,
-    renderedConnectors: string[],
-    oneWayEntrancePools: Entrances,
-    mixedPools: string[],
-    decoupled: boolean,
-    allAreas: AllAreas,
-    allEntrances: AllEntrances,
+    playerNum: number,
+    collapsedRegions: CollapsedRegions,
+    entrance: GraphEntrance,
+    renderedConnectors: GraphEntrance[],
+    currentPage: string,
+    internalLocations: GraphLocation[],
+    shopLocations: GraphLocation[],
+    otherEntrances: GraphEntrance[],
     handleLink: (dataLinkFrom: string, dataLinkTo: string) => void,
     handleUnLink: (entrance: string, scrollRef: string) => void,
     handleCheck: (locationName: string) => void,
@@ -29,30 +30,27 @@ interface LinkedEntranceProps {
     handleContextMenu: ContextMenuHandler,
     handleShopContextMenu: ContextMenuHandler,
     handleEntranceMenuOpen: (e: MouseEvent<HTMLDivElement>, scrollRef: string) => void,
-    handleDungeonTravel: (entrance: string, useConnector?: boolean) => void,
+    handleDungeonTravel: (targetRegion: GraphRegion | null) => void,
     toggleWalletTiers: (locationName: string) => void,
     updateShopPrice: (locationName: string, price: string) => void,
     showShops: boolean,
     showShopInput: boolean,
     showShopRupee: boolean,
     forceVisible: boolean,
-    dungeon: boolean,
     scrollRef: string,
     ekey: string,
 }
 
 const LinkedEntrance = ({
     title,
+    playerNum,
+    collapsedRegions,
     entrance,
-    entrances,
-    entrancePools,
-    connector,
     renderedConnectors,
-    oneWayEntrancePools,
-    mixedPools,
-    decoupled,
-    allAreas,
-    allEntrances,
+    currentPage,
+    internalLocations,
+    shopLocations,
+    otherEntrances,
     handleLink,
     handleUnLink,
     handleCheck,
@@ -67,162 +65,91 @@ const LinkedEntrance = ({
     showShopInput,
     showShopRupee,
     forceVisible,
-    dungeon,
     scrollRef,
     ekey,
 }: LinkedEntranceProps) => {
-    const buildExitName = (entrance: string): string => {
-        let eLink = allAreas.entrances[entrance].aLink;
-        if (allAreas.entrances[eLink].tag === "" || allAreas.entrances[eLink].enableTag === false) {
-            if (allAreas.entrances[eLink].type === "overworld") {
-                return allAreas.entrances[eLink].reverseAlias;
-            } else if (allAreas.entrances[eLink].isReverse) {
-                return allAreas.entrances[allAreas.entrances[eLink].reverse].area;
-            } else {
-                return allAreas.entrances[eLink].alias;
-            }
-        } else { 
-            return allAreas.entrances[eLink].tag;
+    const buildExitName = (entrance: GraphEntrance): string => {
+        let eLink = !!(entrance.replaces) ? entrance.replaces : entrance;
+        if (!eLink.use_target_alias) {
+            return eLink.alias;
+        } else {
+            return eLink.target_alias;
         }
     }
 
-    const buildExitEntranceName = (entrance: string): string | null => {
-        let eLink = allAreas.entrances[entrance].aLink;
-        if (allAreas.entrances[eLink].tag === "" || allAreas.entrances[eLink].enableTag === false) {
-            if (allAreas.entrances[eLink].type === "overworld") {
-                return "from " + allAreas.entrances[eLink].alias;
-            } else if (allAreas.entrances[eLink].isReverse) {
-                return "from " + allAreas.entrances[allAreas.entrances[eLink].reverse].alias;
-            } else {
-                return null;
-            }
+    const buildExitEntranceName = (entrance: GraphEntrance): string | null => {
+        let eLink = !!(entrance.replaces) ? entrance.replaces : entrance;
+        if (!!eLink.reverse && eLink.target_group?.page !== '') {
+            return `from ${eLink.reverse.alias}`;
         } else {
             return null;
         }
     }
 
-    const buildEntranceName = (entrance: string): string => {
-        if (allAreas.entrances[entrance].isReverse) {
-            if (allAreas.entrances[allAreas.entrances[entrance].reverse].tag !== "" || allAreas.entrances[allAreas.entrances[entrance].reverse].enableTag === false) {
-                return "from " + allAreas.entrances[allAreas.entrances[entrance].reverse].tag;
-            } else {
-                return allAreas.entrances[entrance].alias;
-            }
-        } else {
-            if (entrance === 'GV Lower Stream -> Lake Hylia') {
-                return 'Lake Hylia';
-            } else {
-                return allAreas.entrances[entrance].alias;
-            }
-        }
-    }
-
-    const buildEntranceURL = (reverseLink: string): string => {
+    const buildEntranceURL = (reverseLink: GraphEntrance): string => {
         let href: string = '';
-        if ((allAreas.entrances[reverseLink].type === "overworld") || (allAreas.entrances[reverseLink].isReverse) || (allAreas.entrances[reverseLink].type === "extra")) {
-            href = '#' + allAreas.entrances[reverseLink].area;
-        }
-        if (['warpsong', 'spawn', 'owldrop', 'overworldoneway'].includes(allAreas.entrances[reverseLink].type)) {
-            if (allAreas.entrances[reverseLink].connector !== "") {
-                let connectorList = allAreas.entrances[reverseLink].connector;
-                let connectorHref: string;
-                if (Array.isArray(connectorList)) {
-                    connectorHref = connectorList[0];
-                } else {
-                    connectorHref = connectorList;
-                }
-                if (allAreas.entrances[connectorHref].aLink !== "") {
-                    href = '#' + allAreas.entrances[allAreas.entrances[connectorHref].aLink].area;
-                }
-            } else { 
-                href = '#' + allAreas.entrances[reverseLink].area;
-            }
-        }
-        if (allAreas.entrances[reverseLink].type === "dungeon" || allAreas.entrances[reverseLink].type === 'dungeonGanon') {
-            if (allAreas.entrances[reverseLink].isReverse === true) {
-                href = '#' + allAreas.entrances[reverseLink].area;
-            } else {
-                href = '#' + allAreas.entrances[reverseLink].alias;
-            }
+        if (reverseLink.target_group?.page !== '') {
+            href = `#${reverseLink.target_group?.alias}`;
         }
         return href;
     }
 
-    let oEntrance = allAreas.entrances[entrance];
-    let reverseLink = oEntrance.aLink;
-    let interiors = ['interior','specialInterior','hideoutInterior','grotto','grave','dungeon','dungeonGanon','boss','noBossShuffle'];
-    let oneWayTypes = ['spawn','warpsong','owldrop','overworldoneway'];
-    let otherEntrances = [];
-    let shopLocations = Object.keys(allEntrances.entrances[reverseLink].locations).filter((a) => ((allAreas.locations[a].visible === false) && allAreas.locations[a].merchant));
-    let internalLocations = Object.keys(allEntrances.entrances[reverseLink].locations).filter((l) => (allEntrances.entrances[reverseLink].locations[l].check === '' || allAreas.areas[title].collapse === 'none'));
-    if (connector === false || decoupled) {
-        if ((interiors.includes(allAreas.entrances[reverseLink].type) &&
-        (oneWayTypes.includes(oEntrance.type) || decoupled) &&
-        !(allAreas.entrances[reverseLink].isReverse)) &&
-        (allAreas.entrances[reverseLink].shuffled === true) &&
-        !(renderedConnectors.includes(allAreas.entrances[reverseLink].reverse))) {
-            otherEntrances.push({"entrance": allAreas.entrances[reverseLink].reverse,"ekey":"Reverse","connector": false});
-            renderedConnectors.push(allAreas.entrances[reverseLink].reverse);
-        }
-        let connectorList: string[];
-        let connectorListTypeCheck = allAreas.entrances[reverseLink].connector;
-        if (!Array.isArray(connectorListTypeCheck)) {
-            connectorList = [connectorListTypeCheck];
-        } else {
-            connectorList = connectorListTypeCheck;
-        }
-        connectorList.forEach((connectorEntrance) => {
-            if ((connectorEntrance !== "" &&
-            allAreas.entrances[connectorEntrance].type !== 'overworld' &&
-            (allAreas.entrances[connectorEntrance].shuffled === true || 
-            allAreas.entrances[connectorEntrance].eLink === "" ||
-            (allAreas.entrances[connectorEntrance].area !== allAreas.entrances[reverseLink].area &&
-            !(oneWayTypes.includes(oEntrance.type))))) && !(renderedConnectors.includes(connectorEntrance))) {
-                otherEntrances.push({"entrance": connectorEntrance,"ekey":"ReverseConnector","connector": true});
-                renderedConnectors.push(connectorEntrance);
-                shopLocations = shopLocations.concat(Object.keys(allEntrances.entrances[allAreas.entrances[connectorEntrance].reverse].locations).filter((a) => ((allAreas.locations[a].visible === false) && allAreas.locations[a].merchant)));
-                internalLocations = internalLocations.concat(Object.keys(allEntrances.entrances[allAreas.entrances[connectorEntrance].reverse].locations).filter((l) => (allEntrances.entrances[allAreas.entrances[connectorEntrance].reverse].locations[l].check === '' || allAreas.areas[title].collapse === 'none')))
-            }
-        });
+    let oEntrance = entrance;
+    let reverseLink = !!(entrance.replaces) ? entrance.replaces : entrance;
+    renderedConnectors.push(entrance);
+    if (entrance.coupled && !!reverseLink.reverse) {
+        renderedConnectors.push(reverseLink.reverse);
     }
+    let targetDescription = (
+        <div className="entranceLink">
+            <div className="entranceLink1">
+                {buildExitName(entrance)}
+            </div>
+            <div className="entranceLink2">
+                {buildExitEntranceName(entrance)}
+            </div>
+        </div>
+    );
+    let logicColor: string;
+    if (entrance.visited) {
+        logicColor = 'logicalGreen';
+    } else if (entrance.visited_with_other_tricks) {
+        logicColor = 'logicalYellow';
+    } else {
+        logicColor = 'logicalBlank';
+    }
+
     return (
         <React.Fragment key={ekey}>
-            <div className="entranceContainer" key={entrance + "label"}>
-                { forceVisible ? <SubdirectoryArrowRightIcon /> : null }
-                <div className="entranceLabel">
-                    {buildEntranceName(entrance)}
-                </div>
-                <a
-                    href={buildEntranceURL(reverseLink)}
-                    onClick={(allAreas.entrances[reverseLink].type === "dungeon" || allAreas.entrances[reverseLink].type === "dungeonGanon" || dungeon) ?
-                            () => handleDungeonTravel(reverseLink)
-                            : () => {}}
-                    className={(((allAreas.entrances[reverseLink].type === "overworld")
-                                || (allAreas.entrances[reverseLink].type === "warpsong")
-                                || (allAreas.entrances[reverseLink].type === "spawn")
-                                || (allAreas.entrances[reverseLink].type === "owldrop")
-                                || (allAreas.entrances[reverseLink].type === "overworldoneway")
-                                || (allAreas.entrances[reverseLink].type === "dungeon")
-                                || (allAreas.entrances[reverseLink].type === "dungeonGanon")
-                                || (allAreas.entrances[reverseLink].type === "extra")
-                                || (allAreas.entrances[reverseLink].isReverse)) ?
-                                    "overworldLinkAnchor"
-                                    : "falseLinkAnchor" )}
-                >
-                    <div className="entranceLink">
-                        <div className="entranceLink1">
-                            {buildExitName(entrance)}
-                        </div>
-                        <div className="entranceLink2">
-                            {buildExitEntranceName(entrance)}
-                        </div>
+            <div className='logicContainer'>
+                <div className={logicColor} />
+                <div className="entranceContainer" key={entrance.name + "label"}>
+                    { forceVisible ? <SubdirectoryArrowRightIcon /> : null }
+                    <div className="entranceLabel">
+                        {buildEntranceName(entrance)}
                     </div>
-                </a>
-                {
-                    (oEntrance.shuffled === true) ?
-                        <IconButton className="areaButton" size="small" component="span" onClick={() => handleUnLink(entrance, scrollRef)}><ClearIcon /></IconButton> :
-                        null
-                }
+                    {
+                        reverseLink.target_group?.page !== '' ?
+                        <a
+                            href={buildEntranceURL(reverseLink)}
+                            onClick={(reverseLink.target_group?.page !== currentPage) ?
+                                    () => handleDungeonTravel(reverseLink.target_group)
+                                    : () => {}}
+                            className='overworldLinkAnchor'
+                        >
+                            {targetDescription}
+                        </a>
+                        :
+                        <div className='falseLinkAnchor'>
+                            {targetDescription}
+                        </div>
+                    }
+                    {
+                        (oEntrance.shuffled === true) ?
+                            <IconButton className="areaButton" size="small" component="span" onClick={() => handleUnLink(entrance.name, scrollRef)}><ClearIcon /></IconButton> :
+                            null
+                    }
+                </div>
             </div>
             {
                 ((shopLocations.length > 0) && (showShops === true)) ?
@@ -233,10 +160,9 @@ const LinkedEntrance = ({
                                 shopLocations.map((location, k) => {
                                     return (
                                         <FixedShopCheck
-                                            key={entrance + 'shopfixedlocationcheck' + k}
-                                            lkey={entrance + k}
+                                            key={entrance.name + 'shopfixedlocationcheck' + k}
+                                            lkey={entrance.name + k}
                                             location={location}
-                                            allAreas={allAreas}
                                             handleContextMenu={handleShopContextMenu}
                                         />
                                     );
@@ -249,15 +175,14 @@ const LinkedEntrance = ({
             }
             {
                 /* All other interior locations */
-                ((decoupled === false && !(oneWayTypes.includes(oEntrance.type))) || (decoupled)) ?
+                ((oEntrance.coupled && !oEntrance.is_warp) || (!oEntrance.coupled)) ?
                 internalLocations.map((location, k) => {
-                    if (allAreas.entrances[reverseLink].type !== 'dungeon' && allAreas.entrances[reverseLink].type !== 'dungeonGanon' && allAreas.locations[location].visible === true) {
+                    if (reverseLink.type !== 'Dungeon' && location.viewable() === true) {
                         return (
                             <LocationCheck
                                 key={entrance + 'entrancelocationcheck' + k}
-                                lkey={entrance + k}
+                                lkey={entrance.name + k}
                                 location={location}
-                                allAreas={allAreas}
                                 handleCheck={handleCheck}
                                 handleUnCheck={handleUnCheck}
                                 handleContextMenu={handleContextMenu}
@@ -278,33 +203,28 @@ const LinkedEntrance = ({
                     <UnknownEntrance
                         forceVisible={true}
                         title={title}
-                        entrance={otherEntrance.entrance}
-                        entrances={entrances}
-                        connector={otherEntrance.connector}
+                        playerNum={playerNum}
+                        collapsedRegions={collapsedRegions}
+                        entrance={otherEntrance}
+                        connector={true}
                         renderedConnectors={renderedConnectors}
-                        entrancePools={entrancePools}
-                        oneWayEntrancePools={oneWayEntrancePools}
-                        mixedPools={mixedPools}
-                        decoupled={decoupled}
-                        allAreas={allAreas}
-                        allEntrances={allEntrances}
+                        currentPage={currentPage}
                         handleLink={handleLink}
-                        handleEntranceMenuOpen={handleEntranceMenuOpen}
                         handleUnLink={handleUnLink}
                         handleCheck={handleCheck}
                         handleUnCheck={handleUnCheck}
                         handleContextMenu={handleContextMenu}
                         handleShopContextMenu={handleShopContextMenu}
+                        handleEntranceMenuOpen={handleEntranceMenuOpen}
+                        handleDungeonTravel={handleDungeonTravel}
                         toggleWalletTiers={toggleWalletTiers}
                         updateShopPrice={updateShopPrice}
                         showShops={showShops}
                         showShopInput={showShopInput}
                         showShopRupee={showShopRupee}
-                        handleDungeonTravel={handleDungeonTravel}
-                        dungeon={dungeon}
                         scrollRef={scrollRef}
-                        ekey={entrance + otherEntrance.ekey + ekey}
-                        key={entrance + otherEntrance.ekey + ekey + i}
+                        ekey={entrance.name + otherEntrance.name + ekey}
+                        key={entrance.name + otherEntrance.name + ekey + i}
                     />
                 )})
             }

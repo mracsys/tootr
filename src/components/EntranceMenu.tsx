@@ -1,7 +1,7 @@
 import Menu from '@mui/material/Menu';
 import Autocomplete, { createFilterOptions } from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
-import type { EntrancePool, AllAreas } from './Tracker';
+import { GraphEntrance, GraphEntrancePool } from '@mracsys/randomizer-graph-tool';
 
 interface AutoOption {
     areaGroup: string,
@@ -13,13 +13,8 @@ interface AutoOption {
 
 interface EntranceMenuProps {
     anchorLocation?: Element | null,
-    sourceEntrance: string,
-    entrancePool: EntrancePool,
-    allAreas: AllAreas,
-    connector: boolean,
-    title: string,
-    oneWay: boolean,
-    isReverse: boolean,
+    sourceEntrance: GraphEntrance | null,
+    entrancePool: GraphEntrancePool,
     id: string,
     handleClose: () => void,
     handleLink: (dataLinkFrom: string, dataLinkTo: string) => void,
@@ -29,51 +24,50 @@ const EntranceMenu = ({
     anchorLocation,
     sourceEntrance,
     entrancePool,
-    allAreas,
-    connector,
-    title,
-    oneWay,
-    isReverse,
     id,
     handleClose,
     handleLink,
 }: EntranceMenuProps) => {
-    let entranceList = allAreas.entrances;
     let eAutoOptions: AutoOption[] = [];
     let longestOption = "";
-    if (typeof entrancePool === "undefined") {
+    if (sourceEntrance === null) {
         return null;
     } else {
-        Object.keys(entrancePool).sort().map((areaCategory) => {
-            let entrances: string[] = entrancePool[areaCategory];
-            entrances.sort(function(a,b) {
-                let aName = entranceList[a].tag === "" || entranceList[a].enableTag === false ?
-                            entranceList[a].alias :
-                            entranceList[a].tag;
-                let bName = entranceList[b].tag === "" || entranceList[b].enableTag === false ?
-                            entranceList[b].alias :
-                            entranceList[b].tag;
-                return aName.localeCompare(bName);
-            }).map((subArea) => {
-                if ((allAreas.entrances[subArea].tagRep || allAreas.entrances[subArea].tag === "" || allAreas.entrances[subArea].enableTag === false) &&
-                (!(oneWay) || (oneWay && allAreas.entrances[subArea].oneWayELink === "")) &&
-                !(((areaCategory === title && !(oneWay || isReverse)) || areaCategory === "Warp Songs" || entrancePool[areaCategory].length === 0) && connector === false)) {
-                    let optionLabel = (allAreas.entrances[subArea].tag === "" || allAreas.entrances[subArea].enableTag === false) ?
-                                    allAreas.entrances[subArea].alias :
-                                    allAreas.entrances[subArea].tag;
-                    eAutoOptions.push({
-                        areaGroup: areaCategory,
-                        eName: optionLabel,
-                        dataLinkTo: subArea,
-                        dataLinkFrom: sourceEntrance,
-                        handleLink: handleLink,
-                    });
-                    if (optionLabel.length > longestOption.length) {
-                        longestOption = optionLabel;
+        const sortEntranceAliases = (e1: GraphEntrance, e2: GraphEntrance) => {
+            let e1Alias = e1.use_target_alias ? e1.target_alias : e1.alias;
+            let e2Alias = e2.use_target_alias ? e2.target_alias : e2.alias;
+            return e1Alias.localeCompare(e2Alias);
+        }
+
+        for (let [areaCategory, entranceList] of Object.entries(entrancePool).sort((a, b) => a[0].localeCompare(b[0]))) {
+            let aliasesAdded: string[] = [];
+            for (let entrance of entranceList.sort(sortEntranceAliases)) {
+                let optionLabel: string;
+                if (!!entrance.reverse && entrance.target_group?.page !== '') {
+                    if (entrance.reverse.target_group?.page === '') {
+                        optionLabel = `from ${entrance.reverse.alias}`;
+                    } else {
+                        optionLabel = entrance.reverse.alias;
                     }
+                } else if (entrance.use_target_alias) {
+                    optionLabel = entrance.target_alias;
+                } else {
+                    optionLabel = entrance.alias;
                 }
-                return null;
-        }); return null;});
+                if (aliasesAdded.includes(optionLabel)) continue;
+                aliasesAdded.push(optionLabel);
+                eAutoOptions.push({
+                    areaGroup: areaCategory,
+                    eName: optionLabel,
+                    dataLinkTo: entrance.name,
+                    dataLinkFrom: sourceEntrance.name,
+                    handleLink: handleLink,
+                });
+                if (optionLabel.length > longestOption.length) {
+                    longestOption = optionLabel;
+                }
+            }
+        }
 
         const filterOptions = createFilterOptions({
             stringify: (option: AutoOption) => option.eName + " " + option.areaGroup,

@@ -1,6 +1,6 @@
 import { Menu, Grid } from '@mui/material';
 
-import OotIcon from './OotIcon';
+import OotItemIcon from './OotItemIcon';
 import type { ItemMenuProps } from './ItemMenu';
 
 
@@ -17,37 +17,37 @@ const ShopItemMenu = (props: ItemMenuProps) => {
         >
             <div>
                 <Grid container spacing={0} className="itemMenuRow">
-                    <Grid item xs onClick={props.handleFind} data-found-in={props.sourceLocation} data-found-item="Goron Tunic">
-                        <OotIcon itemName="Goron Tunic" className="locationMenuIcon" />
+                    <Grid item xs onClick={props.handleFind} data-found-in={props.sourceLocation} data-found-item="Buy Goron Tunic">
+                        <OotItemIcon itemName="Buy Goron Tunic" className="locationMenuIcon" />
                     </Grid>
-                    <Grid item xs onClick={props.handleFind} data-found-in={props.sourceLocation} data-found-item="Zora Tunic">
-                        <OotIcon itemName="Zora Tunic" className="locationMenuIcon" />
+                    <Grid item xs onClick={props.handleFind} data-found-in={props.sourceLocation} data-found-item="Buy Zora Tunic">
+                        <OotItemIcon itemName="Buy Zora Tunic" className="locationMenuIcon" />
                     </Grid>
-                    <Grid item xs onClick={props.handleFind} data-found-in={props.sourceLocation} data-found-item="Bombs">
-                        <OotIcon itemName="Bombs" className="locationMenuIcon" />
+                    <Grid item xs onClick={props.handleFind} data-found-in={props.sourceLocation} data-found-item="Buy Bombs (20)">
+                        <OotItemIcon itemName="Buy Bombs (20)" className="locationMenuIcon" />
                     </Grid>
-                    <Grid item xs onClick={props.handleFind} data-found-in={props.sourceLocation} data-found-item="Bombchu">
-                        <OotIcon itemName="Bombchu" className="locationMenuIcon" />
+                    <Grid item xs onClick={props.handleFind} data-found-in={props.sourceLocation} data-found-item="Buy Bombchu (5)">
+                        <OotItemIcon itemName="Buy Bombchu (5)" className="locationMenuIcon" />
                     </Grid>
-                    <Grid item xs onClick={props.handleFind} data-found-in={props.sourceLocation} data-found-item="Deku Shield">
-                        <OotIcon itemName="Deku Shield" className="locationMenuIcon" />
+                    <Grid item xs onClick={props.handleFind} data-found-in={props.sourceLocation} data-found-item="Buy Deku Shield">
+                        <OotItemIcon itemName="Buy Deku Shield" className="locationMenuIcon" />
                     </Grid>
                 </Grid>
                 <Grid container spacing={0} className="itemMenuRow">
-                    <Grid item xs onClick={props.handleFind} data-found-in={props.sourceLocation} data-found-item="Blue Fire">
-                        <OotIcon itemName="Blue Fire" className="locationMenuIcon" />
+                    <Grid item xs onClick={props.handleFind} data-found-in={props.sourceLocation} data-found-item="Buy Blue Fire">
+                        <OotItemIcon itemName="Buy Blue Fire" className="locationMenuIcon" />
                     </Grid>
-                    <Grid item xs onClick={props.handleFind} data-found-in={props.sourceLocation} data-found-item="Deku Stick">
-                        <OotIcon itemName="Deku Stick" className="locationMenuIcon" />
+                    <Grid item xs onClick={props.handleFind} data-found-in={props.sourceLocation} data-found-item="Buy Deku Stick (1)">
+                        <OotItemIcon itemName="Buy Deku Stick (1)" className="locationMenuIcon" />
                     </Grid>
-                    <Grid item xs onClick={props.handleFind} data-found-in={props.sourceLocation} data-found-item="Arrows">
-                        <OotIcon itemName="Arrows" className="locationMenuIcon" />
+                    <Grid item xs onClick={props.handleFind} data-found-in={props.sourceLocation} data-found-item="Buy Arrows (30)">
+                        <OotItemIcon itemName="Buy Arrows (30)" className="locationMenuIcon" />
                     </Grid>
-                    <Grid item xs onClick={props.handleFind} data-found-in={props.sourceLocation} data-found-item="Deku Seeds">
-                        <OotIcon itemName="Deku Seeds" className="locationMenuIcon" />
+                    <Grid item xs onClick={props.handleFind} data-found-in={props.sourceLocation} data-found-item="Buy Deku Seeds (30)">
+                        <OotItemIcon itemName="Buy Deku Seeds (30)" className="locationMenuIcon" />
                     </Grid>
-                    <Grid item xs onClick={props.handleFind} data-found-in={props.sourceLocation} data-found-item="Hylian Shield">
-                        <OotIcon itemName="Hylian Shield" className="locationMenuIcon" />
+                    <Grid item xs onClick={props.handleFind} data-found-in={props.sourceLocation} data-found-item="Buy Hylian Shield">
+                        <OotItemIcon itemName="Buy Hylian Shield" className="locationMenuIcon" />
                     </Grid>
                 </Grid>
                 <Grid container spacing={0} className="itemMenuRow">

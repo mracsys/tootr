@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# local scripts and files
+*.tgz
+recompile-graph.sh

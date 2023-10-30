@@ -1,39 +1,22 @@
 import React, { MouseEventHandler, MouseEvent } from 'react';
-import Switch from '@mui/material/Switch';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 
 import UnknownEntrance from './UnknownEntrance'
 import LocationCheck from './LocationCheck'
-import type { AllAreas, AllEntrances, Entrance, Entrances, Location } from './Tracker';
+import type { CollapsedRegions } from './Tracker';
 import type ContextMenuHandler from './ContextMenuHandler';
 
-/*const YellowSwitch = withStyles({
-    switchBase: {
-        color: '#ffffcf',
-        '&$checked': {
-            color: '#cbc26d',
-        },
-        '&$checked + $track': {
-            backgroundColor: '#cbc693',
-        },
-    },
-    checked: {},
-    track: {},
-})(Switch);*/
-
+import { GraphRegion, GraphEntrance, GraphLocation } from '@mracsys/randomizer-graph-tool';
 
 interface GameAreaProps {
-    title: string,
-    entrances: {[entranceName: string]: Entrance},
-    entrancePools: Entrances,
-    oneWayEntrancePools: Entrances,
-    mixedPools: string[],
-    decoupled: boolean,
-    allEntrances: AllEntrances,
-    allAreas: AllAreas,
-    locations: {[locationName: string]: Location},
+    region: GraphRegion,
+    playerNum: number,
+    collapsedRegions: CollapsedRegions,
+    entrances: GraphEntrance[],
+    locations: GraphLocation[],
+    currentPage: string,
     handleLink: (dataLinkFrom: string, dataLinkTo: string) => void,
     handleUnLink: (entrance: string, scrollRef: string) => void,
     handleCheck: (locationName: string) => void,
@@ -41,31 +24,26 @@ interface GameAreaProps {
     handleContextMenu: ContextMenuHandler,
     handleShopContextMenu: ContextMenuHandler,
     handleEntranceMenuOpen: (e: MouseEvent<HTMLDivElement>, scrollRef: string) => void,
-    handleDungeonTravel: (entrance: string, useConnector?: boolean) => void,
+    handleDungeonTravel: (targetRegion: GraphRegion | null) => void,
     toggleWalletTiers: (locationName: string) => void,
     updateShopPrice: (locationName: string, price: string) => void,
     showShops: boolean,
     showShopInput: boolean,
     showShopRupee: boolean,
-    dungeon: boolean,
     showUnshuffledEntrances: boolean,
     collapseSwitch: (areaName: string) => void,
     reverseCollapseSwitch: ContextMenuHandler,
     setRef: (entranceKey: string, e: HTMLDivElement | null) => void,
-    mqSwitch: (dungeonName: string) => void,
-    isMQ: boolean,
+    refreshCounter: number,
 }
 
 const GameArea = ({
-    title,
+    region,
+    playerNum,
+    collapsedRegions,
     entrances,
-    entrancePools,
-    oneWayEntrancePools,
-    mixedPools,
-    decoupled,
-    allEntrances,
-    allAreas,
     locations,
+    currentPage,
     handleLink,
     handleUnLink,
     handleCheck,
@@ -79,18 +57,14 @@ const GameArea = ({
     showShops,
     showShopInput,
     showShopRupee,
-    dungeon,
     showUnshuffledEntrances,
     collapseSwitch,
     reverseCollapseSwitch,
     setRef,
-    mqSwitch,
-    isMQ,
+    refreshCounter,
 }: GameAreaProps) => {
-    //Object.filterLocations = (locations: {[locationName: string]: Location}, predicate) =>
-    //    Object.keys(locations)
-    //        .filter( key => predicate(locations[key].visible) );
     const preventDefault: MouseEventHandler = (event: MouseEvent) => event.preventDefault();
+    let title = region.name;
     return (
         <div className="areaCard">
             <a className="entranceAnchor" href={title} id={title} onClick={preventDefault}>
@@ -108,40 +82,31 @@ const GameArea = ({
                     data-source={title}
                 >
                     {
-                        (allAreas.areas[title].collapse === 'none') ?
+                        (collapsedRegions[title] === 'none') ?
                             <ExpandMore className="collapseArea" />
-                            : (allAreas.areas[title].collapse === 'some') ?
+                            : (collapsedRegions[title] === 'some' || collapsedRegions[title] === undefined) ?
                             <ChevronRightIcon className="collapseArea" /> :
                             <ExpandLess className="collapseArea" />
                     }
                     <span className="areaTitleText">
                         {title}
                     </span>
+                    <span className="areaRefreshCounter">
+                        {refreshCounter}
+                    </span>
                 </div>
-                {dungeon ?
-                <React.Fragment>
-                    <span className="mqSwitchLabel">MQ</span>
-                    <Switch
-                        className="dungeonMQSwitch"
-                        checked={isMQ}
-                        onChange={() => {mqSwitch(title + " MQ")}}
-                        name={title + "MQ"}
-                    />
-                </React.Fragment>
-                : null}
             </div>
             {
-                (allAreas.areas[title].collapse !== 'all') ?
+                (collapsedRegions[title] !== 'all') ?
                 <div>
                     <div>
-                    { Object.keys(locations).map((location, i) => { 
-                        if (allAreas.locations[location].check === '' || allAreas.areas[title].collapse === 'none') { 
+                    { locations.map((location, i) => { 
+                        if ((!location.checked || collapsedRegions[title] === 'none') && location.viewable() && !location.is_hint) {
                             return (<React.Fragment key={title + 'locationcheckcontainer' + i}>
                                 <LocationCheck
                                     key={title + "locationcheck" + i}
                                     lkey={title + "location" + i}
                                     location={location}
-                                    allAreas={allAreas}
                                     handleCheck={handleCheck}
                                     handleUnCheck={handleUnCheck}
                                     handleContextMenu={handleContextMenu}
@@ -154,8 +119,9 @@ const GameArea = ({
                         } else { return null; }
                     })}
                     </div>
-                    { Object.keys(entrances).map((entrance, i) => {
+                    { entrances.map((entrance, i) => {
                         let connectorShuffled = false;
+                        /*let connectorShuffled = false;
                         let areaEntrances = allAreas.entrances;
                         function isConnectorShuffled(entrance: string, _index: number, _array: string[]) {
                             return areaEntrances[entrance].shuffled || areaEntrances[entrance].shuffled;
@@ -167,26 +133,19 @@ const GameArea = ({
                             } else {
                                 connectorShuffled = [connector].some(isConnectorShuffled);
                             }
-                        }
-                        if ((!(showUnshuffledEntrances) && allAreas.entrances[entrance].shuffled === true) ||
+                        }*/
+                        if ((!(showUnshuffledEntrances) && entrance.shuffled) ||
                         (connectorShuffled && !(showUnshuffledEntrances)) ||
                         (showUnshuffledEntrances)) {
                             return (
                                 <React.Fragment key={title + "entranceScrollContainer" + i}>
-                                    <div className="scrollControl" ref={(e) => setRef(title + entrance, e)} id={title + "entranceScrollContainer" + i} key={title + "entranceScrollContainer" + i} />
+                                    <div className="scrollControl" ref={(e) => setRef(title + entrance.name, e)} id={title + "entranceScrollContainer" + i} key={title + "entranceScrollContainer" + i} />
                                     <UnknownEntrance
-                                        forceVisible={false}
                                         title={title}
+                                        playerNum={playerNum}
+                                        collapsedRegions={collapsedRegions}
                                         entrance={entrance}
-                                        entrances={entrances}
-                                        connector={false}
-                                        renderedConnectors={[]}
-                                        entrancePools={entrancePools}
-                                        oneWayEntrancePools={oneWayEntrancePools}
-                                        mixedPools={mixedPools}
-                                        decoupled={decoupled}
-                                        allAreas={allAreas}
-                                        allEntrances={allEntrances}
+                                        currentPage={currentPage}
                                         handleLink={handleLink}
                                         handleUnLink={handleUnLink}
                                         handleCheck={handleCheck}
@@ -200,10 +159,14 @@ const GameArea = ({
                                         showShops={showShops}
                                         showShopInput={showShopInput}
                                         showShopRupee={showShopRupee}
-                                        dungeon={dungeon}
+
+                                        connector={false}
+                                        forceVisible={false}
+                                        renderedConnectors={[]}
+
                                         ekey={title + "entrance" + i}
                                         key={title + "entranceContainer" + i}
-                                        scrollRef={title + entrance}
+                                        scrollRef={title + entrance.name}
                                     />
                                 </React.Fragment>
                             );

@@ -1,15 +1,13 @@
 import SubdirectoryArrowRightIcon from '@mui/icons-material/SubdirectoryArrowRight';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-import type { AllAreas, Entrances } from './Tracker';
 import type { MouseEvent } from 'react';
+import { buildEntranceName } from './UnknownEntrance';
+
+import { GraphEntrance } from '@mracsys/randomizer-graph-tool';
 
 interface UnLinkedEntranceProps {
-    entrance: string,
+    entrance: GraphEntrance,
     connector: boolean,
-    oneWayEntrancePools: Entrances,
-    mixedPools: string[],
-    decoupled: boolean,
-    allAreas: AllAreas,
     handleEntranceMenuOpen: (e: MouseEvent<HTMLDivElement>, scrollRef: string) => void,
     forceVisible: boolean,
     scrollRef: string,
@@ -19,16 +17,12 @@ interface UnLinkedEntranceProps {
 const UnLinkedEntrance = ({
     entrance,
     connector,
-    oneWayEntrancePools,
-    mixedPools,
-    decoupled,
-    allAreas,
     handleEntranceMenuOpen,
     forceVisible,
     scrollRef,
     ekey,
 }: UnLinkedEntranceProps) => {
-    const selectEntrancePool = (entrance: string): string => {
+    /*const selectEntrancePool = (entrance: string): string => {
         let settingAreaTypes: {[areaType: string]: string} = {
             'interior': 'Interiors',
             'specialInterior': 'Interiors',
@@ -54,40 +48,34 @@ const UnLinkedEntrance = ({
             subAreas = areaType;
         }
         return subAreas;
-    }
-    const buildEntranceName = (entrance: string): string => {
-        if (allAreas.entrances[entrance].isReverse) {
-            if (allAreas.entrances[allAreas.entrances[entrance].reverse].tag !== "") {
-                return "from " + allAreas.entrances[allAreas.entrances[entrance].reverse].tag;
-            } else {
-                return allAreas.entrances[entrance].alias;
-            }
-        } else {
-            if (entrance === 'GV Lower Stream -> Lake Hylia') {
-                return 'Lake Hylia';
-            } else {
-                return allAreas.entrances[entrance].alias;
-            }
-        }
-    }
+    }*/
 
-    let entrancePool = selectEntrancePool(entrance);
+    //let entrancePool = selectEntrancePool(entrance);
     let scrollConnector = (connector) ? 'connector' : '';
+    let logicColor: string;
+    if (entrance.visited) {
+        logicColor = 'logicalGreen';
+    } else if (entrance.visited_with_other_tricks) {
+        logicColor = 'logicalYellow';
+    } else {
+        logicColor = 'logicalBlank';
+    }
     return (
-        <div className="entranceContainer" key={ekey}>
-            { forceVisible ? <SubdirectoryArrowRightIcon /> : null }
-            <div className="unlinkedEntranceLabel">
-                {buildEntranceName(entrance)}
-            </div>
-            <div className="unlinkedEntranceMenu"
-                    data-source={entrance}
-                    data-connector={connector}
-                    data-etype={entrancePool}
-                    data-el-id={entrance + 'scroll' + scrollConnector}
-                    id={entrance + 'scroll' + scrollConnector}
+        <div className='logicContainer'>
+            <div className={logicColor} />
+            <div className="entranceContainer" key={ekey}>
+                { forceVisible ? <SubdirectoryArrowRightIcon /> : null }
+                <div className="unlinkedEntranceLabel">
+                    {buildEntranceName(entrance)}
+                </div>
+                <div className="unlinkedEntranceMenu"
+                    data-source={entrance.name}
+                    data-el-id={entrance.name + 'scroll' + scrollConnector}
+                    id={entrance.name + 'scroll' + scrollConnector}
                     onClick={(e) => handleEntranceMenuOpen(e, scrollRef)}
-            >
-                <span>Not Checked</span><ArrowDropDownIcon />
+                >
+                    <span>Not Checked</span><ArrowDropDownIcon />
+                </div>
             </div>
         </div>
     );
