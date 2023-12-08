@@ -1,0 +1,11 @@
+added in 3pac's fork
+
+added checks for scarecrow song
+minor tweaks to location alias'
+added treasure chest game keys
+added empty pots and crates
+added grass
+added enemy drops
+added wonderitems
+added gossip stone drops
+icons for pots and crates
