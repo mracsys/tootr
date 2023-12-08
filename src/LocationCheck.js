@@ -8,6 +8,10 @@ import compassIcon from './images/OoT_Compass_Icon.png';
 import smallKeyIcon from './images/OoT_Small_Key_Icon.png';
 import bossKeyIcon from './images/OoT_Boss_Key_Icon.png';
 import noteIcon from './images/Grey_Note.png';
+import crateIcon from './images/OoT_Crate_Icon.png';
+import grassIcon from './images/OoT_Grass_Icon.png';
+import jarIcon from './images/OoT_Jar_Icon.png';
+import soulIcon from './images/OoT_Soul_Icon.png';
 
 import CheckBoxOutlineBlankIcon from '@material-ui/icons/CheckBoxOutlineBlank';
 import DoneIcon from '@material-ui/icons/Done';
@@ -20,7 +24,11 @@ class LocationCheck extends React.Component {
             "compass": compassIcon,
             "smallKey": smallKeyIcon,
             "bossKey": bossKeyIcon,
-            "song": noteIcon
+            "song": noteIcon,
+			"crate": crateIcon,
+			"grass": grassIcon,
+			"jar": jarIcon,
+			"enemyDrop": soulIcon
         };
         let walletTiers = [
             "Green Rupee",

@@ -82,6 +82,7 @@ import OoT_Silver_Scale_Icon from './images/OoT_Silver_Scale_Icon.png';
 import OoT_Skull_Mask_Icon from './images/OoT_Skull_Mask_Icon.png';
 import OoT_Small_Key_Icon from './images/OoT_Small_Key_Icon.png';
 import OoT_Small_Magic_Jar_Icon from './images/OoT_Small_Magic_Jar_Icon.png';
+import OoT_Soul_Icon from './images/OoT_Soul_Icon.png';
 import OoT_Spiritual_Stone_of_Fire_Icon from './images/OoT_Spiritual_Stone_of_Fire_Icon.png';
 import OoT_Spiritual_Stone_of_the_Forest_Icon from './images/OoT_Spiritual_Stone_of_the_Forest_Icon.png';
 import OoT_Spiritual_Stone_of_Water_Icon from './images/OoT_Spiritual_Stone_of_Water_Icon.png';
@@ -137,6 +138,7 @@ import OoT_Mirror_Shield_Icon from './images/OoT_Mirror_Shield_Icon.png';
 import OoT_Nayrus_Love_Icon from './images/OoT_Nayrus_Love_Icon.png';
 import OoT_Silver_Scale_Icon from './images/OoT_Silver_Scale_Icon.png';
 import OoT_Small_Magic_Jar_Icon from './images/OoT_Small_Magic_Jar_Icon.png';
+import OoT_Soul_Icon from './images/OoT_Soul_Icon.png';
 import OoT_Stone_of_Agony_Icon from './images/OoT_Stone_of_Agony_Icon.png';
 import OoT_Token_Icon from './images/OoT_Token_Icon.png';
 import OoT_Zora_Tunic_Icon from './images/OoT_Zora_Tunic_Icon.png';
@@ -326,6 +328,7 @@ class OotIcon extends React.Component {
             'Ocarina Note C Down': OoT_C_Down_Icon,
             'Ocarina Note C Right': OoT_C_Right_Icon,
             'Ocarina Note C Left': OoT_C_Left_Icon,
+            'Enemy Soul Token': OoT_Soul_Icon,
         };
         let keyMap = {
             'Forest Temple': 'Fo',

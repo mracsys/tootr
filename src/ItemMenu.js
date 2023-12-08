@@ -366,6 +366,11 @@ class ItemMenu extends React.Component {
                         <OotIcon classes={this.props.classes} itemName="Claim Check" className={this.props.classes.locationMenuIcon} />
                     </div>
                 </div>
+				<div className={this.props.classes.itemMenuRow}>
+					<div onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Enemy Soul Token">
+                        <OotIcon classes={this.props.classes} itemName="Enemy Soul Token" className={this.props.classes.locationMenuIcon} />
+                    </div>
+				</div>
                 <div className={this.props.classes.itemMenuRow}>
                     <div className={this.props.classes.itemMenuClear} onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="">
                         <p className={this.props.classes.locationMenuClear}>Clear Item</p>
