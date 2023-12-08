@@ -5,7 +5,7 @@
             "area": "",
             "lKey": "Kakariko Village -> Bottom of the Well",
             "alias": "Entrance Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -24,7 +24,7 @@
             "area": "",
             "lKey": "Kakariko Village -> Bottom of the Well",
             "alias": "Entrance Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -43,7 +43,7 @@
             "area": "",
             "lKey": "Kakariko Village -> Bottom of the Well",
             "alias": "Near Basement Ladder Top Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -62,7 +62,7 @@
             "area": "",
             "lKey": "Kakariko Village -> Bottom of the Well",
             "alias": "Near Basement Ladder Top Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -81,7 +81,7 @@
             "area": "",
             "lKey": "Kakariko Village -> Bottom of the Well",
             "alias": "Near Basement Ladder Top Pot 3",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -145,7 +145,7 @@
             "area": "",
             "lKey": "Kakariko Village -> Bottom of the Well",
             "alias": "Underwater Pot",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -346,7 +346,7 @@
             "area": "",
             "lKey": "Kakariko Village -> Bottom of the Well",
             "alias": "Left Inner Room Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -365,7 +365,7 @@
             "area": "",
             "lKey": "Kakariko Village -> Bottom of the Well",
             "alias": "Left Inner Room Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -384,7 +384,7 @@
             "area": "",
             "lKey": "Kakariko Village -> Bottom of the Well",
             "alias": "Left Inner Room Pot 3",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -442,7 +442,7 @@
             "area": "",
             "lKey": "Kakariko Village -> Bottom of the Well",
             "alias": "Fire Keese Pot",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -695,7 +695,7 @@
             "area": "",
             "lKey": "Kakariko Village -> Bottom of the Well",
             "alias": "Basement Pot Corridor Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -714,7 +714,7 @@
             "area": "",
             "lKey": "Kakariko Village -> Bottom of the Well",
             "alias": "Basement Pot Corridor Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -733,7 +733,7 @@
             "area": "",
             "lKey": "Kakariko Village -> Bottom of the Well",
             "alias": "Basement Pot Corridor Pot 3",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -752,7 +752,7 @@
             "area": "",
             "lKey": "Kakariko Village -> Bottom of the Well",
             "alias": "Basement Pot Corridor Pot 4",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -771,7 +771,7 @@
             "area": "",
             "lKey": "Kakariko Village -> Bottom of the Well",
             "alias": "Basement Pot Corridor Pot 5",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -790,7 +790,7 @@
             "area": "",
             "lKey": "Kakariko Village -> Bottom of the Well",
             "alias": "Basement Pot Corridor Pot 6",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -809,7 +809,7 @@
             "area": "",
             "lKey": "Kakariko Village -> Bottom of the Well",
             "alias": "Basement Pot Corridor Pot 7",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -828,7 +828,7 @@
             "area": "",
             "lKey": "Kakariko Village -> Bottom of the Well",
             "alias": "Basement Pot Corridor Pot 8",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -847,7 +847,7 @@
             "area": "",
             "lKey": "Kakariko Village -> Bottom of the Well",
             "alias": "Basement Pot Corridor Pot 9",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -866,7 +866,7 @@
             "area": "",
             "lKey": "Kakariko Village -> Bottom of the Well",
             "alias": "Basement Pot Corridor Pot 10",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -885,7 +885,7 @@
             "area": "",
             "lKey": "Kakariko Village -> Bottom of the Well",
             "alias": "Basement Pot Corridor Pot 11",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -904,7 +904,7 @@
             "area": "",
             "lKey": "Kakariko Village -> Bottom of the Well",
             "alias": "Basement Pot Corridor Pot 12",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -925,6 +925,564 @@
             "alias": "Basement Chest",
             "type": "map",
             "settings": [{"setting": "Bottom of the Well MQ", "value": false, "required": true}],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well Basement Behind Rock Grass 1": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Basement Behind Rock Grass 1",
+            "type": "grass",
+            "settings": [
+                {"setting": "Shuffle Grass", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well Basement Behind Rock Grass 2": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Basement Behind Rock Grass 2",
+            "type": "grass",
+            "settings": [
+                {"setting": "Shuffle Grass", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well Basement Behind Rock Grass 3": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Basement Behind Rock Grass 3",
+            "type": "grass",
+            "settings": [
+                {"setting": "Shuffle Grass", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well Basement Behind Rock Grass 4": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Basement Behind Rock Grass 4",
+            "type": "grass",
+            "settings": [
+                {"setting": "Shuffle Grass", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well Basement Behind Rock Grass 5": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Basement Behind Rock Grass 5",
+            "type": "grass",
+            "settings": [
+                {"setting": "Shuffle Grass", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well Basement Behind Rock Grass 6": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Basement Behind Rock Grass 6",
+            "type": "grass",
+            "settings": [
+                {"setting": "Shuffle Grass", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well Basement Behind Rock Grass 7": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Basement Behind Rock Grass 7",
+            "type": "grass",
+            "settings": [
+                {"setting": "Shuffle Grass", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well Basement Behind Rock Grass 8": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Basement Behind Rock Grass 8",
+            "type": "grass",
+            "settings": [
+                {"setting": "Shuffle Grass", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well Basement Behind Rock Grass 9": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Basement Behind Rock Grass 9",
+            "type": "grass",
+            "settings": [
+                {"setting": "Shuffle Grass", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well Basement Grass 1": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Basement Grass 1",
+            "type": "grass",
+            "settings": [
+                {"setting": "Shuffle Grass", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well Basement Grass 2": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Basement Grass 2",
+            "type": "grass",
+            "settings": [
+                {"setting": "Shuffle Grass", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well Basement Grass 3": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Basement Grass 3",
+            "type": "grass",
+            "settings": [
+                {"setting": "Shuffle Grass", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well Left Side Skulltula": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Left Side Skulltula",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well Entryway Skulltula": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Entryway Skulltula",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well Inside Gate Skulltula": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Inside Gate Skulltula",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well Dead Hand Skulltula": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Dead Hand Skulltula",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well Center Room Wallmaster": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Center Room Wallmaster",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well Like Like": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Like Like",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well Patrolling Bubble": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Patrolling Bubble",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well Basement Redead Near Water": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Basement Redead Near Water",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well Basement Redead Near Chest": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Basement Redead Near Chest",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well Coffin Room Redead": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Coffin Room Redead",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well Fire Keese 1": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Fire Keese 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well Fire Keese 2": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Fire Keese 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well Fire Keese 3": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Fire Keese 3",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well Fire Keese Room Beamos": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Fire Keese Room Beamos",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well Dead Hand": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Dead Hand",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well Behind Right Locked Door Keese 1": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Behind Right Locked Door Keese 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well Behind Right Locked Door Keese 2": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Behind Right Locked Door Keese 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well Behind Right Locked Door Keese 3": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Behind Right Locked Door Keese 3",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well Behind Right Locked Door Keese 4": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Behind Right Locked Door Keese 4",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": false, "required": true}
+            ],
             "visible": true,
             "check": "",
             "foundItem": "",
@@ -1034,6 +1592,26 @@
             "shuffled": true,
             "shuffleRules": []
         },
+        "Bottom of the Well MQ Perimiter Behind Gate Pot": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Perimiter Behind Gate Pot",
+            "type": "jar",
+            "settings": [
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Empty Pots", "value": "On", "required": true},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
+                {"setting": "Bottom of the Well MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
         "Bottom of the Well MQ Map Chest": {
             "area": "",
             "lKey": "Kakariko Village -> Bottom of the Well",
@@ -1053,7 +1631,7 @@
             "area": "",
             "lKey": "Kakariko Village -> Bottom of the Well",
             "alias": "Central Room Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1072,7 +1650,7 @@
             "area": "",
             "lKey": "Kakariko Village -> Bottom of the Well",
             "alias": "Central Room Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1091,7 +1669,7 @@
             "area": "",
             "lKey": "Kakariko Village -> Bottom of the Well",
             "alias": "Central Room Pot 3",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1125,7 +1703,7 @@
             "area": "",
             "lKey": "Kakariko Village -> Bottom of the Well",
             "alias": "Right Center Room Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1144,7 +1722,7 @@
             "area": "",
             "lKey": "Kakariko Village -> Bottom of the Well",
             "alias": "Right Center Room Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1163,7 +1741,7 @@
             "area": "",
             "lKey": "Kakariko Village -> Bottom of the Well",
             "alias": "Right Center Room Pot 3",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1327,6 +1905,708 @@
                 {"setting": "Tokensanity", "value": "Dungeons", "required": false},
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ]
+        },
+        "Bottom of the Well MQ Dead Hand Grass 1": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Dead Hand Grass 1",
+            "type": "grass",
+            "settings": [
+                {"setting": "Shuffle Grass", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well MQ Dead Hand Grass 2": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Dead Hand Grass 2",
+            "type": "grass",
+            "settings": [
+                {"setting": "Shuffle Grass", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well MQ Dead Hand Grass 3": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Dead Hand Grass 3",
+            "type": "grass",
+            "settings": [
+                {"setting": "Shuffle Grass", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well MQ Dead Hand Grass 4": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Dead Hand Grass 4",
+            "type": "grass",
+            "settings": [
+                {"setting": "Shuffle Grass", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well MQ First Hallway Redead": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "First Hallway Redead",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well MQ Inside Gate Skullwalltula Lower": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Inside Gate Skullwalltula 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well MQ Inside Gate Skullwalltula Higher": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Inside Gate Skullwalltula 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well MQ Center Room Pitfall Skulltula": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Center Room Pitfall Skulltula",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well MQ Center Room Wallmaster": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Center Room Wallmaster",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well MQ Basement Skulltula 1": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Basement Skulltula 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well MQ Basement Skulltula 2": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Basement Skulltula 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well MQ Basement Skulltula 3": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Basement Skulltula 3",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well MQ Basement Wallmaster": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Basement Wallmaster",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well MQ Basement Redead 1": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Basement Redead 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well MQ Basement Redead 2": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Basement Redead 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well MQ Basement Redead 3": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Basement Redead 3",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well MQ Basement Redead 4": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Basement Redead 4",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well MQ Basement Redead 5": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Basement Redead 5",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well MQ Coffin Room Gibdo": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Coffin Room Gibdo",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well MQ False Floor Wallmaster": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "False Floor Wallmaster",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well MQ False Floor Floormaster": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "False Floor Floormaster",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well MQ Deadhand": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Deadhand",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well MQ West Inner Room Keese 1": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "West Inner Room Keese 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well MQ West Inner Room Keese 2": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "West Inner Room Keese 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well MQ West Inner Room Keese 3": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "West Inner Room Keese 3",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well MQ West Inner Room Invisible Skulltula 1": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "West Inner Room Invisible Skulltula 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well MQ West Inner Room Invisible Skulltula 2": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "West Inner Room Invisible Skulltula 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well MQ Main Area Left Slingshot Wonderitem 1": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Main Area Left Slingshot Wonderitem 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Wonderitems", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well MQ Main Area Left Slingshot Wonderitem 2": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Main Area Left Slingshot Wonderitem 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Wonderitems", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well MQ Main Area Left Slingshot Wonderitem 3": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Main Area Left Slingshot Wonderitem 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Wonderitems", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well MQ Main Area Left Slingshot Wonderitem 4": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Main Area Left Slingshot Wonderitem 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Wonderitems", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well MQ Main Area Right Slingshot Wonderitem 1": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Main Area Right Slingshot Wonderitem 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Wonderitems", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well MQ Main Area Right Slingshot Wonderitem 2": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Main Area Right Slingshot Wonderitem 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Wonderitems", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well MQ Main Area Right Slingshot Wonderitem 3": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Main Area Right Slingshot Wonderitem 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Wonderitems", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well MQ Main Area Right Slingshot Wonderitem 4": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "Main Area Right Slingshot Wonderitem 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Wonderitems", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well MQ East Inner Room Slingshot Wonderitem 1": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "East Inner Room Slingshot Wonderitem 1",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Wonderitems", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well MQ East Inner Room Slingshot Wonderitem 2": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "East Inner Room Slingshot Wonderitem 2",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Wonderitems", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well MQ East Inner Room Slingshot Wonderitem 3": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "East Inner Room Slingshot Wonderitem 3",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Wonderitems", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Bottom of the Well MQ East Inner Room Slingshot Wonderitem 4": {
+            "area": "",
+            "lKey": "Kakariko Village -> Bottom of the Well",
+            "alias": "East Inner Room Slingshot Wonderitem 4",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Wonderitems", "value": "On", "required": true},
+                {"setting": "Bottom of the Well MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         }
     }
 }

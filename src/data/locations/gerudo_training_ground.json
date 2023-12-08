@@ -669,6 +669,474 @@
             "shuffled": true,
             "shuffleRules": []
         },
+        "Gerudo Training Ground Stalfos 1": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Stalfos 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Gerudo Training Ground MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground Stalfos 2": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Stalfos 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Gerudo Training Ground MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground Slopes Wallmaster": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Silver Rupees Wallmaster",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Gerudo Training Ground MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground Heavy Block Wolfos 1": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Heavy Block Wolfos 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Gerudo Training Ground MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground Heavy Block Wolfos 2": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Heavy Block Wolfos 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Gerudo Training Ground MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground Heavy Block Wolfos 3": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Heavy Block Wolfos 3",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Gerudo Training Ground MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground Heavy Block Wolfos 4": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Heavy Block Wolfos 4",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Gerudo Training Ground MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground Heavy Block Like Like 1": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Heavy Block Like Like 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Gerudo Training Ground MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground Heavy Block Like Like 2": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Heavy Block Like Like 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Gerudo Training Ground MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground Heavy Block Like Like 3": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Heavy Block Like Like 3",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Gerudo Training Ground MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground Hammer Room Keese 1": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Hammer Room Keese 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Gerudo Training Ground MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground Hammer Room Keese 2": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Hammer Room Keese 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Gerudo Training Ground MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground Hammer Room Torch Slug 1": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Hammer Room Torch Slug 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Gerudo Training Ground MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground Hammer Room Torch Slug 2": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Hammer Room Torch Slug 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Gerudo Training Ground MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground Lava Room Bubble 1": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Lava Room Bubble 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Gerudo Training Ground MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground Lava Room Bubble 2": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Lava Room Bubble 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Gerudo Training Ground MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground Beamos": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Beamos",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Gerudo Training Ground MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground Lizalfos 1": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Lizalfos 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Gerudo Training Ground MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground Lizalfos 2": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Lizalfos 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Gerudo Training Ground MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground Underwater Shell Blade 1": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Underwater Shell Blade 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Gerudo Training Ground MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground Underwater Shell Blade 2": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Underwater Shell Blade 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Gerudo Training Ground MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground Underwater Shell Blade 3": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Underwater Shell Blade 3",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Gerudo Training Ground MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground Underwater Shell Blade 4": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Underwater Shell Blade 4",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Gerudo Training Ground MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground Eye Statue Wonderitem": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Eye Statue Wonderitem",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Wonderitems", "value": "On", "required": true},
+                {"setting": "Gerudo Training Ground MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground Hammer Room Wonderitem": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Hammer Room Wonderitem",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Wonderitems", "value": "On", "required": true},
+                {"setting": "Gerudo Training Ground MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground Beamos Wonderitem": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Beamos Wonderitem",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Wonderitems", "value": "On", "required": true},
+                {"setting": "Gerudo Training Ground MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
         "Gerudo Training Grounds MQ Lobby Left Chest": {
             "area": "",
             "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
@@ -703,7 +1171,7 @@
             "area": "",
             "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
             "alias": "Lobby Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -722,7 +1190,7 @@
             "area": "",
             "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
             "alias": "Lobby Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -741,7 +1209,7 @@
             "area": "",
             "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
             "alias": "Lobby Pot 3",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -760,7 +1228,7 @@
             "area": "",
             "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
             "alias": "Lobby Pot 4",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1284,10 +1752,568 @@
             "area": "",
             "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
             "alias": "Maze Center Crate",
-            "type": "item",
+            "type": "crate",
             "settings": [
                 {"setting": "Shuffle Crates", "value": "All", "required": false},
                 {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
+                {"setting": "Gerudo Training Ground MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground MQ First Iron Knuckle": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "First Iron Knuckle",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Gerudo Training Ground MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground MQ Slopes Freezard": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Silver Rupees Freezard",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Gerudo Training Ground MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground MQ Slopes Wallmaster": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Silver Rupees Wallmaster",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Gerudo Training Ground MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground MQ Before Heavy Block Stalfos 1": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Before Heavy Block Stalfos 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Gerudo Training Ground MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground MQ Before Heavy Block Stalfos 2": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Before Heavy Block Stalfos 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Gerudo Training Ground MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground MQ Before Heavy Block Skulltula 1": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Before Heavy Block Skulltula 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Gerudo Training Ground MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground MQ Before Heavy Block Skulltula 2": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Before Heavy Block Skulltula 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Gerudo Training Ground MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground MQ Before Heavy Block Skulltula 3": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Before Heavy Block Skulltula 3",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Gerudo Training Ground MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground MQ Second Iron Knuckle": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Second Iron Knuckle",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Gerudo Training Ground MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground MQ Second Iron Knuckle Torch Slug 1": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Second Iron Knuckle Torch Slug 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Gerudo Training Ground MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground MQ Second Iron Knuckle Torch Slug 2": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Second Iron Knuckle Torch Slug 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Gerudo Training Ground MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground MQ Lava Room Bubble 1": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Lava Room Bubble 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Gerudo Training Ground MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground MQ Lava Room Bubble 2": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Lava Room Bubble 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Gerudo Training Ground MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground MQ Lava Room Bubble 3": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Lava Room Bubble 3",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Gerudo Training Ground MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground MQ Dinalfos 1": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Dinalfos 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Gerudo Training Ground MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground MQ Dinalfos 2": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Dinalfos 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Gerudo Training Ground MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground MQ Dinalfos 3": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Dinalfos 3",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Gerudo Training Ground MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground MQ Dodongo 1": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Dodongo 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Gerudo Training Ground MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground MQ Dodongo 2": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Dodongo 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Gerudo Training Ground MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground MQ Armos": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Armos",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Gerudo Training Ground MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground MQ Underwater Stingray 1": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Underwater Stingray 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Gerudo Training Ground MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground MQ Underwater Stingray 2": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Underwater Stingray 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Gerudo Training Ground MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground MQ Water Bari": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Water Bari",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Gerudo Training Ground MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground MQ Underwater Shellblade": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Underwater Shellblade",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Gerudo Training Ground MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground MQ Heavy Block Freezard 1": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Heavy Block Freezard 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Gerudo Training Ground MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground MQ Heavy Block Freezard 2": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Heavy Block Freezard 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Gerudo Training Ground MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground MQ Heavy Block Spike 1": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Heavy Block Spike 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Gerudo Training Ground MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground MQ Heavy Block Spike 2": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Heavy Block Spike 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Gerudo Training Ground MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground MQ Heavy Block Spike 3": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Heavy Block Spike 3",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Gerudo Training Ground MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground MQ Eye Statue Proximity Wonderitem": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Eye Statue Proximity Wonderitem",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Wonderitems", "value": "On", "required": true},
+                {"setting": "Gerudo Training Ground MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Gerudo Training Ground MQ Dinolfos Arrow Wonderitem": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
+            "alias": "Dinolfos Room Arrow Wonderitem",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Wonderitems", "value": "On", "required": true},
                 {"setting": "Gerudo Training Ground MQ", "value": true, "required": true}
             ],
             "visible": true,

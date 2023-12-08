@@ -364,7 +364,7 @@
             "area": "Zora's Domain",
             "lKey": "",
             "alias": "Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
@@ -382,7 +382,7 @@
             "area": "Zora's Domain",
             "lKey": "",
             "alias": "Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
@@ -400,7 +400,7 @@
             "area": "Zora's Domain",
             "lKey": "",
             "alias": "Pot 3",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
@@ -418,7 +418,7 @@
             "area": "Zora's Domain",
             "lKey": "",
             "alias": "Pot 4",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
@@ -436,7 +436,7 @@
             "area": "Zora's Domain",
             "lKey": "",
             "alias": "Pot 5",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
@@ -486,6 +486,21 @@
             "alias": "Beehive 3",
             "type": "item",
             "settings": [{"setting": "Shuffle Beehives", "value": "On", "required": true}],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "ZD Gossip Stone Drop": {
+            "area": "Zora's Domain",
+            "lKey": "",
+            "alias": "Gossip Stone Drop",
+            "type": "item",
+            "settings": [{"setting": "Shuffle Gossip Stones", "value": "On", "required": true}],
             "visible": true,
             "check": "",
             "foundItem": "",

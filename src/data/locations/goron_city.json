@@ -639,7 +639,7 @@
             "area": "Goron City",
             "lKey": "",
             "alias": "Darunia Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
@@ -657,7 +657,7 @@
             "area": "Goron City",
             "lKey": "",
             "alias": "Darunia Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
@@ -675,7 +675,7 @@
             "area": "Goron City",
             "lKey": "",
             "alias": "Darunia Pot 3",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
@@ -693,7 +693,7 @@
             "area": "Goron City",
             "lKey": "",
             "alias": "Medigoron Pot",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
@@ -711,7 +711,7 @@
             "area": "Goron City",
             "lKey": "",
             "alias": "Staircase Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
@@ -729,7 +729,7 @@
             "area": "Goron City",
             "lKey": "",
             "alias": "Staircase Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
@@ -747,7 +747,7 @@
             "area": "Goron City",
             "lKey": "",
             "alias": "Staircase Pot 3",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
@@ -765,7 +765,7 @@
             "area": "Goron City",
             "lKey": "",
             "alias": "Staircase Pot 4",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
@@ -783,7 +783,7 @@
             "area": "Goron City",
             "lKey": "",
             "alias": "Staircase Pot 5",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
@@ -801,11 +801,41 @@
             "area": "Goron City",
             "lKey": "",
             "alias": "Boulder Maze Crate",
-            "type": "item",
+            "type": "crate",
             "settings": [
                 {"setting": "Shuffle Crates", "value": "All", "required": false},
                 {"setting": "Shuffle Crates", "value": "Overworld", "required": false}
             ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "GC Maze Gossip Stone Drop": {
+            "area": "Goron City",
+            "lKey": "",
+            "alias": "Rock Maze Gossip Stone Drop",
+            "type": "item",
+            "settings": [{"setting": "Shuffle Gossip Stones", "value": "On", "required": true}],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "GC Medigoron Gossip Stone Drop": {
+            "area": "Goron City",
+            "lKey": "",
+            "alias": "Medigoron Gossip Stone Drop",
+            "type": "item",
+            "settings": [{"setting": "Shuffle Gossip Stones", "value": "On", "required": true}],
             "visible": true,
             "check": "",
             "foundItem": "",

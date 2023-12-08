@@ -88,7 +88,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Lower Right Side Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -107,7 +107,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Lower Right Side Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -126,7 +126,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Lower Right Side Pot 3",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -145,7 +145,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Lower Right Side Pot 4",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -164,7 +164,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Lower Right Side Pot 5",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -183,7 +183,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Lower Right Side Pot 6",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -244,7 +244,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Early Lizalfos Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -263,7 +263,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Early Lizalfos Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -282,7 +282,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Early Lizalfos Pot 3",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -301,7 +301,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Early Lizalfos Pot 4",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -340,7 +340,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Torch Hallway Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -359,7 +359,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Torch Hallway Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -378,7 +378,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Torch Hallway Pot 3",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -397,7 +397,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Torch Hallway Pot 4",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -431,7 +431,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Staircase Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -450,7 +450,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Staircase Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -469,7 +469,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Staircase Pot 3",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -488,7 +488,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Staircase Pot 4",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -589,7 +589,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Blade Room Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -608,7 +608,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Blade Room Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -627,7 +627,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Late Lizalfos Lobby Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -646,7 +646,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Late Lizalfos Lobby Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -703,7 +703,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Late Lizalfos Exit Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -722,7 +722,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Late Lizalfos Exit Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -835,7 +835,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Boss Lobby Block Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -854,7 +854,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Boss Lobby Block Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -873,10 +873,804 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Boss Lobby Block Pot 3",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Last Block Pot 4": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Boss Lobby Block Pot 4",
+            "type": "jar",
+            "settings": [
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Empty Pots", "value": "On", "required": true},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Gossip Stone Drop": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Gossip Stone Drop",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Gossip Stones", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern First Bridge Grass": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "First Bridge Grass",
+            "type": "grass",
+            "settings": [
+                {"setting": "Shuffle Grass", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Before Boss Grass": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Before Boss Grass",
+            "type": "grass",
+            "settings": [
+                {"setting": "Shuffle Grass", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Blade Room Grass": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Blade Room Grass",
+            "type": "grass",
+            "settings": [
+                {"setting": "Shuffle Grass", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Single Eye Switch Room Grass": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Single Eye Switch Room Grass",
+            "type": "grass",
+            "settings": [
+                {"setting": "Shuffle Grass", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Beamos Left Side": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Beamos Left Side",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Beamos Right Side": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Beamos Right Side",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Beamos Center": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Beamos Center",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Right Side Baby Dodongo 1": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Right Side Baby Dodongo 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Right Side Baby Dodongo 2": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Right Side Baby Dodongo 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Right Side Baby Dodongo 3": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Right Side Baby Dodongo 3",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Right Side Baby Dodongo 4": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Right Side Baby Dodongo 4",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Right Side Baby Dodongo 5": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Right Side Baby Dodongo 5",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Right Side Baby Dodongo 6": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Right Side Baby Dodongo 6",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Right Side Keese 1": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Right Side Keese 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Right Side Keese 2": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Right Side Keese 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Lower Lizalfos 1": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Lower Lizalfos 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Lower Lizalfos 2": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Lower Lizalfos 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Torch Room Dodongo 1": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Torch Room Dodongo 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Torch Room Dodongo 2": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Torch Room Dodongo 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Torch Room Dodongo 3": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Torch Room Dodongo 3",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Side Room Near Lower Lizalfos Keese 1": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Side Room Near Lower Lizalfos Keese 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Side Room Near Lower Lizalfos Keese 2": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Side Room Near Lower Lizalfos Keese 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Side Room Near Lower Lizalfos Keese 3": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Side Room Near Lower Lizalfos Keese 3",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Compass Room Armos": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Compass Room Armos",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Staircase Skullwalltula": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Staircase Skullwalltula",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Climb Switch Room Armos 1": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Climb Switch Room Armos 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Climb Switch Room Armos 2": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Climb Switch Room Armos 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Climb Switch Room Armos 3": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Climb Switch Room Armos 3",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Climb Switch Room Keese 1": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Climb Switch Room Keese 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Climb Switch Room Keese 2": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Climb Switch Room Keese 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Upper Bridge Keese 1": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Upper Bridge Keese 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Upper Bridge Keese 2": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Upper Bridge Keese 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Before Upper Lizalfos Baby Dodongo 1": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Before Upper Lizalfos Baby Dodongo 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Before Upper Lizalfos Baby Dodongo 2": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Before Upper Lizalfos Baby Dodongo 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Before Upper Lizalfos Baby Dodongo 3": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Before Upper Lizalfos Baby Dodongo 3",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Upper Lizalfos 1": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Upper Lizalfos 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Upper Lizalfos 2": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Upper Lizalfos 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Before Boss Keese 1": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Before Boss Keese 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Before Boss Keese 2": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Before Boss Keese 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Before Back Room Keese 1": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Before Back Room Keese 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Before Back Room Keese 2": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Before Back Room Keese 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern Back Room Armos": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Back Room Armos",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
                 {"setting": "Dodongo's Cavern MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -962,7 +1756,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Lower Right Side Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -981,7 +1775,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Lower Right Side Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1020,7 +1814,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Lower Right Side Pot 3",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1039,7 +1833,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Lower Right Side Pot 4",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1058,7 +1852,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Poe Hallway Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1077,7 +1871,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Poe Hallway Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1096,7 +1890,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Poe Hallway Pot 3",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1115,7 +1909,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Poe Hallway Pot 4",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1134,7 +1928,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Poe Hallway Crate 1",
-            "type": "item",
+            "type": "crate",
             "settings": [
                 {"setting": "Shuffle Crates", "value": "All", "required": false},
                 {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
@@ -1153,7 +1947,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Poe Hallway Crate 2",
-            "type": "item",
+            "type": "crate",
             "settings": [
                 {"setting": "Shuffle Crates", "value": "All", "required": false},
                 {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
@@ -1172,7 +1966,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Poe Hallway Crate 3",
-            "type": "item",
+            "type": "crate",
             "settings": [
                 {"setting": "Shuffle Crates", "value": "All", "required": false},
                 {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
@@ -1191,7 +1985,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Poe Hallway Crate 4",
-            "type": "item",
+            "type": "crate",
             "settings": [
                 {"setting": "Shuffle Crates", "value": "All", "required": false},
                 {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
@@ -1210,7 +2004,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Poe Hallway Crate 5",
-            "type": "item",
+            "type": "crate",
             "settings": [
                 {"setting": "Shuffle Crates", "value": "All", "required": false},
                 {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
@@ -1229,7 +2023,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Poe Hallway Crate 6",
-            "type": "item",
+            "type": "crate",
             "settings": [
                 {"setting": "Shuffle Crates", "value": "All", "required": false},
                 {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
@@ -1248,7 +2042,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Poe Hallway Crate 7",
-            "type": "item",
+            "type": "crate",
             "settings": [
                 {"setting": "Shuffle Crates", "value": "All", "required": false},
                 {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
@@ -1267,7 +2061,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Poe Hallway Crate 8",
-            "type": "item",
+            "type": "crate",
             "settings": [
                 {"setting": "Shuffle Crates", "value": "All", "required": false},
                 {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
@@ -1310,7 +2104,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Torch Puzzle Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1329,7 +2123,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Torch Puzzle Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1421,7 +2215,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Larvae Room Crate 1",
-            "type": "item",
+            "type": "crate",
             "settings": [
                 {"setting": "Shuffle Crates", "value": "All", "required": false},
                 {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
@@ -1440,7 +2234,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Larvae Room Crate 2",
-            "type": "item",
+            "type": "crate",
             "settings": [
                 {"setting": "Shuffle Crates", "value": "All", "required": false},
                 {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
@@ -1459,7 +2253,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Larvae Room Crate 3",
-            "type": "item",
+            "type": "crate",
             "settings": [
                 {"setting": "Shuffle Crates", "value": "All", "required": false},
                 {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
@@ -1478,7 +2272,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Larvae Room Crate 4",
-            "type": "item",
+            "type": "crate",
             "settings": [
                 {"setting": "Shuffle Crates", "value": "All", "required": false},
                 {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
@@ -1497,7 +2291,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Larvae Room Crate 5",
-            "type": "item",
+            "type": "crate",
             "settings": [
                 {"setting": "Shuffle Crates", "value": "All", "required": false},
                 {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
@@ -1516,7 +2310,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Larvae Room Crate 6",
-            "type": "item",
+            "type": "crate",
             "settings": [
                 {"setting": "Shuffle Crates", "value": "All", "required": false},
                 {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
@@ -1535,7 +2329,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Upper Lizalfos Exit Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1554,7 +2348,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Upper Lizalfos Exit Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1573,7 +2367,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Upper Lizalfos Exit Crate 1",
-            "type": "item",
+            "type": "crate",
             "settings": [
                 {"setting": "Shuffle Crates", "value": "All", "required": false},
                 {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
@@ -1592,7 +2386,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Upper Lizalfos Exit Crate 2",
-            "type": "item",
+            "type": "crate",
             "settings": [
                 {"setting": "Shuffle Crates", "value": "All", "required": false},
                 {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
@@ -1611,7 +2405,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Upper Lizalfos Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1630,7 +2424,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Upper Lizalfos Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1649,7 +2443,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Upper Lizalfos Pot 3",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1668,7 +2462,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Upper Lizalfos Pot 4",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1711,7 +2505,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Upper Lizalfos Lobby Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1730,7 +2524,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Upper Lizalfos Lobby Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1864,7 +2658,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Staircase Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1883,7 +2677,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Staircase Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1902,7 +2696,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Staircase Pot 3",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1921,7 +2715,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Staircase Pot 4",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1940,7 +2734,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Staircase Crate 1",
-            "type": "item",
+            "type": "crate",
             "settings": [
                 {"setting": "Shuffle Crates", "value": "All", "required": false},
                 {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
@@ -1959,7 +2753,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Staircase Crate 2",
-            "type": "item",
+            "type": "crate",
             "settings": [
                 {"setting": "Shuffle Crates", "value": "All", "required": false},
                 {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
@@ -1978,7 +2772,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Staircase Crate 3",
-            "type": "item",
+            "type": "crate",
             "settings": [
                 {"setting": "Shuffle Crates", "value": "All", "required": false},
                 {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
@@ -1997,7 +2791,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Staircase Crate 4",
-            "type": "item",
+            "type": "crate",
             "settings": [
                 {"setting": "Shuffle Crates", "value": "All", "required": false},
                 {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
@@ -2016,7 +2810,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Staircase Crate 5",
-            "type": "item",
+            "type": "crate",
             "settings": [
                 {"setting": "Shuffle Crates", "value": "All", "required": false},
                 {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
@@ -2035,7 +2829,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Staircase Crate 6",
-            "type": "item",
+            "type": "crate",
             "settings": [
                 {"setting": "Shuffle Crates", "value": "All", "required": false},
                 {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
@@ -2098,7 +2892,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Boss Lobby Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -2117,7 +2911,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Boss Lobby Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -2136,7 +2930,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Armos Room Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -2155,7 +2949,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Armos Room Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -2174,9 +2968,29 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Armos Room Pot 3",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Armos Army Room Pot 4": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Armos Room Pot 4",
+            "type": "jar",
+            "settings": [
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Empty Pots", "value": "On", "required": true},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
                 {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
             ],
@@ -2232,7 +3046,7 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Near Grave Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -2251,10 +3065,1072 @@
             "area": "",
             "lKey": "Death Mountain -> Dodongos Cavern Beginning",
             "alias": "Near Grave Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Compass Room Grass 1": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Compass Room Grass 1",
+            "type": "grass",
+            "settings": [
+                {"setting": "Shuffle Grass", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Compass Room Grass 2": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Compass Room Grass 2",
+            "type": "grass",
+            "settings": [
+                {"setting": "Shuffle Grass", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Compass Room Grass 3": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Compass Room Grass 3",
+            "type": "grass",
+            "settings": [
+                {"setting": "Shuffle Grass", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Compass Room Grass 4": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Compass Room Grass 4",
+            "type": "grass",
+            "settings": [
+                {"setting": "Shuffle Grass", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Armos Army Grass": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Armos Army Grass",
+            "type": "grass",
+            "settings": [
+                {"setting": "Shuffle Grass", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Scrub Room Grass 1": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Scrub Room Grass 1",
+            "type": "grass",
+            "settings": [
+                {"setting": "Shuffle Grass", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Scrub Room Grass 2": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Scrub Room Grass 2",
+            "type": "grass",
+            "settings": [
+                {"setting": "Shuffle Grass", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Back Poe Room Grass": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Back Poe Room Grass",
+            "type": "grass",
+            "settings": [
+                {"setting": "Shuffle Grass", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Right Side Skulltula": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Right Side Skulltula",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Right Side Keese": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Right Side Keese",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Right Side Baby Dodongo 1": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Right Side Baby Dodongo 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Right Side Baby Dodongo 2": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Right Side Baby Dodongo 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Staircase Beamos 1": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Staircase Beamos 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Staircase Beamos 2": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Staircase Beamos 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Staircase Skulltula 1": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Staircase Skulltula 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Staircase Skulltula 2": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Staircase Skulltula 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Lower Lizalfos 1": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Lower Lizalfos 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Lower Lizalfos 2": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Lower Lizalfos 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Upper Lizalfos 1": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Upper Lizalfos 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Upper Lizalfos 2": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Upper Lizalfos 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Compass Room Dodongo 1": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Compass Room Dodongo 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Compass Room Dodongo 2": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Compass Room Dodongo 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Compass Room Dodongo 3": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Compass Room Dodongo 3",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Larvae Room Gohma Larva 1": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Larvae Room Gohma Larva 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Larvae Room Gohma Larva 2": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Larvae Room Gohma Larva 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Larvae Room Gohma Larva 3": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Larvae Room Gohma Larva 3",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Larvae Room Gohma Larva 4": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Larvae Room Gohma Larva 4",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Larvae Room Gohma Larva 5": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Larvae Room Gohma Larva 5",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Before Boss Baby Dodongo 1": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Before Boss Baby Dodongo 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Before Boss Baby Dodongo 2": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Before Boss Baby Dodongo 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Armos Army Armos 1": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Armos Army 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Armos Army Armos 2": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Armos Army 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Armos Army Armos 3": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Armos Army 3",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Armos Army Armos 4": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Armos Army 4",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Armos Army Armos 5": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Armos Army 5",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Armos Army Armos 6": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Armos Army 6",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Armos Army Armos 7": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Armos Army 7",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Armos Army Baby Dodongo 1": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Armos Army Baby Dodongo 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Armos Army Baby Dodongo 2": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Armos Army Baby Dodongo 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Armos Army Lizalfos": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Armos Army Lizalfos",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Single Pillar Keese 1": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Single Pillar Keese 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Single Pillar Keese 2": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Single Pillar Keese 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Single Pillar Keese 3": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Single Pillar Keese 3",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Single Pillar Skulltula 1": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Single Pillar Skulltula 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Single Pillar Skulltula 2": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Single Pillar Skulltula 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Single Pillar Skulltula 3": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Single Pillar Skulltula 3",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Single Pillar Baby Dodongo 1": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Single Pillar Baby Dodongo 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Single Pillar Baby Dodongo 2": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Single Pillar Baby Dodongo 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Single Pillar Baby Dodongo 3": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Single Pillar Baby Dodongo 3",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Double Pillar Keese 1": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Double Pillar Keese 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Double Pillar Keese 2": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Double Pillar Keese 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Lower Scrub Room Scrub 1": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Lower Scrub Room Scrub 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Lower Scrub Room Scrub 2": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Lower Scrub Room Scrub 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Lower Scrub Room Keese": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Lower Scrub Room Keese",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Song of Time Block Room Skullwalltula": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Song of Time Block Room Skullwalltula",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Song of Time Block Room Skulltula 1": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Song of Time Block Room Skulltula 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Song of Time Block Room Skulltula 2": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Song of Time Block Room Skulltula 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Song of Time Block Room Skulltula 3": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Song of Time Block Room Skulltula 3",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Dodongos Cavern MQ Gossip Stone Drop": {
+            "area": "",
+            "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+            "alias": "Gossip Stone Drop",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Gossip Stones", "value": "On", "required": true},
                 {"setting": "Dodongo's Cavern MQ", "value": true, "required": true}
             ],
             "visible": true,

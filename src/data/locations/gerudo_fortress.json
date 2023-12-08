@@ -584,7 +584,7 @@
             "area": "Gerudo Fortress",
             "lKey": "",
             "alias": "Top of Jail Crate",
-            "type": "item",
+            "type": "crate",
             "settings": [
                 {"setting": "Shuffle Crates", "value": "All", "required": false},
                 {"setting": "Shuffle Crates", "value": "Overworld", "required": false}
@@ -602,7 +602,7 @@
             "area": "",
             "lKey": "GF North Roof -> Hideout Break Room Lower",
             "alias": "Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
@@ -620,7 +620,7 @@
             "area": "",
             "lKey": "GF North Roof -> Hideout Break Room Lower",
             "alias": "Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
@@ -638,7 +638,7 @@
             "area": "",
             "lKey": "GF North Roof -> Hideout Break Room Lower",
             "alias": "Crate 1",
-            "type": "item",
+            "type": "crate",
             "settings": [
                 {"setting": "Shuffle Crates", "value": "All", "required": false},
                 {"setting": "Shuffle Crates", "value": "Overworld", "required": false}
@@ -656,7 +656,7 @@
             "area": "",
             "lKey": "GF North Roof -> Hideout Break Room Lower",
             "alias": "Crate 2",
-            "type": "item",
+            "type": "crate",
             "settings": [
                 {"setting": "Shuffle Crates", "value": "All", "required": false},
                 {"setting": "Shuffle Crates", "value": "Overworld", "required": false}
@@ -674,7 +674,7 @@
             "area": "",
             "lKey": "GF North Roof -> Hideout Break Room Lower",
             "alias": "Crate 3",
-            "type": "item",
+            "type": "crate",
             "settings": [
                 {"setting": "Shuffle Crates", "value": "All", "required": false},
                 {"setting": "Shuffle Crates", "value": "Overworld", "required": false}
@@ -692,7 +692,7 @@
             "area": "",
             "lKey": "GF North Roof -> Hideout Break Room Lower",
             "alias": "Crate 4",
-            "type": "item",
+            "type": "crate",
             "settings": [
                 {"setting": "Shuffle Crates", "value": "All", "required": false},
                 {"setting": "Shuffle Crates", "value": "Overworld", "required": false}
@@ -710,7 +710,7 @@
             "area": "",
             "lKey": "Gerudo Fortress -> Hideout 1 Torch Jail Angled",
             "alias": "Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
@@ -728,7 +728,7 @@
             "area": "",
             "lKey": "Gerudo Fortress -> Hideout 1 Torch Jail Angled",
             "alias": "Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
@@ -746,7 +746,7 @@
             "area": "",
             "lKey": "Gerudo Fortress -> Hideout 1 Torch Jail Angled",
             "alias": "Pot 3",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
@@ -764,7 +764,7 @@
             "area": "",
             "lKey": "Gerudo Fortress -> Hideout 1 Torch Jail Angled",
             "alias": "Crate",
-            "type": "item",
+            "type": "crate",
             "settings": [
                 {"setting": "Shuffle Crates", "value": "All", "required": false},
                 {"setting": "Shuffle Crates", "value": "Overworld", "required": false}
@@ -782,7 +782,7 @@
             "area": "",
             "lKey": "GF Entrances Behind Crates -> Hideout Kitchen Hallway Lower",
             "alias": "Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
@@ -800,7 +800,7 @@
             "area": "",
             "lKey": "GF Entrances Behind Crates -> Hideout Kitchen Hallway Lower",
             "alias": "Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
@@ -818,7 +818,7 @@
             "area": "",
             "lKey": "GF Entrances Behind Crates -> Hideout Kitchen Hallway Lower",
             "alias": "Crate 1",
-            "type": "item",
+            "type": "crate",
             "settings": [
                 {"setting": "Shuffle Crates", "value": "All", "required": false},
                 {"setting": "Shuffle Crates", "value": "Overworld", "required": false}
@@ -836,7 +836,7 @@
             "area": "",
             "lKey": "GF Entrances Behind Crates -> Hideout Kitchen Hallway Lower",
             "alias": "Crate 2",
-            "type": "item",
+            "type": "crate",
             "settings": [
                 {"setting": "Shuffle Crates", "value": "All", "required": false},
                 {"setting": "Shuffle Crates", "value": "Overworld", "required": false}
@@ -854,7 +854,7 @@
             "area": "",
             "lKey": "GF Entrances Behind Crates -> Hideout Kitchen Hallway Lower",
             "alias": "Crate 3",
-            "type": "item",
+            "type": "crate",
             "settings": [
                 {"setting": "Shuffle Crates", "value": "All", "required": false},
                 {"setting": "Shuffle Crates", "value": "Overworld", "required": false}
@@ -872,7 +872,7 @@
             "area": "",
             "lKey": "GF Entrances Behind Crates -> Hideout Kitchen Hallway Lower",
             "alias": "Crate 4",
-            "type": "item",
+            "type": "crate",
             "settings": [
                 {"setting": "Shuffle Crates", "value": "All", "required": false},
                 {"setting": "Shuffle Crates", "value": "Overworld", "required": false}
@@ -890,7 +890,7 @@
             "area": "",
             "lKey": "GF Entrances Behind Crates -> Hideout Kitchen Hallway Lower",
             "alias": "Crate 5",
-            "type": "item",
+            "type": "crate",
             "settings": [
                 {"setting": "Shuffle Crates", "value": "All", "required": false},
                 {"setting": "Shuffle Crates", "value": "Overworld", "required": false}
@@ -908,7 +908,7 @@
             "area": "",
             "lKey": "GF Lower Vines -> Hideout 4 Torch Jail U Tunnel",
             "alias": "Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
@@ -926,7 +926,7 @@
             "area": "",
             "lKey": "GF Lower Vines -> Hideout 4 Torch Jail U Tunnel",
             "alias": "Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
@@ -944,7 +944,7 @@
             "area": "",
             "lKey": "GF Rooftop -> Hideout 3 Torch Jail",
             "alias": "Crate",
-            "type": "item",
+            "type": "crate",
             "settings": [
                 {"setting": "Shuffle Crates", "value": "All", "required": false},
                 {"setting": "Shuffle Crates", "value": "Overworld", "required": false}
@@ -962,7 +962,7 @@
             "area": "",
             "lKey": "GF Above Dungeon -> Hideout 2 Torch Jail Lower",
             "alias": "Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
@@ -980,7 +980,7 @@
             "area": "",
             "lKey": "GF Above Dungeon -> Hideout 2 Torch Jail Lower",
             "alias": "Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
@@ -998,7 +998,7 @@
             "area": "",
             "lKey": "GF Above Dungeon -> Hideout 2 Torch Jail Lower",
             "alias": "Pot 3",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
@@ -1016,7 +1016,7 @@
             "area": "",
             "lKey": "GF Above Dungeon -> Hideout 2 Torch Jail Lower",
             "alias": "In Cell Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
@@ -1034,7 +1034,7 @@
             "area": "",
             "lKey": "GF Above Dungeon -> Hideout 2 Torch Jail Lower",
             "alias": "In Cell Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
@@ -1052,7 +1052,7 @@
             "area": "",
             "lKey": "GF Above Dungeon -> Hideout 2 Torch Jail Lower",
             "alias": "In Cell Pot 3",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
@@ -1070,7 +1070,7 @@
             "area": "",
             "lKey": "GF Above Dungeon -> Hideout 2 Torch Jail Lower",
             "alias": "In Cell Pot 4",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
@@ -1088,7 +1088,7 @@
             "area": "",
             "lKey": "GF Above Dungeon -> Hideout 2 Torch Jail Lower",
             "alias": "Crate 1",
-            "type": "item",
+            "type": "crate",
             "settings": [
                 {"setting": "Shuffle Crates", "value": "All", "required": false},
                 {"setting": "Shuffle Crates", "value": "Overworld", "required": false}
@@ -1106,11 +1106,582 @@
             "area": "",
             "lKey": "GF Above Dungeon -> Hideout 2 Torch Jail Lower",
             "alias": "Crate 2",
-            "type": "item",
+            "type": "crate",
             "settings": [
                 {"setting": "Shuffle Crates", "value": "All", "required": false},
                 {"setting": "Shuffle Crates", "value": "Overworld", "required": false}
             ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "GF Crate 1": {
+            "area": "Gerudo Fortress",
+            "lKey": "",
+            "alias": "Fortress Crate 1",
+            "type": "crate",
+            "settings": [
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Overworld", "required": false},
+                {"setting": "Shuffle Empty Crates", "value": "On", "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "GF Crate 2": {
+            "area": "Gerudo Fortress",
+            "lKey": "",
+            "alias": "Fortress Crate 2",
+            "type": "crate",
+            "settings": [
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Overworld", "required": false},
+                {"setting": "Shuffle Empty Crates", "value": "On", "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "GF Crate 3": {
+            "area": "Gerudo Fortress",
+            "lKey": "",
+            "alias": "Fortress Crate 3",
+            "type": "crate",
+            "settings": [
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Overworld", "required": false},
+                {"setting": "Shuffle Empty Crates", "value": "On", "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "GF Crate 4": {
+            "area": "Gerudo Fortress",
+            "lKey": "",
+            "alias": "Fortress Crate 4",
+            "type": "crate",
+            "settings": [
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Overworld", "required": false},
+                {"setting": "Shuffle Empty Crates", "value": "On", "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "GF Crate 5": {
+            "area": "Gerudo Fortress",
+            "lKey": "",
+            "alias": "Fortress Crate 5",
+            "type": "crate",
+            "settings": [
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Overworld", "required": false},
+                {"setting": "Shuffle Empty Crates", "value": "On", "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "GF Crate 6": {
+            "area": "Gerudo Fortress",
+            "lKey": "",
+            "alias": "Fortress Crate 6",
+            "type": "crate",
+            "settings": [
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Overworld", "required": false},
+                {"setting": "Shuffle Empty Crates", "value": "On", "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "GF HBA Crate 1": {
+            "area": "Gerudo Fortress",
+            "lKey": "",
+            "alias": "Archery Crate 1",
+            "type": "crate",
+            "settings": [
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Overworld", "required": false},
+                {"setting": "Shuffle Empty Crates", "value": "On", "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "GF HBA Crate 2": {
+            "area": "Gerudo Fortress",
+            "lKey": "",
+            "alias": "Archery Crate 2",
+            "type": "crate",
+            "settings": [
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Overworld", "required": false},
+                {"setting": "Shuffle Empty Crates", "value": "On", "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "GF HBA Crate 3": {
+            "area": "Gerudo Fortress",
+            "lKey": "",
+            "alias": "Archery Crate 3",
+            "type": "crate",
+            "settings": [
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Overworld", "required": false},
+                {"setting": "Shuffle Empty Crates", "value": "On", "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "GF HBA Crate 4": {
+            "area": "Gerudo Fortress",
+            "lKey": "",
+            "alias": "Archery Crate 4",
+            "type": "crate",
+            "settings": [
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Overworld", "required": false},
+                {"setting": "Shuffle Empty Crates", "value": "On", "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "GF HBA Crate 5": {
+            "area": "Gerudo Fortress",
+            "lKey": "",
+            "alias": "Archery Crate 5",
+            "type": "crate",
+            "settings": [
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Overworld", "required": false},
+                {"setting": "Shuffle Empty Crates", "value": "On", "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "GF HBA Crate 6": {
+            "area": "Gerudo Fortress",
+            "lKey": "",
+            "alias": "Archery Crate 6",
+            "type": "crate",
+            "settings": [
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Overworld", "required": false},
+                {"setting": "Shuffle Empty Crates", "value": "On", "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "GF HBA Crate 7": {
+            "area": "Gerudo Fortress",
+            "lKey": "",
+            "alias": "Archery Crate 7",
+            "type": "crate",
+            "settings": [
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Overworld", "required": false},
+                {"setting": "Shuffle Empty Crates", "value": "On", "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "GF HBA Crate 8": {
+            "area": "Gerudo Fortress",
+            "lKey": "",
+            "alias": "Archery Crate 8",
+            "type": "crate",
+            "settings": [
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Overworld", "required": false},
+                {"setting": "Shuffle Empty Crates", "value": "On", "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "GF HBA Crate 9": {
+            "area": "Gerudo Fortress",
+            "lKey": "",
+            "alias": "Archery Crate 9",
+            "type": "crate",
+            "settings": [
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Overworld", "required": false},
+                {"setting": "Shuffle Empty Crates", "value": "On", "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "GF HBA Crate 10": {
+            "area": "Gerudo Fortress",
+            "lKey": "",
+            "alias": "Archery Crate 10",
+            "type": "crate",
+            "settings": [
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Overworld", "required": false},
+                {"setting": "Shuffle Empty Crates", "value": "On", "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "GF HBA Crate 11": {
+            "area": "Gerudo Fortress",
+            "lKey": "",
+            "alias": "Archery Crate 11",
+            "type": "crate",
+            "settings": [
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Overworld", "required": false},
+                {"setting": "Shuffle Empty Crates", "value": "On", "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "GF HBA Crate 12": {
+            "area": "Gerudo Fortress",
+            "lKey": "",
+            "alias": "Archery Crate 12",
+            "type": "crate",
+            "settings": [
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Overworld", "required": false},
+                {"setting": "Shuffle Empty Crates", "value": "On", "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "GF HBA Crate 13": {
+            "area": "Gerudo Fortress",
+            "lKey": "",
+            "alias": "Archery Crate 13",
+            "type": "crate",
+            "settings": [
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Overworld", "required": false},
+                {"setting": "Shuffle Empty Crates", "value": "On", "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "GF Sign Wonderitem Near Entrance": {
+            "area": "Gerudo Fortress",
+            "lKey": "",
+            "alias": "Near Entrance Sign Wonderitem",
+            "type": "item",
+            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "GF Sign Wonderitem Near HBA": {
+            "area": "Gerudo Fortress",
+            "lKey": "",
+            "alias": "Near Archery Sign Wonderitem",
+            "type": "item",
+            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Hideout Break Room Wonderitem": {
+            "area": "",
+            "lKey": "GF North Roof -> Hideout Break Room Lower",
+            "alias": "Wonderitem",
+            "type": "item",
+            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Hideout Break Room Hall to Balcony Wonderitem": {
+            "area": "",
+            "lKey": "GF North Roof -> Hideout Break Room Lower",
+            "alias": "Hall to Balcony Wonderitem",
+            "type": "item",
+            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Hideout 3 Torch Jail Wonderitem 1": {
+            "area": "",
+            "lKey": "GF Rooftop -> Hideout 3 Torch Jail",
+            "alias": "Wonderitem 1",
+            "type": "item",
+            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Hideout 3 Torch Jail Wonderitem 2": {
+            "area": "",
+            "lKey": "GF Rooftop -> Hideout 3 Torch Jail",
+            "alias": "Wonderitem 2",
+            "type": "item",
+            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Hideout 1 Torch Jail Wonderitem 1": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Hideout 1 Torch Jail Angled",
+            "alias": "Wonderitem 1",
+            "type": "item",
+            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Hideout 1 Torch Jail Wonderitem 2": {
+            "area": "",
+            "lKey": "Gerudo Fortress -> Hideout 1 Torch Jail Angled",
+            "alias": "Wonderitem 2",
+            "type": "item",
+            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Hideout Kitchen Stove Wonderitem": {
+            "area": "",
+            "lKey": "GF Entrances Behind Crates -> Hideout Kitchen Hallway Lower",
+            "alias": "Stove Wonderitem",
+            "type": "item",
+            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Hideout Kitchen Wonderitem": {
+            "area": "",
+            "lKey": "GF Entrances Behind Crates -> Hideout Kitchen Hallway Lower",
+            "alias": "Wonderitem",
+            "type": "item",
+            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Hideout 4 Torch Jail Wonderitem 1": {
+            "area": "",
+            "lKey": "GF Lower Vines -> Hideout 4 Torch Jail U Tunnel",
+            "alias": "Wonderitem 1",
+            "type": "item",
+            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Hideout 4 Torch Jail Wonderitem 2": {
+            "area": "",
+            "lKey": "GF Lower Vines -> Hideout 4 Torch Jail U Tunnel",
+            "alias": "Wonderitem 2",
+            "type": "item",
+            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Hideout 2 Torch Jail Wonderitem 1": {
+            "area": "",
+            "lKey": "GF Above Dungeon -> Hideout 2 Torch Jail Lower",
+            "alias": "Wonderitem 1",
+            "type": "item",
+            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Hideout 2 Torch Jail Wonderitem 2": {
+            "area": "",
+            "lKey": "GF Above Dungeon -> Hideout 2 Torch Jail Lower",
+            "alias": "Wonderitem 2",
+            "type": "item",
+            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
             "visible": true,
             "check": "",
             "foundItem": "",

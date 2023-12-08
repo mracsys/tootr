@@ -29,7 +29,7 @@
             "area": "",
             "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
             "alias": "Early Redead Lobby Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -48,7 +48,7 @@
             "area": "",
             "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
             "alias": "Early Redead Lobby Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -82,7 +82,7 @@
             "area": "",
             "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
             "alias": "Early Redead Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -101,7 +101,7 @@
             "area": "",
             "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
             "alias": "Early Redead Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -120,7 +120,7 @@
             "area": "",
             "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
             "alias": "Dead Hand Lobby Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -139,7 +139,7 @@
             "area": "",
             "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
             "alias": "Dead Hand Lobby Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -158,7 +158,7 @@
             "area": "",
             "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
             "alias": "Dead Hand Lobby Pot 3",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -177,7 +177,7 @@
             "area": "",
             "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
             "alias": "Dead Hand Lobby Pot 4",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -196,7 +196,7 @@
             "area": "",
             "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
             "alias": "Dead Hand Lobby Flying Pot",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -552,7 +552,7 @@
             "area": "",
             "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
             "alias": "Falling Spikes Lower Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -571,7 +571,7 @@
             "area": "",
             "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
             "alias": "Falling Spikes Lower Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -659,7 +659,7 @@
             "area": "",
             "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
             "alias": "Falling Spikes Upper Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -678,7 +678,7 @@
             "area": "",
             "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
             "alias": "Falling Spikes Upper Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -896,7 +896,7 @@
             "area": "",
             "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
             "alias": "Late Gibdo Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -915,7 +915,7 @@
             "area": "",
             "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
             "alias": "Late Gibdo Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -934,7 +934,7 @@
             "area": "",
             "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
             "alias": "Late Gibdo Flying Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -953,7 +953,7 @@
             "area": "",
             "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
             "alias": "Late Gibdo Flying Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1064,7 +1064,7 @@
             "area": "",
             "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
             "alias": "Flammable Walls Pot",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1274,6 +1274,24 @@
             "shuffled": true,
             "shuffleRules": []
         },
+        "Shadow Temple 3 Spinning Pots Wonderitem": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "3 Spinning Pots Wonderitem",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Wonderitems", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
         "Shadow Temple Invisible Floormaster Chest": {
             "area": "",
             "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
@@ -1293,7 +1311,7 @@
             "area": "",
             "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
             "alias": "Floormaster Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1312,7 +1330,7 @@
             "area": "",
             "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
             "alias": "Floormaster Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1387,11 +1405,31 @@
         "Shadow Temple After Boat Pot 1": {
             "area": "",
             "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
-            "alias": "Fallen Pillar Pot",
-            "type": "item",
+            "alias": "Fallen Pillar Pot 1",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
+                {"setting": "Shadow Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple After Boat Pot 2": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Fallen Pillar Pot 2",
+            "type": "jar",
+            "settings": [
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Empty Pots", "value": "On", "required": true},
                 {"setting": "Shadow Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -1407,7 +1445,7 @@
             "area": "",
             "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
             "alias": "Boss Lobby Entrance Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1426,10 +1464,676 @@
             "area": "",
             "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
             "alias": "Boss Lobby Entrance Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
+                {"setting": "Shadow Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple Map Chest Keese 1": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Map Chest Keese 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple Map Chest Keese 2": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Map Chest Keese 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple Map Chest Redead": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Map Chest Redead",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple Dead Hand": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Dead Hand",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple Early Beamos": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Early Beamos",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple Compass Chest Redead 1": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Compass Chest Redead 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple Compass Chest Redead 2": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Compass Chest Redead 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple Guillotine Hallway Skulltula 1": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Guillotine Hallway Skulltula 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple Guillotine Hallway Skulltula 2": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Guillotine Hallway Skulltula 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple Guillotine Hallway Skulltula 3": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Guillotine Hallway Skulltula 3",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple Guillotine Hallway Skulltula 4": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Guillotine Hallway Skulltula 4",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple Huge Pit Bubble": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Huge Pit Bubble",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple Huge Pit Wallmaster": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Huge Pit Wallmaster",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple Huge Pit Beamos": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Huge Pit Beamos",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple Huge Pit Stalfos": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Huge Pit Stalfos",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple Invisible Spikes Redead 1": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Invisible Spikes Redead 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple Invisible Spikes Redead 2": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Invisible Spikes Redead 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple Spike Walls Left Redead": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Spike Walls Redead 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple Spike Walls Right Redead": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Spike Walls Redead 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple Spinning Pot Keese 1": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Spinning Pot Keese 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple Spinning Pot Keese 2": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Spinning Pot Keese 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple Spinning Pot Keese 3": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Spinning Pot Keese 3",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple Spinning Pot Keese 4": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Spinning Pot Keese 4",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple Invisible Walls Floormaster 1": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Invisible Walls Floormaster 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple Invisible Walls Floormaster 2": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Invisible Walls Floormaster 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple Invisible Scythe Keese 1": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Invisible Scythe Keese 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple Invisible Scythe Keese 2": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Invisible Scythe Keese 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple Invisible Scythe Keese 3": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Invisible Scythe Keese 3",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple Invisible Scythe Like Like": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Invisible Scythe Like Like",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple Invisible Floormaster": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Invisible Floormaster",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple Fan Hallway Skulltula": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Fan Hallway Skulltula",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple Wind Hint Left Redead": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Wind Hint Redead 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple Wind Hint Right Redead": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Wind Hint Redead 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple After Wind Redead Left": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "After Wind Redead 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple After Wind Redead Right": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "After Wind Redead 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple Boat Stalfos 1": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Boat Stalfos 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple Boat Stalfos 2": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Boat Stalfos 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
                 {"setting": "Shadow Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -1445,7 +2149,7 @@
             "area": "",
             "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
             "alias": "Entrance Small Crate 1",
-            "type": "item",
+            "type": "crate",
             "settings": [
                 {"setting": "Shuffle Crates", "value": "All", "required": false},
                 {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
@@ -1464,7 +2168,7 @@
             "area": "",
             "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
             "alias": "Entrance Small Crate 2",
-            "type": "item",
+            "type": "crate",
             "settings": [
                 {"setting": "Shuffle Crates", "value": "All", "required": false},
                 {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
@@ -1483,7 +2187,7 @@
             "area": "",
             "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
             "alias": "Entrance Small Crate 3",
-            "type": "item",
+            "type": "crate",
             "settings": [
                 {"setting": "Shuffle Crates", "value": "All", "required": false},
                 {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
@@ -1502,7 +2206,7 @@
             "area": "",
             "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
             "alias": "Entrance Small Crate 4",
-            "type": "item",
+            "type": "crate",
             "settings": [
                 {"setting": "Shuffle Crates", "value": "All", "required": false},
                 {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
@@ -1666,7 +2370,7 @@
             "area": "",
             "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
             "alias": "Early Redead Lobby Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1685,7 +2389,7 @@
             "area": "",
             "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
             "alias": "Early Redead Lobby Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1719,7 +2423,7 @@
             "area": "",
             "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
             "alias": "Early Redead Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1738,7 +2442,7 @@
             "area": "",
             "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
             "alias": "Early Redead Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1757,7 +2461,7 @@
             "area": "",
             "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
             "alias": "Dead Hand 1 Lobby Flying Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1776,7 +2480,7 @@
             "area": "",
             "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
             "alias": "Dead Hand 1 Lobby Flying Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1795,7 +2499,7 @@
             "area": "",
             "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
             "alias": "Dead Hand 1 Lobby Flying Pot 3",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1814,7 +2518,7 @@
             "area": "",
             "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
             "alias": "Dead Hand 1 Lobby Flying Pot 4",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -2231,7 +2935,7 @@
             "area": "",
             "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
             "alias": "Falling Spikes Lower Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -2250,7 +2954,7 @@
             "area": "",
             "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
             "alias": "Falling Spikes Lower Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -2338,7 +3042,7 @@
             "area": "",
             "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
             "alias": "Falling Spikes Upper Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -2357,7 +3061,7 @@
             "area": "",
             "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
             "alias": "Falling Spikes Upper Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -2699,7 +3403,7 @@
             "area": "",
             "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
             "alias": "Late Gibdo Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -2718,7 +3422,7 @@
             "area": "",
             "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
             "alias": "Late Gibdo Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -2737,7 +3441,7 @@
             "area": "",
             "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
             "alias": "Late Gibdo Flying Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -2756,7 +3460,7 @@
             "area": "",
             "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
             "alias": "Late Gibdo Flying Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -2867,7 +3571,7 @@
             "area": "",
             "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
             "alias": "Flammable Walls Pot",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -3068,6 +3772,24 @@
             "shuffled": true,
             "shuffleRules": []
         },
+        "Shadow Temple MQ 3 Spinning Pots Wonderitem": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "3 Spinning Pots Wonderitem",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Wonderitems", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
         "Shadow Temple MQ Bomb Flower Chest": {
             "area": "",
             "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
@@ -3087,7 +3809,7 @@
             "area": "",
             "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
             "alias": "Dead Hand 2 Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -3106,7 +3828,7 @@
             "area": "",
             "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
             "alias": "Dead Hand 2 Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -3182,7 +3904,7 @@
             "area": "",
             "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
             "alias": "Fallen Pillar Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -3201,7 +3923,7 @@
             "area": "",
             "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
             "alias": "Fallen Pillar Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -3220,7 +3942,7 @@
             "area": "",
             "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
             "alias": "Boss Lobby Entrance Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -3239,7 +3961,7 @@
             "area": "",
             "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
             "alias": "Boss Lobby Entrance Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -3277,6 +3999,906 @@
                 {"setting": "Tokensanity", "value": "Dungeons", "required": false},
                 {"setting": "Tokensanity", "value": "All", "required": false}
             ]
+        },
+        "Shadow Temple MQ Compass Chest Redead 1": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Compass Chest Redead 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Compass Chest Redead 2": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Compass Chest Redead 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Compass Chest Redead 3": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Compass Chest Redead 3",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Compass Chest Redead 4": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Compass Chest Redead 4",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Deadhand": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "First Deadhand",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ First Beamos": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "First Beamos",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Spinning Scythe Skulltula 1": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Spinning Scythe Skulltula 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Spinning Scythe Skulltula 2": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Spinning Scythe Skulltula 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Spinning Scythe Skulltula 3": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Spinning Scythe Skulltula 3",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Spinning Scythe Skulltula 4": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Spinning Scythe Skulltula 4",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Early Gibdo 1": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Early Gibdo 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Early Gibdo 2": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Early Gibdo 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Guillotine Hallway Skulltula": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Guillotine Hallway Skulltula",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Guillotine Hallway Beamos 1": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Guillotine Hallway Beamos 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Guillotine Hallway Beamos 2": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Guillotine Hallway Beamos 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Huge Pit Bubble": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Huge Pit Bubble",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Huge Pit Upper Beamos 1": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Huge Pit Upper Beamos 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Huge Pit Upper Beamos 2": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Huge Pit Upper Beamos 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Huge Pit Lower Beamos": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Huge Pit Lower Beamos",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Invisible Spikes Redead 1": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Invisible Spikes Redead 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Invisible Spikes Redead 2": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Invisible Spikes Redead 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Spike Walls Keese 1": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Spike Walls Keese 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Spike Walls Keese 2": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Spike Walls Keese 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Spike Walls Keese 3": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Spike Walls Keese 3",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Spike Walls Keese 4": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Spike Walls Keese 4",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Spike Walls Skulltula 1": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Spike Walls Skulltula 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Spike Walls Skulltula 2": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Spike Walls Skulltula 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Spike Walls Skulltula 3": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Spike Walls Skulltula 3",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Spike Walls Skulltula 4": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Spike Walls Skulltula 4",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Stalfos Room Stalfos 1": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Stalfos Room Stalfos 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Stalfos Room Stalfos 2": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Stalfos Room Stalfos 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Invisible Wall Maze Bubble 1": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Invisible Wall Maze Bubble 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Invisible Wall Maze Bubble 2": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Invisible Wall Maze Bubble 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Invisible Wall Maze Like-Like": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Invisible Wall Maze Like-Like",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Invisible Blades Keese 1": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Invisible Blades Keese 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Invisible Blades Keese 2": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Invisible Blades Keese 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Invisible Blades Keese 3": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Invisible Blades Keese 3",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Invisible Blades Like-Like": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Invisible Blades Like-Like",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Bomb Flower Deadhand": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Bomb Flower Deadhand",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Wind Tunnel Skulltula": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Wind Tunnel Skulltula",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Wind Hint Redead 1": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Wind Hint Redead 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Wind Hint Redead 2": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Wind Hint Redead 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Wind Hint Redead 3": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Wind Hint Redead 3",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Wind Hint Redead 4": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Wind Hint Redead 4",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ After Wind Gibdo 1": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "After Wind Gibdo 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ After Wind Gibdo 2": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "After Wind Gibdo 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Before Boat Skullwalltula": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Before Boat Skullwalltula",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Shortcut Skulltula": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Shortcut Skulltula",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Boat Stalfos 1": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Boat Stalfos 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Shadow Temple MQ Boat Stalfos 2": {
+            "area": "",
+            "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
+            "alias": "Boat Stalfos 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Shadow Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
         },
         "Shadow Temple Bongo Bongo Heart": {
             "area": "",

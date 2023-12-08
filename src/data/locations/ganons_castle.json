@@ -144,7 +144,7 @@
             "area": "",
             "lKey": "Ganons Castle Grounds -> Ganons Castle",
             "alias": "Forest Trial End Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -163,7 +163,7 @@
             "area": "",
             "lKey": "Ganons Castle Grounds -> Ganons Castle",
             "alias": "Forest Trial End Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -208,11 +208,31 @@
             "shuffled": true,
             "shuffleRules": []
         },
+        "Ganons Castle Water Trial Fairy Pot": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Water Trial Fairy Pot",
+            "type": "jar",
+            "settings": [
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Empty Pots", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
         "Ganons Castle Water Trial Pot 1": {
             "area": "",
             "lKey": "Ganons Castle Grounds -> Ganons Castle",
             "alias": "Water Trial End Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -231,7 +251,7 @@
             "area": "",
             "lKey": "Ganons Castle Grounds -> Ganons Castle",
             "alias": "Water Trial End Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -265,7 +285,7 @@
             "area": "",
             "lKey": "Ganons Castle Grounds -> Ganons Castle",
             "alias": "Shadow Trial Like Like Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -284,7 +304,7 @@
             "area": "",
             "lKey": "Ganons Castle Grounds -> Ganons Castle",
             "alias": "Shadow Trial Like Like Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -375,7 +395,7 @@
             "area": "",
             "lKey": "Ganons Castle Grounds -> Ganons Castle",
             "alias": "Shadow Trial End Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -394,7 +414,7 @@
             "area": "",
             "lKey": "Ganons Castle Grounds -> Ganons Castle",
             "alias": "Shadow Trial End Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -532,7 +552,7 @@
             "area": "",
             "lKey": "Ganons Castle Grounds -> Ganons Castle",
             "alias": "Fire Trial End Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -551,7 +571,7 @@
             "area": "",
             "lKey": "Ganons Castle Grounds -> Ganons Castle",
             "alias": "Fire Trial End Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -790,7 +810,7 @@
             "area": "",
             "lKey": "Ganons Castle Grounds -> Ganons Castle",
             "alias": "Light Trial Boulder Pot",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -809,7 +829,7 @@
             "area": "",
             "lKey": "Ganons Castle Grounds -> Ganons Castle",
             "alias": "Light Trial End Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -828,7 +848,7 @@
             "area": "",
             "lKey": "Ganons Castle Grounds -> Ganons Castle",
             "alias": "Light Trial End Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -996,7 +1016,7 @@
             "area": "",
             "lKey": "Ganons Castle Grounds -> Ganons Castle",
             "alias": "Spirit Trial End Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1015,7 +1035,7 @@
             "area": "",
             "lKey": "Ganons Castle Grounds -> Ganons Castle",
             "alias": "Spirit Trial End Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1110,6 +1130,438 @@
             "shuffled": true,
             "shuffleRules": []
         },
+        "Ganons Castle Entry Hallway Beamos Right": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Entry Hallway Beamos Right",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle Entry Hallway Beamos Left": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Entry Hallway Beamos Left",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle Water Trial Freezard 1": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Water Trial Freezard 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle Water Trial Freezard 2": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Water Trial Freezard 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle Forest Trial Wolfos": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Forest Trial Wolfos",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle Forest Trial Beamos": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Forest Trial Beamos",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle Light Trial Invisible Keese 1": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Light Trial Invisible Keese 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle Light Trial Invisible Keese 2": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Light Trial Invisible Keese 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle Light Trial Invisible Keese 3": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Light Trial Invisible Keese 3",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle Light Trial Invisible Skulltula": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Light Trial Invisible Skulltula",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle Light Trial Fake Ending Wallmaster": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Light Trial Fake Ending Wallmaster",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle Shadow Trial Bubble": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Shadow Trial Bubble",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle Shadow Trial Like Like": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Shadow Trial Like Like",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle Fire Trial Torch Slug": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Fire Trial Torch Slug",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle Fire Trial Bubble 1": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Fire Trial Bubble 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle Fire Trial Bubble 2": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Fire Trial Bubble 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle Fire Trial Bubble 3": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Fire Trial Bubble 3",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle Fire Trial Bubble 4": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Fire Trial Bubble 4",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle Spirit Trial Beamos": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Spirit Trial Beamos",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle Spirit Trial Torch Slug 1": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Spirit Trial Torch Slug 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle Spirit Trial Torch Slug 2": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Spirit Trial Torch Slug 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle Spirit Trial Wrong Sun Wallmaster 1": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Spirit Trial Wrong Sun Wallmaster 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle Spirit Trial Wrong Sun Wallmaster 2": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Spirit Trial Wrong Sun Wallmaster 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle Spirit Trial Wrong Sun Wallmaster 3": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Spirit Trial Wrong Sun Wallmaster 3",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
         "Ganons Castle MQ Forest Trial Freestanding Key": {
             "area": "",
             "lKey": "Ganons Castle Grounds -> Ganons Castle",
@@ -1159,7 +1611,7 @@
             "area": "",
             "lKey": "Ganons Castle Grounds -> Ganons Castle",
             "alias": "Forest Trial End Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1178,7 +1630,7 @@
             "area": "",
             "lKey": "Ganons Castle Grounds -> Ganons Castle",
             "alias": "Forest Trial End Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1331,7 +1783,7 @@
             "area": "",
             "lKey": "Ganons Castle Grounds -> Ganons Castle",
             "alias": "Water Trial End Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1350,7 +1802,7 @@
             "area": "",
             "lKey": "Ganons Castle Grounds -> Ganons Castle",
             "alias": "Water Trial End Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1499,7 +1951,7 @@
             "area": "",
             "lKey": "Ganons Castle Grounds -> Ganons Castle",
             "alias": "Shadow Trial End Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1518,7 +1970,7 @@
             "area": "",
             "lKey": "Ganons Castle Grounds -> Ganons Castle",
             "alias": "Shadow Trial End Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1637,7 +2089,7 @@
             "area": "",
             "lKey": "Ganons Castle Grounds -> Ganons Castle",
             "alias": "Fire Trial End Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1656,7 +2108,7 @@
             "area": "",
             "lKey": "Ganons Castle Grounds -> Ganons Castle",
             "alias": "Fire Trial End Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1728,7 +2180,7 @@
             "area": "",
             "lKey": "Ganons Castle Grounds -> Ganons Castle",
             "alias": "Light Trial End Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1747,7 +2199,7 @@
             "area": "",
             "lKey": "Ganons Castle Grounds -> Ganons Castle",
             "alias": "Light Trial End Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1856,7 +2308,7 @@
             "area": "",
             "lKey": "Ganons Castle Grounds -> Ganons Castle",
             "alias": "Spirit Trial End Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1875,7 +2327,7 @@
             "area": "",
             "lKey": "Ganons Castle Grounds -> Ganons Castle",
             "alias": "Spirit Trial End Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1990,6 +2442,780 @@
             "shuffled": true,
             "shuffleRules": []
         },
+        "Ganons Castle MQ Entry Hallway Armos 1": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Entry Hallway Armos 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle MQ Entry Hallway Armos 2": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Entry Hallway Armos 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle MQ Entry Hallway Bubble 1": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Entry Hallway Bubble 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle MQ Entry Hallway Bubble 2": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Entry Hallway Bubble 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle MQ Entry Hallway Iron Knuckle": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Entry Hallway Iron Knuckle",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle MQ Water Trial Freezard 1": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Water Trial Freezard 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle MQ Water Trial Freezard 2": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Water Trial Freezard 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle MQ Water Trial Freezard 3": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Water Trial Freezard 3",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle MQ Water Trial Ice Keese 1": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Water Trial Ice Keese 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle MQ Water Trial Ice Keese 2": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Water Trial Ice Keese 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle MQ Water Trial Ice Keese 3": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Water Trial Ice Keese 3",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle MQ Water Trial Ice Keese 4": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Water Trial Ice Keese 4",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle MQ Forest Trial Stalfos 1": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Forest Trial Stalfos 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle MQ Forest Trial Stalfos 2": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Forest Trial Stalfos 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle MQ Forest Trial Armos": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Forest Trial Armos",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle MQ Forest Trial Beamos 1": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Forest Trial Beamos 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle MQ Forest Trial Beamos 2": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Forest Trial Beamos 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle MQ Forest Trial Beamos 3": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Forest Trial Beamos 3",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle MQ Forest Trial Beamos 4": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Forest Trial Beamos 4",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle MQ Forest Trial Beamos 5": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Forest Trial Beamos 5",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle MQ Forest Trial Beamos 6": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Forest Trial Beamos 6",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle MQ Light Trial Beamos": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Light Trial Beamos",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle MQ Light Trial Torch Slug 1": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Light Trial Torch Slug 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle MQ Light Trial Torch Slug 2": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Light Trial Torch Slug 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle MQ Light Trial Lizalfos": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Light Trial Lizalfos",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle MQ Light Trial Skullwalltula": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Light Trial Skullwalltula",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle MQ Shadow Trial Bubble": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Shadow Trial Bubble",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle MQ Shadow Trial Beamos 1": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Shadow Trial Beamos 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle MQ Shadow Trial Beamos 2": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Shadow Trial Beamos 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle MQ Shadow Trial Beamos 3": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Shadow Trial Beamos 3",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle MQ Shadow Trial Beamos 4": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Shadow Trial Beamos 4",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle MQ Fire Trial Torch Slug 1": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Fire Trial Torch Slug 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle MQ Fire Trial Torch Slug 2": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Fire Trial Torch Slug 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle MQ Fire Trial Beamos": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Fire Trial Beamos",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle MQ Spirit Trial Torch Slug": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Spirit Trial Torch Slug",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle MQ Spirit Trial Fire Keese 1": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Spirit Trial Fire Keese 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle MQ Spirit Trial Fire Keese 2": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Spirit Trial Fire Keese 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle MQ Spirit Trial Iron Knuckle": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Spirit Trial Iron Knuckle",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle MQ Spirit Trial Gibdo": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Spirit Trial Gibdo",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle MQ Spirit Trial Redead 1": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Spirit Trial Redead 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle MQ Spirit Trial Redead 2": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Spirit Trial Redead 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle MQ Spirit Trial Bubble 1": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Spirit Trial Bubble 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Castle MQ Spirit Trial Bubble 2": {
+            "area": "",
+            "lKey": "Ganons Castle Grounds -> Ganons Castle",
+            "alias": "Spirit Trial Bubble 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Ganon's Castle MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
         "Ganons Tower Boss Key Chest": {
             "area": "",
             "lKey": "Ganons Castle -> Ganons Tower",
@@ -2005,11 +3231,206 @@
             "shuffled": true,
             "shuffleRules": []
         },
+        "Ganons Tower Keese 1": {
+            "area": "",
+            "lKey": "Ganons Castle -> Ganons Tower",
+            "alias": "Keese 1",
+            "type": "enemyDrop",
+            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Tower Keese 2": {
+            "area": "",
+            "lKey": "Ganons Castle -> Ganons Tower",
+            "alias": "Keese 2",
+            "type": "enemyDrop",
+            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Tower Keese 3": {
+            "area": "",
+            "lKey": "Ganons Castle -> Ganons Tower",
+            "alias": "Keese 3",
+            "type": "enemyDrop",
+            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Tower Keese 4": {
+            "area": "",
+            "lKey": "Ganons Castle -> Ganons Tower",
+            "alias": "Keese 4",
+            "type": "enemyDrop",
+            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Tower Keese 5": {
+            "area": "",
+            "lKey": "Ganons Castle -> Ganons Tower",
+            "alias": "Keese 5",
+            "type": "enemyDrop",
+            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Tower Keese 6": {
+            "area": "",
+            "lKey": "Ganons Castle -> Ganons Tower",
+            "alias": "Keese 6",
+            "type": "enemyDrop",
+            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Tower Keese 7": {
+            "area": "",
+            "lKey": "Ganons Castle -> Ganons Tower",
+            "alias": "Keese 7",
+            "type": "enemyDrop",
+            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Tower Lizalfos 1": {
+            "area": "",
+            "lKey": "Ganons Castle -> Ganons Tower",
+            "alias": "Lizalfos 1",
+            "type": "enemyDrop",
+            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Tower Lizalfos 2": {
+            "area": "",
+            "lKey": "Ganons Castle -> Ganons Tower",
+            "alias": "Lizalfos 2",
+            "type": "enemyDrop",
+            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Tower Stalfos 1": {
+            "area": "",
+            "lKey": "Ganons Castle -> Ganons Tower",
+            "alias": "Stalfos 1",
+            "type": "enemyDrop",
+            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Tower Stalfos 2": {
+            "area": "",
+            "lKey": "Ganons Castle -> Ganons Tower",
+            "alias": "Stalfos 2",
+            "type": "enemyDrop",
+            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Tower White Knuckle": {
+            "area": "",
+            "lKey": "Ganons Castle -> Ganons Tower",
+            "alias": "White Knuckle",
+            "type": "enemyDrop",
+            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Tower Black Knuckle": {
+            "area": "",
+            "lKey": "Ganons Castle -> Ganons Tower",
+            "alias": "Black Knuckle",
+            "type": "enemyDrop",
+            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
         "Ganons Tower Pot 1": {
             "area": "",
             "lKey": "Ganons Castle -> Ganons Tower",
             "alias": "Tower Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false}
@@ -2027,7 +3448,7 @@
             "area": "",
             "lKey": "Ganons Castle -> Ganons Tower",
             "alias": "Tower Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false}
@@ -2045,7 +3466,7 @@
             "area": "",
             "lKey": "Ganons Castle -> Ganons Tower",
             "alias": "Tower Pot 3",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false}
@@ -2063,7 +3484,7 @@
             "area": "",
             "lKey": "Ganons Castle -> Ganons Tower",
             "alias": "Tower Pot 4",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false}
@@ -2081,7 +3502,7 @@
             "area": "",
             "lKey": "Ganons Castle -> Ganons Tower",
             "alias": "Tower Pot 5",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false}
@@ -2099,7 +3520,7 @@
             "area": "",
             "lKey": "Ganons Castle -> Ganons Tower",
             "alias": "Tower Pot 6",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false}
@@ -2117,7 +3538,7 @@
             "area": "",
             "lKey": "Ganons Castle -> Ganons Tower",
             "alias": "Tower Pot 7",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false}
@@ -2135,7 +3556,7 @@
             "area": "",
             "lKey": "Ganons Castle -> Ganons Tower",
             "alias": "Tower Pot 8",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false}
@@ -2153,7 +3574,7 @@
             "area": "",
             "lKey": "Ganons Castle -> Ganons Tower",
             "alias": "Tower Pot 9",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false}
@@ -2171,7 +3592,7 @@
             "area": "",
             "lKey": "Ganons Castle -> Ganons Tower",
             "alias": "Tower Pot 10",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false}
@@ -2189,7 +3610,7 @@
             "area": "",
             "lKey": "Ganons Castle -> Ganons Tower",
             "alias": "Tower Pot 11",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false}
@@ -2207,7 +3628,7 @@
             "area": "",
             "lKey": "Ganons Castle -> Ganons Tower",
             "alias": "Tower Pot 12",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false}
@@ -2225,7 +3646,7 @@
             "area": "",
             "lKey": "Ganons Castle -> Ganons Tower",
             "alias": "Tower Pot 13",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false}
@@ -2243,10 +3664,86 @@
             "area": "",
             "lKey": "Ganons Castle -> Ganons Tower",
             "alias": "Tower Pot 14",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Tower Pot 15": {
+            "area": "",
+            "lKey": "Ganons Castle -> Ganons Tower",
+            "alias": "Tower Pot 15",
+            "type": "jar",
+            "settings": [
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Empty Pots", "value": "On", "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Tower Pot 16": {
+            "area": "",
+            "lKey": "Ganons Castle -> Ganons Tower",
+            "alias": "Tower Pot 16",
+            "type": "jar",
+            "settings": [
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Empty Pots", "value": "On", "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Tower Pot 17": {
+            "area": "",
+            "lKey": "Ganons Castle -> Ganons Tower",
+            "alias": "Tower Pot 17",
+            "type": "jar",
+            "settings": [
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Empty Pots", "value": "On", "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Ganons Tower Pot 18": {
+            "area": "",
+            "lKey": "Ganons Castle -> Ganons Tower",
+            "alias": "Tower Pot 18",
+            "type": "jar",
+            "settings": [
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Empty Pots", "value": "On", "required": true}
             ],
             "visible": true,
             "check": "",

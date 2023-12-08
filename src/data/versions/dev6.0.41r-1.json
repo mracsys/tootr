@@ -1,7 +1,7 @@
 {
     "Settings": {
         "Tracker Settings": {
-            "open": true,
+            "open": false,
             "Settings Preset": [
                 "RSL",
                 "Mixed Pools",
@@ -32,10 +32,10 @@
             ]            
         },
         "ER Settings": {
-            "open": true,
+            "open": false,
             "Shuffle Interiors": {
-                "Simple": true,
-                "Special": true,
+                "Simple": false,
+                "Special": false,
                 "Hideout": false
             },
             "Shuffle Grottos": [
@@ -107,11 +107,11 @@
                 "Random",
                 "Vanilla"
             ],
-            "Cowsanity": [
+            "Shuffle Cows": [
                 "Off",
                 "On"
             ],
-            "Songsanity": [
+            "Shuffle Songs": [
                 "Off",
                 "On"
             ],
@@ -169,6 +169,10 @@
                 "Overworld",
                 "Anywhere"
             ],
+            "Shuffle Treasure Chest Game Keys": [
+                "Off",
+                "On"
+            ],
             "Shuffle Boss Keys": [
                 "Off",
                 "Dungeons",
@@ -187,11 +191,19 @@
                 "Dungeons",
                 "All"
             ],
+            "Shuffle Empty Pots": [
+                "Off",
+                "On"
+            ],
             "Shuffle Crates": [
                 "Off",
                 "Overworld",
                 "Dungeons",
                 "All"
+            ],
+            "Shuffle Empty Crates": [
+                "Off",
+                "On"
             ],
             "Shuffle Beehives": [
                 "Off",
@@ -202,6 +214,22 @@
                 "On"
             ],
             "Shuffle Hylian Loach": [
+                "Off",
+                "On"
+            ],
+            "Shuffle Grass": [
+                "Off",
+                "On"
+            ],
+            "Shuffle Enemy Drops": [
+                "Off",
+                "On"
+            ],
+            "Shuffle Wonderitems": [
+                "Off",
+                "On"
+            ],
+            "Shuffle Gossip Stones": [
                 "Off",
                 "On"
             ]

@@ -29,7 +29,7 @@
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
             "alias": "Lobby Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -48,7 +48,7 @@
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
             "alias": "Lobby Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -67,7 +67,7 @@
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
             "alias": "Lobby Flying Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -86,7 +86,7 @@
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
             "alias": "Lobby Flying Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -116,11 +116,11 @@
             "shuffled": true,
             "shuffleRules": []
         },
-        "Spirit Temple Child Bridge Flying Pot": {
+        "Spirit Temple Child Bridge Flying Pot 1": {
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
-            "alias": "Child Loop Flying Pot",
-            "type": "item",
+            "alias": "Child Loop Flying Pot 1",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -135,14 +135,93 @@
             "shuffled": true,
             "shuffleRules": []
         },
-        "Spirit Temple Child Anubis Pot": {
+        "Spirit Temple Child Bridge Flying Pot 2": {
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
-            "alias": "Child Anubis Pot",
-            "type": "item",
+            "alias": "Child Loop Flying Pot 2",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Empty Pots", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Child Anubis Pot 1": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Child Anubis Pot 1",
+            "type": "jar",
+            "settings": [
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Child Anubis Pot 2": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Child Anubis Pot 2",
+            "type": "jar",
+            "settings": [
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Child Anubis Pot 3": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Child Anubis Pot 3",
+            "type": "jar",
+            "settings": [
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Empty Pots", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Child Anubis Pot 4": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Child Anubis Pot 4",
+            "type": "jar",
+            "settings": [
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Empty Pots", "value": "On", "required": true},
                 {"setting": "Spirit Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -297,7 +376,7 @@
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
             "alias": "Before Child Climb Small Crate 1",
-            "type": "item",
+            "type": "crate",
             "settings": [
                 {"setting": "Shuffle Crates", "value": "All", "required": false},
                 {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
@@ -316,7 +395,7 @@
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
             "alias": "Before Child Climb Small Crate 2",
-            "type": "item",
+            "type": "crate",
             "settings": [
                 {"setting": "Shuffle Crates", "value": "All", "required": false},
                 {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
@@ -335,7 +414,7 @@
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
             "alias": "Child Climb Pot",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -423,7 +502,7 @@
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
             "alias": "Statue Flying Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -442,10 +521,130 @@
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
             "alias": "Statue Flying Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Central Chamber Pot 1": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Central Chamber Pot 1",
+            "type": "jar",
+            "settings": [
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Empty Pots", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Central Chamber Pot 2": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Central Chamber Pot 2",
+            "type": "jar",
+            "settings": [
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Empty Pots", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Central Chamber Pot 3": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Central Chamber Pot 3",
+            "type": "jar",
+            "settings": [
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Empty Pots", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Central Chamber Pot 4": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Central Chamber Pot 4",
+            "type": "jar",
+            "settings": [
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Empty Pots", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Central Chamber Pot 5": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Central Chamber Pot 5",
+            "type": "jar",
+            "settings": [
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Empty Pots", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Central Chamber Pot 6": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Central Chamber Pot 6",
+            "type": "jar",
+            "settings": [
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Empty Pots", "value": "On", "required": true},
                 {"setting": "Spirit Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -600,7 +799,7 @@
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
             "alias": "Child Knuckle Lobby Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -619,7 +818,7 @@
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
             "alias": "Child Knuckle Lobby Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -792,7 +991,7 @@
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
             "alias": "Adult Climb Flying Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -811,7 +1010,7 @@
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
             "alias": "Adult Climb Flying Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -914,7 +1113,7 @@
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
             "alias": "Adult Curving Hall Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1046,7 +1245,7 @@
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
             "alias": "Boss Mirror Flying Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1065,7 +1264,7 @@
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
             "alias": "Boss Mirror Flying Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1084,7 +1283,7 @@
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
             "alias": "Boss Mirror Flying Pot 3",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1103,7 +1302,7 @@
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
             "alias": "Boss Mirror Flying Pot 4",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1122,7 +1321,7 @@
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
             "alias": "Boss Mirror Flying Pot 5",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1141,10 +1340,1036 @@
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
             "alias": "Boss Mirror Flying Pot 6",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Lobby Armos Left": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Lobby Armos 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Lobby Armos Right": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Lobby Armos 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Child Side Armos": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Child Side Armos",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Child Side Keese 1": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Child Side Keese 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Child Side Keese 2": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Child Side Keese 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Child Side Keese 3": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Child Side Keese 3",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Child Side Keese 4": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Child Side Keese 4",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Child Early Torches Keese 1": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Child Early Torches Keese 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Child Early Torches Keese 2": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Child Early Torches Keese 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Child Early Torches Keese 3": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Child Early Torches Keese 3",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Child Early Torches Keese 4": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Child Early Torches Keese 4",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Child Early Torches Keese 5": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Child Early Torches Keese 5",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Child Early Torches Wallmaster": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Child Early Torches Wallmaster",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Child Bridge Stalfos": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Child Bridge Stalfos",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Child Bridge Bubble": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Child Bridge Bubble",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Child Anubis": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Child Anubis",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Child Climb Skullwalltula 1": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Child Climb Skullwalltula 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Child Climb Skullwalltula 2": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Child Climb Skullwalltula 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Child Climb Skullwalltula 3": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Child Climb Skullwalltula 3",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Child Climb Skullwalltula 4": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Child Climb Skullwalltula 4",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Child Climb Lizalfos 1": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Child Climb Lizalfos 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Child Climb Lizalfos 2": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Child Climb Lizalfos 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Statue Room Adult Side Armos": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Statue Room Adult Side Armos",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Sun Block Room Beamos 1": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Sun Block Room Beamos 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Sun Block Room Beamos 2": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Sun Block Room Beamos 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Sun Block Room Beamos 3": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Sun Block Room Beamos 3",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Child Side Iron Knuckle": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Child Side Iron Knuckle",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Early Adult Beamos": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Early Adult Beamos",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Early Adult Like Like": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Early Adult Like Like",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Early Adult Wolfos": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Early Adult Wolfos",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Adult Climb Like Like": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Adult Climb Like Like",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Adult Climb Wallmaster": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Adult Climb Wallmaster",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Adult Climb Floormaster": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Adult Climb Floormaster",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Adult Hallway Beamos": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Adult Hallway Beamos",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Adult Anubis 1": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Adult Anubis 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Adult Anubis 2": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Adult Anubis 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Adult Anubis 3": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Adult Anubis 3",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Adult Anubis Room Beamos": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Adult Anubis Room Beamos",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple 4 Armos Room Armos 1": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "4 Armos Room 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple 4 Armos Room Armos 2": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "4 Armos Room 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple 4 Armos Room Armos 3": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "4 Armos Room 3",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple 4 Armos Room Armos 4": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "4 Armos Room 4",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Adult Iron Knuckle": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Adult Iron Knuckle",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Boss Key Room Torch Slug 1": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Boss Key Room Torch Slug 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Boss Key Room Torch Slug 2": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Boss Key Room Torch Slug 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Boss Key Room Torch Slug 3": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Boss Key Room Torch Slug 3",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Boss Key Room Torch Slug 4": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Boss Key Room Torch Slug 4",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Shifting Wall Lower Beamos Left": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Shifting Wall Lower Beamos 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Shifting Wall Lower Beamos Right": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Shifting Wall Lower Beamos 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Shifting Wall Upper Beamos Left": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Shifting Wall Upper Beamos 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Shifting Wall Upper Beamos Right": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Shifting Wall Upper Beamos 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Shifting Wall Skullwalltula": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Shifting Wall Skullwalltula",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Big Mirror Bubble 1": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Big Mirror Bubble 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Big Mirror Bubble 2": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Big Mirror Bubble 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Big Mirror Bubble 3": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Big Mirror Bubble 3",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Big Mirror Lizalfos 1": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Big Mirror Lizalfos 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": false, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple Big Mirror Lizalfos 2": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Big Mirror Lizalfos 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
                 {"setting": "Spirit Temple MQ", "value": false, "required": true}
             ],
             "visible": true,
@@ -1160,7 +2385,7 @@
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
             "alias": "Lobby Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1179,7 +2404,7 @@
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
             "alias": "Lobby Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1198,7 +2423,7 @@
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
             "alias": "Lobby Pot 3",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1217,7 +2442,7 @@
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
             "alias": "Lobby Pot 4",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1336,7 +2561,7 @@
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
             "alias": "Child Torch Slug Pot",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1408,7 +2633,7 @@
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
             "alias": "Child Gibdo Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1427,7 +2652,7 @@
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
             "alias": "Child Gibdo Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1446,7 +2671,7 @@
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
             "alias": "Child Stalfos Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1465,7 +2690,7 @@
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
             "alias": "Child Stalfos Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1484,10 +2709,30 @@
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
             "alias": "Child Stalfos Pot 3",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Child Stalfos Fight Pot 4": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Child Stalfos Pot 4",
+            "type": "jar",
+            "settings": [
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Empty Pots", "value": "On", "required": true},
                 {"setting": "Spirit Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1518,7 +2763,7 @@
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
             "alias": "Child Climb Pot",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1567,7 +2812,7 @@
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
             "alias": "Statue Floor Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1586,7 +2831,7 @@
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
             "alias": "Statue Floor Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1605,10 +2850,70 @@
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
             "alias": "Statue Floor Pot 3",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Central Chamber Flying Pot Floor": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Statue Floor Flying Pot",
+            "type": "jar",
+            "settings": [
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Empty Pots", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Central Chamber Flying Pot Top Left": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Central Chamber Top Left Flying Pot",
+            "type": "jar",
+            "settings": [
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Empty Pots", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Central Chamber Flying Pot Stairs": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Central Chamber Stairs Flying Pot",
+            "type": "jar",
+            "settings": [
+                {"setting": "Shuffle Pots", "value": "All", "required": false},
+                {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Empty Pots", "value": "On", "required": true},
                 {"setting": "Spirit Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1624,7 +2929,7 @@
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
             "alias": "Statue Floor Crate 1",
-            "type": "item",
+            "type": "crate",
             "settings": [
                 {"setting": "Shuffle Crates", "value": "All", "required": false},
                 {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
@@ -1643,10 +2948,30 @@
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
             "alias": "Statue Floor Crate 2",
-            "type": "item",
+            "type": "crate",
             "settings": [
                 {"setting": "Shuffle Crates", "value": "All", "required": false},
                 {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Central Chamber Small Crate": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Statue Room Small Crate",
+            "type": "crate",
+            "settings": [
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Empty Crates", "value": "On", "required": true},
                 {"setting": "Spirit Temple MQ", "value": true, "required": true}
             ],
             "visible": true,
@@ -1707,7 +3032,7 @@
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
             "alias": "Sun Block Room Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1726,7 +3051,7 @@
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
             "alias": "Sun Block Room Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1814,7 +3139,7 @@
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
             "alias": "Central Room Ledge Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1833,7 +3158,7 @@
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
             "alias": "Central Room Ledge Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1852,7 +3177,7 @@
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
             "alias": "Adult Descent Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -1871,7 +3196,7 @@
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
             "alias": "Adult Descent Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -2039,6 +3364,26 @@
             "shuffled": true,
             "shuffleRules": []
         },
+        "SSpirit Temple MQ Beamos Room Small Crate": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Beamos Room Small Crate",
+            "type": "crate",
+            "settings": [
+                {"setting": "Shuffle Crates", "value": "All", "required": false},
+                {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
+                {"setting": "Shuffle Empty Crates", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
         "Spirit Temple MQ Chest Switch Chest": {
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
@@ -2173,7 +3518,7 @@
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
             "alias": "Shifting Walls Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -2192,7 +3537,7 @@
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
             "alias": "Shifting Walls Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -2211,7 +3556,7 @@
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
             "alias": "Thrones Lobby Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -2230,7 +3575,7 @@
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
             "alias": "Thrones Lobby Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -2297,7 +3642,7 @@
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
             "alias": "Boss Mirror Pot 1",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -2316,7 +3661,7 @@
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
             "alias": "Boss Mirror Pot 2",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -2335,7 +3680,7 @@
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
             "alias": "Boss Mirror Pot 3",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -2354,7 +3699,7 @@
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
             "alias": "Boss Mirror Pot 4",
-            "type": "item",
+            "type": "jar",
             "settings": [
                 {"setting": "Shuffle Pots", "value": "All", "required": false},
                 {"setting": "Shuffle Pots", "value": "Dungeons", "required": false},
@@ -2373,7 +3718,7 @@
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
             "alias": "Boss Mirror Crate 1",
-            "type": "item",
+            "type": "crate",
             "settings": [
                 {"setting": "Shuffle Crates", "value": "All", "required": false},
                 {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
@@ -2392,7 +3737,7 @@
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
             "alias": "Boss Mirror Crate 2",
-            "type": "item",
+            "type": "crate",
             "settings": [
                 {"setting": "Shuffle Crates", "value": "All", "required": false},
                 {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
@@ -2411,7 +3756,7 @@
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
             "alias": "Boss Mirror Crate 3",
-            "type": "item",
+            "type": "crate",
             "settings": [
                 {"setting": "Shuffle Crates", "value": "All", "required": false},
                 {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
@@ -2430,7 +3775,7 @@
             "area": "",
             "lKey": "Desert Colossus -> Spirit Temple Lobby",
             "alias": "Boss Mirror Crate 4",
-            "type": "item",
+            "type": "crate",
             "settings": [
                 {"setting": "Shuffle Crates", "value": "All", "required": false},
                 {"setting": "Shuffle Crates", "value": "Dungeons", "required": false},
@@ -2451,6 +3796,1176 @@
             "alias": "Top Invisible Chest",
             "type": "smallKey",
             "settings": [{"setting": "Spirit Temple MQ", "value": true, "required": true}],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Early Child Torch Slug 1": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Early Child Torch Slug 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Early Child Torch Slug 2": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Early Child Torch Slug 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Before Gate Gibdo": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Child Side Before Gate Gibdo",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ After Gate Gibdo 1": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Child Side After Gate Gibdo 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ After Gate Gibdo 2": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Child Side After Gate Gibdo 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Map Room Keese 1": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Map Room Keese 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Map Room Keese 2": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Map Room Keese 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Map Room Keese 3": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Map Room Keese 3",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Map Room Keese 4": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Map Room Keese 4",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Map Room Keese 5": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Map Room Keese 5",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Map Room Anubis": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Map Room Anubis",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Child Climb Baby Dodongo 1": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Child Climb Baby Dodongo 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Child Climb Baby Dodongo 2": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Child Climb Baby Dodongo 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Child Climb Baby Dodongo 3": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Child Climb Baby Dodongo 3",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Child Climb Baby Dodongo 4": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Child Climb Baby Dodongo 4",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Child Climb Like-Like": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Child Climb Like-Like",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Child Climb Beamos": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Child Climb Beamos",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Central Chamber Wallmaster": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Central Chamber Wallmaster",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Central Chamber Zeldas Lullaby Wallmaster": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Central Chamber Zeldas Lullaby Wallmaster",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Central Chamber Floormaster": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Central Chamber Floormaster",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Sun Block Room Bubble 1": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Sun Block Room Bubble 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Sun Block Room Bubble 2": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Sun Block Room Bubble 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Sun Block Room Bubble 3": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Sun Block Room Bubble 3",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Sun Block Room Wallmaster 1": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Sun Block Room Wallmaster 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Sun Block Room Wallmaster 2": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Sun Block Room Wallmaster 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ After Sun Block Room Skulltula": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "After Sun Block Room Skulltula",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Child Iron Knuckle": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Child Iron Knuckle",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Symphony Room Skulltula 1": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Symphony Room Skulltula 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Symphony Room Skulltula 2": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Symphony Room Skulltula 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Symphony Room Skulltula 3": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Symphony Room Skulltula 3",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Symphony Room Skulltula 4": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Symphony Room Skulltula 4",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Symphony Room Skulltula 5": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Symphony Room Skulltula 5",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Symphony Room Skulltula 6": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Symphony Room Skulltula 6",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Symphony Room Skulltula 7": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Symphony Room Skulltula 7",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Symphony Room Skulltula 8": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Symphony Room Skulltula 8",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Symphony Room Skulltula 9": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Symphony Room Skulltula 9",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Boulder Room Moblin": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Boulder Room Moblin",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Adult Climb Stalfos 1": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Adult Climb Stalfos 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Adult Climb Stalfos 2": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Adult Climb Stalfos 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Adult Climb Wallmaster 1": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Adult Climb Wallmaster 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Adult Climb Wallmaster 2": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Adult Climb Wallmaster 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Adult Climb Wallmaster 3": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Adult Climb Wallmaster 3",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Adult Climb Wallmaster 4": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Adult Climb Wallmaster 4",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Song of Time Puzzle Beamos 1": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Song of Time Puzzle Beamos 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Song of Time Puzzle Beamos 2": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Song of Time Puzzle Beamos 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Song of Time Puzzle Beamos 3": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Song of Time Puzzle Beamos 3",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Song of Time Puzzle Beamos 4": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Song of Time Puzzle Beamos 4",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Chest Switch Lizalfos 1": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Chest Switch Lizalfos 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Chest Switch Lizalfos 2": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Chest Switch Lizalfos 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Before Adult Knuckle Floormaster": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Before Adult Knuckle Floormaster",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Adult Iron Knuckle": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Adult Iron Knuckle",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Boss Key Redead": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Boss Key Redead",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Nine Thrones Room Iron Knuckle": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Nine Thrones Room Iron Knuckle",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Shifting Wall Torch Slug": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Shifting Wall Torch Slug",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Shifting Wall Keese 1": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Shifting Wall Keese 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Shifting Wall Keese 2": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Shifting Wall Keese 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Shifting Wall Keese 3": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Shifting Wall Keese 3",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Shifting Wall Keese 4": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Shifting Wall Keese 4",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Big Mirror Torch Slug": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Big Mirror Torch Slug",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Big Mirror Lizalfos": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Big Mirror Lizalfos",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Big Mirror Bubble 1": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Big Mirror Bubble 1",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Big Mirror Bubble 2": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Big Mirror Bubble 2",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Spinning Platform Stalfos": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Spinning Platform Stalfos",
+            "type": "enemyDrop",
+            "settings": [
+                {"setting": "Shuffle Enemy Drops", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Chest Switch Sword Wonderitem": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Chest Switch Sword Wonderitem",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Wonderitems", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
+            "visible": true,
+            "check": "",
+            "foundItem": "",
+            "merchant": false,
+            "price": 0,
+            "walletTier": 0,
+            "shuffled": true,
+            "shuffleRules": []
+        },
+        "Spirit Temple MQ Chest Switch Hammer Wonderitem": {
+            "area": "",
+            "lKey": "Desert Colossus -> Spirit Temple Lobby",
+            "alias": "Chest Switch Hammer Wonderitem",
+            "type": "item",
+            "settings": [
+                {"setting": "Shuffle Wonderitems", "value": "On", "required": true},
+                {"setting": "Spirit Temple MQ", "value": true, "required": true}
+            ],
             "visible": true,
             "check": "",
             "foundItem": "",
