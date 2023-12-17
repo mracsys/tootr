@@ -263,7 +263,15 @@
                 "Off",
                 "On"
             ],
+            "Skip Epona Race": [
+                "Off",
+                "On"
+            ],
             "Free Scarecrow": [
+                "Off",
+                "On"
+            ],
+            "Plant Beans": [
                 "Off",
                 "On"
             ],

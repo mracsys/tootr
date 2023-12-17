@@ -1,992 +1,1359 @@
 {
-    "entrances": {
-        "Death Mountain -> Kak Behind Gate": {
-            "area": "Death Mountain Trail",
-            "reverse": "Kak Behind Gate -> Death Mountain",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Kakariko Village",
-            "reverseAlias": "Death Mountain Trail",
-            "tag": "",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "overworld",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "Death Mountain Summit -> DMC Upper Local": {
-            "area": "Death Mountain Trail",
-            "reverse": "DMC Upper Nearby -> Death Mountain Summit",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Death Mountain Crater",
-            "reverseAlias": "Death Mountain Trail",
-            "tag": "",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "overworld",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "Death Mountain -> Goron City": {
-            "area": "Death Mountain Trail",
-            "reverse": "Goron City -> Death Mountain",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Goron City",
-            "reverseAlias": "Death Mountain Trail",
-            "tag": "",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "overworld",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "Death Mountain -> Dodongos Cavern Beginning": {
-            "area": "Death Mountain Trail",
-            "reverse": "Dodongos Cavern Beginning -> Death Mountain",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Dodongo's Cavern",
-            "reverseAlias": "from Dodongo's Cavern",
-            "tag": "",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "dungeon",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "DMT Owl Flight -> Kak Impas Ledge": {
-            "area": "Kakariko Village",
-            "reverse": "",
-            "oneWay": true,
-            "oneWayArea": "Death Mountain Trail",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Kakariko Village Owl Drop",
-            "reverseAlias": "",
-            "tag": "",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "owldrop",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "Death Mountain -> DMT Storms Grotto": {
-            "area": "Death Mountain Trail",
-            "reverse": "DMT Storms Grotto -> Death Mountain",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Storms Grotto",
-            "reverseAlias": "from Storms Grotto",
-            "tag": "Generic Grotto",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "grotto",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "Death Mountain Summit -> DMT Cow Grotto": {
-            "area": "Death Mountain Trail",
-            "reverse": "DMT Cow Grotto -> Death Mountain Summit",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Cow Grotto",
-            "reverseAlias": "from Cow Grotto",
-            "tag": "",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "grotto",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "Death Mountain Summit -> DMT Great Fairy Fountain": {
-            "area": "Death Mountain Trail",
-            "reverse": "DMT Great Fairy Fountain -> Death Mountain Summit",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Great Fairy Fountain",
-            "reverseAlias": "from Great Fairy Fountain",
-            "tag": "Great Fairy Fountain",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "interior",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        }
+  "entrances": {
+    "Death Mountain -> Kak Behind Gate": {
+      "area": "Death Mountain Trail",
+      "reverse": "Kak Behind Gate -> Death Mountain",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Kakariko Village",
+      "reverseAlias": "Death Mountain Trail",
+      "tag": "",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "overworld",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
     },
-    "locations": {
-        "DMT Freestanding PoH": {
-            "area": "Death Mountain Trail",
-            "lKey": "",
-            "alias": "Top of Dodongo's Cavern",
-            "type": "item",
-            "settings": [],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMT Chest": {
-            "area": "Death Mountain Trail",
-            "lKey": "",
-            "alias": "Bombable Wall",
-            "type": "item",
-            "settings": [],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMT Biggoron Prescription": {
-            "area": "Death Mountain Trail",
-            "lKey": "",
-            "alias": "Biggoron Trade for Broken Sword",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Adult Trade", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMT Biggoron Claim Check": {
-            "area": "Death Mountain Trail",
-            "lKey": "",
-            "alias": "Biggoron Trade for Eyedrops",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Adult Trade", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMT Biggoron Biggoron Sword": {
-            "area": "Death Mountain Trail",
-            "lKey": "",
-            "alias": "Biggoron Trade for Claim Check",
-            "type": "item",
-            "settings": [],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMT Storms Grotto Chest": {
-            "area": "",
-            "lKey": "Death Mountain -> DMT Storms Grotto",
-            "alias": "Grotto Chest",
-            "type": "item",
-            "settings": [],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMT Great Fairy Reward": {
-            "area": "",
-            "lKey": "Death Mountain Summit -> DMT Great Fairy Fountain",
-            "alias": "Fairy Reward",
-            "type": "item",
-            "settings": [],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMT Cow Grotto Cow": {
-            "area": "",
-            "lKey": "Death Mountain Summit -> DMT Cow Grotto",
-            "alias": "Grotto Cow",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Cows", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMT GS Near Kak": {
-            "area": "Death Mountain Trail",
-            "lKey": "",
-            "alias": "Bombable Wall",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": [
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ]
-        },
-        "DMT GS Bean Patch": {
-            "area": "Death Mountain Trail",
-            "lKey": "",
-            "alias": "Bean Patch",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": [
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ]
-        },
-        "DMT GS Above Dodongos Cavern": {
-            "area": "Death Mountain Trail",
-            "lKey": "",
-            "alias": "Boulder near Cavern",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": [
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ]
-        },
-        "DMT GS Falling Rocks Path": {
-            "area": "Death Mountain Trail",
-            "lKey": "",
-            "alias": "Boulder near Crater",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": [
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ]
-        },
-        "DMT Boulder Red Rupee": {
-            "area": "Death Mountain Trail",
-            "lKey": "",
-            "alias": "Boulder Red Rupee",
-            "type": "item",
-            "settings": [
-                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
-                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMT Boulder Blue Rupee": {
-            "area": "Death Mountain Trail",
-            "lKey": "",
-            "alias": "Boulder Blue Rupee",
-            "type": "item",
-            "settings": [
-                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
-                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMT Cow Grotto Rupee Circle Green Rupee 1": {
-            "area": "",
-            "lKey": "Death Mountain Summit -> DMT Cow Grotto",
-            "alias": "Rupee 1",
-            "type": "item",
-            "settings": [
-                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
-                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMT Cow Grotto Rupee Circle Green Rupee 2": {
-            "area": "",
-            "lKey": "Death Mountain Summit -> DMT Cow Grotto",
-            "alias": "Rupee 2",
-            "type": "item",
-            "settings": [
-                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
-                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMT Cow Grotto Rupee Circle Green Rupee 3": {
-            "area": "",
-            "lKey": "Death Mountain Summit -> DMT Cow Grotto",
-            "alias": "Rupee 3",
-            "type": "item",
-            "settings": [
-                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
-                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMT Cow Grotto Rupee Circle Green Rupee 4": {
-            "area": "",
-            "lKey": "Death Mountain Summit -> DMT Cow Grotto",
-            "alias": "Rupee 4",
-            "type": "item",
-            "settings": [
-                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
-                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMT Cow Grotto Rupee Circle Green Rupee 5": {
-            "area": "",
-            "lKey": "Death Mountain Summit -> DMT Cow Grotto",
-            "alias": "Rupee 5",
-            "type": "item",
-            "settings": [
-                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
-                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMT Cow Grotto Rupee Circle Green Rupee 6": {
-            "area": "",
-            "lKey": "Death Mountain Summit -> DMT Cow Grotto",
-            "alias": "Rupee 6",
-            "type": "item",
-            "settings": [
-                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
-                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMT Cow Grotto Red Rupee": {
-            "area": "",
-            "lKey": "Death Mountain Summit -> DMT Cow Grotto",
-            "alias": "Rupee 7",
-            "type": "item",
-            "settings": [
-                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
-                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMT Cow Grotto Heart 1": {
-            "area": "",
-            "lKey": "Death Mountain Summit -> DMT Cow Grotto",
-            "alias": "Heart 1",
-            "type": "item",
-            "settings": [
-                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
-                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMT Cow Grotto Heart 2": {
-            "area": "",
-            "lKey": "Death Mountain Summit -> DMT Cow Grotto",
-            "alias": "Heart 2",
-            "type": "item",
-            "settings": [
-                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
-                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMT Cow Grotto Heart 3": {
-            "area": "",
-            "lKey": "Death Mountain Summit -> DMT Cow Grotto",
-            "alias": "Heart 3",
-            "type": "item",
-            "settings": [
-                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
-                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMT Cow Grotto Heart 4": {
-            "area": "",
-            "lKey": "Death Mountain Summit -> DMT Cow Grotto",
-            "alias": "Heart 4",
-            "type": "item",
-            "settings": [
-                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
-                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMT Cow Grotto Beehive": {
-            "area": "",
-            "lKey": "Death Mountain Summit -> DMT Cow Grotto",
-            "alias": "Beehive",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Beehives", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMT Storms Grotto Beehive 1": {
-            "area": "",
-            "lKey": "Death Mountain -> DMT Storms Grotto",
-            "alias": "Beehive 1",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Beehives", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMT Storms Grotto Beehive 2": {
-            "area": "",
-            "lKey": "Death Mountain -> DMT Storms Grotto",
-            "alias": "Beehive 2",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Beehives", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMT Storms Grotto Grass 1": {
-            "area": "",
-            "lKey": "Death Mountain -> DMT Storms Grotto",
-            "alias": "Grass 1",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMT Storms Grotto Grass 2": {
-            "area": "",
-            "lKey": "Death Mountain -> DMT Storms Grotto",
-            "alias": "Grass 2",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMT Storms Grotto Grass 3": {
-            "area": "",
-            "lKey": "Death Mountain -> DMT Storms Grotto",
-            "alias": "Grass 3",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMT Storms Grotto Grass 4": {
-            "area": "",
-            "lKey": "Death Mountain -> DMT Storms Grotto",
-            "alias": "Grass 4",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMT Cow Grotto Grass 1": {
-            "area": "",
-            "lKey": "Death Mountain Summit -> DMT Cow Grotto",
-            "alias": "Grass 1",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMT Cow Grotto Grass 2": {
-            "area": "",
-            "lKey": "Death Mountain Summit -> DMT Cow Grotto",
-            "alias": "Grass 2",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMT Adult First Tektite": {
-            "area": "Death Mountain Trail",
-            "lKey": "",
-            "alias": "Adult Lower Tektite 1",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMT Adult Second Tektite": {
-            "area": "Death Mountain Trail",
-            "lKey": "",
-            "alias": "Adult Lower Tektite 2",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMT Adult Summit Tektite": {
-            "area": "Death Mountain Trail",
-            "lKey": "",
-            "alias": "Adult Summit Tektite",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMT Adult Summit Skullwalltula Lower": {
-            "area": "Death Mountain Trail",
-            "lKey": "",
-            "alias": "Adult Summit Skullwalltula 1",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMT Adult Summit Skullwalltula Middle": {
-            "area": "Death Mountain Trail",
-            "lKey": "",
-            "alias": "Adult Summit Skullwalltula 2",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMT Adult Summit Skullwalltula Upper": {
-            "area": "Death Mountain Trail",
-            "lKey": "",
-            "alias": "Adult Summit Skullwalltula 3",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMT Child First Tektite": {
-            "area": "Death Mountain Trail",
-            "lKey": "",
-            "alias": "Child Tektite 1",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMT Child Second Tektite": {
-            "area": "Death Mountain Trail",
-            "lKey": "",
-            "alias": "Child Tektite 2",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMT Child Third Tektite": {
-            "area": "Death Mountain Trail",
-            "lKey": "",
-            "alias": "Child Tektite 3",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMT Child Near DC Tektite": {
-            "area": "Death Mountain Trail",
-            "lKey": "",
-            "alias": "Child Tektite 4",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMT Child Summit Skullwalltula Lower": {
-            "area": "Death Mountain Trail",
-            "lKey": "",
-            "alias": "Child Summit Skullwalltula 1",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMT Child Summit Skullwalltula Middle": {
-            "area": "Death Mountain Trail",
-            "lKey": "",
-            "alias": "Child Summit Skullwalltula 2",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMT Child Summit Skullwalltula Upper": {
-            "area": "Death Mountain Trail",
-            "lKey": "",
-            "alias": "Child Summit Skullwalltula 3",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMT Gossip Stone Drop": {
-            "area": "Death Mountain Trail",
-            "lKey": "",
-            "alias": "Gossip Stone Drop",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Gossip Stones", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMT Storms Grotto Gossip Stone Drop": {
-            "area": "",
-            "lKey": "Death Mountain -> DMT Storms Grotto",
-            "alias": "Gossip Stone Drop",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Gossip Stones", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        }
+    "Death Mountain -> Dodongos Cavern Beginning": {
+      "area": "Death Mountain Trail",
+      "reverse": "Dodongos Cavern Beginning -> Death Mountain",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Dodongo's Cavern",
+      "reverseAlias": "from Dodongo's Cavern",
+      "tag": "",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "dungeon",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
+    },
+    "Death Mountain -> Goron City": {
+      "area": "Death Mountain Trail",
+      "reverse": "Goron City -> Death Mountain",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Goron City",
+      "reverseAlias": "Death Mountain Trail",
+      "tag": "",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "overworld",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
+    },
+    "DMT Owl Flight -> Kak Impas Ledge": {
+      "area": "Kakariko Village",
+      "reverse": "",
+      "oneWay": true,
+      "oneWayArea": "Death Mountain Trail",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Kakariko Village Owl Drop",
+      "reverseAlias": "",
+      "tag": "",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "owldrop",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
+    },
+    "Death Mountain Summit -> DMC Upper Local": {
+      "area": "Death Mountain Trail",
+      "reverse": "DMC Upper Nearby -> Death Mountain Summit",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Death Mountain Crater",
+      "reverseAlias": "Death Mountain Trail",
+      "tag": "",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "overworld",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
+    },
+    "Death Mountain -> DMT Storms Grotto": {
+      "area": "Death Mountain Trail",
+      "reverse": "DMT Storms Grotto -> Death Mountain",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Storms Grotto",
+      "reverseAlias": "from Storms Grotto",
+      "tag": "Generic Grotto",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "grotto",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
+    },
+    "Death Mountain Summit -> DMT Cow Grotto": {
+      "area": "Death Mountain Trail",
+      "reverse": "DMT Cow Grotto -> Death Mountain Summit",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Cow Grotto",
+      "reverseAlias": "from Cow Grotto",
+      "tag": "",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "grotto",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
+    },
+    "Death Mountain Summit -> DMT Great Fairy Fountain": {
+      "area": "Death Mountain Trail",
+      "reverse": "DMT Great Fairy Fountain -> Death Mountain Summit",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Great Fairy Fountain",
+      "reverseAlias": "from Great Fairy Fountain",
+      "tag": "Great Fairy Fountain",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "interior",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
     }
+  },
+  "locations": {
+    "DMT GS Near Kak": {
+      "area": "Death Mountain Trail",
+      "lKey": "",
+      "alias": "Bombable Wall GS",
+      "type": "skulltula",
+      "settings": [
+        {
+          "setting": "Show Unshuffled Skulls",
+          "value": "Yes",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "All",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": [
+        {
+          "setting": "Tokensanity",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "All",
+          "required": false
+        }
+      ]
+    },
+    "DMT Child First Tektite": {
+      "area": "Death Mountain Trail",
+      "lKey": "",
+      "alias": "Child Tektite 1",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMT Child Second Tektite": {
+      "area": "Death Mountain Trail",
+      "lKey": "",
+      "alias": "Child Tektite 2",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMT Child Third Tektite": {
+      "area": "Death Mountain Trail",
+      "lKey": "",
+      "alias": "Child Tektite 3",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMT Child Near DC Tektite": {
+      "area": "Death Mountain Trail",
+      "lKey": "",
+      "alias": "Child Tektite 4",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMT Adult First Tektite": {
+      "area": "Death Mountain Trail",
+      "lKey": "",
+      "alias": "Adult Lower Tektite 1",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMT Adult Second Tektite": {
+      "area": "Death Mountain Trail",
+      "lKey": "",
+      "alias": "Adult Lower Tektite 2",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMT GS Bean Patch": {
+      "area": "Death Mountain Trail",
+      "lKey": "",
+      "alias": "Bean Patch GS",
+      "type": "skulltula",
+      "settings": [
+        {
+          "setting": "Show Unshuffled Skulls",
+          "value": "Yes",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "All",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": [
+        {
+          "setting": "Tokensanity",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "All",
+          "required": false
+        }
+      ]
+    },
+    "DMT Plant Bean Patch": {
+      "area": "Death Mountain Trail",
+      "lKey": "",
+      "alias": "Plant Bean Patch",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Plant Beans",
+          "value": "Off",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMT Boulder Red Rupee": {
+      "area": "Death Mountain Trail",
+      "lKey": "",
+      "alias": "Boulder Red Rupee",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMT Boulder Blue Rupee": {
+      "area": "Death Mountain Trail",
+      "lKey": "",
+      "alias": "Boulder Blue Rupee",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMT Chest": {
+      "area": "Death Mountain Trail",
+      "lKey": "",
+      "alias": "Bombable Wall Chest",
+      "type": "item",
+      "settings": [],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMT GS Above Dodongos Cavern": {
+      "area": "Death Mountain Trail",
+      "lKey": "",
+      "alias": "Adult Lower Boulder GS",
+      "type": "skulltula",
+      "settings": [
+        {
+          "setting": "Show Unshuffled Skulls",
+          "value": "Yes",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "All",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": [
+        {
+          "setting": "Tokensanity",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "All",
+          "required": false
+        }
+      ]
+    },
+    "DMT Freestanding PoH": {
+      "area": "Death Mountain Trail",
+      "lKey": "",
+      "alias": "Top of Dodongo's Cavern Item",
+      "type": "item",
+      "settings": [],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMT GS Falling Rocks Path": {
+      "area": "Death Mountain Trail",
+      "lKey": "",
+      "alias": "Adult Upper Boulder GS",
+      "type": "skulltula",
+      "settings": [
+        {
+          "setting": "Show Unshuffled Skulls",
+          "value": "Yes",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "All",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": [
+        {
+          "setting": "Tokensanity",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "All",
+          "required": false
+        }
+      ]
+    },
+    "DMT Child Summit Skullwalltula Lower": {
+      "area": "Death Mountain Trail",
+      "lKey": "",
+      "alias": "Child Summit Skullwalltula 1",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMT Child Summit Skullwalltula Middle": {
+      "area": "Death Mountain Trail",
+      "lKey": "",
+      "alias": "Child Summit Skullwalltula 2",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMT Child Summit Skullwalltula Upper": {
+      "area": "Death Mountain Trail",
+      "lKey": "",
+      "alias": "Child Summit Skullwalltula 3",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMT Adult Summit Tektite": {
+      "area": "Death Mountain Trail",
+      "lKey": "",
+      "alias": "Adult Summit Tektite",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMT Adult Summit Skullwalltula Lower": {
+      "area": "Death Mountain Trail",
+      "lKey": "",
+      "alias": "Adult Summit Skullwalltula 1",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMT Adult Summit Skullwalltula Middle": {
+      "area": "Death Mountain Trail",
+      "lKey": "",
+      "alias": "Adult Summit Skullwalltula 2",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMT Adult Summit Skullwalltula Upper": {
+      "area": "Death Mountain Trail",
+      "lKey": "",
+      "alias": "Adult Summit Skullwalltula 3",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMT Biggoron Prescription": {
+      "area": "Death Mountain Trail",
+      "lKey": "",
+      "alias": "Biggoron Trade for Broken Sword",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Adult Trade",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMT Biggoron Claim Check": {
+      "area": "Death Mountain Trail",
+      "lKey": "",
+      "alias": "Biggoron Trade for Eyedrops",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Adult Trade",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMT Biggoron Biggoron Sword": {
+      "area": "Death Mountain Trail",
+      "lKey": "",
+      "alias": "Biggoron Trade for Claim Check",
+      "type": "item",
+      "settings": [],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMT Gossip Stone Drop": {
+      "area": "Death Mountain Trail",
+      "lKey": "",
+      "alias": "Gossip Stone Drop",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Gossip Stones",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMT Storms Grotto Chest": {
+      "area": "",
+      "lKey": "Death Mountain -> DMT Storms Grotto",
+      "alias": "Grotto Chest",
+      "type": "item",
+      "settings": [],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMT Storms Grotto Grass 1": {
+      "area": "",
+      "lKey": "Death Mountain -> DMT Storms Grotto",
+      "alias": "Grass 1",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMT Storms Grotto Grass 2": {
+      "area": "",
+      "lKey": "Death Mountain -> DMT Storms Grotto",
+      "alias": "Grass 2",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMT Storms Grotto Grass 3": {
+      "area": "",
+      "lKey": "Death Mountain -> DMT Storms Grotto",
+      "alias": "Grass 3",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMT Storms Grotto Grass 4": {
+      "area": "",
+      "lKey": "Death Mountain -> DMT Storms Grotto",
+      "alias": "Grass 4",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMT Storms Grotto Beehive 1": {
+      "area": "",
+      "lKey": "Death Mountain -> DMT Storms Grotto",
+      "alias": "Beehive 1",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Beehives",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMT Storms Grotto Beehive 2": {
+      "area": "",
+      "lKey": "Death Mountain -> DMT Storms Grotto",
+      "alias": "Beehive 2",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Beehives",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMT Storms Grotto Gossip Stone Drop": {
+      "area": "",
+      "lKey": "Death Mountain -> DMT Storms Grotto",
+      "alias": "Gossip Stone Drop",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Gossip Stones",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMT Cow Grotto Rupee Circle Green Rupee 1": {
+      "area": "",
+      "lKey": "Death Mountain Summit -> DMT Cow Grotto",
+      "alias": "Rupee 1",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMT Cow Grotto Rupee Circle Green Rupee 2": {
+      "area": "",
+      "lKey": "Death Mountain Summit -> DMT Cow Grotto",
+      "alias": "Rupee 2",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMT Cow Grotto Rupee Circle Green Rupee 3": {
+      "area": "",
+      "lKey": "Death Mountain Summit -> DMT Cow Grotto",
+      "alias": "Rupee 3",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMT Cow Grotto Rupee Circle Green Rupee 4": {
+      "area": "",
+      "lKey": "Death Mountain Summit -> DMT Cow Grotto",
+      "alias": "Rupee 4",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMT Cow Grotto Rupee Circle Green Rupee 5": {
+      "area": "",
+      "lKey": "Death Mountain Summit -> DMT Cow Grotto",
+      "alias": "Rupee 5",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMT Cow Grotto Rupee Circle Green Rupee 6": {
+      "area": "",
+      "lKey": "Death Mountain Summit -> DMT Cow Grotto",
+      "alias": "Rupee 6",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMT Cow Grotto Red Rupee": {
+      "area": "",
+      "lKey": "Death Mountain Summit -> DMT Cow Grotto",
+      "alias": "Rupee 7",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMT Cow Grotto Heart 1": {
+      "area": "",
+      "lKey": "Death Mountain Summit -> DMT Cow Grotto",
+      "alias": "Heart 1",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMT Cow Grotto Heart 2": {
+      "area": "",
+      "lKey": "Death Mountain Summit -> DMT Cow Grotto",
+      "alias": "Heart 2",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMT Cow Grotto Heart 3": {
+      "area": "",
+      "lKey": "Death Mountain Summit -> DMT Cow Grotto",
+      "alias": "Heart 3",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMT Cow Grotto Heart 4": {
+      "area": "",
+      "lKey": "Death Mountain Summit -> DMT Cow Grotto",
+      "alias": "Heart 4",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMT Cow Grotto Grass 1": {
+      "area": "",
+      "lKey": "Death Mountain Summit -> DMT Cow Grotto",
+      "alias": "Grass 1",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMT Cow Grotto Grass 2": {
+      "area": "",
+      "lKey": "Death Mountain Summit -> DMT Cow Grotto",
+      "alias": "Grass 2",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMT Cow Grotto Beehive": {
+      "area": "",
+      "lKey": "Death Mountain Summit -> DMT Cow Grotto",
+      "alias": "Beehive",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Beehives",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMT Cow Grotto Cow": {
+      "area": "",
+      "lKey": "Death Mountain Summit -> DMT Cow Grotto",
+      "alias": "Grotto Cow",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Cows",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMT Great Fairy Reward": {
+      "area": "",
+      "lKey": "Death Mountain Summit -> DMT Great Fairy Fountain",
+      "alias": "Fairy Reward",
+      "type": "item",
+      "settings": [],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    }
+  }
 }

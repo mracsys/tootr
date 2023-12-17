@@ -1,601 +1,795 @@
 {
-    "entrances": {
-        "SFM Entryway -> LW Beyond Mido": {
-            "area": "Sacred Forest Meadow",
-            "reverse": "LW Beyond Mido -> SFM Entryway",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Lost Woods",
-            "reverseAlias": "Sacred Forest Meadow",
-            "tag": "",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "overworld",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "SFM Forest Temple Entrance Ledge -> Forest Temple Lobby": {
-            "area": "Sacred Forest Meadow",
-            "reverse": "Forest Temple Lobby -> SFM Forest Temple Entrance Ledge",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Forest Temple",
-            "reverseAlias": "from Forest Temple",
-            "tag": "",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "dungeon",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "SFM Entryway -> SFM Wolfos Grotto": {
-            "area": "Sacred Forest Meadow",
-            "reverse": "SFM Wolfos Grotto -> SFM Entryway",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Wolfos Grotto",
-            "reverseAlias": "from Wolfos Grotto",
-            "tag": "",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "grotto",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "Sacred Forest Meadow -> SFM Storms Grotto": {
-            "area": "Sacred Forest Meadow",
-            "reverse": "SFM Storms Grotto -> Sacred Forest Meadow",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Storms Grotto",
-            "reverseAlias": "from Storms Grotto",
-            "tag": "2 Scrub Grotto",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "grotto",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "Sacred Forest Meadow -> SFM Fairy Grotto": {
-            "area": "Sacred Forest Meadow",
-            "reverse": "SFM Fairy Grotto -> Sacred Forest Meadow",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Open Grotto",
-            "reverseAlias": "from Open Grotto",
-            "tag": "Fairy Fountain",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "grotto",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        }
+  "entrances": {
+    "SFM Entryway -> LW Beyond Mido": {
+      "area": "Sacred Forest Meadow",
+      "reverse": "LW Beyond Mido -> SFM Entryway",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Lost Woods",
+      "reverseAlias": "Sacred Forest Meadow",
+      "tag": "",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "overworld",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
     },
-    "locations": {
-        "Saria's Song": {
-            "area": "Sacred Forest Meadow",
-            "lKey": "",
-            "alias": "Saria's Song",
-            "type": "song",
-            "settings": [],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Minuet of Forest": {
-            "area": "Sacred Forest Meadow",
-            "lKey": "",
-            "alias": "Minuet of Forest",
-            "type": "song",
-            "settings": [],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "SFM GS": {
-            "area": "Sacred Forest Meadow",
-            "lKey": "",
-            "alias": "Above Maze",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": [
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ]
-        },
-        "SFM Wolfos Grotto Chest": {
-            "area": "",
-            "lKey": "SFM Entryway -> SFM Wolfos Grotto",
-            "alias": "Wolfos Chest",
-            "type": "item",
-            "settings": [],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "SFM Deku Scrub Grotto Rear": {
-            "area": "",
-            "lKey": "Sacred Forest Meadow -> SFM Storms Grotto",
-            "alias": "Left Scrub",
-            "type": "item",
-            "settings": [
-                {"setting": "Scrubsanity", "value": "Affordable", "required": false},
-                {"setting": "Scrubsanity", "value": "Random", "required": false},
-                {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "SFM Deku Scrub Grotto Front": {
-            "area": "",
-            "lKey": "Sacred Forest Meadow -> SFM Storms Grotto",
-            "alias": "Right Scrub",
-            "type": "item",
-            "settings": [
-                {"setting": "Scrubsanity", "value": "Affordable", "required": false},
-                {"setting": "Scrubsanity", "value": "Random", "required": false},
-                {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "SFM Storms Grotto Beehive": {
-            "area": "",
-            "lKey": "Sacred Forest Meadow -> SFM Storms Grotto",
-            "alias": "Beehive",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Beehives", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "SFM Child Wolfos": {
-            "area": "Sacred Forest Meadow",
-            "lKey": "",
-            "alias": "Child Wolfos",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "SFM Child Maze Scrub 1": {
-            "area": "Sacred Forest Meadow",
-            "lKey": "",
-            "alias": "Child Maze Scrub 1",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "SFM Child Maze Scrub 2": {
-            "area": "Sacred Forest Meadow",
-            "lKey": "",
-            "alias": "Child Maze Scrub 2",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "SFM Child Maze Scrub 3": {
-            "area": "Sacred Forest Meadow",
-            "lKey": "",
-            "alias": "Child Maze Scrub 3",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "SFM Child Maze Scrub 4": {
-            "area": "Sacred Forest Meadow",
-            "lKey": "",
-            "alias": "Child Maze Scrub 4",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "SFM Child Near Saria Scrub 1": {
-            "area": "Sacred Forest Meadow",
-            "lKey": "",
-            "alias": "Child Near Saria Scrub 1",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "SFM Child Near Saria Scrub 2": {
-            "area": "Sacred Forest Meadow",
-            "lKey": "",
-            "alias": "Child Near Saria Scrub 2",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "SFM Adult Maze Moblin 1": {
-            "area": "Sacred Forest Meadow",
-            "lKey": "",
-            "alias": "Adult Maze Moblin 1",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "SFM Adult Maze Moblin 2": {
-            "area": "Sacred Forest Meadow",
-            "lKey": "",
-            "alias": "Adult Maze Moblin 2",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "SFM Adult Maze Moblin 3": {
-            "area": "Sacred Forest Meadow",
-            "lKey": "",
-            "alias": "Adult Maze Moblin 3",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "SFM Adult Maze Moblin 4": {
-            "area": "Sacred Forest Meadow",
-            "lKey": "",
-            "alias": "Adult Maze Moblin 4",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "SFM Adult Maze Moblin 5": {
-            "area": "Sacred Forest Meadow",
-            "lKey": "",
-            "alias": "Adult Maze Moblin 5",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "SFM Adult Smashing Moblin": {
-            "area": "Sacred Forest Meadow",
-            "lKey": "",
-            "alias": "Adult Smashing Moblin",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "SFM Wolfos Grotto Wolfos 1": {
-            "area": "",
-            "lKey": "SFM Entryway -> SFM Wolfos Grotto",
-            "alias": "Wolfos 1",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "SFM Wolfos Grotto Wolfos 2": {
-            "area": "",
-            "lKey": "SFM Entryway -> SFM Wolfos Grotto",
-            "alias": "Wolfos 2",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "SFM Maze Gossip Stone (Lower) Drop": {
-            "area": "Sacred Forest Meadow",
-            "lKey": "",
-            "alias": "Maze Gossip Stone Drop (Lower)",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Gossip Stones", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "SFM Maze Gossip Stone (Upper) Drop": {
-            "area": "Sacred Forest Meadow",
-            "lKey": "",
-            "alias": "Maze Gossip Stone Drop (Upper)",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Gossip Stones", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "SFM Saria Gossip Stone Drop": {
-            "area": "Sacred Forest Meadow",
-            "lKey": "",
-            "alias": "Saria Gossip Stone Drop",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Gossip Stones", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "SFM Near Lost Woods Wonderitem": {
-            "area": "Sacred Forest Meadow",
-            "lKey": "",
-            "alias": "Near Lost Woods Wonderitem",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "SFM Maze Wonderitem 1": {
-            "area": "Sacred Forest Meadow",
-            "lKey": "",
-            "alias": "Maze Wonderitem 1",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "SFM Maze Wonderitem 2": {
-            "area": "Sacred Forest Meadow",
-            "lKey": "",
-            "alias": "Maze Wonderitem 2",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "SFM Maze Wonderitem 3": {
-            "area": "Sacred Forest Meadow",
-            "lKey": "",
-            "alias": "Maze Wonderitem 3",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "SFM Maze Wonderitem 4": {
-            "area": "Sacred Forest Meadow",
-            "lKey": "",
-            "alias": "Maze Wonderitem 4",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "SFM Maze Wonderitem 5": {
-            "area": "Sacred Forest Meadow",
-            "lKey": "",
-            "alias": "Maze Wonderitem 5",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        }
+    "SFM Forest Temple Entrance Ledge -> Forest Temple Lobby": {
+      "area": "Sacred Forest Meadow",
+      "reverse": "Forest Temple Lobby -> SFM Forest Temple Entrance Ledge",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Forest Temple",
+      "reverseAlias": "from Forest Temple",
+      "tag": "",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "dungeon",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
+    },
+    "SFM Entryway -> SFM Wolfos Grotto": {
+      "area": "Sacred Forest Meadow",
+      "reverse": "SFM Wolfos Grotto -> SFM Entryway",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Wolfos Grotto",
+      "reverseAlias": "from Wolfos Grotto",
+      "tag": "",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "grotto",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
+    },
+    "Sacred Forest Meadow -> SFM Fairy Grotto": {
+      "area": "Sacred Forest Meadow",
+      "reverse": "SFM Fairy Grotto -> Sacred Forest Meadow",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Open Grotto",
+      "reverseAlias": "from Open Grotto",
+      "tag": "Fairy Fountain",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "grotto",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
+    },
+    "Sacred Forest Meadow -> SFM Storms Grotto": {
+      "area": "Sacred Forest Meadow",
+      "reverse": "SFM Storms Grotto -> Sacred Forest Meadow",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Storms Grotto",
+      "reverseAlias": "from Storms Grotto",
+      "tag": "2 Scrub Grotto",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "grotto",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
     }
+  },
+  "locations": {
+    "SFM Child Wolfos": {
+      "area": "Sacred Forest Meadow",
+      "lKey": "",
+      "alias": "Child Wolfos",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "SFM Near Lost Woods Wonderitem": {
+      "area": "Sacred Forest Meadow",
+      "lKey": "",
+      "alias": "Near Lost Woods Tall Grass Wonderitem",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Wonderitems",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "SFM Child Maze Scrub 1": {
+      "area": "Sacred Forest Meadow",
+      "lKey": "",
+      "alias": "Child Maze Scrub 1",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "SFM Child Maze Scrub 2": {
+      "area": "Sacred Forest Meadow",
+      "lKey": "",
+      "alias": "Child Maze Scrub 2",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "SFM Child Maze Scrub 3": {
+      "area": "Sacred Forest Meadow",
+      "lKey": "",
+      "alias": "Child Maze Scrub 3",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "SFM Child Maze Scrub 4": {
+      "area": "Sacred Forest Meadow",
+      "lKey": "",
+      "alias": "Child Maze Scrub 4",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "SFM Maze Wonderitem 1": {
+      "area": "Sacred Forest Meadow",
+      "lKey": "",
+      "alias": "Maze Tall Grass Wonderitem 1",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Wonderitems",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "SFM Maze Wonderitem 2": {
+      "area": "Sacred Forest Meadow",
+      "lKey": "",
+      "alias": "Maze Tall Grass Wonderitem 2",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Wonderitems",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "SFM Maze Wonderitem 3": {
+      "area": "Sacred Forest Meadow",
+      "lKey": "",
+      "alias": "Maze Tall Grass Wonderitem 3",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Wonderitems",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "SFM Maze Wonderitem 4": {
+      "area": "Sacred Forest Meadow",
+      "lKey": "",
+      "alias": "Maze Tall Grass Wonderitem 4",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Wonderitems",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "SFM Maze Wonderitem 5": {
+      "area": "Sacred Forest Meadow",
+      "lKey": "",
+      "alias": "Maze Tall Grass Wonderitem 5",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Wonderitems",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "SFM Child Near Saria Scrub 1": {
+      "area": "Sacred Forest Meadow",
+      "lKey": "",
+      "alias": "Child Near Saria Scrub 1",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "SFM Child Near Saria Scrub 2": {
+      "area": "Sacred Forest Meadow",
+      "lKey": "",
+      "alias": "Child Near Saria Scrub 2",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "SFM Adult Maze Moblin 1": {
+      "area": "Sacred Forest Meadow",
+      "lKey": "",
+      "alias": "Adult Maze Moblin 1",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "SFM Adult Maze Moblin 2": {
+      "area": "Sacred Forest Meadow",
+      "lKey": "",
+      "alias": "Adult Maze Moblin 2",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "SFM Adult Maze Moblin 3": {
+      "area": "Sacred Forest Meadow",
+      "lKey": "",
+      "alias": "Adult Maze Moblin 3",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "SFM Adult Maze Moblin 4": {
+      "area": "Sacred Forest Meadow",
+      "lKey": "",
+      "alias": "Adult Maze Moblin 4",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "SFM Adult Maze Moblin 5": {
+      "area": "Sacred Forest Meadow",
+      "lKey": "",
+      "alias": "Adult Maze Moblin 5",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "SFM Adult Smashing Moblin": {
+      "area": "Sacred Forest Meadow",
+      "lKey": "",
+      "alias": "Adult Smashing Moblin",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "SFM Maze Gossip Stone (Lower) Drop": {
+      "area": "Sacred Forest Meadow",
+      "lKey": "",
+      "alias": "Maze Gossip Stone Drop (Lower)",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Gossip Stones",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "SFM Maze Gossip Stone (Upper) Drop": {
+      "area": "Sacred Forest Meadow",
+      "lKey": "",
+      "alias": "Maze Gossip Stone Drop (Upper)",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Gossip Stones",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "SFM Saria Gossip Stone Drop": {
+      "area": "Sacred Forest Meadow",
+      "lKey": "",
+      "alias": "Saria Gossip Stone Drop",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Gossip Stones",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "SFM GS": {
+      "area": "Sacred Forest Meadow",
+      "lKey": "",
+      "alias": "Adult GS",
+      "type": "skulltula",
+      "settings": [
+        {
+          "setting": "Show Unshuffled Skulls",
+          "value": "Yes",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "All",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": [
+        {
+          "setting": "Tokensanity",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "All",
+          "required": false
+        }
+      ]
+    },
+    "Saria's Song": {
+      "area": "Sacred Forest Meadow",
+      "lKey": "",
+      "alias": "Saria's Song",
+      "type": "song",
+      "settings": [],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Minuet of Forest": {
+      "area": "Sacred Forest Meadow",
+      "lKey": "",
+      "alias": "Minuet of Forest",
+      "type": "song",
+      "settings": [],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "SFM Wolfos Grotto Wolfos 1": {
+      "area": "",
+      "lKey": "SFM Entryway -> SFM Wolfos Grotto",
+      "alias": "Wolfos 1",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "SFM Wolfos Grotto Wolfos 2": {
+      "area": "",
+      "lKey": "SFM Entryway -> SFM Wolfos Grotto",
+      "alias": "Wolfos 2",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "SFM Wolfos Grotto Chest": {
+      "area": "",
+      "lKey": "SFM Entryway -> SFM Wolfos Grotto",
+      "alias": "Wolfos Chest",
+      "type": "item",
+      "settings": [],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "SFM Deku Scrub Grotto Rear": {
+      "area": "",
+      "lKey": "Sacred Forest Meadow -> SFM Storms Grotto",
+      "alias": "Left Scrub",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Scrubsanity",
+          "value": "Affordable",
+          "required": false
+        },
+        {
+          "setting": "Scrubsanity",
+          "value": "Random",
+          "required": false
+        },
+        {
+          "setting": "Scrubsanity",
+          "value": "Vanilla",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "SFM Deku Scrub Grotto Front": {
+      "area": "",
+      "lKey": "Sacred Forest Meadow -> SFM Storms Grotto",
+      "alias": "Right Scrub",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Scrubsanity",
+          "value": "Affordable",
+          "required": false
+        },
+        {
+          "setting": "Scrubsanity",
+          "value": "Random",
+          "required": false
+        },
+        {
+          "setting": "Scrubsanity",
+          "value": "Vanilla",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "SFM Storms Grotto Beehive": {
+      "area": "",
+      "lKey": "Sacred Forest Meadow -> SFM Storms Grotto",
+      "alias": "Beehive",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Beehives",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    }
+  }
 }

@@ -1,1841 +1,2425 @@
 {
-    "entrances": {
-        "Hyrule Field -> Kakariko Village": {
-            "area": "Hyrule Field",
-            "reverse": "Kakariko Village -> Hyrule Field",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Kakariko Village",
-            "reverseAlias": "Hyrule Field",
-            "tag": "",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "overworld",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "Hyrule Field -> Lake Hylia": {
-            "area": "Hyrule Field",
-            "reverse": "Lake Hylia -> Hyrule Field",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Lake Hylia",
-            "reverseAlias": "Hyrule Field",
-            "tag": "",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "overworld",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "Hyrule Field -> LW Bridge": {
-            "area": "Hyrule Field",
-            "reverse": "LW Bridge -> Hyrule Field",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Lost Woods Bridge",
-            "reverseAlias": "Hyrule Field",
-            "tag": "",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "overworld",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "Hyrule Field -> Gerudo Valley": {
-            "area": "Hyrule Field",
-            "reverse": "Gerudo Valley -> Hyrule Field",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Gerudo Valley",
-            "reverseAlias": "Hyrule Field",
-            "tag": "",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "overworld",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "Hyrule Field -> Market Entrance": {
-            "area": "Hyrule Field",
-            "reverse": "Market Entrance -> Hyrule Field",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Market Entrance",
-            "reverseAlias": "Hyrule Field",
-            "tag": "",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "overworld",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "Hyrule Field -> ZR Front": {
-            "area": "Hyrule Field",
-            "reverse": "ZR Front -> Hyrule Field",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Zora River",
-            "reverseAlias": "Hyrule Field",
-            "tag": "",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "overworld",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "Hyrule Field -> Lon Lon Ranch": {
-            "area": "Hyrule Field",
-            "reverse": "Lon Lon Ranch -> Hyrule Field",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Lon Lon Ranch",
-            "reverseAlias": "Hyrule Field",
-            "tag": "",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "overworld",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "Hyrule Field -> HF Tektite Grotto": {
-            "area": "Hyrule Field",
-            "reverse": "HF Tektite Grotto -> Hyrule Field",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Tektite Grotto",
-            "reverseAlias": "from Tektite Grotto",
-            "tag": "",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "grotto",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "Hyrule Field -> HF Near Kak Grotto": {
-            "area": "Hyrule Field",
-            "reverse": "HF Near Kak Grotto -> Hyrule Field",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Near Kakariko Grotto",
-            "reverseAlias": "from Near Kakariko Grotto",
-            "tag": "Lone Skulltula Grotto",
-            "tagRep": true,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "grotto",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "Hyrule Field -> HF Fairy Grotto": {
-            "area": "Hyrule Field",
-            "reverse": "HF Fairy Grotto -> Hyrule Field",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Across River Grotto",
-            "reverseAlias": "from Across River Grotto",
-            "tag": "Fairy Fountain",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "grotto",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "Hyrule Field -> HF Near Market Grotto": {
-            "area": "Hyrule Field",
-            "reverse": "HF Near Market Grotto -> Hyrule Field",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Near Market Grotto",
-            "reverseAlias": "from Near Market Grotto",
-            "tag": "Generic Grotto",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "grotto",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "Hyrule Field -> HF Cow Grotto": {
-            "area": "Hyrule Field",
-            "reverse": "HF Cow Grotto -> Hyrule Field",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Near Valley Grotto",
-            "reverseAlias": "from Near Valley Grotto",
-            "tag": "Cow and Skulltula Grotto",
-            "tagRep": true,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "grotto",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "Hyrule Field -> HF Inside Fence Grotto": {
-            "area": "Hyrule Field",
-            "reverse": "HF Inside Fence Grotto -> Hyrule Field",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Near Lake Grotto",
-            "reverseAlias": "from Near Lake Grotto",
-            "tag": "1 Scrub Grotto",
-            "tagRep": true,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "grotto",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "Hyrule Field -> HF Open Grotto": {
-            "area": "Hyrule Field",
-            "reverse": "HF Open Grotto -> Hyrule Field",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Open Grotto",
-            "reverseAlias": "from Open Grotto",
-            "tag": "Generic Grotto",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "grotto",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "Hyrule Field -> HF Southeast Grotto": {
-            "area": "Hyrule Field",
-            "reverse": "HF Southeast Grotto -> Hyrule Field",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Remote Southern Grotto",
-            "reverseAlias": "from Remote Southern Grotto",
-            "tag": "Generic Grotto",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "grotto",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        }
+  "entrances": {
+    "Hyrule Field -> Market Entrance": {
+      "area": "Hyrule Field",
+      "reverse": "Market Entrance -> Hyrule Field",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Market Entrance",
+      "reverseAlias": "Hyrule Field",
+      "tag": "",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "overworld",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
     },
-    "locations": {
-        "Song of Time": {
-            "area": "Hyrule Field",
-            "lKey": "",
-            "alias": "Song of Time",
-            "type": "song",
-            "settings": [],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Ocarina of Time Item": {
-            "area": "Hyrule Field",
-            "lKey": "",
-            "alias": "Ocarina of Time Item",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Ocarinas", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Near Market Grotto Chest": {
-            "area": "",
-            "lKey": "Hyrule Field -> HF Near Market Grotto",
-            "alias": "Grotto Chest",
-            "type": "item",
-            "settings": [],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Southeast Grotto Chest": {
-            "area": "",
-            "lKey": "Hyrule Field -> HF Southeast Grotto",
-            "alias": "Grotto Chest",
-            "type": "item",
-            "settings": [],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Open Grotto Chest": {
-            "area": "",
-            "lKey": "Hyrule Field -> HF Open Grotto",
-            "alias": "Grotto Chest",
-            "type": "item",
-            "settings": [],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Tektite Grotto Freestanding PoH": {
-            "area": "",
-            "lKey": "Hyrule Field -> HF Tektite Grotto",
-            "alias": "Freestanding Item",
-            "type": "item",
-            "settings": [],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Deku Scrub Grotto": {
-            "area": "",
-            "lKey": "Hyrule Field -> HF Inside Fence Grotto",
-            "alias": "Lonely Scrub",
-            "type": "item",
-            "settings": [],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Cow Grotto Cow": {
-            "area": "",
-            "lKey": "Hyrule Field -> HF Cow Grotto",
-            "alias": "Grotto Cow",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Cows", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF GS Cow Grotto": {
-            "area": "",
-            "lKey": "Hyrule Field -> HF Cow Grotto",
-            "alias": "Grotto Spider",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": [
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ]
-        },
-        "HF GS Near Kak Grotto": {
-            "area": "",
-            "lKey": "Hyrule Field -> HF Near Kak Grotto",
-            "alias": "Grotto Spider",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": [
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ]
-        },
-        "HF Near Market Grotto Beehive 1": {
-            "area": "",
-            "lKey": "Hyrule Field -> HF Near Market Grotto",
-            "alias": "Beehive 1",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Beehives", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Near Market Grotto Beehive 2": {
-            "area": "",
-            "lKey": "Hyrule Field -> HF Near Market Grotto",
-            "alias": "Beehive 2",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Beehives", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Open Grotto Beehive 1": {
-            "area": "",
-            "lKey": "Hyrule Field -> HF Open Grotto",
-            "alias": "Beehive 1",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Beehives", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Open Grotto Beehive 2": {
-            "area": "",
-            "lKey": "Hyrule Field -> HF Open Grotto",
-            "alias": "Beehive 2",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Beehives", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Southeast Grotto Beehive 1": {
-            "area": "",
-            "lKey": "Hyrule Field -> HF Southeast Grotto",
-            "alias": "Beehive 1",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Beehives", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Southeast Grotto Beehive 2": {
-            "area": "",
-            "lKey": "Hyrule Field -> HF Southeast Grotto",
-            "alias": "Beehive 2",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Beehives", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Inside Fence Grotto Beehive": {
-            "area": "",
-            "lKey": "Hyrule Field -> HF Inside Fence Grotto",
-            "alias": "Beehive",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Beehives", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Cow Grotto Pot 1": {
-            "area": "",
-            "lKey": "Hyrule Field -> HF Cow Grotto",
-            "alias": "Pot 1",
-            "type": "jar",
-            "settings": [
-                {"setting": "Shuffle Pots", "value": "All", "required": false},
-                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Cow Grotto Pot 2": {
-            "area": "",
-            "lKey": "Hyrule Field -> HF Cow Grotto",
-            "alias": "Pot 2",
-            "type": "jar",
-            "settings": [
-                {"setting": "Shuffle Pots", "value": "All", "required": false},
-                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Cow Grotto Skulltula": {
-            "area": "",
-            "lKey": "Hyrule Field -> HF Cow Grotto",
-            "alias": "Skulltula",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Tektite Grotto Tektite": {
-            "area": "",
-            "lKey": "Hyrule Field -> HF Tektite Grotto",
-            "alias": "Tektite",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Near Kak Grotto Skulltula": {
-            "area": "",
-            "lKey": "Hyrule Field -> HF Near Kak Grotto",
-            "alias": "Skulltula",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Child Near Fairy Grotto Peahat": {
-            "area": "Hyrule Field",
-            "lKey": "",
-            "alias": "Child Near Fairy Grotto Peahat",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Child Near Kokiri Forest Peahat": {
-            "area": "Hyrule Field",
-            "lKey": "",
-            "alias": "Near Kokiri Forest Peahat",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Child South Field Peahat 1": {
-            "area": "Hyrule Field",
-            "lKey": "",
-            "alias": "South Field Peahat 1",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Child South Field Peahat 2": {
-            "area": "Hyrule Field",
-            "lKey": "",
-            "alias": "South Field Peahat 2",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Child South Field Peahat 3": {
-            "area": "Hyrule Field",
-            "lKey": "",
-            "alias": "South Field Peahat 3",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Child South Field Flying Peahat": {
-            "area": "Hyrule Field",
-            "lKey": "",
-            "alias": "South Field Flying Peahat",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Child Near Valley Flying Peahat": {
-            "area": "Hyrule Field",
-            "lKey": "",
-            "alias": "Near Valley Flying Peahat",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Near Market Grotto Gossip Stone Drop": {
-            "area": "",
-            "lKey": "Hyrule Field -> HF Near Market Grotto",
-            "alias": "Gossip Stone Drop",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Gossip Stones", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Southeast Grotto Gossip Stone Drop": {
-            "area": "",
-            "lKey": "Hyrule Field -> HF Southeast Grotto",
-            "alias": "Gossip Stone Drop",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Gossip Stones", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Open Grotto Gossip Stone Drop": {
-            "area": "",
-            "lKey": "Hyrule Field -> HF Open Grotto",
-            "alias": "Gossip Stone Drop",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Gossip Stones", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Cow Grotto Gossip Stone Drop": {
-            "area": "",
-            "lKey": "Hyrule Field -> HF Cow Grotto",
-            "alias": "Gossip Stone Drop",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Gossip Stones", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Child Above Drawbridge Wonderitem 1": {
-            "area": "Hyrule Field",
-            "lKey": "",
-            "alias": "Above Drawbridge Wonderitem 1",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Child Above Drawbridge Wonderitem 2": {
-            "area": "Hyrule Field",
-            "lKey": "",
-            "alias": "Above Drawbridge Wonderitem 2",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Child Above Drawbridge Wonderitem 3": {
-            "area": "Hyrule Field",
-            "lKey": "",
-            "alias": "Above Drawbridge Wonderitem 3",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Near Market Grotto Grass 1": {
-            "area": "",
-            "lKey": "Hyrule Field -> HF Near Market Grotto",
-            "alias": "Grass 1",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Near Market Grotto Grass 2": {
-            "area": "",
-            "lKey": "Hyrule Field -> HF Near Market Grotto",
-            "alias": "Grass 2",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Near Market Grotto Grass 3": {
-            "area": "",
-            "lKey": "Hyrule Field -> HF Near Market Grotto",
-            "alias": "Grass 3",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Near Market Grotto Grass 4": {
-            "area": "",
-            "lKey": "Hyrule Field -> HF Near Market Grotto",
-            "alias": "Grass 4",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Open Grotto Grass 1": {
-            "area": "",
-            "lKey": "Hyrule Field -> HF Open Grotto",
-            "alias": "Grass 1",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Open Grotto Grass 2": {
-            "area": "",
-            "lKey": "Hyrule Field -> HF Open Grotto",
-            "alias": "Grass 2",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Open Grotto Grass 3": {
-            "area": "",
-            "lKey": "Hyrule Field -> HF Open Grotto",
-            "alias": "Grass 3",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Open Grotto Grass 4": {
-            "area": "",
-            "lKey": "Hyrule Field -> HF Open Grotto",
-            "alias": "Grass 4",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Southeast Grotto Grass 1": {
-            "area": "",
-            "lKey": "Hyrule Field -> HF Southeast Grotto",
-            "alias": "Grass 1",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Southeast Grotto Grass 2": {
-            "area": "",
-            "lKey": "Hyrule Field -> HF Southeast Grotto",
-            "alias": "Grass 2",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Southeast Grotto Grass 3": {
-            "area": "",
-            "lKey": "Hyrule Field -> HF Southeast Grotto",
-            "alias": "Grass 3",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Southeast Grotto Grass 4": {
-            "area": "",
-            "lKey": "Hyrule Field -> HF Southeast Grotto",
-            "alias": "Grass 4",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Cow Grotto Grass 1": {
-            "area": "",
-            "lKey": "Hyrule Field -> HF Cow Grotto",
-            "alias": "Grass 1",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Cow Grotto Grass 2": {
-            "area": "",
-            "lKey": "Hyrule Field -> HF Cow Grotto",
-            "alias": "Grass 2",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF South Grass Patch 1": {
-            "area": "Hyrule Field",
-            "lKey": "",
-            "alias": "South Grass Patch 1",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF South Grass Patch 2": {
-            "area": "Hyrule Field",
-            "lKey": "",
-            "alias": "South Grass Patch 2",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF South Grass Patch 3": {
-            "area": "Hyrule Field",
-            "lKey": "",
-            "alias": "South Grass Patch 3",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF South Grass Patch 4": {
-            "area": "Hyrule Field",
-            "lKey": "",
-            "alias": "South Grass Patch 4",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF South Grass Patch 5": {
-            "area": "Hyrule Field",
-            "lKey": "",
-            "alias": "South Grass Patch 5",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF South Grass Patch 6": {
-            "area": "Hyrule Field",
-            "lKey": "",
-            "alias": "South Grass Patch 6",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF South Grass Patch 7": {
-            "area": "Hyrule Field",
-            "lKey": "",
-            "alias": "South Grass Patch 7",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF South Grass Patch 8": {
-            "area": "Hyrule Field",
-            "lKey": "",
-            "alias": "South Grass Patch 8",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF South Grass Patch 9": {
-            "area": "Hyrule Field",
-            "lKey": "",
-            "alias": "South Grass Patch 9",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF South Grass Patch 10": {
-            "area": "Hyrule Field",
-            "lKey": "",
-            "alias": "South Grass Patch 10",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF South Grass Patch 11": {
-            "area": "Hyrule Field",
-            "lKey": "",
-            "alias": "South Grass Patch 11",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF South Grass Patch 12": {
-            "area": "Hyrule Field",
-            "lKey": "",
-            "alias": "South Grass Patch 12",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF South 2 Grass Patch 1": {
-            "area": "Hyrule Field",
-            "lKey": "",
-            "alias": "South 2 Grass Patch 1",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF South 2 Grass Patch 2": {
-            "area": "Hyrule Field",
-            "lKey": "",
-            "alias": "South 2 Grass Patch 2",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF South 2 Grass Patch 3": {
-            "area": "Hyrule Field",
-            "lKey": "",
-            "alias": "South 2 Grass Patch 3",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF South 2 Grass Patch 4": {
-            "area": "Hyrule Field",
-            "lKey": "",
-            "alias": "South 2 Grass Patch 4",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF South 2 Grass Patch 5": {
-            "area": "Hyrule Field",
-            "lKey": "",
-            "alias": "South 2 Grass Patch 5",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF South 2 Grass Patch 6": {
-            "area": "Hyrule Field",
-            "lKey": "",
-            "alias": "South 2 Grass Patch 6",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF South 2 Grass Patch 7": {
-            "area": "Hyrule Field",
-            "lKey": "",
-            "alias": "South 2 Grass Patch 7",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF South 2 Grass Patch 8": {
-            "area": "Hyrule Field",
-            "lKey": "",
-            "alias": "South 2 Grass Patch 8",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF South 2 Grass Patch 9": {
-            "area": "Hyrule Field",
-            "lKey": "",
-            "alias": "South 2 Grass Patch 9",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF South 2 Grass Patch 10": {
-            "area": "Hyrule Field",
-            "lKey": "",
-            "alias": "South 2 Grass Patch 10",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF South 2 Grass Patch 11": {
-            "area": "Hyrule Field",
-            "lKey": "",
-            "alias": "South 2 Grass Patch 11",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF South 2 Grass Patch 12": {
-            "area": "Hyrule Field",
-            "lKey": "",
-            "alias": "South 2 Grass Patch 12",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Central Grass Patch 1": {
-            "area": "Hyrule Field",
-            "lKey": "",
-            "alias": "Central Grass Patch 1",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Central Grass Patch 2": {
-            "area": "Hyrule Field",
-            "lKey": "",
-            "alias": "Central Grass Patch 2",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Central Grass Patch 3": {
-            "area": "Hyrule Field",
-            "lKey": "",
-            "alias": "Central Grass Patch 3",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Central Grass Patch 4": {
-            "area": "Hyrule Field",
-            "lKey": "",
-            "alias": "Central Grass Patch 4",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Central Grass Patch 5": {
-            "area": "Hyrule Field",
-            "lKey": "",
-            "alias": "Central Grass Patch 5",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Central Grass Patch 6": {
-            "area": "Hyrule Field",
-            "lKey": "",
-            "alias": "Central Grass Patch 6",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Central Grass Patch 7": {
-            "area": "Hyrule Field",
-            "lKey": "",
-            "alias": "Central Grass Patch 7",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Central Grass Patch 8": {
-            "area": "Hyrule Field",
-            "lKey": "",
-            "alias": "Central Grass Patch 8",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Central Grass Patch 9": {
-            "area": "Hyrule Field",
-            "lKey": "",
-            "alias": "Central Grass Patch 9",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Central Grass Patch 10": {
-            "area": "Hyrule Field",
-            "lKey": "",
-            "alias": "Central Grass Patch 10",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Central Grass Patch 11": {
-            "area": "Hyrule Field",
-            "lKey": "",
-            "alias": "Central Grass Patch 11",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Central Grass Patch 12": {
-            "area": "Hyrule Field",
-            "lKey": "",
-            "alias": "Central Grass Patch 12",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Near KF Grass Patch 1": {
-            "area": "Hyrule Field",
-            "lKey": "",
-            "alias": "Near KF Grass Patch 1",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Near KF Grass Patch 2": {
-            "area": "Hyrule Field",
-            "lKey": "",
-            "alias": "Near KF Grass Patch 2",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Near KF Grass Patch 3": {
-            "area": "Hyrule Field",
-            "lKey": "",
-            "alias": "Near KF Grass Patch 3",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Near KF Grass Patch 4": {
-            "area": "Hyrule Field",
-            "lKey": "",
-            "alias": "Near KF Grass Patch 4",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Near KF Grass Patch 5": {
-            "area": "Hyrule Field",
-            "lKey": "",
-            "alias": "Near KF Grass Patch 5",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Near KF Grass Patch 6": {
-            "area": "Hyrule Field",
-            "lKey": "",
-            "alias": "Near KF Grass Patch 6",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Near KF Grass Patch 7": {
-            "area": "Hyrule Field",
-            "lKey": "",
-            "alias": "Near KF Grass Patch 7",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Near KF Grass Patch 8": {
-            "area": "Hyrule Field",
-            "lKey": "",
-            "alias": "Near KF Grass Patch 8",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Near KF Grass Patch 9": {
-            "area": "Hyrule Field",
-            "lKey": "",
-            "alias": "Near KF Grass Patch 9",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Near KF Grass Patch 10": {
-            "area": "Hyrule Field",
-            "lKey": "",
-            "alias": "Near KF Grass Patch 10",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Near KF Grass Patch 11": {
-            "area": "Hyrule Field",
-            "lKey": "",
-            "alias": "Near KF Grass Patch 11",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "HF Near KF Grass Patch 12": {
-            "area": "Hyrule Field",
-            "lKey": "",
-            "alias": "Near KF Grass Patch 12",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        }
+    "Hyrule Field -> Kakariko Village": {
+      "area": "Hyrule Field",
+      "reverse": "Kakariko Village -> Hyrule Field",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Kakariko Village",
+      "reverseAlias": "Hyrule Field",
+      "tag": "",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "overworld",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
+    },
+    "Hyrule Field -> ZR Front": {
+      "area": "Hyrule Field",
+      "reverse": "ZR Front -> Hyrule Field",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Zora River",
+      "reverseAlias": "Hyrule Field",
+      "tag": "",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "overworld",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
+    },
+    "Hyrule Field -> LW Bridge": {
+      "area": "Hyrule Field",
+      "reverse": "LW Bridge -> Hyrule Field",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Lost Woods Bridge",
+      "reverseAlias": "Hyrule Field",
+      "tag": "",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "overworld",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
+    },
+    "Hyrule Field -> Lon Lon Ranch": {
+      "area": "Hyrule Field",
+      "reverse": "Lon Lon Ranch -> Hyrule Field",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Lon Lon Ranch",
+      "reverseAlias": "Hyrule Field",
+      "tag": "",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "overworld",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
+    },
+    "Hyrule Field -> Lake Hylia": {
+      "area": "Hyrule Field",
+      "reverse": "Lake Hylia -> Hyrule Field",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Lake Hylia",
+      "reverseAlias": "Hyrule Field",
+      "tag": "",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "overworld",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
+    },
+    "Hyrule Field -> Gerudo Valley": {
+      "area": "Hyrule Field",
+      "reverse": "Gerudo Valley -> Hyrule Field",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Gerudo Valley",
+      "reverseAlias": "Hyrule Field",
+      "tag": "",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "overworld",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
+    },
+    "Hyrule Field -> HF Near Market Grotto": {
+      "area": "Hyrule Field",
+      "reverse": "HF Near Market Grotto -> Hyrule Field",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Near Market Grotto",
+      "reverseAlias": "from Near Market Grotto",
+      "tag": "Generic Grotto",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "grotto",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
+    },
+    "Hyrule Field -> HF Near Kak Grotto": {
+      "area": "Hyrule Field",
+      "reverse": "HF Near Kak Grotto -> Hyrule Field",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Near Kakariko Grotto",
+      "reverseAlias": "from Near Kakariko Grotto",
+      "tag": "Lone Skulltula Grotto",
+      "tagRep": true,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "grotto",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
+    },
+    "Hyrule Field -> HF Tektite Grotto": {
+      "area": "Hyrule Field",
+      "reverse": "HF Tektite Grotto -> Hyrule Field",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Tektite Grotto",
+      "reverseAlias": "from Tektite Grotto",
+      "tag": "",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "grotto",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
+    },
+    "Hyrule Field -> HF Fairy Grotto": {
+      "area": "Hyrule Field",
+      "reverse": "HF Fairy Grotto -> Hyrule Field",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Across River Grotto",
+      "reverseAlias": "from Across River Grotto",
+      "tag": "Fairy Fountain",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "grotto",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
+    },
+    "Hyrule Field -> HF Cow Grotto": {
+      "area": "Hyrule Field",
+      "reverse": "HF Cow Grotto -> Hyrule Field",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Near Valley Grotto",
+      "reverseAlias": "from Near Valley Grotto",
+      "tag": "Cow and Skulltula Grotto",
+      "tagRep": true,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "grotto",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
+    },
+    "Hyrule Field -> HF Southeast Grotto": {
+      "area": "Hyrule Field",
+      "reverse": "HF Southeast Grotto -> Hyrule Field",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Remote Southern Grotto",
+      "reverseAlias": "from Remote Southern Grotto",
+      "tag": "Generic Grotto",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "grotto",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
+    },
+    "Hyrule Field -> HF Open Grotto": {
+      "area": "Hyrule Field",
+      "reverse": "HF Open Grotto -> Hyrule Field",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Open Grotto",
+      "reverseAlias": "from Open Grotto",
+      "tag": "Generic Grotto",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "grotto",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
+    },
+    "Hyrule Field -> HF Inside Fence Grotto": {
+      "area": "Hyrule Field",
+      "reverse": "HF Inside Fence Grotto -> Hyrule Field",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Inside Fence Grotto",
+      "reverseAlias": "from Inside Fence Grotto",
+      "tag": "1 Scrub Grotto",
+      "tagRep": true,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "grotto",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
     }
+  },
+  "locations": {
+    "HF Child Near Kokiri Forest Peahat": {
+      "area": "Hyrule Field",
+      "lKey": "",
+      "alias": "Near Kokiri Forest Peahat",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Near KF Grass Patch 1": {
+      "area": "Hyrule Field",
+      "lKey": "",
+      "alias": "Near KF Grass Patch 1",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Near KF Grass Patch 2": {
+      "area": "Hyrule Field",
+      "lKey": "",
+      "alias": "Near KF Grass Patch 2",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Near KF Grass Patch 3": {
+      "area": "Hyrule Field",
+      "lKey": "",
+      "alias": "Near KF Grass Patch 3",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Near KF Grass Patch 4": {
+      "area": "Hyrule Field",
+      "lKey": "",
+      "alias": "Near KF Grass Patch 4",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Near KF Grass Patch 5": {
+      "area": "Hyrule Field",
+      "lKey": "",
+      "alias": "Near KF Grass Patch 5",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Near KF Grass Patch 6": {
+      "area": "Hyrule Field",
+      "lKey": "",
+      "alias": "Near KF Grass Patch 6",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Near KF Grass Patch 7": {
+      "area": "Hyrule Field",
+      "lKey": "",
+      "alias": "Near KF Grass Patch 7",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Near KF Grass Patch 8": {
+      "area": "Hyrule Field",
+      "lKey": "",
+      "alias": "Near KF Grass Patch 8",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Near KF Grass Patch 9": {
+      "area": "Hyrule Field",
+      "lKey": "",
+      "alias": "Near KF Grass Patch 9",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Near KF Grass Patch 10": {
+      "area": "Hyrule Field",
+      "lKey": "",
+      "alias": "Near KF Grass Patch 10",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Near KF Grass Patch 11": {
+      "area": "Hyrule Field",
+      "lKey": "",
+      "alias": "Near KF Grass Patch 11",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Near KF Grass Patch 12": {
+      "area": "Hyrule Field",
+      "lKey": "",
+      "alias": "Near KF Grass Patch 12",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Central Grass Patch 1": {
+      "area": "Hyrule Field",
+      "lKey": "",
+      "alias": "Central Grass Patch 1",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Central Grass Patch 2": {
+      "area": "Hyrule Field",
+      "lKey": "",
+      "alias": "Central Grass Patch 2",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Central Grass Patch 3": {
+      "area": "Hyrule Field",
+      "lKey": "",
+      "alias": "Central Grass Patch 3",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Central Grass Patch 4": {
+      "area": "Hyrule Field",
+      "lKey": "",
+      "alias": "Central Grass Patch 4",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Central Grass Patch 5": {
+      "area": "Hyrule Field",
+      "lKey": "",
+      "alias": "Central Grass Patch 5",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Central Grass Patch 6": {
+      "area": "Hyrule Field",
+      "lKey": "",
+      "alias": "Central Grass Patch 6",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Central Grass Patch 7": {
+      "area": "Hyrule Field",
+      "lKey": "",
+      "alias": "Central Grass Patch 7",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Central Grass Patch 8": {
+      "area": "Hyrule Field",
+      "lKey": "",
+      "alias": "Central Grass Patch 8",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Central Grass Patch 9": {
+      "area": "Hyrule Field",
+      "lKey": "",
+      "alias": "Central Grass Patch 9",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Central Grass Patch 10": {
+      "area": "Hyrule Field",
+      "lKey": "",
+      "alias": "Central Grass Patch 10",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Central Grass Patch 11": {
+      "area": "Hyrule Field",
+      "lKey": "",
+      "alias": "Central Grass Patch 11",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Central Grass Patch 12": {
+      "area": "Hyrule Field",
+      "lKey": "",
+      "alias": "Central Grass Patch 12",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Child Near Fairy Grotto Peahat": {
+      "area": "Hyrule Field",
+      "lKey": "",
+      "alias": "Child Near Fairy Grotto Peahat",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Child South Field Peahat 1": {
+      "area": "Hyrule Field",
+      "lKey": "",
+      "alias": "South Field Peahat 1",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Child South Field Peahat 2": {
+      "area": "Hyrule Field",
+      "lKey": "",
+      "alias": "South Field Peahat 2",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Child South Field Peahat 3": {
+      "area": "Hyrule Field",
+      "lKey": "",
+      "alias": "South Field Peahat 3",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Child South Field Flying Peahat": {
+      "area": "Hyrule Field",
+      "lKey": "",
+      "alias": "South Field Flying Peahat",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF South Grass Patch 1": {
+      "area": "Hyrule Field",
+      "lKey": "",
+      "alias": "South Grass Patch 1",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF South Grass Patch 2": {
+      "area": "Hyrule Field",
+      "lKey": "",
+      "alias": "South Grass Patch 2",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF South Grass Patch 3": {
+      "area": "Hyrule Field",
+      "lKey": "",
+      "alias": "South Grass Patch 3",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF South Grass Patch 4": {
+      "area": "Hyrule Field",
+      "lKey": "",
+      "alias": "South Grass Patch 4",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF South Grass Patch 5": {
+      "area": "Hyrule Field",
+      "lKey": "",
+      "alias": "South Grass Patch 5",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF South Grass Patch 6": {
+      "area": "Hyrule Field",
+      "lKey": "",
+      "alias": "South Grass Patch 6",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF South Grass Patch 7": {
+      "area": "Hyrule Field",
+      "lKey": "",
+      "alias": "South Grass Patch 7",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF South Grass Patch 8": {
+      "area": "Hyrule Field",
+      "lKey": "",
+      "alias": "South Grass Patch 8",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF South Grass Patch 9": {
+      "area": "Hyrule Field",
+      "lKey": "",
+      "alias": "South Grass Patch 9",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF South Grass Patch 10": {
+      "area": "Hyrule Field",
+      "lKey": "",
+      "alias": "South Grass Patch 10",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF South Grass Patch 11": {
+      "area": "Hyrule Field",
+      "lKey": "",
+      "alias": "South Grass Patch 11",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF South Grass Patch 12": {
+      "area": "Hyrule Field",
+      "lKey": "",
+      "alias": "South Grass Patch 12",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF South 2 Grass Patch 1": {
+      "area": "Hyrule Field",
+      "lKey": "",
+      "alias": "South 2 Grass Patch 1",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF South 2 Grass Patch 2": {
+      "area": "Hyrule Field",
+      "lKey": "",
+      "alias": "South 2 Grass Patch 2",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF South 2 Grass Patch 3": {
+      "area": "Hyrule Field",
+      "lKey": "",
+      "alias": "South 2 Grass Patch 3",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF South 2 Grass Patch 4": {
+      "area": "Hyrule Field",
+      "lKey": "",
+      "alias": "South 2 Grass Patch 4",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF South 2 Grass Patch 5": {
+      "area": "Hyrule Field",
+      "lKey": "",
+      "alias": "South 2 Grass Patch 5",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF South 2 Grass Patch 6": {
+      "area": "Hyrule Field",
+      "lKey": "",
+      "alias": "South 2 Grass Patch 6",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF South 2 Grass Patch 7": {
+      "area": "Hyrule Field",
+      "lKey": "",
+      "alias": "South 2 Grass Patch 7",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF South 2 Grass Patch 8": {
+      "area": "Hyrule Field",
+      "lKey": "",
+      "alias": "South 2 Grass Patch 8",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF South 2 Grass Patch 9": {
+      "area": "Hyrule Field",
+      "lKey": "",
+      "alias": "South 2 Grass Patch 9",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF South 2 Grass Patch 10": {
+      "area": "Hyrule Field",
+      "lKey": "",
+      "alias": "South 2 Grass Patch 10",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF South 2 Grass Patch 11": {
+      "area": "Hyrule Field",
+      "lKey": "",
+      "alias": "South 2 Grass Patch 11",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF South 2 Grass Patch 12": {
+      "area": "Hyrule Field",
+      "lKey": "",
+      "alias": "South 2 Grass Patch 12",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Child Near Valley Flying Peahat": {
+      "area": "Hyrule Field",
+      "lKey": "",
+      "alias": "Near Valley Flying Peahat",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Child Above Drawbridge Wonderitem 1": {
+      "area": "Hyrule Field",
+      "lKey": "",
+      "alias": "Above Drawbridge Wonderitem 1",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Wonderitems",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Child Above Drawbridge Wonderitem 2": {
+      "area": "Hyrule Field",
+      "lKey": "",
+      "alias": "Above Drawbridge Wonderitem 2",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Wonderitems",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Child Above Drawbridge Wonderitem 3": {
+      "area": "Hyrule Field",
+      "lKey": "",
+      "alias": "Above Drawbridge Wonderitem 3",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Wonderitems",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Ocarina of Time Item": {
+      "area": "Hyrule Field",
+      "lKey": "",
+      "alias": "Ocarina of Time Item",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Ocarinas",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Song of Time": {
+      "area": "Hyrule Field",
+      "lKey": "",
+      "alias": "Song of Time",
+      "type": "song",
+      "settings": [],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Near Market Grotto Chest": {
+      "area": "",
+      "lKey": "Hyrule Field -> HF Near Market Grotto",
+      "alias": "Grotto Chest",
+      "type": "item",
+      "settings": [],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Near Market Grotto Grass 1": {
+      "area": "",
+      "lKey": "Hyrule Field -> HF Near Market Grotto",
+      "alias": "Grass 1",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Near Market Grotto Grass 2": {
+      "area": "",
+      "lKey": "Hyrule Field -> HF Near Market Grotto",
+      "alias": "Grass 2",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Near Market Grotto Grass 3": {
+      "area": "",
+      "lKey": "Hyrule Field -> HF Near Market Grotto",
+      "alias": "Grass 3",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Near Market Grotto Grass 4": {
+      "area": "",
+      "lKey": "Hyrule Field -> HF Near Market Grotto",
+      "alias": "Grass 4",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Near Market Grotto Beehive 1": {
+      "area": "",
+      "lKey": "Hyrule Field -> HF Near Market Grotto",
+      "alias": "Beehive 1",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Beehives",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Near Market Grotto Beehive 2": {
+      "area": "",
+      "lKey": "Hyrule Field -> HF Near Market Grotto",
+      "alias": "Beehive 2",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Beehives",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Near Market Grotto Gossip Stone Drop": {
+      "area": "",
+      "lKey": "Hyrule Field -> HF Near Market Grotto",
+      "alias": "Gossip Stone Drop",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Gossip Stones",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Near Kak Grotto Skulltula": {
+      "area": "",
+      "lKey": "Hyrule Field -> HF Near Kak Grotto",
+      "alias": "Skulltula",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF GS Near Kak Grotto": {
+      "area": "",
+      "lKey": "Hyrule Field -> HF Near Kak Grotto",
+      "alias": "Grotto GS",
+      "type": "skulltula",
+      "settings": [
+        {
+          "setting": "Show Unshuffled Skulls",
+          "value": "Yes",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "All",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": [
+        {
+          "setting": "Tokensanity",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "All",
+          "required": false
+        }
+      ]
+    },
+    "HF Tektite Grotto Tektite": {
+      "area": "",
+      "lKey": "Hyrule Field -> HF Tektite Grotto",
+      "alias": "Tektite",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Tektite Grotto Freestanding PoH": {
+      "area": "",
+      "lKey": "Hyrule Field -> HF Tektite Grotto",
+      "alias": "Deep Water Item",
+      "type": "item",
+      "settings": [],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Cow Grotto Pot 1": {
+      "area": "",
+      "lKey": "Hyrule Field -> HF Cow Grotto",
+      "alias": "Pot 1",
+      "type": "jar",
+      "settings": [
+        {
+          "setting": "Shuffle Pots",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Pots",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Cow Grotto Pot 2": {
+      "area": "",
+      "lKey": "Hyrule Field -> HF Cow Grotto",
+      "alias": "Pot 2",
+      "type": "jar",
+      "settings": [
+        {
+          "setting": "Shuffle Pots",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Pots",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Cow Grotto Grass 1": {
+      "area": "",
+      "lKey": "Hyrule Field -> HF Cow Grotto",
+      "alias": "Grass 1",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Cow Grotto Grass 2": {
+      "area": "",
+      "lKey": "Hyrule Field -> HF Cow Grotto",
+      "alias": "Grass 2",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Cow Grotto Cow": {
+      "area": "",
+      "lKey": "Hyrule Field -> HF Cow Grotto",
+      "alias": "Grotto Cow",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Cows",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Cow Grotto Skulltula": {
+      "area": "",
+      "lKey": "Hyrule Field -> HF Cow Grotto",
+      "alias": "Skulltula",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF GS Cow Grotto": {
+      "area": "",
+      "lKey": "Hyrule Field -> HF Cow Grotto",
+      "alias": "Grotto GS",
+      "type": "skulltula",
+      "settings": [
+        {
+          "setting": "Show Unshuffled Skulls",
+          "value": "Yes",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "All",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": [
+        {
+          "setting": "Tokensanity",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "All",
+          "required": false
+        }
+      ]
+    },
+    "HF Cow Grotto Gossip Stone Drop": {
+      "area": "",
+      "lKey": "Hyrule Field -> HF Cow Grotto",
+      "alias": "Gossip Stone Drop",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Gossip Stones",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Southeast Grotto Chest": {
+      "area": "",
+      "lKey": "Hyrule Field -> HF Southeast Grotto",
+      "alias": "Grotto Chest",
+      "type": "item",
+      "settings": [],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Southeast Grotto Grass 1": {
+      "area": "",
+      "lKey": "Hyrule Field -> HF Southeast Grotto",
+      "alias": "Grass 1",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Southeast Grotto Grass 2": {
+      "area": "",
+      "lKey": "Hyrule Field -> HF Southeast Grotto",
+      "alias": "Grass 2",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Southeast Grotto Grass 3": {
+      "area": "",
+      "lKey": "Hyrule Field -> HF Southeast Grotto",
+      "alias": "Grass 3",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Southeast Grotto Grass 4": {
+      "area": "",
+      "lKey": "Hyrule Field -> HF Southeast Grotto",
+      "alias": "Grass 4",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Southeast Grotto Beehive 1": {
+      "area": "",
+      "lKey": "Hyrule Field -> HF Southeast Grotto",
+      "alias": "Beehive 1",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Beehives",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Southeast Grotto Beehive 2": {
+      "area": "",
+      "lKey": "Hyrule Field -> HF Southeast Grotto",
+      "alias": "Beehive 2",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Beehives",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Southeast Grotto Gossip Stone Drop": {
+      "area": "",
+      "lKey": "Hyrule Field -> HF Southeast Grotto",
+      "alias": "Gossip Stone Drop",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Gossip Stones",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Open Grotto Chest": {
+      "area": "",
+      "lKey": "Hyrule Field -> HF Open Grotto",
+      "alias": "Grotto Chest",
+      "type": "item",
+      "settings": [],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Open Grotto Grass 1": {
+      "area": "",
+      "lKey": "Hyrule Field -> HF Open Grotto",
+      "alias": "Grass 1",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Open Grotto Grass 2": {
+      "area": "",
+      "lKey": "Hyrule Field -> HF Open Grotto",
+      "alias": "Grass 2",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Open Grotto Grass 3": {
+      "area": "",
+      "lKey": "Hyrule Field -> HF Open Grotto",
+      "alias": "Grass 3",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Open Grotto Grass 4": {
+      "area": "",
+      "lKey": "Hyrule Field -> HF Open Grotto",
+      "alias": "Grass 4",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Open Grotto Beehive 1": {
+      "area": "",
+      "lKey": "Hyrule Field -> HF Open Grotto",
+      "alias": "Beehive 1",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Beehives",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Open Grotto Beehive 2": {
+      "area": "",
+      "lKey": "Hyrule Field -> HF Open Grotto",
+      "alias": "Beehive 2",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Beehives",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Open Grotto Gossip Stone Drop": {
+      "area": "",
+      "lKey": "Hyrule Field -> HF Open Grotto",
+      "alias": "Gossip Stone Drop",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Gossip Stones",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Deku Scrub Grotto": {
+      "area": "",
+      "lKey": "Hyrule Field -> HF Inside Fence Grotto",
+      "alias": "Lonely Scrub",
+      "type": "item",
+      "settings": [],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Inside Fence Grotto Beehive": {
+      "area": "",
+      "lKey": "Hyrule Field -> HF Inside Fence Grotto",
+      "alias": "Beehive",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Beehives",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    }
+  }
 }

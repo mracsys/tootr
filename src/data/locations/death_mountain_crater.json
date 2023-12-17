@@ -1,891 +1,1215 @@
 {
-    "entrances": {
-        "DMC Upper Nearby -> Death Mountain Summit": {
-            "area": "Death Mountain Crater",
-            "reverse": "Death Mountain Summit -> DMC Upper Local",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Death Mountain Trail",
-            "reverseAlias": "Death Mountain Crater",
-            "tag": "",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "overworld",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "DMC Lower Nearby -> GC Darunias Chamber": {
-            "area": "Death Mountain Crater",
-            "reverse": "GC Darunias Chamber -> DMC Lower Local",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Goron City",
-            "reverseAlias": "Death Mountain Crater",
-            "tag": "",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "overworld",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "DMC Fire Temple Entrance -> Fire Temple Lower": {
-            "area": "Death Mountain Crater",
-            "reverse": "Fire Temple Lower -> DMC Fire Temple Entrance",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Fire Temple",
-            "reverseAlias": "from Fire Temple",
-            "tag": "",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "dungeon",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "DMC Lower Nearby -> DMC Hammer Grotto": {
-            "area": "Death Mountain Crater",
-            "reverse": "DMC Hammer Grotto -> DMC Lower Local",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Hammer Grotto",
-            "reverseAlias": "from Hammer Grotto",
-            "tag": "3 Scrub Grotto",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "grotto",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "DMC Upper Nearby -> DMC Upper Grotto": {
-            "area": "Death Mountain Crater",
-            "reverse": "DMC Upper Grotto -> DMC Upper Local",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Bombable Grotto",
-            "reverseAlias": "from Bombable Grotto",
-            "tag": "Generic Grotto",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "grotto",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "DMC Lower Nearby -> DMC Great Fairy Fountain": {
-            "area": "Death Mountain Crater",
-            "reverse": "DMC Great Fairy Fountain -> DMC Lower Local",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Great Fairy Fountain",
-            "reverseAlias": "from Great Fairy Fountain",
-            "tag": "Great Fairy Fountain",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "interior",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        }
+  "entrances": {
+    "DMC Upper Nearby -> Death Mountain Summit": {
+      "area": "Death Mountain Crater",
+      "reverse": "Death Mountain Summit -> DMC Upper Local",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Death Mountain Trail",
+      "reverseAlias": "Death Mountain Crater",
+      "tag": "",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "overworld",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
     },
-    "locations": {
-        "Bolero of Fire": {
-            "area": "Death Mountain Crater",
-            "lKey": "",
-            "alias": "Bolero of Fire",
-            "type": "song",
-            "settings": [],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMC Volcano Freestanding PoH": {
-            "area": "Death Mountain Crater",
-            "lKey": "",
-            "alias": "Volcano",
-            "type": "item",
-            "settings": [],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMC Wall Freestanding PoH": {
-            "area": "Death Mountain Crater",
-            "lKey": "",
-            "alias": "Item In Wall",
-            "type": "item",
-            "settings": [],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMC Upper Grotto Chest": {
-            "area": "",
-            "lKey": "DMC Upper Nearby -> DMC Upper Grotto",
-            "alias": "Grotto Chest",
-            "type": "item",
-            "settings": [],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMC Great Fairy Reward": {
-            "area": "",
-            "lKey": "DMC Lower Nearby -> DMC Great Fairy Fountain",
-            "alias": "Fairy Reward",
-            "type": "item",
-            "settings": [],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMC Deku Scrub": {
-            "area": "Death Mountain Crater",
-            "lKey": "",
-            "alias": "Child Scrub",
-            "type": "item",
-            "settings": [
-                {"setting": "Scrubsanity", "value": "Affordable", "required": false},
-                {"setting": "Scrubsanity", "value": "Random", "required": false},
-                {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMC Deku Scrub Grotto Left": {
-            "area": "",
-            "lKey": "DMC Lower Nearby -> DMC Hammer Grotto",
-            "alias": "Left Scrub",
-            "type": "item",
-            "settings": [
-                {"setting": "Scrubsanity", "value": "Affordable", "required": false},
-                {"setting": "Scrubsanity", "value": "Random", "required": false},
-                {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMC Deku Scrub Grotto Center": {
-            "area": "",
-            "lKey": "DMC Lower Nearby -> DMC Hammer Grotto",
-            "alias": "Center Scrub",
-            "type": "item",
-            "settings": [
-                {"setting": "Scrubsanity", "value": "Affordable", "required": false},
-                {"setting": "Scrubsanity", "value": "Random", "required": false},
-                {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMC Deku Scrub Grotto Right": {
-            "area": "",
-            "lKey": "DMC Lower Nearby -> DMC Hammer Grotto",
-            "alias": "Right Scrub",
-            "type": "item",
-            "settings": [
-                {"setting": "Scrubsanity", "value": "Affordable", "required": false},
-                {"setting": "Scrubsanity", "value": "Random", "required": false},
-                {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMC GS Crate": {
-            "area": "Death Mountain Crater",
-            "lKey": "",
-            "alias": "Crate",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": [
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ]
-        },
-        "DMC GS Bean Patch": {
-            "area": "Death Mountain Crater",
-            "lKey": "",
-            "alias": "Bean Patch",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": [
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ]
-        },
-        "DMC Pierre Rupee Circle Green Rupee 1": {
-            "area": "Death Mountain Crater",
-            "lKey": "",
-            "alias": "Scarecrow Platform 1",
-            "type": "item",
-            "settings": [
-                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
-                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMC Pierre Rupee Circle Green Rupee 2": {
-            "area": "Death Mountain Crater",
-            "lKey": "",
-            "alias": "Scarecrow Platform 2",
-            "type": "item",
-            "settings": [
-                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
-                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMC Pierre Rupee Circle Green Rupee 3": {
-            "area": "Death Mountain Crater",
-            "lKey": "",
-            "alias": "Scarecrow Platform 3",
-            "type": "item",
-            "settings": [
-                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
-                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMC Pierre Rupee Circle Green Rupee 4": {
-            "area": "Death Mountain Crater",
-            "lKey": "",
-            "alias": "Scarecrow Platform 4",
-            "type": "item",
-            "settings": [
-                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
-                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMC Pierre Rupee Circle Green Rupee 5": {
-            "area": "Death Mountain Crater",
-            "lKey": "",
-            "alias": "Scarecrow Platform 5",
-            "type": "item",
-            "settings": [
-                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
-                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMC Pierre Rupee Circle Green Rupee 6": {
-            "area": "Death Mountain Crater",
-            "lKey": "",
-            "alias": "Scarecrow Platform 6",
-            "type": "item",
-            "settings": [
-                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
-                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMC Pierre Rupee Circle Red Rupee": {
-            "area": "Death Mountain Crater",
-            "lKey": "",
-            "alias": "Scarecrow Platform 7",
-            "type": "item",
-            "settings": [
-                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
-                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMC Platforms Red Rupee 1": {
-            "area": "Death Mountain Crater",
-            "lKey": "",
-            "alias": "Platforms Red Rupee 1",
-            "type": "item",
-            "settings": [
-                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
-                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMC Platforms Red Rupee 2": {
-            "area": "Death Mountain Crater",
-            "lKey": "",
-            "alias": "Platforms Red Rupee 2",
-            "type": "item",
-            "settings": [
-                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
-                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMC Platforms Blue Rupee 1": {
-            "area": "Death Mountain Crater",
-            "lKey": "",
-            "alias": "Platforms Blue Rupee 1",
-            "type": "item",
-            "settings": [
-                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
-                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMC Platforms Blue Rupee 2": {
-            "area": "Death Mountain Crater",
-            "lKey": "",
-            "alias": "Platforms Blue Rupee 2",
-            "type": "item",
-            "settings": [
-                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
-                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMC Platforms Blue Rupee 3": {
-            "area": "Death Mountain Crater",
-            "lKey": "",
-            "alias": "Platforms Blue Rupee 3",
-            "type": "item",
-            "settings": [
-                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
-                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMC Platforms Blue Rupee 4": {
-            "area": "Death Mountain Crater",
-            "lKey": "",
-            "alias": "Platforms Blue Rupee 4",
-            "type": "item",
-            "settings": [
-                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
-                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMC Platforms Blue Rupee 5": {
-            "area": "Death Mountain Crater",
-            "lKey": "",
-            "alias": "Platforms Blue Rupee 5",
-            "type": "item",
-            "settings": [
-                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
-                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMC Platforms Blue Rupee 6": {
-            "area": "Death Mountain Crater",
-            "lKey": "",
-            "alias": "Platforms Blue Rupee 6",
-            "type": "item",
-            "settings": [
-                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
-                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMC Near GC Pot 1": {
-            "area": "Death Mountain Crater",
-            "lKey": "",
-            "alias": "Pot 1",
-            "type": "jar",
-            "settings": [
-                {"setting": "Shuffle Pots", "value": "All", "required": false},
-                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMC Near GC Pot 2": {
-            "area": "Death Mountain Crater",
-            "lKey": "",
-            "alias": "Pot 2",
-            "type": "jar",
-            "settings": [
-                {"setting": "Shuffle Pots", "value": "All", "required": false},
-                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMC Near GC Pot 3": {
-            "area": "Death Mountain Crater",
-            "lKey": "",
-            "alias": "Pot 3",
-            "type": "jar",
-            "settings": [
-                {"setting": "Shuffle Pots", "value": "All", "required": false},
-                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMC Near GC Pot 4": {
-            "area": "Death Mountain Crater",
-            "lKey": "",
-            "alias": "Pot 4",
-            "type": "jar",
-            "settings": [
-                {"setting": "Shuffle Pots", "value": "All", "required": false},
-                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMC Hammer Grotto Beehive": {
-            "area": "",
-            "lKey": "DMC Lower Nearby -> DMC Hammer Grotto",
-            "alias": "Beehive",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Beehives", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMC Upper Grotto Beehive 1": {
-            "area": "",
-            "lKey": "DMC Upper Nearby -> DMC Upper Grotto",
-            "alias": "Beehive 1",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Beehives", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMC Upper Grotto Beehive 2": {
-            "area": "",
-            "lKey": "DMC Upper Nearby -> DMC Upper Grotto",
-            "alias": "Beehive 2",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Beehives", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMC Gossip Stone Drop": {
-            "area": "Death Mountain Crater",
-            "lKey": "",
-            "alias": "Gossip Stone Drop",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Gossip Stones", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMC Upper Grotto Gossip Stone Drop": {
-            "area": "",
-            "lKey": "DMC Upper Nearby -> DMC Upper Grotto",
-            "alias": "Gossip Stone Drop",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Gossip Stones", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMC Bubble Below Bridge To Fire Temple": {
-            "area": "Death Mountain Crater",
-            "lKey": "",
-            "alias": "Below Bridge To Fire Temple Bubble",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMC First Plank Bubble": {
-            "area": "Death Mountain Crater",
-            "lKey": "",
-            "alias": "First Plank Bubble",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMC Second Plank Bubble 1": {
-            "area": "Death Mountain Crater",
-            "lKey": "",
-            "alias": "Second Plank Bubble 1",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMC Second Plank Bubble 2": {
-            "area": "Death Mountain Crater",
-            "lKey": "",
-            "alias": "Second Plank Bubble 2",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMC Pierre Platform Bubble": {
-            "area": "Death Mountain Crater",
-            "lKey": "",
-            "alias": "Pierre Platform Bubble",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMC Upper Grotto Grass 1": {
-            "area": "",
-            "lKey": "DMC Upper Nearby -> DMC Upper Grotto",
-            "alias": "Grass 1",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMC Upper Grotto Grass 2": {
-            "area": "",
-            "lKey": "DMC Upper Nearby -> DMC Upper Grotto",
-            "alias": "Grass 2",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMC Upper Grotto Grass 3": {
-            "area": "",
-            "lKey": "DMC Upper Nearby -> DMC Upper Grotto",
-            "alias": "Grass 3",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "DMC Upper Grotto Grass 4": {
-            "area": "",
-            "lKey": "DMC Upper Nearby -> DMC Upper Grotto",
-            "alias": "Grass 4",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        }
+    "DMC Lower Nearby -> GC Darunias Chamber": {
+      "area": "Death Mountain Crater",
+      "reverse": "GC Darunias Chamber -> DMC Lower Local",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Goron City",
+      "reverseAlias": "Death Mountain Crater",
+      "tag": "",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "overworld",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
+    },
+    "DMC Fire Temple Entrance -> Fire Temple Lower": {
+      "area": "Death Mountain Crater",
+      "reverse": "Fire Temple Lower -> DMC Fire Temple Entrance",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Fire Temple",
+      "reverseAlias": "from Fire Temple",
+      "tag": "",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "dungeon",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
+    },
+    "DMC Upper Nearby -> DMC Upper Grotto": {
+      "area": "Death Mountain Crater",
+      "reverse": "DMC Upper Grotto -> DMC Upper Local",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Bombable Grotto",
+      "reverseAlias": "from Bombable Grotto",
+      "tag": "Generic Grotto",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "grotto",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
+    },
+    "DMC Lower Nearby -> DMC Hammer Grotto": {
+      "area": "Death Mountain Crater",
+      "reverse": "DMC Hammer Grotto -> DMC Lower Local",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Hammer Grotto",
+      "reverseAlias": "from Hammer Grotto",
+      "tag": "3 Scrub Grotto",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "grotto",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
+    },
+    "DMC Lower Nearby -> DMC Great Fairy Fountain": {
+      "area": "Death Mountain Crater",
+      "reverse": "DMC Great Fairy Fountain -> DMC Lower Local",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Great Fairy Fountain",
+      "reverseAlias": "from Great Fairy Fountain",
+      "tag": "Great Fairy Fountain",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "interior",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
     }
+  },
+  "locations": {
+    "DMC GS Crate": {
+      "area": "Death Mountain Crater",
+      "lKey": "",
+      "alias": "Child Crate GS",
+      "type": "skulltula",
+      "settings": [
+        {
+          "setting": "Show Unshuffled Skulls",
+          "value": "Yes",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "All",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": [
+        {
+          "setting": "Tokensanity",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "All",
+          "required": false
+        }
+      ]
+    },
+    "DMC Gossip Stone Drop": {
+      "area": "Death Mountain Crater",
+      "lKey": "",
+      "alias": "Gossip Stone Drop",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Gossip Stones",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMC Wall Freestanding PoH": {
+      "area": "Death Mountain Crater",
+      "lKey": "",
+      "alias": "Item In Wall",
+      "type": "item",
+      "settings": [],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMC Deku Scrub": {
+      "area": "Death Mountain Crater",
+      "lKey": "",
+      "alias": "Child Scrub",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Scrubsanity",
+          "value": "Affordable",
+          "required": false
+        },
+        {
+          "setting": "Scrubsanity",
+          "value": "Random",
+          "required": false
+        },
+        {
+          "setting": "Scrubsanity",
+          "value": "Vanilla",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Bolero of Fire": {
+      "area": "Death Mountain Crater",
+      "lKey": "",
+      "alias": "Bolero of Fire",
+      "type": "song",
+      "settings": [],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMC Volcano Freestanding PoH": {
+      "area": "Death Mountain Crater",
+      "lKey": "",
+      "alias": "Volcano Item",
+      "type": "item",
+      "settings": [],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMC GS Bean Patch": {
+      "area": "Death Mountain Crater",
+      "lKey": "",
+      "alias": "Bean Patch GS",
+      "type": "skulltula",
+      "settings": [
+        {
+          "setting": "Show Unshuffled Skulls",
+          "value": "Yes",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "All",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": [
+        {
+          "setting": "Tokensanity",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "All",
+          "required": false
+        }
+      ]
+    },
+    "DMC Plant Bean Patch": {
+      "area": "Death Mountain Crater",
+      "lKey": "",
+      "alias": "Plant Bean Patch",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Plant Beans",
+          "value": "Off",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMC Platforms Red Rupee 1": {
+      "area": "Death Mountain Crater",
+      "lKey": "",
+      "alias": "Child Platforms 1",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMC Platforms Red Rupee 2": {
+      "area": "Death Mountain Crater",
+      "lKey": "",
+      "alias": "Child Platforms 2",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMC Platforms Blue Rupee 1": {
+      "area": "Death Mountain Crater",
+      "lKey": "",
+      "alias": "Child Platforms 3",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMC Platforms Blue Rupee 2": {
+      "area": "Death Mountain Crater",
+      "lKey": "",
+      "alias": "Child Platforms 4",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMC Platforms Blue Rupee 3": {
+      "area": "Death Mountain Crater",
+      "lKey": "",
+      "alias": "Child Platforms 5",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMC Platforms Blue Rupee 4": {
+      "area": "Death Mountain Crater",
+      "lKey": "",
+      "alias": "Child Platforms 6",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMC Platforms Blue Rupee 5": {
+      "area": "Death Mountain Crater",
+      "lKey": "",
+      "alias": "Child Platforms 7",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMC Platforms Blue Rupee 6": {
+      "area": "Death Mountain Crater",
+      "lKey": "",
+      "alias": "Child Platforms 8",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMC Pierre Rupee Circle Green Rupee 1": {
+      "area": "Death Mountain Crater",
+      "lKey": "",
+      "alias": "Scarecrow Platform 1",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMC Pierre Rupee Circle Green Rupee 2": {
+      "area": "Death Mountain Crater",
+      "lKey": "",
+      "alias": "Scarecrow Platform 2",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMC Pierre Rupee Circle Green Rupee 3": {
+      "area": "Death Mountain Crater",
+      "lKey": "",
+      "alias": "Scarecrow Platform 3",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMC Pierre Rupee Circle Green Rupee 4": {
+      "area": "Death Mountain Crater",
+      "lKey": "",
+      "alias": "Scarecrow Platform 4",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMC Pierre Rupee Circle Green Rupee 5": {
+      "area": "Death Mountain Crater",
+      "lKey": "",
+      "alias": "Scarecrow Platform 5",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMC Pierre Rupee Circle Green Rupee 6": {
+      "area": "Death Mountain Crater",
+      "lKey": "",
+      "alias": "Scarecrow Platform 6",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMC Pierre Rupee Circle Red Rupee": {
+      "area": "Death Mountain Crater",
+      "lKey": "",
+      "alias": "Scarecrow Platform 7",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMC Near GC Pot 1": {
+      "area": "Death Mountain Crater",
+      "lKey": "",
+      "alias": "Adult Pot 1",
+      "type": "jar",
+      "settings": [
+        {
+          "setting": "Shuffle Pots",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Pots",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMC Near GC Pot 2": {
+      "area": "Death Mountain Crater",
+      "lKey": "",
+      "alias": "Adult Pot 2",
+      "type": "jar",
+      "settings": [
+        {
+          "setting": "Shuffle Pots",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Pots",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMC Near GC Pot 3": {
+      "area": "Death Mountain Crater",
+      "lKey": "",
+      "alias": "Adult Pot 3",
+      "type": "jar",
+      "settings": [
+        {
+          "setting": "Shuffle Pots",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Pots",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMC Near GC Pot 4": {
+      "area": "Death Mountain Crater",
+      "lKey": "",
+      "alias": "Adult Pot 4",
+      "type": "jar",
+      "settings": [
+        {
+          "setting": "Shuffle Pots",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Pots",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMC Bubble Below Bridge To Fire Temple": {
+      "area": "Death Mountain Crater",
+      "lKey": "",
+      "alias": "Below Bridge Bubble",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMC Second Plank Bubble 1": {
+      "area": "Death Mountain Crater",
+      "lKey": "",
+      "alias": "Plank Bubble 1",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMC Second Plank Bubble 2": {
+      "area": "Death Mountain Crater",
+      "lKey": "",
+      "alias": "Plank Bubble 2",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMC Pierre Platform Bubble": {
+      "area": "Death Mountain Crater",
+      "lKey": "",
+      "alias": "Scarecrow Platform Bubble",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMC Upper Grotto Chest": {
+      "area": "",
+      "lKey": "DMC Upper Nearby -> DMC Upper Grotto",
+      "alias": "Grotto Chest",
+      "type": "item",
+      "settings": [],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMC Upper Grotto Grass 1": {
+      "area": "",
+      "lKey": "DMC Upper Nearby -> DMC Upper Grotto",
+      "alias": "Grass 1",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMC Upper Grotto Grass 2": {
+      "area": "",
+      "lKey": "DMC Upper Nearby -> DMC Upper Grotto",
+      "alias": "Grass 2",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMC Upper Grotto Grass 3": {
+      "area": "",
+      "lKey": "DMC Upper Nearby -> DMC Upper Grotto",
+      "alias": "Grass 3",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMC Upper Grotto Grass 4": {
+      "area": "",
+      "lKey": "DMC Upper Nearby -> DMC Upper Grotto",
+      "alias": "Grass 4",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMC Upper Grotto Beehive 1": {
+      "area": "",
+      "lKey": "DMC Upper Nearby -> DMC Upper Grotto",
+      "alias": "Beehive 1",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Beehives",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMC Upper Grotto Beehive 2": {
+      "area": "",
+      "lKey": "DMC Upper Nearby -> DMC Upper Grotto",
+      "alias": "Beehive 2",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Beehives",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMC Upper Grotto Gossip Stone Drop": {
+      "area": "",
+      "lKey": "DMC Upper Nearby -> DMC Upper Grotto",
+      "alias": "Gossip Stone Drop",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Gossip Stones",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMC Grotto Deku Scrub Grotto Left": {
+      "area": "",
+      "lKey": "DMC Lower Nearby -> DMC Hammer Grotto",
+      "alias": "Left Scrub",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Scrubsanity",
+          "value": "Affordable",
+          "required": false
+        },
+        {
+          "setting": "Scrubsanity",
+          "value": "Random",
+          "required": false
+        },
+        {
+          "setting": "Scrubsanity",
+          "value": "Vanilla",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMC Grotto Deku Scrub Grotto Center": {
+      "area": "",
+      "lKey": "DMC Lower Nearby -> DMC Hammer Grotto",
+      "alias": "Center Scrub",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Scrubsanity",
+          "value": "Affordable",
+          "required": false
+        },
+        {
+          "setting": "Scrubsanity",
+          "value": "Random",
+          "required": false
+        },
+        {
+          "setting": "Scrubsanity",
+          "value": "Vanilla",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMC Grotto Deku Scrub Grotto Right": {
+      "area": "",
+      "lKey": "DMC Lower Nearby -> DMC Hammer Grotto",
+      "alias": "Right Scrub",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Scrubsanity",
+          "value": "Affordable",
+          "required": false
+        },
+        {
+          "setting": "Scrubsanity",
+          "value": "Random",
+          "required": false
+        },
+        {
+          "setting": "Scrubsanity",
+          "value": "Vanilla",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMC Hammer Grotto Beehive": {
+      "area": "",
+      "lKey": "DMC Lower Nearby -> DMC Hammer Grotto",
+      "alias": "Beehive",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Beehives",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMC Great Fairy Reward": {
+      "area": "",
+      "lKey": "DMC Lower Nearby -> DMC Great Fairy Fountain",
+      "alias": "Fairy Reward",
+      "type": "item",
+      "settings": [],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    }
+  }
 }

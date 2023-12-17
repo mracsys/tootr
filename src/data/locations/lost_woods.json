@@ -1,1023 +1,1395 @@
 {
-    "entrances": {
-        "LW Bridge -> Kokiri Forest": {
-            "area": "Lost Woods Bridge",
-            "reverse": "Kokiri Forest -> LW Bridge From Forest",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Kokiri Forest",
-            "reverseAlias": "Lost Woods Bridge",
-            "tag": "",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "overworld",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "LW Bridge -> Hyrule Field": {
-            "area": "Lost Woods Bridge",
-            "reverse": "Hyrule Field -> LW Bridge",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Hyrule Field",
-            "reverseAlias": "Lost Woods Bridge",
-            "tag": "",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "overworld",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "LW Beyond Mido -> SFM Entryway": {
-            "area": "Lost Woods",
-            "reverse": "SFM Entryway -> LW Beyond Mido",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Sacred Forest Meadow",
-            "reverseAlias": "Lost Woods",
-            "tag": "",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "overworld",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "LW Forest Exit -> Kokiri Forest": {
-            "area": "Lost Woods",
-            "reverse": "Kokiri Forest -> Lost Woods",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Kokiri Forest",
-            "reverseAlias": "Lost Woods",
-            "tag": "",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "overworld",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "Lost Woods -> GC Woods Warp": {
-            "area": "Lost Woods",
-            "reverse": "GC Woods Warp -> Lost Woods",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Goron City",
-            "reverseAlias": "Lost Woods",
-            "tag": "",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "overworld",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "Lost Woods -> Zora River": {
-            "area": "Lost Woods",
-            "reverse": "Zora River -> Lost Woods",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Zora River",
-            "reverseAlias": "Lost Woods",
-            "tag": "",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "overworld",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "LW Beyond Mido -> LW Scrubs Grotto": {
-            "area": "Lost Woods",
-            "reverse": "LW Scrubs Grotto -> LW Beyond Mido",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Near Meadow Grotto",
-            "reverseAlias": "from Near Meadow Grotto",
-            "tag": "Special 2 Scrub Grotto",
-            "tagRep": true,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "grotto",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "Lost Woods -> LW Near Shortcuts Grotto": {
-            "area": "Lost Woods",
-            "reverse": "LW Near Shortcuts Grotto -> Lost Woods",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Near GC Shortcut Grotto",
-            "reverseAlias": "from Near GC Shortcut Grotto",
-            "tag": "Generic Grotto",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "grotto",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "LW Beyond Mido -> Deku Theater": {
-            "area": "Lost Woods",
-            "reverse": "Deku Theater -> LW Beyond Mido",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Open Grotto",
-            "reverseAlias": "from Open Grotto",
-            "tag": "Deku Theater",
-            "tagRep": true,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "grotto",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        }
+  "entrances": {
+    "LW Bridge -> Kokiri Forest": {
+      "area": "Lost Woods Bridge",
+      "reverse": "Kokiri Forest -> LW Bridge From Forest",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Kokiri Forest",
+      "reverseAlias": "Lost Woods Bridge",
+      "tag": "",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "overworld",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
     },
-    "locations": {
-        "LW Gift from Saria": {
-            "area": "Lost Woods Bridge",
-            "lKey": "",
-            "alias": "Gift from Saria",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Ocarinas", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "LW Ocarina Memory Game": {
-            "area": "Lost Woods",
-            "lKey": "",
-            "alias": "Ocarina Memory Game",
-            "type": "item",
-            "settings": [],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "LW Target in Woods": {
-            "area": "Lost Woods",
-            "lKey": "",
-            "alias": "Target in the Woods",
-            "type": "item",
-            "settings": [],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "LW Skull Kid": {
-            "area": "Lost Woods",
-            "lKey": "",
-            "alias": "Skull Kid",
-            "type": "item",
-            "settings": [],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "LW Grog Trade Item": {
-            "area": "Lost Woods",
-            "lKey": "",
-            "alias": "Grog Trade for Cojiro",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Adult Trade", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "LW Fado Trade Item": {
-            "area": "Lost Woods",
-            "lKey": "",
-            "alias": "Fado Trade for Odd Potion",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Adult Trade", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "LW Deku Scrub Near Bridge": {
-            "area": "Lost Woods",
-            "lKey": "",
-            "alias": "Scrub near Bridge",
-            "type": "item",
-            "settings": [],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Deku Theater Skull Mask": {
-            "area": "",
-            "lKey": "LW Beyond Mido -> Deku Theater",
-            "alias": "Skull Mask",
-            "type": "item",
-            "settings": [],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Deku Theater Mask of Truth": {
-            "area": "",
-            "lKey": "LW Beyond Mido -> Deku Theater",
-            "alias": "Mask of Truth",
-            "type": "item",
-            "settings": [],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "LW Near Shortcuts Grotto Chest": {
-            "area": "",
-            "lKey": "Lost Woods -> LW Near Shortcuts Grotto",
-            "alias": "Grotto Chest",
-            "type": "item",
-            "settings": [],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "LW Deku Scrub Near Deku Theater Left": {
-            "area": "Lost Woods",
-            "lKey": "",
-            "alias": "Left Scrub near Theater",
-            "type": "item",
-            "settings": [
-                {"setting": "Scrubsanity", "value": "Affordable", "required": false},
-                {"setting": "Scrubsanity", "value": "Random", "required": false},
-                {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "LW Deku Scrub Near Deku Theater Right": {
-            "area": "Lost Woods",
-            "lKey": "",
-            "alias": "Right Scrub near Theater",
-            "type": "item",
-            "settings": [
-                {"setting": "Scrubsanity", "value": "Affordable", "required": false},
-                {"setting": "Scrubsanity", "value": "Random", "required": false},
-                {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "LW Deku Scrub Grotto Front": {
-            "area": "",
-            "lKey": "LW Beyond Mido -> LW Scrubs Grotto",
-            "alias": "Left Scrub",
-            "type": "item",
-            "settings": [],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "LW Deku Scrub Grotto Rear": {
-            "area": "",
-            "lKey": "LW Beyond Mido -> LW Scrubs Grotto",
-            "alias": "Right Scrub",
-            "type": "item",
-            "settings": [
-                {"setting": "Scrubsanity", "value": "Affordable", "required": false},
-                {"setting": "Scrubsanity", "value": "Random", "required": false},
-                {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "LW GS Bean Patch Near Bridge": {
-            "area": "Lost Woods",
-            "lKey": "",
-            "alias": "Bean Patch near Bridge",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": [
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ]
-        },
-        "LW GS Bean Patch Near Theater": {
-            "area": "Lost Woods",
-            "lKey": "",
-            "alias": "Bean Patch near Theater",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": [
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ]
-        },
-        "LW GS Above Theater": {
-            "area": "Lost Woods",
-            "lKey": "",
-            "alias": "Above Theater",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": [
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ]
-        },
-        "LW Under Boulder Rupee": {
-            "area": "Lost Woods",
-            "lKey": "",
-            "alias": "Under Boulder Rupee",
-            "type": "item",
-            "settings": [
-                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
-                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "LW Water Shortcut Rupee 1": {
-            "area": "Lost Woods",
-            "lKey": "",
-            "alias": "Water Shortcut Rupee 1",
-            "type": "item",
-            "settings": [
-                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
-                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "LW Water Shortcut Rupee 2": {
-            "area": "Lost Woods",
-            "lKey": "",
-            "alias": "Water Shortcut Rupee 2",
-            "type": "item",
-            "settings": [
-                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
-                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "LW Water Shortcut Rupee 3": {
-            "area": "Lost Woods",
-            "lKey": "",
-            "alias": "Water Shortcut Rupee 3",
-            "type": "item",
-            "settings": [
-                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
-                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "LW Water Shortcut Rupee 4": {
-            "area": "Lost Woods",
-            "lKey": "",
-            "alias": "Water Shortcut Rupee 4",
-            "type": "item",
-            "settings": [
-                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
-                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "LW Water Shortcut Rupee 5": {
-            "area": "Lost Woods",
-            "lKey": "",
-            "alias": "Water Shortcut Rupee 5",
-            "type": "item",
-            "settings": [
-                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
-                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "LW Water Shortcut Rupee 6": {
-            "area": "Lost Woods",
-            "lKey": "",
-            "alias": "Water Shortcut Rupee 6",
-            "type": "item",
-            "settings": [
-                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
-                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "LW Water Shortcut Rupee 7": {
-            "area": "Lost Woods",
-            "lKey": "",
-            "alias": "Water Shortcut Rupee 7",
-            "type": "item",
-            "settings": [
-                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
-                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "LW Water Shortcut Rupee 8": {
-            "area": "Lost Woods",
-            "lKey": "",
-            "alias": "Water Shortcut Rupee 8",
-            "type": "item",
-            "settings": [
-                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
-                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "LW Near Shortcuts Grotto Beehive 1": {
-            "area": "",
-            "lKey": "Lost Woods -> LW Near Shortcuts Grotto",
-            "alias": "Beehive 1",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Beehives", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "LW Near Shortcuts Grotto Beehive 2": {
-            "area": "",
-            "lKey": "Lost Woods -> LW Near Shortcuts Grotto",
-            "alias": "Beehive 1",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Beehives", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "LW Scrubs Grotto Beehive": {
-            "area": "",
-            "lKey": "LW Beyond Mido -> LW Scrubs Grotto",
-            "alias": "Beehive",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Beehives", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "LW Adult Sarias Friend Skullkid": {
-            "area": "Lost Woods",
-            "lKey": "",
-            "alias": "Adult Sarias Friend Skullkid",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "LW Adult Ocarina Game Skullkid 1": {
-            "area": "Lost Woods",
-            "lKey": "",
-            "alias": "Adult Ocarina Game Skullkid 1",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "LW Adult Ocarina Game Skullkid 2": {
-            "area": "Lost Woods",
-            "lKey": "",
-            "alias": "Adult Ocarina Game Skullkid 2",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "LW Gossip Stone Drop": {
-            "area": "Lost Woods",
-            "lKey": "",
-            "alias": "Gossip Stone Drop",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Gossip Stones", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "LW Near Shortcuts Grotto Gossip Stone Drop": {
-            "area": "",
-            "lKey": "Lost Woods -> LW Near Shortcuts Grotto",
-            "alias": "Gossip Stone Drop",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Gossip Stones", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "LW Near Ocarina Game Wonderitem 1": {
-            "area": "Lost Woods",
-            "lKey": "",
-            "alias": "Near Ocarina Game Wonderitem 1",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "LW Near Ocarina Game Wonderitem 2": {
-            "area": "Lost Woods",
-            "lKey": "",
-            "alias": "Near Ocarina Game Wonderitem 2",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "LW Near Ocarina Game Wonderitem 3": {
-            "area": "Lost Woods",
-            "lKey": "",
-            "alias": "Near Ocarina Game Wonderitem 3",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "LW Near Shortcuts Grotto Grass 1": {
-            "area": "",
-            "lKey": "Lost Woods -> LW Near Shortcuts Grotto",
-            "alias": "Grass 1",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "LW Near Shortcuts Grotto Grass 2": {
-            "area": "",
-            "lKey": "Lost Woods -> LW Near Shortcuts Grotto",
-            "alias": "Grass 2",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "LW Near Shortcuts Grotto Grass 3": {
-            "area": "",
-            "lKey": "Lost Woods -> LW Near Shortcuts Grotto",
-            "alias": "Grass 3",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "LW Near Shortcuts Grotto Grass 4": {
-            "area": "",
-            "lKey": "Lost Woods -> LW Near Shortcuts Grotto",
-            "alias": "Grass 4",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Lost Woods Near Goron City Grass 1": {
-            "area": "Lost Woods",
-            "lKey": "",
-            "alias": "Near Goron City Grass 1",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Lost Woods Near Goron City Grass 2": {
-            "area": "Lost Woods",
-            "lKey": "",
-            "alias": "Near Goron City Grass 2",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Lost Woods Near Goron City Grass 3": {
-            "area": "Lost Woods",
-            "lKey": "",
-            "alias": "Near Goron City Grass 3",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Lost Woods Boulder Grass 1": {
-            "area": "Lost Woods",
-            "lKey": "",
-            "alias": "Boulder Grass 1",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Lost Woods Boulder Grass 2": {
-            "area": "Lost Woods",
-            "lKey": "",
-            "alias": "Boulder Grass 2",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Lost Woods Boulder Grass 3": {
-            "area": "Lost Woods",
-            "lKey": "",
-            "alias": "Boulder Grass 3",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Lost Woods Near Meadow Grass 1": {
-            "area": "Lost Woods",
-            "lKey": "",
-            "alias": "Near Meadow Grass 1",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Lost Woods Near Meadow Grass 2": {
-            "area": "Lost Woods",
-            "lKey": "",
-            "alias": "Near Meadow Grass 2",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Lost Woods Near Meadow Grass 3": {
-            "area": "Lost Woods",
-            "lKey": "",
-            "alias": "Near Meadow Grass 3",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        }
+    "LW Bridge -> Hyrule Field": {
+      "area": "Lost Woods Bridge",
+      "reverse": "Hyrule Field -> LW Bridge",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Hyrule Field",
+      "reverseAlias": "Lost Woods Bridge",
+      "tag": "",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "overworld",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
+    },
+    "LW Forest Exit -> Kokiri Forest": {
+      "area": "Lost Woods",
+      "reverse": "Kokiri Forest -> Lost Woods",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Kokiri Forest",
+      "reverseAlias": "Lost Woods",
+      "tag": "",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "overworld",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
+    },
+    "Lost Woods -> GC Woods Warp": {
+      "area": "Lost Woods",
+      "reverse": "GC Woods Warp -> Lost Woods",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Goron City",
+      "reverseAlias": "Lost Woods",
+      "tag": "",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "overworld",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
+    },
+    "Lost Woods -> Zora River": {
+      "area": "Lost Woods",
+      "reverse": "Zora River -> Lost Woods",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Zora River",
+      "reverseAlias": "Lost Woods",
+      "tag": "",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "overworld",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
+    },
+    "LW Beyond Mido -> SFM Entryway": {
+      "area": "Lost Woods",
+      "reverse": "SFM Entryway -> LW Beyond Mido",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Sacred Forest Meadow",
+      "reverseAlias": "Lost Woods",
+      "tag": "",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "overworld",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
+    },
+    "Lost Woods -> LW Near Shortcuts Grotto": {
+      "area": "Lost Woods",
+      "reverse": "LW Near Shortcuts Grotto -> Lost Woods",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Near GC Shortcut Grotto",
+      "reverseAlias": "from Near GC Shortcut Grotto",
+      "tag": "Generic Grotto",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "grotto",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
+    },
+    "LW Beyond Mido -> Deku Theater": {
+      "area": "Lost Woods",
+      "reverse": "Deku Theater -> LW Beyond Mido",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Open Grotto",
+      "reverseAlias": "from Open Grotto",
+      "tag": "Deku Theater",
+      "tagRep": true,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "grotto",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
+    },
+    "LW Beyond Mido -> LW Scrubs Grotto": {
+      "area": "Lost Woods",
+      "reverse": "LW Scrubs Grotto -> LW Beyond Mido",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Near Meadow Grotto",
+      "reverseAlias": "from Near Meadow Grotto",
+      "tag": "Special 2 Scrub Grotto",
+      "tagRep": true,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "grotto",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
     }
+  },
+  "locations": {
+    "LW Gift from Saria": {
+      "area": "Lost Woods Bridge",
+      "lKey": "",
+      "alias": "Gift from Saria",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Ocarinas",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LW Skull Kid": {
+      "area": "Lost Woods",
+      "lKey": "",
+      "alias": "Play Saria's Song for Skull Kid",
+      "type": "item",
+      "settings": [],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LW Adult Sarias Friend Skullkid": {
+      "area": "Lost Woods",
+      "lKey": "",
+      "alias": "Adult Sarias Friend Skullkid",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LW Grog Trade Item": {
+      "area": "Lost Woods",
+      "lKey": "",
+      "alias": "Grog Trade for Cojiro",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Adult Trade",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LW Fado Trade Item": {
+      "area": "Lost Woods",
+      "lKey": "",
+      "alias": "Fado Trade for Odd Potion",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Adult Trade",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LW GS Bean Patch Near Bridge": {
+      "area": "Lost Woods",
+      "lKey": "",
+      "alias": "Bean Patch Near Bridge GS",
+      "type": "skulltula",
+      "settings": [
+        {
+          "setting": "Show Unshuffled Skulls",
+          "value": "Yes",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "All",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": [
+        {
+          "setting": "Tokensanity",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "All",
+          "required": false
+        }
+      ]
+    },
+    "LW Plant Bean Patch Near Bridge": {
+      "area": "Lost Woods",
+      "lKey": "",
+      "alias": "Plant Bean Patch Near Bridge",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Plant Beans",
+          "value": "Off",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LW Deku Scrub Near Bridge": {
+      "area": "Lost Woods",
+      "lKey": "",
+      "alias": "Scrub Near Bridge",
+      "type": "item",
+      "settings": [],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LW Gossip Stone Drop": {
+      "area": "Lost Woods",
+      "lKey": "",
+      "alias": "Gossip Stone Drop",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Gossip Stones",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LW Target in Woods": {
+      "area": "Lost Woods",
+      "lKey": "",
+      "alias": "Target in the Woods",
+      "type": "item",
+      "settings": [],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LW Ocarina Memory Game": {
+      "area": "Lost Woods",
+      "lKey": "",
+      "alias": "Ocarina Memory Game",
+      "type": "item",
+      "settings": [],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LW Near Ocarina Game Wonderitem 1": {
+      "area": "Lost Woods",
+      "lKey": "",
+      "alias": "Near Ocarina Game Tall Grass Wonderitem 1",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Wonderitems",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LW Near Ocarina Game Wonderitem 2": {
+      "area": "Lost Woods",
+      "lKey": "",
+      "alias": "Near Ocarina Game Tall Grass Wonderitem 2",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Wonderitems",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LW Near Ocarina Game Wonderitem 3": {
+      "area": "Lost Woods",
+      "lKey": "",
+      "alias": "Near Ocarina Game Tall Grass Wonderitem 3",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Wonderitems",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LW Adult Ocarina Game Skullkid 1": {
+      "area": "Lost Woods",
+      "lKey": "",
+      "alias": "Adult Ocarina Game Skullkid 1",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LW Adult Ocarina Game Skullkid 2": {
+      "area": "Lost Woods",
+      "lKey": "",
+      "alias": "Adult Ocarina Game Skullkid 2",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Lost Woods Near Goron City Grass 1": {
+      "area": "Lost Woods",
+      "lKey": "",
+      "alias": "Near Goron City Grass 1",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Lost Woods Near Goron City Grass 2": {
+      "area": "Lost Woods",
+      "lKey": "",
+      "alias": "Near Goron City Grass 2",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Lost Woods Near Goron City Grass 3": {
+      "area": "Lost Woods",
+      "lKey": "",
+      "alias": "Near Goron City Grass 3",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LW Water Shortcut Rupee 1": {
+      "area": "Lost Woods",
+      "lKey": "",
+      "alias": "Water Shortcut Rupee 1",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LW Water Shortcut Rupee 2": {
+      "area": "Lost Woods",
+      "lKey": "",
+      "alias": "Water Shortcut Rupee 2",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LW Water Shortcut Rupee 3": {
+      "area": "Lost Woods",
+      "lKey": "",
+      "alias": "Water Shortcut Rupee 3",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LW Water Shortcut Rupee 4": {
+      "area": "Lost Woods",
+      "lKey": "",
+      "alias": "Water Shortcut Rupee 4",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LW Water Shortcut Rupee 5": {
+      "area": "Lost Woods",
+      "lKey": "",
+      "alias": "Water Shortcut Rupee 5",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LW Water Shortcut Rupee 6": {
+      "area": "Lost Woods",
+      "lKey": "",
+      "alias": "Water Shortcut Rupee 6",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LW Water Shortcut Rupee 7": {
+      "area": "Lost Woods",
+      "lKey": "",
+      "alias": "Water Shortcut Rupee 7",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LW Water Shortcut Rupee 8": {
+      "area": "Lost Woods",
+      "lKey": "",
+      "alias": "Water Shortcut Rupee 8",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LW Deku Scrub Near Deku Theater Left": {
+      "area": "Lost Woods",
+      "lKey": "",
+      "alias": "Left Scrub Near Theater",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Scrubsanity",
+          "value": "Affordable",
+          "required": false
+        },
+        {
+          "setting": "Scrubsanity",
+          "value": "Random",
+          "required": false
+        },
+        {
+          "setting": "Scrubsanity",
+          "value": "Vanilla",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LW Deku Scrub Near Deku Theater Right": {
+      "area": "Lost Woods",
+      "lKey": "",
+      "alias": "Right Scrub Near Theater",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Scrubsanity",
+          "value": "Affordable",
+          "required": false
+        },
+        {
+          "setting": "Scrubsanity",
+          "value": "Random",
+          "required": false
+        },
+        {
+          "setting": "Scrubsanity",
+          "value": "Vanilla",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LW GS Bean Patch Near Theater": {
+      "area": "Lost Woods",
+      "lKey": "",
+      "alias": "Bean Patch Near Theater",
+      "type": "skulltula",
+      "settings": [
+        {
+          "setting": "Show Unshuffled Skulls",
+          "value": "Yes",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "All",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": [
+        {
+          "setting": "Tokensanity",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "All",
+          "required": false
+        }
+      ]
+    },
+    "LW Plant Bean Patch Near Theater": {
+      "area": "Lost Woods",
+      "lKey": "",
+      "alias": "Plant Bean Patch Near Theater",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Plant Beans",
+          "value": "Off",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LW GS Above Theater": {
+      "area": "Lost Woods",
+      "lKey": "",
+      "alias": "Above Theater GS",
+      "type": "skulltula",
+      "settings": [
+        {
+          "setting": "Show Unshuffled Skulls",
+          "value": "Yes",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "All",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": [
+        {
+          "setting": "Tokensanity",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "All",
+          "required": false
+        }
+      ]
+    },
+    "Lost Woods Boulder Grass 1": {
+      "area": "Lost Woods",
+      "lKey": "",
+      "alias": "Boulder Grass 1",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Lost Woods Boulder Grass 2": {
+      "area": "Lost Woods",
+      "lKey": "",
+      "alias": "Boulder Grass 2",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Lost Woods Boulder Grass 3": {
+      "area": "Lost Woods",
+      "lKey": "",
+      "alias": "Boulder Grass 3",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LW Under Boulder Rupee": {
+      "area": "Lost Woods",
+      "lKey": "",
+      "alias": "Under Boulder Rupee",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Lost Woods Near Meadow Grass 1": {
+      "area": "Lost Woods",
+      "lKey": "",
+      "alias": "Near Meadow Grass 1",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Lost Woods Near Meadow Grass 2": {
+      "area": "Lost Woods",
+      "lKey": "",
+      "alias": "Near Meadow Grass 2",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Lost Woods Near Meadow Grass 3": {
+      "area": "Lost Woods",
+      "lKey": "",
+      "alias": "Near Meadow Grass 3",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LW Near Shortcuts Grotto Chest": {
+      "area": "",
+      "lKey": "Lost Woods -> LW Near Shortcuts Grotto",
+      "alias": "Grotto Chest",
+      "type": "item",
+      "settings": [],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LW Near Shortcuts Grotto Grass 1": {
+      "area": "",
+      "lKey": "Lost Woods -> LW Near Shortcuts Grotto",
+      "alias": "Grass 1",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LW Near Shortcuts Grotto Grass 2": {
+      "area": "",
+      "lKey": "Lost Woods -> LW Near Shortcuts Grotto",
+      "alias": "Grass 2",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LW Near Shortcuts Grotto Grass 3": {
+      "area": "",
+      "lKey": "Lost Woods -> LW Near Shortcuts Grotto",
+      "alias": "Grass 3",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LW Near Shortcuts Grotto Grass 4": {
+      "area": "",
+      "lKey": "Lost Woods -> LW Near Shortcuts Grotto",
+      "alias": "Grass 4",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LW Near Shortcuts Grotto Beehive 1": {
+      "area": "",
+      "lKey": "Lost Woods -> LW Near Shortcuts Grotto",
+      "alias": "Beehive 1",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Beehives",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LW Near Shortcuts Grotto Beehive 2": {
+      "area": "",
+      "lKey": "Lost Woods -> LW Near Shortcuts Grotto",
+      "alias": "Beehive 1",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Beehives",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LW Near Shortcuts Grotto Gossip Stone Drop": {
+      "area": "",
+      "lKey": "Lost Woods -> LW Near Shortcuts Grotto",
+      "alias": "Gossip Stone Drop",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Gossip Stones",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Deku Theater Skull Mask": {
+      "area": "",
+      "lKey": "LW Beyond Mido -> Deku Theater",
+      "alias": "Skull Mask",
+      "type": "item",
+      "settings": [],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Deku Theater Mask of Truth": {
+      "area": "",
+      "lKey": "LW Beyond Mido -> Deku Theater",
+      "alias": "Mask of Truth",
+      "type": "item",
+      "settings": [],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LW Deku Scrub Grotto Front": {
+      "area": "",
+      "lKey": "LW Beyond Mido -> LW Scrubs Grotto",
+      "alias": "Left Scrub",
+      "type": "item",
+      "settings": [],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LW Deku Scrub Grotto Rear": {
+      "area": "",
+      "lKey": "LW Beyond Mido -> LW Scrubs Grotto",
+      "alias": "Right Scrub",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Scrubsanity",
+          "value": "Affordable",
+          "required": false
+        },
+        {
+          "setting": "Scrubsanity",
+          "value": "Random",
+          "required": false
+        },
+        {
+          "setting": "Scrubsanity",
+          "value": "Vanilla",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LW Scrubs Grotto Beehive": {
+      "area": "",
+      "lKey": "LW Beyond Mido -> LW Scrubs Grotto",
+      "alias": "Beehive",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Beehives",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    }
+  }
 }

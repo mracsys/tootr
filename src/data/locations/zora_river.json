@@ -1,1520 +1,2109 @@
 {
-    "entrances": {
-        "ZR Top of Waterfall -> Zora River": {
-            "area": "Zora River",
-            "reverse": "",
-            "oneWay": true,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Top of Waterfall",
-            "reverseAlias": "",
-            "tag": "",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "extra",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "Zora River -> Lost Woods": {
-            "area": "Zora River",
-            "reverse": "Lost Woods -> Zora River",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Lost Woods",
-            "reverseAlias": "Zora River",
-            "tag": "",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "overworld",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "ZR Behind Waterfall -> Zoras Domain": {
-            "area": "Zora River",
-            "reverse": "Zoras Domain -> ZR Behind Waterfall",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Zora's Domain",
-            "reverseAlias": "Zora River",
-            "tag": "",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "overworld",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "ZR Front -> Hyrule Field": {
-            "area": "Zora River",
-            "reverse": "Hyrule Field -> ZR Front",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Hyrule Field",
-            "reverseAlias": "Zora River",
-            "tag": "",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "overworld",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "Zora River -> ZR Storms Grotto": {
-            "area": "Zora River",
-            "reverse": "ZR Storms Grotto -> Zora River",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Storms Grotto",
-            "reverseAlias": "from Storms Grotto",
-            "tag": "2 Scrub Grotto",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "grotto",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "Zora River -> ZR Fairy Grotto": {
-            "area": "Zora River",
-            "reverse": "ZR Fairy Grotto -> Zora River",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Boulder Grotto",
-            "reverseAlias": "from Boulder Grotto",
-            "tag": "Fairy Fountain",
-            "tagRep": true,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "grotto",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "Zora River -> ZR Open Grotto": {
-            "area": "Zora River",
-            "reverse": "ZR Open Grotto -> Zora River",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Open Grotto",
-            "reverseAlias": "from Open Grotto",
-            "tag": "Generic Grotto",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "grotto",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        }
+  "entrances": {
+    "ZR Front -> Hyrule Field": {
+      "area": "Zora River",
+      "reverse": "Hyrule Field -> ZR Front",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Hyrule Field",
+      "reverseAlias": "Zora River",
+      "tag": "",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "overworld",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
     },
-    "locations": {
-        "ZR Magic Bean Salesman": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Bean Salesman",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Magic Beans", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Open Grotto Chest": {
-            "area": "",
-            "lKey": "Zora River -> ZR Open Grotto",
-            "alias": "Grotto Chest",
-            "type": "item",
-            "settings": [],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Frogs in the Rain": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Frogs in the Rain",
-            "type": "item",
-            "settings": [],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Frogs Ocarina Game": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Frogs Ocarina Game",
-            "type": "item",
-            "settings": [],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Frogs Zeldas Lullaby": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Frogs Zeldas Lullaby",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Frogs", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Frogs Eponas Song": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Frogs Eponas Song",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Frogs", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Frogs Sarias Song": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Frogs Sarias Song",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Frogs", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Frogs Suns Song": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Frogs Suns Song",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Frogs", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Frogs Song of Time": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Frogs Song of Time",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Frogs", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Near Open Grotto Freestanding PoH": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Lower River Freestanding Item",
-            "type": "item",
-            "settings": [],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Near Domain Freestanding PoH": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Upper River Freestanding Item",
-            "type": "item",
-            "settings": [],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Deku Scrub Grotto Front": {
-            "area": "",
-            "lKey": "Zora River -> ZR Storms Grotto",
-            "alias": "Right Scrub",
-            "type": "item",
-            "settings": [
-                {"setting": "Scrubsanity", "value": "Affordable", "required": false},
-                {"setting": "Scrubsanity", "value": "Random", "required": false},
-                {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Deku Scrub Grotto Rear": {
-            "area": "",
-            "lKey": "Zora River -> ZR Storms Grotto",
-            "alias": "Left Scrub",
-            "type": "item",
-            "settings": [
-                {"setting": "Scrubsanity", "value": "Affordable", "required": false},
-                {"setting": "Scrubsanity", "value": "Random", "required": false},
-                {"setting": "Scrubsanity", "value": "Vanilla", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR GS Tree": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Tree Bonk",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": [
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ]
-        },
-        "ZR GS Ladder": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Ladder",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": [
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ]
-        },
-        "ZR GS Near Raised Grottos": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Lower Adult",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": [
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ]
-        },
-        "ZR GS Above Bridge": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Upper Adult",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": [
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ]
-        },
-        "ZR Waterfall Rupee 1": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Waterfall Rupee 1",
-            "type": "item",
-            "settings": [
-                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
-                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Waterfall Rupee 2": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Waterfall Rupee 2",
-            "type": "item",
-            "settings": [
-                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
-                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Waterfall Rupee 3": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Waterfall Rupee 3",
-            "type": "item",
-            "settings": [
-                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
-                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Waterfall Rupee 4": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Waterfall Rupee 4",
-            "type": "item",
-            "settings": [
-                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
-                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Storms Grotto Beehive": {
-            "area": "",
-            "lKey": "Zora River -> ZR Storms Grotto",
-            "alias": "Beehive",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Beehives", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Open Grotto Beehive 1": {
-            "area": "",
-            "lKey": "Zora River -> ZR Open Grotto",
-            "alias": "Beehive 1",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Beehives", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Open Grotto Beehive 2": {
-            "area": "",
-            "lKey": "Zora River -> ZR Open Grotto",
-            "alias": "Beehive 2",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Beehives", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Near Grottos Gossip Stone Drop": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Near Grottos Gossip Stone Drop",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Gossip Stones", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Near Domain Gossip Stone Drop": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Near Domain Gossip Stone Drop",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Gossip Stones", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Open Grotto Gossip Stone Drop": {
-            "area": "",
-            "lKey": "Zora River -> ZR Open Grotto",
-            "alias": "Gossip Stone Drop",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Gossip Stones", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Child Octorok Near Bean Salesman": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Child Near Bean Salesman Octorok",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Child Octorok Near Bridge": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Child Near Bridge Octorok",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Child Near Frogs Tektite 1": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Child Near Frogs Tektite 1",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Child Near Frogs Tektite 2": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Child Near Frogs Tektite 2",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Adult Octorok 1": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Adult Octorok 1",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Adult Octorok 2": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Adult Octorok 2",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Adult Octorok 3": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Adult Octorok 3",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Adult Octorok 4": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Adult Octorok 4",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Adult Octorok 5": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Adult Octorok 5",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Adult Octorok 6": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Adult Octorok 6",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Adult Octorok 7": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Adult Octorok 7",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Adult Octorok 8": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Adult Octorok 8",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Child Front River Wonderitem 1": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Child Front River Wonderitem 1",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Child Front River Wonderitem 2": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Child Front River Wonderitem 2",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Child Front River Wonderitem 3": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Child Front River Wonderitem 3",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Child Front River Wonderitem 4": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Child Front River Wonderitem 4",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Child River Wonderitem 1": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Child River Wonderitem 1",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Child River Wonderitem 2": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Child River Wonderitem 2",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Child River Wonderitem 3": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Child River Wonderitem 3",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Child River Wonderitem 4": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Child River Wonderitem 4",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Child River Wonderitem 5": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Child River Wonderitem 5",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Child River Wonderitem 6": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Child River Wonderitem 6",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Child River Wonderitem 7": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Child River Wonderitem 7",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Child River Wonderitem 8": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Child River Wonderitem 8",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Child River Wonderitem 9": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Child River Wonderitem 9",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Child River Wonderitem 10": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Child River Wonderitem 10",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Child River Wonderitem 11": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Child River Wonderitem 11",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Child River Wonderitem 12": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Child River Wonderitem 12",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Child River Wonderitem 13": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Child River Wonderitem 13",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Child River Wonderitem 14": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Child River Wonderitem 14",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Child River Wonderitem 15": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Child River Wonderitem 15",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Child River Wonderitem 16": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Child River Wonderitem 16",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Child River Wonderitem 17": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Child River Wonderitem 17",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Child River Wonderitem 18": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Child River Wonderitem 18",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Child River Wonderitem 19": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Child River Wonderitem 19",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Child River Wonderitem 20": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Child River Wonderitem 20",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Child River Wonderitem 21": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Child River Wonderitem 21",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Child River Wonderitem 22": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Child River Wonderitem 22",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Child River Wonderitem 23": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Child River Wonderitem 23",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Child River Wonderitem 24": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Child River Wonderitem 24",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Child River Wonderitem 25": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Child River Wonderitem 25",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Child River Wonderitem 26": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Child River Wonderitem 26",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Child River Wonderitem 27": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Child River Wonderitem 27",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Open Grotto Grass 1": {
-            "area": "",
-            "lKey": "Zora River -> ZR Open Grotto",
-            "alias": "Grass 1",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Open Grotto Grass 2": {
-            "area": "",
-            "lKey": "Zora River -> ZR Open Grotto",
-            "alias": "Grass 2",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Open Grotto Grass 3": {
-            "area": "",
-            "lKey": "Zora River -> ZR Open Grotto",
-            "alias": "Grass 3",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Open Grotto Grass 4": {
-            "area": "",
-            "lKey": "Zora River -> ZR Open Grotto",
-            "alias": "Grass 4",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Near Freestanding PoH Grass": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Near Freestanding PoH Grass",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Front Grass Patch 1": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Front Grass Patch 1",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Front Grass Patch 2": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Front Grass Patch 2",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Front Grass Patch 3": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Front Grass Patch 3",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Front Grass Patch 4": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Front Grass Patch 4",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Front Grass Patch 5": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Front Grass Patch 5",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Front Grass Patch 6": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Front Grass Patch 6",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Front Grass Patch 7": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Front Grass Patch 7",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Front Grass Patch 8": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Front Grass Patch 8",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Front Grass Patch 9": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Front Grass Patch 9",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Front Grass Patch 10": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Front Grass Patch 10",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Front Grass Patch 11": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Front Grass Patch 11",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "ZR Front Grass Patch 12": {
-            "area": "Zora River",
-            "lKey": "",
-            "alias": "Front Grass Patch 12",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        }
+    "Zora River -> Lost Woods": {
+      "area": "Zora River",
+      "reverse": "Lost Woods -> Zora River",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Lost Woods",
+      "reverseAlias": "Zora River",
+      "tag": "",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "overworld",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
+    },
+    "ZR Behind Waterfall -> Zoras Domain": {
+      "area": "Zora River",
+      "reverse": "Zoras Domain -> ZR Behind Waterfall",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Zora's Domain",
+      "reverseAlias": "Zora River",
+      "tag": "",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "overworld",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
+    },
+    "Zora River -> ZR Storms Grotto": {
+      "area": "Zora River",
+      "reverse": "ZR Storms Grotto -> Zora River",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Storms Grotto",
+      "reverseAlias": "from Storms Grotto",
+      "tag": "2 Scrub Grotto",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "grotto",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
+    },
+    "Zora River -> ZR Open Grotto": {
+      "area": "Zora River",
+      "reverse": "ZR Open Grotto -> Zora River",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Open Grotto",
+      "reverseAlias": "from Open Grotto",
+      "tag": "Generic Grotto",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "grotto",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
+    },
+    "Zora River -> ZR Fairy Grotto": {
+      "area": "Zora River",
+      "reverse": "ZR Fairy Grotto -> Zora River",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Boulder Grotto",
+      "reverseAlias": "from Boulder Grotto",
+      "tag": "Fairy Fountain",
+      "tagRep": true,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "grotto",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
+    },
+    "ZR Top of Waterfall -> Zora River": {
+      "area": "Zora River",
+      "reverse": "",
+      "oneWay": true,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Top of Waterfall",
+      "reverseAlias": "",
+      "tag": "",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "extra",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
     }
+  },
+  "locations": {
+    "ZR Front Grass Patch 1": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Front Grass Patch 1",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Front Grass Patch 2": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Front Grass Patch 2",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Front Grass Patch 3": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Front Grass Patch 3",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Front Grass Patch 4": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Front Grass Patch 4",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Front Grass Patch 5": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Front Grass Patch 5",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Front Grass Patch 6": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Front Grass Patch 6",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Front Grass Patch 7": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Front Grass Patch 7",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Front Grass Patch 8": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Front Grass Patch 8",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Front Grass Patch 9": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Front Grass Patch 9",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Front Grass Patch 10": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Front Grass Patch 10",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Front Grass Patch 11": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Front Grass Patch 11",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Front Grass Patch 12": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Front Grass Patch 12",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR GS Tree": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Tree Bonk GS",
+      "type": "skulltula",
+      "settings": [
+        {
+          "setting": "Show Unshuffled Skulls",
+          "value": "Yes",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "All",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": [
+        {
+          "setting": "Tokensanity",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "All",
+          "required": false
+        }
+      ]
+    },
+    "ZR Magic Bean Salesman": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Bean Salesman",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Magic Beans",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Plant Bean Patch": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Plant Bean Patch",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Plant Beans",
+          "value": "Off",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Child Octorok Near Bean Salesman": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Child Near Bean Salesman Octorok",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Near Freestanding PoH Grass": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Near Lower Freestanding Grass",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Near Open Grotto Freestanding PoH": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Lower Freestanding Item",
+      "type": "item",
+      "settings": [],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR GS Near Raised Grottos": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Lower Adult GS",
+      "type": "skulltula",
+      "settings": [
+        {
+          "setting": "Show Unshuffled Skulls",
+          "value": "Yes",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "All",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": [
+        {
+          "setting": "Tokensanity",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "All",
+          "required": false
+        }
+      ]
+    },
+    "ZR Near Grottos Gossip Stone Drop": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Lower Gossip Stone Drop",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Gossip Stones",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Child Near Frogs Tektite 1": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Child Near Frogs Tektite 1",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Child Near Frogs Tektite 2": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Child Near Frogs Tektite 2",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Frogs Zeldas Lullaby": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Frogs Zelda's Lullaby",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Frogs",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Frogs Eponas Song": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Frogs Epona's Song",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Frogs",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Frogs Sarias Song": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Frogs Saria's Song",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Frogs",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Frogs Suns Song": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Frogs Sun's Song",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Frogs",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Frogs Song of Time": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Frogs Song of Time",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Frogs",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Frogs in the Rain": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Frogs Song of Storms",
+      "type": "item",
+      "settings": [],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Frogs Ocarina Game": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Frogs Ocarina Game",
+      "type": "item",
+      "settings": [],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Child Octorok Near Bridge": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Child Near Bridge Octorok",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR GS Ladder": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Child Ladder GS",
+      "type": "skulltula",
+      "settings": [
+        {
+          "setting": "Show Unshuffled Skulls",
+          "value": "Yes",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "All",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": [
+        {
+          "setting": "Tokensanity",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "All",
+          "required": false
+        }
+      ]
+    },
+    "ZR GS Above Bridge": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Upper Adult GS",
+      "type": "skulltula",
+      "settings": [
+        {
+          "setting": "Show Unshuffled Skulls",
+          "value": "Yes",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "All",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": [
+        {
+          "setting": "Tokensanity",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "All",
+          "required": false
+        }
+      ]
+    },
+    "ZR Near Domain Freestanding PoH": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Upper Freestanding Item",
+      "type": "item",
+      "settings": [],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Near Domain Gossip Stone Drop": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Upper Gossip Stone Drop",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Gossip Stones",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Waterfall Rupee 1": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Waterfall Rupee 1",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Waterfall Rupee 2": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Waterfall Rupee 2",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Waterfall Rupee 3": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Waterfall Rupee 3",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Waterfall Rupee 4": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Waterfall Rupee 4",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Adult Octorok 1": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Adult Octorok 1",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Adult Octorok 2": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Adult Octorok 2",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Adult Octorok 3": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Adult Octorok 3",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Adult Octorok 4": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Adult Octorok 4",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Adult Octorok 5": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Adult Octorok 5",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Adult Octorok 6": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Adult Octorok 6",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Adult Octorok 7": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Adult Octorok 7",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Adult Octorok 8": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Adult Octorok 8",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Child River Wonderitem 1": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Child River Wonderitem 1",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Wonderitems",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Child River Wonderitem 2": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Child River Wonderitem 2",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Wonderitems",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Child River Wonderitem 3": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Child River Wonderitem 3",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Wonderitems",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Child River Wonderitem 4": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Child River Wonderitem 4",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Wonderitems",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Child River Wonderitem 5": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Child River Wonderitem 5",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Wonderitems",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Child River Wonderitem 6": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Child River Wonderitem 6",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Wonderitems",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Child River Wonderitem 7": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Child River Wonderitem 7",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Wonderitems",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Child River Wonderitem 8": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Child River Wonderitem 8",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Wonderitems",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Child River Wonderitem 9": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Child River Wonderitem 9",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Wonderitems",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Child River Wonderitem 10": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Child River Wonderitem 10",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Wonderitems",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Child River Wonderitem 11": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Child River Wonderitem 11",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Wonderitems",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Child River Wonderitem 12": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Child River Wonderitem 12",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Wonderitems",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Child River Wonderitem 13": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Child River Wonderitem 13",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Wonderitems",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Child River Wonderitem 14": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Child River Wonderitem 14",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Wonderitems",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Child River Wonderitem 15": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Child River Wonderitem 15",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Wonderitems",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Child River Wonderitem 16": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Child River Wonderitem 16",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Wonderitems",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Child River Wonderitem 17": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Child River Wonderitem 17",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Wonderitems",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Child River Wonderitem 18": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Child River Wonderitem 18",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Wonderitems",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Child River Wonderitem 19": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Child River Wonderitem 19",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Wonderitems",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Child River Wonderitem 20": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Child River Wonderitem 20",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Wonderitems",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Child River Wonderitem 21": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Child River Wonderitem 21",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Wonderitems",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Child River Wonderitem 22": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Child River Wonderitem 22",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Wonderitems",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Child River Wonderitem 23": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Child River Wonderitem 23",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Wonderitems",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Child River Wonderitem 24": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Child River Wonderitem 24",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Wonderitems",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Child River Wonderitem 25": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Child River Wonderitem 25",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Wonderitems",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Child River Wonderitem 26": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Child River Wonderitem 26",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Wonderitems",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Child River Wonderitem 27": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Child River Wonderitem 27",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Wonderitems",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Child Front River Wonderitem 1": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Child Front River Wonderitem 1",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Wonderitems",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Child Front River Wonderitem 2": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Child Front River Wonderitem 2",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Wonderitems",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Child Front River Wonderitem 3": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Child Front River Wonderitem 3",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Wonderitems",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Child Front River Wonderitem 4": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Child Front River Wonderitem 4",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Wonderitems",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Deku Scrub Grotto Front": {
+      "area": "",
+      "lKey": "Zora River -> ZR Storms Grotto",
+      "alias": "Right Scrub",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Scrubsanity",
+          "value": "Affordable",
+          "required": false
+        },
+        {
+          "setting": "Scrubsanity",
+          "value": "Random",
+          "required": false
+        },
+        {
+          "setting": "Scrubsanity",
+          "value": "Vanilla",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Deku Scrub Grotto Rear": {
+      "area": "",
+      "lKey": "Zora River -> ZR Storms Grotto",
+      "alias": "Left Scrub",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Scrubsanity",
+          "value": "Affordable",
+          "required": false
+        },
+        {
+          "setting": "Scrubsanity",
+          "value": "Random",
+          "required": false
+        },
+        {
+          "setting": "Scrubsanity",
+          "value": "Vanilla",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Storms Grotto Beehive": {
+      "area": "",
+      "lKey": "Zora River -> ZR Storms Grotto",
+      "alias": "Beehive",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Beehives",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Open Grotto Chest": {
+      "area": "",
+      "lKey": "Zora River -> ZR Open Grotto",
+      "alias": "Grotto Chest",
+      "type": "item",
+      "settings": [],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Open Grotto Grass 1": {
+      "area": "",
+      "lKey": "Zora River -> ZR Open Grotto",
+      "alias": "Grass 1",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Open Grotto Grass 2": {
+      "area": "",
+      "lKey": "Zora River -> ZR Open Grotto",
+      "alias": "Grass 2",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Open Grotto Grass 3": {
+      "area": "",
+      "lKey": "Zora River -> ZR Open Grotto",
+      "alias": "Grass 3",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Open Grotto Grass 4": {
+      "area": "",
+      "lKey": "Zora River -> ZR Open Grotto",
+      "alias": "Grass 4",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Open Grotto Beehive 1": {
+      "area": "",
+      "lKey": "Zora River -> ZR Open Grotto",
+      "alias": "Beehive 1",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Beehives",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Open Grotto Beehive 2": {
+      "area": "",
+      "lKey": "Zora River -> ZR Open Grotto",
+      "alias": "Beehive 2",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Beehives",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Open Grotto Gossip Stone Drop": {
+      "area": "",
+      "lKey": "Zora River -> ZR Open Grotto",
+      "alias": "Gossip Stone Drop",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Gossip Stones",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    }
+  }
 }

@@ -1,1202 +1,1627 @@
 {
-    "entrances": {
-        "Graveyard -> Kakariko Village": {
-            "area": "Graveyard",
-            "reverse": "Kakariko Village -> Graveyard",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Kakariko Village",
-            "reverseAlias": "Graveyard",
-            "tag": "",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "overworld",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "Graveyard Warp Pad Region -> Shadow Temple Entryway": {
-            "area": "Graveyard",
-            "reverse": "Shadow Temple Entryway -> Graveyard Warp Pad Region",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Shadow Temple",
-            "reverseAlias": "from Shadow Temple",
-            "tag": "",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "dungeon",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "Graveyard -> Graveyard Shield Grave": {
-            "area": "Graveyard",
-            "reverse": "Graveyard Shield Grave -> Graveyard",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Shield Grave",
-            "reverseAlias": "from Shield Grave",
-            "tag": "",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "grave",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "Graveyard -> Graveyard Heart Piece Grave": {
-            "area": "Graveyard",
-            "reverse": "Graveyard Heart Piece Grave -> Graveyard",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Sun Song Grave",
-            "reverseAlias": "from Redead Grave",
-            "tag": "",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "grave",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "Graveyard -> Graveyard Composers Grave": {
-            "area": "Graveyard",
-            "reverse": "Graveyard Composers Grave -> Graveyard",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Composer Grave",
-            "reverseAlias": "from Composer Grave",
-            "tag": "",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "grave",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "Graveyard -> Graveyard Dampes Grave": {
-            "area": "Graveyard",
-            "reverse": "Graveyard Dampes Grave -> Graveyard",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "Kak Windmill -> Kakariko Village",
-            "isReverse": false,
-            "alias": "Dampe's Grave",
-            "reverseAlias": "from Dampe's Grave",
-            "tag": "",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "grave",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "Graveyard -> Graveyard Dampes House": {
-            "area": "Graveyard",
-            "reverse": "Graveyard Dampes House -> Graveyard",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Dampe's Hut",
-            "reverseAlias": "from Dampe's Hut",
-            "tag": "House",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "interior",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        }
+  "entrances": {
+    "Graveyard -> Kakariko Village": {
+      "area": "Graveyard",
+      "reverse": "Kakariko Village -> Graveyard",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Kakariko Village",
+      "reverseAlias": "Graveyard",
+      "tag": "",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "overworld",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
     },
-    "locations": {
-        "Dampe Digging": {
-            "area": "Graveyard",
-            "lKey": "",
-            "alias": "Dampe Digging Check",
-            "type": "item",
-            "settings": [],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Graveyard Ledge": {
-            "area": "Graveyard",
-            "lKey": "",
-            "alias": "Freestanding PoH",
-            "type": "item",
-            "settings": [],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Graveyard Freestanding PoH Crate": {
-            "area": "Graveyard",
-            "lKey": "",
-            "alias": "Freestanding PoH Crate",
-            "type": "crate",
-            "settings": [
-                {"setting": "Shuffle Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Crates", "value": "Overworld", "required": false},
-                {"setting": "Shuffle Empty Crates", "value": "On", "required": true}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Shield Grave Chest": {
-            "area": "",
-            "lKey": "Graveyard -> Graveyard Shield Grave",
-            "alias": "Shield Grave Chest",
-            "type": "item",
-            "settings": [],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Redead Grave Chest": {
-            "area": "",
-            "lKey": "Graveyard -> Graveyard Heart Piece Grave",
-            "alias": "Sun Song Chest",
-            "type": "item",
-            "settings": [],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Sun Song": {
-            "area": "",
-            "lKey": "Graveyard -> Graveyard Composers Grave",
-            "alias": "Sun Song",
-            "type": "song",
-            "settings": [],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Composer's Grave Chest": {
-            "area": "",
-            "lKey": "Graveyard -> Graveyard Composers Grave",
-            "alias": "Composer Grave Chest",
-            "type": "item",
-            "settings": [],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Dampe's Race Reward 1": {
-            "area": "",
-            "lKey": "Graveyard -> Graveyard Dampes Grave",
-            "alias": "Dampe's Race 1",
-            "type": "item",
-            "settings": [],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Dampe's Race Reward 2": {
-            "area": "",
-            "lKey": "Graveyard -> Graveyard Dampes Grave",
-            "alias": "Dampe's Race 2",
-            "type": "item",
-            "settings": [],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Graveyard GS Bean Patch": {
-            "area": "Graveyard",
-            "lKey": "",
-            "alias": "Bean Patch",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": [
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ]
-        },
-        "Graveyard GS Wall": {
-            "area": "Graveyard",
-            "lKey": "",
-            "alias": "Back Wall",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": [
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ]
-        },
-        "Graveyard Dampe Race Rupee 1": {
-            "area": "",
-            "lKey": "Graveyard -> Graveyard Dampes Grave",
-            "alias": "Dampe Race Rupee 1",
-            "type": "item",
-            "settings": [
-                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
-                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Graveyard Dampe Race Rupee 2": {
-            "area": "",
-            "lKey": "Graveyard -> Graveyard Dampes Grave",
-            "alias": "Dampe Race Rupee 2",
-            "type": "item",
-            "settings": [
-                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
-                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Graveyard Dampe Race Rupee 3": {
-            "area": "",
-            "lKey": "Graveyard -> Graveyard Dampes Grave",
-            "alias": "Dampe Race Rupee 3",
-            "type": "item",
-            "settings": [
-                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
-                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Graveyard Dampe Race Rupee 4": {
-            "area": "",
-            "lKey": "Graveyard -> Graveyard Dampes Grave",
-            "alias": "Dampe Race Rupee 4",
-            "type": "item",
-            "settings": [
-                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
-                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Graveyard Dampe Race Rupee 5": {
-            "area": "",
-            "lKey": "Graveyard -> Graveyard Dampes Grave",
-            "alias": "Dampe Race Rupee 5",
-            "type": "item",
-            "settings": [
-                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
-                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Graveyard Dampe Race Rupee 6": {
-            "area": "",
-            "lKey": "Graveyard -> Graveyard Dampes Grave",
-            "alias": "Dampe Race Rupee 6",
-            "type": "item",
-            "settings": [
-                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
-                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Graveyard Dampe Race Rupee 7": {
-            "area": "",
-            "lKey": "Graveyard -> Graveyard Dampes Grave",
-            "alias": "Dampe Race Rupee 7",
-            "type": "item",
-            "settings": [
-                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
-                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Graveyard Dampe Race Rupee 8": {
-            "area": "",
-            "lKey": "Graveyard -> Graveyard Dampes Grave",
-            "alias": "Dampe Race Rupee 8",
-            "type": "item",
-            "settings": [
-                {"setting": "Shuffle Freestanding Items", "value": "All", "required": false},
-                {"setting": "Shuffle Freestanding Items", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Grave Dampe Pot 1": {
-            "area": "",
-            "lKey": "Graveyard -> Graveyard Dampes Grave",
-            "alias": "Dampe Race Pot 1",
-            "type": "jar",
-            "settings": [
-                {"setting": "Shuffle Pots", "value": "All", "required": false},
-                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Grave Dampe Pot 2": {
-            "area": "",
-            "lKey": "Graveyard -> Graveyard Dampes Grave",
-            "alias": "Dampe Race Pot 2",
-            "type": "jar",
-            "settings": [
-                {"setting": "Shuffle Pots", "value": "All", "required": false},
-                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Grave Dampe Pot 3": {
-            "area": "",
-            "lKey": "Graveyard -> Graveyard Dampes Grave",
-            "alias": "Dampe Race Pot 3",
-            "type": "jar",
-            "settings": [
-                {"setting": "Shuffle Pots", "value": "All", "required": false},
-                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Grave Dampe Pot 4": {
-            "area": "",
-            "lKey": "Graveyard -> Graveyard Dampes Grave",
-            "alias": "Dampe Race Pot 4",
-            "type": "jar",
-            "settings": [
-                {"setting": "Shuffle Pots", "value": "All", "required": false},
-                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Grave Dampe Pot 5": {
-            "area": "",
-            "lKey": "Graveyard -> Graveyard Dampes Grave",
-            "alias": "Dampe Race Pot 5",
-            "type": "jar",
-            "settings": [
-                {"setting": "Shuffle Pots", "value": "All", "required": false},
-                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Grave Dampe Pot 6": {
-            "area": "",
-            "lKey": "Graveyard -> Graveyard Dampes Grave",
-            "alias": "Dampe Race Pot 6",
-            "type": "jar",
-            "settings": [
-                {"setting": "Shuffle Pots", "value": "All", "required": false},
-                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Graveyard Gossip Stone Drop": {
-            "area": "Graveyard",
-            "lKey": "",
-            "alias": "Gossip Stone Drop",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Gossip Stones", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Graveyard Heart Piece Grave Redead": {
-            "area": "",
-            "lKey": "Graveyard -> Graveyard Heart Piece Grave",
-            "alias": "Redead",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Graveyard Royal Familys Tomb Keese 1": {
-            "area": "",
-            "lKey": "Graveyard -> Graveyard Composers Grave",
-            "alias": "Keese 1",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Graveyard Royal Familys Tomb Keese 2": {
-            "area": "",
-            "lKey": "Graveyard -> Graveyard Composers Grave",
-            "alias": "Keese 2",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Graveyard Royal Familys Tomb Keese 3": {
-            "area": "",
-            "lKey": "Graveyard -> Graveyard Composers Grave",
-            "alias": "Keese 3",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Graveyard Royal Familys Tomb Keese 4": {
-            "area": "",
-            "lKey": "Graveyard -> Graveyard Composers Grave",
-            "alias": "Keese 4",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Graveyard Royal Familys Tomb Redead 1": {
-            "area": "",
-            "lKey": "Graveyard -> Graveyard Composers Grave",
-            "alias": "Redead 1",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Graveyard Royal Familys Tomb Redead 2": {
-            "area": "",
-            "lKey": "Graveyard -> Graveyard Composers Grave",
-            "alias": "Redead 2",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Graveyard Royal Familys Tomb Redead 3": {
-            "area": "",
-            "lKey": "Graveyard -> Graveyard Composers Grave",
-            "alias": "Redead 3",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Graveyard Dampe Race Redead 1": {
-            "area": "",
-            "lKey": "Graveyard -> Graveyard Dampes Grave",
-            "alias": "Dampe Race Redead 1",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Graveyard Dampe Race Redead 2": {
-            "area": "",
-            "lKey": "Graveyard -> Graveyard Dampes Grave",
-            "alias": "Dampe Race Redead 2",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Graveyard Dampe Race Redead 3": {
-            "area": "",
-            "lKey": "Graveyard -> Graveyard Dampes Grave",
-            "alias": "Dampe Race Redead 3",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Graveyard Dampe Race Redead 4": {
-            "area": "",
-            "lKey": "Graveyard -> Graveyard Dampes Grave",
-            "alias": "Dampe Race Redead 4",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Graveyard Dampe Race Wonderitem 1": {
-            "area": "",
-            "lKey": "Graveyard -> Graveyard Dampes Grave",
-            "alias": "Dampe Race Wonderitem 1",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Graveyard Dampe Race Wonderitem 2": {
-            "area": "",
-            "lKey": "Graveyard -> Graveyard Dampes Grave",
-            "alias": "Dampe Race Wonderitem 2",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Graveyard Dampe Race Wonderitem 3": {
-            "area": "",
-            "lKey": "Graveyard -> Graveyard Dampes Grave",
-            "alias": "Dampe Race Wonderitem 3",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Graveyard Dampe Race Wonderitem 4": {
-            "area": "",
-            "lKey": "Graveyard -> Graveyard Dampes Grave",
-            "alias": "Dampe Race Wonderitem 4",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Graveyard Dampe Race Wonderitem 5": {
-            "area": "",
-            "lKey": "Graveyard -> Graveyard Dampes Grave",
-            "alias": "Dampe Race Wonderitem 5",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Graveyard Dampe Race Wonderitem 6": {
-            "area": "",
-            "lKey": "Graveyard -> Graveyard Dampes Grave",
-            "alias": "Dampe Race Wonderitem 6",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Graveyard Dampe Race Wonderitem 7": {
-            "area": "",
-            "lKey": "Graveyard -> Graveyard Dampes Grave",
-            "alias": "Dampe Race Wonderitem 7",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Graveyard Dampe Race Wonderitem 8": {
-            "area": "",
-            "lKey": "Graveyard -> Graveyard Dampes Grave",
-            "alias": "Dampe Race Wonderitem 8",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Graveyard Dampe Race Wonderitem 9": {
-            "area": "",
-            "lKey": "Graveyard -> Graveyard Dampes Grave",
-            "alias": "Dampe Race Wonderitem 9",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Graveyard Dampe Race Wonderitem 10": {
-            "area": "",
-            "lKey": "Graveyard -> Graveyard Dampes Grave",
-            "alias": "Dampe Race Wonderitem 10",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Graveyard Dampe Race Wonderitem 11": {
-            "area": "",
-            "lKey": "Graveyard -> Graveyard Dampes Grave",
-            "alias": "Dampe Race Wonderitem 11",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Graveyard Dampe Race Wonderitem 12": {
-            "area": "",
-            "lKey": "Graveyard -> Graveyard Dampes Grave",
-            "alias": "Dampe Race Wonderitem 12",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Graveyard Dampe Race Wonderitem 13": {
-            "area": "",
-            "lKey": "Graveyard -> Graveyard Dampes Grave",
-            "alias": "Dampe Race Wonderitem 13",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Graveyard Dampe Race Wonderitem 14": {
-            "area": "",
-            "lKey": "Graveyard -> Graveyard Dampes Grave",
-            "alias": "Dampe Race Wonderitem 14",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Graveyard Dampe Race Wonderitem 15": {
-            "area": "",
-            "lKey": "Graveyard -> Graveyard Dampes Grave",
-            "alias": "Dampe Race Wonderitem 15",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Graveyard Grass Patch 1": {
-            "area": "Graveyard",
-            "lKey": "",
-            "alias": "Grass 1",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Graveyard Grass Patch 2": {
-            "area": "Graveyard",
-            "lKey": "",
-            "alias": "Grass 2",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Graveyard Grass Patch 3": {
-            "area": "Graveyard",
-            "lKey": "",
-            "alias": "Grass 3",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Graveyard Grass Patch 4": {
-            "area": "Graveyard",
-            "lKey": "",
-            "alias": "Grass 4",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Graveyard Grass Patch 5": {
-            "area": "Graveyard",
-            "lKey": "",
-            "alias": "Grass 5",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Graveyard Grass Patch 6": {
-            "area": "Graveyard",
-            "lKey": "",
-            "alias": "Grass 6",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Graveyard Grass Patch 7": {
-            "area": "Graveyard",
-            "lKey": "",
-            "alias": "Grass 7",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Graveyard Grass Patch 8": {
-            "area": "Graveyard",
-            "lKey": "",
-            "alias": "Grass 8",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Graveyard Grass Patch 9": {
-            "area": "Graveyard",
-            "lKey": "",
-            "alias": "Grass 9",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Graveyard Grass Patch 10": {
-            "area": "Graveyard",
-            "lKey": "",
-            "alias": "Grass 10",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Graveyard Grass Patch 11": {
-            "area": "Graveyard",
-            "lKey": "",
-            "alias": "Grass 11",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Graveyard Grass Patch 12": {
-            "area": "Graveyard",
-            "lKey": "",
-            "alias": "Grass 12",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        }
+    "Graveyard Warp Pad Region -> Shadow Temple Entryway": {
+      "area": "Graveyard",
+      "reverse": "Shadow Temple Entryway -> Graveyard Warp Pad Region",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Shadow Temple",
+      "reverseAlias": "from Shadow Temple",
+      "tag": "",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "dungeon",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
+    },
+    "Graveyard -> Graveyard Dampes House": {
+      "area": "Graveyard",
+      "reverse": "Graveyard Dampes House -> Graveyard",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Dampe's Hut",
+      "reverseAlias": "from Dampe's Hut",
+      "tag": "Empty Interior",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "interior",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
+    },
+    "Graveyard -> Graveyard Shield Grave": {
+      "area": "Graveyard",
+      "reverse": "Graveyard Shield Grave -> Graveyard",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Shield Grave",
+      "reverseAlias": "from Shield Grave",
+      "tag": "",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "grave",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
+    },
+    "Graveyard -> Graveyard Heart Piece Grave": {
+      "area": "Graveyard",
+      "reverse": "Graveyard Heart Piece Grave -> Graveyard",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Redead Grave",
+      "reverseAlias": "from Redead Grave",
+      "tag": "",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "grave",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
+    },
+    "Graveyard -> Graveyard Composers Grave": {
+      "area": "Graveyard",
+      "reverse": "Graveyard Composers Grave -> Graveyard",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Royal Family's Tomb",
+      "reverseAlias": "from Royal Family's Tomb",
+      "tag": "",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "grave",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
+    },
+    "Graveyard -> Graveyard Dampes Grave": {
+      "area": "Graveyard",
+      "reverse": "Graveyard Dampes Grave -> Graveyard",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "Kak Windmill -> Kakariko Village",
+      "isReverse": false,
+      "alias": "Dampe's Grave",
+      "reverseAlias": "from Dampe's Grave",
+      "tag": "",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "grave",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
     }
+  },
+  "locations": {
+    "Graveyard Grass Patch 1": {
+      "area": "Graveyard",
+      "lKey": "",
+      "alias": "Grass 1",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Graveyard Grass Patch 2": {
+      "area": "Graveyard",
+      "lKey": "",
+      "alias": "Grass 2",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Graveyard Grass Patch 3": {
+      "area": "Graveyard",
+      "lKey": "",
+      "alias": "Grass 3",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Graveyard Grass Patch 4": {
+      "area": "Graveyard",
+      "lKey": "",
+      "alias": "Grass 4",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Graveyard Grass Patch 5": {
+      "area": "Graveyard",
+      "lKey": "",
+      "alias": "Grass 5",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Graveyard Grass Patch 6": {
+      "area": "Graveyard",
+      "lKey": "",
+      "alias": "Grass 6",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Graveyard Grass Patch 7": {
+      "area": "Graveyard",
+      "lKey": "",
+      "alias": "Grass 7",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Graveyard Grass Patch 8": {
+      "area": "Graveyard",
+      "lKey": "",
+      "alias": "Grass 8",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Graveyard Grass Patch 9": {
+      "area": "Graveyard",
+      "lKey": "",
+      "alias": "Grass 9",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Graveyard Grass Patch 10": {
+      "area": "Graveyard",
+      "lKey": "",
+      "alias": "Grass 10",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Graveyard Grass Patch 11": {
+      "area": "Graveyard",
+      "lKey": "",
+      "alias": "Grass 11",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Graveyard Grass Patch 12": {
+      "area": "Graveyard",
+      "lKey": "",
+      "alias": "Grass 12",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Dampe Digging": {
+      "area": "Graveyard",
+      "lKey": "",
+      "alias": "Dampe's Heart-Pounding Gravedigging Tour",
+      "type": "item",
+      "settings": [],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Graveyard Freestanding PoH Crate": {
+      "area": "Graveyard",
+      "lKey": "",
+      "alias": "Ledge Crate",
+      "type": "crate",
+      "settings": [
+        {
+          "setting": "Shuffle Crates",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Crates",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Empty Crates",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Graveyard Ledge": {
+      "area": "Graveyard",
+      "lKey": "",
+      "alias": "Inside Ledge Crate",
+      "type": "item",
+      "settings": [],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Graveyard GS Bean Patch": {
+      "area": "Graveyard",
+      "lKey": "",
+      "alias": "Bean Patch GS",
+      "type": "skulltula",
+      "settings": [
+        {
+          "setting": "Show Unshuffled Skulls",
+          "value": "Yes",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "All",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": [
+        {
+          "setting": "Tokensanity",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "All",
+          "required": false
+        }
+      ]
+    },
+    "Graveyard Plant Bean Patch": {
+      "area": "Graveyard",
+      "lKey": "",
+      "alias": "Plant Bean Patch",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Plant Beans",
+          "value": "Off",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Graveyard GS Wall": {
+      "area": "Graveyard",
+      "lKey": "",
+      "alias": "Child Wall GS",
+      "type": "skulltula",
+      "settings": [
+        {
+          "setting": "Show Unshuffled Skulls",
+          "value": "Yes",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "All",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": [
+        {
+          "setting": "Tokensanity",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "All",
+          "required": false
+        }
+      ]
+    },
+    "Graveyard Gossip Stone Drop": {
+      "area": "Graveyard",
+      "lKey": "",
+      "alias": "Near Shadow Temple Gossip Stone Drop",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Gossip Stones",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Shield Grave Chest": {
+      "area": "",
+      "lKey": "Graveyard -> Graveyard Shield Grave",
+      "alias": "Shield Grave Chest",
+      "type": "item",
+      "settings": [],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Graveyard Heart Piece Grave Redead": {
+      "area": "",
+      "lKey": "Graveyard -> Graveyard Heart Piece Grave",
+      "alias": "Redead",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Redead Grave Chest": {
+      "area": "",
+      "lKey": "Graveyard -> Graveyard Heart Piece Grave",
+      "alias": "Sun's Song Chest",
+      "type": "item",
+      "settings": [],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Graveyard Royal Familys Tomb Keese 1": {
+      "area": "",
+      "lKey": "Graveyard -> Graveyard Composers Grave",
+      "alias": "Keese 1",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Graveyard Royal Familys Tomb Keese 2": {
+      "area": "",
+      "lKey": "Graveyard -> Graveyard Composers Grave",
+      "alias": "Keese 2",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Graveyard Royal Familys Tomb Keese 3": {
+      "area": "",
+      "lKey": "Graveyard -> Graveyard Composers Grave",
+      "alias": "Keese 3",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Graveyard Royal Familys Tomb Keese 4": {
+      "area": "",
+      "lKey": "Graveyard -> Graveyard Composers Grave",
+      "alias": "Keese 4",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Composer's Grave Chest": {
+      "area": "",
+      "lKey": "Graveyard -> Graveyard Composers Grave",
+      "alias": "Torches Chest",
+      "type": "item",
+      "settings": [],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Graveyard Royal Familys Tomb Redead 1": {
+      "area": "",
+      "lKey": "Graveyard -> Graveyard Composers Grave",
+      "alias": "Redead 1",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Graveyard Royal Familys Tomb Redead 2": {
+      "area": "",
+      "lKey": "Graveyard -> Graveyard Composers Grave",
+      "alias": "Redead 2",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Graveyard Royal Familys Tomb Redead 3": {
+      "area": "",
+      "lKey": "Graveyard -> Graveyard Composers Grave",
+      "alias": "Redead 3",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Sun Song": {
+      "area": "",
+      "lKey": "Graveyard -> Graveyard Composers Grave",
+      "alias": "Sun's Song",
+      "type": "song",
+      "settings": [],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Grave Dampe Pot 1": {
+      "area": "",
+      "lKey": "Graveyard -> Graveyard Dampes Grave",
+      "alias": "Dampe Race Pot 1",
+      "type": "jar",
+      "settings": [
+        {
+          "setting": "Shuffle Pots",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Pots",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Grave Dampe Pot 2": {
+      "area": "",
+      "lKey": "Graveyard -> Graveyard Dampes Grave",
+      "alias": "Dampe Race Pot 2",
+      "type": "jar",
+      "settings": [
+        {
+          "setting": "Shuffle Pots",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Pots",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Grave Dampe Pot 3": {
+      "area": "",
+      "lKey": "Graveyard -> Graveyard Dampes Grave",
+      "alias": "Dampe Race Pot 3",
+      "type": "jar",
+      "settings": [
+        {
+          "setting": "Shuffle Pots",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Pots",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Grave Dampe Pot 4": {
+      "area": "",
+      "lKey": "Graveyard -> Graveyard Dampes Grave",
+      "alias": "Dampe Race Pot 4",
+      "type": "jar",
+      "settings": [
+        {
+          "setting": "Shuffle Pots",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Pots",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Grave Dampe Pot 5": {
+      "area": "",
+      "lKey": "Graveyard -> Graveyard Dampes Grave",
+      "alias": "Dampe Race Pot 5",
+      "type": "jar",
+      "settings": [
+        {
+          "setting": "Shuffle Pots",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Pots",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Grave Dampe Pot 6": {
+      "area": "",
+      "lKey": "Graveyard -> Graveyard Dampes Grave",
+      "alias": "Dampe Race Pot 6",
+      "type": "jar",
+      "settings": [
+        {
+          "setting": "Shuffle Pots",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Pots",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Graveyard Dampe Race Rupee 1": {
+      "area": "",
+      "lKey": "Graveyard -> Graveyard Dampes Grave",
+      "alias": "Dampe Race Rupee 1",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Graveyard Dampe Race Rupee 2": {
+      "area": "",
+      "lKey": "Graveyard -> Graveyard Dampes Grave",
+      "alias": "Dampe Race Rupee 2",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Graveyard Dampe Race Rupee 3": {
+      "area": "",
+      "lKey": "Graveyard -> Graveyard Dampes Grave",
+      "alias": "Dampe Race Rupee 3",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Graveyard Dampe Race Rupee 4": {
+      "area": "",
+      "lKey": "Graveyard -> Graveyard Dampes Grave",
+      "alias": "Dampe Race Rupee 4",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Graveyard Dampe Race Rupee 5": {
+      "area": "",
+      "lKey": "Graveyard -> Graveyard Dampes Grave",
+      "alias": "Dampe Race Rupee 5",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Graveyard Dampe Race Rupee 6": {
+      "area": "",
+      "lKey": "Graveyard -> Graveyard Dampes Grave",
+      "alias": "Dampe Race Rupee 6",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Graveyard Dampe Race Rupee 7": {
+      "area": "",
+      "lKey": "Graveyard -> Graveyard Dampes Grave",
+      "alias": "Dampe Race Rupee 7",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Graveyard Dampe Race Rupee 8": {
+      "area": "",
+      "lKey": "Graveyard -> Graveyard Dampes Grave",
+      "alias": "Dampe Race Rupee 8",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Freestanding Items",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Graveyard Dampe Race Redead 1": {
+      "area": "",
+      "lKey": "Graveyard -> Graveyard Dampes Grave",
+      "alias": "Dampe Race Redead 1",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Graveyard Dampe Race Redead 2": {
+      "area": "",
+      "lKey": "Graveyard -> Graveyard Dampes Grave",
+      "alias": "Dampe Race Redead 2",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Graveyard Dampe Race Redead 3": {
+      "area": "",
+      "lKey": "Graveyard -> Graveyard Dampes Grave",
+      "alias": "Dampe Race Redead 3",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Graveyard Dampe Race Redead 4": {
+      "area": "",
+      "lKey": "Graveyard -> Graveyard Dampes Grave",
+      "alias": "Dampe Race Redead 4",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Graveyard Dampe Race Wonderitem 1": {
+      "area": "",
+      "lKey": "Graveyard -> Graveyard Dampes Grave",
+      "alias": "Dampe Race Wonderitem 1",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Wonderitems",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Graveyard Dampe Race Wonderitem 2": {
+      "area": "",
+      "lKey": "Graveyard -> Graveyard Dampes Grave",
+      "alias": "Dampe Race Wonderitem 2",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Wonderitems",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Graveyard Dampe Race Wonderitem 3": {
+      "area": "",
+      "lKey": "Graveyard -> Graveyard Dampes Grave",
+      "alias": "Dampe Race Wonderitem 3",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Wonderitems",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Graveyard Dampe Race Wonderitem 4": {
+      "area": "",
+      "lKey": "Graveyard -> Graveyard Dampes Grave",
+      "alias": "Dampe Race Wonderitem 4",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Wonderitems",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Graveyard Dampe Race Wonderitem 5": {
+      "area": "",
+      "lKey": "Graveyard -> Graveyard Dampes Grave",
+      "alias": "Dampe Race Wonderitem 5",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Wonderitems",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Graveyard Dampe Race Wonderitem 6": {
+      "area": "",
+      "lKey": "Graveyard -> Graveyard Dampes Grave",
+      "alias": "Dampe Race Wonderitem 6",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Wonderitems",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Graveyard Dampe Race Wonderitem 7": {
+      "area": "",
+      "lKey": "Graveyard -> Graveyard Dampes Grave",
+      "alias": "Dampe Race Wonderitem 7",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Wonderitems",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Graveyard Dampe Race Wonderitem 8": {
+      "area": "",
+      "lKey": "Graveyard -> Graveyard Dampes Grave",
+      "alias": "Dampe Race Wonderitem 8",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Wonderitems",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Graveyard Dampe Race Wonderitem 9": {
+      "area": "",
+      "lKey": "Graveyard -> Graveyard Dampes Grave",
+      "alias": "Dampe Race Wonderitem 9",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Wonderitems",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Graveyard Dampe Race Wonderitem 10": {
+      "area": "",
+      "lKey": "Graveyard -> Graveyard Dampes Grave",
+      "alias": "Dampe Race Wonderitem 10",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Wonderitems",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Graveyard Dampe Race Wonderitem 11": {
+      "area": "",
+      "lKey": "Graveyard -> Graveyard Dampes Grave",
+      "alias": "Dampe Race Wonderitem 11",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Wonderitems",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Graveyard Dampe Race Wonderitem 12": {
+      "area": "",
+      "lKey": "Graveyard -> Graveyard Dampes Grave",
+      "alias": "Dampe Race Wonderitem 12",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Wonderitems",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Graveyard Dampe Race Wonderitem 13": {
+      "area": "",
+      "lKey": "Graveyard -> Graveyard Dampes Grave",
+      "alias": "Dampe Race Wonderitem 13",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Wonderitems",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Graveyard Dampe Race Wonderitem 14": {
+      "area": "",
+      "lKey": "Graveyard -> Graveyard Dampes Grave",
+      "alias": "Dampe Race Wonderitem 14",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Wonderitems",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Graveyard Dampe Race Wonderitem 15": {
+      "area": "",
+      "lKey": "Graveyard -> Graveyard Dampes Grave",
+      "alias": "Dampe Race Wonderitem 15",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Wonderitems",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Dampe's Race Reward 1": {
+      "area": "",
+      "lKey": "Graveyard -> Graveyard Dampes Grave",
+      "alias": "Dampe's Race 1",
+      "type": "item",
+      "settings": [],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Dampe's Race Reward 2": {
+      "area": "",
+      "lKey": "Graveyard -> Graveyard Dampes Grave",
+      "alias": "Dampe's Race 2",
+      "type": "item",
+      "settings": [],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    }
+  }
 }

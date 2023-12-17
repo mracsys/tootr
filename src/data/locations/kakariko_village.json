@@ -1,1890 +1,2556 @@
 {
-    "entrances": {
-        "Kakariko Village -> Graveyard": {
-            "area": "Kakariko Village",
-            "reverse": "Graveyard -> Kakariko Village",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Graveyard",
-            "reverseAlias": "Kakariko Village",
-            "tag": "",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "overworld",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "Kak Behind Gate -> Death Mountain": {
-            "area": "Kakariko Village",
-            "reverse": "Death Mountain -> Kak Behind Gate",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Death Mountain Trail",
-            "reverseAlias": "Kakariko Village",
-            "tag": "",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "overworld",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "Kakariko Village -> Hyrule Field": {
-            "area": "Kakariko Village",
-            "reverse": "Hyrule Field -> Kakariko Village",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Hyrule Field",
-            "reverseAlias": "Kakariko Village",
-            "tag": "",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "overworld",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "Kakariko Village -> Bottom of the Well": {
-            "area": "Kakariko Village",
-            "reverse": "Bottom of the Well -> Kakariko Village",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Bottom of the Well",
-            "reverseAlias": "from Bottom of the Well",
-            "tag": "",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "dungeon",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "Kak Backyard -> Kak Open Grotto": {
-            "area": "Kakariko Village",
-            "reverse": "Kak Open Grotto -> Kak Backyard",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Open Grotto",
-            "reverseAlias": "from Open Grotto",
-            "tag": "Generic Grotto",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "grotto",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "Kakariko Village -> Kak Redead Grotto": {
-            "area": "Kakariko Village",
-            "reverse": "Kak Redead Grotto -> Kakariko Village",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Redead Grotto",
-            "reverseAlias": "from Redead Grotto",
-            "tag": "",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "grotto",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "Kakariko Village -> Potion Shop Front": {
-            "area": "Kakariko Village",
-            "reverse": "Potion Shop Front -> Kakariko Village",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "Potion Shop Back -> Kakariko Village",
-            "isReverse": false,
-            "alias": "Kak Potion Shop Front",
-            "reverseAlias": "from Potion Shop Front",
-            "tag": "",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "specialInterior",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "Kakariko Village -> Potion Shop Back": {
-            "area": "Kakariko Village",
-            "reverse": "Potion Shop Back -> Kakariko Village",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "Potion Shop Front -> Kakariko Village",
-            "isReverse": false,
-            "alias": "Kak Potion Shop Back",
-            "reverseAlias": "from Potion Shop Back",
-            "tag": "",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "specialInterior",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "Kakariko Village -> Kak Windmill": {
-            "area": "Kakariko Village",
-            "reverse": "Kak Windmill -> Kakariko Village",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Windmill",
-            "reverseAlias": "from Windmill",
-            "tag": "",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "specialInterior",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "Kakariko Village -> Kak Carpenter Boss House": {
-            "area": "Kakariko Village",
-            "reverse": "Kak Carpenter Boss House -> Kakariko Village",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Bottom House",
-            "reverseAlias": "from Bottom House",
-            "tag": "Sleeping Talon House",
-            "tagRep": true,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "interior",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "Kakariko Village -> Kak House of Skulltula": {
-            "area": "Kakariko Village",
-            "reverse": "Kak House of Skulltula -> Kakariko Village",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Skulltula House",
-            "reverseAlias": "from Skulltula House",
-            "tag": "",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "interior",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "Kakariko Village -> Kak Impas House": {
-            "area": "Kakariko Village",
-            "reverse": "Kak Impas House -> Kakariko Village",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Impa's House Front",
-            "reverseAlias": "from Impa's House Front",
-            "tag": "",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "interior",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "Kak Impas Ledge -> Kak Impas House Back": {
-            "area": "Kakariko Village",
-            "reverse": "Kak Impas House Back -> Kak Impas Ledge",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Impa's House Back",
-            "reverseAlias": "from Impa's House Back",
-            "tag": "",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "interior",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "Kak Backyard -> Kak Odd Medicine Building": {
-            "area": "Kakariko Village",
-            "reverse": "Kak Odd Medicine Building -> Kak Backyard",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Granny's Potion Shop",
-            "reverseAlias": "from Granny's Potion Shop",
-            "tag": "",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "interior",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "Kakariko Village -> Kak Bazaar": {
-            "area": "Kakariko Village",
-            "reverse": "Kak Bazaar -> Kakariko Village",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Bazaar",
-            "reverseAlias": "from Bazaar",
-            "tag": "Shop",
-            "tagRep": false,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "interior",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        },
-        "Kakariko Village -> Kak Shooting Gallery": {
-            "area": "Kakariko Village",
-            "reverse": "Kak Shooting Gallery -> Kakariko Village",
-            "oneWay": false,
-            "oneWayArea": "",
-            "connector": "",
-            "isReverse": false,
-            "alias": "Shooting Gallery",
-            "reverseAlias": "from Shooting Gallery",
-            "tag": "Adult Shooting Gallery",
-            "tagRep": true,
-            "tagRules": [],
-            "enableTag": true,
-            "type": "interior",
-            "lKey": "",
-            "aLink": "",
-            "userALink": "",
-            "eLink": "",
-            "userELink": "",
-            "oneWayELink": "",
-            "userOneWayELink": "",
-            "shuffled": true
-        }
+  "entrances": {
+    "Kakariko Village -> Hyrule Field": {
+      "area": "Kakariko Village",
+      "reverse": "Hyrule Field -> Kakariko Village",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Hyrule Field",
+      "reverseAlias": "Kakariko Village",
+      "tag": "",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "overworld",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
     },
-    "locations": {
-        "Song of Storms": {
-            "area": "",
-            "lKey": "Kakariko Village -> Kak Windmill",
-            "alias": "Song of Storms",
-            "type": "song",
-            "settings": [],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Nocturne of Shadow": {
-            "area": "Kakariko Village",
-            "lKey": "",
-            "alias": "Nocturne of Shadow",
-            "type": "song",
-            "settings": [],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Anju as Child": {
-            "area": "Kakariko Village",
-            "lKey": "",
-            "alias": "Collecting Cuccos",
-            "type": "item",
-            "settings": [],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Anju as Adult": {
-            "area": "Kakariko Village",
-            "lKey": "",
-            "alias": "Gift from Anju",
-            "type": "item",
-            "settings": [],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Anju Cojiro": {
-            "area": "Kakariko Village",
-            "lKey": "",
-            "alias": "Anju Trade for Pocket Cucco",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Adult Trade", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Impas House Freestanding PoH": {
-            "area": "",
-            "lKey": "Kak Impas Ledge -> Kak Impas House Back",
-            "alias": "Freestanding Item",
-            "type": "item",
-            "settings": [],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Impas House Cow": {
-            "area": "",
-            "lKey": "Kak Impas Ledge -> Kak Impas House Back",
-            "alias": "Impa's Cow",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Cows", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Windmill Freestanding PoH": {
-            "area": "",
-            "lKey": "Kakariko Village -> Kak Windmill",
-            "alias": "Freestanding Item",
-            "type": "item",
-            "settings": [],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Man on Roof": {
-            "area": "Kakariko Village",
-            "lKey": "",
-            "alias": "Man on Roof",
-            "type": "item",
-            "settings": [],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Open Grotto Chest": {
-            "area": "",
-            "lKey": "Kak Backyard -> Kak Open Grotto",
-            "alias": "Grotto Chest",
-            "type": "item",
-            "settings": [],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Redead Grotto Chest": {
-            "area": "",
-            "lKey": "Kakariko Village -> Kak Redead Grotto",
-            "alias": "Redead Chest",
-            "type": "item",
-            "settings": [],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Shooting Gallery Reward": {
-            "area": "",
-            "lKey": "Kakariko Village -> Kak Shooting Gallery",
-            "alias": "Adult Shooting Reward",
-            "type": "item",
-            "settings": [],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak 10 Gold Skulltula Reward": {
-            "area": "",
-            "lKey": "Kakariko Village -> Kak House of Skulltula",
-            "alias": "10 Skulls",
-            "type": "item",
-            "settings": [],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak 20 Gold Skulltula Reward": {
-            "area": "",
-            "lKey": "Kakariko Village -> Kak House of Skulltula",
-            "alias": "20 Skulls",
-            "type": "item",
-            "settings": [],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak 30 Gold Skulltula Reward": {
-            "area": "",
-            "lKey": "Kakariko Village -> Kak House of Skulltula",
-            "alias": "30 Skulls",
-            "type": "item",
-            "settings": [],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak 40 Gold Skulltula Reward": {
-            "area": "",
-            "lKey": "Kakariko Village -> Kak House of Skulltula",
-            "alias": "40 Skulls",
-            "type": "item",
-            "settings": [],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak 50 Gold Skulltula Reward": {
-            "area": "",
-            "lKey": "Kakariko Village -> Kak House of Skulltula",
-            "alias": "50 Skulls",
-            "type": "item",
-            "settings": [],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak GS Tree": {
-            "area": "Kakariko Village",
-            "lKey": "",
-            "alias": "Tree Bonk",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": [
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ]
-        },
-        "Kak GS Guards House": {
-            "area": "Kakariko Village",
-            "lKey": "",
-            "alias": "By Guard",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": [
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ]
-        },
-        "Kak GS Watchtower": {
-            "area": "Kakariko Village",
-            "lKey": "",
-            "alias": "Watchtower",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": [
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ]
-        },
-        "Kak GS Skulltula House": {
-            "area": "Kakariko Village",
-            "lKey": "",
-            "alias": "Skulltula House",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": [
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ]
-        },
-        "Kak GS House Under Construction": {
-            "area": "Kakariko Village",
-            "lKey": "",
-            "alias": "Under Construction",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": [
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ]
-        },
-        "Kak GS Above Impas House": {
-            "area": "Kakariko Village",
-            "lKey": "",
-            "alias": "Above Impa's House",
-            "type": "skulltula",
-            "settings": [
-                {"setting": "Show Unshuffled Skulls", "value": "Yes", "required": false},
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": [
-                {"setting": "Tokensanity", "value": "Overworld", "required": false},
-                {"setting": "Tokensanity", "value": "All", "required": false}
-            ]
-        },
-        "Kak Bazaar Item 1": {
-            "area": "",
-            "lKey": "Kakariko Village -> Kak Bazaar",
-            "alias": "Shop Item 1",
-            "type": "item",
-            "settings": [
-                {"setting": "Shopsanity", "value": "1 Item", "required": false},
-                {"setting": "Shopsanity", "value": "2 Items", "required": false},
-                {"setting": "Shopsanity", "value": "3 Items", "required": false},
-                {"setting": "Shopsanity", "value": "4 Items", "required": false},
-                {"setting": "Shopsanity", "value": "Random", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": true,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Bazaar Item 2": {
-            "area": "",
-            "lKey": "Kakariko Village -> Kak Bazaar",
-            "alias": "Shop Item 2",
-            "type": "item",
-            "settings": [
-                {"setting": "Shopsanity", "value": "2 Items", "required": false},
-                {"setting": "Shopsanity", "value": "3 Items", "required": false},
-                {"setting": "Shopsanity", "value": "4 Items", "required": false},
-                {"setting": "Shopsanity", "value": "Random", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": true,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Bazaar Item 3": {
-            "area": "",
-            "lKey": "Kakariko Village -> Kak Bazaar",
-            "alias": "Shop Item 3",
-            "type": "item",
-            "settings": [
-                {"setting": "Shopsanity", "value": "3 Items", "required": false},
-                {"setting": "Shopsanity", "value": "4 Items", "required": false},
-                {"setting": "Shopsanity", "value": "Random", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": true,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Bazaar Item 4": {
-            "area": "",
-            "lKey": "Kakariko Village -> Kak Bazaar",
-            "alias": "Shop Item 4",
-            "type": "item",
-            "settings": [
-                {"setting": "Shopsanity", "value": "4 Items", "required": false},
-                {"setting": "Shopsanity", "value": "Random", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": true,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Bazaar Item 5": {
-            "area": "",
-            "lKey": "Kakariko Village -> Kak Bazaar",
-            "alias": "Shop Item 5",
-            "type": "item",
-            "settings": false,
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": true,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Bazaar Item 6": {
-            "area": "",
-            "lKey": "Kakariko Village -> Kak Bazaar",
-            "alias": "Shop Item 6",
-            "type": "item",
-            "settings": false,
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": true,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Bazaar Item 7": {
-            "area": "",
-            "lKey": "Kakariko Village -> Kak Bazaar",
-            "alias": "Shop Item 7",
-            "type": "item",
-            "settings": false,
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": true,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Bazaar Item 8": {
-            "area": "",
-            "lKey": "Kakariko Village -> Kak Bazaar",
-            "alias": "Shop Item 8",
-            "type": "item",
-            "settings": false,
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": true,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Potion Shop Item 1": {
-            "area": "",
-            "lKey": "Kakariko Village -> Potion Shop Front",
-            "alias": "Shop Item 1",
-            "type": "item",
-            "settings": [
-                {"setting": "Shopsanity", "value": "1 Item", "required": false},
-                {"setting": "Shopsanity", "value": "2 Items", "required": false},
-                {"setting": "Shopsanity", "value": "3 Items", "required": false},
-                {"setting": "Shopsanity", "value": "4 Items", "required": false},
-                {"setting": "Shopsanity", "value": "Random", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": true,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Potion Shop Item 2": {
-            "area": "",
-            "lKey": "Kakariko Village -> Potion Shop Front",
-            "alias": "Shop Item 2",
-            "type": "item",
-            "settings": [
-                {"setting": "Shopsanity", "value": "2 Items", "required": false},
-                {"setting": "Shopsanity", "value": "3 Items", "required": false},
-                {"setting": "Shopsanity", "value": "4 Items", "required": false},
-                {"setting": "Shopsanity", "value": "Random", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": true,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Potion Shop Item 3": {
-            "area": "",
-            "lKey": "Kakariko Village -> Potion Shop Front",
-            "alias": "Shop Item 3",
-            "type": "item",
-            "settings": [
-                {"setting": "Shopsanity", "value": "3 Items", "required": false},
-                {"setting": "Shopsanity", "value": "4 Items", "required": false},
-                {"setting": "Shopsanity", "value": "Random", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": true,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Potion Shop Item 4": {
-            "area": "",
-            "lKey": "Kakariko Village -> Potion Shop Front",
-            "alias": "Shop Item 4",
-            "type": "item",
-            "settings": [
-                {"setting": "Shopsanity", "value": "4 Items", "required": false},
-                {"setting": "Shopsanity", "value": "Random", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": true,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Potion Shop Item 5": {
-            "area": "",
-            "lKey": "Kakariko Village -> Potion Shop Front",
-            "alias": "Shop Item 5",
-            "type": "item",
-            "settings": false,
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": true,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Potion Shop Item 6": {
-            "area": "",
-            "lKey": "Kakariko Village -> Potion Shop Front",
-            "alias": "Shop Item 6",
-            "type": "item",
-            "settings": false,
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": true,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Potion Shop Item 7": {
-            "area": "",
-            "lKey": "Kakariko Village -> Potion Shop Front",
-            "alias": "Shop Item 7",
-            "type": "item",
-            "settings": false,
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": true,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Potion Shop Item 8": {
-            "area": "",
-            "lKey": "Kakariko Village -> Potion Shop Front",
-            "alias": "Shop Item 8",
-            "type": "item",
-            "settings": false,
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": true,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Grannys Potion Shop": {
-            "area": "",
-            "lKey": "Kak Backyard -> Kak Odd Medicine Building",
-            "alias": "Granny Shop Item",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Merchants", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Granny Trade Item": {
-            "area": "",
-            "lKey": "Kak Backyard -> Kak Odd Medicine Building",
-            "alias": "Granny Trade for Odd Mushroom",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Adult Trade", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Open Grotto Beehive 1": {
-            "area": "",
-            "lKey": "Kak Backyard -> Kak Open Grotto",
-            "alias": "Beehive 1",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Beehives", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Open Grotto Beehive 2": {
-            "area": "",
-            "lKey": "Kak Backyard -> Kak Open Grotto",
-            "alias": "Beehive 2",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Beehives", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Near Potion Shop Pot 1": {
-            "area": "Kakariko Village",
-            "lKey": "",
-            "alias": "Near Potion Shop Pot 1",
-            "type": "jar",
-            "settings": [
-                {"setting": "Shuffle Pots", "value": "All", "required": false},
-                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Near Potion Shop Pot 2": {
-            "area": "Kakariko Village",
-            "lKey": "",
-            "alias": "Near Potion Shop Pot 2",
-            "type": "jar",
-            "settings": [
-                {"setting": "Shuffle Pots", "value": "All", "required": false},
-                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Near Potion Shop Pot 3": {
-            "area": "Kakariko Village",
-            "lKey": "",
-            "alias": "Near Potion Shop Pot 3",
-            "type": "jar",
-            "settings": [
-                {"setting": "Shuffle Pots", "value": "All", "required": false},
-                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Near Impas House Pot 1": {
-            "area": "Kakariko Village",
-            "lKey": "",
-            "alias": "Near Impa's House Pot 1",
-            "type": "jar",
-            "settings": [
-                {"setting": "Shuffle Pots", "value": "All", "required": false},
-                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Near Impas House Pot 2": {
-            "area": "Kakariko Village",
-            "lKey": "",
-            "alias": "Near Impa's House Pot 2",
-            "type": "jar",
-            "settings": [
-                {"setting": "Shuffle Pots", "value": "All", "required": false},
-                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Near Impas House Pot 3": {
-            "area": "Kakariko Village",
-            "lKey": "",
-            "alias": "Near Impa's House Pot 3",
-            "type": "jar",
-            "settings": [
-                {"setting": "Shuffle Pots", "value": "All", "required": false},
-                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Near Guards House Pot 1": {
-            "area": "Kakariko Village",
-            "lKey": "",
-            "alias": "Near Bazaar Pot 1",
-            "type": "jar",
-            "settings": [
-                {"setting": "Shuffle Pots", "value": "All", "required": false},
-                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Near Guards House Pot 2": {
-            "area": "Kakariko Village",
-            "lKey": "",
-            "alias": "Near Bazaar Pot 2",
-            "type": "jar",
-            "settings": [
-                {"setting": "Shuffle Pots", "value": "All", "required": false},
-                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Near Guards House Pot 3": {
-            "area": "Kakariko Village",
-            "lKey": "",
-            "alias": "Near Bazaar Pot 3",
-            "type": "jar",
-            "settings": [
-                {"setting": "Shuffle Pots", "value": "All", "required": false},
-                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Near Odd Medicine Building Pot 1": {
-            "area": "Kakariko Village",
-            "lKey": "",
-            "alias": "Near Granny Pot 1",
-            "type": "jar",
-            "settings": [
-                {"setting": "Shuffle Pots", "value": "All", "required": false},
-                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Near Odd Medicine Building Pot 2": {
-            "area": "Kakariko Village",
-            "lKey": "",
-            "alias": "Near Granny Pot 2",
-            "type": "jar",
-            "settings": [
-                {"setting": "Shuffle Pots", "value": "All", "required": false},
-                {"setting": "Shuffle Pots", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Adult Empty Crate 1": {
-            "area": "Kakariko Village",
-            "lKey": "",
-            "alias": "Adult Behind Spider House Crate",
-            "type": "crate",
-            "settings": [
-                {"setting": "Shuffle Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Crates", "value": "Overworld", "required": false},
-                {"setting": "Shuffle Empty Crates", "value": "On", "required": true}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Adult Crate Arrows": {
-            "area": "Kakariko Village",
-            "lKey": "",
-            "alias": "Adult Day Near Beggar/Night Near Archery Crate",
-            "type": "crate",
-            "settings": [
-                {"setting": "Shuffle Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Crates", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Adult Empty Crate 2": {
-            "area": "Kakariko Village",
-            "lKey": "",
-            "alias": "Adult Day Near Archery/Night Near Beggar Crate",
-            "type": "crate",
-            "settings": [
-                {"setting": "Shuffle Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Crates", "value": "Overworld", "required": false},
-                {"setting": "Shuffle Empty Crates", "value": "On", "required": true}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Adult Empty Crate 3": {
-            "area": "Kakariko Village",
-            "lKey": "",
-            "alias": "Adult Near Beggar Crate 2",
-            "type": "crate",
-            "settings": [
-                {"setting": "Shuffle Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Crates", "value": "Overworld", "required": false},
-                {"setting": "Shuffle Empty Crates", "value": "On", "required": true}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Adult Empty Crate 4": {
-            "area": "Kakariko Village",
-            "lKey": "",
-            "alias": "Adult Near Impa's Crate 1",
-            "type": "crate",
-            "settings": [
-                {"setting": "Shuffle Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Crates", "value": "Overworld", "required": false},
-                {"setting": "Shuffle Empty Crates", "value": "On", "required": true}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Adult Empty Crate 5": {
-            "area": "Kakariko Village",
-            "lKey": "",
-            "alias": "Adult Near Impa's Crate 2",
-            "type": "crate",
-            "settings": [
-                {"setting": "Shuffle Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Crates", "value": "Overworld", "required": false},
-                {"setting": "Shuffle Empty Crates", "value": "On", "required": true}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Adult Empty Crate 6": {
-            "area": "Kakariko Village",
-            "lKey": "",
-            "alias": "Adult Near House Crate 1",
-            "type": "crate",
-            "settings": [
-                {"setting": "Shuffle Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Crates", "value": "Overworld", "required": false},
-                {"setting": "Shuffle Empty Crates", "value": "On", "required": true}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Adult Empty Crate 7": {
-            "area": "Kakariko Village",
-            "lKey": "",
-            "alias": "Adult Near House Crate 2",
-            "type": "crate",
-            "settings": [
-                {"setting": "Shuffle Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Crates", "value": "Overworld", "required": false},
-                {"setting": "Shuffle Empty Crates", "value": "On", "required": true}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Adult Empty Crate 8": {
-            "area": "Kakariko Village",
-            "lKey": "",
-            "alias": "Adult Near Potion Shop Crate",
-            "type": "crate",
-            "settings": [
-                {"setting": "Shuffle Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Crates", "value": "Overworld", "required": false},
-                {"setting": "Shuffle Empty Crates", "value": "On", "required": true}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Adult Crate Red Rupee": {
-            "area": "Kakariko Village",
-            "lKey": "",
-            "alias": "Adult Backyard Crate 1",
-            "type": "crate",
-            "settings": [
-                {"setting": "Shuffle Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Crates", "value": "Overworld", "required": false}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Adult Backyard Empty Crate 1": {
-            "area": "Kakariko Village",
-            "lKey": "",
-            "alias": "Adult Backyard Crate 2",
-            "type": "crate",
-            "settings": [
-                {"setting": "Shuffle Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Crates", "value": "Overworld", "required": false},
-                {"setting": "Shuffle Empty Crates", "value": "On", "required": true}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Adult Backyard Empty Crate 2": {
-            "area": "Kakariko Village",
-            "lKey": "",
-            "alias": "Adult Backyard Crate 3",
-            "type": "crate",
-            "settings": [
-                {"setting": "Shuffle Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Crates", "value": "Overworld", "required": false},
-                {"setting": "Shuffle Empty Crates", "value": "On", "required": true}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Adult Backyard Empty Crate 3": {
-            "area": "Kakariko Village",
-            "lKey": "",
-            "alias": "Adult Backyard Crate 4",
-            "type": "crate",
-            "settings": [
-                {"setting": "Shuffle Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Crates", "value": "Overworld", "required": false},
-                {"setting": "Shuffle Empty Crates", "value": "On", "required": true}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Child Empty Crate 1": {
-            "area": "Kakariko Village",
-            "lKey": "",
-            "alias": "Child Chicken Crate",
-            "type": "crate",
-            "settings": [
-                {"setting": "Shuffle Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Crates", "value": "Overworld", "required": false},
-                {"setting": "Shuffle Empty Crates", "value": "On", "required": true}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Child Empty Crate 2": {
-            "area": "Kakariko Village",
-            "lKey": "",
-            "alias": "Child Near Bazaar Crate",
-            "type": "crate",
-            "settings": [
-                {"setting": "Shuffle Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Crates", "value": "Overworld", "required": false},
-                {"setting": "Shuffle Empty Crates", "value": "On", "required": true}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Child Empty Crate 3": {
-            "area": "Kakariko Village",
-            "lKey": "",
-            "alias": "Child Near Windmill Crate",
-            "type": "crate",
-            "settings": [
-                {"setting": "Shuffle Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Crates", "value": "Overworld", "required": false},
-                {"setting": "Shuffle Empty Crates", "value": "On", "required": true}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Child Empty Crate 4": {
-            "area": "Kakariko Village",
-            "lKey": "",
-            "alias": "Child Near Fence Crate",
-            "type": "crate",
-            "settings": [
-                {"setting": "Shuffle Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Crates", "value": "Overworld", "required": false},
-                {"setting": "Shuffle Empty Crates", "value": "On", "required": true}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Child Empty Crate 5": {
-            "area": "Kakariko Village",
-            "lKey": "",
-            "alias": "Child Near Graveyard Crate",
-            "type": "crate",
-            "settings": [
-                {"setting": "Shuffle Crates", "value": "All", "required": false},
-                {"setting": "Shuffle Crates", "value": "Overworld", "required": false},
-                {"setting": "Shuffle Empty Crates", "value": "On", "required": true}
-            ],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Redead Grotto Redead Left": {
-            "area": "",
-            "lKey": "Kakariko Village -> Kak Redead Grotto",
-            "alias": "Redead 1",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Redead Grotto Redead Right": {
-            "area": "",
-            "lKey": "Kakariko Village -> Kak Redead Grotto",
-            "alias": "Redead 2",
-            "type": "enemyDrop",
-            "settings": [{"setting": "Shuffle Enemy Drops", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Open Grotto Gossip Stone Drop": {
-            "area": "",
-            "lKey": "Kak Backyard -> Kak Open Grotto",
-            "alias": "Gossip Stone Drop",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Gossip Stones", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Child Construction Wonderitem": {
-            "area": "Kakariko Village",
-            "lKey": "",
-            "alias": "Child Construction Wonderitem",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Impas House Wonderitem": {
-            "area": "",
-            "lKey": "Kakariko Village -> Kak Impas House",
-            "alias": "Upstairs Wonderitem",
-            "type": "item",
-            "settings": [{"setting": "Shuffle Wonderitems", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Open Grotto Grass 1": {
-            "area": "",
-            "lKey": "Kak Backyard -> Kak Open Grotto",
-            "alias": "Grass 1",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Open Grotto Grass 2": {
-            "area": "",
-            "lKey": "Kak Backyard -> Kak Open Grotto",
-            "alias": "Grass 2",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Open Grotto Grass 3": {
-            "area": "",
-            "lKey": "Kak Backyard -> Kak Open Grotto",
-            "alias": "Grass 3",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Open Grotto Grass 4": {
-            "area": "",
-            "lKey": "Kak Backyard -> Kak Open Grotto",
-            "alias": "Grass 4",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Grass 1": {
-            "area": "Kakariko Village",
-            "lKey": "",
-            "alias": "Near Graveyard Grass 1",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Grass 2": {
-            "area": "Kakariko Village",
-            "lKey": "",
-            "alias": "Near Graveyard Grass 2",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Grass 3": {
-            "area": "Kakariko Village",
-            "lKey": "",
-            "alias": "Near Graveyard Grass 3",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Grass 4": {
-            "area": "Kakariko Village",
-            "lKey": "",
-            "alias": "Near Tree Grass 1",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Grass 5": {
-            "area": "Kakariko Village",
-            "lKey": "",
-            "alias": "Near Tree Grass 2",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Grass 6": {
-            "area": "Kakariko Village",
-            "lKey": "",
-            "alias": "Near Tree Grass 3",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Grass 7": {
-            "area": "Kakariko Village",
-            "lKey": "",
-            "alias": "Near Tree Grass 4",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        },
-        "Kak Grass 8": {
-            "area": "Kakariko Village",
-            "lKey": "",
-            "alias": "Near Tree Grass 5",
-            "type": "grass",
-            "settings": [{"setting": "Shuffle Grass", "value": "On", "required": true}],
-            "visible": true,
-            "check": "",
-            "foundItem": "",
-            "merchant": false,
-            "price": 0,
-            "walletTier": 0,
-            "shuffled": true,
-            "shuffleRules": []
-        }
+    "Kakariko Village -> Graveyard": {
+      "area": "Kakariko Village",
+      "reverse": "Graveyard -> Kakariko Village",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Graveyard",
+      "reverseAlias": "Kakariko Village",
+      "tag": "",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "overworld",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
+    },
+    "Kak Behind Gate -> Death Mountain": {
+      "area": "Kakariko Village",
+      "reverse": "Death Mountain -> Kak Behind Gate",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Death Mountain Trail",
+      "reverseAlias": "Kakariko Village",
+      "tag": "",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "overworld",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
+    },
+    "Kakariko Village -> Bottom of the Well": {
+      "area": "Kakariko Village",
+      "reverse": "Bottom of the Well -> Kakariko Village",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Bottom of the Well",
+      "reverseAlias": "from Bottom of the Well",
+      "tag": "",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "dungeon",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
+    },
+    "Kakariko Village -> Kak Impas House": {
+      "area": "Kakariko Village",
+      "reverse": "Kak Impas House -> Kakariko Village",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Impa's House Front",
+      "reverseAlias": "from Impa's House Front",
+      "tag": "",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "interior",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
+    },
+    "Kak Impas Ledge -> Kak Impas House Back": {
+      "area": "Kakariko Village",
+      "reverse": "Kak Impas House Back -> Kak Impas Ledge",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Impa's House Back",
+      "reverseAlias": "from Impa's House Back",
+      "tag": "",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "interior",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
+    },
+    "Kakariko Village -> Kak House of Skulltula": {
+      "area": "Kakariko Village",
+      "reverse": "Kak House of Skulltula -> Kakariko Village",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Skulltula House",
+      "reverseAlias": "from Skulltula House",
+      "tag": "",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "interior",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
+    },
+    "Kakariko Village -> Kak Windmill": {
+      "area": "Kakariko Village",
+      "reverse": "Kak Windmill -> Kakariko Village",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Windmill",
+      "reverseAlias": "from Windmill",
+      "tag": "",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "specialInterior",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
+    },
+    "Kakariko Village -> Kak Carpenter Boss House": {
+      "area": "Kakariko Village",
+      "reverse": "Kak Carpenter Boss House -> Kakariko Village",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Bottom House",
+      "reverseAlias": "from Bottom House",
+      "tag": "Sleeping Talon House",
+      "tagRep": true,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "interior",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
+    },
+    "Kakariko Village -> Potion Shop Front": {
+      "area": "Kakariko Village",
+      "reverse": "Potion Shop Front -> Kakariko Village",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "Potion Shop Back -> Kakariko Village",
+      "isReverse": false,
+      "alias": "Kak Potion Shop Front",
+      "reverseAlias": "from Potion Shop Front",
+      "tag": "",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "specialInterior",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
+    },
+    "Kakariko Village -> Potion Shop Back": {
+      "area": "Kakariko Village",
+      "reverse": "Potion Shop Back -> Kakariko Village",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "Potion Shop Front -> Kakariko Village",
+      "isReverse": false,
+      "alias": "Kak Potion Shop Back",
+      "reverseAlias": "from Potion Shop Back",
+      "tag": "",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "specialInterior",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
+    },
+    "Kakariko Village -> Kak Bazaar": {
+      "area": "Kakariko Village",
+      "reverse": "Kak Bazaar -> Kakariko Village",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Bazaar",
+      "reverseAlias": "from Bazaar",
+      "tag": "Shop",
+      "tagRep": true,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "interior",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
+    },
+    "Kak Backyard -> Kak Odd Medicine Building": {
+      "area": "Kakariko Village",
+      "reverse": "Kak Odd Medicine Building -> Kak Backyard",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Granny's Potion Shop",
+      "reverseAlias": "from Granny's Potion Shop",
+      "tag": "",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "interior",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
+    },
+    "Kakariko Village -> Kak Shooting Gallery": {
+      "area": "Kakariko Village",
+      "reverse": "Kak Shooting Gallery -> Kakariko Village",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Shooting Gallery",
+      "reverseAlias": "from Shooting Gallery",
+      "tag": "Adult Shooting Gallery",
+      "tagRep": true,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "interior",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
+    },
+    "Kak Backyard -> Kak Open Grotto": {
+      "area": "Kakariko Village",
+      "reverse": "Kak Open Grotto -> Kak Backyard",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Open Grotto",
+      "reverseAlias": "from Open Grotto",
+      "tag": "Generic Grotto",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "grotto",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
+    },
+    "Kakariko Village -> Kak Redead Grotto": {
+      "area": "Kakariko Village",
+      "reverse": "Kak Redead Grotto -> Kakariko Village",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Redead Grotto",
+      "reverseAlias": "from Redead Grotto",
+      "tag": "",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "grotto",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
     }
+  },
+  "locations": {
+    "Nocturne of Shadow": {
+      "area": "Kakariko Village",
+      "lKey": "",
+      "alias": "Nocturne of Shadow",
+      "type": "song",
+      "settings": [],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Anju as Child": {
+      "area": "Kakariko Village",
+      "lKey": "",
+      "alias": "Collecting Cuccos",
+      "type": "item",
+      "settings": [],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Anju as Adult": {
+      "area": "Kakariko Village",
+      "lKey": "",
+      "alias": "Gift from Anju",
+      "type": "item",
+      "settings": [],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Anju Cojiro": {
+      "area": "Kakariko Village",
+      "lKey": "",
+      "alias": "Anju Trade for Pocket Cucco",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Adult Trade",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Grass 1": {
+      "area": "Kakariko Village",
+      "lKey": "",
+      "alias": "Near Tree Grass 1",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Grass 2": {
+      "area": "Kakariko Village",
+      "lKey": "",
+      "alias": "Near Tree Grass 2",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Grass 3": {
+      "area": "Kakariko Village",
+      "lKey": "",
+      "alias": "Near Tree Grass 3",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Grass 4": {
+      "area": "Kakariko Village",
+      "lKey": "",
+      "alias": "Near Tree Grass 4",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Grass 5": {
+      "area": "Kakariko Village",
+      "lKey": "",
+      "alias": "Near Tree Grass 5",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Grass 6": {
+      "area": "Kakariko Village",
+      "lKey": "",
+      "alias": "Near Graveyard Grass 1",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Grass 7": {
+      "area": "Kakariko Village",
+      "lKey": "",
+      "alias": "Near Graveyard Grass 2",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Grass 8": {
+      "area": "Kakariko Village",
+      "lKey": "",
+      "alias": "Near Graveyard Grass 3",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Near Impas House Pot 1": {
+      "area": "Kakariko Village",
+      "lKey": "",
+      "alias": "Near Impa's House Pot 1",
+      "type": "jar",
+      "settings": [
+        {
+          "setting": "Shuffle Pots",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Pots",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Near Impas House Pot 2": {
+      "area": "Kakariko Village",
+      "lKey": "",
+      "alias": "Near Impa's House Pot 2",
+      "type": "jar",
+      "settings": [
+        {
+          "setting": "Shuffle Pots",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Pots",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Near Impas House Pot 3": {
+      "area": "Kakariko Village",
+      "lKey": "",
+      "alias": "Near Impa's House Pot 3",
+      "type": "jar",
+      "settings": [
+        {
+          "setting": "Shuffle Pots",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Pots",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Near Potion Shop Pot 1": {
+      "area": "Kakariko Village",
+      "lKey": "",
+      "alias": "Near Potion Shop Pot 1",
+      "type": "jar",
+      "settings": [
+        {
+          "setting": "Shuffle Pots",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Pots",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Near Potion Shop Pot 2": {
+      "area": "Kakariko Village",
+      "lKey": "",
+      "alias": "Near Potion Shop Pot 2",
+      "type": "jar",
+      "settings": [
+        {
+          "setting": "Shuffle Pots",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Pots",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Near Potion Shop Pot 3": {
+      "area": "Kakariko Village",
+      "lKey": "",
+      "alias": "Near Potion Shop Pot 3",
+      "type": "jar",
+      "settings": [
+        {
+          "setting": "Shuffle Pots",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Pots",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Near Guards House Pot 1": {
+      "area": "Kakariko Village",
+      "lKey": "",
+      "alias": "Near Bazaar Pot 1",
+      "type": "jar",
+      "settings": [
+        {
+          "setting": "Shuffle Pots",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Pots",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Near Guards House Pot 2": {
+      "area": "Kakariko Village",
+      "lKey": "",
+      "alias": "Near Bazaar Pot 2",
+      "type": "jar",
+      "settings": [
+        {
+          "setting": "Shuffle Pots",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Pots",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Near Guards House Pot 3": {
+      "area": "Kakariko Village",
+      "lKey": "",
+      "alias": "Near Bazaar Pot 3",
+      "type": "jar",
+      "settings": [
+        {
+          "setting": "Shuffle Pots",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Pots",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Near Odd Medicine Building Pot 1": {
+      "area": "Kakariko Village",
+      "lKey": "",
+      "alias": "Near Granny Pot 1",
+      "type": "jar",
+      "settings": [
+        {
+          "setting": "Shuffle Pots",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Pots",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Near Odd Medicine Building Pot 2": {
+      "area": "Kakariko Village",
+      "lKey": "",
+      "alias": "Near Granny Pot 2",
+      "type": "jar",
+      "settings": [
+        {
+          "setting": "Shuffle Pots",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Pots",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Man on Roof": {
+      "area": "Kakariko Village",
+      "lKey": "",
+      "alias": "Man on Roof",
+      "type": "item",
+      "settings": [],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Adult Empty Crate 1": {
+      "area": "Kakariko Village",
+      "lKey": "",
+      "alias": "Adult Behind Spider House Crate",
+      "type": "crate",
+      "settings": [
+        {
+          "setting": "Shuffle Crates",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Crates",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Empty Crates",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Adult Crate Arrows": {
+      "area": "Kakariko Village",
+      "lKey": "",
+      "alias": "Adult Day Near Beggar/Night Near Archery Crate",
+      "type": "crate",
+      "settings": [
+        {
+          "setting": "Shuffle Crates",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Crates",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Adult Empty Crate 2": {
+      "area": "Kakariko Village",
+      "lKey": "",
+      "alias": "Adult Day Near Archery/Night Near Beggar Crate",
+      "type": "crate",
+      "settings": [
+        {
+          "setting": "Shuffle Crates",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Crates",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Empty Crates",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Adult Empty Crate 3": {
+      "area": "Kakariko Village",
+      "lKey": "",
+      "alias": "Adult Near Beggar Crate 2",
+      "type": "crate",
+      "settings": [
+        {
+          "setting": "Shuffle Crates",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Crates",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Empty Crates",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Adult Empty Crate 4": {
+      "area": "Kakariko Village",
+      "lKey": "",
+      "alias": "Adult Near Impa's Crate 1",
+      "type": "crate",
+      "settings": [
+        {
+          "setting": "Shuffle Crates",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Crates",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Empty Crates",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Adult Empty Crate 5": {
+      "area": "Kakariko Village",
+      "lKey": "",
+      "alias": "Adult Near Impa's Crate 2",
+      "type": "crate",
+      "settings": [
+        {
+          "setting": "Shuffle Crates",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Crates",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Empty Crates",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Adult Empty Crate 6": {
+      "area": "Kakariko Village",
+      "lKey": "",
+      "alias": "Adult Near House Crate 1",
+      "type": "crate",
+      "settings": [
+        {
+          "setting": "Shuffle Crates",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Crates",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Empty Crates",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Adult Empty Crate 7": {
+      "area": "Kakariko Village",
+      "lKey": "",
+      "alias": "Adult Near House Crate 2",
+      "type": "crate",
+      "settings": [
+        {
+          "setting": "Shuffle Crates",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Crates",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Empty Crates",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Adult Empty Crate 8": {
+      "area": "Kakariko Village",
+      "lKey": "",
+      "alias": "Adult Near Potion Shop Crate",
+      "type": "crate",
+      "settings": [
+        {
+          "setting": "Shuffle Crates",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Crates",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Empty Crates",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Adult Crate Red Rupee": {
+      "area": "Kakariko Village",
+      "lKey": "",
+      "alias": "Adult Backyard Crate 1",
+      "type": "crate",
+      "settings": [
+        {
+          "setting": "Shuffle Crates",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Crates",
+          "value": "Overworld",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Adult Backyard Empty Crate 1": {
+      "area": "Kakariko Village",
+      "lKey": "",
+      "alias": "Adult Backyard Crate 2",
+      "type": "crate",
+      "settings": [
+        {
+          "setting": "Shuffle Crates",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Crates",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Empty Crates",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Adult Backyard Empty Crate 2": {
+      "area": "Kakariko Village",
+      "lKey": "",
+      "alias": "Adult Backyard Crate 3",
+      "type": "crate",
+      "settings": [
+        {
+          "setting": "Shuffle Crates",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Crates",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Empty Crates",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Adult Backyard Empty Crate 3": {
+      "area": "Kakariko Village",
+      "lKey": "",
+      "alias": "Adult Backyard Crate 4",
+      "type": "crate",
+      "settings": [
+        {
+          "setting": "Shuffle Crates",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Crates",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Empty Crates",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Child Empty Crate 1": {
+      "area": "Kakariko Village",
+      "lKey": "",
+      "alias": "Child Chicken Crate",
+      "type": "crate",
+      "settings": [
+        {
+          "setting": "Shuffle Crates",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Crates",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Empty Crates",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Child Empty Crate 2": {
+      "area": "Kakariko Village",
+      "lKey": "",
+      "alias": "Child Near Bazaar Crate",
+      "type": "crate",
+      "settings": [
+        {
+          "setting": "Shuffle Crates",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Crates",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Empty Crates",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Child Empty Crate 3": {
+      "area": "Kakariko Village",
+      "lKey": "",
+      "alias": "Child Near Windmill Crate",
+      "type": "crate",
+      "settings": [
+        {
+          "setting": "Shuffle Crates",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Crates",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Empty Crates",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Child Empty Crate 4": {
+      "area": "Kakariko Village",
+      "lKey": "",
+      "alias": "Child Near Fence Crate",
+      "type": "crate",
+      "settings": [
+        {
+          "setting": "Shuffle Crates",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Crates",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Empty Crates",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Child Empty Crate 5": {
+      "area": "Kakariko Village",
+      "lKey": "",
+      "alias": "Child Near Graveyard Crate",
+      "type": "crate",
+      "settings": [
+        {
+          "setting": "Shuffle Crates",
+          "value": "All",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Crates",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Empty Crates",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Child Construction Wonderitem": {
+      "area": "Kakariko Village",
+      "lKey": "",
+      "alias": "Child Construction Wonderitem",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Wonderitems",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak GS Tree": {
+      "area": "Kakariko Village",
+      "lKey": "",
+      "alias": "Child Tree Bonk GS",
+      "type": "skulltula",
+      "settings": [
+        {
+          "setting": "Show Unshuffled Skulls",
+          "value": "Yes",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "All",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": [
+        {
+          "setting": "Tokensanity",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "All",
+          "required": false
+        }
+      ]
+    },
+    "Kak GS Guards House": {
+      "area": "Kakariko Village",
+      "lKey": "",
+      "alias": "Child Near Guard GS",
+      "type": "skulltula",
+      "settings": [
+        {
+          "setting": "Show Unshuffled Skulls",
+          "value": "Yes",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "All",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": [
+        {
+          "setting": "Tokensanity",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "All",
+          "required": false
+        }
+      ]
+    },
+    "Kak GS Watchtower": {
+      "area": "Kakariko Village",
+      "lKey": "",
+      "alias": "Child Watchtower GS",
+      "type": "skulltula",
+      "settings": [
+        {
+          "setting": "Show Unshuffled Skulls",
+          "value": "Yes",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "All",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": [
+        {
+          "setting": "Tokensanity",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "All",
+          "required": false
+        }
+      ]
+    },
+    "Kak GS Skulltula House": {
+      "area": "Kakariko Village",
+      "lKey": "",
+      "alias": "Child Skulltula House GS",
+      "type": "skulltula",
+      "settings": [
+        {
+          "setting": "Show Unshuffled Skulls",
+          "value": "Yes",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "All",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": [
+        {
+          "setting": "Tokensanity",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "All",
+          "required": false
+        }
+      ]
+    },
+    "Kak GS House Under Construction": {
+      "area": "Kakariko Village",
+      "lKey": "",
+      "alias": "Child Construction GS",
+      "type": "skulltula",
+      "settings": [
+        {
+          "setting": "Show Unshuffled Skulls",
+          "value": "Yes",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "All",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": [
+        {
+          "setting": "Tokensanity",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "All",
+          "required": false
+        }
+      ]
+    },
+    "Kak GS Above Impas House": {
+      "area": "Kakariko Village",
+      "lKey": "",
+      "alias": "Adult Impa's Roof GS",
+      "type": "skulltula",
+      "settings": [
+        {
+          "setting": "Show Unshuffled Skulls",
+          "value": "Yes",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "All",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": [
+        {
+          "setting": "Tokensanity",
+          "value": "Overworld",
+          "required": false
+        },
+        {
+          "setting": "Tokensanity",
+          "value": "All",
+          "required": false
+        }
+      ]
+    },
+    "Kak Impas House Wonderitem": {
+      "area": "",
+      "lKey": "Kakariko Village -> Kak Impas House",
+      "alias": "Upstairs Wonderitem",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Wonderitems",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Impas House Freestanding PoH": {
+      "area": "",
+      "lKey": "Kak Impas Ledge -> Kak Impas House Back",
+      "alias": "Freestanding Item",
+      "type": "item",
+      "settings": [],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Impas House Cow": {
+      "area": "",
+      "lKey": "Kak Impas Ledge -> Kak Impas House Back",
+      "alias": "Impa's Cow",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Cows",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak 10 Gold Skulltula Reward": {
+      "area": "",
+      "lKey": "Kakariko Village -> Kak House of Skulltula",
+      "alias": "10 Skulls",
+      "type": "item",
+      "settings": [],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak 20 Gold Skulltula Reward": {
+      "area": "",
+      "lKey": "Kakariko Village -> Kak House of Skulltula",
+      "alias": "20 Skulls",
+      "type": "item",
+      "settings": [],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak 30 Gold Skulltula Reward": {
+      "area": "",
+      "lKey": "Kakariko Village -> Kak House of Skulltula",
+      "alias": "30 Skulls",
+      "type": "item",
+      "settings": [],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak 40 Gold Skulltula Reward": {
+      "area": "",
+      "lKey": "Kakariko Village -> Kak House of Skulltula",
+      "alias": "40 Skulls",
+      "type": "item",
+      "settings": [],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak 50 Gold Skulltula Reward": {
+      "area": "",
+      "lKey": "Kakariko Village -> Kak House of Skulltula",
+      "alias": "50 Skulls",
+      "type": "item",
+      "settings": [],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Windmill Freestanding PoH": {
+      "area": "",
+      "lKey": "Kakariko Village -> Kak Windmill",
+      "alias": "Freestanding Item",
+      "type": "item",
+      "settings": [],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Song of Storms": {
+      "area": "",
+      "lKey": "Kakariko Village -> Kak Windmill",
+      "alias": "Song of Storms",
+      "type": "song",
+      "settings": [],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Potion Shop Item 1": {
+      "area": "",
+      "lKey": "Kakariko Village -> Potion Shop Front",
+      "alias": "Shop Item 1",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shopsanity",
+          "value": "1 Item",
+          "required": false
+        },
+        {
+          "setting": "Shopsanity",
+          "value": "2 Items",
+          "required": false
+        },
+        {
+          "setting": "Shopsanity",
+          "value": "3 Items",
+          "required": false
+        },
+        {
+          "setting": "Shopsanity",
+          "value": "4 Items",
+          "required": false
+        },
+        {
+          "setting": "Shopsanity",
+          "value": "Random",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": true,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Potion Shop Item 2": {
+      "area": "",
+      "lKey": "Kakariko Village -> Potion Shop Front",
+      "alias": "Shop Item 2",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shopsanity",
+          "value": "2 Items",
+          "required": false
+        },
+        {
+          "setting": "Shopsanity",
+          "value": "3 Items",
+          "required": false
+        },
+        {
+          "setting": "Shopsanity",
+          "value": "4 Items",
+          "required": false
+        },
+        {
+          "setting": "Shopsanity",
+          "value": "Random",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": true,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Potion Shop Item 3": {
+      "area": "",
+      "lKey": "Kakariko Village -> Potion Shop Front",
+      "alias": "Shop Item 3",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shopsanity",
+          "value": "3 Items",
+          "required": false
+        },
+        {
+          "setting": "Shopsanity",
+          "value": "4 Items",
+          "required": false
+        },
+        {
+          "setting": "Shopsanity",
+          "value": "Random",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": true,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Potion Shop Item 4": {
+      "area": "",
+      "lKey": "Kakariko Village -> Potion Shop Front",
+      "alias": "Shop Item 4",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shopsanity",
+          "value": "4 Items",
+          "required": false
+        },
+        {
+          "setting": "Shopsanity",
+          "value": "Random",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": true,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Potion Shop Item 5": {
+      "area": "",
+      "lKey": "Kakariko Village -> Potion Shop Front",
+      "alias": "Shop Item 5",
+      "type": "item",
+      "settings": false,
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": true,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Potion Shop Item 6": {
+      "area": "",
+      "lKey": "Kakariko Village -> Potion Shop Front",
+      "alias": "Shop Item 6",
+      "type": "item",
+      "settings": false,
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": true,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Potion Shop Item 7": {
+      "area": "",
+      "lKey": "Kakariko Village -> Potion Shop Front",
+      "alias": "Shop Item 7",
+      "type": "item",
+      "settings": false,
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": true,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Potion Shop Item 8": {
+      "area": "",
+      "lKey": "Kakariko Village -> Potion Shop Front",
+      "alias": "Shop Item 8",
+      "type": "item",
+      "settings": false,
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": true,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Bazaar Item 1": {
+      "area": "",
+      "lKey": "Kakariko Village -> Kak Bazaar",
+      "alias": "Shop Item 1",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shopsanity",
+          "value": "1 Item",
+          "required": false
+        },
+        {
+          "setting": "Shopsanity",
+          "value": "2 Items",
+          "required": false
+        },
+        {
+          "setting": "Shopsanity",
+          "value": "3 Items",
+          "required": false
+        },
+        {
+          "setting": "Shopsanity",
+          "value": "4 Items",
+          "required": false
+        },
+        {
+          "setting": "Shopsanity",
+          "value": "Random",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": true,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Bazaar Item 2": {
+      "area": "",
+      "lKey": "Kakariko Village -> Kak Bazaar",
+      "alias": "Shop Item 2",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shopsanity",
+          "value": "2 Items",
+          "required": false
+        },
+        {
+          "setting": "Shopsanity",
+          "value": "3 Items",
+          "required": false
+        },
+        {
+          "setting": "Shopsanity",
+          "value": "4 Items",
+          "required": false
+        },
+        {
+          "setting": "Shopsanity",
+          "value": "Random",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": true,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Bazaar Item 3": {
+      "area": "",
+      "lKey": "Kakariko Village -> Kak Bazaar",
+      "alias": "Shop Item 3",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shopsanity",
+          "value": "3 Items",
+          "required": false
+        },
+        {
+          "setting": "Shopsanity",
+          "value": "4 Items",
+          "required": false
+        },
+        {
+          "setting": "Shopsanity",
+          "value": "Random",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": true,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Bazaar Item 4": {
+      "area": "",
+      "lKey": "Kakariko Village -> Kak Bazaar",
+      "alias": "Shop Item 4",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shopsanity",
+          "value": "4 Items",
+          "required": false
+        },
+        {
+          "setting": "Shopsanity",
+          "value": "Random",
+          "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": true,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Bazaar Item 5": {
+      "area": "",
+      "lKey": "Kakariko Village -> Kak Bazaar",
+      "alias": "Shop Item 5",
+      "type": "item",
+      "settings": false,
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": true,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Bazaar Item 6": {
+      "area": "",
+      "lKey": "Kakariko Village -> Kak Bazaar",
+      "alias": "Shop Item 6",
+      "type": "item",
+      "settings": false,
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": true,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Bazaar Item 7": {
+      "area": "",
+      "lKey": "Kakariko Village -> Kak Bazaar",
+      "alias": "Shop Item 7",
+      "type": "item",
+      "settings": false,
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": true,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Bazaar Item 8": {
+      "area": "",
+      "lKey": "Kakariko Village -> Kak Bazaar",
+      "alias": "Shop Item 8",
+      "type": "item",
+      "settings": false,
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": true,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Grannys Potion Shop": {
+      "area": "",
+      "lKey": "Kak Backyard -> Kak Odd Medicine Building",
+      "alias": "Granny Shop Item",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Merchants",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Granny Trade Item": {
+      "area": "",
+      "lKey": "Kak Backyard -> Kak Odd Medicine Building",
+      "alias": "Granny Trade for Odd Mushroom",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Adult Trade",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Shooting Gallery Reward": {
+      "area": "",
+      "lKey": "Kakariko Village -> Kak Shooting Gallery",
+      "alias": "Adult Shooting Reward",
+      "type": "item",
+      "settings": [],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Open Grotto Chest": {
+      "area": "",
+      "lKey": "Kak Backyard -> Kak Open Grotto",
+      "alias": "Grotto Chest",
+      "type": "item",
+      "settings": [],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Open Grotto Grass 1": {
+      "area": "",
+      "lKey": "Kak Backyard -> Kak Open Grotto",
+      "alias": "Grass 1",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Open Grotto Grass 2": {
+      "area": "",
+      "lKey": "Kak Backyard -> Kak Open Grotto",
+      "alias": "Grass 2",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Open Grotto Grass 3": {
+      "area": "",
+      "lKey": "Kak Backyard -> Kak Open Grotto",
+      "alias": "Grass 3",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Open Grotto Grass 4": {
+      "area": "",
+      "lKey": "Kak Backyard -> Kak Open Grotto",
+      "alias": "Grass 4",
+      "type": "grass",
+      "settings": [
+        {
+          "setting": "Shuffle Grass",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Open Grotto Beehive 1": {
+      "area": "",
+      "lKey": "Kak Backyard -> Kak Open Grotto",
+      "alias": "Beehive 1",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Beehives",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Open Grotto Beehive 2": {
+      "area": "",
+      "lKey": "Kak Backyard -> Kak Open Grotto",
+      "alias": "Beehive 2",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Beehives",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Open Grotto Gossip Stone Drop": {
+      "area": "",
+      "lKey": "Kak Backyard -> Kak Open Grotto",
+      "alias": "Gossip Stone Drop",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Gossip Stones",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Redead Grotto Redead Left": {
+      "area": "",
+      "lKey": "Kakariko Village -> Kak Redead Grotto",
+      "alias": "Redead 1",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Redead Grotto Redead Right": {
+      "area": "",
+      "lKey": "Kakariko Village -> Kak Redead Grotto",
+      "alias": "Redead 2",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Redead Grotto Chest": {
+      "area": "",
+      "lKey": "Kakariko Village -> Kak Redead Grotto",
+      "alias": "Redead Chest",
+      "type": "item",
+      "settings": [],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    }
+  }
 }
