@@ -2172,8 +2172,13 @@
       "settings": [
         {
           "setting": "Shuffle Child Trade",
-          "value": "On",
-          "required": true
+          "value": "Basic",
+          "required": false
+        },
+        {
+          "setting": "Shuffle Child Trade",
+          "value": "Full",
+          "required": false
         }
       ],
       "visible": true,
@@ -2356,7 +2361,7 @@
     "HC Castle Moat Wonderitem 1": {
       "area": "Castle Grounds",
       "lKey": "",
-      "alias": "Castle Moat Wonderitem 2",
+      "alias": "Castle Moat Wonderitem 1",
       "type": "item",
       "settings": [
         {
@@ -2592,7 +2597,7 @@
       "settings": [
         {
           "setting": "Shuffle Child Trade",
-          "value": "On",
+          "value": "Full",
           "required": true
         }
       ],
@@ -2610,13 +2615,7 @@
       "lKey": "",
       "alias": "Zelda's Lullaby",
       "type": "song",
-      "settings": [
-        {
-          "setting": "Skip Child Zelda",
-          "value": "Off",
-          "required": true
-        }
-      ],
+      "settings": [],
       "visible": true,
       "check": "",
       "foundItem": "",
@@ -3749,12 +3748,12 @@
     "Market Mask Shop Keaton Mask": {
       "area": "",
       "lKey": "Market -> Market Mask Shop",
-      "alias": "Free Item",
+      "alias": "Keaton Mask",
       "type": "item",
       "settings": [
         {
           "setting": "Shuffle Child Trade",
-          "value": "On",
+          "value": "Full",
           "required": true
         }
       ],
@@ -3770,12 +3769,12 @@
     "Market Mask Shop Skull Mask": {
       "area": "",
       "lKey": "Market -> Market Mask Shop",
-      "alias": "Sell Keaton Mask",
+      "alias": "Skull Mask",
       "type": "item",
       "settings": [
         {
           "setting": "Shuffle Child Trade",
-          "value": "On",
+          "value": "Full",
           "required": true
         }
       ],
@@ -3791,12 +3790,12 @@
     "Market Mask Shop Spooky Mask": {
       "area": "",
       "lKey": "Market -> Market Mask Shop",
-      "alias": "Sell Skull Mask",
+      "alias": "Spooky Mask",
       "type": "item",
       "settings": [
         {
           "setting": "Shuffle Child Trade",
-          "value": "On",
+          "value": "Full",
           "required": true
         }
       ],
@@ -3812,12 +3811,12 @@
     "Market Mask Shop Bunny Hood": {
       "area": "",
       "lKey": "Market -> Market Mask Shop",
-      "alias": "Sell Spooky Mask",
+      "alias": "Bunny Hood",
       "type": "item",
       "settings": [
         {
           "setting": "Shuffle Child Trade",
-          "value": "On",
+          "value": "Full",
           "required": true
         }
       ],
@@ -3833,12 +3832,12 @@
     "Market Mask Shop Goron Mask": {
       "area": "",
       "lKey": "Market -> Market Mask Shop",
-      "alias": "Sell All Masks 1",
+      "alias": "Goron Mask",
       "type": "item",
       "settings": [
         {
           "setting": "Shuffle Child Trade",
-          "value": "On",
+          "value": "Full",
           "required": true
         }
       ],
@@ -3854,12 +3853,12 @@
     "Market Mask Shop Zora Mask": {
       "area": "",
       "lKey": "Market -> Market Mask Shop",
-      "alias": "Sell All Masks 2",
+      "alias": "Zora Mask",
       "type": "item",
       "settings": [
         {
           "setting": "Shuffle Child Trade",
-          "value": "On",
+          "value": "Full",
           "required": true
         }
       ],
@@ -3875,12 +3874,12 @@
     "Market Mask Shop Gerudo Mask": {
       "area": "",
       "lKey": "Market -> Market Mask Shop",
-      "alias": "Sell All Masks 3",
+      "alias": "Gerudo Mask",
       "type": "item",
       "settings": [
         {
           "setting": "Shuffle Child Trade",
-          "value": "On",
+          "value": "Full",
           "required": true
         }
       ],
@@ -3896,12 +3895,12 @@
     "Market Mask Shop Mask of Truth": {
       "area": "",
       "lKey": "Market -> Market Mask Shop",
-      "alias": "Sell All Masks 4",
+      "alias": "Mask of Truth",
       "type": "item",
       "settings": [
         {
           "setting": "Shuffle Child Trade",
-          "value": "On",
+          "value": "Full",
           "required": true
         }
       ],

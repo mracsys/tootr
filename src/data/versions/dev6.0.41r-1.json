@@ -125,7 +125,8 @@
             ],
             "Shuffle Child Trade": [
                 "Off",
-                "On"
+                "Basic",
+                "Full"
             ],
             "Shuffle Adult Trade": [
                 "Off",
