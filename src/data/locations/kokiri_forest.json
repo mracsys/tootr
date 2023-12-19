@@ -2170,7 +2170,7 @@
     "KF Deku Tree Gossip Stone (Left) Drop": {
       "area": "Kokiri Forest",
       "lKey": "",
-      "alias": "Near Deku Tree Gossip Stone Drop (Left)",
+      "alias": "Near Deku Tree Left Gossip Stone Drop",
       "type": "item",
       "settings": [
         {
@@ -2191,7 +2191,7 @@
     "KF Deku Tree Gossip Stone (Right) Drop": {
       "area": "Kokiri Forest",
       "lKey": "",
-      "alias": "Neart Deku Tree Gossip Stone Drop (Right)",
+      "alias": "Neart Deku Tree Right Gossip Stone Drop",
       "type": "item",
       "settings": [
         {

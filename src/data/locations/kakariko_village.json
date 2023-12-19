@@ -1888,6 +1888,21 @@
       "shuffled": true,
       "shuffleRules": []
     },
+    "Wake Up Talon": {
+      "area": "",
+      "lKey": "Kakariko Village -> Kak Carpenter Boss House",
+      "alias": "Wake Up Talon",
+      "type": "item",
+      "settings": [],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
     "Kak Potion Shop Item 1": {
       "area": "",
       "lKey": "Kakariko Village -> Potion Shop Front",

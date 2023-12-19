@@ -2222,7 +2222,7 @@
       "area": "",
       "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
       "alias": "After Wind Gibdo Chest",
-      "type": "smallKey",
+      "type": "item",
       "settings": [
         {
           "setting": "Shadow Temple MQ",
@@ -2367,7 +2367,7 @@
       "area": "",
       "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
       "alias": "After Wind Hidden Chest",
-      "type": "item",
+      "type": "smallKey",
       "settings": [
         {
           "setting": "Shadow Temple MQ",

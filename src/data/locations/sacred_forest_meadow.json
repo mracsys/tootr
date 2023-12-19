@@ -519,7 +519,7 @@
     "SFM Maze Gossip Stone (Lower) Drop": {
       "area": "Sacred Forest Meadow",
       "lKey": "",
-      "alias": "Maze Gossip Stone Drop (Lower)",
+      "alias": "Front Maze Gossip Stone Drop",
       "type": "item",
       "settings": [
         {
@@ -540,7 +540,7 @@
     "SFM Maze Gossip Stone (Upper) Drop": {
       "area": "Sacred Forest Meadow",
       "lKey": "",
-      "alias": "Maze Gossip Stone Drop (Upper)",
+      "alias": "Back Maze Gossip Stone Drop",
       "type": "item",
       "settings": [
         {
