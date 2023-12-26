@@ -127,3 +127,31 @@ Recommend debugging via VSCode + Chrome with the React Developer Tools Chrome ex
     ]
 }
 ```
+
+# Changelog
+
+## Recently added
+
+tons of new checks!
+- treasure chest game keys
+- empty pots and crates
+- grass
+- enemy drops
+- wonderitems
+- gossip stone drops
+- fishing pond fishes
+
+settings related
+- helpful extra checks: things that aren't neccesarily items but can be useful to guide what else you can do in a given area
+    these include: scarecrow song, epona race, planted magic bean spots, mask trading npcs
+- settings like skip epona race and plant beans added to fine tune what extra checks show up
+- turned child and adult trade settings into multi-checklists for better integration with newer trade shuffle settings
+
+visual stuff
+- icons for pots and crates
+- icons for new checks
+
+other
+- bug fixes
+- reordered locations to better integrate all the new checks
+- cleaned up dozens of aliases for clarity
