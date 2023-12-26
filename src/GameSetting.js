@@ -4,8 +4,9 @@ import ExpandMore from '@material-ui/icons/ExpandMore';
 import Collapse from '@material-ui/core/Collapse';
 import Select from '@material-ui/core/Select';
 import Input from '@material-ui/core/Input';
-import Checkbox from '@material-ui/core/Checkbox'
+import Checkbox from '@material-ui/core/Checkbox';
 import { FormHelperText, ListItemText, MenuItem } from '@material-ui/core';
+import defaultSettings from './data/settings_presets/defaults.json';
 
 class GameSetting extends React.Component {
     constructor(props) {
@@ -24,7 +25,7 @@ class GameSetting extends React.Component {
                 </div>
                 <Collapse in={this.state.open} timeout='auto' unmountOnExit>
                         { Object.keys(this.props.settings).map((setting, i) => {
-                            if (setting !== 'open' && setting !== 'Mixed Pools' && setting !== 'Shuffle Interiors') {
+                            if (setting !== 'open' && !(typeof defaultSettings.Settings[setting] === 'object')) {
                                 return (
                                 <React.Fragment key={'settingFrag' + i}>
                                     <div className={this.props.classes.wrapperWrapper}>
@@ -46,7 +47,7 @@ class GameSetting extends React.Component {
                                     </div>
                                 </React.Fragment>
                                 );
-                            } else if (setting === 'Mixed Pools' || setting === 'Shuffle Interiors') {
+                            } else if (typeof defaultSettings.Settings[setting] === 'object') {
                                 return (
                                     <React.Fragment key={'settingFrag' + i}>
                                         <div className={this.props.classes.wrapperWrapper}>

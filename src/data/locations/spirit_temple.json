@@ -2310,6 +2310,32 @@
       "shuffled": true,
       "shuffleRules": []
     },
+    "Spirit Temple Adult Climb Wallmaster": {
+      "area": "",
+      "lKey": "Desert Colossus -> Spirit Temple Lobby",
+      "alias": "Adult Climb Wallmaster",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        },
+        {
+          "setting": "Spirit Temple MQ",
+          "value": false,
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
     "Spirit Temple Statue Room Adult Side Armos": {
       "area": "",
       "lKey": "Desert Colossus -> Spirit Temple Lobby",
@@ -5156,6 +5182,32 @@
       "area": "",
       "lKey": "Desert Colossus -> Spirit Temple Lobby",
       "alias": "Statue Room Wallmaster",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        },
+        {
+          "setting": "Spirit Temple MQ",
+          "value": true,
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Spirit Temple MQ Central Chamber Zeldas Lullaby Wallmaster": {
+      "area": "",
+      "lKey": "Desert Colossus -> Spirit Temple Lobby",
+      "alias": "Statue Room Zelda's Lullaby Wallmaster",
       "type": "enemyDrop",
       "settings": [
         {

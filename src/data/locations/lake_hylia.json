@@ -1232,6 +1232,11 @@
           "setting": "Free Scarecrow",
           "value": "Off",
           "required": true
+        },
+        {
+          "setting": "Show Helpful Extra Checks",
+          "value": "Yes",
+          "required": true
         }
       ],
       "visible": true,
@@ -1252,6 +1257,11 @@
         {
           "setting": "Free Scarecrow",
           "value": "Off",
+          "required": true
+        },
+        {
+          "setting": "Show Helpful Extra Checks",
+          "value": "Yes",
           "required": true
         }
       ],
@@ -1583,6 +1593,11 @@
           "setting": "Plant Beans",
           "value": "Off",
           "required": true
+        },
+        {
+          "setting": "Show Helpful Extra Checks",
+          "value": "Yes",
+          "required": true
         }
       ],
       "visible": true,
@@ -1848,7 +1863,7 @@
       "settings": [
         {
           "setting": "Shuffle Adult Trade",
-          "value": "On",
+          "value": "Eyedrops",
           "required": true
         }
       ],
@@ -1996,10 +2011,703 @@
         }
       ]
     },
+    "LH Child Fish 1": {
+      "area": "",
+      "lKey": "LH Fishing Island -> LH Fishing Hole",
+      "alias": "Child Fish 1",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Fishing Pond Fish",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LH Child Fish 2": {
+      "area": "",
+      "lKey": "LH Fishing Island -> LH Fishing Hole",
+      "alias": "Child Fish 2",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Fishing Pond Fish",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LH Child Fish 3": {
+      "area": "",
+      "lKey": "LH Fishing Island -> LH Fishing Hole",
+      "alias": "Child Fish 3",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Fishing Pond Fish",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LH Child Fish 4": {
+      "area": "",
+      "lKey": "LH Fishing Island -> LH Fishing Hole",
+      "alias": "Child Fish 4",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Fishing Pond Fish",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LH Child Fish 5": {
+      "area": "",
+      "lKey": "LH Fishing Island -> LH Fishing Hole",
+      "alias": "Child Fish 5",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Fishing Pond Fish",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LH Child Fish 6": {
+      "area": "",
+      "lKey": "LH Fishing Island -> LH Fishing Hole",
+      "alias": "Child Fish 6",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Fishing Pond Fish",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LH Child Fish 7": {
+      "area": "",
+      "lKey": "LH Fishing Island -> LH Fishing Hole",
+      "alias": "Child Fish 7",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Fishing Pond Fish",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LH Child Fish 8": {
+      "area": "",
+      "lKey": "LH Fishing Island -> LH Fishing Hole",
+      "alias": "Child Fish 8",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Fishing Pond Fish",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LH Child Fish 9": {
+      "area": "",
+      "lKey": "LH Fishing Island -> LH Fishing Hole",
+      "alias": "Child Fish 9",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Fishing Pond Fish",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LH Child Fish 10": {
+      "area": "",
+      "lKey": "LH Fishing Island -> LH Fishing Hole",
+      "alias": "Child Fish 10",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Fishing Pond Fish",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LH Child Fish 11": {
+      "area": "",
+      "lKey": "LH Fishing Island -> LH Fishing Hole",
+      "alias": "Child Fish 11",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Fishing Pond Fish",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LH Child Fish 12": {
+      "area": "",
+      "lKey": "LH Fishing Island -> LH Fishing Hole",
+      "alias": "Child Fish 12",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Fishing Pond Fish",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LH Child Fish 13": {
+      "area": "",
+      "lKey": "LH Fishing Island -> LH Fishing Hole",
+      "alias": "Child Fish 13",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Fishing Pond Fish",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LH Child Fish 14": {
+      "area": "",
+      "lKey": "LH Fishing Island -> LH Fishing Hole",
+      "alias": "Child Fish 14",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Fishing Pond Fish",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LH Child Fish 15": {
+      "area": "",
+      "lKey": "LH Fishing Island -> LH Fishing Hole",
+      "alias": "Child Fish 15",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Fishing Pond Fish",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LH Child Loach 1": {
+      "area": "",
+      "lKey": "LH Fishing Island -> LH Fishing Hole",
+      "alias": "Child Loach 1",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Fishing Pond Fish",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LH Child Loach 2": {
+      "area": "",
+      "lKey": "LH Fishing Island -> LH Fishing Hole",
+      "alias": "Child Loach 2",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Fishing Pond Fish",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LH Adult Fish 1": {
+      "area": "",
+      "lKey": "LH Fishing Island -> LH Fishing Hole",
+      "alias": "Adult Fish 1",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Fishing Pond Fish",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LH Adult Fish 2": {
+      "area": "",
+      "lKey": "LH Fishing Island -> LH Fishing Hole",
+      "alias": "Adult Fish 2",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Fishing Pond Fish",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LH Adult Fish 3": {
+      "area": "",
+      "lKey": "LH Fishing Island -> LH Fishing Hole",
+      "alias": "Adult Fish 3",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Fishing Pond Fish",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LH Adult Fish 4": {
+      "area": "",
+      "lKey": "LH Fishing Island -> LH Fishing Hole",
+      "alias": "Adult Fish 4",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Fishing Pond Fish",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LH Adult Fish 5": {
+      "area": "",
+      "lKey": "LH Fishing Island -> LH Fishing Hole",
+      "alias": "Adult Fish 5",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Fishing Pond Fish",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LH Adult Fish 6": {
+      "area": "",
+      "lKey": "LH Fishing Island -> LH Fishing Hole",
+      "alias": "Adult Fish 6",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Fishing Pond Fish",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LH Adult Fish 7": {
+      "area": "",
+      "lKey": "LH Fishing Island -> LH Fishing Hole",
+      "alias": "Adult Fish 7",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Fishing Pond Fish",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LH Adult Fish 8": {
+      "area": "",
+      "lKey": "LH Fishing Island -> LH Fishing Hole",
+      "alias": "Adult Fish 8",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Fishing Pond Fish",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LH Adult Fish 9": {
+      "area": "",
+      "lKey": "LH Fishing Island -> LH Fishing Hole",
+      "alias": "Adult Fish 9",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Fishing Pond Fish",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LH Adult Fish 10": {
+      "area": "",
+      "lKey": "LH Fishing Island -> LH Fishing Hole",
+      "alias": "Adult Fish 10",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Fishing Pond Fish",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LH Adult Fish 11": {
+      "area": "",
+      "lKey": "LH Fishing Island -> LH Fishing Hole",
+      "alias": "Adult Fish 11",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Fishing Pond Fish",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LH Adult Fish 12": {
+      "area": "",
+      "lKey": "LH Fishing Island -> LH Fishing Hole",
+      "alias": "Adult Fish 12",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Fishing Pond Fish",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LH Adult Fish 13": {
+      "area": "",
+      "lKey": "LH Fishing Island -> LH Fishing Hole",
+      "alias": "Adult Fish 13",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Fishing Pond Fish",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LH Adult Fish 14": {
+      "area": "",
+      "lKey": "LH Fishing Island -> LH Fishing Hole",
+      "alias": "Adult Fish 14",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Fishing Pond Fish",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LH Adult Fish 15": {
+      "area": "",
+      "lKey": "LH Fishing Island -> LH Fishing Hole",
+      "alias": "Adult Fish 15",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Fishing Pond Fish",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LH Adult Loach": {
+      "area": "",
+      "lKey": "LH Fishing Island -> LH Fishing Hole",
+      "alias": "Adult Loach",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Fishing Pond Fish",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
     "LH Child Fishing": {
       "area": "",
       "lKey": "LH Fishing Island -> LH Fishing Hole",
-      "alias": "Child Fishing",
+      "alias": "Child 10 Pound Fish Reward",
       "type": "item",
       "settings": [],
       "visible": true,
@@ -2014,7 +2722,7 @@
     "LH Adult Fishing": {
       "area": "",
       "lKey": "LH Fishing Island -> LH Fishing Hole",
-      "alias": "Adult Fishing",
+      "alias": "Adult 16 Pound Fish Reward",
       "type": "item",
       "settings": [],
       "visible": true,
@@ -2029,11 +2737,11 @@
     "LH Fishing Loach": {
       "area": "",
       "lKey": "LH Fishing Island -> LH Fishing Hole",
-      "alias": "Hylian Loach",
+      "alias": "Hyrule Loach Reward",
       "type": "item",
       "settings": [
         {
-          "setting": "Shuffle Hylian Loach",
+          "setting": "Shuffle Hyrule Loach",
           "value": "On",
           "required": true
         }

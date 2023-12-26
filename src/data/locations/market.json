@@ -2177,7 +2177,7 @@
         },
         {
           "setting": "Shuffle Child Trade",
-          "value": "Full",
+          "value": "Weird Egg",
           "required": false
         }
       ],
@@ -2597,7 +2597,7 @@
       "settings": [
         {
           "setting": "Shuffle Child Trade",
-          "value": "Full",
+          "value": "Zelda's Letter",
           "required": true
         }
       ],
@@ -2615,7 +2615,13 @@
       "lKey": "",
       "alias": "Zelda's Lullaby",
       "type": "song",
-      "settings": [],
+      "settings": [
+        {
+          "setting": "Skip Child Zelda",
+          "value": "Off",
+          "required": true
+        }
+      ],
       "visible": true,
       "check": "",
       "foundItem": "",
@@ -2948,10 +2954,10 @@
       "shuffled": true,
       "shuffleRules": []
     },
-    "Time Travel": {
+    "Gift from Rauru": {
       "area": "",
       "lKey": "ToT Entrance -> Temple of Time",
-      "alias": "Time Travel",
+      "alias": "Gift from Rauru",
       "type": "item",
       "settings": [
         {
@@ -3753,7 +3759,7 @@
       "settings": [
         {
           "setting": "Shuffle Child Trade",
-          "value": "Full",
+          "value": "Keaton Mask",
           "required": true
         }
       ],
@@ -3774,7 +3780,7 @@
       "settings": [
         {
           "setting": "Shuffle Child Trade",
-          "value": "Full",
+          "value": "Skull Mask",
           "required": true
         }
       ],
@@ -3795,7 +3801,7 @@
       "settings": [
         {
           "setting": "Shuffle Child Trade",
-          "value": "Full",
+          "value": "Spooky Mask",
           "required": true
         }
       ],
@@ -3816,7 +3822,7 @@
       "settings": [
         {
           "setting": "Shuffle Child Trade",
-          "value": "Full",
+          "value": "Bunny Hood",
           "required": true
         }
       ],
@@ -3837,7 +3843,7 @@
       "settings": [
         {
           "setting": "Shuffle Child Trade",
-          "value": "Full",
+          "value": "Goron Mask",
           "required": true
         }
       ],
@@ -3858,7 +3864,7 @@
       "settings": [
         {
           "setting": "Shuffle Child Trade",
-          "value": "Full",
+          "value": "Zora Mask",
           "required": true
         }
       ],
@@ -3879,7 +3885,7 @@
       "settings": [
         {
           "setting": "Shuffle Child Trade",
-          "value": "Full",
+          "value": "Gerudo Mask",
           "required": true
         }
       ],
@@ -3900,7 +3906,7 @@
       "settings": [
         {
           "setting": "Shuffle Child Trade",
-          "value": "Full",
+          "value": "Mask of Truth",
           "required": true
         }
       ],

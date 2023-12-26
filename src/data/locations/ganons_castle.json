@@ -4403,6 +4403,32 @@
       "shuffled": true,
       "shuffleRules": []
     },
+    "Ganons Castle MQ Spirit Trial Wallmaster": {
+      "area": "",
+      "lKey": "Ganons Castle Grounds -> Ganons Castle",
+      "alias": "Spirit Trial Wallmaster",
+      "type": "enemyDrop",
+      "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        },
+        {
+          "setting": "Ganon's Castle MQ",
+          "value": true,
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
     "Ganons Castle MQ Spirit Trial Pot 1": {
       "area": "",
       "lKey": "Ganons Castle Grounds -> Ganons Castle",

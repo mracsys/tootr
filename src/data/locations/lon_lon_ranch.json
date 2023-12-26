@@ -356,6 +356,11 @@
           "setting": "Skip Epona Race",
           "value": "Off",
           "required": true
+        },
+        {
+          "setting": "Show Helpful Extra Checks",
+          "value": "Yes",
+          "required": true
         }
       ],
       "visible": true,

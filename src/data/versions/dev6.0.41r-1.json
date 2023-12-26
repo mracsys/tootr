@@ -1,7 +1,7 @@
 {
     "Settings": {
         "Tracker Settings": {
-            "open": false,
+            "open": true,
             "Settings Preset": [
                 "RSL",
                 "Mixed Pools",
@@ -29,13 +29,17 @@
                 "Both",
                 "Price Only",
                 "Wallet Tier"
-            ]            
+            ],
+            "Show Helpful Extra Checks": [
+                "Yes",
+                "No"
+            ]
         },
         "ER Settings": {
-            "open": false,
+            "open": true,
             "Shuffle Interiors": {
-                "Simple": false,
-                "Special": false,
+                "Simple": true,
+                "Special": true,
                 "Hideout": false
             },
             "Shuffle Grottos": [
@@ -123,15 +127,29 @@
                 "Off",
                 "On"
             ],
-            "Shuffle Child Trade": [
-                "Off",
-                "Basic",
-                "Full"
-            ],
-            "Shuffle Adult Trade": [
-                "Off",
-                "On"
-            ],
+            "Shuffle Child Trade": {
+                "Weird Egg": false,
+                "Zelda's Letter": false,
+                "Keaton Mask": false,
+                "Skull Mask": false,
+                "Spooky Mask": false,
+                "Bunny Hood": false,
+                "Goron Mask": false,
+                "Zora Mask": false,
+                "Gerudo Mask": false,
+                "Mask of Truth": false
+            },
+            "Shuffle Adult Trade": {
+                "Cojiro": false,
+                "Odd Mushroom": false,
+                "Odd Potion": false,
+                "Poacher's Saw": false,
+                "Broken Sword": false,
+                "Prescription": false,
+                "Eyeball Frog": false,
+                "Eyedrops": false,
+                "Claim Check": false
+            },
             "Shuffle Gerudo Card": [
                 "Off",
                 "On"
@@ -214,7 +232,11 @@
                 "Off",
                 "On"
             ],
-            "Shuffle Hylian Loach": [
+            "Shuffle Fishing Pond Fish": [
+                "Off",
+                "On"
+            ],
+            "Shuffle Hyrule Loach": [
                 "Off",
                 "On"
             ],
@@ -265,6 +287,10 @@
                 "On"
             ],
             "Skip Epona Race": [
+                "Off",
+                "On"
+            ],
+            "Skip Mask Quest": [
                 "Off",
                 "On"
             ],
@@ -334,30 +360,6 @@
                 "Balanced",
                 "Scarce",
                 "Minimal"
-            ],
-            "Earliest Adult Trade Item": [
-                "Pocket Egg",
-                "Pocket Cucco",
-                "Cojiro",
-                "Odd Mushroom",
-                "Poacher's Saw",
-                "Broken Sword",
-                "Prescription",
-                "Eyeball Frog",
-                "Eyedrops",
-                "Claim Check"
-            ],
-            "Latest Adult Trade Item": [
-                "Pocket Egg",
-                "Pocket Cucco",
-                "Cojiro",
-                "Odd Mushroom",
-                "Poacher's Saw",
-                "Broken Sword",
-                "Prescription",
-                "Eyeball Frog",
-                "Eyedrops",
-                "Claim Check"
             ],
             "Gossip Stones": [
                 "No Hints",

@@ -245,6 +245,32 @@
       "shuffled": true,
       "shuffleRules": []
     },
+    "LW Skull Mask Trade": {
+      "area": "Lost Woods",
+      "lKey": "",
+      "alias": "Trade Skull Mask to Skull Kid",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Show Helpful Extra Checks",
+          "value": "Yes",
+          "required": true
+        },
+        {
+          "setting": "Skip Mask Quest",
+          "value": "Off",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
     "LW Adult Sarias Friend Skullkid": {
       "area": "Lost Woods",
       "lKey": "",
@@ -274,7 +300,7 @@
       "settings": [
         {
           "setting": "Shuffle Adult Trade",
-          "value": "On",
+          "value": "Odd Mushroom",
           "required": true
         }
       ],
@@ -295,7 +321,7 @@
       "settings": [
         {
           "setting": "Shuffle Adult Trade",
-          "value": "On",
+          "value": "Poacher's Saw",
           "required": true
         }
       ],
@@ -359,6 +385,11 @@
         {
           "setting": "Plant Beans",
           "value": "Off",
+          "required": true
+        },
+        {
+          "setting": "Show Helpful Extra Checks",
+          "value": "Yes",
           "required": true
         }
       ],
@@ -926,6 +957,11 @@
         {
           "setting": "Plant Beans",
           "value": "Off",
+          "required": true
+        },
+        {
+          "setting": "Show Helpful Extra Checks",
+          "value": "Yes",
           "required": true
         }
       ],

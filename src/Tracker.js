@@ -1037,6 +1037,7 @@ class Tracker extends React.Component {
         settings["Show Locations"] = prevSettings["Show Locations"];
         settings["Show Unshuffled Skulls"] = prevSettings["Show Unshuffled Skulls"];
         settings["Shop Price Tracking"] = prevSettings["Shop Price Tracking"];
+		settings["Show Helpful Extra checks"] = prevSettings["Shop Price Tracking"];
         
         //let presetSettings = this.getPresetSettings(settings['Settings Preset'], prevSettings);
         //this.setPresetSettings(settings, presetSettings);
@@ -1814,17 +1815,24 @@ class Tracker extends React.Component {
                 if (typeof allAreas.locations[location].settings === "boolean") {
                     allAreas.locations[location].visible = allAreas.locations[location].settings;
                     visibleRules = allAreas.locations[location].settings;
-                } else if (allAreas.locations[location].settings.length > 0) {
+				} else if (allAreas.locations[location].settings.length > 0) {
                     andVisible = true;
                     orVisible = false;
                     andCount = 0;
                     orCount = 0;
                     allAreas.locations[location].settings.forEach(s => {
                         if (s.required === true) { andCount++; } else { orCount++; }
-                        if (settings[s.setting] === s.value && s.required === true) { andVisible = true && andVisible;  }
-                        if (settings[s.setting] !== s.value && s.required === true) { andVisible = false; }
-                        if (settings[s.setting] === s.value && s.required === false) { orVisible = true; }
-                    });
+                        if (typeof settings[s.setting] === "object") {
+							if (settings[s.setting].includes(s.value) && s.required === true) { andVisible = true && andVisible; }
+							if (!settings[s.setting].includes(s.value) && s.required === true) { andVisible = false; }
+							if (settings[s.setting].includes(s.value) && s.required === false) { orVisible = true; }
+						} else {
+							if (settings[s.setting] === s.value && s.required === true) { andVisible = true && andVisible; }
+							if (settings[s.setting] !== s.value && s.required === true) { andVisible = false; }
+							if (settings[s.setting] === s.value && s.required === false) { orVisible = true; }
+						}
+					});
+					
                     visibleRules = ((andVisible === (andCount >= 0)) && (orVisible === (orCount > 0)));
                     allAreas.locations[location].visible = (((allAreas.locations[location].area !== "" && !(interiorsOnly)) || allAreas.locations[location].area === "") && visibleRules);
                 } else {

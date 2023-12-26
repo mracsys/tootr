@@ -1565,6 +1565,32 @@
       "shuffled": true,
       "shuffleRules": []
     },
+    "HF Bunny Hood Trade": {
+      "area": "Hyrule Field",
+      "lKey": "",
+      "alias": "Trade Bunny Hood to Running Man",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Show Helpful Extra Checks",
+          "value": "Yes",
+          "required": true
+        },
+        {
+          "setting": "Skip Mask Quest",
+          "value": "Off",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
     "HF Ocarina of Time Item": {
       "area": "Hyrule Field",
       "lKey": "",

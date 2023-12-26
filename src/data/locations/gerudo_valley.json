@@ -190,7 +190,7 @@
       "settings": [
         {
           "setting": "Shuffle Adult Trade",
-          "value": "On",
+          "value": "Broken Sword",
           "required": true
         }
       ],
@@ -409,6 +409,11 @@
         {
           "setting": "Plant Beans",
           "value": "Off",
+          "required": true
+        },
+        {
+          "setting": "Show Helpful Extra Checks",
+          "value": "Yes",
           "required": true
         }
       ],

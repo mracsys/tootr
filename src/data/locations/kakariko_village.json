@@ -423,7 +423,7 @@
       "settings": [
         {
           "setting": "Shuffle Adult Trade",
-          "value": "On",
+          "value": "Cojiro",
           "required": true
         }
       ],
@@ -827,6 +827,32 @@
           "setting": "Shuffle Pots",
           "value": "Overworld",
           "required": false
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Kak Keaton Mask Trade": {
+      "area": "Kakariko Village",
+      "lKey": "",
+      "alias": "Trade Keaton Mask to Guard",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Show Helpful Extra Checks",
+          "value": "Yes",
+          "required": true
+        },
+        {
+          "setting": "Skip Mask Quest",
+          "value": "Off",
+          "required": true
         }
       ],
       "visible": true,
@@ -1893,7 +1919,13 @@
       "lKey": "Kakariko Village -> Kak Carpenter Boss House",
       "alias": "Wake Up Talon",
       "type": "item",
-      "settings": [],
+      "settings": [
+        {
+          "setting": "Show Helpful Extra Checks",
+          "value": "Yes",
+          "required": true
+        }
+      ],
       "visible": true,
       "check": "",
       "foundItem": "",
@@ -2320,7 +2352,7 @@
       "settings": [
         {
           "setting": "Shuffle Adult Trade",
-          "value": "On",
+          "value": "Odd Potion",
           "required": true
         }
       ],

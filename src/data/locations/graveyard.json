@@ -415,6 +415,32 @@
       "shuffled": true,
       "shuffleRules": []
     },
+    "Graveyard Spooky Mask Trade": {
+      "area": "Graveyard",
+      "lKey": "",
+      "alias": "Trade Spooky Mask to Boy",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Show Helpful Extra Checks",
+          "value": "Yes",
+          "required": true
+        },
+        {
+          "setting": "Skip Mask Quest",
+          "value": "Off",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
     "Dampe Digging": {
       "area": "Graveyard",
       "lKey": "",
@@ -527,6 +553,11 @@
         {
           "setting": "Plant Beans",
           "value": "Off",
+          "required": true
+        },
+        {
+          "setting": "Show Helpful Extra Checks",
+          "value": "Yes",
           "required": true
         }
       ],

@@ -331,6 +331,11 @@
           "setting": "Plant Beans",
           "value": "Off",
           "required": true
+        },
+        {
+          "setting": "Show Helpful Extra Checks",
+          "value": "Yes",
+          "required": true
         }
       ],
       "visible": true,
