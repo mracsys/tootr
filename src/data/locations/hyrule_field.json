@@ -350,7 +350,7 @@
     "HF Child Near Kokiri Forest Peahat": {
       "area": "Hyrule Field",
       "lKey": "",
-      "alias": "Near Kokiri Forest Peahat",
+      "alias": "Near KF Peahat",
       "type": "enemyDrop",
       "settings": [
         {
@@ -875,7 +875,7 @@
     "HF Child Near Fairy Grotto Peahat": {
       "area": "Hyrule Field",
       "lKey": "",
-      "alias": "Child Near Fairy Grotto Peahat",
+      "alias": "Across River Peahat",
       "type": "enemyDrop",
       "settings": [
         {
