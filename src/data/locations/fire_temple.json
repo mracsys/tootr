@@ -2767,12 +2767,17 @@
       "shuffled": true,
       "shuffleRules": []
     },
-    "Fire Temple MQ Map Room Side Chest": {
+    "Fire Temple MQ Map Chest Like Like": {
       "area": "",
       "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
-      "alias": "Like Like Chest",
-      "type": "item",
+      "alias": "Early Like Like",
+      "type": "enemyDrop",
       "settings": [
+        {
+          "setting": "Shuffle Enemy Drops",
+          "value": "On",
+          "required": true
+        },
         {
           "setting": "Fire Temple MQ",
           "value": true,
@@ -2788,17 +2793,12 @@
       "shuffled": true,
       "shuffleRules": []
     },
-    "Fire Temple MQ Map Chest Like Like": {
+    "Fire Temple MQ Map Room Side Chest": {
       "area": "",
       "lKey": "DMC Fire Temple Entrance -> Fire Temple Lower",
-      "alias": "Early Like Like",
-      "type": "enemyDrop",
+      "alias": "Like Like Chest",
+      "type": "item",
       "settings": [
-        {
-          "setting": "Shuffle Enemy Drops",
-          "value": "On",
-          "required": true
-        },
         {
           "setting": "Fire Temple MQ",
           "value": true,

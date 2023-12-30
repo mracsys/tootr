@@ -405,7 +405,13 @@
       "lKey": "",
       "alias": "Gift from Anju",
       "type": "item",
-      "settings": [],
+      "settings": [
+        {
+          "setting": "Shuffle Adult Trade",
+          "value": "Pocket Egg",
+          "required": true
+        }
+      ],
       "visible": true,
       "check": "",
       "foundItem": "",

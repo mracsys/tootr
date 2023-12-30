@@ -3008,7 +3008,7 @@
     "Market Day Crate 1": {
       "area": "Market",
       "lKey": "",
-      "alias": "Day Crate Near Guard 1",
+      "alias": "Day Crate Near Shooting Gallery 1",
       "type": "crate",
       "settings": [
         {
@@ -3039,7 +3039,7 @@
     "Market Day Crate 2": {
       "area": "Market",
       "lKey": "",
-      "alias": "Day Crate Near Guard 2",
+      "alias": "Day Crate Near Shooting Gallery 2",
       "type": "crate",
       "settings": [
         {
@@ -3468,6 +3468,27 @@
       "area": "Market",
       "lKey": "",
       "alias": "Daytime Balcony Wonderitem 4",
+      "type": "item",
+      "settings": [
+        {
+          "setting": "Shuffle Wonderitems",
+          "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Market Daytime Balcony Wonderitem 5": {
+      "area": "Market",
+      "lKey": "",
+      "alias": "Daytime Balcony Wonderitem 5",
       "type": "item",
       "settings": [
         {
