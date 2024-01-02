@@ -92,6 +92,29 @@
       "userOneWayELink": "",
       "shuffled": true
     },
+    "Kokiri Forest -> KF Midos House": {
+      "area": "Kokiri Forest",
+      "reverse": "KF Midos House -> Kokiri Forest",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Mido's House",
+      "reverseAlias": "from Mido's House",
+      "tag": "",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "interior",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
+    },
     "Kokiri Forest -> KF Sarias House": {
       "area": "Kokiri Forest",
       "reverse": "KF Sarias House -> Kokiri Forest",
@@ -160,58 +183,6 @@
       "userOneWayELink": "",
       "shuffled": true
     },
-    "Kokiri Forest -> KF Kokiri Shop": {
-      "area": "Kokiri Forest",
-      "reverse": "KF Kokiri Shop -> Kokiri Forest",
-      "oneWay": false,
-      "oneWayArea": "",
-      "connector": "",
-      "isReverse": false,
-      "alias": "Kokiri Shop",
-      "reverseAlias": "from Kokiri Shop",
-      "tag": "Shop",
-      "tagRep": false,
-      "tagRules": [
-        {
-          "setting": "Shuffle Wonderitems",
-          "value": "Off",
-          "required": true
-        }
-      ],
-      "enableTag": true,
-      "type": "interior",
-      "lKey": "Kokiri Shop",
-      "aLink": "",
-      "userALink": "",
-      "eLink": "",
-      "userELink": "",
-      "oneWayELink": "",
-      "userOneWayELink": "",
-      "shuffled": true
-    },
-    "Kokiri Forest -> KF Midos House": {
-      "area": "Kokiri Forest",
-      "reverse": "KF Midos House -> Kokiri Forest",
-      "oneWay": false,
-      "oneWayArea": "",
-      "connector": "",
-      "isReverse": false,
-      "alias": "Mido's House",
-      "reverseAlias": "from Mido's House",
-      "tag": "",
-      "tagRep": false,
-      "tagRules": [],
-      "enableTag": true,
-      "type": "interior",
-      "lKey": "",
-      "aLink": "",
-      "userALink": "",
-      "eLink": "",
-      "userELink": "",
-      "oneWayELink": "",
-      "userOneWayELink": "",
-      "shuffled": true
-    },
     "Kokiri Forest -> KF Know It All House": {
       "area": "Kokiri Forest",
       "reverse": "KF Know It All House -> Kokiri Forest",
@@ -238,6 +209,35 @@
       "enableTag": true,
       "type": "interior",
       "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
+    },
+    "Kokiri Forest -> KF Kokiri Shop": {
+      "area": "Kokiri Forest",
+      "reverse": "KF Kokiri Shop -> Kokiri Forest",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Kokiri Shop",
+      "reverseAlias": "from Kokiri Shop",
+      "tag": "Shop",
+      "tagRep": false,
+      "tagRules": [
+        {
+          "setting": "Shuffle Wonderitems",
+          "value": "Off",
+          "required": true
+        }
+      ],
+      "enableTag": true,
+      "type": "interior",
+      "lKey": "Kokiri Shop",
       "aLink": "",
       "userALink": "",
       "eLink": "",
@@ -1548,7 +1548,7 @@
       "area": "Kokiri Forest",
       "lKey": "",
       "alias": "Plant Bean Patch",
-      "type": "item",
+      "type": "event",
       "settings": [
         {
           "setting": "Plant Beans",

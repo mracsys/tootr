@@ -92,6 +92,29 @@
       "userOneWayELink": "",
       "shuffled": true
     },
+    "Lake Hylia -> LH Grotto": {
+      "area": "Lake Hylia",
+      "reverse": "LH Grotto -> Lake Hylia",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Grave",
+      "reverseAlias": "from Grave",
+      "tag": "3 Scrub Grotto",
+      "tagRep": true,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "grotto",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
+    },
     "Lake Hylia -> LH Lab": {
       "area": "Lake Hylia",
       "reverse": "LH Lab -> Lake Hylia",
@@ -129,29 +152,6 @@
       "tagRules": [],
       "enableTag": true,
       "type": "interior",
-      "lKey": "",
-      "aLink": "",
-      "userALink": "",
-      "eLink": "",
-      "userELink": "",
-      "oneWayELink": "",
-      "userOneWayELink": "",
-      "shuffled": true
-    },
-    "Lake Hylia -> LH Grotto": {
-      "area": "Lake Hylia",
-      "reverse": "LH Grotto -> Lake Hylia",
-      "oneWay": false,
-      "oneWayArea": "",
-      "connector": "",
-      "isReverse": false,
-      "alias": "Grave",
-      "reverseAlias": "from Grave",
-      "tag": "3 Scrub Grotto",
-      "tagRep": true,
-      "tagRules": [],
-      "enableTag": true,
-      "type": "grotto",
       "lKey": "",
       "aLink": "",
       "userALink": "",
@@ -1226,7 +1226,7 @@
       "area": "Lake Hylia",
       "lKey": "",
       "alias": "Child Set Scarecrow Song",
-      "type": "item",
+      "type": "event",
       "settings": [
         {
           "setting": "Free Scarecrow",
@@ -1252,7 +1252,7 @@
       "area": "Lake Hylia",
       "lKey": "",
       "alias": "Adult Activate Scarecrow Song",
-      "type": "item",
+      "type": "event",
       "settings": [
         {
           "setting": "Free Scarecrow",
@@ -1587,7 +1587,7 @@
       "area": "Lake Hylia",
       "lKey": "",
       "alias": "Plant Bean Patch",
-      "type": "item",
+      "type": "event",
       "settings": [
         {
           "setting": "Plant Beans",

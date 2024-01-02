@@ -140,7 +140,7 @@
                 "Mask of Truth": false
             },
             "Shuffle Adult Trade": {
-                "Pocket Egg": false,
+                "Pocket Egg": true,
                 "Cojiro": false,
                 "Odd Mushroom": false,
                 "Odd Potion": false,

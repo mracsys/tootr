@@ -1,13 +1,13 @@
 {
   "entrances": {
-    "Wasteland Near Fortress -> GF Outside Gate": {
+    "Wasteland Near Colossus -> Desert Colossus": {
       "area": "Haunted Wasteland",
-      "reverse": "GF Outside Gate -> Wasteland Near Fortress",
+      "reverse": "Desert Colossus -> Wasteland Near Colossus",
       "oneWay": false,
       "oneWayArea": "",
       "connector": "",
       "isReverse": false,
-      "alias": "Gerudo Fortress",
+      "alias": "Desert Colossus",
       "reverseAlias": "Haunted Wasteland",
       "tag": "",
       "tagRep": false,
@@ -23,14 +23,14 @@
       "userOneWayELink": "",
       "shuffled": true
     },
-    "Wasteland Near Colossus -> Desert Colossus": {
+    "Wasteland Near Fortress -> GF Outside Gate": {
       "area": "Haunted Wasteland",
-      "reverse": "Desert Colossus -> Wasteland Near Colossus",
+      "reverse": "GF Outside Gate -> Wasteland Near Fortress",
       "oneWay": false,
       "oneWayArea": "",
       "connector": "",
       "isReverse": false,
-      "alias": "Desert Colossus",
+      "alias": "Gerudo Fortress",
       "reverseAlias": "Haunted Wasteland",
       "tag": "",
       "tagRep": false,

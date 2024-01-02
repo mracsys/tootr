@@ -11,6 +11,8 @@
         "Shuffle Gerudo Card": "Off",
         "Shuffle Magic Beans": "Off",
         "Shuffle Merchants": "Off",
+        "Shuffle Frogs": "Off",
+        "Shuffle Treasure Chest Game Keys": "Off",
         "Skip Child Zelda": "On",
         "Free Scarecrow": "On",
         "Shuffle Interiors": [],
@@ -20,6 +22,8 @@
         "Shuffle Owls": "Off",
         "Shuffle Warp Songs": "Off",
         "Shuffle Spawn Points": "Off",
+        "Shuffle Valley/Lake": "Off",
+        "Shuffle Bosses": "Off",
         "Hint Distribution": "MW Season 3",
         "Earliest Adult Trade Item": "Claim Check"
     }

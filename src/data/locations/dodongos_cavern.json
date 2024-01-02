@@ -1210,7 +1210,7 @@
     "Dodongos Cavern Compass Room Armos": {
       "area": "",
       "lKey": "Death Mountain -> Dodongos Cavern Beginning",
-      "alias": "Compass Room Armos",
+      "alias": "Armos Room Armos",
       "type": "enemyDrop",
       "settings": [
         {
@@ -1236,7 +1236,7 @@
     "Dodongos Cavern Compass Chest": {
       "area": "",
       "lKey": "Death Mountain -> Dodongos Cavern Beginning",
-      "alias": "Compass Room Chest",
+      "alias": "Armos Room Chest",
       "type": "compass",
       "settings": [
         {
@@ -3557,7 +3557,7 @@
     "Dodongos Cavern MQ Compass Room Grass 1": {
       "area": "",
       "lKey": "Death Mountain -> Dodongos Cavern Beginning",
-      "alias": "Compass Room Grass 1",
+      "alias": "Upper Dodongo Room Grass 1",
       "type": "grass",
       "settings": [
         {
@@ -3583,7 +3583,7 @@
     "Dodongos Cavern MQ Compass Room Grass 2": {
       "area": "",
       "lKey": "Death Mountain -> Dodongos Cavern Beginning",
-      "alias": "Compass Room Grass 2",
+      "alias": "Upper Dodongo Room Grass 2",
       "type": "grass",
       "settings": [
         {
@@ -3609,7 +3609,7 @@
     "Dodongos Cavern MQ Compass Room Grass 3": {
       "area": "",
       "lKey": "Death Mountain -> Dodongos Cavern Beginning",
-      "alias": "Compass Room Grass 3",
+      "alias": "Upper Dodongo Room Grass 3",
       "type": "grass",
       "settings": [
         {
@@ -3635,7 +3635,7 @@
     "Dodongos Cavern MQ Compass Room Grass 4": {
       "area": "",
       "lKey": "Death Mountain -> Dodongos Cavern Beginning",
-      "alias": "Compass Room Grass 4",
+      "alias": "Upper Dodongo Room Grass 4",
       "type": "grass",
       "settings": [
         {
@@ -3661,7 +3661,7 @@
     "Dodongos Cavern MQ Compass Room Dodongo 1": {
       "area": "",
       "lKey": "Death Mountain -> Dodongos Cavern Beginning",
-      "alias": "Compass Room Dodongo 1",
+      "alias": "Upper Dodongo Room Dodongo 1",
       "type": "enemyDrop",
       "settings": [
         {
@@ -3687,7 +3687,7 @@
     "Dodongos Cavern MQ Compass Room Dodongo 2": {
       "area": "",
       "lKey": "Death Mountain -> Dodongos Cavern Beginning",
-      "alias": "Compass Room Dodongo 2",
+      "alias": "Upper Dodongo Room Dodongo 2",
       "type": "enemyDrop",
       "settings": [
         {
@@ -3713,7 +3713,7 @@
     "Dodongos Cavern MQ Compass Room Dodongo 3": {
       "area": "",
       "lKey": "Death Mountain -> Dodongos Cavern Beginning",
-      "alias": "Compass Room Dodongo 3",
+      "alias": "Upper Dodongo Room Dodongo 3",
       "type": "enemyDrop",
       "settings": [
         {
@@ -3739,7 +3739,7 @@
     "Dodongos Cavern MQ Compass Chest": {
       "area": "",
       "lKey": "Death Mountain -> Dodongos Cavern Beginning",
-      "alias": "Compass Room Chest",
+      "alias": "Upper Dodongo Room Chest",
       "type": "compass",
       "settings": [
         {

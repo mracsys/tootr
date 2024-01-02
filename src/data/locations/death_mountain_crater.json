@@ -69,16 +69,16 @@
       "userOneWayELink": "",
       "shuffled": true
     },
-    "DMC Upper Nearby -> DMC Upper Grotto": {
+    "DMC Lower Nearby -> DMC Hammer Grotto": {
       "area": "Death Mountain Crater",
-      "reverse": "DMC Upper Grotto -> DMC Upper Local",
+      "reverse": "DMC Hammer Grotto -> DMC Lower Local",
       "oneWay": false,
       "oneWayArea": "",
       "connector": "",
       "isReverse": false,
-      "alias": "Bombable Grotto",
-      "reverseAlias": "from Bombable Grotto",
-      "tag": "Generic Grotto",
+      "alias": "Hammer Grotto",
+      "reverseAlias": "from Hammer Grotto",
+      "tag": "3 Scrub Grotto",
       "tagRep": false,
       "tagRules": [],
       "enableTag": true,
@@ -92,16 +92,16 @@
       "userOneWayELink": "",
       "shuffled": true
     },
-    "DMC Lower Nearby -> DMC Hammer Grotto": {
+    "DMC Upper Nearby -> DMC Upper Grotto": {
       "area": "Death Mountain Crater",
-      "reverse": "DMC Hammer Grotto -> DMC Lower Local",
+      "reverse": "DMC Upper Grotto -> DMC Upper Local",
       "oneWay": false,
       "oneWayArea": "",
       "connector": "",
       "isReverse": false,
-      "alias": "Hammer Grotto",
-      "reverseAlias": "from Hammer Grotto",
-      "tag": "3 Scrub Grotto",
+      "alias": "Bombable Grotto",
+      "reverseAlias": "from Bombable Grotto",
+      "tag": "Generic Grotto",
       "tagRep": false,
       "tagRules": [],
       "enableTag": true,
@@ -325,7 +325,7 @@
       "area": "Death Mountain Crater",
       "lKey": "",
       "alias": "Plant Bean Patch",
-      "type": "item",
+      "type": "event",
       "settings": [
         {
           "setting": "Plant Beans",

@@ -90,7 +90,7 @@
     "Shadow Temple Map Chest Redead": {
       "area": "",
       "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
-      "alias": "Map Chest Redead",
+      "alias": "Early Redead Chest Redead",
       "type": "enemyDrop",
       "settings": [
         {
@@ -116,7 +116,7 @@
     "Shadow Temple Map Chest Keese 1": {
       "area": "",
       "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
-      "alias": "Map Chest Keese 1",
+      "alias": "Early Redead Chest Keese 1",
       "type": "enemyDrop",
       "settings": [
         {
@@ -142,7 +142,7 @@
     "Shadow Temple Map Chest Keese 2": {
       "area": "",
       "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
-      "alias": "Map Chest Keese 2",
+      "alias": "Early Redead Chest Keese 2",
       "type": "enemyDrop",
       "settings": [
         {
@@ -168,7 +168,7 @@
     "Shadow Temple Map Chest": {
       "area": "",
       "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
-      "alias": "Map Chest",
+      "alias": "Early Redead Chest",
       "type": "map",
       "settings": [
         {
@@ -189,7 +189,7 @@
     "Shadow Temple Map Chest Room Pot 1": {
       "area": "",
       "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
-      "alias": "Map Chest Pot 1",
+      "alias": "Early Redead Chest Pot 1",
       "type": "jar",
       "settings": [
         {
@@ -220,7 +220,7 @@
     "Shadow Temple Map Chest Room Pot 2": {
       "area": "",
       "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
-      "alias": "Map Chest Pot 2",
+      "alias": "Early Redead Chest Pot 2",
       "type": "jar",
       "settings": [
         {
@@ -479,7 +479,7 @@
     "Shadow Temple Compass Chest Gibdo 1": {
       "area": "",
       "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
-      "alias": "Compass Chest Gibdo 1",
+      "alias": "Early Gibdo Room Gibdo 1",
       "type": "enemyDrop",
       "settings": [
         {
@@ -505,7 +505,7 @@
     "Shadow Temple Compass Chest Gibdo 2": {
       "area": "",
       "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
-      "alias": "Compass Chest Gibdo 2",
+      "alias": "Early Gibdo Room Gibdo 2",
       "type": "enemyDrop",
       "settings": [
         {
@@ -531,7 +531,7 @@
     "Shadow Temple Compass Chest": {
       "area": "",
       "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
-      "alias": "Compass Chest",
+      "alias": "Early Gibdo Room Chest",
       "type": "compass",
       "settings": [
         {
@@ -4117,7 +4117,7 @@
     "Shadow Temple MQ Compass Chest Redead 1": {
       "area": "",
       "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
-      "alias": "Compass Chest Redead 1",
+      "alias": "Early Redead Room Redead 1",
       "type": "enemyDrop",
       "settings": [
         {
@@ -4143,7 +4143,7 @@
     "Shadow Temple MQ Compass Chest Redead 2": {
       "area": "",
       "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
-      "alias": "Compass Chest Redead 2",
+      "alias": "Early Redead Room Redead 2",
       "type": "enemyDrop",
       "settings": [
         {
@@ -4169,7 +4169,7 @@
     "Shadow Temple MQ Compass Chest Redead 3": {
       "area": "",
       "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
-      "alias": "Compass Chest Redead 3",
+      "alias": "Early Redead Room Redead 3",
       "type": "enemyDrop",
       "settings": [
         {
@@ -4195,7 +4195,7 @@
     "Shadow Temple MQ Compass Chest Redead 4": {
       "area": "",
       "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
-      "alias": "Compass Chest Redead 4",
+      "alias": "Early Redead Room Redead 4",
       "type": "enemyDrop",
       "settings": [
         {
@@ -4221,7 +4221,7 @@
     "Shadow Temple MQ Compass Chest": {
       "area": "",
       "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
-      "alias": "Compass Chest",
+      "alias": "Early Redead Room Chest",
       "type": "compass",
       "settings": [
         {
@@ -4242,7 +4242,7 @@
     "Shadow Temple MQ Compass Room Pot 1": {
       "area": "",
       "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
-      "alias": "Compass Chest Pot 1",
+      "alias": "Early Redead Room Pot 1",
       "type": "jar",
       "settings": [
         {
@@ -4273,7 +4273,7 @@
     "Shadow Temple MQ Compass Room Pot 2": {
       "area": "",
       "lKey": "Graveyard Warp Pad Region -> Shadow Temple Entryway",
-      "alias": "Compass Chest Pot 2",
+      "alias": "Early Redead Room Pot 2",
       "type": "jar",
       "settings": [
         {

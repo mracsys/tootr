@@ -142,7 +142,7 @@
     "Water Temple Before Compass Chest Stinger 1": {
       "area": "",
       "lKey": "Lake Hylia -> Water Temple Lobby",
-      "alias": "Before Compass Chest Stinger 1",
+      "alias": "Before Stinger Chest Stinger 1",
       "type": "enemyDrop",
       "settings": [
         {
@@ -168,7 +168,7 @@
     "Water Temple Before Compass Chest Stinger 2": {
       "area": "",
       "lKey": "Lake Hylia -> Water Temple Lobby",
-      "alias": "Before Compass Chest Stinger 2",
+      "alias": "Before Stinger Chest Stinger 2",
       "type": "enemyDrop",
       "settings": [
         {
@@ -194,7 +194,7 @@
     "Water Temple Before Compass Chest Stinger 3": {
       "area": "",
       "lKey": "Lake Hylia -> Water Temple Lobby",
-      "alias": "Before Compass Chest Stinger 3",
+      "alias": "Before Stinger Chest Stinger 3",
       "type": "enemyDrop",
       "settings": [
         {
@@ -220,7 +220,7 @@
     "Water Temple Before Compass Chest Stinger 4": {
       "area": "",
       "lKey": "Lake Hylia -> Water Temple Lobby",
-      "alias": "Before Compass Chest Stinger 4",
+      "alias": "Before Stinger Chest Stinger 4",
       "type": "enemyDrop",
       "settings": [
         {
@@ -246,7 +246,7 @@
     "Water Temple Near Compass Pot 1": {
       "area": "",
       "lKey": "Lake Hylia -> Water Temple Lobby",
-      "alias": "Near Compass Pot 1",
+      "alias": "Near Stinger Chest Pot 1",
       "type": "jar",
       "settings": [
         {
@@ -277,7 +277,7 @@
     "Water Temple Near Compass Pot 2": {
       "area": "",
       "lKey": "Lake Hylia -> Water Temple Lobby",
-      "alias": "Near Compass Pot 2",
+      "alias": "Near Stinger Chest Pot 2",
       "type": "jar",
       "settings": [
         {
@@ -308,7 +308,7 @@
     "Water Temple Near Compass Pot 3": {
       "area": "",
       "lKey": "Lake Hylia -> Water Temple Lobby",
-      "alias": "Near Compass Pot 3",
+      "alias": "Near Stinger Chest Pot 3",
       "type": "jar",
       "settings": [
         {
@@ -339,7 +339,7 @@
     "Water Temple Compass Chest": {
       "area": "",
       "lKey": "Lake Hylia -> Water Temple Lobby",
-      "alias": "Compass Chest",
+      "alias": "Stinger Chest",
       "type": "compass",
       "settings": [
         {
@@ -412,7 +412,7 @@
     "Water Temple Map Chest Spike 1": {
       "area": "",
       "lKey": "Lake Hylia -> Water Temple Lobby",
-      "alias": "Map Chest Spike 1",
+      "alias": "Spiky Ball Chest Spike 1",
       "type": "enemyDrop",
       "settings": [
         {
@@ -438,7 +438,7 @@
     "Water Temple Map Chest Spike 2": {
       "area": "",
       "lKey": "Lake Hylia -> Water Temple Lobby",
-      "alias": "Map Chest Spike 2",
+      "alias": "Spiky Ball Chest Spike 2",
       "type": "enemyDrop",
       "settings": [
         {
@@ -464,7 +464,7 @@
     "Water Temple Map Chest Spike 3": {
       "area": "",
       "lKey": "Lake Hylia -> Water Temple Lobby",
-      "alias": "Map Chest Spike 3",
+      "alias": "Spiky Ball Chest Spike 3",
       "type": "enemyDrop",
       "settings": [
         {
@@ -490,7 +490,7 @@
     "Water Temple Map Chest Spike 4": {
       "area": "",
       "lKey": "Lake Hylia -> Water Temple Lobby",
-      "alias": "Map Chest Spike 4",
+      "alias": "Spiky Ball Chest Spike 4",
       "type": "enemyDrop",
       "settings": [
         {
@@ -516,7 +516,7 @@
     "Water Temple Map Chest": {
       "area": "",
       "lKey": "Lake Hylia -> Water Temple Lobby",
-      "alias": "Map Chest",
+      "alias": "Spiky Ball Chest",
       "type": "map",
       "settings": [
         {
@@ -3735,7 +3735,7 @@
     "Water Temple MQ Map Chest Stalfos 1": {
       "area": "",
       "lKey": "Lake Hylia -> Water Temple Lobby",
-      "alias": "Map Chest Stalfos 1",
+      "alias": "3 Stalfos Chest Stalfos 1",
       "type": "enemyDrop",
       "settings": [
         {
@@ -3761,7 +3761,7 @@
     "Water Temple MQ Map Chest Stalfos 2": {
       "area": "",
       "lKey": "Lake Hylia -> Water Temple Lobby",
-      "alias": "Map Chest Stalfos 2",
+      "alias": "3 Stalfos Chest Stalfos 2",
       "type": "enemyDrop",
       "settings": [
         {
@@ -3787,7 +3787,7 @@
     "Water Temple MQ Map Chest Stalfos 3": {
       "area": "",
       "lKey": "Lake Hylia -> Water Temple Lobby",
-      "alias": "Map Chest Stalfos 3",
+      "alias": "3 Stalfos Chest Stalfos 3",
       "type": "enemyDrop",
       "settings": [
         {
@@ -3813,7 +3813,7 @@
     "Water Temple MQ Map Chest Hookshot Wonderitem": {
       "area": "",
       "lKey": "Lake Hylia -> Water Temple Lobby",
-      "alias": "Map Chest Hookshot Wonderitem",
+      "alias": "3 Stalfos Chest Hookshot Wonderitem",
       "type": "item",
       "settings": [
         {
@@ -3839,7 +3839,7 @@
     "Water Temple MQ Map Chest": {
       "area": "",
       "lKey": "Lake Hylia -> Water Temple Lobby",
-      "alias": "Map Chest",
+      "alias": "3 Stalfos Chest",
       "type": "map",
       "settings": [
         {
@@ -3922,7 +3922,7 @@
     "Water Temple MQ Compass Chest Spike": {
       "area": "",
       "lKey": "Lake Hylia -> Water Temple Lobby",
-      "alias": "Compass Chest Spike",
+      "alias": "Torches Chest Spike",
       "type": "enemyDrop",
       "settings": [
         {
@@ -3948,7 +3948,7 @@
     "Water Temple MQ Compass Chest Lizalfos 1": {
       "area": "",
       "lKey": "Lake Hylia -> Water Temple Lobby",
-      "alias": "Compass Chest Lizalfos 1",
+      "alias": "Torches Chest Lizalfos 1",
       "type": "enemyDrop",
       "settings": [
         {
@@ -3974,7 +3974,7 @@
     "Water Temple MQ Compass Chest Lizalfos 2": {
       "area": "",
       "lKey": "Lake Hylia -> Water Temple Lobby",
-      "alias": "Compass Chest Lizalfos 2",
+      "alias": "Torches Chest Lizalfos 2",
       "type": "enemyDrop",
       "settings": [
         {
@@ -4000,7 +4000,7 @@
     "Water Temple MQ Compass Chest": {
       "area": "",
       "lKey": "Lake Hylia -> Water Temple Lobby",
-      "alias": "Compass Chest",
+      "alias": "Torches Chest",
       "type": "compass",
       "settings": [
         {
@@ -4021,7 +4021,7 @@
     "Water Temple MQ Compass Chest Hookshot Wonderitem": {
       "area": "",
       "lKey": "Lake Hylia -> Water Temple Lobby",
-      "alias": "Compass Chest Hookshot Wonderitem",
+      "alias": "Torches Chest Hookshot Wonderitem",
       "type": "item",
       "settings": [
         {

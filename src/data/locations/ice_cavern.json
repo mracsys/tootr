@@ -583,7 +583,7 @@
     "Ice Cavern Map Chest Ice Keese 1": {
       "area": "",
       "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
-      "alias": "Map Room Ice Keese 1",
+      "alias": "Freezard Room Ice Keese 1",
       "type": "enemyDrop",
       "settings": [
         {
@@ -609,7 +609,7 @@
     "Ice Cavern Map Chest Ice Keese 2": {
       "area": "",
       "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
-      "alias": "Map Room Ice Keese 2",
+      "alias": "Freezard Room Ice Keese 2",
       "type": "enemyDrop",
       "settings": [
         {
@@ -635,7 +635,7 @@
     "Ice Cavern Map Chest Ice Keese 3": {
       "area": "",
       "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
-      "alias": "Map Room Ice Keese 3",
+      "alias": "Freezard Room Ice Keese 3",
       "type": "enemyDrop",
       "settings": [
         {
@@ -661,7 +661,7 @@
     "Ice Cavern Map Chest Freezard Ground": {
       "area": "",
       "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
-      "alias": "Map Room Ground Freezard",
+      "alias": "Freezard Room Ground Freezard",
       "type": "enemyDrop",
       "settings": [
         {
@@ -687,7 +687,7 @@
     "Ice Cavern Map Chest Freezard Lower Platform": {
       "area": "",
       "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
-      "alias": "Map Room Lower Platform Freezard",
+      "alias": "Freezard Room Lower Platform Freezard",
       "type": "enemyDrop",
       "settings": [
         {
@@ -713,7 +713,7 @@
     "Ice Cavern Map Chest Freezard Upper Platform": {
       "area": "",
       "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
-      "alias": "Map Room Upper Freezard",
+      "alias": "Freezard Room Upper Freezard",
       "type": "enemyDrop",
       "settings": [
         {
@@ -739,7 +739,7 @@
     "Ice Cavern Map Room Recovery Heart 1": {
       "area": "",
       "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
-      "alias": "Map Room Freestanding 1",
+      "alias": "Freezard Room Freestanding 1",
       "type": "item",
       "settings": [
         {
@@ -770,7 +770,7 @@
     "Ice Cavern Map Room Recovery Heart 2": {
       "area": "",
       "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
-      "alias": "Map Room Freestanding 2",
+      "alias": "Freezard Room Freestanding 2",
       "type": "item",
       "settings": [
         {
@@ -801,7 +801,7 @@
     "Ice Cavern Map Room Recovery Heart 3": {
       "area": "",
       "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
-      "alias": "Map Room Freestanding 3",
+      "alias": "Freezard Room Freestanding 3",
       "type": "item",
       "settings": [
         {
@@ -863,7 +863,7 @@
     "Ice Cavern Map Chest": {
       "area": "",
       "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
-      "alias": "Map Chest",
+      "alias": "Freezard Chest",
       "type": "map",
       "settings": [
         {
@@ -884,7 +884,7 @@
     "Ice Cavern Compass Chest Keese 1": {
       "area": "",
       "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
-      "alias": "Compass Room Keese 1",
+      "alias": "Icicle Room Keese 1",
       "type": "enemyDrop",
       "settings": [
         {
@@ -910,7 +910,7 @@
     "Ice Cavern Compass Chest Keese 2": {
       "area": "",
       "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
-      "alias": "Compass Room Keese 2",
+      "alias": "Icicle Room Keese 2",
       "type": "enemyDrop",
       "settings": [
         {
@@ -936,7 +936,7 @@
     "Ice Cavern Compass Chest Keese 3": {
       "area": "",
       "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
-      "alias": "Compass Room Keese 3",
+      "alias": "Icicle Room Keese 3",
       "type": "enemyDrop",
       "settings": [
         {
@@ -962,7 +962,7 @@
     "Ice Cavern Freestanding PoH": {
       "area": "",
       "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
-      "alias": "Compass Room Frozen Freestanding",
+      "alias": "Icicle Room Freestanding Item",
       "type": "item",
       "settings": [
         {
@@ -983,7 +983,7 @@
     "Ice Cavern GS Heart Piece Room": {
       "area": "",
       "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
-      "alias": "Compass Room GS",
+      "alias": "Icicle Room GS",
       "type": "skulltula",
       "settings": [
         {
@@ -1035,7 +1035,7 @@
     "Ice Cavern Compass Chest": {
       "area": "",
       "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
-      "alias": "Compass Chest",
+      "alias": "Icicle Room Chest",
       "type": "compass",
       "settings": [
         {
@@ -2003,7 +2003,7 @@
     "Ice Cavern MQ Map Room Wolfos 1": {
       "area": "",
       "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
-      "alias": "Map Room Wolfos 1",
+      "alias": "Wolfos Room Wolfos 1",
       "type": "enemyDrop",
       "settings": [
         {
@@ -2029,7 +2029,7 @@
     "Ice Cavern MQ Map Room Wolfos 2": {
       "area": "",
       "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
-      "alias": "Map Room Wolfos 2",
+      "alias": "Wolfos Room Wolfos 2",
       "type": "enemyDrop",
       "settings": [
         {
@@ -2055,7 +2055,7 @@
     "Ice Cavern MQ Map Room Skullwalltula": {
       "area": "",
       "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
-      "alias": "Map Room Skullwalltula",
+      "alias": "Wolfos Room Skullwalltula",
       "type": "enemyDrop",
       "settings": [
         {
@@ -2081,7 +2081,7 @@
     "Ice Cavern MQ Map Chest": {
       "area": "",
       "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
-      "alias": "Map Chest",
+      "alias": "Wolfos Chest",
       "type": "map",
       "settings": [
         {
@@ -2102,7 +2102,7 @@
     "Ice Cavern MQ Before Compass Freezard 1": {
       "area": "",
       "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
-      "alias": "Before Compass Freezard 1",
+      "alias": "Freezard Corridor Freezard 1",
       "type": "enemyDrop",
       "settings": [
         {
@@ -2128,7 +2128,7 @@
     "Ice Cavern MQ Before Compass Freezard 2": {
       "area": "",
       "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
-      "alias": "Before Compass Freezard 2",
+      "alias": "Freezard Corridor Freezard 2",
       "type": "enemyDrop",
       "settings": [
         {
@@ -2154,7 +2154,7 @@
     "Ice Cavern MQ Compass Room Pot 1": {
       "area": "",
       "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
-      "alias": "Compass Room Pot 1",
+      "alias": "Freezard Room Pot 1",
       "type": "jar",
       "settings": [
         {
@@ -2185,7 +2185,7 @@
     "Ice Cavern MQ Compass Room Pot 2": {
       "area": "",
       "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
-      "alias": "Compass Room Pot 2",
+      "alias": "Freezard Room Pot 2",
       "type": "jar",
       "settings": [
         {
@@ -2216,7 +2216,7 @@
     "Ice Cavern MQ Compass Room Freezard 1": {
       "area": "",
       "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
-      "alias": "Compass Room Freezard 1",
+      "alias": "Freezard Room Freezard 1",
       "type": "enemyDrop",
       "settings": [
         {
@@ -2242,7 +2242,7 @@
     "Ice Cavern MQ Compass Room Freezard 2": {
       "area": "",
       "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
-      "alias": "Compass Room Freezard 2",
+      "alias": "Freezard Room Freezard 2",
       "type": "enemyDrop",
       "settings": [
         {
@@ -2268,7 +2268,7 @@
     "Ice Cavern MQ Compass Room Freezard 3": {
       "area": "",
       "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
-      "alias": "Compass Room Freezard 3",
+      "alias": "Freezard Room Freezard 3",
       "type": "enemyDrop",
       "settings": [
         {
@@ -2294,7 +2294,7 @@
     "Ice Cavern MQ GS Red Ice": {
       "area": "",
       "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
-      "alias": "Compass Room Frozen GS",
+      "alias": "Freezard Room Frozen GS",
       "type": "skulltula",
       "settings": [
         {
@@ -2346,7 +2346,7 @@
     "Ice Cavern MQ Freestanding PoH": {
       "area": "",
       "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
-      "alias": "Compass Room Freestanding",
+      "alias": "Freezard Room Freestanding",
       "type": "item",
       "settings": [
         {
@@ -2367,7 +2367,7 @@
     "Ice Cavern MQ Compass Chest": {
       "area": "",
       "lKey": "ZF Ice Ledge -> Ice Cavern Beginning",
-      "alias": "Compass Chest",
+      "alias": "Freezard Chest",
       "type": "compass",
       "settings": [
         {

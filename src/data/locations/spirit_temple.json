@@ -4393,7 +4393,7 @@
     "Spirit Temple MQ Map Room Keese 1": {
       "area": "",
       "lKey": "Desert Colossus -> Spirit Temple Lobby",
-      "alias": "Map Room Keese 1",
+      "alias": "Early Child Anubis Room Keese 1",
       "type": "enemyDrop",
       "settings": [
         {
@@ -4419,7 +4419,7 @@
     "Spirit Temple MQ Map Room Keese 2": {
       "area": "",
       "lKey": "Desert Colossus -> Spirit Temple Lobby",
-      "alias": "Map Room Keese 2",
+      "alias": "Early Child Anubis Room Keese 2",
       "type": "enemyDrop",
       "settings": [
         {
@@ -4445,7 +4445,7 @@
     "Spirit Temple MQ Map Room Keese 3": {
       "area": "",
       "lKey": "Desert Colossus -> Spirit Temple Lobby",
-      "alias": "Map Room Keese 3",
+      "alias": "Early Child Anubis Room Keese 3",
       "type": "enemyDrop",
       "settings": [
         {
@@ -4471,7 +4471,7 @@
     "Spirit Temple MQ Map Room Keese 4": {
       "area": "",
       "lKey": "Desert Colossus -> Spirit Temple Lobby",
-      "alias": "Map Room Keese 4",
+      "alias": "Early Child Anubis Room Keese 4",
       "type": "enemyDrop",
       "settings": [
         {
@@ -4497,7 +4497,7 @@
     "Spirit Temple MQ Map Room Keese 5": {
       "area": "",
       "lKey": "Desert Colossus -> Spirit Temple Lobby",
-      "alias": "Map Room Keese 5",
+      "alias": "Early Child Anubis Room Keese 5",
       "type": "enemyDrop",
       "settings": [
         {
@@ -4523,7 +4523,7 @@
     "Spirit Temple MQ Map Room Anubis": {
       "area": "",
       "lKey": "Desert Colossus -> Spirit Temple Lobby",
-      "alias": "Map Room Anubis",
+      "alias": "Early Child Anubis Room Anubis",
       "type": "enemyDrop",
       "settings": [
         {
@@ -4549,7 +4549,7 @@
     "Spirit Temple MQ Map Chest": {
       "area": "",
       "lKey": "Desert Colossus -> Spirit Temple Lobby",
-      "alias": "Map Chest",
+      "alias": "Early Child Anubis Chest",
       "type": "map",
       "settings": [
         {
@@ -4570,7 +4570,7 @@
     "Spirit Temple MQ Map Room Enemy Chest": {
       "area": "",
       "lKey": "Desert Colossus -> Spirit Temple Lobby",
-      "alias": "Map Room Enemy Chest",
+      "alias": "Early Child Anubis Room Enemies Chest",
       "type": "smallKey",
       "settings": [
         {

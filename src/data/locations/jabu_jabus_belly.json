@@ -1419,7 +1419,7 @@
     "Jabu Jabus Belly Compass Chest Shabom 1": {
       "area": "",
       "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
-      "alias": "Compass Chest Shabom 1",
+      "alias": "Bubble Room Shabom 1",
       "type": "enemyDrop",
       "settings": [
         {
@@ -1445,7 +1445,7 @@
     "Jabu Jabus Belly Compass Chest Shabom 2": {
       "area": "",
       "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
-      "alias": "Compass Chest Shabom 2",
+      "alias": "Bubble Room Shabom 2",
       "type": "enemyDrop",
       "settings": [
         {
@@ -1471,7 +1471,7 @@
     "Jabu Jabus Belly Compass Chest Shabom 3": {
       "area": "",
       "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
-      "alias": "Compass Chest Shabom 3",
+      "alias": "Bubble Room Shabom 3",
       "type": "enemyDrop",
       "settings": [
         {
@@ -1497,7 +1497,7 @@
     "Jabu Jabus Belly Compass Chest Shabom 4": {
       "area": "",
       "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
-      "alias": "Compass Chest Shabom 4",
+      "alias": "Bubble Room Shabom 4",
       "type": "enemyDrop",
       "settings": [
         {
@@ -1523,7 +1523,7 @@
     "Jabu Jabus Belly Compass Chest Shabom 5": {
       "area": "",
       "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
-      "alias": "Compass Chest Shabom 5",
+      "alias": "Bubble Room Shabom 5",
       "type": "enemyDrop",
       "settings": [
         {
@@ -1549,7 +1549,7 @@
     "Jabu Jabus Belly Compass Chest Shabom 6": {
       "area": "",
       "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
-      "alias": "Compass Chest Shabom 6",
+      "alias": "Bubble Room Shabom 6",
       "type": "enemyDrop",
       "settings": [
         {
@@ -1575,7 +1575,7 @@
     "Jabu Jabus Belly Compass Chest Shabom 7": {
       "area": "",
       "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
-      "alias": "Compass Chest Shabom 7",
+      "alias": "Bubble Room Shabom 7",
       "type": "enemyDrop",
       "settings": [
         {
@@ -1601,7 +1601,7 @@
     "Jabu Jabus Belly Compass Chest Shabom 8": {
       "area": "",
       "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
-      "alias": "Compass Chest Shabom 8",
+      "alias": "Bubble Room Shabom 8",
       "type": "enemyDrop",
       "settings": [
         {
@@ -1627,7 +1627,7 @@
     "Jabu Jabus Belly Compass Chest Shabom 9": {
       "area": "",
       "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
-      "alias": "Compass Chest Shabom 9",
+      "alias": "Bubble Room Shabom 9",
       "type": "enemyDrop",
       "settings": [
         {
@@ -1653,7 +1653,7 @@
     "Jabu Jabus Belly Compass Chest": {
       "area": "",
       "lKey": "Zoras Fountain -> Jabu Jabus Belly Beginning",
-      "alias": "Compass Chest",
+      "alias": "Bubble Room Chest",
       "type": "compass",
       "settings": [
         {

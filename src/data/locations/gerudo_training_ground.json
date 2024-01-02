@@ -2679,7 +2679,7 @@
     "Gerudo Training Grounds MQ Maze Right Side Chest": {
       "area": "",
       "lKey": "Gerudo Fortress -> Gerudo Training Grounds Lobby",
-      "alias": "Right Maze Map Chest 2",
+      "alias": "Right Maze Chest 2",
       "type": "item",
       "settings": [
         {

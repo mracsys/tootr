@@ -1037,7 +1037,7 @@ class Tracker extends React.Component {
         settings["Show Locations"] = prevSettings["Show Locations"];
         settings["Show Unshuffled Skulls"] = prevSettings["Show Unshuffled Skulls"];
         settings["Shop Price Tracking"] = prevSettings["Shop Price Tracking"];
-		settings["Show Helpful Extra checks"] = prevSettings["Shop Price Tracking"];
+		settings["Show Helpful Extra Checks"] = prevSettings["Show Helpful Extra Checks"];
         
         //let presetSettings = this.getPresetSettings(settings['Settings Preset'], prevSettings);
         //this.setPresetSettings(settings, presetSettings);
@@ -1610,6 +1610,7 @@ class Tracker extends React.Component {
             settings["Show Locations"] = prevSettings["Show Locations"];
             settings["Show Unshuffled Skulls"] = prevSettings["Show Unshuffled Skulls"];
             settings["Shop Price Tracking"] = prevSettings["Shop Price Tracking"];
+            settings["Show Helpful Extra Checks"] = prevSettings["Show Helpful Extra Checks"];
             settings["View"] = prevSettings["View"];
             
             let presetSettings = this.getPresetSettings(setting.target.value, prevSettings);
@@ -2380,13 +2381,15 @@ class Tracker extends React.Component {
                                     {
                                         Object.keys(this.state.allAreas.locations).filter(l => {
                                             return this.state.allAreas.locations[l].shuffled &&
-                                                   this.state.allAreas.locations[l].check !== "";
+                                                   this.state.allAreas.locations[l].check !== "" &&
+                                                   this.state.allAreas.locations[l].type !== 'event';
                                         }).length
                                     }
                                     /
                                     {
                                         Object.keys(this.state.allAreas.locations).filter(l => {
-                                            return this.state.allAreas.locations[l].shuffled;
+                                            return this.state.allAreas.locations[l].shuffled &&
+                                                   this.state.allAreas.locations[l].type !== 'event';
                                         }).length
                                     }
                                 </div>

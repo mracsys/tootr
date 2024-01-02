@@ -1,5 +1,28 @@
 {
   "entrances": {
+    "LW Beyond Mido -> SFM Entryway": {
+      "area": "Lost Woods",
+      "reverse": "SFM Entryway -> LW Beyond Mido",
+      "oneWay": false,
+      "oneWayArea": "",
+      "connector": "",
+      "isReverse": false,
+      "alias": "Sacred Forest Meadow",
+      "reverseAlias": "Lost Woods",
+      "tag": "",
+      "tagRep": false,
+      "tagRules": [],
+      "enableTag": true,
+      "type": "overworld",
+      "lKey": "",
+      "aLink": "",
+      "userALink": "",
+      "eLink": "",
+      "userELink": "",
+      "oneWayELink": "",
+      "userOneWayELink": "",
+      "shuffled": true
+    },
     "LW Bridge -> Kokiri Forest": {
       "area": "Lost Woods Bridge",
       "reverse": "Kokiri Forest -> LW Bridge From Forest",
@@ -115,20 +138,20 @@
       "userOneWayELink": "",
       "shuffled": true
     },
-    "LW Beyond Mido -> SFM Entryway": {
+    "LW Beyond Mido -> LW Scrubs Grotto": {
       "area": "Lost Woods",
-      "reverse": "SFM Entryway -> LW Beyond Mido",
+      "reverse": "LW Scrubs Grotto -> LW Beyond Mido",
       "oneWay": false,
       "oneWayArea": "",
       "connector": "",
       "isReverse": false,
-      "alias": "Sacred Forest Meadow",
-      "reverseAlias": "Lost Woods",
-      "tag": "",
-      "tagRep": false,
+      "alias": "Near Meadow Grotto",
+      "reverseAlias": "from Near Meadow Grotto",
+      "tag": "Special 2 Scrub Grotto",
+      "tagRep": true,
       "tagRules": [],
       "enableTag": true,
-      "type": "overworld",
+      "type": "grotto",
       "lKey": "",
       "aLink": "",
       "userALink": "",
@@ -171,29 +194,6 @@
       "alias": "Open Grotto",
       "reverseAlias": "from Open Grotto",
       "tag": "Deku Theater",
-      "tagRep": true,
-      "tagRules": [],
-      "enableTag": true,
-      "type": "grotto",
-      "lKey": "",
-      "aLink": "",
-      "userALink": "",
-      "eLink": "",
-      "userELink": "",
-      "oneWayELink": "",
-      "userOneWayELink": "",
-      "shuffled": true
-    },
-    "LW Beyond Mido -> LW Scrubs Grotto": {
-      "area": "Lost Woods",
-      "reverse": "LW Scrubs Grotto -> LW Beyond Mido",
-      "oneWay": false,
-      "oneWayArea": "",
-      "connector": "",
-      "isReverse": false,
-      "alias": "Near Meadow Grotto",
-      "reverseAlias": "from Near Meadow Grotto",
-      "tag": "Special 2 Scrub Grotto",
       "tagRep": true,
       "tagRules": [],
       "enableTag": true,
@@ -249,7 +249,7 @@
       "area": "Lost Woods",
       "lKey": "",
       "alias": "Trade Skull Mask to Skull Kid",
-      "type": "item",
+      "type": "event",
       "settings": [
         {
           "setting": "Show Helpful Extra Checks",
@@ -380,7 +380,7 @@
       "area": "Lost Woods",
       "lKey": "",
       "alias": "Plant Bean Patch Near Bridge",
-      "type": "item",
+      "type": "event",
       "settings": [
         {
           "setting": "Plant Beans",
@@ -952,7 +952,7 @@
       "area": "Lost Woods",
       "lKey": "",
       "alias": "Plant Bean Patch Near Theater",
-      "type": "item",
+      "type": "event",
       "settings": [
         {
           "setting": "Plant Beans",

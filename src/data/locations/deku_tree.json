@@ -434,7 +434,7 @@
     "Deku Tree Compass Chest": {
       "area": "",
       "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
-      "alias": "Compass Room Chest 1",
+      "alias": "Top Room Chest 1",
       "type": "compass",
       "settings": [
         {
@@ -455,7 +455,7 @@
     "Deku Tree Compass Room Side Chest": {
       "area": "",
       "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
-      "alias": "Compass Room Chest 2",
+      "alias": "Top Room Chest 2",
       "type": "item",
       "settings": [
         {
@@ -476,7 +476,7 @@
     "Deku Tree GS Compass Room": {
       "area": "",
       "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
-      "alias": "Compass Room GS",
+      "alias": "Top Room GS",
       "type": "skulltula",
       "settings": [
         {
@@ -528,7 +528,7 @@
     "Deku Tree Compass Room Grass 1": {
       "area": "",
       "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
-      "alias": "Compass Room Grass 1",
+      "alias": "Top Room Grass 1",
       "type": "grass",
       "settings": [
         {
@@ -554,7 +554,7 @@
     "Deku Tree Compass Room Grass 2": {
       "area": "",
       "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
-      "alias": "Compass Room Grass 2",
+      "alias": "Top Room Grass 2",
       "type": "grass",
       "settings": [
         {
@@ -580,7 +580,7 @@
     "Deku Tree Compass Room Skulltula": {
       "area": "",
       "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
-      "alias": "Compass Room Skulltula",
+      "alias": "Top Room Skulltula",
       "type": "enemyDrop",
       "settings": [
         {
@@ -2373,7 +2373,7 @@
     "Deku Tree MQ Near Compass Room Recovery Heart": {
       "area": "",
       "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
-      "alias": "Room Before Compass Freestanding",
+      "alias": "Big Baba Room Freestanding",
       "type": "item",
       "settings": [
         {
@@ -2404,7 +2404,7 @@
     "Deku Tree MQ Room Before Compass Grass 1": {
       "area": "",
       "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
-      "alias": "Room Before Compass Grass 1",
+      "alias": "Big Baba Room Grass 1",
       "type": "grass",
       "settings": [
         {
@@ -2430,7 +2430,7 @@
     "Deku Tree MQ Room Before Compass Grass 2": {
       "area": "",
       "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
-      "alias": "Room Before Compass Grass 2",
+      "alias": "Big Baba Room Grass 2",
       "type": "grass",
       "settings": [
         {
@@ -2456,7 +2456,7 @@
     "Deku Tree MQ Room Before Compass Grass 3": {
       "area": "",
       "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
-      "alias": "Room Before Compass Grass 3",
+      "alias": "Big Baba Room Grass 3",
       "type": "grass",
       "settings": [
         {
@@ -2482,7 +2482,7 @@
     "Deku Tree MQ Room Before Compass Grass 4": {
       "area": "",
       "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
-      "alias": "Room Before Compass Grass 4",
+      "alias": "Big Baba Room Grass 4",
       "type": "grass",
       "settings": [
         {
@@ -2508,7 +2508,7 @@
     "Deku Tree MQ Room Before Compass Grass 5": {
       "area": "",
       "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
-      "alias": "Room Before Compass Grass 5",
+      "alias": "Big Baba Room Grass 5",
       "type": "grass",
       "settings": [
         {
@@ -2534,7 +2534,7 @@
     "Deku Tree MQ Room Before Compass Grass 6": {
       "area": "",
       "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
-      "alias": "Room Before Compass Grass 6",
+      "alias": "Big Baba Room Grass 6",
       "type": "grass",
       "settings": [
         {
@@ -2560,7 +2560,7 @@
     "Deku Tree MQ Room Before Compass Grass 7": {
       "area": "",
       "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
-      "alias": "Room Before Compass Grass 7",
+      "alias": "Big Baba Room Grass 7",
       "type": "grass",
       "settings": [
         {
@@ -2586,7 +2586,7 @@
     "Deku Tree MQ Before Compass Gohma Larva 1": {
       "area": "",
       "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
-      "alias": "Before Compass Gohma Larva 1",
+      "alias": "Big Baba Room Gohma Larva 1",
       "type": "enemyDrop",
       "settings": [
         {
@@ -2612,7 +2612,7 @@
     "Deku Tree MQ Before Compass Gohma Larva 2": {
       "area": "",
       "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
-      "alias": "Before Compass Gohma Larva 2",
+      "alias": "Big Baba Room Gohma Larva 2",
       "type": "enemyDrop",
       "settings": [
         {
@@ -2638,7 +2638,7 @@
     "Deku Tree MQ Compass Room Grass 1": {
       "area": "",
       "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
-      "alias": "Compass Room Grass 1",
+      "alias": "Spider Room Grass 1",
       "type": "grass",
       "settings": [
         {
@@ -2664,7 +2664,7 @@
     "Deku Tree MQ Compass Room Grass 2": {
       "area": "",
       "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
-      "alias": "Compass Room Grass 2",
+      "alias": "Spider Room Grass 2",
       "type": "grass",
       "settings": [
         {
@@ -2690,7 +2690,7 @@
     "Deku Tree MQ Compass Room Grass 3": {
       "area": "",
       "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
-      "alias": "Compass Room Grass 3",
+      "alias": "Spider Room Grass 3",
       "type": "grass",
       "settings": [
         {
@@ -2716,7 +2716,7 @@
     "Deku Tree MQ Compass Room Grass 4": {
       "area": "",
       "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
-      "alias": "Compass Room Grass 4",
+      "alias": "Spider Room Grass 4",
       "type": "grass",
       "settings": [
         {
@@ -2742,7 +2742,7 @@
     "Deku Tree MQ Compass Room Left Skullwalltula": {
       "area": "",
       "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
-      "alias": "Compass Room Left Skullwalltula",
+      "alias": "Spider Room Left Skullwalltula",
       "type": "enemyDrop",
       "settings": [
         {
@@ -2768,7 +2768,7 @@
     "Deku Tree MQ Compass Room Right Skullwalltula": {
       "area": "",
       "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
-      "alias": "Compass Room Right Skullwalltula",
+      "alias": "Spider Room Right Skullwalltula",
       "type": "enemyDrop",
       "settings": [
         {
@@ -2794,7 +2794,7 @@
     "Deku Tree MQ Compass Room Skulltula": {
       "area": "",
       "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
-      "alias": "Compass Room Skulltula",
+      "alias": "Spider Room Skulltula",
       "type": "enemyDrop",
       "settings": [
         {
@@ -2820,7 +2820,7 @@
     "Deku Tree MQ Compass Room Gohma Larva 1": {
       "area": "",
       "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
-      "alias": "Compass Room Gohma Larva 1",
+      "alias": "Spider Room Gohma Larva 1",
       "type": "enemyDrop",
       "settings": [
         {
@@ -2846,7 +2846,7 @@
     "Deku Tree MQ Compass Room Gohma Larva 2": {
       "area": "",
       "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
-      "alias": "Compass Room Gohma Larva 2",
+      "alias": "Spider Room Gohma Larva 2",
       "type": "enemyDrop",
       "settings": [
         {
@@ -2872,7 +2872,7 @@
     "Deku Tree MQ Compass Chest": {
       "area": "",
       "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
-      "alias": "Compass Room Chest",
+      "alias": "Spider Room Chest",
       "type": "compass",
       "settings": [
         {
@@ -2893,7 +2893,7 @@
     "Deku Tree MQ Compass Room Recovery Heart": {
       "area": "",
       "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
-      "alias": "Compass Room Freestanding",
+      "alias": "Spider Room Freestanding",
       "type": "item",
       "settings": [
         {
@@ -2924,7 +2924,7 @@
     "Deku Tree MQ GS Compass Room": {
       "area": "",
       "lKey": "KF Outside Deku Tree -> Deku Tree Lobby",
-      "alias": "Compass Room GS",
+      "alias": "Spider Room GS",
       "type": "skulltula",
       "settings": [
         {

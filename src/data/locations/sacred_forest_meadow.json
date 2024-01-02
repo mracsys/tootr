@@ -69,16 +69,16 @@
       "userOneWayELink": "",
       "shuffled": true
     },
-    "Sacred Forest Meadow -> SFM Fairy Grotto": {
+    "Sacred Forest Meadow -> SFM Storms Grotto": {
       "area": "Sacred Forest Meadow",
-      "reverse": "SFM Fairy Grotto -> Sacred Forest Meadow",
+      "reverse": "SFM Storms Grotto -> Sacred Forest Meadow",
       "oneWay": false,
       "oneWayArea": "",
       "connector": "",
       "isReverse": false,
-      "alias": "Open Grotto",
-      "reverseAlias": "from Open Grotto",
-      "tag": "Fairy Fountain",
+      "alias": "Storms Grotto",
+      "reverseAlias": "from Storms Grotto",
+      "tag": "2 Scrub Grotto",
       "tagRep": false,
       "tagRules": [],
       "enableTag": true,
@@ -92,16 +92,16 @@
       "userOneWayELink": "",
       "shuffled": true
     },
-    "Sacred Forest Meadow -> SFM Storms Grotto": {
+    "Sacred Forest Meadow -> SFM Fairy Grotto": {
       "area": "Sacred Forest Meadow",
-      "reverse": "SFM Storms Grotto -> Sacred Forest Meadow",
+      "reverse": "SFM Fairy Grotto -> Sacred Forest Meadow",
       "oneWay": false,
       "oneWayArea": "",
       "connector": "",
       "isReverse": false,
-      "alias": "Storms Grotto",
-      "reverseAlias": "from Storms Grotto",
-      "tag": "2 Scrub Grotto",
+      "alias": "Open Grotto",
+      "reverseAlias": "from Open Grotto",
+      "tag": "Fairy Fountain",
       "tagRep": false,
       "tagRules": [],
       "enableTag": true,
