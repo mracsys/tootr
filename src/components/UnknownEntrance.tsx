@@ -117,7 +117,7 @@ const UnknownEntrance = ({
             if (!!reverseLink.target_group && reverseLink.target_group.page === '') {
                 internalLocations.push(...reverseLink.target_group.locations.filter(l => (!l.checked || collapsedRegions[title] === 'none') && l.viewable(true) && !l.is_hint && (searchTerm === '' || l.alias.toLowerCase().includes(searchTerm.toLowerCase()))));
                 shopLocations.push(...reverseLink.target_group.locations.filter(l => l.is_shop && l.holds_shop_refill && (searchTerm === '' || l.alias.toLowerCase().includes(searchTerm.toLowerCase()))));
-                otherEntrances.push(...reverseLink.target_group.exits.filter(e => !(renderedConnectors.includes(e)) && (e !== reverseLink.reverse || (!e.coupled && e.shuffled))));
+                otherEntrances.push(...reverseLink.target_group.exits.filter(e => !(renderedConnectors.includes(e)) && (e.shuffled || e.target_group !== reverseLink.source_group) && (e !== reverseLink.reverse || (!e.coupled && e.shuffled))));
             }
             let entranceFrom = buildExitEntranceName(reverseLink);
             let searchMatch = searchTerm === ''

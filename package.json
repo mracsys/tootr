@@ -14,11 +14,11 @@
     "@emotion/styled": "^11.11.0",
     "@mracsys/randomizer-graph-tool": "./mracsys-randomizer-graph-tool-v2.0.0.tgz",
     "@mui/icons-material": "^5.14.3",
-    "@mui/lab": "^5.0.0-alpha.170",
     "@mui/material": "^5.14.5",
     "lodash": "^4.17.21",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-responsive-masonry": "^2.2.0"
   },
   "devDependencies": {
     "@esbuild-plugins/node-globals-polyfill": "^0.2.3",
@@ -27,6 +27,7 @@
     "@types/node": "^20.5.0",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
+    "@types/react-responsive-masonry": "^2.1.3",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
     "@vitejs/plugin-react": "^4.0.3",

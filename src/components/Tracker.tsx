@@ -21,8 +21,7 @@ import { Drawer } from '@mui/material';
 import { Link } from '@mui/material';
 import { SelectChangeEvent } from '@mui/material/Select';
 import CssBaseline from '@mui/material/CssBaseline';
-import Masonry from '@mui/lab/Masonry';
-
+import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
 import GameSetting from './GameSetting';
 import GameArea from './GameArea';
@@ -285,15 +284,18 @@ const Tracker = (_props: {}) => {
             setDelayedURL('');
         }
         if (scrollY !== null && entranceRef !== null && Object.keys(scroller.current).includes(entranceRef)) {
-            let eRef = scroller.current[entranceRef];
-            let rect = eRef.getBoundingClientRect();
-            let oTop = rect.top;
-            let scrollToY = scrollY;
-            window.scrollTo({
-                top: 2 * window.scrollY + oTop - scrollToY,
+            let delay = () => new Promise(res => setTimeout(res, 1));
+            delay().then(() => {
+                let eRef = scroller.current[entranceRef];
+                let rect = eRef.getBoundingClientRect();
+                let oTop = rect.top;
+                let scrollToY = scrollY;
+                window.scrollTo({
+                    top: 2 * window.scrollY + oTop - scrollToY,
+                });
+                setScrollY(null);
+                setEntranceRef('');
             });
-            setScrollY(null);
-            setEntranceRef('');
         }
 
         let ignore = false;
@@ -844,7 +846,7 @@ const Tracker = (_props: {}) => {
     //const customTheme = themeDark ? dark : light;
     //const { classes } = this.props;
     const customTheme = createTheme({
-        breakpoints: {
+        /*breakpoints: {
             values: {
                 xs: 0,
                 sm: 1704,
@@ -852,7 +854,7 @@ const Tracker = (_props: {}) => {
                 lg: 2824,
                 xl: 3384,
             }
-        },
+        },*/
         components: {
             MuiMenu: {
                 styleOverrides: {
@@ -1085,7 +1087,14 @@ const Tracker = (_props: {}) => {
                                 />
                             </div>
                             <div className='worldInfo'>
-                                <Masonry columns={{ xs: 1, sm: 2, md: 3, lg: 4, xl: 5 }} spacing={2}>
+                                <ResponsiveMasonry columnsCountBreakPoints={{
+                                    0: 1,
+                                    1704: 2,
+                                    2264: 3,
+                                    2824: 4,
+                                    3384: 5,
+                                }}>
+                                <Masonry gutter="16px">
                                 {
                                     graph.worlds[playerNumber].region_groups.filter(r => r.page === settings["View"] && r.viewable).sort((a, b) => a.alias.localeCompare(b.alias)).map((region, regionIndex) => {
                                         return (
@@ -1121,6 +1130,7 @@ const Tracker = (_props: {}) => {
                                     })
                                 }
                                 </Masonry>
+                                </ResponsiveMasonry>
                             </div>
                         </div>
                     </div>
