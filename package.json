@@ -14,6 +14,7 @@
     "@emotion/styled": "^11.11.0",
     "@mracsys/randomizer-graph-tool": "./mracsys-randomizer-graph-tool-v2.0.0.tgz",
     "@mui/icons-material": "^5.14.3",
+    "@mui/lab": "^5.0.0-alpha.170",
     "@mui/material": "^5.14.5",
     "lodash": "^4.17.21",
     "react": "^18.2.0",

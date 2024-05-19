@@ -3,6 +3,7 @@ import { IconDict } from "./OotIcon";
 import { SvgIconComponent } from "@mui/icons-material";
 import PublicIcon from '@mui/icons-material/Public';
 import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
+import VisibilityIcon from '@mui/icons-material/Visibility';
 import ClearIcon from '@mui/icons-material/Clear';
 import ShortcutIcon from '@mui/icons-material/Shortcut';
 import HomeIcon from '@mui/icons-material/Home';
@@ -141,11 +142,17 @@ export const OotSettingAssetMapFactory = (graphSettings: GraphSettingsConfigurat
             tooltip: graphSettingsOptions['shuffle_ganon_bosskey'].display_name,
             tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['shuffle_ganon_bosskey']),
         },
-        'trials': {
+        'graphplugin_trials_specific': {
             img: '/images/trial_seed.png',
-            rSub: graphSettings['trials'],
-            fade: graphSettings['trials'] === 0,
-            tooltip: graphSettingsOptions['trials'].display_name,
+            rSub: Array.isArray(graphSettings['graphplugin_trials_specific']) ? graphSettings['graphplugin_trials_specific'].length.toString() : '0',
+            rSubSource: 'graphplugin_trials_specific',
+            tooltip: graphSettingsOptions['graphplugin_trials_specific'].display_name,
+        },
+        'graphplugin_viewable_unshuffled_items': {
+            img: VisibilityIcon,
+            rSub: Array.isArray(graphSettings['graphplugin_viewable_unshuffled_items']) ? graphSettings['graphplugin_viewable_unshuffled_items'].length.toString() : '0',
+            rSubSource: 'graphplugin_viewable_unshuffled_items',
+            tooltip: graphSettingsOptions['graphplugin_viewable_unshuffled_items'].display_name,
         },
         'shuffle_hideoutkeys': {
             img: '/images/jail_door.png',
@@ -655,6 +662,19 @@ export const OotSettingAssetMapFactory = (graphSettings: GraphSettingsConfigurat
             tooltip: graphSettingsOptions['mq_dungeons_specific'].display_name,
             tooltip2: Array.isArray(graphSettings['mq_dungeons_specific']) ? graphSettings['mq_dungeons_specific'].join('\n') : 'None',
         },
+        'allowed_tricks': {
+            img: '/images/jackolantern.png',
+            rSub: Array.isArray(graphSettings['allowed_tricks']) ? graphSettings['allowed_tricks'].length.toString() : '0',
+            tooltip: graphSettingsOptions['allowed_tricks'].display_name,
+            tooltip2: Array.isArray(graphSettings['allowed_tricks']) ? graphSettings['allowed_tricks'].length.toString() + ' tricks' : '0 tricks',
+        },
+        'disabled_locations': {
+            img: '/images/disabled_locations_mask.png',
+            rSub: Array.isArray(graphSettings['disabled_locations']) ? graphSettings['disabled_locations'].length.toString() : '0',
+            tooltip: graphSettingsOptions['disabled_locations'].display_name,
+            tooltip2: Array.isArray(graphSettings['disabled_locations']) ? graphSettings['disabled_locations'].length.toString() + ' locations' : '0 locations',
+        },
+
     }
     return settingMap;
 }

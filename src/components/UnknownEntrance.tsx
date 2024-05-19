@@ -22,6 +22,24 @@ export const buildEntranceName = (entrance: GraphEntrance): string => {
     }
 }
 
+export const buildExitName = (entrance: GraphEntrance): string => {
+    let eLink = !!(entrance.replaces) ? entrance.replaces : entrance;
+    if (!eLink.use_target_alias) {
+        return eLink.alias;
+    } else {
+        return eLink.target_alias;
+    }
+}
+
+export const buildExitEntranceName = (entrance: GraphEntrance): string | null => {
+    let eLink = !!(entrance.replaces) ? entrance.replaces : entrance;
+    if (!!eLink.reverse && eLink.target_group?.page !== '') {
+        return `from ${eLink.reverse.alias}`;
+    } else {
+        return null;
+    }
+}
+
 interface UnknownEntranceProps {
     forceVisible: boolean,
     title: string,
@@ -46,6 +64,7 @@ interface UnknownEntranceProps {
     showShopRupee: boolean,
     ekey: string,
     scrollRef: string,
+    searchTerm: string,
 }
 
 const UnknownEntrance = ({
@@ -72,6 +91,7 @@ const UnknownEntrance = ({
     showShopRupee,
     ekey,
     scrollRef,
+    searchTerm,
 }: UnknownEntranceProps) => {
     let eType = entrance.type;
     let reverseLink = !!(entrance.replaces) ? entrance.replaces : entrance;
@@ -95,13 +115,19 @@ const UnknownEntrance = ({
             let internalLocations: GraphLocation[] = [];
             let otherEntrances: GraphEntrance[] = [];
             if (!!reverseLink.target_group && reverseLink.target_group.page === '') {
-                internalLocations.push(...reverseLink.target_group.locations.filter(l => (!l.checked || collapsedRegions[title] === 'none') && l.viewable() && !l.is_hint));
-                shopLocations.push(...reverseLink.target_group.locations.filter(l => l.is_shop && l.holds_shop_refill));
+                internalLocations.push(...reverseLink.target_group.locations.filter(l => (!l.checked || collapsedRegions[title] === 'none') && l.viewable(true) && !l.is_hint && (searchTerm === '' || l.alias.toLowerCase().includes(searchTerm.toLowerCase()))));
+                shopLocations.push(...reverseLink.target_group.locations.filter(l => l.is_shop && l.holds_shop_refill && (searchTerm === '' || l.alias.toLowerCase().includes(searchTerm.toLowerCase()))));
                 otherEntrances.push(...reverseLink.target_group.exits.filter(e => !(renderedConnectors.includes(e)) && (e !== reverseLink.reverse || (!e.coupled && e.shuffled))));
             }
-            if ((reverseLink.target_group.page !== ''
-            || reverseLink.is_warp
-            || (reverseLink.target_group.page === '' && (internalLocations.length > 0 || shopLocations.length > 0 || otherEntrances.length > 0)))) {
+            let entranceFrom = buildExitEntranceName(reverseLink);
+            let searchMatch = searchTerm === ''
+                || buildEntranceName(reverseLink).toLowerCase().includes(searchTerm.toLowerCase())
+                || buildExitName(reverseLink).toLowerCase().includes(searchTerm.toLowerCase())
+                || (entranceFrom !== null && entranceFrom.toLowerCase().includes(searchTerm.toLowerCase()));
+            // Need to figure out what to do about nested entrances (decoupled, interior connectors)
+            if (((reverseLink.target_group.page !== '' && searchMatch)
+            || (reverseLink.is_warp && searchMatch)
+            || (reverseLink.target_group.page === '' && ((searchMatch && searchTerm !== '') || internalLocations.length > 0 || shopLocations.length > 0 || otherEntrances.length > 0)))) {
                 return (
                     <React.Fragment>
                         { forceVisible === false ? <hr /> : null }
@@ -131,11 +157,12 @@ const UnknownEntrance = ({
                             forceVisible={forceVisible}
                             scrollRef={scrollRef}
                             ekey={ekey}
+                            searchTerm={searchTerm}
                         />
                     </React.Fragment>
                 );
-            }
-        }
+            } else { return null }
+        } else { return null }
     } else { return null }
 }
 

@@ -1,0 +1,258 @@
+/* 
+    Technique for circular background segments modified from
+    https://www.custarddoughnuts.co.uk/article/2016/5/14/making-segmented-circles-and-pie-charts-in-css
+*/
+
+.buttonWrapper {
+    --button-size: 48px;
+    --animation-duration: .25s;
+    position: relative;
+    width: var(--button-size);
+    height: var(--button-size);
+}
+
+.dualMenuWrapper {
+    /*
+        3 items (menu button + two menu items) in a horizontal row.
+        Assume 8px padding for each side.
+    */
+    --radial-width: calc((var(--item-count) + 1) * 48 + 16);
+    z-index: 3;
+}
+
+.radialMenuWrapper {
+    /*
+        Calculate menu diameter by assuming the circumference
+        of the circle passing through the midpoints of every
+        square button icon is equal to the sum of the diagonals
+        of the buttons:
+            Button WxH: 48px by 48px
+            Button diagonal: sqrt(2 * 48^2) = about 68px
+            Circumference: # buttons * 68px
+            Menu diameter: Circumference / pi
+        Additional padding of half a button diagonal is added
+        to account for the menu background extending past the
+        button midpoints to the outer corners.
+    */
+    --radial-width: calc(var(--item-count) * 68 / pi + 34);
+    z-index: 3;
+}
+
+.subRadialMenuWrapper {
+    /*
+        Second tier ring uses icons the same size as the primary
+        ring, so we can guarantee enough space for the new buttons
+        with an additional 1.5 diagonals (1.5 * 68px = 102px)
+    */
+    --radial-width: calc(var(--item-count) * 68 / pi + 34 + 153);
+    z-index: 2;
+}
+
+.subRadialMenuWrapper,
+.dualMenuWrapper,
+.radialMenuWrapper {
+    position: absolute;
+    top: calc(var(--button-size) / 2 - var(--radial-width) * 1px / 2);
+    left: calc(var(--button-size) / 2 - var(--radial-width) * 1px / 2);
+}
+
+/*
+    BUG: Chrome applies the overflow to the entire div, ignoring
+    the border radius. This prevents clicking on submenu elements
+    near the border with the main circle if the element is placed
+    along one of the pre-border-radius corners. Not a problem on
+    Firefox.
+    Answers I could find on Stackoverflow/Google were outdated.
+*/
+.radialMenu {
+    position: absolute;
+    top: calc((var(--radial-width) * 1px - var(--menu-width)) / 2);
+    left: calc((var(--radial-width) * 1px - var(--menu-width)) / 2);
+    width: var(--menu-width);
+    height: var(--menu-width);
+    border-radius: 50%;
+    box-sizing: border-box;
+    background-color: #212121;
+    overflow: hidden;
+}
+
+.radialMenu.subRadialMenu {
+    background-color: transparent;
+    z-index: 2;
+}
+
+.radialMenu .radialMenuItem {
+    position: absolute;
+    transition: var(--animation-duration);
+    top: 49%;
+    left: 49%;
+    width: 2%;
+    height: 2%;
+    transform: rotate(calc(var(--angle) * var(--index)));
+}
+
+.radialMenu.subRadialMenu .radialMenuItem {
+    transform: rotate(calc(var(--angle) * var(--index) + var(--sub-angle) * var(--sub-item-count) / 2 - var(--sub-angle) * var(--sub-index)));
+}
+
+.subMenuBackground {
+    position: absolute;
+    transition: var(--animation-duration);
+    top: 49%;
+    left: 49%;
+    width: 2%;
+    height: 2%;
+    transform: rotate(calc(var(--angle) * var(--index) + var(--angle) / 2 - var(--sub-angle) * var(--sub-item-count) / 2));
+}
+
+.subMenuBackgroundColor {
+    position: absolute;
+    width: 10000%; /* Larger size to handle angles close to 180 degrees */
+    height: 10000%;
+    overflow: hidden;
+    bottom: 50%;
+    right: 50%;
+    transform-origin: 0 100%;
+    transform: skewX(calc(90deg - var(--sub-angle) * var(--sub-item-count)));
+    background-color: #212121;
+}
+
+.radialMenu .segment {
+    position: absolute;
+    width: 5000%;
+    height: 5000%;
+    overflow: hidden;
+}
+
+.dualMenuWrapper .segment {
+    bottom: -2450%;
+    right: 50%;
+}
+
+.subRadialMenuWrapper .segment,
+.radialMenuWrapper .segment {
+    bottom: 50%;
+    right: 50%;
+    transform-origin: 0 100%;
+    transform: skewX(calc(90deg - var(--angle)));
+}
+
+.radialMenu.subRadialMenu .segment {
+    transform: skewX(calc(90deg - var(--sub-angle)));
+}
+
+.inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    transform-origin: 50% 50%;
+}
+
+.dualMenuWrapper .inner {
+    right: -50%;
+    bottom: 0%;
+}
+
+.subRadialMenuWrapper .inner,
+.radialMenuWrapper .inner {
+    right: -50%;
+    bottom: -50%;
+    transform: skewX(calc(-1 * (90deg - var(--angle))));
+}
+
+.radialMenu.subRadialMenu .inner {
+    transform: skewX(calc(-1 * (90deg - var(--sub-angle))));
+}
+
+.inner:hover {
+    background-color: #424242;
+    cursor: pointer;
+}
+
+/* Rotate each element to its radial track, keeping each element at the center of the menu */
+.subMenuToggler ~ .radialMenu.subRadialMenu,
+.radialMenuToggler ~ .dualMenuWrapper .radialMenu,
+.radialMenuToggler ~ .radialMenuWrapper .radialMenu {
+    --menu-width: 0px;
+    transition: var(--animation-duration);
+}
+
+/* When the menu button is clicked, move the elements out along their tracks to the outer menu radius */
+.subMenuToggler:checked ~ .radialMenu.subRadialMenu,
+.radialMenuToggler:checked ~ .dualMenuWrapper .radialMenu,
+.radialMenuToggler:checked ~ .radialMenuWrapper .radialMenu {
+    --menu-width: calc(var(--radial-width) * 1px);
+}
+
+/* Rotate the contents back to level orientation */
+.radialMenuItem .iconTooltipContainer {
+    position: absolute;
+    left: 5%;
+    width: var(--button-size);
+    height: var(--button-size);
+    transform: rotate(calc(-1 * (var(--angle) * var(--index))));
+    transition: var(--animation-duration);
+}
+
+.radialMenuItem .iconTooltipContainer .iconSideText {
+    width: 48px;
+    height: 48px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+}
+
+.subRadialMenu .radialMenuItem .iconDiv {
+    display: none;
+}
+
+.subRadialMenu .radialMenuItem .iconTooltipContainer {
+    transform: rotate(calc(-1 * (var(--angle) * var(--index) + var(--sub-angle) * var(--sub-item-count) / 2 - var(--sub-angle) * var(--sub-index))));
+}
+
+.radialMenuWrapper .radialMenuItem .iconTooltipContainer {
+    top: calc(var(--menu-width) / 2 - (var(--menu-width) / 2 - var(--menu-width) * 0.05) * tan(var(--angle) / 2) - var(--button-size) / 4);
+}
+
+.subRadialMenu .radialMenuItem .iconTooltipContainer {
+    top: calc(var(--menu-width) / 2 - var(--menu-width) / 2 * tan(var(--sub-angle) / 2) - var(--button-size) / 4);
+}
+
+.dualMenuWrapper .radialMenuItem .iconTooltipContainer {
+    top: calc(var(--menu-width) / 2 - var(--button-size) / 2);
+}
+
+.radialMenuItem .iconTooltipContainer .iconDiv:hover {
+    background-color: transparent;
+}
+
+.subMenuToggler,
+.radialMenuToggler {
+    display: none;
+}
+
+.radialMenuToggler ~ .iconTooltipContainer {
+    position: relative;
+    z-index: 1;
+    transition: z-index 1ms var(--animation-duration);
+}
+
+.radialMenuToggler:checked ~ .iconTooltipContainer {
+    position: relative;
+    z-index: 4;
+    transition: z-index 1ms;
+}
+
+/* Make the menu button hover background circular to look nicer */
+.locationItemMenu .radialMenuToggler ~ .iconTooltipContainer .iconDiv {
+    border-radius: 0;
+    transition: all var(--animation-duration), background-color 1ms;
+}
+
+.locationItemMenu .radialMenuToggler:checked ~ .iconTooltipContainer .iconDiv {
+    border-radius: 50%;
+    background-color: #424242;
+}

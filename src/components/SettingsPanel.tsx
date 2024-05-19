@@ -34,7 +34,7 @@ export const SettingPanel = ({
         while(visible_tab_settings.length) {
             tab_setting_sets.push(visible_tab_settings.splice(0, settingIconsPerRow));
         }
-        let visible_section_settings: {[section: string]: GraphSetting[][]} = Object.keys(tab.sections).reduce((p: any, c: string) => {
+        let visible_section_settings: {[section: string]: GraphSetting[][]} = Object.keys(tab.sections).sort().reduce((p: any, c: string) => {
             let visible = tab.sections[c].filter(s => Object.keys(settingAssetMap).includes(s.name) && !(s.disabled(graphSettings)));
             let section_visible = [];
             while(visible.length) {
@@ -47,7 +47,6 @@ export const SettingPanel = ({
         if (tab_setting_sets.length > 0 || Object.keys(visible_section_settings).length > 0) {
             tab_output.push(
                 <div className="settingTabContainer" key={tab_name + 'tabpanelkey'}>
-                    <span className="settingTabName">{tab_name}</span>
                     {
                         tab_setting_sets.map((tab_setting_row, j) =>
                             <div className="locationItemMenu" key={tab_name + 'tabpanelrowkey' + j}>

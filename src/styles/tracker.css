@@ -11,7 +11,7 @@ body {
     background-color: rgb(215, 215, 215) !important;
     --theme-spacing: 8px;
     --drawer-width: 240px;
-    --game-info-width: 528px;
+    --game-info-width: 480px;
     --color-header: #546e7a;
     --area-column-width: 540px;
 }
@@ -75,6 +75,19 @@ body.dark {
 .titleText {
     font-family: 'Hylia Serif Beta';
     font-size: 2.125rem;
+}
+.seedMenuButtonLabel {
+    font-family: 'Hylia Serif Beta';
+    font-size: 2.125rem;
+    cursor: pointer;
+    margin: 0 calc(var(--theme-spacing) * 2);
+}
+.searchContainer {
+    margin: 0 calc(var(--theme-spacing) * 2);
+}
+#trackerGlobalSearchBox {
+    padding: calc(var(--theme-spacing) * 0.5) calc(var(--theme-spacing) * 1);
+    border-radius: calc(var(--theme-spacing) * 2);
 }
 .checkCount {
     font-family: 'Hylia Serif Beta';
@@ -197,7 +210,6 @@ body.dark {
     window-padding = game-info-width + theme-spacing * 2 + areaPaper.padding(20px) * 2
     cutoff = window-padding + (column-width + column-gap) * column-count
     max-width = column-width + (column-width + column-gap) * (column-count - 1)
-*/
 @media screen and (max-width: 1704px) {
     .worldInfo {
         max-width: 540px;
@@ -233,6 +245,13 @@ body.dark {
         column-gap: 20px;
     }
 }
+*/
+/*.worldInfo {
+    display: grid;
+    gap: 0px 20px;
+    grid-template-columns: repeat(auto-fill, minmax(540px, 1fr));
+    grid-template-rows: masonry;
+}*/
 /*[theme.breakpoints.down('xs')] {
     width: '100%';
 }*/
@@ -282,6 +301,7 @@ body.dark {
 }
 .areaRefreshCounter {
     color: #fff59d; /*yellow[200]*/
+    opacity: 0;
 }
 .areaTitleCollapse {
     flex-grow: 1;
@@ -410,9 +430,39 @@ body.dark {
     text-align: right;
     text-shadow: 0px 0px 6px #000000, 0px 0px 2px #000000, 0px 0px 2px #000000, 0px 0px 2px #000000, 0px 0px 2px #000000;
 }
+.iconRightTopText {
+    position: absolute;
+    top: -4px;
+    right: 0px;
+    width: 16px;
+    font-family: 'Hylia Serif Beta';
+    line-height: 1.43em;
+    text-align: right;
+    text-shadow: 0px 0px 6px #000000, 0px 0px 2px #000000, 0px 0px 2px #000000, 0px 0px 2px #000000, 0px 0px 2px #000000;
+}
+.iconCenterText {
+    position: absolute;
+    bottom: -4px;
+    left: 0px;
+    width: 32px;
+    font-family: 'Hylia Serif Beta';
+    line-height: 1.43em;
+    text-align: center;
+    text-shadow: 0px 0px 6px #000000, 0px 0px 2px #000000, 0px 0px 2px #000000, 0px 0px 2px #000000, 0px 0px 2px #000000;
+}
 .iconLeftText {
     position: absolute;
     bottom: -4px;
+    left: 0px;
+    width: 16px;
+    font-family: 'Hylia Serif Beta';
+    line-height: 1.43em;
+    text-align: left;
+    text-shadow: 0px 0px 6px #000000, 0px 0px 2px #000000, 0px 0px 2px #000000, 0px 0px 2px #000000, 0px 0px 2px #000000;
+}
+.iconLeftTopText {
+    position: absolute;
+    top: -4px;
     left: 0px;
     width: 16px;
     font-family: 'Hylia Serif Beta';
@@ -429,10 +479,37 @@ body.dark {
     height: 16px !important;
     color: white !important;
 }
+.svgIcon.iconRightTopSub,
+.iconRightTopSub {
+    position: absolute;
+    top: -4px;
+    right: 0px;
+    width: 16px !important;
+    height: 16px !important;
+    color: white !important;
+}
+.svgIcon.iconCenterSub,
+.iconCenterSub {
+    position: absolute;
+    bottom: -4px;
+    left: 0px;
+    width: 32px !important;
+    height: 16px !important;
+    color: white !important;
+}
 .svgIcon.iconLeftSub,
 .iconLeftSub {
     position: absolute;
     bottom: -4px;
+    left: 0px;
+    width: 16px !important;
+    height: 16px !important;
+    color: white !important;
+}
+.svgIcon.iconLeftTopSub,
+.iconLeftTopSub {
+    position: absolute;
+    top: -4px;
     left: 0px;
     width: 16px !important;
     height: 16px !important;
@@ -450,13 +527,25 @@ body.dark {
     height: 100% !important;
 }
 .svgIcon.disabledSettingIcon,
-.iconContainer.disabledSettingIcon {
-    opacity: 20%;
+.iconContainer.disabledSettingIcon,
+.ootItemNotFound {
+    opacity: 30%;
 }
 .iconRightText.disabledSettingIcon,
+.iconRightTopText.disabledSettingIcon,
+.iconRightText.ootItemNotFound,
+.iconRightTopText.ootItemNotFound,
+.iconCenterText.disabledSettingIcon,
+.iconCenterText.ootItemNotFound,
 .iconLeftText.disabledSettingIcon,
+.iconLeftTopText.disabledSettingIcon,
+.iconLeftText.ootItemNotFound,
+.iconLeftTopText.ootItemNotFound,
 .iconRightSub.disabledSettingIcon,
-.iconLeftSub.disabledSettingIcon {
+.iconRightTopSub.disabledSettingIcon,
+.iconCenterSub.disabledSettingIcon,
+.iconLeftSub.disabledSettingIcon
+.iconLeftTopSub.disabledSettingIcon {
     display: none;
 }
 .iconTooltip {
@@ -487,6 +576,18 @@ body.dark {
 }
 .iconTooltipContainer {
     position: relative;
+    display: flex;
+    align-items: center;
+}
+.iconSideText {
+    display: flex;
+    width: 64px;
+    height: 24px;
+    align-items: center;
+    font-family: 'Hylia Serif Beta';
+    word-wrap: break-word;
+    text-wrap: wrap;
+    line-height: 1.43;
 }
 .multiselectSettingMenu {
     color: white;
@@ -510,13 +611,6 @@ body.dark {
 .settingsContainer {
     font-family: 'Hylia Serif Beta';
     color: white;
-}
-.settingTabContainer {
-    display: block;
-    border-top: white 1px solid;
-}
-.settingSectionContainer {
-    display: block;
 }
 .settingTabName {
     color: white;
@@ -590,23 +684,84 @@ body.dark {
 .locationItemMenu .iconLeftText {
     color: #FFFFFF;
 }
+.locationItemMenu .iconLeftTopText {
+    color: #FFFFFF;
+}
+.locationItemMenu .iconCenterText {
+    color: #FFFFFF;
+}
 .locationItemMenu .iconRightText {
+    color: #FFFFFF;
+}
+.locationItemMenu .iconRightTopText {
     color: #FFFFFF;
 }
 .locationItemMenu .iconDiv {
     padding: 8px;
-    background-color: #212121; /*grey[900]*/
 }
 .locationItemMenu .iconDiv:hover {
     background-color: #424242; /*grey[800]*/
     cursor: pointer;
     margin: 0 auto;
 }
+.itemsHeldContainer {
+    width: 480px;
+    line-height: 0;
+    padding: 0;
+    white-space: nowrap;
+    background-color: #212121; /*grey[900]*/
+}
+.itemsHeldContainer ul {
+    padding: 0;
+    background-color: #212121; /*grey[900]*/
+}
+.itemsHeldContainer .iconLeftText {
+    color: #FFFFFF;
+}
+.itemsHeldContainer .iconLeftTopText {
+    color: #FFFFFF;
+}
+.itemsHeldContainer .iconCenterText {
+    color: #FFFFFF;
+}
+.itemsHeldContainer .iconRightText {
+    color: #FFFFFF;
+}
+.itemsHeldContainer .iconRightTopText {
+    color: #FFFFFF;
+}
+.itemsHeldContainer .iconDiv {
+    padding: 8px;
+}
+.itemsHeldContainer .iconDiv:hover {
+    background-color: #424242; /*grey[800]*/
+    cursor: pointer;
+    margin: 0 auto;
+    border-radius: 24px;
+}
+.itemsHeldContainer .iconSideText {
+    display: none;
+}
+.itemsHeldContainer div {
+    float: left;
+}
+.ootItemsHeldContainer {
+    width: calc(48px * 7);
+}
+.ootItemNotFound {
+    position: relative;
+}
+.ootItemHeld {
+    position: relative;
+}
+.itemsHeldContainer .ootMaxItemUpgrade .iconRightText {
+    color: #00FF00;
+}
 .itemMenuPaper {
     overflow-x: auto;
     overflow-y: auto;
     background-color: #212121; /*grey[900]*/
-    width: 528px;
+    width: 480px;
 }
 .itemMenuRow {
     white-space: nowrap;
@@ -616,7 +771,7 @@ body.dark {
     display: inline-block;
 }
 .itemMenuRow .itemMenuClear {
-    width: 528px;
+    width: 480px;
 }
 .MenuPadding {
     padding-top: 0 !important;
@@ -998,4 +1153,291 @@ body.dark {
 }
 .collapseArea {
     cursor: pointer !important;
+}
+
+.ootWinConsContainer {
+    width: calc(48px * 3);
+}
+
+.ootRewardWinCons {
+    width: 144px;
+    height: 192px;
+    position: relative;
+}
+.ootRewardWinCons .iconTooltipContainer,
+.ootRewardWinCons .iconTooltipContainer .iconDiv {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.ootRewardWinCons .iconTooltipContainer:has(.top) {
+    position: absolute;
+    top: 0px;
+    left: 48px;
+}
+.ootRewardWinCons .iconTooltipContainer:has(.leftTop) {
+    position: absolute;
+    top: 24px;
+    left: 0px;
+}
+.ootRewardWinCons .iconTooltipContainer:has(.rightTop) {
+    position: absolute;
+    top: 24px;
+    left: 96px;
+}
+.ootRewardWinCons .iconTooltipContainer:has(.leftBottom) {
+    position: absolute;
+    top: 72px;
+    left: 0px;
+}
+.ootRewardWinCons .iconTooltipContainer:has(.rightBottom) {
+    position: absolute;
+    top: 72px;
+    left: 96px;
+}
+.ootRewardWinCons .iconTooltipContainer:has(.bottom) {
+    position: absolute;
+    top: 96px;
+    left: 48px;
+}
+.ootRewardWinCons .iconTooltipContainer:has(.left) {
+    position: absolute;
+    top: 144px;
+    left: 0px;
+}
+.ootRewardWinCons .iconTooltipContainer:has(.middle) {
+    position: absolute;
+    top: 144px;
+    left: 48px;
+}
+.ootRewardWinCons .iconTooltipContainer:has(.right) {
+    position: absolute;
+    top: 144px;
+    left: 96px;
+}
+.ootRewardWinCons .iconTooltipContainer:has(.triforce) {
+    position: absolute;
+    top: 48px;
+    left: 48px;
+}
+.ootRewardWinCons .iconContainer {
+    opacity: 30%;
+}
+.ootRewardWinCons .ootItemHeld .iconContainer {
+    opacity: 100%;
+}
+.ootRewardWinCons .triforce .iconContainer {
+    opacity: 1;
+}
+.ootRewardWinCons .ootItemNotFound {
+    opacity: 100%;
+}
+.ootRewardWinCons .iconCenterText {
+    opacity: 100%;
+}
+.ootCounterWinCons {
+    width: 144px;
+    height: 96px;
+    display: flex;
+    align-items: center;
+}
+.ootCounterItem {
+    width: 144px;
+    height: 48px;
+    margin: 0px;
+    float: none !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.ootCounterItem div {
+    float: none !important;
+    opacity: 1;
+}
+.ootCounterItem:hover {
+    cursor: pointer;
+    background-color: #424242; /*grey[800]*/
+}
+.ootCounterItem .ootCounterLabel {
+    color: #FFFFFF;
+    font-family: 'Hylia Serif Beta';
+    font-size: 1.5rem;
+    line-height: 1.43;
+    width: 96px;
+    text-align: center;
+}
+.ootCompressedCButtons {
+    position: relative;
+    width: 96px;
+    height: 48px;
+}
+.ootCompressedCButtons .iconDiv {
+    padding: 4px;
+}
+.ootCompressedCButtons .iconContainer {
+    width: 16px;
+    height: 16px;
+}
+.ootCompressedCButtons .iconTooltipContainer {
+    position: absolute;
+}
+.ootCompressedCButtons .iconTooltipContainer:has(.leftButton) {
+    left: 12px;
+    top: 12px;
+}
+.ootCompressedCButtons .iconTooltipContainer:has(.upButton) {
+    left: 36px;
+    top: 0px;
+}
+.ootCompressedCButtons .iconTooltipContainer:has(.downButton) {
+    left: 36px;
+    top: 24px;
+}
+.ootCompressedCButtons .iconTooltipContainer:has(.rightButton) {
+    left: 60px;
+    top: 12px;
+}
+.ootDungeonContainer {
+    height: 48px;
+    color: #FFFFFF;
+    font-family: 'Hylia Serif Beta';
+    font-size: 1.5rem;
+    line-height: 48px;
+    display: flex;
+}
+.ootDungeonContainer:nth-child(odd) {
+    width: 264px;
+}
+.ootDungeonContainer:nth-child(even) {
+    width: 216px;
+}
+.ootDungeonName.clickable:hover {
+    cursor: pointer;
+}
+.ootDungeonVariantContainer {
+    position: relative;
+}
+.ootDungeonVariant {
+    color: #0000FF;
+    text-shadow: 0px 0px 6px #000000, 0px 0px 2px #000000, 0px 0px 2px #000000, 0px 0px 2px #000000, 0px 0px 2px #000000;
+    font-size: 1rem;
+    line-height: 32px;
+    position: absolute;
+    left: -16px;
+    top: 0px;
+    cursor: pointer;
+}
+.ootDungeonItems {
+    font-size: 0.875rem;
+    line-height: 0;
+}
+.ootDungeonLabelContainer {
+    width: 48px;
+    flex-grow: 1;
+    position: relative;
+}
+.ootDungeonTCGItemsLastRow,
+.ootDungeonItemsLastRow {
+    width: 480px;
+    display: flex;
+    justify-content: center;
+}
+.ootDungeonTCGItemsLastRow .ootDungeonContainer,
+.ootDungeonItemsLastRow .ootDungeonContainer {
+    display: flex;
+    justify-content: center;
+}
+.ootDungeonTCGItemsLastRow .ootDungeonContainer {
+    min-width: 117px;
+    width: auto;
+}
+.ootDungeonItemsLastRow .ootDungeonContainer {
+    width: 160px;
+}
+.ootDungeonTCGItemsLastRow .ootDungeonLabelContainer,
+.ootDungeonItemsLastRow .ootDungeonLabelContainer {
+    flex-grow: unset;
+    width: auto;
+    margin-right: 6px;
+}
+.ootDungeonContainer .iconDiv {
+    padding: 8px 6px;
+}
+.itemsHeldContainer .iconDiv:hover:has(.ootItemBlank) {
+    background-color: transparent;
+    cursor: auto;
+}
+.ootSilverRupeeExpando {
+    position: relative;
+    width: 44px;
+    height: 48px;
+}
+.ootSilverRupeeMask {
+    transition-property: background-color, max-width;
+    transition-duration: 250ms, 250ms;
+    transition-delay: 0ms, 250ms;
+    max-width: 60px;
+    border-radius: 24px;
+}
+.ootSilverRupeeNames {
+    display: none;
+    transition-property: opacity;
+    transition-duration: 250ms;
+    transition-delay: 250ms;
+    opacity: 0;
+}
+.ootSilverRupeeExpanded .ootSilverRupeeMask {
+    position: absolute;
+    left: -8px;
+    padding-left: 8px;
+    padding-right: 8px;
+    background-color: #000;
+    z-index: 9000;
+    float: none;
+    display: flex;
+    max-width: 500px;
+    overflow: hidden;
+}
+.ootSilverRupeeExpanded .ootSilverRupeeMask div {
+    float: none;
+}
+.ootSilverRupeeExpanded .ootSilverRupeeNames {
+    height: 48px;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-auto-flow: column;
+    line-height: 1.5;
+    opacity: 1;
+}
+.ootSilverRupeeExpando .iconLeftTopText,
+.ootSilverRupeeExpando .iconLeftText,
+.ootSilverRupeeExpando .iconRightTopText,
+.ootSilverRupeeExpando .iconRightText {
+    opacity: 1;
+    transition: opacity 250ms;
+}
+.ootSilverRupeeExpanded .iconLeftTopText,
+.ootSilverRupeeExpanded .iconLeftText,
+.ootSilverRupeeExpanded .iconRightTopText,
+.ootSilverRupeeExpanded .iconRightText {
+    opacity: 0;
+}
+.ootSilverRupeeNames div {
+    padding: 0px 8px;
+}
+.ootSilverRupeeNames .noSilverRupee {
+    width: 0px;
+    padding: 0px;
+}
+.ootSilverRupeeNames div:hover {
+    cursor: pointer;
+    background-color: #424242; /*grey[800]*/
+}
+.silverRupeeLabel {
+    color: #BDBDBD; /*grey[300]*/
+    font-style: italic;
+}
+.dungeonItemMaxCollected {
+    color: #00FF00;
 }

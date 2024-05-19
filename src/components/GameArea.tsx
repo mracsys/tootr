@@ -35,6 +35,7 @@ interface GameAreaProps {
     reverseCollapseSwitch: ContextMenuHandler,
     setRef: (entranceKey: string, e: HTMLDivElement | null) => void,
     refreshCounter: number,
+    searchTerm: string,
 }
 
 const GameArea = ({
@@ -62,6 +63,7 @@ const GameArea = ({
     reverseCollapseSwitch,
     setRef,
     refreshCounter,
+    searchTerm,
 }: GameAreaProps) => {
     const preventDefault: MouseEventHandler = (event: MouseEvent) => event.preventDefault();
     let title = region.name;
@@ -91,17 +93,17 @@ const GameArea = ({
                     <span className="areaTitleText">
                         {title}
                     </span>
-                    <span className="areaRefreshCounter">
-                        {refreshCounter}
-                    </span>
                 </div>
+                <span className="areaRefreshCounter">
+                    {refreshCounter}
+                </span>
             </div>
             {
                 (collapsedRegions[title] !== 'all') ?
                 <div>
                     <div>
                     { locations.map((location, i) => { 
-                        if ((!location.checked || collapsedRegions[title] === 'none') && location.viewable() && !location.is_hint) {
+                        if ((!location.checked || collapsedRegions[title] === 'none') && location.viewable(true) && !location.is_hint && (searchTerm === '' || location.alias.toLowerCase().includes(searchTerm.toLowerCase()))) {
                             return (<React.Fragment key={title + 'locationcheckcontainer' + i}>
                                 <LocationCheck
                                     key={title + "locationcheck" + i}
@@ -121,19 +123,6 @@ const GameArea = ({
                     </div>
                     { entrances.map((entrance, i) => {
                         let connectorShuffled = false;
-                        /*let connectorShuffled = false;
-                        let areaEntrances = allAreas.entrances;
-                        function isConnectorShuffled(entrance: string, _index: number, _array: string[]) {
-                            return areaEntrances[entrance].shuffled || areaEntrances[entrance].shuffled;
-                        }
-                        if (allAreas.entrances[entrance].connector !== "") {
-                            let connector = allAreas.entrances[entrance].connector;
-                            if (Array.isArray(connector)) {
-                                connectorShuffled = connector.some(isConnectorShuffled);
-                            } else {
-                                connectorShuffled = [connector].some(isConnectorShuffled);
-                            }
-                        }*/
                         if ((!(showUnshuffledEntrances) && entrance.shuffled) ||
                         (connectorShuffled && !(showUnshuffledEntrances)) ||
                         (showUnshuffledEntrances)) {
@@ -167,6 +156,7 @@ const GameArea = ({
                                         ekey={title + "entrance" + i}
                                         key={title + "entranceContainer" + i}
                                         scrollRef={title + entrance.name}
+                                        searchTerm={searchTerm}
                                     />
                                 </React.Fragment>
                             );

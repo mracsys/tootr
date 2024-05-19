@@ -9,7 +9,7 @@ import FixedShopCheck from './FixedShopCheck';
 import type { CollapsedRegions } from './Tracker';
 import type ContextMenuHandler from './ContextMenuHandler';
 import type { MouseEvent } from 'react';
-import { buildEntranceName } from './UnknownEntrance';
+import { buildEntranceName, buildExitName, buildExitEntranceName } from './UnknownEntrance';
 
 import { GraphRegion, GraphEntrance, GraphLocation } from '@mracsys/randomizer-graph-tool';
 
@@ -39,6 +39,7 @@ interface LinkedEntranceProps {
     forceVisible: boolean,
     scrollRef: string,
     ekey: string,
+    searchTerm: string,
 }
 
 const LinkedEntrance = ({
@@ -67,25 +68,8 @@ const LinkedEntrance = ({
     forceVisible,
     scrollRef,
     ekey,
+    searchTerm,
 }: LinkedEntranceProps) => {
-    const buildExitName = (entrance: GraphEntrance): string => {
-        let eLink = !!(entrance.replaces) ? entrance.replaces : entrance;
-        if (!eLink.use_target_alias) {
-            return eLink.alias;
-        } else {
-            return eLink.target_alias;
-        }
-    }
-
-    const buildExitEntranceName = (entrance: GraphEntrance): string | null => {
-        let eLink = !!(entrance.replaces) ? entrance.replaces : entrance;
-        if (!!eLink.reverse && eLink.target_group?.page !== '') {
-            return `from ${eLink.reverse.alias}`;
-        } else {
-            return null;
-        }
-    }
-
     const buildEntranceURL = (reverseLink: GraphEntrance): string => {
         let href: string = '';
         if (reverseLink.target_group?.page !== '') {
@@ -177,7 +161,7 @@ const LinkedEntrance = ({
                 /* All other interior locations */
                 ((oEntrance.coupled && !oEntrance.is_warp) || (!oEntrance.coupled)) ?
                 internalLocations.map((location, k) => {
-                    if (reverseLink.type !== 'Dungeon' && location.viewable() === true) {
+                    if (reverseLink.type !== 'Dungeon' && location.viewable(true) === true) {
                         return (
                             <LocationCheck
                                 key={entrance + 'entrancelocationcheck' + k}
@@ -225,6 +209,7 @@ const LinkedEntrance = ({
                         scrollRef={scrollRef}
                         ekey={entrance.name + otherEntrance.name + ekey}
                         key={entrance.name + otherEntrance.name + ekey + i}
+                        searchTerm={searchTerm}
                     />
                 )})
             }

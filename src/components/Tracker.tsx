@@ -21,6 +21,7 @@ import { Drawer } from '@mui/material';
 import { Link } from '@mui/material';
 import { SelectChangeEvent } from '@mui/material/Select';
 import CssBaseline from '@mui/material/CssBaseline';
+import Masonry from '@mui/lab/Masonry';
 
 
 import GameSetting from './GameSetting';
@@ -44,8 +45,10 @@ import maxChex from '@/data/settings_presets/1175.json';
 import mw3 from '@/data/settings_presets/mw3.json';
 
 
-import { WorldGraphFactory, ExternalFileCacheFactory, ExternalFileCache, GraphEntrance, GraphRegion } from '@mracsys/randomizer-graph-tool';
+import { WorldGraphFactory, ExternalFileCacheFactory, ExternalFileCache, GraphEntrance, GraphRegion, GraphItem } from '@mracsys/randomizer-graph-tool';
 import { SettingPanel } from './SettingsPanel';
+import { SeedMenu } from './SeedMenu';
+import { ItemPanel } from './ItemPanel';
 
 
 export type SettingTypes = string[] | {[s: string]: boolean};
@@ -205,12 +208,15 @@ const Tracker = (_props: {}) => {
     let [playerNumber, setPlayerNumber] = useState<number>(0);
     let [collapsedRegions, setCollapsedRegions] = useState<CollapsedRegions>({});
     let [checkedEntrances, setCheckedEntrances] = useState<CheckedEntrances>({});
+    let [searchTerm, setSearchTerm] = useState<string>('');
     const [_fileCache, setFileCache] = useState<ExternalFileCache>({files: {}});
     const scroller = useRef<ScrollerRef>({});
 
     // graph state management to trigger rerender on memo change
     let [graphInitialState, setGraphInitialState] = useState<string>('{}');
     let [graphRefreshCounter, setGraphRefreshCounter] = useState<number>(0);
+    let [graphImportFile, setGraphImportFile] = useState<string>('');
+    let [graphPresets, setGraphPresets] = useState<string[]>([]);
 
     let graph = useMemo(
         () => WorldGraphFactory('ootr', {}, '7.1.195 R-1', _fileCache),
@@ -246,7 +252,7 @@ const Tracker = (_props: {}) => {
 
         //let darkMode = !!(localStorage.getItem('DarkMode')) ? true : localStorage.getItem('DarkMode');
         let clientDarkMode = localStorage.getItem('DarkMode');
-        const darkMode: boolean = !!(clientDarkMode) ? JSON.parse(clientDarkMode) : window.matchMedia("(prefers-color-scheme: dark)").matches;
+        let darkMode: boolean = !!(clientDarkMode) ? JSON.parse(clientDarkMode) : window.matchMedia("(prefers-color-scheme: dark)").matches;
 
         setPlayerNumber(playerInit);
         setGraphInitialState(graphInitialStateInit);
@@ -300,6 +306,7 @@ const Tracker = (_props: {}) => {
                 }
             }
             if (graph.initialized && !ignore && !graphInitialized) {
+                setGraphPresets(graph.get_settings_presets());
                 if (Object.keys(graphInitialState).length > 0) graph.import(graphInitialState);
                 graph.set_search_mode('Collected Items');
                 setGraphInitialized(true);
@@ -316,6 +323,17 @@ const Tracker = (_props: {}) => {
             setTrackerInitialized(true);
         }
     }, [graphInitialized]);
+
+    useEffect(() => {
+        if (graphInitialized && graphImportFile) {
+            let importState = JSON.parse(graphImportFile);
+            graph.import(importState);
+            refreshSearch();
+            setGraphInitialState(graphImportFile);
+            setTrackerInitialized(true);
+            setGraphImportFile('');
+        }
+    }, [graphImportFile]);
 
     const setRef = (index: string, element: HTMLDivElement | null): void => {
         if (!!element) scroller.current[index] = element;
@@ -387,6 +405,59 @@ const Tracker = (_props: {}) => {
         graph.collect_locations();
         graphRefreshCounter > 0 ? setGraphRefreshCounter(graphRefreshCounter-1) : setGraphRefreshCounter(graphRefreshCounter+1);
         localStorage.setItem('GraphState', JSON.stringify(graph.export(true)));
+    }
+
+    const loadGraphPreset = (preset_name: string) => {
+        let plando = graph.get_settings_preset(preset_name);
+        if (!!plando) {
+            // Some presets use "random" option for some settings, but the tracker
+            // requires all settings to be clearly defined. In general, the option
+            // before "random" in the setting option list has the highest level of
+            // randomized locations/entrances/regions, so use that to be conservative
+            // for possible things for the user to check.
+            let graphSettingsOptions = graph.get_settings_options();
+            for (let [settingName, settingValue] of Object.entries(plando.settings)) {
+                if (settingValue === 'random') {
+                    let settingChoices = graphSettingsOptions[settingName].choices;
+                    if (!!settingChoices) {
+                        let settingOptions = Object.keys(settingChoices);
+                        let settingIndex = settingOptions.indexOf(settingValue);
+                        settingIndex--;
+                        if (settingIndex < 0) settingIndex = settingOptions.length - 1;
+                        plando.settings[settingName] = settingOptions[settingIndex];
+                    } else {
+                        throw `Failed to change random setting to non-random value: undefined setting choices`;
+                    }
+                }
+            }
+            graph.import(plando);
+            refreshSearch();
+            setGraphInitialState(JSON.stringify(plando));
+        }
+    }
+
+    const importGraphState = (inputEvent: ChangeEvent<HTMLInputElement>) => {
+        if (!inputEvent.target.files) return;
+        let file = inputEvent.target.files[0];
+        let reader = new FileReader();
+        reader.readAsText(file, 'UTF-8');
+        reader.onload = readerEvent => {
+            let content = readerEvent.target?.result;
+            if (!!content && typeof(content) === 'string') {
+                setTrackerInitialized(false);
+                setGraphImportFile(content);
+            }
+        }
+    }
+
+    const exportGraphState = () => {
+        let fileData = JSON.stringify(graph.export());
+        let blob = new Blob([fileData], { type: 'text/plain' });
+        let url = URL.createObjectURL(blob);
+        let link = document.createElement('a');
+        link.download = 'tootr-plando.json';
+        link.href = url;
+        link.click();
     }
 
     const changeSetting = (setting: ChangeEvent<HTMLSelectElement> | SelectChangeEvent<string[]> | {target: {name: string, value: boolean | string}}) => {
@@ -489,6 +560,53 @@ const Tracker = (_props: {}) => {
         console.log(`[Setting] ${graphSettingName} changed to ${graph.worlds[playerNumber].settings[graphSettingName]}`);
     }
 
+    const cycleGraphRewardHint = ({itemName = '', forward = true}: {itemName?: string, forward?: boolean} = {}) => {
+        graph.cycle_hinted_areas_for_item(itemName, graph.worlds[playerNumber], forward);
+        refreshSearch();
+        console.log(`[Reward Hint] ${itemName} area changed to ${graph.worlds[playerNumber].fixed_item_area_hints[itemName]}`);
+    }
+
+    const addStartingItem = (item_name: string, count: number = 1) => {
+        let graphItem = graph.get_item(graph.worlds[playerNumber], item_name);
+        graph.add_starting_item(graph.worlds[playerNumber], graphItem, count);
+        refreshSearch();
+        console.log(`[Item] Added ${count} ${item_name} to starting items`);
+    }
+
+    const removeStartingItem = (item_name: string, count: number = 1) => {
+        let graphItem = graph.get_item(graph.worlds[playerNumber], item_name);
+        graph.remove_starting_item(graph.worlds[playerNumber], graphItem, count);
+        refreshSearch();
+        console.log(`[Item] Removed ${count} ${item_name} from starting items`);
+    }
+
+    const addStartingItems = (item_names: string[]) => {
+        let graphItems: GraphItem[] = [];
+        for (let item_name of item_names) {
+            graphItems.push(graph.get_item(graph.worlds[playerNumber], item_name));
+        }
+        graph.add_starting_items(graph.worlds[playerNumber], graphItems);
+        refreshSearch();
+        console.log(`[Item] Added ${item_names} to starting items`);
+    }
+
+    const removeStartingItems = (item_names: string[]) => {
+        let graphItems: GraphItem[] = [];
+        for (let item_name of item_names) {
+            graphItems.push(graph.get_item(graph.worlds[playerNumber], item_name));
+        }
+        graph.remove_starting_items(graph.worlds[playerNumber], graphItems);
+        refreshSearch();
+        console.log(`[Item] Removed ${item_names} to starting items`);
+    }
+
+    const replaceStartingItem = (add_item_name: string, remove_item_name: string) => {
+        let addGraphItem = graph.get_item(graph.worlds[playerNumber], add_item_name);
+        let removeGraphItem = graph.get_item(graph.worlds[playerNumber], remove_item_name);
+        graph.replace_starting_item(graph.worlds[playerNumber], addGraphItem, removeGraphItem);
+        refreshSearch();
+    }
+
     const toggleCollapse = (area: string): void => {
         let stateCollapsedRegions = cloneDeep(collapsedRegions);
         let collapse = stateCollapsedRegions[area];
@@ -581,8 +699,9 @@ const Tracker = (_props: {}) => {
         let sourceLocation = graph.worlds[playerNumber].get_location(location);
         if (!!sourceLocation.item) {
             sourceLocation.item.price = parseInt(priceValue);
-            graph.set_location_item(sourceLocation, sourceLocation.item);
+            graph.set_location_item(sourceLocation, sourceLocation.item, sourceLocation.item.price);
             refreshSearch();
+            console.log(sourceLocation.name, '[price]', sourceLocation.price?.toString());
         }
     }
 
@@ -615,6 +734,10 @@ const Tracker = (_props: {}) => {
         handleItemMenuClose();
         handleShopItemMenuClose();
         refreshSearch();
+    }
+
+    const searchTracker: React.ChangeEventHandler<HTMLInputElement> = (e) => {
+        setSearchTerm(e.currentTarget.value);
     }
 
     const cancelAlert = () => {
@@ -720,11 +843,33 @@ const Tracker = (_props: {}) => {
     // Revisit after conversion to functional components
     //const customTheme = themeDark ? dark : light;
     //const { classes } = this.props;
-    const customTheme = createTheme({});
+    const customTheme = createTheme({
+        breakpoints: {
+            values: {
+                xs: 0,
+                sm: 1704,
+                md: 2264,
+                lg: 2824,
+                xl: 3384,
+            }
+        },
+        components: {
+            MuiMenu: {
+                styleOverrides: {
+                    paper: {
+                        overflowX: 'visible',
+                        overflowY: 'visible',
+                    }
+                }
+            }
+        }
+    });
     if (trackerInitialized && graphInitialized) {
         let graphSettingsOptions = graph.get_settings_options();
         let graphSettingsLayout = graph.get_settings_layout();
         let graphSettings = graph.worlds[playerNumber].settings;
+        let graphCollectedItems = graph.get_collected_items_for_world(graph.worlds[playerNumber]);
+        let graphPlayerInventory = graph.get_player_inventory_for_world(graph.worlds[playerNumber]);
         let multiselectSettingChoices = multiselectToUpdate ? graphSettingsOptions[multiselectToUpdate]?.choices : {};
         let currentPage: string = settings['View'] as string;
         let pages: {[page: string]: GraphRegion[]} = {};
@@ -739,7 +884,9 @@ const Tracker = (_props: {}) => {
         let warpEntrances = graphEntrances.filter(e => e.is_warp);
         let graphEntrancePool = entranceToLink !== '' ? graph.get_entrance_pool(graph.worlds[playerNumber], graph.worlds[playerNumber].get_entrance(entranceToLink)) : {};
         let graphEntranceToLink = entranceToLink !== '' ? graph.worlds[playerNumber].get_entrance(entranceToLink) : null;
-        let graphLocationCount = graphInitialized ? graph.get_locations_for_world(graph.worlds[0]).filter(l => l.shuffled && !l.is_hint && !l.is_restricted) : [];
+        let graphLocations = graphInitialized ? graph.get_locations_for_world(graph.worlds[playerNumber]) : [];
+        let graphLocationCount = graphInitialized ? graphLocations.filter(l => l.shuffled && !l.is_hint && !l.is_restricted) : [];
+        let graphRewardHints = graph.worlds[playerNumber].fixed_item_area_hints;
         return (
             <React.Fragment>
                 <ThemeProvider theme={customTheme}>
@@ -756,10 +903,21 @@ const Tracker = (_props: {}) => {
                                 >
                                     <MenuIcon />
                                 </IconButton>
+
+                                <SeedMenu
+                                    importFunction={importGraphState}
+                                    exportFunction={exportGraphState}
+                                    presetFunction={loadGraphPreset}
+                                    presets={graphPresets}
+                                />
+
                                 <div className="title">
                                     <div>
                                         <div className="titleText">{settings["View"]}</div>
                                     </div>
+                                </div>
+                                <div className='searchContainer'>
+                                    <input id='trackerGlobalSearchBox' type='search' placeholder='Search' onChange={searchTracker} />
                                 </div>
                                 <div className="checkCount">
                                     {
@@ -770,12 +928,12 @@ const Tracker = (_props: {}) => {
                                         graphLocationCount.length
                                     }
                                 </div>
-                                <button
+                                {/*<button
                                     onClick={() => setAlertReset(true)}
                                     className="menuButton"
                                 >
                                     <span className="menuButtonLabel">Reset</span>
-                                </button>
+                                </button>*/}
                                 {/*<button
                                     onClick={() => {
                                         let darkMode = !themeDark;
@@ -882,7 +1040,7 @@ const Tracker = (_props: {}) => {
                             handleClose={handleMultiselectMenuClose}
                             handleChange={cycleGraphMultiselectOption}
                             anchorLocation={multiselectMenuOpen}
-                            title={multiselectToUpdate ? graphSettingsOptions[multiselectToUpdate]?.name : ''}
+                            title={multiselectToUpdate ? graphSettingsOptions[multiselectToUpdate]?.display_name : ''}
                             settingName={multiselectToUpdate ? graphSettingsOptions[multiselectToUpdate]?.name : ''}
                             settingValue={multiselectToUpdate ? graphSettings[multiselectToUpdate] as string[] : []}
                             choices={multiselectSettingChoices === undefined ? {} : multiselectSettingChoices}
@@ -898,8 +1056,26 @@ const Tracker = (_props: {}) => {
                         <div
                             className={openSettings ? "areaPaper areaPaperShift" : "areaPaper"}
                         >
-                            <div className="drawerHeader" />
+                            <div className="drawerHeader"></div>
                             <div className={openSettings ? "gameInfo gameInfoShift" : "gameInfo"}>
+                                <ItemPanel
+                                    addStartingItem={addStartingItem}
+                                    addStartingItems={addStartingItems}
+                                    removeStartingItem={removeStartingItem}
+                                    removeStartingItems={removeStartingItems}
+                                    replaceStartingItem={replaceStartingItem}
+                                    cycleGraphMultiselectOption={cycleGraphMultiselectOption}
+                                    cycleGraphRewardHint={cycleGraphRewardHint}
+                                    handleCheck={checkLocation}
+                                    handleUnCheck={unCheckLocation}
+                                    graphSettings={graphSettings}
+                                    graphCollectedItems={graphCollectedItems}
+                                    graphPlayerInventory={graphPlayerInventory}
+                                    graphRewardHints={graphRewardHints}
+                                    graphLocations={graphLocations}
+                                    graphEntrances={graphEntrances}
+                                    refreshCounter={graphRefreshCounter}
+                                />
                                 <SettingPanel
                                     cycleSetting={cycleGraphSetting}
                                     handleMultiselectMenuOpen={handleMultiselectMenuOpen}
@@ -909,6 +1085,7 @@ const Tracker = (_props: {}) => {
                                 />
                             </div>
                             <div className='worldInfo'>
+                                <Masonry columns={{ xs: 1, sm: 2, md: 3, lg: 4, xl: 5 }} spacing={2}>
                                 {
                                     graph.worlds[playerNumber].region_groups.filter(r => r.page === settings["View"] && r.viewable).sort((a, b) => a.alias.localeCompare(b.alias)).map((region, regionIndex) => {
                                         return (
@@ -938,10 +1115,12 @@ const Tracker = (_props: {}) => {
                                                 showUnshuffledEntrances={true}
                                                 key={regionIndex}
                                                 refreshCounter={graphRefreshCounter}
+                                                searchTerm={searchTerm}
                                             />
                                         )
                                     })
                                 }
+                                </Masonry>
                             </div>
                         </div>
                     </div>

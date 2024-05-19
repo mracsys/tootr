@@ -74,13 +74,14 @@ const LocationCheck = ({
                         <React.Fragment>
                             { showShopInput ?
                                 <input
-                                    name={location + "shopprice"}
+                                    name={location.name + "shopprice"}
                                     onClick={(e) => {e.stopPropagation()}}
                                     className="priceBox"
-                                    defaultValue={!!(location.price) ? location.price : ""}
-                                    onBlur={(e) => {
+                                    value={!!(location.price) ? location.price : ""}
+                                    onChange={(e) => {
                                         updateShopPrice(location.name, e.currentTarget.value);
                                     }}
+                                    key={location.name + "shopprice"}
                                 /> : null
                             }
                             { showShopRupee ?
