@@ -15,7 +15,7 @@ importers:
         specifier: ^11.11.0
         version: 11.11.0(@emotion/react@11.11.1(@types/react@18.2.20)(react@18.2.0))(@types/react@18.2.20)(react@18.2.0)
       '@mracsys/randomizer-graph-tool':
-        specifier: ./mracsys-randomizer-graph-tool-v2.0.0.tgz
+        specifier: file:mracsys-randomizer-graph-tool-v2.0.0.tgz
         version: file:mracsys-randomizer-graph-tool-v2.0.0.tgz
       '@mui/icons-material':
         specifier: ^5.14.3
@@ -465,7 +465,7 @@ packages:
     resolution: {integrity: sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ==}
 
   '@mracsys/randomizer-graph-tool@file:mracsys-randomizer-graph-tool-v2.0.0.tgz':
-    resolution: {integrity: sha512-d00BNTP0GJK1XVOEGSr+cAh+vCco2ZquOfZG31FbEPGlTM2+RbMLSAu1uZAs9AJ1ixce9HD9JuqT1PpgJBbvow==, tarball: file:mracsys-randomizer-graph-tool-v2.0.0.tgz}
+    resolution: {integrity: sha512-2wMexDa81Tn436XnTMdpDLozG2UyRQW4WBqdanJwcdgfr45s/ijbK5RPp/R/ajwxxL95DFrfeIw/rTW5PjSutQ==, tarball: file:mracsys-randomizer-graph-tool-v2.0.0.tgz}
     version: 2.0.0
 
   '@mui/base@5.0.0-beta.40':

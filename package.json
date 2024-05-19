@@ -12,7 +12,7 @@
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
-    "@mracsys/randomizer-graph-tool": "./mracsys-randomizer-graph-tool-v2.0.0.tgz",
+    "@mracsys/randomizer-graph-tool": "file:mracsys-randomizer-graph-tool-v2.0.0.tgz",
     "@mui/icons-material": "^5.14.3",
     "@mui/material": "^5.14.5",
     "lodash": "^4.17.21",
