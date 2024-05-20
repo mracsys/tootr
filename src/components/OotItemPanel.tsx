@@ -179,6 +179,8 @@ export const OotItemPanel = ({
         let addItem = () => {};
         let contextMenuHandler = new ContextMenuHandlerWithArgs(() => removeStartingItem(gridEntry.item_name), {});
         let subClass = '';
+        let subscript: string | null | undefined = null;
+        let subscriptClass: string = '';
         if (!(Object.keys(gridEntry).includes('group_variants'))) {
             if (Object.keys(gridEntry).includes('item_variants') && !!(gridEntry.item_variants)) {
                 if (gridEntry.item_variants.length > collected) {
@@ -219,6 +221,18 @@ export const OotItemPanel = ({
                 }
                 itemName = gridEntry.item_name;
                 addItem = (!collected || (!!(gridEntry.sub_variants) && gridEntry.sub_variants.length > collected)) ? () => addStartingItem(gridEntry.item_name) : () => {};
+            } else if (gridEntry.item_name === 'Magic Bean') {
+                if (Object.keys(graphPlayerInventory).includes(gridEntry.item_name)) {
+                    collected = graphPlayerInventory[gridEntry.item_name];
+                } else if (Object.keys(graphPlayerInventory).includes('Magic Bean Pack')) {
+                    collected = 10;
+                } else {
+                    collected = 0;
+                }
+                itemName = 'Buy Magic Bean';
+                subscript = collected > 0 ? '' + collected : '';
+                subscriptClass = collected >= 10 ? 'ootMaxItemUpgrade' : '';
+                addItem = 10 > collected ? () => addStartingItem(gridEntry.item_name) : () => {};
             } else {
                 itemName = gridEntry.item_name;
                 addItem = (!collected || (!!(gridEntry.sub_variants) && gridEntry.sub_variants.length > collected)) ? () => addStartingItem(gridEntry.item_name) : () => {};
@@ -336,6 +350,27 @@ export const OotItemPanel = ({
                     addItem = () => addCumulativeStartingItems(tradeList, nextTradeIndex);
                     contextMenuHandler = new ContextMenuHandlerWithArgs(() => removeCumulativeStartingItems(tradeList, prevTradeIndex), {});
                 }
+            } else if (gridEntry.item_name === 'Blue Arrows') {
+                // Don't use replaceStartingItem function for Ice Arrows <-> Blue Fire Arrows
+                // since this would conflict with checklist-collected blue arrow variants.
+                if (Object.keys(graphPlayerInventory).includes('Blue Fire Arrows') && graphPlayerInventory['Blue Fire Arrows'] >= 1) {
+                    collected = graphPlayerInventory['Blue Fire Arrows'];
+                    itemName = 'Blue Fire Arrows';
+                    addItem = () => {};
+                    contextMenuHandler = new ContextMenuHandlerWithArgs(() => removeStartingItem('Blue Fire Arrows'), {});
+                } else {
+                    if (Object.keys(graphPlayerInventory).includes('Ice Arrows') && graphPlayerInventory['Ice Arrows'] >= 1) {
+                        collected = graphPlayerInventory['Ice Arrows'];
+                        itemName = 'Ice Arrows';
+                        addItem = () => addStartingItem('Blue Fire Arrows');
+                        contextMenuHandler = new ContextMenuHandlerWithArgs(() => removeStartingItem('Ice Arrows'), {});
+                    } else {
+                        collected = 0;
+                        itemName = 'Blue Arrows';
+                        addItem = () => addStartingItem('Ice Arrows');
+                        contextMenuHandler = new ContextMenuHandlerWithArgs(() => removeStartingItem('Ice Arrows'), {});
+                    }
+                }
             } else {
                 itemName = gridEntry.item_name;
                 addItem = (!collected || (!!(gridEntry.sub_variants) && gridEntry.sub_variants.length > collected)) ? () => addStartingItem(gridEntry.item_name) : () => {};
@@ -344,8 +379,6 @@ export const OotItemPanel = ({
             itemName = gridEntry.item_name;
             addItem = (!collected || (!!(gridEntry.sub_variants) && gridEntry.sub_variants.length > collected)) ? () => addStartingItem(gridEntry.item_name) : () => {};
         }
-        let subscript: string | null | undefined = null;
-        let subscriptClass: string = '';
         if (Object.keys(gridEntry).includes('sub_variants') && !!(gridEntry.sub_variants)) {
             if (Object.keys(gridEntry).includes('uncollected_variant') && collected === 0) {
                 subscript = gridEntry.uncollected_variant?.toString();

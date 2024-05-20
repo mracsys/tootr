@@ -86,12 +86,18 @@ export const itemPanelLayout: panelLayout = {
                 "Longshot"
             ]
         },
-        { item_name: "Ice Arrows" },
+        {
+            item_name: "Blue Arrows",
+            group_variants: [
+                "Ice Arrows",
+                "Blue Fire Arrows"
+            ]
+        },
         { item_name: "Farores Wind" },
         { item_name: "Eponas Song" },
         { item_name: "Bolero of Fire" },
         { item_name: "Lens of Truth" },
-        { item_name: "Magic Bean Pack" },
+        { item_name: "Magic Bean" },
         { item_name: "Megaton Hammer" },
         { item_name: "Light Arrows" },
         { item_name: "Nayrus Love" },
