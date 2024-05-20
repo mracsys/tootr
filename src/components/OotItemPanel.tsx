@@ -41,7 +41,7 @@ export const createBlankTrackerItem = (entryNum: number) => {
 // Arranged such that Ruto's Letter and Big Poes are added to
 // bottle slots first in case more than 4 bottles are permitted
 // in plentiful/ludicrous item pools in the future.
-const bottleVariants = [
+export const bottleVariants = [
     "Rutos Letter",
     "Bottle with Big Poe",
     "Bottle",
@@ -76,10 +76,19 @@ export const OotItemPanel = ({
 }: OotItemPanelProps) => {
     const [bottleSlots, setBottleSlots] = useState<(string|null)[]>([null, null, null, null]);
 
+    let playerBottles: {[bottle: string]: number} = {};
+    for (let bottle of bottleVariants) {
+        if (Object.keys(graphPlayerInventory).includes(bottle)) {
+            playerBottles[bottle] = graphPlayerInventory[bottle];
+        } else {
+            playerBottles[bottle] = 0;
+        }
+    }
+
     // run on mount and unmount
     useEffect(() => {
-        loadBottleSlots(graphPlayerInventory);
-    }, []);
+        loadBottleSlots(playerBottles);
+    }, [...Object.values(playerBottles)]);
 
     const addBottleStartingItem = (itemName: string, bottleIndex: number) => {
         let newBottleSlots = [...bottleSlots];
@@ -100,25 +109,33 @@ export const OotItemPanel = ({
         setBottleSlots(newBottleSlots);
     }
 
-    const loadBottleSlots = (graphPlayerInventory: {[item_name: string]: number}) => {
-        let newBottleSlots: (string | null)[] = [null, null, null, null];
+    const loadBottleSlots = (playerBottles: {[item_name: string]: number}) => {
         let collectedBottles: {[item_name: string]: number} = {};
-        // build list of undisplayed bottles
-        for (let bottle of bottleVariants) {
-            if (Object.keys(graphPlayerInventory).includes(bottle)) {
-                collectedBottles[bottle] = graphPlayerInventory[bottle] - bottleSlots.filter((b) => b === bottle).length;
+        // Build list of undisplayed bottles. Separate list
+        // ensures that gaps in the slots are preserved as
+        // well as bottle order (at least until page refresh).
+        for (let [bottle, bottleCount] of Object.entries(playerBottles)) {
+            collectedBottles[bottle] = bottleCount - bottleSlots.filter((b) => b === bottle).length;
+            // unset slots right to left if a bottle was removed from the inventory
+            while (collectedBottles[bottle] < 0) {
+                for (let i = 3; i >= 0; i--) {
+                    if (bottleSlots[i] === bottle) {
+                        bottleSlots[i] = null;
+                        break;
+                    }
+                }
+                collectedBottles[bottle] = bottleCount - bottleSlots.filter((b) => b === bottle).length;
             }
         }
         // add undisplayed bottles to empty item grid slots if any exist
+        let newBottleSlots: (string | null)[] = [...bottleSlots];
         let slotNum = 0;
         for (let [bottle, bottleCount] of Object.entries(collectedBottles)) {
+            while (slotNum < 4 && !!(newBottleSlots[slotNum])) {
+                slotNum++;
+            }
             if (slotNum >= 4) {
                 break;
-            }
-            if (!!(bottleSlots[slotNum])) {
-                newBottleSlots[slotNum] = bottleSlots[slotNum];
-                slotNum++;
-                continue;
             }
             let numBottles = Math.min(4 - slotNum, bottleCount);
             for (let i = slotNum; i < slotNum + numBottles; i++) {
