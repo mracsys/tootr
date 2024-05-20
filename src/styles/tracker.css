@@ -395,6 +395,7 @@ body.dark {
 .locationMark {
     margin-right: 2px !important;
     margin-left: var(--theme-spacing) !important;
+    height: 24px;
 }
 .locationPeek {
     margin-left: calc(var(--theme-spacing) * 3);

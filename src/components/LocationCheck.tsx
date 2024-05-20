@@ -109,9 +109,11 @@ const LocationCheck = ({
                         />
                 }
                 {
-                    location.checked ?
-                        <DoneIcon className="locationMark" /> :
-                        <CheckBoxOutlineBlankIcon className="locationMark" />
+                    location.skipped ?
+                        <div className='locationMark'></div> :
+                        location.checked ?
+                            <DoneIcon className="locationMark" /> :
+                            <CheckBoxOutlineBlankIcon className="locationMark" />
                 }
             </div>
         </div>
