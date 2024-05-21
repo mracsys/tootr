@@ -63,16 +63,16 @@ export const entranceOrTargetMatchesTerm = (entrance: GraphEntrance, collapsedRe
     if (searchMatch) return true;
     
     if (!!targetEntrance.target_group) {
-        // immediate target area locations match
-        let targetLocations = targetEntrance.target_group.locations.filter((location) => locationFilter(location, collapsedRegions, title, searchTerm));
-        if (targetLocations.length > 0) return true;
-
-        // connector entrance recursion match
-        renderedConnectors.push(entrance);
-        if (entrance.coupled && !!targetEntrance.reverse) {
-            renderedConnectors.push(targetEntrance.reverse);
-        }
         if (targetEntrance.target_group.page === '') { // prevents chaining into other overworld area tiles
+            // immediate target area locations match
+            let targetLocations = targetEntrance.target_group.locations.filter((location) => locationFilter(location, collapsedRegions, title, searchTerm));
+            if (targetLocations.length > 0) return true;
+
+            // connector entrance recursion match
+            renderedConnectors.push(entrance);
+            if (entrance.coupled && !!targetEntrance.reverse) {
+                renderedConnectors.push(targetEntrance.reverse);
+            }
             let connectors = targetEntrance.target_group.exits.filter(e => !(renderedConnectors.includes(e)) && (e.shuffled || e.target_group !== targetEntrance.source_group) && (e !== targetEntrance.reverse || (!e.coupled && e.shuffled)));
             for (let connector of connectors) {
                 if (entranceOrTargetMatchesTerm(connector, collapsedRegions, title, searchTerm, renderedConnectors)) {
