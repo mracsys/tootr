@@ -3,8 +3,8 @@ import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 
-import UnknownEntrance from './UnknownEntrance'
-import LocationCheck from './LocationCheck'
+import UnknownEntrance, { locationFilter, entranceOrTargetMatchesTerm } from './UnknownEntrance';
+import LocationCheck from './LocationCheck';
 import type { CollapsedRegions } from './Tracker';
 import type ContextMenuHandler from './ContextMenuHandler';
 
@@ -67,6 +67,24 @@ const GameArea = ({
 }: GameAreaProps) => {
     const preventDefault: MouseEventHandler = (event: MouseEvent) => event.preventDefault();
     let title = region.name;
+
+    let filteredLocations: GraphLocation[] = locations.filter((location) => locationFilter(location, collapsedRegions, title, searchTerm));
+    // At the moment, the only unshuffled entrances that have
+    // connectors of a different entrance type are:
+    //      Dampe's Grave -> Windmill exit
+    //      Spawn points
+    //      Warp songs
+    // Dampe's Grave has locations that will always be visible,
+    // and the one-ways are forced visible, so checking for connector
+    // visibility to determine main entrance visibility is redundant.
+    let connectorShuffled = false;
+    let filteredEntrances: GraphEntrance[] = entrances.filter((entrance) => 
+        ((!showUnshuffledEntrances && (entrance.shuffled || connectorShuffled)) || showUnshuffledEntrances) &&
+        entranceOrTargetMatchesTerm(entrance, collapsedRegions, title, searchTerm)).sort((a, b) => a.type_priority - b.type_priority || a.alias.localeCompare(b.alias));
+
+    if (filteredEntrances.length === 0 && filteredLocations.length === 0 && searchTerm !== '') {
+        return null;
+    }
     return (
         <div className="areaCard">
             <a className="entranceAnchor" href={title} id={title} onClick={preventDefault}>
@@ -102,65 +120,58 @@ const GameArea = ({
                 (collapsedRegions[title] !== 'all') ?
                 <div>
                     <div>
-                    { locations.map((location, i) => { 
-                        if ((!location.checked || collapsedRegions[title] === 'none') && location.viewable(true) && !location.is_hint && (searchTerm === '' || location.alias.toLowerCase().includes(searchTerm.toLowerCase()))) {
-                            return (<React.Fragment key={title + 'locationcheckcontainer' + i}>
-                                <LocationCheck
-                                    key={title + "locationcheck" + i}
-                                    lkey={title + "location" + i}
-                                    location={location}
+                    { filteredLocations.map((location, i) => { 
+                        return (<React.Fragment key={title + 'locationcheckcontainer' + i}>
+                            <LocationCheck
+                                key={title + "locationcheck" + i}
+                                lkey={title + "location" + i}
+                                location={location}
+                                handleCheck={handleCheck}
+                                handleUnCheck={handleUnCheck}
+                                handleContextMenu={handleContextMenu}
+                                toggleWalletTiers={toggleWalletTiers}
+                                updateShopPrice={updateShopPrice}
+                                showShopInput={showShopInput}
+                                showShopRupee={showShopRupee}
+                            />
+                        </React.Fragment>)
+                    })}
+                    </div>
+                    { filteredEntrances.map((entrance, i) => {
+                        return (
+                            <React.Fragment key={title + "entranceScrollContainer" + i}>
+                                <div className="scrollControl" ref={(e) => setRef(title + entrance.name, e)} id={title + "entranceScrollContainer" + i} key={title + "entranceScrollContainer" + i} />
+                                <UnknownEntrance
+                                    title={title}
+                                    playerNum={playerNum}
+                                    collapsedRegions={collapsedRegions}
+                                    entrance={entrance}
+                                    currentPage={currentPage}
+                                    handleLink={handleLink}
+                                    handleUnLink={handleUnLink}
                                     handleCheck={handleCheck}
                                     handleUnCheck={handleUnCheck}
                                     handleContextMenu={handleContextMenu}
+                                    handleShopContextMenu={handleShopContextMenu}
+                                    handleEntranceMenuOpen={handleEntranceMenuOpen}
+                                    handleDungeonTravel={handleDungeonTravel}
                                     toggleWalletTiers={toggleWalletTiers}
                                     updateShopPrice={updateShopPrice}
+                                    showShops={showShops}
                                     showShopInput={showShopInput}
                                     showShopRupee={showShopRupee}
+
+                                    connector={false}
+                                    forceVisible={false}
+                                    renderedConnectors={[]}
+
+                                    ekey={title + "entrance" + i}
+                                    key={title + "entranceContainer" + i}
+                                    scrollRef={title + entrance.name}
+                                    searchTerm={searchTerm}
                                 />
-                            </React.Fragment>)
-                        } else { return null; }
-                    })}
-                    </div>
-                    { entrances.map((entrance, i) => {
-                        let connectorShuffled = false;
-                        if ((!(showUnshuffledEntrances) && entrance.shuffled) ||
-                        (connectorShuffled && !(showUnshuffledEntrances)) ||
-                        (showUnshuffledEntrances)) {
-                            return (
-                                <React.Fragment key={title + "entranceScrollContainer" + i}>
-                                    <div className="scrollControl" ref={(e) => setRef(title + entrance.name, e)} id={title + "entranceScrollContainer" + i} key={title + "entranceScrollContainer" + i} />
-                                    <UnknownEntrance
-                                        title={title}
-                                        playerNum={playerNum}
-                                        collapsedRegions={collapsedRegions}
-                                        entrance={entrance}
-                                        currentPage={currentPage}
-                                        handleLink={handleLink}
-                                        handleUnLink={handleUnLink}
-                                        handleCheck={handleCheck}
-                                        handleUnCheck={handleUnCheck}
-                                        handleContextMenu={handleContextMenu}
-                                        handleShopContextMenu={handleShopContextMenu}
-                                        handleEntranceMenuOpen={handleEntranceMenuOpen}
-                                        handleDungeonTravel={handleDungeonTravel}
-                                        toggleWalletTiers={toggleWalletTiers}
-                                        updateShopPrice={updateShopPrice}
-                                        showShops={showShops}
-                                        showShopInput={showShopInput}
-                                        showShopRupee={showShopRupee}
-
-                                        connector={false}
-                                        forceVisible={false}
-                                        renderedConnectors={[]}
-
-                                        ekey={title + "entrance" + i}
-                                        key={title + "entranceContainer" + i}
-                                        scrollRef={title + entrance.name}
-                                        searchTerm={searchTerm}
-                                    />
-                                </React.Fragment>
-                            );
-                        } else { return null }
+                            </React.Fragment>
+                        );
                     })}
                 </div> : null
             }

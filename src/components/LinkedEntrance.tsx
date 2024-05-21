@@ -159,7 +159,6 @@ const LinkedEntrance = ({
             }
             {
                 /* All other interior locations */
-                ((oEntrance.coupled && !oEntrance.is_warp) || (!oEntrance.coupled)) ?
                 internalLocations.map((location, k) => {
                     if (reverseLink.type !== 'Dungeon' && location.viewable(true) === true) {
                         return (
@@ -179,8 +178,7 @@ const LinkedEntrance = ({
                     } else {
                         return null;
                     }
-                }) :
-                null
+                })
             }
             {
                 otherEntrances.map((otherEntrance, i) => { return (
