@@ -49,6 +49,13 @@ export const locationFilter = (l: GraphLocation, collapsedRegions: CollapsedRegi
                 (!!l.item && l.item.name.toLowerCase().includes(searchTerm.toLowerCase())));
 }
 
+export const shopLocationFilter = (l: GraphLocation, searchTerm: string = ''): boolean => {
+    return (l.is_shop && l.holds_shop_refill) &&
+            (searchTerm === '' || 
+                l.alias.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                (!!l.item && l.item.name.toLowerCase().includes(searchTerm.toLowerCase())));
+}
+
 export const entranceOrTargetMatchesTerm = (entrance: GraphEntrance, collapsedRegions: CollapsedRegions, title: string, searchTerm: string, renderedConnectors: GraphEntrance[] = []): boolean => {
     // no filtering if no search term
     if (searchTerm === '') return true;
@@ -61,11 +68,11 @@ export const entranceOrTargetMatchesTerm = (entrance: GraphEntrance, collapsedRe
                     || buildExitName(targetEntrance).toLowerCase().includes(searchTermTest)
                     || (entranceFrom !== null && entranceFrom.toLowerCase().includes(searchTermTest));
     if (searchMatch) return true;
-    
-    if (!!targetEntrance.target_group) {
+
+    if (!!targetEntrance.target_group && (!entrance.shuffled || entrance.connected_region !== null)) {
         if (targetEntrance.target_group.page === '') { // prevents chaining into other overworld area tiles
             // immediate target area locations match
-            let targetLocations = targetEntrance.target_group.locations.filter((location) => locationFilter(location, collapsedRegions, title, searchTerm));
+            let targetLocations = targetEntrance.target_group.locations.filter((location) => locationFilter(location, collapsedRegions, title, searchTerm) || shopLocationFilter(location, searchTerm));
             if (targetLocations.length > 0) return true;
 
             // connector entrance recursion match
@@ -160,7 +167,7 @@ const UnknownEntrance = ({
             let otherEntrances: GraphEntrance[] = [];
             if (!!reverseLink.target_group && reverseLink.target_group.page === '') {
                 internalLocations.push(...reverseLink.target_group.locations.filter(l => locationFilter(l, collapsedRegions, title, searchTerm)));
-                shopLocations.push(...reverseLink.target_group.locations.filter(l => l.is_shop && l.holds_shop_refill && (searchTerm === '' || l.alias.toLowerCase().includes(searchTerm.toLowerCase()))));
+                shopLocations.push(...reverseLink.target_group.locations.filter(l => shopLocationFilter(l, searchTerm)));
                 otherEntrances.push(...reverseLink.target_group.exits.filter(e => 
                     !(renderedConnectors.includes(e)) &&
                     (e.shuffled || e.target_group !== reverseLink.source_group) &&
