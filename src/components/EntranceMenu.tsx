@@ -87,9 +87,6 @@ const EntranceMenu = ({
                 classes={{
                     list: "MenuPadding",
                 }}
-                TransitionProps={{
-                    timeout: 0,
-                }}
                 anchorOrigin={{
                     vertical: 'bottom',
                     horizontal: 'right',
