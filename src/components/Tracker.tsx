@@ -410,32 +410,9 @@ const Tracker = (_props: {}) => {
     }
 
     const loadGraphPreset = (preset_name: string) => {
-        let plando = graph.get_settings_preset(preset_name);
-        if (!!plando) {
-            // Some presets use "random" option for some settings, but the tracker
-            // requires all settings to be clearly defined. In general, the option
-            // before "random" in the setting option list has the highest level of
-            // randomized locations/entrances/regions, so use that to be conservative
-            // for possible things for the user to check.
-            let graphSettingsOptions = graph.get_settings_options();
-            for (let [settingName, settingValue] of Object.entries(plando.settings)) {
-                if (settingValue === 'random') {
-                    let settingChoices = graphSettingsOptions[settingName].choices;
-                    if (!!settingChoices) {
-                        let settingOptions = Object.keys(settingChoices);
-                        let settingIndex = settingOptions.indexOf(settingValue);
-                        settingIndex--;
-                        if (settingIndex < 0) settingIndex = settingOptions.length - 1;
-                        plando.settings[settingName] = settingOptions[settingIndex];
-                    } else {
-                        throw `Failed to change random setting to non-random value: undefined setting choices`;
-                    }
-                }
-            }
-            graph.import(plando);
-            refreshSearch();
-            setGraphInitialState(JSON.stringify(plando));
-        }
+        graph.load_settings_preset(preset_name);
+        refreshSearch();
+        setGraphInitialState(JSON.stringify(graph.export(true)));
     }
 
     const importGraphState = (inputEvent: ChangeEvent<HTMLInputElement>) => {
