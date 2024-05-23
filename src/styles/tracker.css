@@ -396,6 +396,8 @@ body.dark {
     margin-right: 2px !important;
     margin-left: var(--theme-spacing) !important;
     height: 24px;
+    width: 24px;
+    margin: 0px 2px 0px 8px;
 }
 .locationPeek {
     margin-left: calc(var(--theme-spacing) * 3);
