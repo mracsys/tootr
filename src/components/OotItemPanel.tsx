@@ -75,7 +75,9 @@ export const OotItemPanel = ({
     refreshCounter,
 }: OotItemPanelProps) => {
     const [bottleSlots, setBottleSlots] = useState<(string|null)[]>([null, null, null, null]);
+    const [lockedSlots, setLockedSlots] = useState<boolean[]>([false, false, false, false]);
 
+    let locationBottles = graphLocations.filter(l => l.item?.name.startsWith('Bottle') || l.item?.name === 'Rutos Letter').map((l) => { return l.item?.name });
     let playerBottles: {[bottle: string]: number} = {};
     for (let bottle of bottleVariants) {
         if (Object.keys(graphPlayerInventory).includes(bottle)) {
@@ -111,24 +113,41 @@ export const OotItemPanel = ({
 
     const loadBottleSlots = (playerBottles: {[item_name: string]: number}) => {
         let collectedBottles: {[item_name: string]: number} = {};
+        let newBottleSlots: (string | null)[] = [...bottleSlots];
+        let newLockedSlots = [...lockedSlots];
         // Build list of undisplayed bottles. Separate list
         // ensures that gaps in the slots are preserved as
         // well as bottle order (at least until page refresh).
         for (let [bottle, bottleCount] of Object.entries(playerBottles)) {
-            collectedBottles[bottle] = bottleCount - bottleSlots.filter((b) => b === bottle).length;
+            collectedBottles[bottle] = bottleCount - newBottleSlots.filter((b) => b === bottle).length;
             // unset slots right to left if a bottle was removed from the inventory
             while (collectedBottles[bottle] < 0) {
                 for (let i = 3; i >= 0; i--) {
-                    if (bottleSlots[i] === bottle) {
-                        bottleSlots[i] = null;
+                    if (newBottleSlots[i] === bottle) {
+                        newBottleSlots[i] = null;
+                        newLockedSlots[i] = false;
                         break;
                     }
                 }
-                collectedBottles[bottle] = bottleCount - bottleSlots.filter((b) => b === bottle).length;
+                collectedBottles[bottle] = bottleCount - newBottleSlots.filter((b) => b === bottle).length;
+            }
+        }
+        // Starting item bottles should be able to be cycled when clicked,
+        // but bottles from checked locations should remain fixed when clicked.
+        let bottlesToLock: {[item_name: string]: number} = {};
+        for (let bottle of locationBottles) {
+            if (!!bottle) {
+                if (!(Object.keys(bottlesToLock).includes(bottle))) bottlesToLock[bottle] = 0;
+                bottlesToLock[bottle] += 1;
+            }
+        }
+        for (let i = 0; i < newBottleSlots.length; i++) {
+            let bottle = newBottleSlots[i];
+            if (!!bottle && newLockedSlots[i] && Object.keys(bottlesToLock).includes(bottle)) {
+                bottlesToLock[bottle]--;
             }
         }
         // add undisplayed bottles to empty item grid slots if any exist
-        let newBottleSlots: (string | null)[] = [...bottleSlots];
         let slotNum = 0;
         for (let [bottle, bottleCount] of Object.entries(collectedBottles)) {
             while (slotNum < 4 && !!(newBottleSlots[slotNum])) {
@@ -140,10 +159,17 @@ export const OotItemPanel = ({
             let numBottles = Math.min(4 - slotNum, bottleCount);
             for (let i = slotNum; i < slotNum + numBottles; i++) {
                 newBottleSlots[i] = bottle;
+                if (Object.keys(bottlesToLock).includes(bottle)) {
+                    if (bottlesToLock[bottle] > 0) {
+                        newLockedSlots[i] = true;
+                        bottlesToLock[bottle]--;
+                    }
+                }
             }
             slotNum += numBottles;
         }
         setBottleSlots(newBottleSlots);
+        setLockedSlots(newLockedSlots);
     }
 
     const addCumulativeStartingItems = (itemList: string[], itemIndex: number) => {
@@ -274,17 +300,22 @@ export const OotItemPanel = ({
                     nextBottleItem = gridEntry.group_variants[variantIndex + 1];
                     prevBottleItem = gridEntry.group_variants[variantIndex - 1];
                 }
-                if (!!nextBottleItem) {
-                    let newItem = nextBottleItem; // cmon typescript
-                    addItem = () => addBottleStartingItem(newItem, bottleIndex);
+                if (lockedSlots[bottleIndex]) {
+                    addItem = () => {};
+                    contextMenuHandler = new ContextMenuHandlerWithArgs(() => {}, {});
                 } else {
-                    addItem = () => removeBottleStartingItem(itemName, bottleIndex);
-                }
-                if (!!prevBottleItem) {
-                    let newItem = prevBottleItem; // cmon typescript
-                    contextMenuHandler = new ContextMenuHandlerWithArgs(() => addBottleStartingItem(newItem, bottleIndex), {});
-                } else {
-                    contextMenuHandler = new ContextMenuHandlerWithArgs(() => removeBottleStartingItem(itemName, bottleIndex), {});
+                    if (!!nextBottleItem) {
+                        let newItem = nextBottleItem; // cmon typescript
+                        addItem = () => addBottleStartingItem(newItem, bottleIndex);
+                    } else {
+                        addItem = () => removeBottleStartingItem(itemName, bottleIndex);
+                    }
+                    if (!!prevBottleItem) {
+                        let newItem = prevBottleItem; // cmon typescript
+                        contextMenuHandler = new ContextMenuHandlerWithArgs(() => addBottleStartingItem(newItem, bottleIndex), {});
+                    } else {
+                        contextMenuHandler = new ContextMenuHandlerWithArgs(() => removeBottleStartingItem(itemName, bottleIndex), {});
+                    }
                 }
             } else if (gridEntry.item_name === 'Weird Egg') {
                 // child trade shuffle needs cumulative starting items
@@ -305,19 +336,24 @@ export const OotItemPanel = ({
                             }
                         }
                     }
-                    if (currentStartingIndex === 0 && Object.keys(graphPlayerInventory).includes('Chicken')
-                    && (graphSettings.starting_items === undefined || graphSettings.starting_items === null || !(Object.keys(graphSettings.starting_items).includes('Weird Egg')))) {
-                        currentStartingIndex = 1;
-                        collected = 1;
+                    let currentInventoryIndex = 0;
+                    for (let i = gridEntry.group_variants.length - 1; i >= 0; i--) {
+                        if (Object.keys(graphPlayerInventory).includes(gridEntry.group_variants[i])) {
+                            collected = 1;
+                            currentInventoryIndex = i;
+                            break;
+                        }
                     }
+                    let latestTradeIndex = currentInventoryIndex > currentStartingIndex ? currentInventoryIndex : currentStartingIndex;
+                    
                     let tradeList = gridEntry.group_variants;
-                    itemName = tradeList[currentStartingIndex];
-                    let nextTradeIndex = collected ? currentStartingIndex + 1 : currentStartingIndex;
-                    let prevTradeIndex = currentStartingIndex;
+                    itemName = tradeList[latestTradeIndex];
+                    let nextTradeIndex = collected ? latestTradeIndex + 1 : latestTradeIndex;
+                    let prevTradeIndex = latestTradeIndex;
                     if (nextTradeIndex >= tradeList.length) nextTradeIndex = tradeList.length - 1;
                     if (prevTradeIndex < 0) prevTradeIndex = 0;
-                    addItem = () => addCumulativeStartingItems(tradeList, nextTradeIndex);
-                    contextMenuHandler = new ContextMenuHandlerWithArgs(() => removeCumulativeStartingItems(tradeList, prevTradeIndex), {});
+                    addItem = () => addStartingItem(tradeList[nextTradeIndex]);
+                    contextMenuHandler = new ContextMenuHandlerWithArgs(() => removeStartingItem(tradeList[prevTradeIndex]), {});
                 }
             } else if (gridEntry.item_name === 'Pocket Egg') {
                 // adult trade shuffle can be also treated as increasing starting items

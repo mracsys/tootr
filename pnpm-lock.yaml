@@ -465,7 +465,7 @@ packages:
     resolution: {integrity: sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ==}
 
   '@mracsys/randomizer-graph-tool@file:mracsys-randomizer-graph-tool-v2.0.0.tgz':
-    resolution: {integrity: sha512-2ZyOJrmUViVl38ztKdgTv6bbQuhl9aNV/EkLBB1LQUCq0XNNpbRSY07+3y5V5sM8FUovfO53WpY4iX3a4H0Xjw==, tarball: file:mracsys-randomizer-graph-tool-v2.0.0.tgz}
+    resolution: {integrity: sha512-XIouPDjUPb2xKmrSXmhWbPMgrWmgscDTckCnZwB494xiybBI1lMeI94SDrBXYXofjAdL1FYtciwelshJmsgIZQ==, tarball: file:mracsys-randomizer-graph-tool-v2.0.0.tgz}
     version: 2.0.0
 
   '@mui/base@5.0.0-beta.40':
