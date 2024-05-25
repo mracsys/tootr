@@ -1,0 +1,74 @@
+
+.locationContainer {
+    padding: var(--theme-spacing) calc(var(--theme-spacing) * 2);
+    background-color: #eeeeee; /*grey[200]*/
+    display: flex;
+    flex-grow: 1;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+}
+.locationContainer:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+}
+.locationContainer .iconDiv {
+    padding: 0px 1em 0px 0px;
+}
+.locationIcon {
+    margin-right: calc(var(--theme-spacing) * 2);
+    width: 24px;
+    height: 24px;
+}
+.locationIconBlank {
+    margin-right: calc(var(--theme-spacing) * 2 + 24px);
+}
+.locationText {
+    flex-grow: 1;
+    margin: 0;
+    text-align: left;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.43;
+}
+.locationMark {
+    margin-right: 2px !important;
+    margin-left: var(--theme-spacing) !important;
+    height: 24px;
+    width: 24px;
+    margin: 0px 2px 0px 8px;
+}
+.locationPeek {
+    margin-left: calc(var(--theme-spacing) * 3);
+}
+.locationKnownItem {
+    margin-left: var(--theme-spacing);
+    position: relative;
+    color: black;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.locationKnownItem img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+.locationKnownItem .iconRightText {
+    text-shadow: 0px 0px 6px #EEEEEE, 0px 0px 2px #EEEEEE, 0px 0px 2px #EEEEEE, 0px 0px 2px #EEEEEE, 0px 0px 2px #EEEEEE;
+}
+.locationWalletTier .iconDiv {
+    margin-left: var(--theme-spacing);
+    padding: 0;
+    position: relative;
+    color: black;
+}
+.locationWalletTier .iconDiv img {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
+.priceBox {
+    width: 3em;
+    margin-left: var(--theme-spacing);
+    text-align: right;
+}

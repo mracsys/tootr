@@ -1,0 +1,67 @@
+
+.ootDungeonContainer {
+    height: 48px;
+    color: #FFFFFF;
+    font-family: 'Hylia Serif Beta';
+    font-size: 1.5rem;
+    line-height: 48px;
+    display: flex;
+}
+.ootDungeonContainer:nth-child(odd) {
+    width: 264px;
+}
+.ootDungeonContainer:nth-child(even) {
+    width: 216px;
+}
+.ootDungeonName.clickable:hover {
+    cursor: pointer;
+}
+.ootDungeonVariantContainer {
+    position: relative;
+}
+.ootDungeonVariant {
+    color: #0000FF;
+    text-shadow: 0px 0px 6px #000000, 0px 0px 2px #000000, 0px 0px 2px #000000, 0px 0px 2px #000000, 0px 0px 2px #000000;
+    font-size: 1rem;
+    line-height: 32px;
+    position: absolute;
+    left: -16px;
+    top: 0px;
+    cursor: pointer;
+}
+.ootDungeonItems {
+    font-size: 0.875rem;
+    line-height: 0;
+}
+.ootDungeonLabelContainer {
+    width: 48px;
+    flex-grow: 1;
+    position: relative;
+}
+.ootDungeonTCGItemsLastRow,
+.ootDungeonItemsLastRow {
+    width: 480px;
+    display: flex;
+    justify-content: center;
+}
+.ootDungeonTCGItemsLastRow .ootDungeonContainer,
+.ootDungeonItemsLastRow .ootDungeonContainer {
+    display: flex;
+    justify-content: center;
+}
+.ootDungeonTCGItemsLastRow .ootDungeonContainer {
+    min-width: 117px;
+    width: auto;
+}
+.ootDungeonItemsLastRow .ootDungeonContainer {
+    width: 160px;
+}
+.ootDungeonTCGItemsLastRow .ootDungeonLabelContainer,
+.ootDungeonItemsLastRow .ootDungeonLabelContainer {
+    flex-grow: unset;
+    width: auto;
+    margin-right: 6px;
+}
+.ootDungeonContainer .iconDiv {
+    padding: 8px 6px;
+}

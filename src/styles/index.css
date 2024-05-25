@@ -3,6 +3,48 @@
     src: url(/HyliaSerifBeta-Regular.otf) format('opentype');
 }
 
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-style: normal;
+    src: url(/roboto-latin-400-normal.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-style: italic;
+    src: url(/roboto-latin-400-italic.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-style: normal;
+    src: url(/roboto-latin-500-normal.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-style: italic;
+    src: url(/roboto-latin-500-italic.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-style: normal;
+    src: url(/roboto-latin-700-normal.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-style: italic;
+    src: url(/roboto-latin-700-italic.woff2) format('woff2');
+}
+
 hr {
     height: 1px;
     margin: 0px;

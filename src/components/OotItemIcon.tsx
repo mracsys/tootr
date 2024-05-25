@@ -18,6 +18,9 @@ export interface OotItemIconProps {
     leftLabel?: string | null,
     topLeftLabel?: string | null,
     topRightLabel?: string | null,
+    fade?: boolean,
+    fadeLabels?: boolean,
+    hideLabels?: boolean,
 }
 
 type KeyTextDict = {
@@ -423,6 +426,9 @@ const OotItemIcon = ({
     leftLabel,
     topLeftLabel,
     topRightLabel,
+    fade,
+    fadeLabels,
+    hideLabels,
 }: OotItemIconProps) => {
     let imageData: IconData;
     if (!!price) {
@@ -474,6 +480,18 @@ const OotItemIcon = ({
         if (!!topLeftStyle) {
             imageData = Object.assign({}, imageData);
             imageData.lSuperStyleOverride = Object.assign({}, topLeftStyle);
+        }
+        if (fade !== undefined) {
+            imageData = Object.assign({}, imageData);
+            imageData.fade = fade;
+        }
+        if (fadeLabels !== undefined) {
+            imageData = Object.assign({}, imageData);
+            imageData.fadeLabels = fadeLabels;
+        }
+        if (hideLabels !== undefined) {
+            imageData = Object.assign({}, imageData);
+            imageData.hideLabels = hideLabels;
         }
         return (
             <OotIcon

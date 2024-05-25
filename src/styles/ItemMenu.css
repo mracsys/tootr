@@ -1,0 +1,55 @@
+.locationMenuClear {
+    padding: calc(var(--theme-spacing) * 2);
+    margin: 0;
+    text-align: center;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.43;
+    color: #FFFFFF;
+}
+.locationMenuClear:hover {
+    background-color: #424242; /*grey[800]*/
+    cursor: pointer;
+}
+
+.locationItemMenu {
+    line-height: 0;
+    padding: 0;
+}
+.locationItemMenu ul {
+    padding: 0;
+    background-color: #212121; /*grey[900]*/
+}
+.locationItemMenu .iconLeftText {
+    color: #FFFFFF;
+}
+.locationItemMenu .iconLeftTopText {
+    color: #FFFFFF;
+}
+.locationItemMenu .iconCenterText {
+    color: #FFFFFF;
+}
+.locationItemMenu .iconRightText {
+    color: #FFFFFF;
+}
+.locationItemMenu .iconRightTopText {
+    color: #FFFFFF;
+}
+.locationItemMenu .iconDiv {
+    padding: 8px;
+}
+.locationItemMenu .iconDiv:hover {
+    background-color: #424242; /*grey[800]*/
+    cursor: pointer;
+    margin: 0 auto;
+}
+.itemMenuRow {
+    white-space: nowrap;
+    background-color: #212121; /*grey[900]*/
+}
+.itemMenuRow div {
+    display: inline-block;
+}
+.itemMenuRow .itemMenuClear {
+    width: 100%;
+}

@@ -7,6 +7,9 @@ import DoneIcon from '@mui/icons-material/Done';
 import ContextMenuHandler from './ContextMenuHandler';
 
 import { GraphLocation } from '@mracsys/randomizer-graph-tool';
+import LogicIndicator from './LogicIndicator';
+
+import '@/styles/LocationCheck.css';
 
 interface LocationCheckProps {
     lkey: string,
@@ -38,17 +41,8 @@ const LocationCheck = ({
         "Small Key": '/images/OoT_Small_Key_Icon.png',
         "Boss Key": '/images/OoT_Boss_Key_Icon.png',
     };
-    let logicColor: string;
-    if (location.visited) {
-        logicColor = 'logicalGreen';
-    } else if (location.visited_with_other_tricks) {
-        logicColor = 'logicalYellow';
-    } else {
-        logicColor = 'logicalBlank';
-    }
     return (
-        <div className='logicContainer'>
-            <div className={logicColor} />
+        <LogicIndicator spot={location}>
             <div
                 className="locationContainer"
                 key={lkey}
@@ -116,7 +110,7 @@ const LocationCheck = ({
                             <CheckBoxOutlineBlankIcon className="locationMark" />
                 }
             </div>
-        </div>
+        </LogicIndicator>
     );
 }
 

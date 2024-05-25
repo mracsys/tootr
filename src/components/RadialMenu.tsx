@@ -87,7 +87,7 @@ export const RadialMenu = ({
     return (
         <div className="buttonWrapper">
             <input defaultChecked={false} className="radialMenuToggler" type="checkbox" />
-            <OotItemIcon className="locationMenuIcon" onClick={togglePrimary} itemName={buttonItem} />
+            <OotItemIcon onClick={togglePrimary} itemName={buttonItem} />
             <div
                 className={primaryItems.length === 2 ? "dualMenuWrapper" : "radialMenuWrapper"}
                 style={{"--item-count": primaryItems.length, "--angle": "calc(360deg / var(--item-count))"} as RadialMenuCSS}
@@ -108,10 +108,7 @@ export const RadialMenu = ({
                                         data-found-in={sourceLocation}
                                         data-found-item={itemName}
                                     >
-                                        <OotItemIcon
-                                            className="locationMenuIcon"
-                                            itemName={itemName}
-                                        />
+                                        <OotItemIcon itemName={itemName} />
                                     </div>
                                 </div>
                             </div>
@@ -151,10 +148,7 @@ export const RadialMenu = ({
                                                         data-found-in={sourceLocation}
                                                         data-found-item={itemName}
                                                     >
-                                                        <OotItemIcon
-                                                            className="locationMenuIcon"
-                                                            itemName={itemName}
-                                                        />
+                                                        <OotItemIcon itemName={itemName} />
                                                     </div>
                                                 </div>
                                             </div>

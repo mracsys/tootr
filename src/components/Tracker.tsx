@@ -27,7 +27,6 @@ import GameSetting from './GameSetting';
 import GameArea from './GameArea';
 import EntranceMenu from './EntranceMenu';
 import ItemMenu from './ItemMenu';
-import ShopItemMenu from './ShopItemMenu';
 import SettingMultiselectMenu from './SettingMultiselectMenu';
 import ContextMenuHandler from './ContextMenuHandler';
 import WarpMenu from './WarpMenu';
@@ -48,6 +47,13 @@ import { WorldGraphFactory, ExternalFileCacheFactory, ExternalFileCache, GraphEn
 import { SettingPanel } from './SettingsPanel';
 import { SeedMenu } from './SeedMenu';
 import { ItemPanel } from './ItemPanel';
+import { location_item_menu_layout, shop_item_menu_layout } from '@/data/location_item_menu_layout';
+
+import '@/styles/tracker.css';
+import '@/styles/mui-overrides.css';
+import '@/styles/TrackerTopBar.css';
+import '@/styles/TrackerDrawer.css';
+import '@/styles/TrackerPaper.css';
 
 
 export type SettingTypes = string[] | {[s: string]: boolean};
@@ -975,7 +981,7 @@ const Tracker = (_props: {}) => {
                                 unmountOnExit: true,
                             }}
                         >
-                            <div className="drawerHeader" />
+                            <div className="drawerHeader"></div>
                             <List className="drawerContainer">
                                 {
                                     Object.keys(enabled_settings).map((setting,si) => {
@@ -1004,12 +1010,14 @@ const Tracker = (_props: {}) => {
                             id="globalEntranceMenu"
                         />
                         <ItemMenu
+                            menuLayout={location_item_menu_layout}
                             handleClose={handleItemMenuClose}
                             handleFind={findItem}
                             anchorLocation={itemMenuOpen}
                             sourceLocation={locationToLink}
                         />
-                        <ShopItemMenu
+                        <ItemMenu
+                            menuLayout={shop_item_menu_layout}
                             handleClose={handleShopItemMenuClose}
                             handleFind={findItem}
                             anchorLocation={shopItemMenuOpen}
@@ -1065,6 +1073,12 @@ const Tracker = (_props: {}) => {
                             </div>
                             <div className='worldInfo'>
                                 <ResponsiveMasonry columnsCountBreakPoints={{
+                                    /*
+                                        window-padding = game-info-width + theme-spacing * 2 + areaPaper.padding(20px) * 2
+                                        cutoff = window-padding + (column-width + column-gap) * column-count
+                                        max-width = column-width + (column-width + column-gap) * (column-count - 1)
+                                        min-column-width = 540px
+                                    */
                                     0: 1,
                                     1704: 2,
                                     2264: 3,

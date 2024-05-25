@@ -1,5 +1,6 @@
 import Menu from '@mui/material/Menu';
 import { ContextCallback } from './ContextMenuHandlerWithArgs';
+import '@/styles/SettingMultiselectMenu.css';
 
 interface SettingMultiselectMenuProps {
     anchorLocation?: Element | null,
@@ -35,7 +36,7 @@ const SettingMultiselectMenu = ({
         optionElements.push(
             <div
                 key={optionName + 'Div'}
-                className={settingValue.includes(optionName) ? undefined : 'iconTooltipOptionDisabled'}
+                className={settingValue.includes(optionName) ? undefined : 'MultiselectOptionDisabled'}
                 onClick={(e) => {
                     e.stopPropagation();
                     handleChange({graphSettingName: settingName, settingOptions: [optionName]});

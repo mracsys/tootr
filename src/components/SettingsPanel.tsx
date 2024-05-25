@@ -4,6 +4,8 @@ import { IconDict } from "./OotIcon";
 
 import { GraphSettingsOptions, GraphSettingsConfiguration, GraphSettingsLayout, GraphSetting } from '@mracsys/randomizer-graph-tool';
 
+import '@/styles/SettingsPanel.css';
+
 interface SettingPanelProps {
     cycleSetting: ({graphSetting, reverseDirection}: {graphSetting?: string, reverseDirection?: boolean}) => void,
     handleMultiselectMenuOpen: (s: Element, n: string) => void,
@@ -47,52 +49,50 @@ export const SettingPanel = ({
         if (tab_setting_sets.length > 0 || Object.keys(visible_section_settings).length > 0) {
             tab_output.push(
                 <div className="settingTabContainer" key={tab_name + 'tabpanelkey'}>
+                    <div className="settingCollectionContainer">
                     {
                         tab_setting_sets.map((tab_setting_row, j) =>
-                            <div className="locationItemMenu" key={tab_name + 'tabpanelrowkey' + j}>
-                                <div className="itemMenuRow">
-                                {
-                                    tab_setting_row.map(s =>
-                                        <OotSettingIcon
-                                            className="locationMenuIcon"
-                                            graphSettingsOptions={graphSettingsOptions}
-                                            settingAssetMap={settingAssetMap}
-                                            onClick={cycleSetting}
-                                            handleMultiselectMenuOpen={handleMultiselectMenuOpen}
-                                            itemName={s.name}
-                                            key={s.name + tab_name + 'tabpanelkey'}
-                                        />
-                                    )
-                                }
-                                </div>
+                            <div className="settingMenuRow" key={tab_name + 'tabpanelrowkey' + j}>
+                            {
+                                tab_setting_row.map(s =>
+                                    <OotSettingIcon
+                                        graphSettingsOptions={graphSettingsOptions}
+                                        settingAssetMap={settingAssetMap}
+                                        onClick={cycleSetting}
+                                        handleMultiselectMenuOpen={handleMultiselectMenuOpen}
+                                        itemName={s.name}
+                                        key={s.name + tab_name + 'tabpanelkey'}
+                                    />
+                                )
+                            }
                             </div>
                         )
                     }
+                    </div>
                     {
                         Object.entries(visible_section_settings).map(([section_name, section_settings_sets]) => 
                             <div className="settingSectionContainer" key={tab_name + section_name + 'tabsectionpanelkey'}>
                                 <span className="settingSectionName">{section_name}</span>
+                                <div className="settingCollectionContainer">
                                 {
                                     section_settings_sets.map((section_setting_row, i) =>
-                                        <div className="locationItemMenu" key={tab_name + section_name + 'tabsectionpanelrowkey' + i}>
-                                            <div className="itemMenuRow">
-                                                {
-                                                    section_setting_row.map(s =>
-                                                        <OotSettingIcon
-                                                            className="locationMenuIcon"
-                                                            graphSettingsOptions={graphSettingsOptions}
-                                                            settingAssetMap={settingAssetMap}
-                                                            onClick={cycleSetting}
-                                                            handleMultiselectMenuOpen={handleMultiselectMenuOpen}
-                                                            itemName={s.name}
-                                                            key={s.name + tab_name + section_name + 'tabsectionpanelkey'}
-                                                        />
-                                                    )
-                                                }
-                                            </div>
+                                        <div className="settingMenuRow" key={tab_name + section_name + 'tabsectionpanelrowkey' + i}>
+                                            {
+                                                section_setting_row.map(s =>
+                                                    <OotSettingIcon
+                                                        graphSettingsOptions={graphSettingsOptions}
+                                                        settingAssetMap={settingAssetMap}
+                                                        onClick={cycleSetting}
+                                                        handleMultiselectMenuOpen={handleMultiselectMenuOpen}
+                                                        itemName={s.name}
+                                                        key={s.name + tab_name + section_name + 'tabsectionpanelkey'}
+                                                    />
+                                                )
+                                            }
                                         </div>
                                     )
                                 }
+                                </div>
                             </div>
                         )
                     }

@@ -9,6 +9,8 @@ import MeetingRoomIcon from '@mui/icons-material/MeetingRoom';
 import SwitchAccessShortcutIcon from '@mui/icons-material/SwitchAccessShortcut';
 import { GraphRegion, GraphEntrance } from '@mracsys/randomizer-graph-tool';
 
+import '@/styles/WarpMenu.css';
+
 interface WarpMenuProps {
     isWarpAreaLinked: (entrance: GraphEntrance) => boolean;
     handleDungeonTravel: (targetRegion: GraphRegion | null) => void;
@@ -76,7 +78,7 @@ const WarpMenu = ({
                                     key={`${w.name}WarpMenuIcon`}
                                     itemName={getWarpIcon(w)}
                                     className={isWarpAreaLinked(w) ?
-                                        "locationMenuIcon" :
+                                        "" :
                                         "grayscaleMenuIcon"}
                                     onClick={isWarpAreaLinked(w) ?
                                         () => handleDungeonTravel(!!w.replaces ? w.replaces.target_group : w.target_group)
@@ -89,7 +91,7 @@ const WarpMenu = ({
                 <div className="warpSongsSmall">
                     <ClickAwayListener onClickAway={() => expandSongMenu ? setExpandSongMenu(false) : null}>
                         <div
-                            className="iconDiv"
+                            className="warpIcon"
                             onClick={() => setExpandSongMenu(!expandSongMenu)}
                         >
                             {<SwitchAccessShortcutIcon className={warps.length > 0 ?
@@ -101,7 +103,7 @@ const WarpMenu = ({
                 </div>
                 <ClickAwayListener onClickAway={() => expandWarpMenu ? setExpandWarpMenu(false) : null}>
                     <div
-                        className="iconDiv"
+                        className="warpIcon"
                         onClick={() => setExpandWarpMenu(!expandWarpMenu)}
                         onContextMenu={areaMenuHandler.onContextMenu}
                         onTouchStart={areaMenuHandler.onTouchStart}
@@ -114,7 +116,7 @@ const WarpMenu = ({
                 </ClickAwayListener>
                 <ClickAwayListener onClickAway={() => expandDungeonMenu ? setExpandDungeonMenu(false) : null}>
                     <div
-                        className="iconDiv"
+                        className="warpIcon"
                         onClick={() => setExpandDungeonMenu(!expandDungeonMenu)}
                         onContextMenu={areaMenuHandler.onContextMenu}
                         onTouchStart={areaMenuHandler.onTouchStart}

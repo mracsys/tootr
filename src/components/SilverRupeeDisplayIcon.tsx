@@ -3,6 +3,8 @@ import OotItemIcon from "./OotItemIcon";
 import { RupeeCount } from "./OotDungeonTracker";
 import { useState } from 'react';
 
+import '@/styles/SilverRupeeDisplay.css';
+
 interface SilverRupeeDisplayIconProps {
     gridEntry: labelEntry,
     itemName: string,
@@ -36,7 +38,7 @@ export const SilverRupeeDisplayIcon = ({
             <div className='ootSilverRupeeMask'>
                 <OotItemIcon
                     itemName={itemName}
-                    className="ootItemHeld ootSilverRupeeTracker"
+                    className="ootSilverRupeeTracker"
                     subscript={rSub}
                     leftLabel={lSub}
                     topRightLabel={rSuper}

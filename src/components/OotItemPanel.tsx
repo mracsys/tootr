@@ -426,7 +426,8 @@ export const OotItemPanel = ({
                 subscriptClass = 'ootMaxItemUpgrade';
             }
         }
-        let className = collected ? 'ootItemHeld' : 'ootItemNotFound';
+        let className = '';
+        let fade = collected ? false : true;
         if (subClass) {
             className = `${className} ${subClass}`;
         }
@@ -439,6 +440,8 @@ export const OotItemPanel = ({
             onClick={addItem}
             handleContextMenu={contextMenuHandler}
             subscript={subscript}
+            fade={fade}
+            hideLabels={false}
             key={`${itemName}itemPanelEntry${entryNum}`}
         />);
     }
@@ -536,10 +539,13 @@ export const OotItemPanel = ({
         if (drawItem) {
             wincon_panel_children.push(<OotItemIcon
                 itemName={itemName}
-                className={collected || itemName === 'Triforce Piece' ? `ootItemHeld ${pos}` : `ootItemNotFound ${pos}`}
+                className={pos}
                 onClick={addItem}
                 handleContextMenu={contextMenuHandler}
                 centerLabel={subscript}
+                fade={collected || itemName === 'Triforce Piece' ? false : true}
+                fadeLabels={false}
+                hideLabels={false}
                 key={`${itemName}winconPanelEntry${entryNum}`}
             />);
             entryNum++;
@@ -585,7 +591,7 @@ export const OotItemPanel = ({
         >
             <OotItemIcon
                 itemName={itemName}
-                className={collected ? `ootItemHeld` : `ootItemNotFound`}
+                fade={collected ? false : true}
                 key={`${itemName}counterPanelEntryIcon${entryNum}`}
             />
             <div className='ootCounterLabel' key={`${itemName}counterPanelEntryLabel${entryNum}`}>{collected}{show_available_tokens ? `/${available}` : null}</div>

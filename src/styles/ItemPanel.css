@@ -1,0 +1,187 @@
+.itemsHeldContainer {
+    width: 480px;
+    line-height: 0;
+    padding: 0;
+    white-space: nowrap;
+    background-color: #212121; /*grey[900]*/
+}
+.itemsHeldContainer ul {
+    padding: 0;
+    background-color: #212121; /*grey[900]*/
+}
+.itemsHeldContainer .iconLeftText {
+    color: #FFFFFF;
+}
+.itemsHeldContainer .iconLeftTopText {
+    color: #FFFFFF;
+}
+.itemsHeldContainer .iconCenterText {
+    color: #FFFFFF;
+}
+.itemsHeldContainer .iconRightText {
+    color: #FFFFFF;
+}
+.itemsHeldContainer .iconRightTopText {
+    color: #FFFFFF;
+}
+.itemsHeldContainer .iconDiv {
+    padding: 8px;
+}
+.itemsHeldContainer .iconDiv:hover {
+    background-color: #424242; /*grey[800]*/
+    cursor: pointer;
+    margin: 0 auto;
+    border-radius: 24px;
+}
+.itemsHeldContainer .iconSideText {
+    display: none;
+}
+.itemsHeldContainer div {
+    float: left;
+}
+.ootItemsHeldContainer {
+    width: calc(48px * 7);
+}
+.itemsHeldContainer .ootMaxItemUpgrade .iconRightText {
+    color: #00FF00;
+}
+.ootWinConsContainer {
+    width: calc(48px * 3);
+}
+
+.ootRewardWinCons {
+    width: 144px;
+    height: 192px;
+    position: relative;
+}
+.ootRewardWinCons .iconTooltipContainer,
+.ootRewardWinCons .iconTooltipContainer .iconDiv {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.ootRewardWinCons .iconTooltipContainer:has(.top) {
+    position: absolute;
+    top: 0px;
+    left: 48px;
+}
+.ootRewardWinCons .iconTooltipContainer:has(.leftTop) {
+    position: absolute;
+    top: 24px;
+    left: 0px;
+}
+.ootRewardWinCons .iconTooltipContainer:has(.rightTop) {
+    position: absolute;
+    top: 24px;
+    left: 96px;
+}
+.ootRewardWinCons .iconTooltipContainer:has(.leftBottom) {
+    position: absolute;
+    top: 72px;
+    left: 0px;
+}
+.ootRewardWinCons .iconTooltipContainer:has(.rightBottom) {
+    position: absolute;
+    top: 72px;
+    left: 96px;
+}
+.ootRewardWinCons .iconTooltipContainer:has(.bottom) {
+    position: absolute;
+    top: 96px;
+    left: 48px;
+}
+.ootRewardWinCons .iconTooltipContainer:has(.left) {
+    position: absolute;
+    top: 144px;
+    left: 0px;
+}
+.ootRewardWinCons .iconTooltipContainer:has(.middle) {
+    position: absolute;
+    top: 144px;
+    left: 48px;
+}
+.ootRewardWinCons .iconTooltipContainer:has(.right) {
+    position: absolute;
+    top: 144px;
+    left: 96px;
+}
+.ootRewardWinCons .iconTooltipContainer:has(.triforce) {
+    position: absolute;
+    top: 48px;
+    left: 48px;
+}
+.ootRewardWinCons .iconContainer {
+    opacity: 30%;
+}
+.ootRewardWinCons .triforce .iconContainer {
+    opacity: 1;
+}
+.ootRewardWinCons .iconCenterText {
+    opacity: 100%;
+}
+.ootCounterWinCons {
+    width: 144px;
+    height: 96px;
+    display: flex;
+    align-items: center;
+}
+.ootCounterItem {
+    width: 144px;
+    height: 48px;
+    margin: 0px;
+    float: none !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.ootCounterItem div {
+    float: none !important;
+    opacity: 1;
+}
+.ootCounterItem:hover {
+    cursor: pointer;
+    background-color: #424242; /*grey[800]*/
+}
+.ootCounterItem .ootCounterLabel {
+    color: #FFFFFF;
+    font-family: 'Hylia Serif Beta';
+    font-size: 1.5rem;
+    line-height: 1.43;
+    width: 96px;
+    text-align: center;
+}
+.ootCompressedCButtons {
+    position: relative;
+    width: 96px;
+    height: 48px;
+}
+.ootCompressedCButtons .iconDiv {
+    padding: 4px;
+}
+.ootCompressedCButtons .iconContainer {
+    width: 16px;
+    height: 16px;
+}
+.ootCompressedCButtons .iconTooltipContainer {
+    position: absolute;
+}
+.ootCompressedCButtons .iconTooltipContainer:has(.leftButton) {
+    left: 12px;
+    top: 12px;
+}
+.ootCompressedCButtons .iconTooltipContainer:has(.upButton) {
+    left: 36px;
+    top: 0px;
+}
+.ootCompressedCButtons .iconTooltipContainer:has(.downButton) {
+    left: 36px;
+    top: 24px;
+}
+.ootCompressedCButtons .iconTooltipContainer:has(.rightButton) {
+    left: 60px;
+    top: 12px;
+}
+.itemsHeldContainer .iconDiv:hover:has(.ootItemBlank) {
+    background-color: transparent;
+    cursor: auto;
+}

@@ -3,6 +3,8 @@ import Autocomplete, { createFilterOptions } from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
 import { GraphEntrance, GraphEntrancePool } from '@mracsys/randomizer-graph-tool';
 
+import '@/styles/EntranceMenu.css';
+
 interface AutoOption {
     areaGroup: string,
     eName: string,

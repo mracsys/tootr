@@ -3,6 +3,8 @@ import AddIcon from '@mui/icons-material/Add';
 import type ContextMenuHandler from './ContextMenuHandler';
 import { GraphLocation } from '@mracsys/randomizer-graph-tool';
 
+import '@/styles/FixedShopCheck.css';
+
 interface FixedShopCheckProps {
     lkey: string,
     location: GraphLocation,
@@ -31,7 +33,7 @@ const FixedShopCheck = ({
                     /*<p className="fixedShopIcon">+</p>*/ :
                     <OotItemIcon
                         itemName={location.item.name}
-                        className="locationKnownItem"
+                        className="fixedShopIcon"
                     />
             }
         </div>

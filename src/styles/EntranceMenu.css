@@ -1,0 +1,77 @@
+.entranceAutoOption {
+    display: block !important;
+}
+.entranceAutoOption.Mui-focused {
+    text-decoration: none !important;
+    background-color: #52525E !important;
+    color: #FFFFFF !important;
+}
+.entranceAutoPaper {
+    font-size: 0.875rem !important;
+    line-height: 1.43 !important;
+    letter-spacing: 0.01071em !important;
+    margin: 0 !important;
+}
+.entranceAutoListBox {
+    padding: 0 !important;
+}
+.entranceAutoPopper {
+    position: relative !important;
+    transform: none !important;
+}
+.entranceAutoInput {
+    background-color: #fff !important;
+    border-bottom: 1px solid black !important;
+}
+.entranceAutoInput::after {
+    border-bottom: 0px solid #000 !important;
+}
+.entranceAutoInput::before {
+    border-bottom: 0px solid #000 !important;
+}
+.entranceAutoInput:hover::before {
+    border-bottom: 0px solid #000 !important;
+}
+.entranceAutoSearchLabel .Mui-focused {
+    color: rgba(0, 0, 0, 1) !important;
+}
+.entranceAutoNoButton {
+    display: none !important;
+}
+.entranceAutoWidthHack {
+    padding: 0 calc(var(--theme-spacing) * 0.75) 0 calc(var(--theme-spacing) * 6.5) !important;
+    font-family: Tahoma, sans-serif !important;
+    font-size: 1rem !important;
+    font-weight: 400 !important;
+    line-height: normal !important;
+    letter-spacing: 0.00938em !important;
+    height: 0px !important;
+    color: rgba(0, 0, 0, 0) !important;
+}
+.entranceText {
+    padding: calc(var(--theme-spacing) * 0.75) calc(var(--theme-spacing) * 0.75) calc(var(--theme-spacing) * 0.75) calc(var(--theme-spacing) * 3) !important;
+    font-family: Tahoma, sans-serif !important;
+    font-size: 1rem !important;
+    font-weight: 400 !important;
+    line-height: normal !important;
+    letter-spacing: 0.00938em !important;
+}
+.entranceText:hover {
+    text-decoration: none;
+    background-color: #52525E;
+    color: #FFFFFF;
+}
+.entranceAreaText {
+    padding: calc(var(--theme-spacing) * 0.75) calc(var(--theme-spacing) * 0.75) !important;
+    font-family: Tahoma, sans-serif !important;
+    font-size: 1rem !important;
+    line-height: normal !important;
+    letter-spacing: 0.00938em !important;
+    font-weight: bold !important;
+    font-style: italic !important;
+    color: #000 !important;
+}
+.entranceAreaText:hover {
+    text-decoration: none;
+    cursor: default;
+}

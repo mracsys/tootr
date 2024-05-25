@@ -10,6 +10,8 @@ import type ContextMenuHandler from './ContextMenuHandler';
 
 import { GraphRegion, GraphEntrance, GraphLocation } from '@mracsys/randomizer-graph-tool';
 
+import '@/styles/GameArea.css';
+
 interface GameAreaProps {
     region: GraphRegion,
     playerNum: number,

@@ -1,0 +1,22 @@
+.MultiselectOptionDisabled {
+    opacity: 20%;
+}
+.multiselectSettingMenu {
+    color: white;
+    font-family: 'Hylia Serif Beta';
+    padding: var(--theme-spacing);
+    background-color: #000000;
+}
+.multiselectSettingMenuTitle {
+    border-bottom: #FFFFFF 1px solid;
+    font-size: larger;
+}
+.multiselectSettingMenu div {
+    cursor: pointer;
+}
+.multiselectSettingMenu div.multiselectSettingMenuTitle {
+    cursor: auto;
+}
+.multiselectSettingMenuAll {
+    margin-right: calc(var(--theme-spacing) * 1);
+}

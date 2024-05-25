@@ -1,6 +1,8 @@
 import { OotItemPanel } from "./OotItemPanel";
 import { GraphEntrance, GraphLocation, GraphSettingsConfiguration } from '@mracsys/randomizer-graph-tool';
 
+import '@/styles/ItemPanel.css';
+
 interface ItemPanelProps {
     addStartingItem: (item_name: string, count?: number) => void,
     addStartingItems: (item_names: string[]) => void,

@@ -1,0 +1,105 @@
+.areaButton {
+    margin-left: var(--theme-spacing) !important;
+}
+.shopContainer {
+    padding: var(--theme-spacing) calc(var(--theme-spacing) * 2);
+    background-color: #eeeeee; /*grey[200]*/
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    vertical-align: center;
+}
+.shopContainer .iconDiv {
+    padding: 0px 1em 0px 0px;
+}
+.shopContainer div {
+    line-height: 0;
+}
+
+.entranceContainer {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    padding: var(--theme-spacing) calc(var(--theme-spacing) * 2);
+    align-items: center;
+    background-color: #fafafa; /*grey[50]*/
+}
+.entranceLabel {
+    vertical-align: center;
+    margin-right: 20px;
+    font-weight: bold;
+    flex-grow: 1;
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: 0.00938em;
+}
+.unlinkedEntranceLabel {
+    vertical-align: center;
+    margin-right: 20px;
+    font-weight: bold;
+    flex-grow: 1;
+    color: #FF0000;
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: 0.00938em;
+}
+.unlinkedEntranceMenu {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: calc(var(--theme-spacing) * 0.5) 0;
+    cursor: pointer;
+    margin-left: calc(var(--theme-spacing) * 2);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.1876em;
+    letter-spacing: 0.00938em;
+    position: relative;
+}
+.unlinkedEntranceMenu::before {
+    content: "";
+    display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.42);
+    transition: border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.unlinkedEntranceMenu:hover::before {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.87);
+}
+.unlinkedEntranceMenu span {
+    margin-right: var(--theme-spacing);
+}
+.entranceLink {
+    text-align: right;
+}
+.entranceLink1 {
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: 0.00938em;
+}
+.entranceLink2 {
+    font-size: 0.75rem;
+    line-height: 1.66;
+    letter-spacing: 0.03333em;
+}
+.overworldLinkAnchor {
+    color: inherit;
+    text-decoration: none;
+}
+.overworldLinkAnchor:hover {
+    text-decoration: underline;
+}
+.falseLinkAnchor {
+    text-decoration: none;
+    color:rgba(0, 0, 0, 0.87);
+}
+.falseLinkAnchor:hover {
+    text-decoration: none;
+    cursor: default;
+}

@@ -5,6 +5,8 @@ import { GraphEntrance, GraphLocation, GraphSettingsConfiguration } from '@mracs
 import { createBlankTrackerItem } from "./OotItemPanel";
 import OotItemIcon from './OotItemIcon';
 
+import '@/styles/DungeonPanel.css';
+
 export type RupeeCount = {
     name: string,
     collected: number,
@@ -113,7 +115,8 @@ export const OotDungeonTracker = ({
             }
             dungeon_item_children.push(<OotItemIcon
                 itemName={itemName}
-                className={fadeIcon ? `ootItemNotFound` : `ootItemHeld`}
+                fade={fadeIcon}
+                hideLabels={false}
                 onClick={clickAction}
                 key={`${itemName}DungeonPanelEntry${gridEntry.label}${entryNum}`}
             />);
@@ -187,7 +190,8 @@ export const OotDungeonTracker = ({
             } else {
                 dungeon_item_children.push(<OotItemIcon
                     itemName={itemEntry.item_name}
-                    className={collected ? `ootItemHeld` : `ootItemNotFound`}
+                    fade={collected ? false : true}
+                    hideLabels={false}
                     onClick={addItem}
                     handleContextMenu={contextMenuHandler}
                     subscript={subscript}

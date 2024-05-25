@@ -1,0 +1,23 @@
+
+.logicContainer {
+    display: flex;
+}
+.logicalGreen,
+.logicalYellow,
+.logicalRed,
+.logicalBlank {
+    width: 10px;
+    /* cursor: help; */
+}
+.logicalGreen {
+    background-color: #66bb6a;
+}
+.logicalYellow {
+    background-color: #eeff41;
+}
+.logicalRed {
+    background-color: #f44336;
+}
+.logicalBlank {
+    background-color: #bdbdbd;
+}

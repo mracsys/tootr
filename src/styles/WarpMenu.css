@@ -1,0 +1,119 @@
+
+@media screen and (max-width: 600px) {
+    .warpMenu {
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        background-color: #546e7a; /*blueGrey[600]*/
+        box-shadow: -2px -2px 4px -1px rgba(0,0,0,0.2),-4px -4px 5px 0px rgba(0,0,0,0.14),-1px -1px 10px 0px rgba(0,0,0,0.12);
+        max-height: 50%;
+    }
+}
+@media screen and (min-width: 600px) {
+    .warpMenu {
+        border-radius: 8px 0 0 0;
+        overflow: hidden;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        background-color: #546e7a; /*blueGrey[600]*/
+        box-shadow: -2px -2px 4px -1px rgba(0,0,0,0.2),-4px -4px 5px 0px rgba(0,0,0,0.14),-1px -1px 10px 0px rgba(0,0,0,0.12);
+        max-height: 50%;
+    }    
+}
+.warpMenu .iconRightText {
+    color: #FFFFFF;
+}
+.warpMenu .iconTradeText {
+    color: #FFFFFF;
+}
+.warpIcon {
+    cursor: pointer;
+    position: relative;
+}
+.warpIcon,
+.warpMenu .iconDiv {
+    padding: 8px;
+    line-height: 0;
+}
+.warpIcon:hover,
+.warpMenu .iconDiv:hover {
+    background-color: #37474f; /*blueGrey[800]*/
+    cursor: pointer;
+}
+.warpMenuVisible {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.expandWarpMenu {
+    color: white !important;
+    width: 32px !important;
+    height: 100% !important;
+    cursor: pointer !important;
+}
+.expandWarpMenu:hover {
+    background-color: #37474f !important; /*blueGrey[800]*/
+}
+.MuiCollapse-root.warpAreaList {
+    overflow-y: auto !important;
+    flex-grow: 1 !important;
+}
+.warpMenuArea {
+    display: block;
+    color: white;
+    font-weight: bold;
+    padding: var(--theme-spacing);
+    cursor: pointer;
+}
+.warpMenuArea:hover {
+    background-color: #37474f; /*blueGrey[800]*/
+}
+.warpMenuAreaHidden {
+    display: block;
+    color: #9e9e9e; /*grey[500]*/
+    font-weight: bold;
+    padding: var(--theme-spacing);
+}
+@media screen and (max-width: 600px) {
+    .warpSongsBig {
+        display: none;
+    }
+}
+@media screen and (min-width: 600px) {
+    .warpSongsBig {
+        display: flex;
+    }
+}
+@media screen and (max-width: 600px) {
+    .warpSongsSmall {
+        display: flex;
+    }
+}
+@media screen and (min-width: 600px) {
+    .warpSongsSmall {
+        display: none;
+    }
+}
+@media screen and (max-width: 600px) {
+    .warpSongsBlank {
+        color: #9e9e9e; /*grey[500]*/
+        width: 32px;
+        height: 100%;
+        cursor: pointer;
+    }
+}
+@media screen and (min-width: 600px) {
+    .warpSongsBlank {
+        display: none;
+    }
+}

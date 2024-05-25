@@ -1,0 +1,83 @@
+.scrollControl {
+    display: block;
+    width: 0px;
+    height: 0px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+@media screen and (max-width: 600px) {
+    .areaCard {
+        width: 100%;
+        display: block;
+        max-width: 100%;
+        margin-bottom: 20px;
+        background-color: #cbc26d;
+        border-radius: 4px;
+        overflow: hidden;
+        box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .areaCard {
+        display: block;
+        max-width: 100%;
+        margin-bottom: 20px;
+        background-color: #cbc26d;
+        border-radius: 4px;
+        overflow: hidden;
+        box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);
+    }
+}
+
+.areaHeader {
+    padding: calc(var(--theme-spacing) * 0.75);
+}
+.areaTitle {
+    background-color: #fff59d; /*yellow[200]*/
+    display: flex;
+    flex-direction: row;
+    padding: var(--theme-spacing) calc(var(--theme-spacing) * 2) var(--theme-spacing) calc(var(--theme-spacing) * 0.5);
+    align-items: center;
+}
+.areaTitleText {
+    font-family: Roboto,sans-serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.6;
+}
+.areaRefreshCounter {
+    color: #fff59d; /*yellow[200]*/
+    opacity: 0;
+}
+.areaTitleCollapse {
+    flex-grow: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.entranceAnchor {
+    text-decoration: none;
+    height: 0;
+    position: relative;
+    top: calc(var(--theme-spacing) * -10);
+}
+.entranceAnchor:hover {
+    text-decoration: none;
+    cursor: default;
+}
+.entranceAnchor::before {
+    content: "";
+    display: block;
+}
+.entranceAnchorFakeText {
+    height: 1;
+    width: 1;
+    position: absolute;
+    overflow: hidden;
+    top: -10;
+}
+.collapseArea {
+    cursor: pointer !important;
+}

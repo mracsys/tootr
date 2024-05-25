@@ -8,6 +8,8 @@ import Checkbox from '@mui/material/Checkbox'
 import { FormHelperText, ListItemText, MenuItem } from '@mui/material';
 import type { SelectedSettings, SettingCategory, SettingTypes } from './Tracker';
 
+import '@/styles/GameSetting.css';
+
 interface GameSettingProps {
     title: string,
     settings: SettingCategory,

@@ -12,6 +12,9 @@ import type { MouseEvent } from 'react';
 import { buildEntranceName, buildExitName, buildExitEntranceName } from './UnknownEntrance';
 
 import { GraphRegion, GraphEntrance, GraphLocation } from '@mracsys/randomizer-graph-tool';
+import LogicIndicator from './LogicIndicator';
+
+import '@/styles/EntranceStyles.css';
 
 interface LinkedEntranceProps {
     title: string,
@@ -94,19 +97,9 @@ const LinkedEntrance = ({
             </div>
         </div>
     );
-    let logicColor: string;
-    if (entrance.visited) {
-        logicColor = 'logicalGreen';
-    } else if (entrance.visited_with_other_tricks) {
-        logicColor = 'logicalYellow';
-    } else {
-        logicColor = 'logicalBlank';
-    }
-
     return (
         <React.Fragment key={ekey}>
-            <div className='logicContainer'>
-                <div className={logicColor} />
+            <LogicIndicator spot={entrance}>
                 <div className="entranceContainer" key={entrance.name + "label"}>
                     { forceVisible ? <SubdirectoryArrowRightIcon /> : null }
                     <div className="entranceLabel">
@@ -134,7 +127,7 @@ const LinkedEntrance = ({
                             null
                     }
                 </div>
-            </div>
+            </LogicIndicator>
             {
                 ((shopLocations.length > 0) && (showShops === true)) ?
                     <React.Fragment>

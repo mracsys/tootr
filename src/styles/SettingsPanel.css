@@ -1,0 +1,53 @@
+.settingsContainer {
+    font-family: 'Hylia Serif Beta';
+    color: white;
+}
+.settingTabName {
+    color: white;
+}
+.settingSectionName {
+    color: white;
+}
+.grayscaleMenuIcon img {
+    width: 32px;
+    height: 32px;
+    filter: grayscale(100%);
+}
+.settingCollectionContainer {
+    line-height: 0;
+    padding: 0;
+}
+.settingCollectionContainer ul {
+    padding: 0;
+    background-color: #212121; /*grey[900]*/
+}
+.settingCollectionContainer .iconLeftText {
+    color: #FFFFFF;
+}
+.settingCollectionContainer .iconLeftTopText {
+    color: #FFFFFF;
+}
+.settingCollectionContainer .iconCenterText {
+    color: #FFFFFF;
+}
+.settingCollectionContainer .iconRightText {
+    color: #FFFFFF;
+}
+.settingCollectionContainer .iconRightTopText {
+    color: #FFFFFF;
+}
+.settingCollectionContainer .iconDiv {
+    padding: 8px;
+}
+.settingCollectionContainer .iconDiv:hover {
+    background-color: #424242; /*grey[800]*/
+    cursor: pointer;
+    margin: 0 auto;
+}
+.settingMenuRow {
+    white-space: nowrap;
+    background-color: #212121; /*grey[900]*/
+}
+.settingMenuRow div {
+    display: inline-block;
+}

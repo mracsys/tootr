@@ -1,0 +1,155 @@
+.iconTooltipContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.iconDiv {
+    cursor: pointer;
+    position: relative;
+}
+.iconRightText,
+.iconRightTopText,
+.iconCenterText,
+.iconLeftText,
+.iconLeftTopText {
+    position: absolute;
+    font-family: 'Hylia Serif Beta';
+    line-height: 1.43em;
+    text-shadow: 0px 0px 6px #000000, 0px 0px 2px #000000, 0px 0px 2px #000000, 0px 0px 2px #000000, 0px 0px 2px #000000;
+}
+.iconRightText {
+    bottom: -4px;
+    right: 0px;
+    width: 16px;
+    text-align: right;
+}
+.iconRightTopText {
+    top: -4px;
+    right: 0px;
+    width: 16px;
+    text-align: right;
+}
+.iconCenterText {
+    bottom: -4px;
+    left: 0px;
+    width: 32px;
+    text-align: center;
+}
+.iconLeftText {
+    bottom: -4px;
+    left: 0px;
+    width: 16px;
+    text-align: left;
+}
+.iconLeftTopText {
+    top: -4px;
+    left: 0px;
+    width: 16px;
+    text-align: left;
+}
+.svgIcon.iconRightSub,
+.iconRightSub {
+    position: absolute;
+    bottom: -4px;
+    right: 0px;
+    width: 16px !important;
+    height: 16px !important;
+    color: white !important;
+}
+.svgIcon.iconRightTopSub,
+.iconRightTopSub {
+    position: absolute;
+    top: -4px;
+    right: 0px;
+    width: 16px !important;
+    height: 16px !important;
+    color: white !important;
+}
+.svgIcon.iconCenterSub,
+.iconCenterSub {
+    position: absolute;
+    bottom: -4px;
+    left: 0px;
+    width: 32px !important;
+    height: 16px !important;
+    color: white !important;
+}
+.svgIcon.iconLeftSub,
+.iconLeftSub {
+    position: absolute;
+    bottom: -4px;
+    left: 0px;
+    width: 16px !important;
+    height: 16px !important;
+    color: white !important;
+}
+.svgIcon.iconLeftTopSub,
+.iconLeftTopSub {
+    position: absolute;
+    top: -4px;
+    left: 0px;
+    width: 16px !important;
+    height: 16px !important;
+    color: white !important;
+}
+.iconContainer {
+    position: relative;
+    width: 32px;
+    height: 32px;
+}
+.svgIcon {
+    position: relative;
+    color: white !important;
+    width: 32px !important;
+    height: 100% !important;
+}
+.iconRightText.disabledSettingIcon,
+.iconRightTopText.disabledSettingIcon,
+.iconCenterText.disabledSettingIcon,
+.iconLeftText.disabledSettingIcon,
+.iconLeftTopText.disabledSettingIcon,
+.iconRightSub.disabledSettingIcon,
+.iconRightTopSub.disabledSettingIcon,
+.iconCenterSub.disabledSettingIcon,
+.iconLeftSub.disabledSettingIcon
+.iconLeftTopSub.disabledSettingIcon,
+.svgIcon.disabledSettingIcon,
+.iconContainer.disabledSettingIcon {
+    opacity: 30%;
+}
+.iconLabelContainer {
+    position: relative;
+}
+.iconTooltip {
+    position: absolute;
+    top: calc(-1px - var(--theme-spacing));
+    left: 48px;
+    color: white;
+    font-family: 'Hylia Serif Beta';
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: var(--theme-spacing);
+    border: #FFFFFF 1px solid;
+    background-color: #000000;
+    box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);
+    z-index: 1300;
+    display: none !important;
+}
+.iconDiv:hover + .iconTooltip {
+    display: flex !important;
+}
+.iconTooltip div {
+    height: 24px;
+    text-align: center;
+    line-height: 1.43em;
+}
+.iconSideText {
+    display: flex;
+    width: 64px;
+    height: 24px;
+    align-items: center;
+    font-family: 'Hylia Serif Beta';
+    word-wrap: break-word;
+    text-wrap: wrap;
+    line-height: 1.43;
+}

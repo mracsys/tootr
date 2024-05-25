@@ -1,0 +1,41 @@
+.MuiDrawer-root.settingsDrawer {
+    width: var(--drawer-width) !important;
+    flex-shrink: 0 !important;
+}
+.drawerPaper {
+    width: var(--drawer-width) !important;
+}
+.drawerHeader {
+    display: flex;
+    align-items: center;
+    padding: 0px var(--theme-spacing);
+    justify-content: flex-end;
+    /* necessary for content to be below app bar */
+    min-height: 64px;
+}
+.MuiList-root.drawerContainer {
+    overflow: auto !important;
+}
+
+
+@media screen and (max-width: 600px) {
+    .gameInfo {
+        display: none;
+    }
+}
+@media screen and (min-width: 600px) {
+    .gameInfo {
+        transition: left 195ms cubic-bezier(0.4, 0, 0.6, 1) 0ms;
+        position: fixed;
+        top: 64px;
+        left: 0;
+        width: calc(var(--game-info-width) + 2 * var(--theme-spacing));
+        height: calc(100vh - 64px);
+        background-color: #212121;
+        padding: var(--theme-spacing);
+    }
+    .gameInfoShift {
+        transition: left 225ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;
+        left: var(--drawer-width);
+    }
+}
