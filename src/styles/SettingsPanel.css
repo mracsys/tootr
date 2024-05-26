@@ -1,12 +1,12 @@
 .settingsContainer {
     font-family: 'Hylia Serif Beta';
-    color: white;
+    color: var(--color-sidebar-text);
 }
 .settingTabName {
-    color: white;
+    color: var(--color-sidebar-text);
 }
 .settingSectionName {
-    color: white;
+    color: var(--color-sidebar-text);
 }
 .grayscaleMenuIcon img {
     width: 32px;
@@ -19,34 +19,34 @@
 }
 .settingCollectionContainer ul {
     padding: 0;
-    background-color: #212121; /*grey[900]*/
+    background-color: var(--color-sidebar);
 }
 .settingCollectionContainer .iconLeftText {
-    color: #FFFFFF;
+    color: var(--color-sidebar-text);
 }
 .settingCollectionContainer .iconLeftTopText {
-    color: #FFFFFF;
+    color: var(--color-sidebar-text);
 }
 .settingCollectionContainer .iconCenterText {
-    color: #FFFFFF;
+    color: var(--color-sidebar-text);
 }
 .settingCollectionContainer .iconRightText {
-    color: #FFFFFF;
+    color: var(--color-sidebar-text);
 }
 .settingCollectionContainer .iconRightTopText {
-    color: #FFFFFF;
+    color: var(--color-sidebar-text);
 }
 .settingCollectionContainer .iconDiv {
     padding: 8px;
 }
 .settingCollectionContainer .iconDiv:hover {
-    background-color: #424242; /*grey[800]*/
+    background-color: var(--color-sidebar-hover);
     cursor: pointer;
     margin: 0 auto;
 }
 .settingMenuRow {
     white-space: nowrap;
-    background-color: #212121; /*grey[900]*/
+    background-color: var(--color-sidebar);
 }
 .settingMenuRow div {
     display: inline-block;

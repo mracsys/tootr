@@ -1,48 +1,51 @@
-.itemsHeldContainer {
+.ootItemTracker {
     width: 480px;
     line-height: 0;
     padding: 0;
     white-space: nowrap;
-    background-color: #212121; /*grey[900]*/
+    background-color: var(--color-sidebar);
+    display: flex;
+    flex-wrap: wrap;
 }
-.itemsHeldContainer ul {
+.ootItemTracker ul {
     padding: 0;
-    background-color: #212121; /*grey[900]*/
+    background-color: var(--color-sidebar);
 }
-.itemsHeldContainer .iconLeftText {
-    color: #FFFFFF;
+.ootItemTracker .iconLeftText {
+    color: var(--color-sidebar-text);
 }
-.itemsHeldContainer .iconLeftTopText {
-    color: #FFFFFF;
+.ootItemTracker .iconLeftTopText {
+    color: var(--color-sidebar-text);
 }
-.itemsHeldContainer .iconCenterText {
-    color: #FFFFFF;
+.ootItemTracker .iconCenterText {
+    color: var(--color-sidebar-text);
 }
-.itemsHeldContainer .iconRightText {
-    color: #FFFFFF;
+.ootItemTracker .iconRightText {
+    color: var(--color-sidebar-text);
 }
-.itemsHeldContainer .iconRightTopText {
-    color: #FFFFFF;
+.ootItemTracker .iconRightTopText {
+    color: var(--color-sidebar-text);
 }
-.itemsHeldContainer .iconDiv {
+.ootItemTracker .iconDiv {
     padding: 8px;
 }
-.itemsHeldContainer .iconDiv:hover {
-    background-color: #424242; /*grey[800]*/
+.ootItemTracker .iconDiv:hover {
+    background-color: var(--color-sidebar-hover);
     cursor: pointer;
     margin: 0 auto;
     border-radius: 24px;
 }
-.itemsHeldContainer .iconSideText {
+.ootItemTracker .iconSideText {
     display: none;
-}
-.itemsHeldContainer div {
-    float: left;
 }
 .ootItemsHeldContainer {
     width: calc(48px * 7);
 }
-.itemsHeldContainer .ootMaxItemUpgrade .iconRightText {
+.ootItemTracker div {
+    display: flex;
+    flex-wrap: wrap;
+}
+.ootItemTracker .ootMaxItemUpgrade .iconRightText {
     color: #00FF00;
 }
 .ootWinConsContainer {
@@ -137,13 +140,14 @@
 .ootCounterItem div {
     float: none !important;
     opacity: 1;
+    display: block;
 }
 .ootCounterItem:hover {
     cursor: pointer;
-    background-color: #424242; /*grey[800]*/
+    background-color: var(--color-sidebar-hover);
 }
 .ootCounterItem .ootCounterLabel {
-    color: #FFFFFF;
+    color: var(--color-sidebar-text);
     font-family: 'Hylia Serif Beta';
     font-size: 1.5rem;
     line-height: 1.43;
@@ -181,7 +185,7 @@
     left: 60px;
     top: 12px;
 }
-.itemsHeldContainer .iconDiv:hover:has(.ootItemBlank) {
+.ootItemTracker .iconDiv:hover:has(.ootItemBlank) {
     background-color: transparent;
     cursor: auto;
 }

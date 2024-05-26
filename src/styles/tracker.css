@@ -10,10 +10,15 @@ body {
     letter-spacing: 0.01071em !important;
     background-color: rgb(215, 215, 215) !important;
     --theme-spacing: 8px;
-    --drawer-width: 240px;
-    --game-info-width: 480px;
+    --drawer-width: 496px;
     --color-header: #546e7a;
     --area-column-width: 540px;
+
+    --color-sidebar: #212121; /*grey[900]*/
+    --color-sidebar-hover: #424242; /*grey[800]*/
+    --color-sidebar-text: white;
+    --color-sidebar-shadow: black;
+    --color-sidebar-mq: blue;
 }
 body.dark {
     --color-header: #546e7a;

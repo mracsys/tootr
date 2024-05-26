@@ -1,29 +1,18 @@
 import React, { useEffect, useState, useRef, useMemo, ChangeEvent, MouseEventHandler, MouseEvent } from 'react';
 import cloneDeep from 'lodash/cloneDeep';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import MenuIcon from '@mui/icons-material/Menu';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import List from '@mui/material/List';
 import Button from '@mui/material/Button';
-import GitHubIcon from '@mui/icons-material/GitHub';
-//import Brightness7Icon from '@mui/icons-material/Brightness7';
-//import Brightness3Icon from '@mui/icons-material/Brightness3';
-import ListItem from '@mui/material/ListItem';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
-import { Drawer } from '@mui/material';
-import { Link } from '@mui/material';
 import { SelectChangeEvent } from '@mui/material/Select';
 import CssBaseline from '@mui/material/CssBaseline';
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
-import GameSetting from './GameSetting';
+import { TrackerDrawer } from './TrackerDrawer';
+import { TrackerTopBar } from './TrackerTopBar';
 import GameArea from './GameArea';
 import EntranceMenu from './EntranceMenu';
 import ItemMenu from './ItemMenu';
@@ -44,15 +33,10 @@ import mw3 from '@/data/settings_presets/mw3.json';
 
 
 import { WorldGraphFactory, ExternalFileCacheFactory, ExternalFileCache, GraphEntrance, GraphRegion, GraphItem } from '@mracsys/randomizer-graph-tool';
-import { SettingPanel } from './SettingsPanel';
-import { SeedMenu } from './SeedMenu';
-import { ItemPanel } from './ItemPanel';
 import { location_item_menu_layout, shop_item_menu_layout } from '@/data/location_item_menu_layout';
 
 import '@/styles/tracker.css';
 import '@/styles/mui-overrides.css';
-import '@/styles/TrackerTopBar.css';
-import '@/styles/TrackerDrawer.css';
 import '@/styles/TrackerPaper.css';
 
 
@@ -877,63 +861,17 @@ const Tracker = (_props: {}) => {
                 <ThemeProvider theme={customTheme}>
                     <CssBaseline />
                     <div className={themeDark ? "root dark" : "root"}>
-                        <AppBar
-                            position="fixed"
-                        >
-                            <Toolbar>
-                                <IconButton
-                                    edge="start"
-                                    aria-label="open drawer"
-                                    onClick={() => setOpenSettings(!openSettings)}
-                                >
-                                    <MenuIcon />
-                                </IconButton>
-
-                                <SeedMenu
-                                    importFunction={importGraphState}
-                                    exportFunction={exportGraphState}
-                                    presetFunction={loadGraphPreset}
-                                    presets={graphPresets}
-                                />
-
-                                <div className="title">
-                                    <div>
-                                        <div className="titleText">{settings["View"]}</div>
-                                    </div>
-                                </div>
-                                <div className='searchContainer'>
-                                    <input id='trackerGlobalSearchBox' type='search' placeholder='Search' onChange={searchTracker} />
-                                </div>
-                                <div className="checkCount">
-                                    {
-                                        graphLocationCount.filter(l => l.checked).length
-                                    }
-                                    /
-                                    {
-                                        graphLocationCount.length
-                                    }
-                                </div>
-                                {/*<button
-                                    onClick={() => setAlertReset(true)}
-                                    className="menuButton"
-                                >
-                                    <span className="menuButtonLabel">Reset</span>
-                                </button>*/}
-                                {/*<button
-                                    onClick={() => {
-                                        let darkMode = !themeDark;
-                                        setThemeDark(darkMode);
-                                    }}
-                                    className="menuButton"
-                                >
-                                    {
-                                        themeDark ?
-                                            <span className="menuButtonLabel"><Brightness7Icon />Light Mode</span> :
-                                            <span className="menuButtonLabel"><Brightness3Icon />Dark Mode</span>
-                                    }
-                                </button>*/}
-                            </Toolbar>
-                        </AppBar>
+                        <TrackerTopBar
+                            importGraphState={importGraphState}
+                            exportGraphState={exportGraphState}
+                            loadGraphPreset={loadGraphPreset}
+                            graphPresets={graphPresets}
+                            graphLocationCount={graphLocationCount}
+                            settings={settings}
+                            openSettings={openSettings}
+                            setOpenSettings={setOpenSettings}
+                            searchTracker={searchTracker}
+                        />
                         <Dialog
                             open={alertReset}
                             onClose={() => cancelAlert()}
@@ -971,36 +909,6 @@ const Tracker = (_props: {}) => {
                                 <Button onClick={() => cancelUpdate()}>OK</Button>
                             </DialogActions>
                         </Dialog>
-                        <Drawer
-                            className="settingsDrawer"
-                            variant="persistent"
-                            anchor="left"
-                            open={openSettings}
-                            classes={{paper: "drawerPaper"}}
-                            SlideProps={{
-                                unmountOnExit: true,
-                            }}
-                        >
-                            <div className="drawerHeader"></div>
-                            <List className="drawerContainer">
-                                {
-                                    Object.keys(enabled_settings).map((setting,si) => {
-                                        return (
-                                            <GameSetting
-                                                title={setting}
-                                                settings={enabled_settings[setting]}
-                                                userSettings={settings}
-                                                onChange={(s: ChangeEvent<HTMLSelectElement> | SelectChangeEvent<string[]>) => changeSetting(s)}
-                                                key={si}
-                                            />
-                                        )
-                                    })
-                                }
-                                <ListItem>
-                                    <Link className="devLink" href="https://github.com/mracsys/tootr"><GitHubIcon /><Typography>Github</Typography></Link>
-                                </ListItem>
-                            </List>
-                        </Drawer>
                         <EntranceMenu
                             anchorLocation={entranceMenuOpen}
                             handleClose={handleEntranceMenuClose}
@@ -1040,37 +948,36 @@ const Tracker = (_props: {}) => {
                             pages={pages}
                             warps={warpEntrances}
                         />
+                        <TrackerDrawer
+                            addStartingItem={addStartingItem}
+                            addStartingItems={addStartingItems}
+                            removeStartingItem={removeStartingItem}
+                            removeStartingItems={removeStartingItems}
+                            replaceStartingItem={replaceStartingItem}
+                            cycleGraphMultiselectOption={cycleGraphMultiselectOption}
+                            cycleGraphRewardHint={cycleGraphRewardHint}
+                            checkLocation={checkLocation}
+                            unCheckLocation={unCheckLocation}
+                            graphSettings={graphSettings}
+                            graphCollectedItems={graphCollectedItems}
+                            graphPlayerInventory={graphPlayerInventory}
+                            graphRewardHints={graphRewardHints}
+                            graphLocations={graphLocations}
+                            graphEntrances={graphEntrances}
+                            graphRefreshCounter={graphRefreshCounter}
+                            cycleGraphSetting={cycleGraphSetting}
+                            handleMultiselectMenuOpen={handleMultiselectMenuOpen}
+                            graphSettingsOptions={graphSettingsOptions}
+                            graphSettingsLayout={graphSettingsLayout}
+                            enabled_settings={enabled_settings}
+                            settings={settings}
+                            changeSetting={changeSetting}
+                            openSettings={openSettings}
+                        />
                         <div
                             className={openSettings ? "areaPaper areaPaperShift" : "areaPaper"}
                         >
                             <div className="drawerHeader"></div>
-                            <div className={openSettings ? "gameInfo gameInfoShift" : "gameInfo"}>
-                                <ItemPanel
-                                    addStartingItem={addStartingItem}
-                                    addStartingItems={addStartingItems}
-                                    removeStartingItem={removeStartingItem}
-                                    removeStartingItems={removeStartingItems}
-                                    replaceStartingItem={replaceStartingItem}
-                                    cycleGraphMultiselectOption={cycleGraphMultiselectOption}
-                                    cycleGraphRewardHint={cycleGraphRewardHint}
-                                    handleCheck={checkLocation}
-                                    handleUnCheck={unCheckLocation}
-                                    graphSettings={graphSettings}
-                                    graphCollectedItems={graphCollectedItems}
-                                    graphPlayerInventory={graphPlayerInventory}
-                                    graphRewardHints={graphRewardHints}
-                                    graphLocations={graphLocations}
-                                    graphEntrances={graphEntrances}
-                                    refreshCounter={graphRefreshCounter}
-                                />
-                                <SettingPanel
-                                    cycleSetting={cycleGraphSetting}
-                                    handleMultiselectMenuOpen={handleMultiselectMenuOpen}
-                                    graphSettings={graphSettings}
-                                    graphSettingsOptions={graphSettingsOptions}
-                                    graphSettingsLayout={graphSettingsLayout}
-                                />
-                            </div>
                             <div className='worldInfo'>
                                 <ResponsiveMasonry columnsCountBreakPoints={{
                                     /*

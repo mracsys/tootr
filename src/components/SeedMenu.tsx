@@ -9,38 +9,13 @@ import DialogTitle from '@mui/material/DialogTitle';
 import Button from '@mui/material/Button';
 import { Tab, Tabs } from '@mui/material';
 import ExpandMore from '@mui/icons-material/ExpandMore';
+import TabPanel from './TabPanel';
 
 interface SeedMenuProps {
     importFunction: ChangeEventHandler<HTMLInputElement>,
     exportFunction: () => void,
     presetFunction: (preset_name: string) => void,
     presets: string[],
-}
-
-interface TabPanelProps {
-    children?: React.ReactNode;
-    dir?: string;
-    index: number;
-    value: number;
-}
-
-const TabPanel = (props: TabPanelProps) => {
-    const { children, value, index, ...other } = props;
-    return (
-        <div
-            role='tabpanel'
-            hidden={value != index}
-            id={`seedmenu-tabpanel-${index}`}
-            {...other}
-        >
-            {value === index && (
-                <div>
-                    {children}
-                </div>
-            )}
-        </div>
-
-    );
 }
 
 export const SeedMenu = ({
@@ -117,7 +92,7 @@ export const SeedMenu = ({
                         <Tab label='From Preset' />
                     </Tabs>
                 </div>
-                <TabPanel value={tabValue} index={0}>
+                <TabPanel value={tabValue} index={0} className='seedMenu'>
                     <DialogContent>
                         <DialogContentText>
                             From File
@@ -128,7 +103,7 @@ export const SeedMenu = ({
                         <Button onClick={handleClose}>Cancel</Button>
                     </DialogActions>
                 </TabPanel>
-                <TabPanel value={tabValue} index={1}>
+                <TabPanel value={tabValue} index={1} className='seedMenu'>
                     <DialogContent>
                         <DialogContentText>
                             <select
