@@ -146,7 +146,7 @@ const Tracker = (_props: {}) => {
                 let paper = document.getElementById('worldScrollContainer');
                 if (!!paper) {
                     paper.scrollTo({
-                        top: 2 * getPaperScrollY() + oTop - scrollToY - 64,
+                        top: 2 * getPaperScrollY() + oTop - scrollToY,
                     });
                 }
                 setScrollY(null);
