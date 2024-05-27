@@ -143,9 +143,12 @@ const Tracker = (_props: {}) => {
                 let rect = eRef.getBoundingClientRect();
                 let oTop = rect.top;
                 let scrollToY = scrollY;
-                window.scrollTo({
-                    top: 2 * window.scrollY + oTop - scrollToY,
-                });
+                let paper = document.getElementById('worldScrollContainer');
+                if (!!paper) {
+                    paper.scrollTo({
+                        top: 2 * getPaperScrollY() + oTop - scrollToY - 64,
+                    });
+                }
                 setScrollY(null);
                 setEntranceRef('');
             });
@@ -192,6 +195,12 @@ const Tracker = (_props: {}) => {
 
     const setRef = (index: string, element: HTMLDivElement | null): void => {
         if (!!element) scroller.current[index] = element;
+    }
+
+    const getPaperScrollY = () => {
+        let paper = document.getElementById('worldScrollContainer');
+        if (!!paper) return paper.scrollTop;
+        return 0;
     }
 
     const majorTrackerUpgrade = () => {
@@ -500,7 +509,8 @@ const Tracker = (_props: {}) => {
         let eRef = scroller.current[entranceRef];
         let rect = eRef.getBoundingClientRect();
         let oTop = rect.top;
-        let scrollYLocal = oTop + window.scrollY;
+        //let scrollYLocal = oTop + window.scrollY;
+        let scrollYLocal = oTop + getPaperScrollY();
         setScrollY(scrollYLocal);
         handleEntranceMenuClose(false);
     }
@@ -513,7 +523,8 @@ const Tracker = (_props: {}) => {
         let eRef = scroller.current[scrollRef];
         let rect = eRef.getBoundingClientRect();
         let oTop = rect.top;
-        let scrollYLocal = oTop + window.scrollY;
+        //let scrollYLocal = oTop + window.scrollY;
+        let scrollYLocal = oTop + getPaperScrollY();
         setScrollY(scrollYLocal);
         setEntranceRef(scrollRef);
     }

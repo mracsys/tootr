@@ -63,4 +63,5 @@ body {
                                     supported by Chrome, Edge, Opera and Firefox */
     overflow-y: hidden;
     overflow-x: hidden;
+    height: 100%;
 }

@@ -77,7 +77,7 @@ const TrackerPaper = ({
             className={trackerSettings.expand_sidebar ? "areaPaper areaPaperShift" : "areaPaper"}
         >
             <div className="drawerHeader"></div>
-            <div className='worldInfo'>
+            <div id='worldScrollContainer' className='worldInfo'>
                 <ResponsiveMasonry columnsCountBreakPoints={masonryBreakpoints}>
                 <Masonry gutter="20px">
                 {
