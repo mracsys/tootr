@@ -8,18 +8,30 @@ import DialogTitle from '@mui/material/DialogTitle';
 
 interface TrackerResetDialogProps {
     alertReset: boolean,
+    newRaceMode: boolean | null,
     setAlertReset: Dispatch<SetStateAction<boolean>>,
     resetState: () => void,
+    changeRaceMode: (raceMode: boolean) => void;
 }
 
 const TrackerResetDialog = ({
     alertReset,
+    newRaceMode,
     setAlertReset,
     resetState,
+    changeRaceMode,
 }: TrackerResetDialogProps) => {
 
     const cancelAlert = () => {
         setAlertReset(false);
+    }
+
+    const confirmAlert = () => {
+        if (newRaceMode !== null) {
+            changeRaceMode(newRaceMode);
+        } else {
+            resetState();
+        }
     }
 
     return (
@@ -35,7 +47,7 @@ const TrackerResetDialog = ({
                 </DialogContentText>
             </DialogContent>
             <DialogActions>
-                <Button onClick={() => resetState()}>Yes</Button>
+                <Button onClick={() => confirmAlert()}>Yes</Button>
                 <Button onClick={() => cancelAlert()}>No</Button>
             </DialogActions>
         </Dialog>

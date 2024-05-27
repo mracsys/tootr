@@ -100,7 +100,7 @@
 .svgIcon {
     position: relative;
     color: var(--color-icon-text) !important;
-    width: 32px !important;
+    width: 32px;
     height: 100% !important;
 }
 .iconRightText.disabledSettingIcon,

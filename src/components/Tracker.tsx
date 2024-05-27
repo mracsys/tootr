@@ -69,6 +69,7 @@ const Tracker = (_props: {}) => {
     let [graphInitialized, setGraphInitialized] = useState<boolean>(false);
     let [collapsedRegions, setCollapsedRegions] = useState<CollapsedRegions>({});
     let [searchTerm, setSearchTerm] = useState<string>('');
+    let [cachedRaceMode, setCachedRaceMode] = useState<boolean | null>(null);
     const [_fileCache, setFileCache] = useState<ExternalFileCache>({files: {}});
     const scroller = useRef<ScrollerRef>({});
 
@@ -162,7 +163,7 @@ const Tracker = (_props: {}) => {
             if (graph.initialized && !ignore && !graphInitialized) {
                 setGraphPresets(graph.get_settings_presets());
                 if (Object.keys(graphInitialState).length > 0) graph.import(graphInitialState);
-                graph.set_search_mode('Collected Items');
+                graph.set_search_mode(trackerSettings.race_mode ? 'Collected Items as Starting Items' : 'Collected Items');
                 setGraphInitialized(true);
             }
         }
@@ -255,6 +256,22 @@ const Tracker = (_props: {}) => {
         setting.target
         newTrackerSettings[setting.target.name] = setting.target.value;
         setTrackerSettings(newTrackerSettings);
+    }
+
+    const changeRaceMode = (): void => {
+        if (cachedRaceMode !== null) {
+            if (cachedRaceMode) {
+                graph.set_search_mode('Collected Items as Starting Items');
+            } else {
+                graph.set_search_mode('Collected Items');
+            }
+            let newTrackerSettings = copyTrackerSettings(trackerSettings);
+            newTrackerSettings.race_mode = cachedRaceMode;
+            resetState()
+            setTrackerSettings(newTrackerSettings);
+            setCachedRaceMode(null);
+        }
+        refreshSearch();
     }
 
     // default to reverse direction so that right-click/long-touch handler only needs
@@ -748,6 +765,8 @@ const Tracker = (_props: {}) => {
                             changeGraphStringSetting={changeGraphStringSetting}
                             changeGraphBooleanSetting={changeGraphBooleanSetting}
                             changeGraphNumericSetting={changeGraphNumericSetting}
+                            setCachedRaceMode={setCachedRaceMode}
+                            setAlertReset={setAlertReset}
                         />
                         <TrackerPaper
                             viewableRegions={viewableRegions}
@@ -814,8 +833,10 @@ const Tracker = (_props: {}) => {
                         />
                         <TrackerResetDialog
                             alertReset={alertReset}
+                            newRaceMode={cachedRaceMode}
                             setAlertReset={setAlertReset}
                             resetState={resetState}
+                            changeRaceMode={changeRaceMode}
                         />
                     </div>
                 </ThemeProvider>

@@ -46,6 +46,8 @@ interface TrackerDrawerProps {
     changeGraphStringSetting: (s: ChangeEvent<HTMLSelectElement>) => void,
     changeGraphBooleanSetting: (s: ChangeEvent<HTMLInputElement>) => void,
     changeGraphNumericSetting: (s: ChangeEvent<HTMLSelectElement>) => void,
+    setCachedRaceMode: Dispatch<SetStateAction<boolean | null>>,
+    setAlertReset: Dispatch<SetStateAction<boolean>>,
 }
 
 
@@ -75,6 +77,8 @@ const TrackerDrawer = ({
     changeGraphStringSetting,
     changeGraphBooleanSetting,
     changeGraphNumericSetting,
+    setCachedRaceMode,
+    setAlertReset,
 }: TrackerDrawerProps) => {
     const [tabValue, setTabValue] = useState<number>(0);
     let [multiselectMenuOpen, setMultiselectMenuOpen] = useState<Element | null>(null);
@@ -97,9 +101,11 @@ const TrackerDrawer = ({
         console.log('[Setting]', name, 'changed to', checked);
         let newTrackerSettings = copyTrackerSettings(trackerSettings);
         newTrackerSettings[name] = checked;
-        setTrackerSettings(newTrackerSettings);
         if (name === 'race_mode') {
-            
+            setAlertReset(true);
+            setCachedRaceMode(checked);
+        } else {
+            setTrackerSettings(newTrackerSettings);
         }
     }
 
