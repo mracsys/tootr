@@ -50,18 +50,24 @@
     cursor: pointer;
     border: 0px;
     margin: 0px;
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
     vertical-align: middle;
     position: relative;
     outline: 0px;
+    margin-right: var(--theme-spacing);
 }
 .menuButtonLabel {
     font-size: 0.875rem;
     font-weight: 500;
     line-height: 1.75;
+    display: flex;
+    vertical-align: middle;
+}
+.menuButtonLabel .MuiSvgIcon-root {
+    margin-right: var(--theme-spacing);
 }
 .title {
     flex-grow: 1;

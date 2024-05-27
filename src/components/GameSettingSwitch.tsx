@@ -1,29 +1,22 @@
 import React, { ChangeEvent } from 'react';
 import Switch from '@mui/material/Switch';
 import FormControlLabel from '@mui/material/FormControlLabel';
-import { TrackerSettingsCurrent } from '@/data/tracker_settings';
 
 import '@/styles/GameSetting.css';
 
 interface GameSettingSwitchProps {
     title: string,
     settingKey: string,
-    trackerSettings: TrackerSettingsCurrent,
+    userSetting: boolean,
     onChange: (s: ChangeEvent<HTMLInputElement>) => void,
 }
 
 const GameSettingSwitch = ({
     title,
     settingKey,
-    trackerSettings,
+    userSetting,
     onChange,
 }: GameSettingSwitchProps) => {
-
-    let userSetting = trackerSettings[settingKey];
-    if (typeof userSetting !== 'boolean') {
-        return null;
-    }
-
     return (
         <React.Fragment>
             {

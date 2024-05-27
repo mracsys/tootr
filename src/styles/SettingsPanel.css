@@ -8,6 +8,19 @@
 .settingSectionName {
     color: var(--color-sidebar-text);
 }
+.settingsListContainer .settingSectionName {
+    font-family: 'Hylia Serif Beta';
+    font-size: x-large;
+    text-align: center;
+    width: 100%;
+    display: block;
+}
+.settingSectionContainer {
+    margin: calc(var(--theme-spacing) * 1.5) var(--theme-spacing);
+    border: 1px solid var(--color-sidebar-text);
+    border-radius: var(--theme-spacing);
+    padding-bottom: var(--theme-spacing);
+}
 .settingCollectionContainer {
     line-height: 0;
     padding: 0;

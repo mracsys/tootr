@@ -3,8 +3,8 @@ import cloneDeep from 'lodash/cloneDeep';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 
-import { TrackerDrawer } from './TrackerDrawer';
-import { TrackerTopBar } from './TrackerTopBar';
+import TrackerDrawer from './TrackerDrawer';
+import TrackerTopBar from './TrackerTopBar';
 import TrackerPaper from './TrackerPaper';
 import EntranceMenu from './EntranceMenu';
 import ItemMenu from './ItemMenu';
@@ -13,6 +13,7 @@ import ContextMenuHandler from './ContextMenuHandler';
 import WarpMenu from './WarpMenu';
 import TrackerUpdateDialog from './TrackerUpdateDialog';
 import TrackerResetDialog from './TrackerResetDialog';
+
 import {
     all_tracker_settings_versions,
     current_settings_version,
@@ -27,7 +28,6 @@ import { location_item_menu_layout, shop_item_menu_layout } from '@/data/locatio
 import { WorldGraphFactory, ExternalFileCacheFactory, ExternalFileCache, GraphEntrance, GraphRegion, GraphItem } from '@mracsys/randomizer-graph-tool';
 
 import '@/styles/tracker.css';
-import '@/styles/mui-overrides.css';
 
 
 interface ScrollerRef {
@@ -116,7 +116,7 @@ const Tracker = (_props: {}) => {
 
         setGraphInitialState(graphInitialStateInit);
         setCollapsedRegions(collapsedRegionsInit);
-        setTrackerSettings(trackerSettings);
+        setTrackerSettings(trackerSettingsInit);
     }, []);
 
     // hooks to keep state saved in localstorage
@@ -329,10 +329,71 @@ const Tracker = (_props: {}) => {
                 }
             }
             graph.change_setting(graph.worlds[trackerSettings.player_number], graphSetting, settingValue);
-            //graph.worlds[trackerSettings.player_number].settings[graphSettingName] = settingValue;
         }
         refreshSearch();
         console.log(`[Setting] ${graphSettingName} changed to ${graph.worlds[trackerSettings.player_number].settings[graphSettingName]}`);
+    }
+
+    const changeGraphStringSetting = (s: ChangeEvent<HTMLSelectElement>): void => {
+        const {target: { name, value }} = s;
+        let settingValue = graph.worlds[trackerSettings.player_number].settings[name];
+        let graphSettingsOptions = graph.get_settings_options();
+        let graphSetting = graphSettingsOptions[name];
+        if (settingValue === undefined || settingValue === null || graphSetting === undefined) return;
+        if (typeof settingValue === 'string') {
+            let settingChoices = graphSettingsOptions[name].choices;
+            if (!!settingChoices) {
+                if (Object.keys(settingChoices).includes(value)) {
+                    graph.change_setting(graph.worlds[trackerSettings.player_number], graphSetting, value);
+                } else {
+                    console.log(`[Setting] Tried to change ${name} to non-existent option ${value}`);
+                    return;
+                }
+            }
+        }
+        refreshSearch();
+        console.log('[Setting]', name, 'changed to', value);
+    }
+
+    const changeGraphBooleanSetting = (s: ChangeEvent<HTMLInputElement>): void => {
+        const {target: { name, checked }} = s;
+        let settingValue = graph.worlds[trackerSettings.player_number].settings[name];
+        let graphSettingsOptions = graph.get_settings_options();
+        let graphSetting = graphSettingsOptions[name];
+        if (settingValue === undefined || settingValue === null || graphSetting === undefined) return;
+        if (typeof settingValue === 'boolean') {
+            if (typeof checked === 'boolean') {
+                graph.change_setting(graph.worlds[trackerSettings.player_number], graphSetting, checked);
+            } else {
+                console.log(`[Setting] Tried to change boolean setting ${name} to non-boolean value ${checked}`);
+                return;
+            }
+        }
+        refreshSearch();
+        console.log('[Setting]', name, 'changed to', checked);
+    }
+
+    const changeGraphNumericSetting = (s: ChangeEvent<HTMLSelectElement>): void => {
+        const {target: { name, value }} = s;
+        const numValue = parseInt(value);
+        let settingValue = graph.worlds[trackerSettings.player_number].settings[name];
+        let graphSettingsOptions = graph.get_settings_options();
+        let graphSetting = graphSettingsOptions[name];
+        if (settingValue === undefined || settingValue === null || graphSetting === undefined) return;
+        if (typeof settingValue === 'number') {
+            if (typeof numValue === 'number') {
+                if ((graphSetting.maximum !== undefined && numValue > graphSetting.maximum) || (graphSetting.minimum !== undefined && numValue < graphSetting.minimum)) {
+                    console.log(`[Setting] Tried to change numeric setting ${name} to value ${numValue} outside max ${graphSetting.maximum} and min ${graphSetting.minimum}`);
+                    return;
+                }
+                graph.change_setting(graph.worlds[trackerSettings.player_number], graphSetting, numValue);
+            } else {
+                console.log(`[Setting] Tried to change numeric setting ${name} to non-numeric value ${numValue}`);
+                return;
+            }
+        }
+        refreshSearch();
+        console.log('[Setting]', name, 'changed to', numValue);
     }
 
     const cycleGraphRewardHint = ({itemName = '', forward = true}: {itemName?: string, forward?: boolean} = {}) => {
@@ -585,9 +646,9 @@ const Tracker = (_props: {}) => {
 
     const toggleAreaView = () => {
         if (trackerSettings.region_page === "Overworld") {
-            changeSetting({target: { name: "region_page", "value": "Dungeons" }});
+            changeSetting({target: { name: "region_page", value: "Dungeons" }});
         } else {
-            changeSetting({target: { name: "region_page", "value": "Overworld" }});
+            changeSetting({target: { name: "region_page", value: "Overworld" }});
         }
     }
 
@@ -599,7 +660,14 @@ const Tracker = (_props: {}) => {
     const customTheme = createTheme({
         components: {
             MuiMenu: {
+                defaultProps: {
+                    transitionDuration: 0,
+                },
                 styleOverrides: {
+                    list: {
+                        paddingTop: 0,
+                        paddingBottom: 0,
+                    },
                     paper: {
                         overflowX: 'visible',
                         overflowY: 'visible',
@@ -652,6 +720,7 @@ const Tracker = (_props: {}) => {
                             searchTracker={searchTracker}
                             trackerSettings={trackerSettings}
                             setTrackerSettings={setTrackerSettings}
+                            setAlertReset={setAlertReset}
                         />
                         <TrackerDrawer
                             addStartingItem={addStartingItem}
@@ -676,6 +745,9 @@ const Tracker = (_props: {}) => {
                             graphSettingsLayout={graphSettingsLayout}
                             trackerSettings={trackerSettings}
                             setTrackerSettings={setTrackerSettings}
+                            changeGraphStringSetting={changeGraphStringSetting}
+                            changeGraphBooleanSetting={changeGraphBooleanSetting}
+                            changeGraphNumericSetting={changeGraphNumericSetting}
                         />
                         <TrackerPaper
                             viewableRegions={viewableRegions}

@@ -94,11 +94,17 @@ export const OotDungeonTracker = ({
             } else {
                 let dungeonName = gridEntry.label;
                 let bossEntrances = graphEntrances.filter((e) => e.name === dungeonToEntranceMap[dungeonName]);
-                if (bossEntrances.length !== 1) throw `Unable to find boss entrance for item tracker dungeon: ${dungeonName}`;
+                if (bossEntrances.length !== 1) {
+                    console.log(`[ERROR] Unable to find boss entrance for item tracker dungeon: ${dungeonName}`);
+                    continue;
+                }
                 let bossEntrance = bossEntrances[0];
                 if (!!bossEntrance.replaces) bossEntrance = bossEntrance.replaces;
                 let bossRewards = graphLocations.filter((l) => l.name === entranceToBossRewardMap[bossEntrance.name]);
-                if (bossEntrances.length !== 1) throw `Unable to find boss reward for item tracker dungeon: ${dungeonName}, entrance: ${bossEntrance.name}`;
+                if (bossEntrances.length !== 1) {
+                    console.log(`Unable to find boss reward for item tracker dungeon: ${dungeonName}, entrance: ${bossEntrance.name}`);
+                    continue;
+                }
                 let bossReward = bossRewards[0];
                 if (!!bossReward.item && !!bossEntrances[0].connected_region) {
                     itemName = bossReward.item.name;

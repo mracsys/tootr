@@ -2,8 +2,8 @@
 import { IconDict } from "./OotIcon";
 import { SvgIconComponent } from "@mui/icons-material";
 /*import PublicIcon from '@mui/icons-material/Public';
-import SportsEsportsIcon from '@mui/icons-material/SportsEsports';*/
-import VisibilityIcon from '@mui/icons-material/Visibility';
+import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
+import VisibilityIcon from '@mui/icons-material/Visibility';*/
 import ClearIcon from '@mui/icons-material/Clear';
 import ShortcutIcon from '@mui/icons-material/Shortcut';
 import HomeIcon from '@mui/icons-material/Home';
@@ -148,12 +148,12 @@ export const OotSettingAssetMapFactory = (graphSettings: GraphSettingsConfigurat
             rSubSource: 'graphplugin_trials_specific',
             tooltip: graphSettingsOptions['graphplugin_trials_specific'].display_name,
         },
-        'graphplugin_viewable_unshuffled_items': {
+        /*'graphplugin_viewable_unshuffled_items': {
             img: VisibilityIcon,
             rSub: Array.isArray(graphSettings['graphplugin_viewable_unshuffled_items']) ? graphSettings['graphplugin_viewable_unshuffled_items'].length.toString() : '0',
             rSubSource: 'graphplugin_viewable_unshuffled_items',
             tooltip: graphSettingsOptions['graphplugin_viewable_unshuffled_items'].display_name,
-        },
+        },*/
         'shuffle_hideoutkeys': {
             img: '/images/jail_door.png',
             rImg: {

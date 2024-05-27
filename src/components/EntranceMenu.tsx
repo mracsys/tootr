@@ -86,9 +86,6 @@ const EntranceMenu = ({
                         border: '1px black solid',
                     },
                 }}
-                classes={{
-                    list: "MenuPadding",
-                }}
                 anchorOrigin={{
                     vertical: 'bottom',
                     horizontal: 'right',

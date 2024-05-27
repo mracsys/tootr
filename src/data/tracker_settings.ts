@@ -3,6 +3,7 @@ export const current_settings_version = 1;
 export interface tracker_settings_definitions_v1 {
     version: number,
     player_number: tracker_setting_definition,
+    setting_icons: tracker_setting_definition,
     region_page: tracker_setting_definition,
     dark_mode: tracker_setting_definition,
     show_unshuffled_entrances: tracker_setting_definition,
@@ -20,6 +21,7 @@ export interface tracker_settings_v1 {
     [key: string]: number | boolean | string | string[],
     version: number,
     player_number: number,
+    setting_icons: boolean,
     expand_sidebar: boolean,
     region_page: string,
     dark_mode: boolean,
@@ -55,6 +57,7 @@ export const copyTrackerSettings = (oldTrackerSettings: TrackerSettingsCurrent):
 export const tracker_settings_default: TrackerSettingsCurrent = {
     version: 1,
     player_number: 0,
+    setting_icons: true,
     region_page: 'Overworld',
     expand_sidebar: true,
     dark_mode: false,
@@ -74,6 +77,10 @@ export const tracker_settings_defs: tracker_settings_definitions_v1 = {
     player_number: {
         display_name: 'Player Number',
         type: 'int',
+    },
+    setting_icons: {
+        display_name: 'Show Game Settings as Icons',
+        type: 'bool',
     },
     region_page: {
         display_name: 'Region View',

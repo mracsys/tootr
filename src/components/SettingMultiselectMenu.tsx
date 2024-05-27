@@ -36,7 +36,7 @@ const SettingMultiselectMenu = ({
         optionElements.push(
             <div
                 key={optionName + 'Div'}
-                className={settingValue.includes(optionName) ? undefined : 'MultiselectOptionDisabled'}
+                className={settingValue.includes(optionName) ? '' : 'MultiselectOptionDisabled'}
                 onClick={(e) => {
                     e.stopPropagation();
                     handleChange({graphSettingName: settingName, settingOptions: [optionName]});
@@ -52,9 +52,6 @@ const SettingMultiselectMenu = ({
             anchorEl={anchorLocation}
             open={Boolean(anchorLocation)}
             onClose={handleClose}
-            classes={{
-                list: "MenuPadding",
-            }}
         >
             <div key="multiselectContainerDiv" className="multiselectSettingMenu">
                 <div key="multiselectNameDiv" className="multiselectSettingMenuTitle">{title}</div>

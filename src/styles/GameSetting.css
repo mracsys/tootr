@@ -23,7 +23,10 @@
     border: 0;
     min-width: calc(var(--theme-spacing) * 2);
     cursor: pointer;
-    display: block;
+    display: flex;
+    flex-direction: row;
+    vertical-align: middle;
+    text-align: left;
     height: 1.1876em;
     margin: 0;
     padding: 6px 0px 7px 0px;
@@ -31,8 +34,18 @@
     box-sizing: content-box;
     background-color: var(--color-sidebar);
 }
+.settingSelect.settingSelectFake {
+    padding-right: 0px;
+}
+.settingSelect.settingSelectFake .MuiSvgIcon-root {
+    width: 20px;
+    height: 20px;
+}
 .settingSelect:focus-visible {
     outline: 0;
+}
+.settingSelect .fakeSelectValue {
+    flex-grow: 1;
 }
 .settingSelect option {
     color: var(--color-sidebar-text);
@@ -77,6 +90,7 @@
 .settingMultiSelectMenu .MuiPaper-root {
     background-color: var(--color-sidebar);
     color: var(--color-sidebar-text);
+    overflow-y: auto;
 }
 .settingMultiSelectMenu .MuiMenuItem-root.Mui-selected {
     background-color: var(--color-sidebar-text-select);

@@ -6,6 +6,8 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 
+import '@/styles/TrackerUpdateDialog.css';
+
 interface TrackerUpdateDialogProps {
     alertUpdate: boolean,
     setAlertUpdate: Dispatch<SetStateAction<boolean>>,

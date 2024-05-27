@@ -1,9 +1,7 @@
-.iconTooltipPositioner {
-    position: relative;
-}
 .iconTooltipContainer {
     display: flex;
     align-items: center;
+    position: relative;
 }
 .iconDiv {
     cursor: pointer;

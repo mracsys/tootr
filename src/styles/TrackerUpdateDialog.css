@@ -2,10 +2,3 @@
     color: var(--color-dialog-alert) !important;
     font-size: 2em !important;
 }
-.hide {
-    display: none;
-}
-.MenuPadding {
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-}

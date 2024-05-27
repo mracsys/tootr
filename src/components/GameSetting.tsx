@@ -1,13 +1,12 @@
 import React, { ChangeEvent } from 'react';
-import { TrackerSettingsCurrent } from '@/data/tracker_settings';
 
 import '@/styles/GameSetting.css';
 
 interface GameSettingProps {
     title: string,
     settingKey: string,
-    settingOptions: string[],
-    trackerSettings: TrackerSettingsCurrent,
+    settingOptions: {[name: string]: string},
+    userSetting: string,
     onChange: (s: ChangeEvent<HTMLSelectElement>) => void,
 }
 
@@ -15,15 +14,9 @@ const GameSetting = ({
     title,
     settingKey,
     settingOptions,
-    trackerSettings,
+    userSetting,
     onChange,
 }: GameSettingProps) => {
-
-    let userSetting = trackerSettings[settingKey];
-    if (typeof userSetting !== 'string') {
-        return null;
-    }
-
     return (
         <React.Fragment>
             {
@@ -36,8 +29,8 @@ const GameSetting = ({
                                 name={settingKey}
                                 value={userSetting}
                                 onChange={onChange}>
-                                    {settingOptions.map((s, i) => { return (
-                                        <option key={i} value={s}>{s}</option>
+                                    {Object.entries(settingOptions).map(([name, display_name], i) => { return (
+                                        <option key={i} value={name}>{display_name}</option>
                                     )})}
                             </select>
                             <p className="settingText">{title}</p>

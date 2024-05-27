@@ -85,7 +85,6 @@ const OotIcon = ({
         let hideLabels = imageData.hideLabels === undefined ? imageData.fade : imageData.hideLabels;
 
         return (
-            <div className="iconTooltipPositioner">
             <div className="iconTooltipContainer">
             <div
                 onClick={onClick}
@@ -346,7 +345,6 @@ const OotIcon = ({
                         </div>
                     : null
                 }
-            </div>
             </div>
         )
     } else {

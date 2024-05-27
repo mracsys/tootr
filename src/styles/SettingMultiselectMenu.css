@@ -20,3 +20,6 @@
 .multiselectSettingMenuAll {
     margin-right: calc(var(--theme-spacing) * 1);
 }
+#globalMultiselectOptionMenuElement .MuiPaper-root {
+    overflow-y: auto;
+}

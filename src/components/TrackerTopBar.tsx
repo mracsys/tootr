@@ -1,8 +1,8 @@
 import { ChangeEvent, Dispatch, SetStateAction } from "react";
 import MenuIcon from '@mui/icons-material/Menu';
 import IconButton from '@mui/material/IconButton';
-//import Brightness7Icon from '@mui/icons-material/Brightness7';
-//import Brightness3Icon from '@mui/icons-material/Brightness3';
+import Brightness7Icon from '@mui/icons-material/Brightness7';
+import Brightness3Icon from '@mui/icons-material/Brightness3';
 import { SeedMenu } from "./SeedMenu";
 import { TrackerSettingsCurrent, copyTrackerSettings } from "@/data/tracker_settings";
 
@@ -19,10 +19,11 @@ interface TrackerTopBarProps {
     searchTracker: React.ChangeEventHandler<HTMLInputElement>,
     trackerSettings: TrackerSettingsCurrent,
     setTrackerSettings: Dispatch<SetStateAction<TrackerSettingsCurrent>>,
+    setAlertReset: Dispatch<SetStateAction<boolean>>,
 }
 
 
-export const TrackerTopBar = ({
+const TrackerTopBar = ({
     importGraphState,
     exportGraphState,
     loadGraphPreset,
@@ -30,12 +31,22 @@ export const TrackerTopBar = ({
     graphLocationCount,
     searchTracker,
     trackerSettings,
-    setTrackerSettings
+    setTrackerSettings,
+    setAlertReset,
 }: TrackerTopBarProps) => {
 
     const handleOpenSidebar = () => {
         let newTrackerSettings = copyTrackerSettings(trackerSettings);
         newTrackerSettings.expand_sidebar = !trackerSettings.expand_sidebar;
+        setTrackerSettings(newTrackerSettings);
+    }
+
+    const changeDarkMode = () => {
+        const name = 'dark_mode';
+        const checked = !trackerSettings.dark_mode;
+        console.log('[Setting]', name, 'changed to', checked);
+        let newTrackerSettings = copyTrackerSettings(trackerSettings);
+        newTrackerSettings[name] = checked;
         setTrackerSettings(newTrackerSettings);
     }
 
@@ -71,22 +82,24 @@ export const TrackerTopBar = ({
                         graphLocationCount.length
                     }
                 </div>
-                {/*<button
+                <button
                     onClick={() => setAlertReset(true)}
                     className="menuButton"
                 >
                     <span className="menuButtonLabel">Reset</span>
-                </button>*/}
-                {/*<button
-                    onClick={() => setThemeDark(!themeDark)}
+                </button>
+                <button
+                    onClick={() => changeDarkMode()}
                     className="menuButton"
                 >
                     {
-                        themeDark ?
-                            <span className="menuButtonLabel"><Brightness7Icon />Light Mode</span> :
-                            <span className="menuButtonLabel"><Brightness3Icon />Dark Mode</span>
+                        trackerSettings.dark_mode ?
+                            <span className="menuButtonLabel"><Brightness3Icon />Dark Mode</span> :
+                            <span className="menuButtonLabel"><Brightness7Icon />Light Mode</span>
                     }
-                </button>*/}
+                </button>
         </div>
     );
 }
+
+export default TrackerTopBar;
