@@ -1,5 +1,7 @@
-.iconTooltipContainer {
+.iconTooltipPositioner {
     position: relative;
+}
+.iconTooltipContainer {
     display: flex;
     align-items: center;
 }
@@ -122,8 +124,8 @@
 }
 .iconTooltip {
     position: absolute;
-    top: calc(-1px - var(--theme-spacing));
-    left: 48px;
+    top: 48px;
+    left: 0px;
     color: var(--color-icon-tooltip-text);
     font-family: 'Hylia Serif Beta';
     flex-direction: column;

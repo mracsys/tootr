@@ -54,13 +54,14 @@ export const SettingPanel = ({
                         tab_setting_sets.map((tab_setting_row, j) =>
                             <div className="settingMenuRow" key={tab_name + 'tabpanelrowkey' + j}>
                             {
-                                tab_setting_row.map(s =>
+                                tab_setting_row.map((s, k) =>
                                     <OotSettingIcon
                                         graphSettingsOptions={graphSettingsOptions}
                                         settingAssetMap={settingAssetMap}
                                         onClick={cycleSetting}
                                         handleMultiselectMenuOpen={handleMultiselectMenuOpen}
                                         itemName={s.name}
+                                        className={k >= 5 ? "iconTooltipRight" : "iconTooltipLeft"}
                                         key={s.name + tab_name + 'tabpanelkey'}
                                     />
                                 )
@@ -70,7 +71,7 @@ export const SettingPanel = ({
                     }
                     </div>
                     {
-                        Object.entries(visible_section_settings).map(([section_name, section_settings_sets]) => 
+                        Object.entries(visible_section_settings).map(([section_name, section_settings_sets], j) => 
                             <div className="settingSectionContainer" key={tab_name + section_name + 'tabsectionpanelkey'}>
                                 <span className="settingSectionName">{section_name}</span>
                                 <div className="settingCollectionContainer">
@@ -78,13 +79,17 @@ export const SettingPanel = ({
                                     section_settings_sets.map((section_setting_row, i) =>
                                         <div className="settingMenuRow" key={tab_name + section_name + 'tabsectionpanelrowkey' + i}>
                                             {
-                                                section_setting_row.map(s =>
+                                                section_setting_row.map((s, k) =>
                                                     <OotSettingIcon
                                                         graphSettingsOptions={graphSettingsOptions}
                                                         settingAssetMap={settingAssetMap}
                                                         onClick={cycleSetting}
                                                         handleMultiselectMenuOpen={handleMultiselectMenuOpen}
                                                         itemName={s.name}
+                                                        className={j > 0 ?
+                                                                    k >= 5 ? "iconTooltipRightTop" : "iconTooltipLeftTop" :
+                                                                    k >= 5 ? "iconTooltipRightBottom" : "iconTooltipLeftBottom"
+                                                        }
                                                         key={s.name + tab_name + section_name + 'tabsectionpanelkey'}
                                                     />
                                                 )

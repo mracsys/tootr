@@ -15,17 +15,59 @@
     margin: 0;
     padding: 0;
 }
+.settingsDrawer .MuiPaper-root {
+    border: none;
+}
+.tabList {
+    border-top: 2px solid var(--color-sidebar-text);
+    width: 496px;
+    margin-bottom: calc(var(--theme-spacing) * 1);
+}
 .gameInfo {
     display: flex;
     flex-direction: column;
     width: var(--drawer-width);
     height: calc(100vh - 64px);
     background-color: var(--color-sidebar);
-    padding: var(--theme-spacing);
+}
+@media screen and (max-width: 600px) {
+    .settingsDrawer .MuiPaper-root {
+        width: 100%;
+    }
+    .gameInfo {
+        width: 100%;
+    }
+    .settingsTabContainer,
+    .gameInfo .itemsHeldContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.itemsHeldContainer {
+    margin: var(--theme-spacing);
 }
 .drawerTab {
-    flex-grow: 1;
+    width: 496px;
     overflow-y: auto;
+    flex-grow: 1;
+}
+.drawerTab::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+
+.drawerTab::-webkit-scrollbar
+{
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+.drawerTab::-webkit-scrollbar-thumb
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
 }
 .sidebarTabs .MuiTab-root {
     color: var(--color-sidebar-text);

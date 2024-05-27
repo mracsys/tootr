@@ -1,8 +1,6 @@
 import { ChangeEvent, Dispatch, SetStateAction } from "react";
 import MenuIcon from '@mui/icons-material/Menu';
 import IconButton from '@mui/material/IconButton';
-import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
 //import Brightness7Icon from '@mui/icons-material/Brightness7';
 //import Brightness3Icon from '@mui/icons-material/Brightness3';
 import { SeedMenu } from "./SeedMenu";
@@ -42,13 +40,8 @@ export const TrackerTopBar = ({
     }
 
     return (
-        <AppBar
-            position="fixed"
-        >
-            <Toolbar>
+        <div className="topBar">
                 <IconButton
-                    edge="start"
-                    aria-label="open drawer"
                     onClick={() => handleOpenSidebar()}
                 >
                     <MenuIcon />
@@ -94,7 +87,6 @@ export const TrackerTopBar = ({
                             <span className="menuButtonLabel"><Brightness3Icon />Dark Mode</span>
                     }
                 </button>*/}
-            </Toolbar>
-        </AppBar>
+        </div>
     );
 }

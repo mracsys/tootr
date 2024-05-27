@@ -1,23 +1,18 @@
 import React, { useEffect, useState, useRef, useMemo, ChangeEvent, MouseEventHandler, MouseEvent } from 'react';
 import cloneDeep from 'lodash/cloneDeep';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import Button from '@mui/material/Button';
-import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
-import DialogTitle from '@mui/material/DialogTitle';
 import CssBaseline from '@mui/material/CssBaseline';
-import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
 import { TrackerDrawer } from './TrackerDrawer';
 import { TrackerTopBar } from './TrackerTopBar';
-import GameArea from './GameArea';
+import TrackerPaper from './TrackerPaper';
 import EntranceMenu from './EntranceMenu';
 import ItemMenu from './ItemMenu';
 import SettingMultiselectMenu from './SettingMultiselectMenu';
 import ContextMenuHandler from './ContextMenuHandler';
 import WarpMenu from './WarpMenu';
+import TrackerUpdateDialog from './TrackerUpdateDialog';
+import TrackerResetDialog from './TrackerResetDialog';
 import {
     all_tracker_settings_versions,
     current_settings_version,
@@ -33,7 +28,6 @@ import { WorldGraphFactory, ExternalFileCacheFactory, ExternalFileCache, GraphEn
 
 import '@/styles/tracker.css';
 import '@/styles/mui-overrides.css';
-import '@/styles/TrackerPaper.css';
 
 
 interface ScrollerRef {
@@ -510,14 +504,6 @@ const Tracker = (_props: {}) => {
         setSearchTerm(e.currentTarget.value);
     }
 
-    const cancelAlert = () => {
-        setAlertReset(false);
-    }
-
-    const cancelUpdate = () => {
-        setAlertUpdate(false);
-    }
-
     const handleItemMenuOpen = (location: HTMLDivElement, dataSource: string | null) => {
         if (dataSource === null) return;
         setItemMenuOpen(location);
@@ -611,15 +597,6 @@ const Tracker = (_props: {}) => {
     const reverseCollapseHandler = new ContextMenuHandler(toggleCollapseReverse);
 
     const customTheme = createTheme({
-        /*breakpoints: {
-            values: {
-                xs: 0,
-                sm: 1704,
-                md: 2264,
-                lg: 2824,
-                xl: 3384,
-            }
-        },*/
         components: {
             MuiMenu: {
                 styleOverrides: {
@@ -636,27 +613,6 @@ const Tracker = (_props: {}) => {
             }
         }
     });
-    /*
-        sidebar-width = 490px (expanded), 0px (hidden)
-        window-padding = sidebar-width + areaPaper.padding(20px) * 2
-        column-gap = 20px
-        min-column-width = 540px
-        cutoff = window-padding + (column-width + column-gap) * column-count
-    */
-    const masonryBreakpoints: {[breakpoint: number]: number} = trackerSettings.expand_sidebar ? {
-        0: 1,
-        1650: 2,
-        2210: 3,
-        2770: 4,
-        3330: 5,
-    } : {
-        0: 1,
-        1160: 2,
-        1720: 3,
-        2280: 4,
-        2840: 5,
-        3400: 6,
-    }
     if (trackerInitialized && graphInitialized) {
         let graphSettingsOptions = graph.get_settings_options();
         let graphSettingsLayout = graph.get_settings_layout();
@@ -664,7 +620,9 @@ const Tracker = (_props: {}) => {
         let graphCollectedItems = graph.get_collected_items_for_world(graph.worlds[trackerSettings.player_number]);
         let graphPlayerInventory = graph.get_player_inventory_for_world(graph.worlds[trackerSettings.player_number]);
         let multiselectSettingChoices = multiselectToUpdate ? graphSettingsOptions[multiselectToUpdate]?.choices : {};
-        let currentPage = trackerSettings.region_page;
+        let viewableRegions = graph.worlds[trackerSettings.player_number].region_groups.filter(r => 
+            r.page === trackerSettings.region_page && r.viewable).sort((a, b) => 
+                a.alias.localeCompare(b.alias));
         let pages: {[page: string]: GraphRegion[]} = {};
         for (let r of graph.worlds[trackerSettings.player_number].region_groups) {
             if (Object.keys(pages).includes(r.page)) {
@@ -695,43 +653,50 @@ const Tracker = (_props: {}) => {
                             trackerSettings={trackerSettings}
                             setTrackerSettings={setTrackerSettings}
                         />
-                        <Dialog
-                            open={alertReset}
-                            onClose={() => cancelAlert()}
-                            disableScrollLock={true}
-                        >
-                            <DialogTitle>{"Reset Tracker?"}</DialogTitle>
-                            <DialogContent>
-                                <DialogContentText>
-                                    All entrance and location checks will be cleared. Are you sure?
-                                </DialogContentText>
-                            </DialogContent>
-                            <DialogActions>
-                                <Button onClick={() => resetState()}>Yes</Button>
-                                <Button onClick={() => cancelAlert()}>No</Button>
-                            </DialogActions>
-                        </Dialog>
-                        <Dialog
-                            open={alertUpdate}
-                            onClose={() => cancelUpdate()}
-                            disableScrollLock={true}
-                        >
-                            <DialogTitle>{"Scheduled Updates"}</DialogTitle>
-                            <DialogContent>
-                                <DialogContentText>
-                                    Your tracker will update on <b>May 15th at 8PM US Eastern Daylight Time</b>.
-                                </DialogContentText>
-                                <DialogContentText className="redAlert">
-                                    <em><b>ANY SAVED PROGRESS WILL BE LOST.</b></em>
-                                </DialogContentText>
-                                <DialogContentText>
-                                    This update includes substantial changes for new randomizer features and requires a new data format. Please finish any open seeds you may have by <b>8PM EDT on May 15</b> to avoid losing your notes.
-                                </DialogContentText>
-                            </DialogContent>
-                            <DialogActions>
-                                <Button onClick={() => cancelUpdate()}>OK</Button>
-                            </DialogActions>
-                        </Dialog>
+                        <TrackerDrawer
+                            addStartingItem={addStartingItem}
+                            addStartingItems={addStartingItems}
+                            removeStartingItem={removeStartingItem}
+                            removeStartingItems={removeStartingItems}
+                            replaceStartingItem={replaceStartingItem}
+                            cycleGraphMultiselectOption={cycleGraphMultiselectOption}
+                            cycleGraphRewardHint={cycleGraphRewardHint}
+                            checkLocation={checkLocation}
+                            unCheckLocation={unCheckLocation}
+                            graphSettings={graphSettings}
+                            graphCollectedItems={graphCollectedItems}
+                            graphPlayerInventory={graphPlayerInventory}
+                            graphRewardHints={graphRewardHints}
+                            graphLocations={graphLocations}
+                            graphEntrances={graphEntrances}
+                            graphRefreshCounter={graphRefreshCounter}
+                            cycleGraphSetting={cycleGraphSetting}
+                            handleMultiselectMenuOpen={handleMultiselectMenuOpen}
+                            graphSettingsOptions={graphSettingsOptions}
+                            graphSettingsLayout={graphSettingsLayout}
+                            trackerSettings={trackerSettings}
+                            setTrackerSettings={setTrackerSettings}
+                        />
+                        <TrackerPaper
+                            viewableRegions={viewableRegions}
+                            collapsedRegions={collapsedRegions}
+                            handleLink={linkEntrance}
+                            handleUnLink={unLinkEntrance}
+                            handleCheck={checkLocation}
+                            handleUnCheck={unCheckLocation}
+                            handleContextMenu={contextMenuHandler}
+                            handleShopContextMenu={shopContextMenuHandler}
+                            handleEntranceMenuOpen={handleEntranceMenuOpen}
+                            handleDungeonTravel={handleDungeonTravel}
+                            toggleWalletTiers={toggleWalletTiers}
+                            updateShopPrice={updateShopPrice}
+                            collapseSwitch={toggleCollapse}
+                            reverseCollapseSwitch={reverseCollapseHandler}
+                            setRef={setRef}
+                            refreshCounter={graphRefreshCounter}
+                            searchTerm={searchTerm}
+                            trackerSettings={trackerSettings}
+                        />
                         <EntranceMenu
                             anchorLocation={entranceMenuOpen}
                             handleClose={handleEntranceMenuClose}
@@ -771,75 +736,15 @@ const Tracker = (_props: {}) => {
                             pages={pages}
                             warps={warpEntrances}
                         />
-                        <TrackerDrawer
-                            addStartingItem={addStartingItem}
-                            addStartingItems={addStartingItems}
-                            removeStartingItem={removeStartingItem}
-                            removeStartingItems={removeStartingItems}
-                            replaceStartingItem={replaceStartingItem}
-                            cycleGraphMultiselectOption={cycleGraphMultiselectOption}
-                            cycleGraphRewardHint={cycleGraphRewardHint}
-                            checkLocation={checkLocation}
-                            unCheckLocation={unCheckLocation}
-                            graphSettings={graphSettings}
-                            graphCollectedItems={graphCollectedItems}
-                            graphPlayerInventory={graphPlayerInventory}
-                            graphRewardHints={graphRewardHints}
-                            graphLocations={graphLocations}
-                            graphEntrances={graphEntrances}
-                            graphRefreshCounter={graphRefreshCounter}
-                            cycleGraphSetting={cycleGraphSetting}
-                            handleMultiselectMenuOpen={handleMultiselectMenuOpen}
-                            graphSettingsOptions={graphSettingsOptions}
-                            graphSettingsLayout={graphSettingsLayout}
-                            trackerSettings={trackerSettings}
-                            setTrackerSettings={setTrackerSettings}
+                        <TrackerUpdateDialog
+                            alertUpdate={alertUpdate}
+                            setAlertUpdate={setAlertUpdate}
                         />
-                        <div
-                            className={trackerSettings.expand_sidebar ? "areaPaper areaPaperShift" : "areaPaper"}
-                        >
-                            <div className="drawerHeader"></div>
-                            <div className='worldInfo'>
-                                <ResponsiveMasonry columnsCountBreakPoints={masonryBreakpoints}>
-                                <Masonry gutter="20px">
-                                {
-                                    graph.worlds[trackerSettings.player_number].region_groups.filter(r => r.page === trackerSettings.region_page && r.viewable).sort((a, b) => a.alias.localeCompare(b.alias)).map((region, regionIndex) => {
-                                        return (
-                                            <GameArea
-                                                region={region}
-                                                playerNum={trackerSettings.player_number}
-                                                collapsedRegions={collapsedRegions}
-                                                entrances={region.exits}
-                                                locations={region.locations}
-                                                currentPage={currentPage}
-                                                collapseSwitch={toggleCollapse}
-                                                reverseCollapseSwitch={reverseCollapseHandler}
-                                                setRef={setRef}
-                                                handleLink={linkEntrance}
-                                                handleUnLink={unLinkEntrance}
-                                                handleCheck={checkLocation}
-                                                handleUnCheck={unCheckLocation}
-                                                handleContextMenu={contextMenuHandler}
-                                                handleShopContextMenu={shopContextMenuHandler}
-                                                handleEntranceMenuOpen={handleEntranceMenuOpen}
-                                                handleDungeonTravel={handleDungeonTravel}
-                                                toggleWalletTiers={toggleWalletTiers}
-                                                updateShopPrice={updateShopPrice}
-                                                showShops={true}
-                                                showShopInput={true}
-                                                showShopRupee={true}
-                                                showUnshuffledEntrances={true}
-                                                key={regionIndex}
-                                                refreshCounter={graphRefreshCounter}
-                                                searchTerm={searchTerm}
-                                            />
-                                        )
-                                    })
-                                }
-                                </Masonry>
-                                </ResponsiveMasonry>
-                            </div>
-                        </div>
+                        <TrackerResetDialog
+                            alertReset={alertReset}
+                            setAlertReset={setAlertReset}
+                            resetState={resetState}
+                        />
                     </div>
                 </ThemeProvider>
             </React.Fragment>

@@ -62,7 +62,7 @@ export const SeedMenu = ({
     }
 
     return (
-        <div>
+        <div className='seedMenuContainer'>
             <div className="menuSeedButton">
                 <span onClick={handleClick} className="seedMenuButtonLabel">Seed 1 <ExpandMore /></span>
                 <input id='graphPlandoFileInput' style={{display: 'none'}} type='file' onChange={(e) => importFunction(e)} />

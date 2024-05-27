@@ -1,3 +1,40 @@
+.topBar {
+    z-index: 1201 !important;
+    background-color: var(--color-header) !important;
+    height: 64px;
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: var(--color-header-text);
+    display: flex;
+    flex-direction: row;
+}
+.topBar .MuiIconButton-root {
+    margin-left: var(--theme-spacing);
+}
+@media screen and (max-width: 680px) {
+    .title {
+        display: none;
+    }
+    .seedMenuContainer {
+        flex-grow: 1;
+    }
+}
+@media screen and (max-width: 600px) {
+    .checkCount {
+        display: none;
+    }
+    .seedMenuContainer {
+        flex-grow: 0;
+    }
+    .searchContainer {
+        flex-grow: 1;
+    }
+}
 .menuButton {
     color: var(--color-header-button-text);
     background-color: var(--color-header-button);
@@ -28,7 +65,7 @@
 }
 .title {
     flex-grow: 1;
-    padding: calc(var(--theme-spacing) * 1.5) calc(var(--theme-spacing) * 2);
+    padding: 0 0;
 }
 .titleText {
     font-family: 'Hylia Serif Beta';
@@ -37,15 +74,23 @@
 .seedMenuButtonLabel {
     font-family: 'Hylia Serif Beta';
     font-size: 2.125rem;
+    padding: var(--theme-spacing);
+    border-radius: 10px;
     cursor: pointer;
     margin: 0 calc(var(--theme-spacing) * 2);
+    text-wrap: nowrap;
+}
+.seedMenuButtonLabel:hover {
+    background-color: var(--color-header-menu-button-hover);
 }
 .searchContainer {
     margin: 0 calc(var(--theme-spacing) * 2);
+    min-width: 170px;
 }
 #trackerGlobalSearchBox {
     padding: calc(var(--theme-spacing) * 0.5) calc(var(--theme-spacing) * 1);
     border-radius: calc(var(--theme-spacing) * 2);
+    width: 100%;
 }
 .checkCount {
     font-family: 'Hylia Serif Beta';

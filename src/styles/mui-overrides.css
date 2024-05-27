@@ -2,10 +2,6 @@
     color: var(--color-dialog-alert) !important;
     font-size: 2em !important;
 }
-.MuiAppBar-root {
-    z-index: 1201 !important;
-    background-color: var(--color-header) !important;
-}
 .hide {
     display: none;
 }

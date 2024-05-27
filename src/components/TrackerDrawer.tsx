@@ -131,7 +131,7 @@ export const TrackerDrawer = ({
                     graphEntrances={graphEntrances}
                     refreshCounter={graphRefreshCounter}
                 />
-                <div>
+                <div className="tabList">
                     <Tabs className="sidebarTabs" value={tabValue} onChange={handleTabChange}>
                         <Tab label='Game Settings' />
                         <Tab label='Tracker Settings' />

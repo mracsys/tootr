@@ -85,6 +85,7 @@ const OotIcon = ({
         let hideLabels = imageData.hideLabels === undefined ? imageData.fade : imageData.hideLabels;
 
         return (
+            <div className="iconTooltipPositioner">
             <div className="iconTooltipContainer">
             <div
                 onClick={onClick}
@@ -95,11 +96,11 @@ const OotIcon = ({
                 onTouchMove={handleContextMenu?.onTouchMove}
                 // TODO: add mousewheel support for dungeon rewards? Issues with preventing scrolling, see:
                 // https://github.com/facebook/react/issues/14856
-                className="iconDiv"
+                className={`iconDiv ${className}`}
                 data-found-in={sourceLocation}
                 data-found-item={itemName}
             >
-                <div className={`iconLabelContainer ${className}`}>
+                <div className="iconLabelContainer">
                     {
                         typeof imageData.img === 'string' ?
                             <img
@@ -345,6 +346,7 @@ const OotIcon = ({
                         </div>
                     : null
                 }
+            </div>
             </div>
         )
     } else {

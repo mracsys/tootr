@@ -46,3 +46,27 @@
 .settingMenuRow div {
     display: inline-block;
 }
+.iconTooltipLeftTop ~ .iconTooltip {
+    right: auto;
+    left: 0px;
+    top: auto;
+    bottom: 48px;
+}
+.iconTooltipRightTop ~ .iconTooltip {
+    right: 0px;
+    left: auto;
+    top: auto;
+    bottom: 48px;
+}
+.iconTooltipLeftBottom ~ .iconTooltip {
+    right: auto;
+    left: 0px;
+    top: 48px;
+    bottom: auto;
+}
+.iconTooltipRightBottom ~ .iconTooltip {
+    right: 0px;
+    left: auto;
+    top: 48px;
+    bottom: auto;
+}

@@ -12,6 +12,8 @@ body {
     background-color: rgb(215, 215, 215) !important;
 
     --color-header: #546e7a;
+    --color-header-text: white;
+    --color-header-menu-button-hover: rgba(0, 0, 0, 0.3);
     --color-header-button: #E0E0E0;
     --color-header-button-text: rgba(0, 0, 0, 0.87);
     --color-header-button-shadow: rgba(0,0,0,0.2);
