@@ -1,16 +1,17 @@
-import { useState, ChangeEvent } from "react";
+import { useState, ChangeEvent, Dispatch, SetStateAction } from "react";
 import TabPanel from "./TabPanel";
 import { ItemPanel } from "./ItemPanel";
 import { SettingPanel } from "./SettingsPanel";
 import GameSetting from "./GameSetting";
-import { List, ListItem, Link, Typography, Drawer, Tabs, Tab } from "@mui/material";
+import { Drawer, Tabs, Tab } from "@mui/material";
 import { SelectChangeEvent } from '@mui/material/Select';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import type { SelectedSettings, GameSettings } from './Tracker';
+import { TrackerSettingsCurrent, tracker_settings_defs, tracker_setting_definition, copyTrackerSettings } from "@/data/tracker_settings";
 
 import { GraphEntrance, GraphLocation, GraphSettingsConfiguration, GraphSettingsOptions, GraphSettingsLayout } from '@mracsys/randomizer-graph-tool';
 
 import '@/styles/TrackerDrawer.css';
+import GameSettingMultiselect from "./GameSettingMultiselect";
+import GameSettingSwitch from "./GameSettingSwitch";
 
 interface TrackerDrawerProps {
     addStartingItem: (item_name: string, count?: number) => void,
@@ -39,10 +40,8 @@ interface TrackerDrawerProps {
     handleMultiselectMenuOpen: (s: Element, n: string) => void,
     graphSettingsOptions: GraphSettingsOptions,
     graphSettingsLayout: GraphSettingsLayout,
-    enabled_settings: GameSettings,
-    settings: SelectedSettings,
-    changeSetting: (setting: ChangeEvent<HTMLSelectElement> | SelectChangeEvent<string[]> | {target: {name: string, value: boolean | string}}) => void,
-    openSettings: boolean,
+    trackerSettings: TrackerSettingsCurrent,
+    setTrackerSettings: Dispatch<SetStateAction<TrackerSettingsCurrent>>,
 }
 
 
@@ -67,10 +66,8 @@ export const TrackerDrawer = ({
     handleMultiselectMenuOpen,
     graphSettingsOptions,
     graphSettingsLayout,
-    enabled_settings,
-    settings,
-    changeSetting,
-    openSettings,
+    trackerSettings,
+    setTrackerSettings,
 }: TrackerDrawerProps) => {
     const [tabValue, setTabValue] = useState<number>(0);
     const handleTabChange = (event: React.SyntheticEvent, newTabValue: number) => {
@@ -78,12 +75,37 @@ export const TrackerDrawer = ({
         setTabValue(newTabValue);
     }
 
+    const changeStringSetting = (setting: ChangeEvent<HTMLSelectElement>) => {
+        const {target: { name, value }} = setting;
+        console.log('[Setting]', name, 'changed to', value);
+        let newTrackerSettings = copyTrackerSettings(trackerSettings);
+        newTrackerSettings[name] = value;
+        setTrackerSettings(newTrackerSettings);
+    }
+
+    const changeArraySetting = (setting: SelectChangeEvent<string[]>) => {
+        const {target: { name, value }} = setting;
+        console.log('[Setting]', name, 'changed to', value);
+        let newTrackerSettings = copyTrackerSettings(trackerSettings);
+        // On autofill we get a stringified value.
+        newTrackerSettings[name] = typeof value === 'string' ? value.split(',') : value;
+        setTrackerSettings(newTrackerSettings);
+    }
+
+    const changeBooleanSetting = (setting: ChangeEvent<HTMLInputElement>) => {
+        const {target: { name, checked }} = setting;
+        console.log('[Setting]', name, 'changed to', checked);
+        let newTrackerSettings = copyTrackerSettings(trackerSettings);
+        newTrackerSettings[name] = checked;
+        setTrackerSettings(newTrackerSettings);
+    }
+
     return (
         <Drawer
             className="settingsDrawer"
             variant="persistent"
             anchor="left"
-            open={openSettings}
+            open={trackerSettings.expand_sidebar}
             classes={{paper: "drawerPaper"}}
             SlideProps={{
                 unmountOnExit: true,
@@ -110,7 +132,7 @@ export const TrackerDrawer = ({
                     refreshCounter={graphRefreshCounter}
                 />
                 <div>
-                    <Tabs value={tabValue} onChange={handleTabChange}>
+                    <Tabs className="sidebarTabs" value={tabValue} onChange={handleTabChange}>
                         <Tab label='Game Settings' />
                         <Tab label='Tracker Settings' />
                     </Tabs>
@@ -125,24 +147,50 @@ export const TrackerDrawer = ({
                     />
                 </TabPanel>
                 <TabPanel value={tabValue} index={1} className='drawerTab'>
-                    <List className="drawerContainer">
+                    <ul className="drawerContainer">
                         {
-                            Object.keys(enabled_settings).map((setting,si) => {
-                                return (
-                                    <GameSetting
-                                        title={setting}
-                                        settings={enabled_settings[setting]}
-                                        userSettings={settings}
-                                        onChange={(s: ChangeEvent<HTMLSelectElement> | SelectChangeEvent<string[]>) => changeSetting(s)}
-                                        key={si}
-                                    />
-                                )
+                            Object.entries(tracker_settings_defs).map(([setting, def]: [string, tracker_setting_definition], si) => {
+                                if (!!def.options) {
+                                    if (def.type === 'str') {
+                                        return (
+                                            <GameSetting
+                                                title={def.display_name}
+                                                settingKey={setting}
+                                                settingOptions={def.options}
+                                                trackerSettings={trackerSettings}
+                                                onChange={changeStringSetting}
+                                                key={si}
+                                            />
+                                        )
+                                    } else {
+                                        return (
+                                            <GameSettingMultiselect
+                                                title={def.display_name}
+                                                settingKey={setting}
+                                                settingOptions={def.options}
+                                                trackerSettings={trackerSettings}
+                                                onChange={changeArraySetting}
+                                                key={si}
+                                            />
+                                        )
+                                    }
+                                } else {
+                                    return (
+                                        <GameSettingSwitch
+                                            title={def.display_name}
+                                            settingKey={setting}
+                                            trackerSettings={trackerSettings}
+                                            onChange={changeBooleanSetting}
+                                            key={si}
+                                        />
+                                    );
+                                }
                             })
                         }
-                        <ListItem>
-                            <Link className="devLink" href="https://github.com/mracsys/tootr"><GitHubIcon /><Typography>Github</Typography></Link>
-                        </ListItem>
-                    </List>
+                        <li>
+                            <a className="devLink" href="https://github.com/mracsys/tootr"><img src={`images/${trackerSettings.dark_mode ? 'GitHub_Invertocat_Light.svg' : 'GitHub_Invertocat_Dark.svg'}`} alt="Github Icon" /><span>Github</span></a>
+                        </li>
+                    </ul>
                 </TabPanel>
             </div>
         </Drawer>

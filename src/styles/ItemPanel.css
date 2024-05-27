@@ -46,7 +46,7 @@
     flex-wrap: wrap;
 }
 .ootItemTracker .ootMaxItemUpgrade .iconRightText {
-    color: #00FF00;
+    color: var(--color-sidebar-upgrade);
 }
 .ootWinConsContainer {
     width: calc(48px * 3);

@@ -10,8 +10,10 @@
     /* necessary for content to be below app bar */
     min-height: 64px;
 }
-.MuiList-root.drawerContainer {
-    overflow: hidden !important;
+.drawerContainer {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 .gameInfo {
     display: flex;
@@ -24,4 +26,36 @@
 .drawerTab {
     flex-grow: 1;
     overflow-y: auto;
+}
+.sidebarTabs .MuiTab-root {
+    color: var(--color-sidebar-text);
+    opacity: 30%;
+}
+.sidebarTabs .MuiTab-root:hover {
+    opacity: 100%;
+}
+.sidebarTabs .MuiTab-root.Mui-selected {
+    color: var(--color-sidebar-text);
+    opacity: 100%;
+}
+.sidebarTabs .MuiTabs-indicator {
+    background-color: var(--color-sidebar-text);
+}
+.devLink {
+    display: flex;
+    align-items: center;
+    color: var(--color-sidebar-text);
+    text-decoration: none;
+    padding: var(--theme-spacing) 0;
+    margin-left: calc(var(--theme-spacing) * 4);
+}
+.devLink:hover {
+    text-decoration: underline;
+}
+.devLink img {
+    width: 32px;
+    height: 32px;
+}
+.devLink span {
+    margin-left: var(--theme-spacing);
 }

@@ -5,8 +5,8 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 //import Brightness7Icon from '@mui/icons-material/Brightness7';
 //import Brightness3Icon from '@mui/icons-material/Brightness3';
-import type { SelectedSettings } from './Tracker';
 import { SeedMenu } from "./SeedMenu";
+import { TrackerSettingsCurrent, copyTrackerSettings } from "@/data/tracker_settings";
 
 import { GraphLocation } from '@mracsys/randomizer-graph-tool';
 
@@ -18,10 +18,9 @@ interface TrackerTopBarProps {
     loadGraphPreset: (preset_name: string) => void,
     graphPresets: string[],
     graphLocationCount: GraphLocation[],
-    settings: SelectedSettings,
-    openSettings: boolean,
-    setOpenSettings: Dispatch<SetStateAction<boolean>>,
     searchTracker: React.ChangeEventHandler<HTMLInputElement>,
+    trackerSettings: TrackerSettingsCurrent,
+    setTrackerSettings: Dispatch<SetStateAction<TrackerSettingsCurrent>>,
 }
 
 
@@ -31,11 +30,16 @@ export const TrackerTopBar = ({
     loadGraphPreset,
     graphPresets,
     graphLocationCount,
-    settings,
-    openSettings,
-    setOpenSettings,
     searchTracker,
+    trackerSettings,
+    setTrackerSettings
 }: TrackerTopBarProps) => {
+
+    const handleOpenSidebar = () => {
+        let newTrackerSettings = copyTrackerSettings(trackerSettings);
+        newTrackerSettings.expand_sidebar = !trackerSettings.expand_sidebar;
+        setTrackerSettings(newTrackerSettings);
+    }
 
     return (
         <AppBar
@@ -45,7 +49,7 @@ export const TrackerTopBar = ({
                 <IconButton
                     edge="start"
                     aria-label="open drawer"
-                    onClick={() => setOpenSettings(!openSettings)}
+                    onClick={() => handleOpenSidebar()}
                 >
                     <MenuIcon />
                 </IconButton>
@@ -59,7 +63,7 @@ export const TrackerTopBar = ({
 
                 <div className="title">
                     <div>
-                        <div className="titleText">{settings["View"]}</div>
+                        <div className="titleText">{trackerSettings.region_page}</div>
                     </div>
                 </div>
                 <div className='searchContainer'>

@@ -1,8 +1,8 @@
 
 import { IconDict } from "./OotIcon";
 import { SvgIconComponent } from "@mui/icons-material";
-import PublicIcon from '@mui/icons-material/Public';
-import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
+/*import PublicIcon from '@mui/icons-material/Public';
+import SportsEsportsIcon from '@mui/icons-material/SportsEsports';*/
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import ClearIcon from '@mui/icons-material/Clear';
 import ShortcutIcon from '@mui/icons-material/Shortcut';
@@ -193,7 +193,7 @@ export const OotSettingAssetMapFactory = (graphSettings: GraphSettingsConfigurat
             tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['key_rings_choice']),
         },
         'shuffle_silver_rupees': {
-            img: '/images/rupee_counter_icon.png',
+            img: '/images/silver_rupee_vertical.png',
             rImg: {
                 'remove': ClearIcon,
                 'regional': '/images/medallion_wheel.png',

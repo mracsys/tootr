@@ -5,10 +5,10 @@
     font-size: 0.875rem;
     font-weight: 400;
     line-height: 1.43;
-    color: #FFFFFF;
+    color: var(--color-item-menu-text);
 }
 .locationMenuClear:hover {
-    background-color: #424242; /*grey[800]*/
+    background-color: var(--color-item-menu-hover);
     cursor: pointer;
 }
 
@@ -18,34 +18,34 @@
 }
 .locationItemMenu ul {
     padding: 0;
-    background-color: #212121; /*grey[900]*/
+    background-color: var(--color-item-menu);
 }
 .locationItemMenu .iconLeftText {
-    color: #FFFFFF;
+    color: var(--color-item-menu-text);
 }
 .locationItemMenu .iconLeftTopText {
-    color: #FFFFFF;
+    color: var(--color-item-menu-text);
 }
 .locationItemMenu .iconCenterText {
-    color: #FFFFFF;
+    color: var(--color-item-menu-text);
 }
 .locationItemMenu .iconRightText {
-    color: #FFFFFF;
+    color: var(--color-item-menu-text);
 }
 .locationItemMenu .iconRightTopText {
-    color: #FFFFFF;
+    color: var(--color-item-menu-text);
 }
 .locationItemMenu .iconDiv {
     padding: 8px;
 }
 .locationItemMenu .iconDiv:hover {
-    background-color: #424242; /*grey[800]*/
+    background-color: var(--color-item-menu-hover);
     cursor: pointer;
     margin: 0 auto;
 }
 .itemMenuRow {
     white-space: nowrap;
-    background-color: #212121; /*grey[900]*/
+    background-color: var(--color-item-menu);
 }
 .itemMenuRow div {
     display: inline-block;

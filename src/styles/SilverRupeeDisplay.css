@@ -22,7 +22,7 @@
     left: -8px;
     padding-left: 8px;
     padding-right: 8px;
-    background-color: #000;
+    background-color: var(--color-sidebar-expando);
     z-index: 9000;
     float: none;
     display: flex;
@@ -63,12 +63,12 @@
 }
 .ootSilverRupeeNames div:hover {
     cursor: pointer;
-    background-color: #424242; /*grey[800]*/
+    background-color: var(--color-sidebar-hover);
 }
 .silverRupeeLabel {
-    color: #BDBDBD; /*grey[300]*/
+    color: var(--color-sidebar-expando-text);
     font-style: italic;
 }
 .dungeonItemMaxCollected {
-    color: #00FF00;
+    color: var(--color-sidebar-upgrade);
 }

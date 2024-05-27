@@ -8,11 +8,6 @@
 .settingSectionName {
     color: var(--color-sidebar-text);
 }
-.grayscaleMenuIcon img {
-    width: 32px;
-    height: 32px;
-    filter: grayscale(100%);
-}
 .settingCollectionContainer {
     line-height: 0;
     padding: 0;

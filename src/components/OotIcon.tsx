@@ -30,7 +30,8 @@ export type IconDict = {
 }
 
 export type IconData = {
-    img: string | SvgIconComponent;
+    img: string | SvgIconComponent | React.ComponentType;
+    imgClass?: string;
     lSub?: string | GraphSettingType;
     rSub?: string | GraphSettingType;
     cSub?: string | GraphSettingType;
@@ -107,7 +108,7 @@ const OotIcon = ({
                                 className={"iconContainer" + (fadeLabels ? ' disabledSettingIcon' : '')}
                             />
                         : <imageData.img
-                            className={"svgIcon" + (fadeLabels ? ' disabledSettingIcon' : '')}
+                            className={`svgIcon ${fadeLabels ? 'disabledSettingIcon' : ''} ${!!imageData.imgClass ? imageData.imgClass : ''}`}
                         />
                     }
                     { hideLabels ?

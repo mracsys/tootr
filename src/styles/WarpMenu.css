@@ -8,7 +8,7 @@
         z-index: 10;
         display: flex;
         flex-direction: column;
-        background-color: #546e7a; /*blueGrey[600]*/
+        background-color: var(--color-warpmenu);
         box-shadow: -2px -2px 4px -1px rgba(0,0,0,0.2),-4px -4px 5px 0px rgba(0,0,0,0.14),-1px -1px 10px 0px rgba(0,0,0,0.12);
         max-height: 50%;
     }
@@ -23,16 +23,16 @@
         z-index: 10;
         display: flex;
         flex-direction: column;
-        background-color: #546e7a; /*blueGrey[600]*/
+        background-color: var(--color-warpmenu);
         box-shadow: -2px -2px 4px -1px rgba(0,0,0,0.2),-4px -4px 5px 0px rgba(0,0,0,0.14),-1px -1px 10px 0px rgba(0,0,0,0.12);
         max-height: 50%;
     }    
 }
 .warpMenu .iconRightText {
-    color: #FFFFFF;
+    color: var(--color-warpmenu-text);
 }
 .warpMenu .iconTradeText {
-    color: #FFFFFF;
+    color: var(--color-warpmenu-text);
 }
 .warpIcon {
     cursor: pointer;
@@ -45,7 +45,7 @@
 }
 .warpIcon:hover,
 .warpMenu .iconDiv:hover {
-    background-color: #37474f; /*blueGrey[800]*/
+    background-color: var(--color-warpmenu-hover);
     cursor: pointer;
 }
 .warpMenuVisible {
@@ -56,13 +56,13 @@
     justify-content: center;
 }
 .expandWarpMenu {
-    color: white !important;
+    color: var(--color-warpmenu-text) !important;
     width: 32px !important;
     height: 100% !important;
     cursor: pointer !important;
 }
 .expandWarpMenu:hover {
-    background-color: #37474f !important; /*blueGrey[800]*/
+    background-color: var(--color-warpmenu-hover) !important;
 }
 .MuiCollapse-root.warpAreaList {
     overflow-y: auto !important;
@@ -70,17 +70,17 @@
 }
 .warpMenuArea {
     display: block;
-    color: white;
+    color: var(--color-warpmenu-text);
     font-weight: bold;
     padding: var(--theme-spacing);
     cursor: pointer;
 }
 .warpMenuArea:hover {
-    background-color: #37474f; /*blueGrey[800]*/
+    background-color: var(--color-warpmenu-hover);
 }
 .warpMenuAreaHidden {
     display: block;
-    color: #9e9e9e; /*grey[500]*/
+    color: var(--color-warpmenu-text-disabled);
     font-weight: bold;
     padding: var(--theme-spacing);
 }
@@ -106,7 +106,7 @@
 }
 @media screen and (max-width: 600px) {
     .warpSongsBlank {
-        color: #9e9e9e; /*grey[500]*/
+        color: var(--color-warpmenu-text-disabled);
         width: 32px;
         height: 100%;
         cursor: pointer;
@@ -116,4 +116,9 @@
     .warpSongsBlank {
         display: none;
     }
+}
+.grayscaleMenuIcon :is(img, svg) {
+    width: 32px;
+    height: 32px;
+    filter: grayscale(100%);
 }

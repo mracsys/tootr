@@ -12,10 +12,10 @@
         display: block;
         max-width: 100%;
         margin-bottom: 20px;
-        background-color: #cbc26d;
+        background-color: var(--area-background);
         border-radius: 4px;
         overflow: hidden;
-        box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);
+        box-shadow: 0px 2px 1px -1px var(--area-box-shadow),0px 1px 1px 0px var(--area-box-shadow2),0px 1px 3px 0px var(--area-box-shadow3);
     }
 }
 
@@ -24,10 +24,10 @@
         display: block;
         max-width: 100%;
         margin-bottom: 20px;
-        background-color: #cbc26d;
+        background-color: var(--area-background);
         border-radius: 4px;
         overflow: hidden;
-        box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);
+        box-shadow: 0px 2px 1px -1px var(--area-box-shadow),0px 1px 1px 0px var(--area-box-shadow2),0px 1px 3px 0px var(--area-box-shadow3);
     }
 }
 
@@ -35,7 +35,7 @@
     padding: calc(var(--theme-spacing) * 0.75);
 }
 .areaTitle {
-    background-color: #fff59d; /*yellow[200]*/
+    background-color: var(--area-header);
     display: flex;
     flex-direction: row;
     padding: var(--theme-spacing) calc(var(--theme-spacing) * 2) var(--theme-spacing) calc(var(--theme-spacing) * 0.5);
@@ -48,7 +48,7 @@
     line-height: 1.6;
 }
 .areaRefreshCounter {
-    color: #fff59d; /*yellow[200]*/
+    color: var(--area-header);
     opacity: 0;
 }
 .areaTitleCollapse {

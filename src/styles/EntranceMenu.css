@@ -3,8 +3,8 @@
 }
 .entranceAutoOption.Mui-focused {
     text-decoration: none !important;
-    background-color: #52525E !important;
-    color: #FFFFFF !important;
+    background-color: var(--color-entrance-menu-option-hover) !important;
+    color: var(--color-entrance-menu-option-text-hover) !important;
 }
 .entranceAutoPaper {
     font-size: 0.875rem !important;
@@ -20,20 +20,20 @@
     transform: none !important;
 }
 .entranceAutoInput {
-    background-color: #fff !important;
-    border-bottom: 1px solid black !important;
+    background-color: var(--color-entrance-menu-input) !important;
+    border-bottom: 1px solid var(--color-entrance-menu-border) !important;
 }
 .entranceAutoInput::after {
-    border-bottom: 0px solid #000 !important;
+    border-bottom: 0px solid var(--color-entrance-menu-border) !important;
 }
 .entranceAutoInput::before {
-    border-bottom: 0px solid #000 !important;
+    border-bottom: 0px solid var(--color-entrance-menu-border) !important;
 }
 .entranceAutoInput:hover::before {
-    border-bottom: 0px solid #000 !important;
+    border-bottom: 0px solid var(--color-entrance-menu-border) !important;
 }
 .entranceAutoSearchLabel .Mui-focused {
-    color: rgba(0, 0, 0, 1) !important;
+    color: var(--color-entrance-menu-input-text) !important;
 }
 .entranceAutoNoButton {
     display: none !important;
@@ -46,7 +46,7 @@
     line-height: normal !important;
     letter-spacing: 0.00938em !important;
     height: 0px !important;
-    color: rgba(0, 0, 0, 0) !important;
+    color: transparent !important;
 }
 .entranceText {
     padding: calc(var(--theme-spacing) * 0.75) calc(var(--theme-spacing) * 0.75) calc(var(--theme-spacing) * 0.75) calc(var(--theme-spacing) * 3) !important;
@@ -58,8 +58,8 @@
 }
 .entranceText:hover {
     text-decoration: none;
-    background-color: #52525E;
-    color: #FFFFFF;
+    background-color: var(--color-entrance-menu-option-hover);
+    color: var(--color-entrance-menu-option-text-hover);
 }
 .entranceAreaText {
     padding: calc(var(--theme-spacing) * 0.75) calc(var(--theme-spacing) * 0.75) !important;
@@ -69,7 +69,7 @@
     letter-spacing: 0.00938em !important;
     font-weight: bold !important;
     font-style: italic !important;
-    color: #000 !important;
+    color: var(--color-entrance-menu-option-text) !important;
 }
 .entranceAreaText:hover {
     text-decoration: none;

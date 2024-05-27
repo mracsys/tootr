@@ -10,14 +10,14 @@
     /* cursor: help; */
 }
 .logicalGreen {
-    background-color: #66bb6a;
+    background-color: var(--color-logical-green);
 }
 .logicalYellow {
-    background-color: #eeff41;
+    background-color: var(--color-logical-yellow);
 }
 .logicalRed {
-    background-color: #f44336;
+    background-color: var(--color-logical-red);
 }
 .logicalBlank {
-    background-color: #bdbdbd;
+    background-color: var(--color-logical-grey);
 }

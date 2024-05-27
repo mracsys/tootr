@@ -2,13 +2,13 @@
     opacity: 20%;
 }
 .multiselectSettingMenu {
-    color: white;
+    color: var(--color-sidebar-menu-text);
     font-family: 'Hylia Serif Beta';
     padding: var(--theme-spacing);
-    background-color: #000000;
+    background-color: var(--color-sidebar-menu);
 }
 .multiselectSettingMenuTitle {
-    border-bottom: #FFFFFF 1px solid;
+    border-bottom: var(--color-sidebar-menu-header-border) 1px solid;
     font-size: larger;
 }
 .multiselectSettingMenu div {

@@ -7,7 +7,6 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
-import { SelectChangeEvent } from '@mui/material/Select';
 import CssBaseline from '@mui/material/CssBaseline';
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
@@ -19,143 +18,23 @@ import ItemMenu from './ItemMenu';
 import SettingMultiselectMenu from './SettingMultiselectMenu';
 import ContextMenuHandler from './ContextMenuHandler';
 import WarpMenu from './WarpMenu';
-
-
-import devr from '@/data/versions/dev6.0.41r-1.json';
-import defaultSettings from '@/data/settings_presets/defaults.json';
-import rslS4 from '@/data/settings_presets/rsl-s4.json';
-import mixedPoolsTourney from '@/data/settings_presets/mixed-pools-s1.json';
-import standardS5 from '@/data/settings_presets/standard-s5.json';
-import ddrS1 from '@/data/settings_presets/ddr-s1.json';
-import leagueS2 from '@/data/settings_presets/league-s2.json';
-import maxChex from '@/data/settings_presets/1175.json';
-import mw3 from '@/data/settings_presets/mw3.json';
-
+import {
+    all_tracker_settings_versions,
+    current_settings_version,
+    TrackerSettingsCurrent,
+    tracker_settings_default,
+    copyTrackerSettings,
+    tracker_setting_type,
+    // tracker_settings_v1, // add specific versions if format ever changes for the upgrade function
+} from '@/data/tracker_settings';
+import { location_item_menu_layout, shop_item_menu_layout } from '@/data/location_item_menu_layout';
 
 import { WorldGraphFactory, ExternalFileCacheFactory, ExternalFileCache, GraphEntrance, GraphRegion, GraphItem } from '@mracsys/randomizer-graph-tool';
-import { location_item_menu_layout, shop_item_menu_layout } from '@/data/location_item_menu_layout';
 
 import '@/styles/tracker.css';
 import '@/styles/mui-overrides.css';
 import '@/styles/TrackerPaper.css';
 
-
-export type SettingTypes = string[] | {[s: string]: boolean};
-export interface SettingCategory {
-    [settingName: string]: SettingTypes,
-}
-export interface GameSettings {
-    [settingCategory: string]: SettingCategory,
-}
-/*
-interface RandoVersionData {
-    Settings: GameSettings,
-    Locations: {[locationName: string]: string},
-}
-*/
-
-export type SettingSelectionTypes = string | string[] | boolean;
-export interface SelectedSettings {
-    [settingName: string]: SettingSelectionTypes
-}
-
-/*
-interface SettingPreset {
-    Settings: SelectedSettings,
-}
-*/
-
-export interface Entrance {
-    area: string,
-    reverse: string,
-    oneWay: boolean,
-    oneWayArea: string,
-    connector: string | string[],
-    isReverse: boolean,
-    alias: string,
-    reverseAlias: string,
-    tag: string,
-    tagRep: boolean,
-    tagRules: TagRule[],
-    enableTag: boolean,
-    type: string,
-    lKey: string,
-    aLink: string,
-    eLink: string,
-    userALink: string,
-    userELink: string,
-    oneWayELink: string,
-    userOneWayELink: string,
-    shuffled: boolean,
-}
-
-export interface EntrancePool {
-    [categoryName: string]: string[],
-}
-
-export interface Entrances {
-    [entranceType: string]: EntrancePool,
-}
-
-export interface Location {
-    area: string,
-    lKey: string,
-    alias: string,
-    type: string,
-    settings: TagRule[],
-    visible: boolean,
-    check: string,
-    foundItem: string,
-    merchant: boolean,
-    price: number,
-    walletTier: number,
-    shuffled: boolean,
-    shuffleRules: TagRule[],
-}
-
-export interface TagRule {
-    setting: string,
-    value: string,
-    required: boolean,
-}
-
-export interface Area {
-    show: boolean,
-    dungeon: boolean,
-    collapse: string,
-    entrances: {[entranceName: string]: Entrance},
-    locations: {[locationName: string]: Location},
-}
-
-export interface Areas {
-    [areaName: string]: Area,
-}
-
-export interface AllAreas {
-    areas: Areas,
-    entrances: {[entranceName: string]: Entrance},
-    locations: {[locationName: string]: Location},
-    connectors: {[connectorName: string]: Entrance},
-}
-
-export interface AllEntrances {
-    oneWayAreas: string[], // Warp Songs and Spawn Points hard coded visibility
-    entrances: {
-        [entranceName: string]: {
-            type: string,
-            category: string,
-            locations: {[locationName: string]: Location},
-        }
-    },
-    areaEntranceTypes: {
-        [entranceType: string]: {
-            [areaName: string]: string[],
-        },
-    },
-    interiorEntranceTypes: {
-        [entranceType: string]: string[],
-    },
-}
 
 interface ScrollerRef {
     [scrollRef: string]: HTMLDivElement,
@@ -165,21 +44,21 @@ export interface CollapsedRegions {
     [regionName: string]: string
 }
 
-export interface CheckedLocations {
-    [playerNum: number]: string[]
+type TrackerSettingChangeEvent = {
+    target: {
+        name: string;
+        value: tracker_setting_type;
+        checked?: boolean;
+    }
 }
 
-export interface CheckedEntrances {
-    [playerNum: number]: string[]
-}
-
+// Changing the version will completely reset user preferences.
+// Only touch this if absolutely necessary.
+// Prefer in-place upgrades to settings in localstorage.
 const trackerVersion = '1.0.0';
 
 const Tracker = (_props: {}) => {
-    let [enabled_settings, setEnabledSettings] = useState<GameSettings>({});
-    let [settings, setSettings] = useState<SelectedSettings>({});
-    let [openSettings, setOpenSettings] = useState<boolean>(false);
-    let [themeDark, setThemeDark] = useState<boolean>(false);
+    let [trackerSettings, setTrackerSettings] = useState<TrackerSettingsCurrent>(tracker_settings_default);
     let [alertReset, setAlertReset] = useState<boolean>(false);
     let [alertUpdate, setAlertUpdate] = useState<boolean>(false);
     let [itemMenuOpen, setItemMenuOpen] = useState<Element | null>(null);
@@ -194,14 +73,13 @@ const Tracker = (_props: {}) => {
     let [scrollY, setScrollY] = useState<number | null>(null);
     let [trackerInitialized, setTrackerInitialized] = useState<boolean>(false);
     let [graphInitialized, setGraphInitialized] = useState<boolean>(false);
-    let [playerNumber, setPlayerNumber] = useState<number>(0);
     let [collapsedRegions, setCollapsedRegions] = useState<CollapsedRegions>({});
-    let [checkedEntrances, setCheckedEntrances] = useState<CheckedEntrances>({});
     let [searchTerm, setSearchTerm] = useState<string>('');
     const [_fileCache, setFileCache] = useState<ExternalFileCache>({files: {}});
     const scroller = useRef<ScrollerRef>({});
 
-    // graph state management to trigger rerender on memo change
+    // Graph state management to trigger rerender on memo change.
+    // Required as graph updates are not pure.
     let [graphInitialState, setGraphInitialState] = useState<string>('{}');
     let [graphRefreshCounter, setGraphRefreshCounter] = useState<number>(0);
     let [graphImportFile, setGraphImportFile] = useState<string>('');
@@ -217,50 +95,40 @@ const Tracker = (_props: {}) => {
         let clientTrackerVersion = localStorage.getItem('TrackerVersion');
         if (!!(clientTrackerVersion)) {
             if (localStorage.getItem('TrackerVersion') !== trackerVersion) {
-                // outdated, reset everything until proper upgrade function developed
-                localStorage.clear();
-                localStorage.setItem('TrackerVersion', trackerVersion);
+                majorTrackerUpgrade();
             }
         } else {
-            // no version key
-            localStorage.clear();
-            localStorage.setItem('TrackerVersion', trackerVersion);
+            // no version key, assume outdated
+            majorTrackerUpgrade();
         }
-        let clientPlayer = localStorage.getItem('PlayerNumber');
-        let playerInit: number = !!(clientPlayer) ? JSON.parse(clientPlayer) : 0;
-        let clientSettings = localStorage.getItem('RandoSettings');
-        let settingsInit: SelectedSettings = !!(clientSettings) ? JSON.parse(clientSettings) : cloneDeep(defaultSettings.Settings);
+        let clientTrackerSettings = localStorage.getItem('TrackerSettings');
+        let trackerSettingsInit = tracker_settings_default;
+        if (!!clientTrackerSettings) {
+            let trackerSettingsStored: all_tracker_settings_versions = JSON.parse(clientTrackerSettings);
+            if (trackerSettingsStored.version !== current_settings_version) {
+                trackerSettingsInit = upgradeTrackerSettings(trackerSettingsStored);
+            } else {
+                trackerSettingsInit = trackerSettingsStored;
+            }
+        } else {
+            // Override default dark mode setting based on browser/OS theme
+            trackerSettingsInit.dark_mode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        }
+
         let clientCollapsedRegions = localStorage.getItem('CollapsedRegions');
         let collapsedRegionsInit: CollapsedRegions = !!(clientCollapsedRegions) ? JSON.parse(clientCollapsedRegions) : {};
         let clientInitialGraphState = localStorage.getItem('GraphState');
         let graphInitialStateInit = !!(clientInitialGraphState) ? JSON.parse(clientInitialGraphState) : {};
-        //let settingsInit: SelectedSettings = cloneDeep(defaultSettings.Settings);
-        // Disable preset settings on load until custom saved settings are handled
-        //let presetSettings = getPresetSettings(settings['Settings Preset']);
-        //setPresetSettings(settings, presetSettings);
 
-        //let darkMode = !!(localStorage.getItem('DarkMode')) ? true : localStorage.getItem('DarkMode');
-        let clientDarkMode = localStorage.getItem('DarkMode');
-        let darkMode: boolean = !!(clientDarkMode) ? JSON.parse(clientDarkMode) : window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-        setPlayerNumber(playerInit);
         setGraphInitialState(graphInitialStateInit);
         setCollapsedRegions(collapsedRegionsInit);
-        setEnabledSettings(devr.Settings);
-        setSettings(settingsInit);
-        setThemeDark(darkMode);
+        setTrackerSettings(trackerSettings);
     }, []);
 
     // hooks to keep state saved in localstorage
     useEffect(() => {
-        if (trackerInitialized) localStorage.setItem('PlayerNumber', JSON.stringify(playerNumber));
-    }, [playerNumber]);
-    useEffect(() => {
-        if (trackerInitialized) localStorage.setItem('RandoSettings', JSON.stringify(settings));
-    }, [settings]);
-    useEffect(() => {
-        if (trackerInitialized) localStorage.setItem('DarkMode', JSON.stringify(themeDark));
-    }, [themeDark]);
+        if (trackerInitialized) localStorage.setItem('TrackerSettings', JSON.stringify(trackerSettings));
+    }, [trackerSettings]);
     useEffect(() => {
         if (trackerInitialized) localStorage.setItem('CollapsedRegions', JSON.stringify(collapsedRegions));
     }, [collapsedRegions]);
@@ -331,65 +199,23 @@ const Tracker = (_props: {}) => {
         if (!!element) scroller.current[index] = element;
     }
 
-    const getPresetSettings = (presetName: string, customSettings: SelectedSettings = {}): SelectedSettings => {
-        let presetSettings;
-        switch (presetName) {
-            case "RSL":
-                presetSettings = cloneDeep(rslS4.Settings);
-                break;
-            case "Mixed Pools":
-                presetSettings = cloneDeep(mixedPoolsTourney.Settings);
-                break;
-            case "Standard":
-                presetSettings = cloneDeep(standardS5.Settings);
-                break;
-            case "DDR":
-                presetSettings = cloneDeep(ddrS1.Settings);
-                break;
-            case "League":
-                presetSettings = cloneDeep(leagueS2.Settings);
-                break;
-            case "Max Chex":
-                presetSettings = cloneDeep(maxChex.Settings);
-                break;
-            case "MW Season 3":
-                presetSettings = cloneDeep(mw3.Settings);
-                break;
-            case "Custom":
-                presetSettings = cloneDeep(customSettings);
-                break;
-            default:
-                presetSettings = cloneDeep(defaultSettings.Settings);
-                break;
-        }
-        return presetSettings;
+    const majorTrackerUpgrade = () => {
+        localStorage.clear();
+        localStorage.setItem('TrackerVersion', trackerVersion);
     }
 
-    const setPresetSettings = (gameSettings: SelectedSettings, presetSettings: SelectedSettings): void => {
-        Object.keys(presetSettings).forEach(setting => {
-            gameSettings[setting] = presetSettings[setting];
-        });
+    const upgradeTrackerSettings = (oldTrackerSettings: all_tracker_settings_versions): TrackerSettingsCurrent => {
+        // Modify stored settings as needed if they change in the future.
+        // Independent of stored graph state.
+        return oldTrackerSettings;
     }
 
-    const resetState = (currentSettings: SelectedSettings): void => {
-        let settingsReset: SelectedSettings = cloneDeep(defaultSettings.Settings);
-
-        // TODO: Separate tracker and world/preset settings
-        let prevSettings = cloneDeep(currentSettings);
-        settingsReset["Settings Preset"] = prevSettings["Settings Preset"];
-        settingsReset["Show Unshuffled Entrances"] = prevSettings["Show Unshuffled Entrances"];
-        settingsReset["Show Locations"] = prevSettings["Show Locations"];
-        settingsReset["Show Unshuffled Skulls"] = prevSettings["Show Unshuffled Skulls"];
-        settingsReset["Shop Price Tracking"] = prevSettings["Shop Price Tracking"];
-        
-        //let presetSettings = getPresetSettings(settingsReset['Settings Preset'], prevSettings);
-        //setPresetSettings(settingsReset, presetSettings);
-
-        graph.import({});
-
-        setPlayerNumber(0);
-        setSettings(settingsReset);
-        setGraphInitialState('{}');
+    const resetState = (): void => {
+        // reset graph state by re-importing only the settings
+        graph.import(graph.export(false, true));
+        refreshSearch();
+        setGraphInitialState(JSON.stringify(graph.export(true)));
+        setCollapsedRegions({});
         setAlertReset(false);
     }
 
@@ -429,38 +255,24 @@ const Tracker = (_props: {}) => {
         link.click();
     }
 
-    const changeSetting = (setting: ChangeEvent<HTMLSelectElement> | SelectChangeEvent<string[]> | {target: {name: string, value: boolean | string}}) => {
+    const changeSetting = (setting: TrackerSettingChangeEvent) => {
         console.log(setting.target.name, setting.target.value);
-        let settingsLocal: SelectedSettings;
-        if (setting.target.name === 'Settings Preset' && typeof setting.target.value === 'string') {
-            let prevSettings = cloneDeep(settings);
-            settingsLocal = cloneDeep(defaultSettings.Settings);
-            settingsLocal["Settings Preset"] = prevSettings["Settings Preset"];
-            settingsLocal["Show Unshuffled Entrances"] = prevSettings["Show Unshuffled Entrances"];
-            settingsLocal["Show Locations"] = prevSettings["Show Locations"];
-            settingsLocal["Show Unshuffled Skulls"] = prevSettings["Show Unshuffled Skulls"];
-            settingsLocal["Shop Price Tracking"] = prevSettings["Shop Price Tracking"];
-            settingsLocal["View"] = prevSettings["View"];
-            
-            let presetSettings = getPresetSettings(setting.target.value, prevSettings);
-            setPresetSettings(settingsLocal, presetSettings);
-        } else {
-            settingsLocal = cloneDeep(settings);
-        }
-        settingsLocal[setting.target.name] = setting.target.value;
-        setSettings(settingsLocal);
+        let newTrackerSettings = copyTrackerSettings(trackerSettings);
+        setting.target
+        newTrackerSettings[setting.target.name] = setting.target.value;
+        setTrackerSettings(newTrackerSettings);
     }
 
     // default to reverse direction so that right-click/long-touch handler only needs
     // to pass one argument
     const cycleGraphSetting = ({graphSettingName = '', reverseDirection = true}: {graphSettingName?: string, reverseDirection?: boolean} = {}): void => {
-        let settingValue = graph.worlds[playerNumber].settings[graphSettingName];
+        let settingValue = graph.worlds[trackerSettings.player_number].settings[graphSettingName];
         let graphSettingsOptions = graph.get_settings_options();
         let graphSetting = graphSettingsOptions[graphSettingName];
         if (settingValue === undefined || settingValue === null || graphSetting === undefined) return;
         if (typeof settingValue === 'boolean') {
-            graph.change_setting(graph.worlds[playerNumber], graphSetting, !settingValue);
-            //graph.worlds[playerNumber].settings[graphSettingName] = !(settingValue);
+            graph.change_setting(graph.worlds[trackerSettings.player_number], graphSetting, !settingValue);
+            //graph.worlds[trackerSettings.player_number].settings[graphSettingName] = !(settingValue);
         } else if (typeof settingValue === 'string') {
             let settingChoices = graphSettingsOptions[graphSettingName].choices;
             if (!!settingChoices) {
@@ -485,8 +297,8 @@ const Tracker = (_props: {}) => {
                         if (settingIndex < 0) settingIndex = settingOptions.length - 1;
                     }
                 }
-                graph.change_setting(graph.worlds[playerNumber], graphSetting, settingOptions[settingIndex]);
-                //graph.worlds[playerNumber].settings[graphSettingName] = settingOptions[settingIndex];
+                graph.change_setting(graph.worlds[trackerSettings.player_number], graphSetting, settingOptions[settingIndex]);
+                //graph.worlds[trackerSettings.player_number].settings[graphSettingName] = settingOptions[settingIndex];
             }
         } else if (typeof settingValue === 'number') {
             let optionMax = graphSettingsOptions[graphSettingName].maximum;
@@ -498,16 +310,16 @@ const Tracker = (_props: {}) => {
                 } else {
                     (settingValue === optionMin) ? settingValue = optionMax : settingValue--;
                 }
-                graph.change_setting(graph.worlds[playerNumber], graphSetting, settingValue);
-                //graph.worlds[playerNumber].settings[graphSettingName] = settingValue;
+                graph.change_setting(graph.worlds[trackerSettings.player_number], graphSetting, settingValue);
+                //graph.worlds[trackerSettings.player_number].settings[graphSettingName] = settingValue;
             }
         }
         refreshSearch();
-        console.log(`[Setting] ${graphSettingName} changed to ${graph.worlds[playerNumber].settings[graphSettingName]}`);
+        console.log(`[Setting] ${graphSettingName} changed to ${graph.worlds[trackerSettings.player_number].settings[graphSettingName]}`);
     }
 
     const cycleGraphMultiselectOption = ({graphSettingName = '', settingOptions = ['']}: {graphSettingName?: string, settingOptions?: string[]} = {}) => {
-        let settingValue = cloneDeep(graph.worlds[playerNumber].settings[graphSettingName]);
+        let settingValue = cloneDeep(graph.worlds[trackerSettings.player_number].settings[graphSettingName]);
         let graphSettingsOptions = graph.get_settings_options();
         let graphSetting = graphSettingsOptions[graphSettingName];
         if (settingValue === undefined || settingValue === null || graphSetting === undefined) return;
@@ -522,29 +334,29 @@ const Tracker = (_props: {}) => {
                     settingValue.push(settingOption);
                 }
             }
-            graph.change_setting(graph.worlds[playerNumber], graphSetting, settingValue);
-            //graph.worlds[playerNumber].settings[graphSettingName] = settingValue;
+            graph.change_setting(graph.worlds[trackerSettings.player_number], graphSetting, settingValue);
+            //graph.worlds[trackerSettings.player_number].settings[graphSettingName] = settingValue;
         }
         refreshSearch();
-        console.log(`[Setting] ${graphSettingName} changed to ${graph.worlds[playerNumber].settings[graphSettingName]}`);
+        console.log(`[Setting] ${graphSettingName} changed to ${graph.worlds[trackerSettings.player_number].settings[graphSettingName]}`);
     }
 
     const cycleGraphRewardHint = ({itemName = '', forward = true}: {itemName?: string, forward?: boolean} = {}) => {
-        graph.cycle_hinted_areas_for_item(itemName, graph.worlds[playerNumber], forward);
+        graph.cycle_hinted_areas_for_item(itemName, graph.worlds[trackerSettings.player_number], forward);
         refreshSearch();
-        console.log(`[Reward Hint] ${itemName} area changed to ${graph.worlds[playerNumber].fixed_item_area_hints[itemName]}`);
+        console.log(`[Reward Hint] ${itemName} area changed to ${graph.worlds[trackerSettings.player_number].fixed_item_area_hints[itemName]}`);
     }
 
     const addStartingItem = (item_name: string, count: number = 1) => {
-        let graphItem = graph.get_item(graph.worlds[playerNumber], item_name);
-        graph.add_starting_item(graph.worlds[playerNumber], graphItem, count);
+        let graphItem = graph.get_item(graph.worlds[trackerSettings.player_number], item_name);
+        graph.add_starting_item(graph.worlds[trackerSettings.player_number], graphItem, count);
         refreshSearch();
         console.log(`[Item] Added ${count} ${item_name} to starting items`);
     }
 
     const removeStartingItem = (item_name: string, count: number = 1) => {
-        let graphItem = graph.get_item(graph.worlds[playerNumber], item_name);
-        graph.remove_starting_item(graph.worlds[playerNumber], graphItem, count);
+        let graphItem = graph.get_item(graph.worlds[trackerSettings.player_number], item_name);
+        graph.remove_starting_item(graph.worlds[trackerSettings.player_number], graphItem, count);
         refreshSearch();
         console.log(`[Item] Removed ${count} ${item_name} from starting items`);
     }
@@ -552,9 +364,9 @@ const Tracker = (_props: {}) => {
     const addStartingItems = (item_names: string[]) => {
         let graphItems: GraphItem[] = [];
         for (let item_name of item_names) {
-            graphItems.push(graph.get_item(graph.worlds[playerNumber], item_name));
+            graphItems.push(graph.get_item(graph.worlds[trackerSettings.player_number], item_name));
         }
-        graph.add_starting_items(graph.worlds[playerNumber], graphItems);
+        graph.add_starting_items(graph.worlds[trackerSettings.player_number], graphItems);
         refreshSearch();
         console.log(`[Item] Added ${item_names} to starting items`);
     }
@@ -562,17 +374,17 @@ const Tracker = (_props: {}) => {
     const removeStartingItems = (item_names: string[]) => {
         let graphItems: GraphItem[] = [];
         for (let item_name of item_names) {
-            graphItems.push(graph.get_item(graph.worlds[playerNumber], item_name));
+            graphItems.push(graph.get_item(graph.worlds[trackerSettings.player_number], item_name));
         }
-        graph.remove_starting_items(graph.worlds[playerNumber], graphItems);
+        graph.remove_starting_items(graph.worlds[trackerSettings.player_number], graphItems);
         refreshSearch();
         console.log(`[Item] Removed ${item_names} to starting items`);
     }
 
     const replaceStartingItem = (add_item_name: string, remove_item_name: string) => {
-        let addGraphItem = graph.get_item(graph.worlds[playerNumber], add_item_name);
-        let removeGraphItem = graph.get_item(graph.worlds[playerNumber], remove_item_name);
-        graph.replace_starting_item(graph.worlds[playerNumber], addGraphItem, removeGraphItem);
+        let addGraphItem = graph.get_item(graph.worlds[trackerSettings.player_number], add_item_name);
+        let removeGraphItem = graph.get_item(graph.worlds[trackerSettings.player_number], remove_item_name);
+        graph.replace_starting_item(graph.worlds[trackerSettings.player_number], addGraphItem, removeGraphItem);
         refreshSearch();
     }
 
@@ -608,14 +420,10 @@ const Tracker = (_props: {}) => {
     }
 
     const linkEntrance = (dataLinkFrom: string, dataLinkTo: string): void => {
-        let sourceEntrance = graph.worlds[playerNumber].get_entrance(dataLinkFrom);
-        let targetEntrance = graph.worlds[playerNumber].get_entrance(dataLinkTo);
+        let sourceEntrance = graph.worlds[trackerSettings.player_number].get_entrance(dataLinkFrom);
+        let targetEntrance = graph.worlds[trackerSettings.player_number].get_entrance(dataLinkTo);
         console.log(`${dataLinkFrom} <> ${dataLinkTo} [Connected]`);
         graph.set_entrance(sourceEntrance, targetEntrance);
-        let stateCheckedEntrances = cloneDeep(checkedEntrances);
-        if (!(Object.keys(stateCheckedEntrances).includes(playerNumber.toString()))) stateCheckedEntrances[playerNumber] = [];
-        stateCheckedEntrances[playerNumber].push(dataLinkFrom);
-        setCheckedEntrances(stateCheckedEntrances);
         refreshSearch();
         let eRef = scroller.current[entranceRef];
         let rect = eRef.getBoundingClientRect();
@@ -626,16 +434,9 @@ const Tracker = (_props: {}) => {
     }
 
     const unLinkEntrance = (entrance: string, scrollRef: string): void => {
-        let sourceEntrance = graph.worlds[playerNumber].get_entrance(entrance);
+        let sourceEntrance = graph.worlds[trackerSettings.player_number].get_entrance(entrance);
         console.log(`${entrance} [Disconnected]`);
         graph.set_entrance(sourceEntrance, null);
-        let stateCheckedEntrances = cloneDeep(checkedEntrances);
-        if (!(Object.keys(stateCheckedEntrances).includes(playerNumber.toString()))) stateCheckedEntrances[playerNumber] = [];
-        let i = stateCheckedEntrances[playerNumber].indexOf(entrance);
-        if (i > -1) {
-            stateCheckedEntrances[playerNumber].splice(i, 1);
-        }
-        setCheckedEntrances(stateCheckedEntrances);
         refreshSearch();
         let eRef = scroller.current[scrollRef];
         let rect = eRef.getBoundingClientRect();
@@ -646,7 +447,7 @@ const Tracker = (_props: {}) => {
     }
 
     const toggleWalletTiers = (location: string): void => {
-        let sourceLocation = graph.worlds[playerNumber].get_location(location);
+        let sourceLocation = graph.worlds[trackerSettings.player_number].get_location(location);
         if (!!sourceLocation.item) {
             let itemPrice = sourceLocation.item.price;
             if (itemPrice === null || itemPrice <= 99) {
@@ -665,7 +466,7 @@ const Tracker = (_props: {}) => {
     }
 
     const updateShopPrice = (location: string, priceValue: string): void => {
-        let sourceLocation = graph.worlds[playerNumber].get_location(location);
+        let sourceLocation = graph.worlds[trackerSettings.player_number].get_location(location);
         if (!!sourceLocation.item) {
             sourceLocation.item.price = parseInt(priceValue);
             graph.set_location_item(sourceLocation, sourceLocation.item, sourceLocation.item.price);
@@ -676,14 +477,14 @@ const Tracker = (_props: {}) => {
 
     const checkLocation = (location: string): void => {
         console.log(`${location} [Checked]`);
-        let sourceLocation = graph.worlds[playerNumber].get_location(location);
+        let sourceLocation = graph.worlds[trackerSettings.player_number].get_location(location);
         graph.check_location(sourceLocation);
         refreshSearch();
     }
 
     const unCheckLocation = (location: string): void => {
         console.log(`${location} [Unchecked]`);
-        let sourceLocation = graph.worlds[playerNumber].get_location(location);
+        let sourceLocation = graph.worlds[trackerSettings.player_number].get_location(location);
         graph.uncheck_location(sourceLocation);
         refreshSearch();
     }
@@ -692,10 +493,10 @@ const Tracker = (_props: {}) => {
         let originator = ootItem.currentTarget.getAttribute('data-found-in');
         let foundItem = ootItem.currentTarget.getAttribute('data-found-item');
         if (originator === null) throw `Cannot assign item to null location`;
-        let sourceLocation = graph.worlds[playerNumber].get_location(originator);
+        let sourceLocation = graph.worlds[trackerSettings.player_number].get_location(originator);
         if (!!(foundItem) || (foundItem !== '' && typeof(foundItem) === 'string')) {
             console.log(originator, "[holds]", foundItem);
-            graph.set_location_item(sourceLocation, graph.worlds[playerNumber].get_item(foundItem));
+            graph.set_location_item(sourceLocation, graph.worlds[trackerSettings.player_number].get_item(foundItem));
         } else {
             console.log(originator, "[cleared]");
             graph.set_location_item(sourceLocation, null);
@@ -781,8 +582,8 @@ const Tracker = (_props: {}) => {
                 }
                 if (!foundNewEntrance) throw `Ran out of entrances to search for top level warp target region for starting region ${targetRegion?.alias}`;
             }
-            if (linkedRegion.page !== settings['View']) {
-                changeSetting({"target": { "name": "View", "value": linkedRegion.page }});
+            if (linkedRegion.page !== trackerSettings.region_page) {
+                changeSetting({target: { name: "region_page", value: linkedRegion.page }});
             }
             href = `#${linkedRegion.alias}`;
         }
@@ -797,10 +598,10 @@ const Tracker = (_props: {}) => {
     }
 
     const toggleAreaView = () => {
-        if (settings["View"] === "Overworld") {
-            changeSetting({"target": { "name": "View", "value": "Dungeons" }});
+        if (trackerSettings.region_page === "Overworld") {
+            changeSetting({target: { name: "region_page", "value": "Dungeons" }});
         } else {
-            changeSetting({"target": { "name": "View", "value": "Overworld" }});
+            changeSetting({target: { name: "region_page", "value": "Overworld" }});
         }
     }
 
@@ -809,9 +610,6 @@ const Tracker = (_props: {}) => {
     const areaMenuHandler = new ContextMenuHandler(toggleAreaView);
     const reverseCollapseHandler = new ContextMenuHandler(toggleCollapseReverse);
 
-    // Revisit after conversion to functional components
-    //const customTheme = themeDark ? dark : light;
-    //const { classes } = this.props;
     const customTheme = createTheme({
         /*breakpoints: {
             values: {
@@ -830,47 +628,72 @@ const Tracker = (_props: {}) => {
                         overflowY: 'visible',
                     }
                 }
+            },
+            MuiButtonBase: {
+                defaultProps: {
+                    disableRipple: true
+                }
             }
         }
     });
+    /*
+        sidebar-width = 490px (expanded), 0px (hidden)
+        window-padding = sidebar-width + areaPaper.padding(20px) * 2
+        column-gap = 20px
+        min-column-width = 540px
+        cutoff = window-padding + (column-width + column-gap) * column-count
+    */
+    const masonryBreakpoints: {[breakpoint: number]: number} = trackerSettings.expand_sidebar ? {
+        0: 1,
+        1650: 2,
+        2210: 3,
+        2770: 4,
+        3330: 5,
+    } : {
+        0: 1,
+        1160: 2,
+        1720: 3,
+        2280: 4,
+        2840: 5,
+        3400: 6,
+    }
     if (trackerInitialized && graphInitialized) {
         let graphSettingsOptions = graph.get_settings_options();
         let graphSettingsLayout = graph.get_settings_layout();
-        let graphSettings = graph.worlds[playerNumber].settings;
-        let graphCollectedItems = graph.get_collected_items_for_world(graph.worlds[playerNumber]);
-        let graphPlayerInventory = graph.get_player_inventory_for_world(graph.worlds[playerNumber]);
+        let graphSettings = graph.worlds[trackerSettings.player_number].settings;
+        let graphCollectedItems = graph.get_collected_items_for_world(graph.worlds[trackerSettings.player_number]);
+        let graphPlayerInventory = graph.get_player_inventory_for_world(graph.worlds[trackerSettings.player_number]);
         let multiselectSettingChoices = multiselectToUpdate ? graphSettingsOptions[multiselectToUpdate]?.choices : {};
-        let currentPage: string = settings['View'] as string;
+        let currentPage = trackerSettings.region_page;
         let pages: {[page: string]: GraphRegion[]} = {};
-        for (let r of graph.worlds[playerNumber].region_groups) {
+        for (let r of graph.worlds[trackerSettings.player_number].region_groups) {
             if (Object.keys(pages).includes(r.page)) {
                 pages[r.page].push(r);
             } else {
                 pages[r.page] = [r];
             }
         }
-        let graphEntrances = graph.get_entrances_for_world(graph.worlds[playerNumber]);
+        let graphEntrances = graph.get_entrances_for_world(graph.worlds[trackerSettings.player_number]);
         let warpEntrances = graphEntrances.filter(e => e.is_warp);
-        let graphEntrancePool = entranceToLink !== '' ? graph.get_entrance_pool(graph.worlds[playerNumber], graph.worlds[playerNumber].get_entrance(entranceToLink)) : {};
-        let graphEntranceToLink = entranceToLink !== '' ? graph.worlds[playerNumber].get_entrance(entranceToLink) : null;
-        let graphLocations = graphInitialized ? graph.get_locations_for_world(graph.worlds[playerNumber]) : [];
+        let graphEntrancePool = entranceToLink !== '' ? graph.get_entrance_pool(graph.worlds[trackerSettings.player_number], graph.worlds[trackerSettings.player_number].get_entrance(entranceToLink)) : {};
+        let graphEntranceToLink = entranceToLink !== '' ? graph.worlds[trackerSettings.player_number].get_entrance(entranceToLink) : null;
+        let graphLocations = graphInitialized ? graph.get_locations_for_world(graph.worlds[trackerSettings.player_number]) : [];
         let graphLocationCount = graphInitialized ? graphLocations.filter(l => l.shuffled && !l.is_hint && !l.is_restricted) : [];
-        let graphRewardHints = graph.worlds[playerNumber].fixed_item_area_hints;
+        let graphRewardHints = graph.worlds[trackerSettings.player_number].fixed_item_area_hints;
         return (
             <React.Fragment>
                 <ThemeProvider theme={customTheme}>
                     <CssBaseline />
-                    <div className={themeDark ? "root dark" : "root"}>
+                    <div className={trackerSettings.dark_mode ? "root dark" : "root"}>
                         <TrackerTopBar
                             importGraphState={importGraphState}
                             exportGraphState={exportGraphState}
                             loadGraphPreset={loadGraphPreset}
                             graphPresets={graphPresets}
                             graphLocationCount={graphLocationCount}
-                            settings={settings}
-                            openSettings={openSettings}
-                            setOpenSettings={setOpenSettings}
                             searchTracker={searchTracker}
+                            trackerSettings={trackerSettings}
+                            setTrackerSettings={setTrackerSettings}
                         />
                         <Dialog
                             open={alertReset}
@@ -884,7 +707,7 @@ const Tracker = (_props: {}) => {
                                 </DialogContentText>
                             </DialogContent>
                             <DialogActions>
-                                <Button onClick={() => resetState(settings)}>Yes</Button>
+                                <Button onClick={() => resetState()}>Yes</Button>
                                 <Button onClick={() => cancelAlert()}>No</Button>
                             </DialogActions>
                         </Dialog>
@@ -969,36 +792,22 @@ const Tracker = (_props: {}) => {
                             handleMultiselectMenuOpen={handleMultiselectMenuOpen}
                             graphSettingsOptions={graphSettingsOptions}
                             graphSettingsLayout={graphSettingsLayout}
-                            enabled_settings={enabled_settings}
-                            settings={settings}
-                            changeSetting={changeSetting}
-                            openSettings={openSettings}
+                            trackerSettings={trackerSettings}
+                            setTrackerSettings={setTrackerSettings}
                         />
                         <div
-                            className={openSettings ? "areaPaper areaPaperShift" : "areaPaper"}
+                            className={trackerSettings.expand_sidebar ? "areaPaper areaPaperShift" : "areaPaper"}
                         >
                             <div className="drawerHeader"></div>
                             <div className='worldInfo'>
-                                <ResponsiveMasonry columnsCountBreakPoints={{
-                                    /*
-                                        window-padding = game-info-width + theme-spacing * 2 + areaPaper.padding(20px) * 2
-                                        cutoff = window-padding + (column-width + column-gap) * column-count
-                                        max-width = column-width + (column-width + column-gap) * (column-count - 1)
-                                        min-column-width = 540px
-                                    */
-                                    0: 1,
-                                    1704: 2,
-                                    2264: 3,
-                                    2824: 4,
-                                    3384: 5,
-                                }}>
-                                <Masonry gutter="16px">
+                                <ResponsiveMasonry columnsCountBreakPoints={masonryBreakpoints}>
+                                <Masonry gutter="20px">
                                 {
-                                    graph.worlds[playerNumber].region_groups.filter(r => r.page === settings["View"] && r.viewable).sort((a, b) => a.alias.localeCompare(b.alias)).map((region, regionIndex) => {
+                                    graph.worlds[trackerSettings.player_number].region_groups.filter(r => r.page === trackerSettings.region_page && r.viewable).sort((a, b) => a.alias.localeCompare(b.alias)).map((region, regionIndex) => {
                                         return (
                                             <GameArea
                                                 region={region}
-                                                playerNum={playerNumber}
+                                                playerNum={trackerSettings.player_number}
                                                 collapsedRegions={collapsedRegions}
                                                 entrances={region.exits}
                                                 locations={region.locations}

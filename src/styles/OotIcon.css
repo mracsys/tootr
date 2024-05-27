@@ -15,7 +15,7 @@
     position: absolute;
     font-family: 'Hylia Serif Beta';
     line-height: 1.43em;
-    text-shadow: 0px 0px 6px #000000, 0px 0px 2px #000000, 0px 0px 2px #000000, 0px 0px 2px #000000, 0px 0px 2px #000000;
+    text-shadow: 0px 0px 6px var(--color-icon-text-shadow), 0px 0px 2px var(--color-icon-text-shadow), 0px 0px 2px var(--color-icon-text-shadow), 0px 0px 2px var(--color-icon-text-shadow), 0px 0px 2px var(--color-icon-text-shadow);
 }
 .iconRightText {
     bottom: -4px;
@@ -54,7 +54,7 @@
     right: 0px;
     width: 16px !important;
     height: 16px !important;
-    color: white !important;
+    color: var(--color-icon-text) !important;
 }
 .svgIcon.iconRightTopSub,
 .iconRightTopSub {
@@ -63,7 +63,7 @@
     right: 0px;
     width: 16px !important;
     height: 16px !important;
-    color: white !important;
+    color: var(--color-icon-text) !important;
 }
 .svgIcon.iconCenterSub,
 .iconCenterSub {
@@ -72,7 +72,7 @@
     left: 0px;
     width: 32px !important;
     height: 16px !important;
-    color: white !important;
+    color: var(--color-icon-text) !important;
 }
 .svgIcon.iconLeftSub,
 .iconLeftSub {
@@ -81,7 +81,7 @@
     left: 0px;
     width: 16px !important;
     height: 16px !important;
-    color: white !important;
+    color: var(--color-icon-text) !important;
 }
 .svgIcon.iconLeftTopSub,
 .iconLeftTopSub {
@@ -90,7 +90,7 @@
     left: 0px;
     width: 16px !important;
     height: 16px !important;
-    color: white !important;
+    color: var(--color-icon-text) !important;
 }
 .iconContainer {
     position: relative;
@@ -99,7 +99,7 @@
 }
 .svgIcon {
     position: relative;
-    color: white !important;
+    color: var(--color-icon-text) !important;
     width: 32px !important;
     height: 100% !important;
 }
@@ -124,14 +124,14 @@
     position: absolute;
     top: calc(-1px - var(--theme-spacing));
     left: 48px;
-    color: white;
+    color: var(--color-icon-tooltip-text);
     font-family: 'Hylia Serif Beta';
     flex-direction: column;
     flex-wrap: wrap;
     padding: var(--theme-spacing);
-    border: #FFFFFF 1px solid;
-    background-color: #000000;
-    box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);
+    border: var(--color-icon-tooltip-border) 1px solid;
+    background-color: var(--color-icon-tooltip);
+    box-shadow: 0px 2px 1px -1px var(--color-icon-tooltip-shadow),0px 1px 1px 0px var(--color-icon-tooltip-shadow2),0px 1px 3px 0px var(--color-icon-tooltip-shadow3);
     z-index: 1300;
     display: none !important;
 }

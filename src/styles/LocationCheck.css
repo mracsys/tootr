@@ -1,7 +1,7 @@
 
 .locationContainer {
     padding: var(--theme-spacing) calc(var(--theme-spacing) * 2);
-    background-color: #eeeeee; /*grey[200]*/
+    background-color: var(--color-location-background);
     display: flex;
     flex-grow: 1;
     box-sizing: border-box;
@@ -10,7 +10,7 @@
     cursor: pointer;
 }
 .locationContainer:hover {
-    background-color: rgba(0, 0, 0, 0.04);
+    background-color: var(--color-location-hover);
 }
 .locationContainer .iconDiv {
     padding: 0px 1em 0px 0px;
@@ -44,7 +44,7 @@
 .locationKnownItem {
     margin-left: var(--theme-spacing);
     position: relative;
-    color: black;
+    color: var(--color-location-text);
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -54,13 +54,13 @@
     vertical-align: middle;
 }
 .locationKnownItem .iconRightText {
-    text-shadow: 0px 0px 6px #EEEEEE, 0px 0px 2px #EEEEEE, 0px 0px 2px #EEEEEE, 0px 0px 2px #EEEEEE, 0px 0px 2px #EEEEEE;
+    text-shadow: 0px 0px 6px var(--color-location-icon-text-shadow), 0px 0px 2px var(--color-location-icon-text-shadow), 0px 0px 2px var(--color-location-icon-text-shadow), 0px 0px 2px var(--color-location-icon-text-shadow), 0px 0px 2px var(--color-location-icon-text-shadow);
 }
 .locationWalletTier .iconDiv {
     margin-left: var(--theme-spacing);
     padding: 0;
     position: relative;
-    color: black;
+    color: var(--color-location-text);
 }
 .locationWalletTier .iconDiv img {
     width: 16px;

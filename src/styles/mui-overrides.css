@@ -1,10 +1,10 @@
 .MuiDialogContentText-root.redAlert {
-    color: red !important;
+    color: var(--color-dialog-alert) !important;
     font-size: 2em !important;
 }
 .MuiAppBar-root {
-    z-index: 1201 !important; /* theme.zIndex.drawer + 1 */
-    background-color: var(--color-header) !important; /* blueGrey[600] */
+    z-index: 1201 !important;
+    background-color: var(--color-header) !important;
 }
 .hide {
     display: none;
@@ -12,13 +12,4 @@
 .MenuPadding {
     padding-top: 0 !important;
     padding-bottom: 0 !important;
-}
-.MuiLink-root.devLink {
-    padding: var(--theme-spacing) 0 !important;
-    color:rgba(0, 0, 0, 0.87) !important;
-    display: flex;
-    align-items: center;
-}
-.MuiLink-root.devLink svg {
-    margin: var(--theme-spacing);
 }

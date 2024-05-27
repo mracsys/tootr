@@ -72,7 +72,7 @@
     height: var(--menu-width);
     border-radius: 50%;
     box-sizing: border-box;
-    background-color: #212121;
+    background-color: var(--color-item-menu-submenu);
     overflow: hidden;
 }
 
@@ -114,7 +114,7 @@
     right: 50%;
     transform-origin: 0 100%;
     transform: skewX(calc(90deg - var(--sub-angle) * var(--sub-item-count)));
-    background-color: #212121;
+    background-color: var(--color-item-menu-submenu);
 }
 
 .radialMenu .segment {
@@ -166,7 +166,7 @@
 }
 
 .inner:hover {
-    background-color: #424242;
+    background-color: var(--color-item-menu-submenu-hover);
     cursor: pointer;
 }
 
@@ -198,7 +198,7 @@
 .radialMenuItem .iconTooltipContainer .iconSideText {
     width: 48px;
     height: 48px;
-    color: white;
+    color: var(--color-item-menu-text);
     justify-content: center;
     align-items: center;
     display: flex;
@@ -254,5 +254,5 @@
 
 .locationItemMenu .radialMenuToggler:checked ~ .iconTooltipContainer .iconDiv {
     border-radius: 50%;
-    background-color: #424242;
+    background-color: var(--color-item-menu-submenu-hover);
 }

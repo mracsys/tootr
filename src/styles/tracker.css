@@ -1,28 +1,119 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap'); */
-
 body {
-    color: rgba(0, 0, 0, 0.87) !important;
     margin: 0px !important;
     font-size: 0.875rem !important;
     font-family: "Roboto", "Helvetica", "Arial", sans-serif !important;
     font-weight: 400 !important;
     line-height: 1.43 !important;
     letter-spacing: 0.01071em !important;
-    background-color: rgb(215, 215, 215) !important;
     --theme-spacing: 8px;
     --drawer-width: 496px;
-    --color-header: #546e7a;
-    --area-column-width: 540px;
 
+    color: rgba(0, 0, 0, 0.87) !important;
+    background-color: rgb(215, 215, 215) !important;
+
+    --color-header: #546e7a;
+    --color-header-button: #E0E0E0;
+    --color-header-button-text: rgba(0, 0, 0, 0.87);
+    --color-header-button-shadow: rgba(0,0,0,0.2);
+    --color-header-button-shadow2: rgba(0,0,0,0.14);
+    --color-header-button-shadow3: rgba(0,0,0,0.12);
+
+    --color-warpmenu: #546e7a; /*blueGrey[600]*/
+    --color-warpmenu-hover: #37474f; /*blueGrey[800]*/
+    --color-warpmenu-text: white;
+    --color-warpmenu-text-disabled: #9e9e9e; /*grey[500]*/
+
+    /*
+        Note that the select controls have hard-coded
+        colors for the dropdown arrow.
+    */
     --color-sidebar: #212121; /*grey[900]*/
     --color-sidebar-hover: #424242; /*grey[800]*/
     --color-sidebar-text: white;
+    --color-sidebar-text-secondary: rgba(255, 255, 255, 0.54);
+    --color-sidebar-text-border-focus: rgba(255, 255, 255, 0.96);
+    --color-sidebar-text-border: rgba(255, 255, 255, 0.42);
+    --color-sidebar-text-select: rgba(255, 255, 255, 0.25);
+    --color-sidebar-text-select-hover: rgba(255, 255, 255, 0.5);
     --color-sidebar-shadow: black;
     --color-sidebar-mq: blue;
+    --color-sidebar-upgrade: #00FF00;
+    --color-sidebar-expando: black;
+    --color-sidebar-expando-text: #BDBDBD; /*grey[300]*/
+
+    --color-sidebar-menu: #000000;
+    --color-sidebar-menu-text: #FFFFFF;
+    --color-sidebar-menu-header-border: #FFFFFF;
+
+    --color-entrance-menu-option-hover: #52525E;
+    --color-entrance-menu-option-text-hover: #FFFFFF;
+    --color-entrance-menu-option-text: black;
+    --color-entrance-menu-input: white;
+    --color-entrance-menu-input-text: black;
+    --color-entrance-menu-border: black;
+    --color-entrance-menu-select-border: rgba(0, 0, 0, 0.42);
+    --color-entrance-menu-select-border-focus: rgba(0, 0, 0, 0.87);
+
+    --color-location-background: #eeeeee; /*grey[200]*/
+    --color-location-hover: rgba(0, 0, 0, 0.04);
+    --color-entrance-background: #fafafa; /*grey[50]*/
+    --color-unlinked-entrance: #FF0000;
+
+    --color-location-icon-text-shadow: #EEEEEE;
+    --color-location-text: black;
+
+    --area-header: #fff59d; /*yellow[200]*/
+    --area-background: #cbc26d;
+    --area-box-shadow: rgba(0,0,0,0.2);
+    --area-box-shadow2: rgba(0,0,0,0.14);
+    --area-box-shadow3: rgba(0,0,0,0.12);
+
+    --color-item-menu-text: #FFFFFF;
+    --color-item-menu: #212121; /*grey[900]*/
+    --color-item-menu-hover: #424242; /*grey[800]*/
+    --color-item-menu-submenu: #212121; /*grey[900]*/
+    --color-item-menu-submenu-hover: #424242; /*grey[800]*/
+
+    --color-logical-green: #66bb6a;
+    --color-logical-yellow: #eeff41;
+    --color-logical-red: #f44336;
+    --color-logical-grey: #bdbdbd;
+
+    --color-dialog-alert: red;
+
+    --color-icon-text-shadow: black;
+    --color-icon-text: white;
+    --color-icon-tooltip: black;
+    --color-icon-tooltip-border: white;
+    --color-icon-tooltip-text: white;
+    --color-icon-tooltip-shadow: rgba(0,0,0,0.2);
+    --color-icon-tooltip-shadow2: rgba(0,0,0,0.14);
+    --color-icon-tooltip-shadow3: rgba(0,0,0,0.12);
 }
-body.dark {
+.root.dark {
     --color-header: #546e7a;
 }
 .root {
     display: flex !important;
+}
+.greenNote {
+    fill: #508835;
+}
+.redNote {
+    fill: #882B15;
+}
+.blueNote {
+    fill: #355088;
+}
+.orangeNote {
+    fill: #885500;
+}
+.purpleNote {
+    fill: #883588;
+}
+.yellowNote {
+    fill: #888035;
+}
+.greyNote {
+    fill: #888888;
 }
