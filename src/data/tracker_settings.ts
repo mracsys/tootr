@@ -127,6 +127,7 @@ export const tracker_settings_defs: tracker_settings_definitions_v1 = {
             'Dungeon Boss Key',
             'Dungeon Maps',
             'Dungeon Compasses',
+            'Ocarinas',
             'Save Epona',
             'Buy Magic Beans',
             'Plant Magic Beans',

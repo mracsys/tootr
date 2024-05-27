@@ -185,7 +185,7 @@
     left: 60px;
     top: 12px;
 }
-.ootItemTracker .iconDiv:hover:has(.ootItemBlank) {
+.ootItemTracker .iconDiv.ootItemBlank:hover {
     background-color: transparent;
     cursor: auto;
 }

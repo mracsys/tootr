@@ -29,7 +29,7 @@ export const SettingPanel = ({
     }
 
     let tab_output = [];
-    let settingIconsPerRow = 10;
+    let settingIconsPerRow = 8;
     let m = 0;
     for (let [tab_name, tab] of Object.entries(graphSettingsLayout)) {
         let visible_tab_settings = tab.settings.filter(s => Object.keys(settingAssetMap).includes(s.name) && !(s.disabled(graphSettings)));
@@ -62,7 +62,7 @@ export const SettingPanel = ({
                                         onClick={cycleSetting}
                                         handleMultiselectMenuOpen={handleMultiselectMenuOpen}
                                         itemName={s.name}
-                                        className={k >= 5 ? "iconTooltipRight" : "iconTooltipLeft"}
+                                        className={k >= (tab_setting_row.length / 2) ? "iconTooltipRight" : "iconTooltipLeft"}
                                         key={s.name + tab_name + 'tabpanelkey'}
                                     />
                                 )
@@ -88,8 +88,8 @@ export const SettingPanel = ({
                                                         handleMultiselectMenuOpen={handleMultiselectMenuOpen}
                                                         itemName={s.name}
                                                         className={j > 0 || m > 0 ?
-                                                                    k >= 5 ? "iconTooltipRightTop" : "iconTooltipLeftTop" :
-                                                                    k >= 5 ? "iconTooltipRightBottom" : "iconTooltipLeftBottom"
+                                                                    k >= (section_setting_row.length / 2) ? "iconTooltipRightTop" : "iconTooltipLeftTop" :
+                                                                    k >= (section_setting_row.length / 2) ? "iconTooltipRightBottom" : "iconTooltipLeftBottom"
                                                         }
                                                         key={s.name + tab_name + section_name + 'tabsectionpanelkey'}
                                                     />

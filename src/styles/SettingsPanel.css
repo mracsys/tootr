@@ -15,7 +15,26 @@
     width: 100%;
     display: block;
 }
+.settingSectionContainer .settingSectionName {
+    font-family: 'Hylia Serif Beta';
+    font-size: x-large;
+    text-align: center;
+    width: 100%;
+    display: block;
+}
+.settingSectionContainer .settingMenuRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
 .settingSectionContainer {
+    margin: calc(var(--theme-spacing) * 1.5) var(--theme-spacing);
+    border: 1px solid var(--color-sidebar-text);
+    border-radius: var(--theme-spacing);
+    padding-bottom: var(--theme-spacing);
+}
+.settingListSectionContainer {
     margin: calc(var(--theme-spacing) * 1.5) var(--theme-spacing);
     border: 1px solid var(--color-sidebar-text);
     border-radius: var(--theme-spacing);
@@ -28,6 +47,9 @@
 .settingCollectionContainer ul {
     padding: 0;
     background-color: var(--color-sidebar);
+}
+.settingCollectionContainer .svgIcon {
+    width: 32px !important;
 }
 .settingCollectionContainer .iconLeftText {
     color: var(--color-sidebar-text);
@@ -55,9 +77,6 @@
 .settingMenuRow {
     white-space: nowrap;
     background-color: var(--color-sidebar);
-}
-.settingMenuRow div {
-    display: inline-block;
 }
 .iconTooltipLeftTop ~ .iconTooltip {
     right: auto;

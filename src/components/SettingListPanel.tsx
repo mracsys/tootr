@@ -146,7 +146,7 @@ export const SettingListPanel = ({
                     </div>
                     {
                         Object.entries(visible_section_settings).map(([section_name, section_settings_sets]) => 
-                            <div className="settingSectionContainer" key={tab_name + section_name + 'tabsectionpanelkey'}>
+                            <div className="settingListSectionContainer" key={tab_name + section_name + 'tabsectionpanelkey'}>
                                 <span className="settingSectionName">{section_name}</span>
                                 <div className="settingCollectionContainer">
                                 {
