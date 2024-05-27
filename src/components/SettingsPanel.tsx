@@ -30,6 +30,7 @@ export const SettingPanel = ({
 
     let tab_output = [];
     let settingIconsPerRow = 10;
+    let m = 0;
     for (let [tab_name, tab] of Object.entries(graphSettingsLayout)) {
         let visible_tab_settings = tab.settings.filter(s => Object.keys(settingAssetMap).includes(s.name) && !(s.disabled(graphSettings)));
         let tab_setting_sets = [];
@@ -86,7 +87,7 @@ export const SettingPanel = ({
                                                         onClick={cycleSetting}
                                                         handleMultiselectMenuOpen={handleMultiselectMenuOpen}
                                                         itemName={s.name}
-                                                        className={j > 0 ?
+                                                        className={j > 0 || m > 0 ?
                                                                     k >= 5 ? "iconTooltipRightTop" : "iconTooltipLeftTop" :
                                                                     k >= 5 ? "iconTooltipRightBottom" : "iconTooltipLeftBottom"
                                                         }
@@ -103,6 +104,7 @@ export const SettingPanel = ({
                     }
                 </div>
             );
+            m++;
         }
     }
     // keep React happy with a return value if no tabs are printed
