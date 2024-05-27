@@ -3,18 +3,35 @@
 }
 .multiselectSettingMenu {
     color: var(--color-sidebar-menu-text);
-    font-family: 'Hylia Serif Beta';
-    padding: var(--theme-spacing);
+    padding: calc(var(--theme-spacing) * 1);
     background-color: var(--color-sidebar-menu);
+    font-size: 1.5em;
+    letter-spacing: 0.00938em;
 }
 .multiselectSettingMenuTitle {
     border-bottom: var(--color-sidebar-menu-header-border) 1px solid;
     font-size: larger;
+    font-family: 'Hylia Serif Beta';
 }
 .multiselectSettingMenu div {
     cursor: pointer;
+    padding: calc(var(--theme-spacing));
 }
-.multiselectSettingMenu div.multiselectSettingMenuTitle {
+.multiselectSettingMenu div:not(.multiselectSettingMenuTitle, .multiselectBatchSettings):hover {
+    opacity: 100%;
+    background-color: var(--color-sidebar-menu-hover);
+}
+.multiselectSettingMenu span {
+    opacity: 20%;
+    cursor: pointer;
+    padding: calc(var(--theme-spacing)) calc(var(--theme-spacing) * 3);
+    border-radius: var(--theme-spacing);
+}
+.multiselectSettingMenu span:hover {
+    opacity: 100%;
+    background-color: var(--color-sidebar-menu-hover);
+}
+.multiselectSettingMenu div:is(.multiselectSettingMenuTitle, .multiselectBatchSettings) {
     cursor: auto;
 }
 .multiselectSettingMenuAll {

@@ -43,7 +43,8 @@ body {
     --color-sidebar-expando: black;
     --color-sidebar-expando-text: #BDBDBD; /*grey[300]*/
 
-    --color-sidebar-menu: #000000;
+    --color-sidebar-menu: #212121; /*grey[900]*/
+    --color-sidebar-menu-hover: #424242; /*grey[800]*/
     --color-sidebar-menu-text: #FFFFFF;
     --color-sidebar-menu-header-border: #FFFFFF;
 

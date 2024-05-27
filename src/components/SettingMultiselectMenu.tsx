@@ -55,7 +55,7 @@ const SettingMultiselectMenu = ({
         >
             <div key="multiselectContainerDiv" className="multiselectSettingMenu">
                 <div key="multiselectNameDiv" className="multiselectSettingMenuTitle">{title}</div>
-                <div>
+                <div className='multiselectBatchSettings'>
                     <span
                         key='multiselectSelectAllDiv'
                         className="multiselectSettingMenuAll"
