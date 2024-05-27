@@ -532,7 +532,7 @@ const Tracker = (_props: {}) => {
                 itemPrice = 99;
             }
             sourceLocation.item.price = itemPrice;
-            graph.set_location_item(sourceLocation, sourceLocation.item);
+            graph.set_location_item(sourceLocation, sourceLocation.item, itemPrice);
             refreshSearch();
         }
     }

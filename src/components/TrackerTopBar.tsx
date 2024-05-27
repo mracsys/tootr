@@ -73,15 +73,18 @@ const TrackerTopBar = ({
                 <div className='searchContainer'>
                     <input id='trackerGlobalSearchBox' type='search' placeholder='Search' onChange={searchTracker} />
                 </div>
-                <div className="checkCount">
-                    {
-                        graphLocationCount.filter(l => l.checked).length
-                    }
-                    /
-                    {
-                        graphLocationCount.length
-                    }
-                </div>
+                {
+                    trackerSettings.show_check_counter ?
+                    <div className="checkCount">
+                        {
+                            graphLocationCount.filter(l => l.checked).length
+                        }
+                        /
+                        {
+                            graphLocationCount.length
+                        }
+                    </div> : null
+                }
                 <button
                     onClick={() => setAlertReset(true)}
                     className="menuButton"

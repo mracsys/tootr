@@ -433,7 +433,7 @@ const OotItemIcon = ({
     hideLabels,
 }: OotItemIconProps) => {
     let imageData: IconData;
-    if (!!price) {
+    if (price !== undefined && price !== null) {
         if (price < 100) {
             imageData = itemMap['Green Rupee'];
         } else if (price <= 200) {
