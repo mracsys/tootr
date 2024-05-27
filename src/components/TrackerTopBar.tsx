@@ -63,6 +63,7 @@ const TrackerTopBar = ({
                     exportFunction={exportGraphState}
                     presetFunction={loadGraphPreset}
                     presets={graphPresets}
+                    setAlertReset={setAlertReset}
                 />
 
                 <div className="title">
@@ -97,8 +98,8 @@ const TrackerTopBar = ({
                 >
                     {
                         trackerSettings.dark_mode ?
-                            <span className="menuButtonLabel"><Brightness3Icon />Dark Mode</span> :
-                            <span className="menuButtonLabel"><Brightness7Icon />Light Mode</span>
+                            <span className="menuButtonLabel"><Brightness3Icon /></span> :
+                            <span className="menuButtonLabel"><Brightness7Icon /></span>
                     }
                 </button>
         </div>

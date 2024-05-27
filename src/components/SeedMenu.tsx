@@ -1,4 +1,4 @@
-import { useState, MouseEvent, ChangeEventHandler } from 'react';
+import { useState, MouseEvent, ChangeEventHandler, Dispatch, SetStateAction } from 'react';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Dialog from '@mui/material/Dialog';
@@ -15,6 +15,7 @@ interface SeedMenuProps {
     importFunction: ChangeEventHandler<HTMLInputElement>,
     exportFunction: () => void,
     presetFunction: (preset_name: string) => void,
+    setAlertReset: Dispatch<SetStateAction<boolean>>,
     presets: string[],
 }
 
@@ -22,6 +23,7 @@ export const SeedMenu = ({
     importFunction,
     exportFunction,
     presetFunction,
+    setAlertReset,
     presets,
 }: SeedMenuProps) => {
     const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
@@ -61,6 +63,10 @@ export const SeedMenu = ({
         }
     }
 
+    const handleReset = () => {
+        setAlertReset(true);
+    }
+
     return (
         <div className='seedMenuContainer'>
             <div className="menuSeedButton">
@@ -77,7 +83,7 @@ export const SeedMenu = ({
                 <MenuItem onClick={handleClose}>Recent</MenuItem>
                 <MenuItem onClick={handleFileOpen}>Import</MenuItem>
                 <MenuItem onClick={handleExport}>Export</MenuItem>
-                <MenuItem onClick={handleClose}>Reset</MenuItem>
+                <MenuItem onClick={handleReset}>Reset</MenuItem>
             </Menu>
             <Dialog
                 open={importDialogOpen}

@@ -16,8 +16,16 @@
 .topBar .MuiIconButton-root {
     margin-left: var(--theme-spacing);
 }
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 830px) {
     .title {
+        display: none;
+    }
+    .seedMenuContainer {
+        flex-grow: 1;
+    }
+}
+@media screen and (max-width: 680px) {
+    .menuButton {
         display: none;
     }
     .seedMenuContainer {
@@ -26,6 +34,9 @@
 }
 @media screen and (max-width: 600px) {
     .checkCount {
+        display: none;
+    }
+    .menuButton {
         display: none;
     }
     .seedMenuContainer {
@@ -50,7 +61,6 @@
     cursor: pointer;
     border: 0px;
     margin: 0px;
-    display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
@@ -65,9 +75,6 @@
     line-height: 1.75;
     display: flex;
     vertical-align: middle;
-}
-.menuButtonLabel .MuiSvgIcon-root {
-    margin-right: var(--theme-spacing);
 }
 .title {
     flex-grow: 1;
