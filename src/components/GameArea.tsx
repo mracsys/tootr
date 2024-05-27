@@ -33,6 +33,8 @@ interface GameAreaProps {
     showShopInput: boolean,
     showShopRupee: boolean,
     showUnshuffledEntrances: boolean,
+    showAreaLocations: boolean,
+    showEntranceLocations: boolean,
     collapseSwitch: (areaName: string) => void,
     reverseCollapseSwitch: ContextMenuHandler,
     setRef: (entranceKey: string, e: HTMLDivElement | null) => void,
@@ -61,6 +63,8 @@ const GameArea = ({
     showShopInput,
     showShopRupee,
     showUnshuffledEntrances,
+    showAreaLocations,
+    showEntranceLocations,
     collapseSwitch,
     reverseCollapseSwitch,
     setRef,
@@ -70,7 +74,7 @@ const GameArea = ({
     const preventDefault: MouseEventHandler = (event: MouseEvent) => event.preventDefault();
     let title = region.name;
 
-    let filteredLocations: GraphLocation[] = locations.filter((location) => locationFilter(location, collapsedRegions, title, searchTerm));
+    let filteredLocations: GraphLocation[] = locations.filter((location) => showAreaLocations && locationFilter(location, collapsedRegions, title, searchTerm));
     // At the moment, the only unshuffled entrances that have
     // connectors of a different entrance type are:
     //      Dampe's Grave -> Windmill exit
@@ -82,7 +86,7 @@ const GameArea = ({
     let connectorShuffled = false;
     let filteredEntrances: GraphEntrance[] = entrances.filter((entrance) => 
         ((!showUnshuffledEntrances && (entrance.shuffled || connectorShuffled)) || showUnshuffledEntrances) &&
-        entranceOrTargetMatchesTerm(entrance, collapsedRegions, title, searchTerm)).sort((a, b) => a.type_priority - b.type_priority || a.alias.localeCompare(b.alias));
+        entranceOrTargetMatchesTerm(entrance, collapsedRegions, title, searchTerm, showEntranceLocations, showShops)).sort((a, b) => a.type_priority - b.type_priority || a.alias.localeCompare(b.alias));
 
     if (filteredEntrances.length === 0 && filteredLocations.length === 0 && searchTerm !== '') {
         return null;
@@ -162,6 +166,7 @@ const GameArea = ({
                                     showShops={showShops}
                                     showShopInput={showShopInput}
                                     showShopRupee={showShopRupee}
+                                    showEntranceLocations={showEntranceLocations}
 
                                     connector={false}
                                     forceVisible={false}

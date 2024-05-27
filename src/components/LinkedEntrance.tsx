@@ -43,6 +43,7 @@ interface LinkedEntranceProps {
     scrollRef: string,
     ekey: string,
     searchTerm: string,
+    showEntranceLocations: boolean,
 }
 
 const LinkedEntrance = ({
@@ -72,6 +73,7 @@ const LinkedEntrance = ({
     scrollRef,
     ekey,
     searchTerm,
+    showEntranceLocations,
 }: LinkedEntranceProps) => {
     const buildEntranceURL = (reverseLink: GraphEntrance): string => {
         let href: string = '';
@@ -129,7 +131,7 @@ const LinkedEntrance = ({
                 </div>
             </LogicIndicator>
             {
-                ((shopLocations.length > 0) && (showShops === true)) ?
+                (shopLocations.length > 0) ?
                     <React.Fragment>
                         <div className="shopContainer">
                             {
@@ -201,6 +203,7 @@ const LinkedEntrance = ({
                         ekey={entrance.name + otherEntrance.name + ekey}
                         key={entrance.name + otherEntrance.name + ekey + i}
                         searchTerm={searchTerm}
+                        showEntranceLocations={showEntranceLocations}
                     />
                 )})
             }

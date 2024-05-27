@@ -49,14 +49,14 @@ export const locationFilter = (l: GraphLocation, collapsedRegions: CollapsedRegi
                 (!!l.item && l.item.name.toLowerCase().includes(searchTerm.toLowerCase())));
 }
 
-export const shopLocationFilter = (l: GraphLocation, searchTerm: string = ''): boolean => {
-    return (l.is_shop && l.holds_shop_refill) &&
+export const shopLocationFilter = (l: GraphLocation, showShops: boolean, searchTerm: string = ''): boolean => {
+    return (l.is_shop && l.holds_shop_refill) && (showShops || l.shuffled) &&
             (searchTerm === '' || 
                 l.alias.toLowerCase().includes(searchTerm.toLowerCase()) ||
                 (!!l.item && l.item.name.toLowerCase().includes(searchTerm.toLowerCase())));
 }
 
-export const entranceOrTargetMatchesTerm = (entrance: GraphEntrance, collapsedRegions: CollapsedRegions, title: string, searchTerm: string, renderedConnectors: GraphEntrance[] = []): boolean => {
+export const entranceOrTargetMatchesTerm = (entrance: GraphEntrance, collapsedRegions: CollapsedRegions, title: string, searchTerm: string, showEntranceLocations: boolean, showShops: boolean, renderedConnectors: GraphEntrance[] = []): boolean => {
     // no filtering if no search term
     if (searchTerm === '') return true;
 
@@ -72,7 +72,7 @@ export const entranceOrTargetMatchesTerm = (entrance: GraphEntrance, collapsedRe
     if (!!targetEntrance.target_group && (!entrance.shuffled || entrance.connected_region !== null)) {
         if (targetEntrance.target_group.page === '') { // prevents chaining into other overworld area tiles
             // immediate target area locations match
-            let targetLocations = targetEntrance.target_group.locations.filter((location) => locationFilter(location, collapsedRegions, title, searchTerm) || shopLocationFilter(location, searchTerm));
+            let targetLocations = targetEntrance.target_group.locations.filter((location) => showEntranceLocations && locationFilter(location, collapsedRegions, title, searchTerm) || shopLocationFilter(location, showShops, searchTerm));
             if (targetLocations.length > 0) return true;
 
             // connector entrance recursion match
@@ -82,7 +82,7 @@ export const entranceOrTargetMatchesTerm = (entrance: GraphEntrance, collapsedRe
             }
             let connectors = targetEntrance.target_group.exits.filter(e => !(renderedConnectors.includes(e)) && (e.shuffled || e.target_group !== targetEntrance.source_group) && (e !== targetEntrance.reverse || (!e.coupled && e.shuffled)));
             for (let connector of connectors) {
-                if (entranceOrTargetMatchesTerm(connector, collapsedRegions, title, searchTerm, renderedConnectors)) {
+                if (entranceOrTargetMatchesTerm(connector, collapsedRegions, title, searchTerm, showEntranceLocations, showShops, renderedConnectors)) {
                     return true;
                 }
             }
@@ -116,6 +116,7 @@ interface UnknownEntranceProps {
     ekey: string,
     scrollRef: string,
     searchTerm: string,
+    showEntranceLocations: boolean,
 }
 
 const UnknownEntrance = ({
@@ -143,6 +144,7 @@ const UnknownEntrance = ({
     ekey,
     scrollRef,
     searchTerm,
+    showEntranceLocations,
 }: UnknownEntranceProps) => {
     let eType = entrance.type;
     let reverseLink = !!(entrance.replaces) ? entrance.replaces : entrance;
@@ -166,13 +168,13 @@ const UnknownEntrance = ({
             let internalLocations: GraphLocation[] = [];
             let otherEntrances: GraphEntrance[] = [];
             if (!!reverseLink.target_group && reverseLink.target_group.page === '') {
-                internalLocations.push(...reverseLink.target_group.locations.filter(l => locationFilter(l, collapsedRegions, title, searchTerm)));
-                shopLocations.push(...reverseLink.target_group.locations.filter(l => shopLocationFilter(l, searchTerm)));
+                internalLocations.push(...reverseLink.target_group.locations.filter(l => showEntranceLocations && locationFilter(l, collapsedRegions, title, searchTerm)));
+                shopLocations.push(...reverseLink.target_group.locations.filter(l => showEntranceLocations && shopLocationFilter(l, showShops, searchTerm)));
                 otherEntrances.push(...reverseLink.target_group.exits.filter(e => 
                     !(renderedConnectors.includes(e)) &&
                     (e.shuffled || e.target_group !== reverseLink.source_group) &&
                     (e !== reverseLink.reverse || (!e.coupled && e.shuffled)) &&
-                    entranceOrTargetMatchesTerm(e, collapsedRegions, title, searchTerm, [...renderedConnectors])));
+                    entranceOrTargetMatchesTerm(e, collapsedRegions, title, searchTerm, showEntranceLocations, showShops, [...renderedConnectors])));
             }
             if ((reverseLink.target_group.page !== ''
             || reverseLink.is_warp
@@ -207,6 +209,7 @@ const UnknownEntrance = ({
                             scrollRef={scrollRef}
                             ekey={ekey}
                             searchTerm={searchTerm}
+                            showEntranceLocations={showEntranceLocations}
                         />
                     </React.Fragment>
                 );
