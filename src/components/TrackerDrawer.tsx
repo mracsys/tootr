@@ -48,6 +48,7 @@ interface TrackerDrawerProps {
     changeGraphNumericSetting: (s: ChangeEvent<HTMLSelectElement>) => void,
     setCachedRaceMode: Dispatch<SetStateAction<boolean | null>>,
     setAlertReset: Dispatch<SetStateAction<boolean>>,
+    changeRegionMode: (regionSearchMode: string) => void,
 }
 
 
@@ -79,6 +80,7 @@ const TrackerDrawer = ({
     changeGraphNumericSetting,
     setCachedRaceMode,
     setAlertReset,
+    changeRegionMode,
 }: TrackerDrawerProps) => {
     const [tabValue, setTabValue] = useState<number>(0);
     let [multiselectMenuOpen, setMultiselectMenuOpen] = useState<Element | null>(null);
@@ -92,6 +94,24 @@ const TrackerDrawer = ({
         const {target: { name, value }} = setting;
         console.log('[Setting]', name, 'changed to', value);
         let newTrackerSettings = copyTrackerSettings(trackerSettings);
+        let newValue = value;
+        if (name === 'region_visibility') {
+            switch (value) {
+                case 'Logically Reachable':
+                    newValue = 'matching';
+                    break;
+                case 'Reachable with All Tricks':
+                    newValue = 'tricks';
+                    break;
+                case 'Connected':
+                    newValue = 'connected';
+                    break;
+                case 'Always Visible':
+                    newValue = 'always';
+                    break;
+            }
+            changeRegionMode(newValue);
+        }
         newTrackerSettings[name] = value;
         setTrackerSettings(newTrackerSettings);
     }

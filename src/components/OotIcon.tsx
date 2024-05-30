@@ -105,10 +105,10 @@ const OotIcon = ({
                             <img
                                 src={imageData.img}
                                 alt={itemName}
-                                className={"iconContainer" + (fadeLabels ? ' disabledSettingIcon' : '')}
+                                className={"iconContainer" + (imageData.fade ? ' disabledSettingIcon' : '')}
                             />
                         : <imageData.img
-                            className={`svgIcon ${fadeLabels ? 'disabledSettingIcon' : ''} ${!!imageData.imgClass ? imageData.imgClass : ''}`}
+                            className={`svgIcon ${imageData.fade ? 'disabledSettingIcon' : ''} ${!!imageData.imgClass ? imageData.imgClass : ''}`}
                         />
                     }
                     { hideLabels ?

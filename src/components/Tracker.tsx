@@ -166,7 +166,9 @@ const Tracker = (_props: {}) => {
             if (graph.initialized && !ignore && !graphInitialized) {
                 setGraphPresets(graph.get_settings_presets());
                 if (Object.keys(graphInitialState).length > 0) graph.import(graphInitialState);
-                graph.set_search_mode(trackerSettings.race_mode ? 'Collected Items as Starting Items' : 'Collected Items');
+                let graphSettings = graph.get_settings_options();
+                graph.change_setting(graph.worlds[trackerSettings.player_number], graphSettings['graphplugin_world_search_mode'], trackerSettings.race_mode ? 'starting_items' : 'collected');
+                graph.change_setting(graph.worlds[trackerSettings.player_number], graphSettings['graphplugin_region_visibility_mode'], trackerSettings.region_visibility);
                 setGraphInitialized(true);
             }
         }
@@ -187,6 +189,7 @@ const Tracker = (_props: {}) => {
             let importState = JSON.parse(graphImportFile);
             graph.import(importState);
             refreshSearch();
+            setCollapsedRegions({});
             setGraphInitialState(graphImportFile);
             setTrackerInitialized(true);
             setGraphImportFile('');
@@ -269,17 +272,21 @@ const Tracker = (_props: {}) => {
 
     const changeRaceMode = (): void => {
         if (cachedRaceMode !== null) {
-            if (cachedRaceMode) {
-                graph.set_search_mode('Collected Items as Starting Items');
-            } else {
-                graph.set_search_mode('Collected Items');
-            }
+            let graphSettings = graph.get_settings_options();
+            let newRaceMode = cachedRaceMode ? 'starting_items' : 'collected';
+            graph.change_setting(graph.worlds[trackerSettings.player_number], graphSettings['graphplugin_world_search_mode'], newRaceMode);
             let newTrackerSettings = copyTrackerSettings(trackerSettings);
             newTrackerSettings.race_mode = cachedRaceMode;
             resetState()
             setTrackerSettings(newTrackerSettings);
             setCachedRaceMode(null);
         }
+        refreshSearch();
+    }
+
+    const changeRegionMode = (regionSearchMode: string): void => {
+        let graphSettings = graph.get_settings_options();
+        graph.change_setting(graph.worlds[trackerSettings.player_number], graphSettings['graphplugin_region_visibility_mode'], regionSearchMode);
         refreshSearch();
     }
 
@@ -688,9 +695,6 @@ const Tracker = (_props: {}) => {
     const customTheme = createTheme({
         components: {
             MuiMenu: {
-                defaultProps: {
-                    transitionDuration: 0,
-                },
                 styleOverrides: {
                     list: {
                         paddingTop: 0,
@@ -778,6 +782,7 @@ const Tracker = (_props: {}) => {
                             changeGraphNumericSetting={changeGraphNumericSetting}
                             setCachedRaceMode={setCachedRaceMode}
                             setAlertReset={setAlertReset}
+                            changeRegionMode={changeRegionMode}
                         />
                         <TrackerPaper
                             viewableRegions={viewableRegions}
