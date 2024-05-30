@@ -109,6 +109,7 @@ const TrackerPaper = ({
                                 showUnshuffledEntrances={trackerSettings.show_unshuffled_entrances}
                                 showAreaLocations={['Yes'].includes(trackerSettings.show_locations)}
                                 showEntranceLocations={['Yes', 'Interiors Only'].includes(trackerSettings.show_locations)}
+                                showHints={trackerSettings.show_hints}
                                 key={regionIndex}
                                 refreshCounter={refreshCounter}
                                 searchTerm={searchTerm}

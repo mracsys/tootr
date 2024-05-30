@@ -39,6 +39,7 @@ interface LinkedEntranceProps {
     showShops: boolean,
     showShopInput: boolean,
     showShopRupee: boolean,
+    showHints: boolean,
     forceVisible: boolean,
     scrollRef: string,
     ekey: string,
@@ -69,6 +70,7 @@ const LinkedEntrance = ({
     showShops,
     showShopInput,
     showShopRupee,
+    showHints,
     forceVisible,
     scrollRef,
     ekey,
@@ -199,6 +201,7 @@ const LinkedEntrance = ({
                         showShops={showShops}
                         showShopInput={showShopInput}
                         showShopRupee={showShopRupee}
+                        showHints={showHints}
                         scrollRef={scrollRef}
                         ekey={entrance.name + otherEntrance.name + ekey}
                         key={entrance.name + otherEntrance.name + ekey + i}
