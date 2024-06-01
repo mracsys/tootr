@@ -70,6 +70,12 @@ body {
     --area-box-shadow: rgba(0,0,0,0.2);
     --area-box-shadow2: rgba(0,0,0,0.14);
     --area-box-shadow3: rgba(0,0,0,0.12);
+    --area-header-required: #BBDEFB;
+    --area-background-required: #42A5F5;
+    --area-header-path: #C8E6C9;
+    --area-background-path: #66BB6A;
+    --area-header-foolish: #E0E0E0;
+    --area-background-foolish: #bdbdbd;
 
     --color-item-menu-text: #FFFFFF;
     --color-item-menu: #212121; /*grey[900]*/

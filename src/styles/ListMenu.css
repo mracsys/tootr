@@ -1,0 +1,19 @@
+
+.listMenuContainer {
+    color: var(--color-sidebar-menu-text);
+    padding: calc(var(--theme-spacing) * 1);
+    background-color: var(--color-sidebar-menu);
+    font-size: 1.5em;
+    letter-spacing: 0.00938em;
+}
+.listMenuContainer div {
+    cursor: pointer;
+    padding: calc(var(--theme-spacing));
+}
+.listMenuContainer div:hover {
+    opacity: 100%;
+    background-color: var(--color-sidebar-menu-hover);
+}
+.hintListMenu .MuiPaper-root {
+    overflow-y: auto;
+}

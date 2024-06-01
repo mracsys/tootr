@@ -18,6 +18,7 @@ interface TrackerPaperProps {
     handleUnCheck: (locationName: string) => void,
     handleContextMenu: ContextMenuHandler,
     handleShopContextMenu: ContextMenuHandler,
+    handleHintContextMenu: ContextMenuHandler,
     handleEntranceMenuOpen: (e: MouseEvent<HTMLDivElement>, scrollRef: string) => void,
     handleDungeonTravel: (targetRegion: GraphRegion | null) => void,
     toggleWalletTiers: (locationName: string) => void,
@@ -39,6 +40,7 @@ const TrackerPaper = ({
     handleUnCheck,
     handleContextMenu,
     handleShopContextMenu,
+    handleHintContextMenu,
     handleEntranceMenuOpen,
     handleDungeonTravel,
     toggleWalletTiers,
@@ -99,6 +101,7 @@ const TrackerPaper = ({
                                 handleUnCheck={handleUnCheck}
                                 handleContextMenu={handleContextMenu}
                                 handleShopContextMenu={handleShopContextMenu}
+                                handleHintContextMenu={handleHintContextMenu}
                                 handleEntranceMenuOpen={handleEntranceMenuOpen}
                                 handleDungeonTravel={handleDungeonTravel}
                                 toggleWalletTiers={toggleWalletTiers}

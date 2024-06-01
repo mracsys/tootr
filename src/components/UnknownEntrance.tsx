@@ -22,8 +22,8 @@ export const buildEntranceName = (entrance: GraphEntrance): string => {
     }
 }
 
-export const buildExitName = (entrance: GraphEntrance): string => {
-    let eLink = !!(entrance.replaces) ? entrance.replaces : entrance;
+export const buildExitName = (entrance: GraphEntrance, original: boolean = false): string => {
+    let eLink = !!(entrance.replaces) && !original ? entrance.replaces : entrance;
     if (!eLink.use_target_alias) {
         return eLink.alias;
     } else {
@@ -31,8 +31,8 @@ export const buildExitName = (entrance: GraphEntrance): string => {
     }
 }
 
-export const buildExitEntranceName = (entrance: GraphEntrance): string | null => {
-    let eLink = !!(entrance.replaces) ? entrance.replaces : entrance;
+export const buildExitEntranceName = (entrance: GraphEntrance, original: boolean = false): string | null => {
+    let eLink = !!(entrance.replaces) && !original ? entrance.replaces : entrance;
     if (!!eLink.reverse && eLink.target_group?.page !== '') {
         return `from ${eLink.reverse.alias}`;
     } else {
@@ -40,10 +40,11 @@ export const buildExitEntranceName = (entrance: GraphEntrance): string | null =>
     }
 }
 
-export const locationFilter = (l: GraphLocation, collapsedRegions: CollapsedRegions, title: string, showHints: boolean, searchTerm: string = ''): boolean => {
-    return (!l.checked || collapsedRegions[title] === 'none') &&
+export const locationFilter = (l: GraphLocation, collapsedRegions: CollapsedRegions, title: string, showHints: boolean, regionIsFoolish: boolean, searchTerm: string = ''): boolean => {
+    return !regionIsFoolish &&
+            (!l.checked || collapsedRegions[title] === 'none') &&
             l.viewable(true) &&
-            (!l.is_hint || showHints) &&
+            (!l.is_hint || (showHints && l.alias !== l.name)) &&
             (searchTerm === '' || 
                 l.alias.toLowerCase().includes(searchTerm.toLowerCase()) ||
                 (!!l.item && l.item.name.toLowerCase().includes(searchTerm.toLowerCase())));
@@ -56,7 +57,7 @@ export const shopLocationFilter = (l: GraphLocation, showShops: boolean, searchT
                 (!!l.item && l.item.name.toLowerCase().includes(searchTerm.toLowerCase())));
 }
 
-export const entranceOrTargetMatchesTerm = (entrance: GraphEntrance, collapsedRegions: CollapsedRegions, title: string, searchTerm: string, showEntranceLocations: boolean, showShops: boolean, showHints: boolean, renderedConnectors: GraphEntrance[] = []): boolean => {
+export const entranceOrTargetMatchesTerm = (entrance: GraphEntrance, collapsedRegions: CollapsedRegions, title: string, searchTerm: string, showEntranceLocations: boolean, showShops: boolean, showHints: boolean, regionIsFoolish: boolean, renderedConnectors: GraphEntrance[] = []): boolean => {
     // no filtering if no search term
     if (searchTerm === '') return true;
 
@@ -72,7 +73,7 @@ export const entranceOrTargetMatchesTerm = (entrance: GraphEntrance, collapsedRe
     if (!!targetEntrance.target_group && (!entrance.shuffled || entrance.connected_region !== null)) {
         if (targetEntrance.target_group.page === '') { // prevents chaining into other overworld area tiles
             // immediate target area locations match
-            let targetLocations = targetEntrance.target_group.locations.filter((location) => showEntranceLocations && locationFilter(location, collapsedRegions, title, showHints, searchTerm) || shopLocationFilter(location, showShops, searchTerm));
+            let targetLocations = targetEntrance.target_group.locations.filter((location) => showEntranceLocations && locationFilter(location, collapsedRegions, title, showHints, regionIsFoolish, searchTerm) || shopLocationFilter(location, showShops, searchTerm));
             if (targetLocations.length > 0) return true;
 
             // connector entrance recursion match
@@ -82,7 +83,7 @@ export const entranceOrTargetMatchesTerm = (entrance: GraphEntrance, collapsedRe
             }
             let connectors = targetEntrance.target_group.exits.filter(e => !(renderedConnectors.includes(e)) && (e.shuffled || e.target_group !== targetEntrance.source_group) && (e !== targetEntrance.reverse || (!e.coupled && e.shuffled)));
             for (let connector of connectors) {
-                if (entranceOrTargetMatchesTerm(connector, collapsedRegions, title, searchTerm, showEntranceLocations, showShops, showHints, renderedConnectors)) {
+                if (entranceOrTargetMatchesTerm(connector, collapsedRegions, title, searchTerm, showEntranceLocations, showShops, showHints, regionIsFoolish, renderedConnectors)) {
                     return true;
                 }
             }
@@ -106,6 +107,7 @@ interface UnknownEntranceProps {
     handleUnCheck: (locationName: string) => void,
     handleContextMenu: ContextMenuHandler,
     handleShopContextMenu: ContextMenuHandler,
+    handleHintContextMenu: ContextMenuHandler,
     handleEntranceMenuOpen: (e: MouseEvent<HTMLDivElement>, scrollRef: string) => void,
     handleDungeonTravel: (targetRegion: GraphRegion | null) => void,
     toggleWalletTiers: (locationName: string) => void,
@@ -118,6 +120,7 @@ interface UnknownEntranceProps {
     scrollRef: string,
     searchTerm: string,
     showEntranceLocations: boolean,
+    regionIsFoolish: boolean,
 }
 
 const UnknownEntrance = ({
@@ -135,6 +138,7 @@ const UnknownEntrance = ({
     handleUnCheck,
     handleContextMenu,
     handleShopContextMenu,
+    handleHintContextMenu,
     handleEntranceMenuOpen,
     handleDungeonTravel,
     toggleWalletTiers,
@@ -147,6 +151,7 @@ const UnknownEntrance = ({
     scrollRef,
     searchTerm,
     showEntranceLocations,
+    regionIsFoolish,
 }: UnknownEntranceProps) => {
     let eType = entrance.type;
     let reverseLink = !!(entrance.replaces) ? entrance.replaces : entrance;
@@ -170,13 +175,13 @@ const UnknownEntrance = ({
             let internalLocations: GraphLocation[] = [];
             let otherEntrances: GraphEntrance[] = [];
             if (!!reverseLink.target_group && reverseLink.target_group.page === '') {
-                internalLocations.push(...reverseLink.target_group.locations.filter(l => showEntranceLocations && locationFilter(l, collapsedRegions, title, showHints, searchTerm)));
+                internalLocations.push(...reverseLink.target_group.locations.filter(l => showEntranceLocations && locationFilter(l, collapsedRegions, title, showHints, regionIsFoolish, searchTerm)));
                 shopLocations.push(...reverseLink.target_group.locations.filter(l => showEntranceLocations && shopLocationFilter(l, showShops, searchTerm)));
                 otherEntrances.push(...reverseLink.target_group.exits.filter(e => 
                     !(renderedConnectors.includes(e)) &&
                     (e.shuffled || e.target_group !== reverseLink.source_group) &&
                     (e !== reverseLink.reverse || (!e.coupled && e.shuffled)) &&
-                    entranceOrTargetMatchesTerm(e, collapsedRegions, title, searchTerm, showEntranceLocations, showShops, showHints, [...renderedConnectors])));
+                    entranceOrTargetMatchesTerm(e, collapsedRegions, title, searchTerm, showEntranceLocations, showShops, showHints, regionIsFoolish, [...renderedConnectors])));
             }
             if ((reverseLink.target_group.page !== ''
             || reverseLink.is_warp
@@ -202,6 +207,7 @@ const UnknownEntrance = ({
                             handleUnCheck={handleUnCheck}
                             handleContextMenu={handleContextMenu}
                             handleShopContextMenu={handleShopContextMenu}
+                            handleHintContextMenu={handleHintContextMenu}
                             toggleWalletTiers={toggleWalletTiers}
                             updateShopPrice={updateShopPrice}
                             showShops={showShops}
@@ -213,6 +219,7 @@ const UnknownEntrance = ({
                             ekey={ekey}
                             searchTerm={searchTerm}
                             showEntranceLocations={showEntranceLocations}
+                            regionIsFoolish={regionIsFoolish}
                         />
                     </React.Fragment>
                 );

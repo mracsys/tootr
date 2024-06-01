@@ -9,6 +9,7 @@ import TrackerPaper from './TrackerPaper';
 import EntranceMenu from './EntranceMenu';
 import ItemMenu from './ItemMenu';
 import SettingMultiselectMenu from './SettingMultiselectMenu';
+import HintMenu, { HintMenuData, pathLocations, pathItems } from './HintMenu';
 import ContextMenuHandler from './ContextMenuHandler';
 import WarpMenu from './WarpMenu';
 import TrackerUpdateDialog from './TrackerUpdateDialog';
@@ -25,7 +26,7 @@ import {
 } from '@/data/tracker_settings';
 import { location_item_menu_layout, shop_item_menu_layout } from '@/data/location_item_menu_layout';
 
-import { WorldGraphFactory, ExternalFileCacheFactory, ExternalFileCache, GraphEntrance, GraphRegion, GraphItem } from '@mracsys/randomizer-graph-tool';
+import { WorldGraphFactory, ExternalFileCacheFactory, ExternalFileCache, GraphEntrance, GraphRegion, GraphItem, GraphHintGoal } from '@mracsys/randomizer-graph-tool';
 
 import '@/styles/tracker.css';
 
@@ -56,6 +57,7 @@ const Tracker = (_props: {}) => {
     let [alertReset, setAlertReset] = useState<boolean>(false);
     let [alertUpdate, setAlertUpdate] = useState<boolean>(false);
     let [itemMenuOpen, setItemMenuOpen] = useState<Element | null>(null);
+    let [hintMenuOpen, setHintMenuOpen] = useState<Element | null>(null);
     let [shopItemMenuOpen, setShopItemMenuOpen] = useState<Element | null>(null);
     let [entranceMenuOpen, setEntranceMenuOpen] = useState<Element | null>(null);
     let [multiselectMenuOpen, setMultiselectMenuOpen] = useState<Element | null>(null);
@@ -596,6 +598,87 @@ const Tracker = (_props: {}) => {
         refreshSearch();
     }
 
+    const findHint = (ootHint: HintMenuData): void => {
+        switch (ootHint.hintType) {
+            case 'woth':
+                if (ootHint.hintRegion) {
+                    let hintRegion = graph.worlds[trackerSettings.player_number].region_groups.filter(r => r.name === ootHint.hintRegion);
+                    if (hintRegion.length === 1) {
+                        let hintLocation = graph.worlds[trackerSettings.player_number].get_location(locationToLink);
+                        graph.hint_required_area(hintLocation, hintRegion[0]);
+                        refreshSearch();
+                    }
+                }
+                break;
+            case 'path':
+                if (ootHint.hintRegion && ootHint.hintPath) {
+                    let hintRegion = graph.worlds[trackerSettings.player_number].region_groups.filter(r => r.name === ootHint.hintRegion);
+                    let tempGoal: GraphHintGoal = { location: null, item: null, item_count: 1 };
+                    if (Object.keys(pathItems).includes(ootHint.hintPath)) {
+                        tempGoal.item = graph.worlds[trackerSettings.player_number].get_item(pathItems[ootHint.hintPath]);
+                    }
+                    if (Object.keys(pathLocations).includes(ootHint.hintPath)) {
+                        tempGoal.location = graph.worlds[trackerSettings.player_number].get_location(pathLocations[ootHint.hintPath]);
+                    }
+                    if (hintRegion.length === 1) {
+                        let hintLocation = graph.worlds[trackerSettings.player_number].get_location(locationToLink);
+                        graph.hint_area_required_for_goal(hintLocation, hintRegion[0], tempGoal);
+                        refreshSearch();
+                    }
+                }
+                break;
+            case 'foolish':
+                if (ootHint.hintRegion) {
+                    let hintRegion = graph.worlds[trackerSettings.player_number].region_groups.filter(r => r.name === ootHint.hintRegion);
+                    if (hintRegion.length === 1) {
+                        let hintLocation = graph.worlds[trackerSettings.player_number].get_location(locationToLink);
+                        graph.hint_unrequired_area(hintLocation, hintRegion[0]);
+                        refreshSearch();
+                    }
+                }
+                break;
+            case 'location':
+                if (ootHint.hintLocation && ootHint.hintItem) {
+                    let hintLocation = graph.worlds[trackerSettings.player_number].get_location(locationToLink);
+                    let hintedLocation = graph.worlds[trackerSettings.player_number].get_location(ootHint.hintLocation);
+                    let hintedItem = graph.worlds[trackerSettings.player_number].get_item(ootHint.hintItem);
+                    graph.hint_location(hintLocation, hintedLocation, hintedItem);
+                    refreshSearch();
+                }
+                break;
+            case 'entrance':
+                if (ootHint.hintEntrance && ootHint.hintEntranceTarget) {
+                    let hintLocation = graph.worlds[trackerSettings.player_number].get_location(locationToLink);
+                    let hintedExit = graph.worlds[trackerSettings.player_number].get_entrance(ootHint.hintEntrance);
+                    let hintedTarget = graph.worlds[trackerSettings.player_number].get_entrance(ootHint.hintEntranceTarget);
+                    graph.hint_entrance(hintLocation, hintedExit, hintedTarget);
+                    refreshSearch();
+                }
+                break;
+            case 'misc':
+                if (ootHint.hintRegion && ootHint.hintItem) {
+                    let hintRegion = graph.worlds[trackerSettings.player_number].region_groups.filter(r => r.name === ootHint.hintRegion);
+                    if (hintRegion.length === 1) {
+                        let hintLocation = graph.worlds[trackerSettings.player_number].get_location(locationToLink);
+                        let hintedItem = graph.worlds[trackerSettings.player_number].get_item(ootHint.hintItem);
+                        graph.hint_item_in_area(hintLocation, hintRegion[0], hintedItem);
+                        refreshSearch();
+                    }
+                }
+                break;
+            default:
+                break;
+        }
+        handleHintMenuClose();
+    }
+
+    const clearHint = () => {
+        let hintLocation = graph.worlds[trackerSettings.player_number].get_location(locationToLink);
+        graph.unhint(hintLocation);
+        refreshSearch();
+        handleHintMenuClose();
+    }
+
     const searchTracker: React.ChangeEventHandler<HTMLInputElement> = (e) => {
         setSearchTerm(e.currentTarget.value);
     }
@@ -612,6 +695,12 @@ const Tracker = (_props: {}) => {
         setLocationToLink(dataSource);
     }
 
+    const handleHintMenuOpen = (location: HTMLDivElement, dataSource: string | null) => {
+        if (dataSource === null) return;
+        setHintMenuOpen(location);
+        setLocationToLink(dataSource);
+    }
+
     const handleItemMenuClose = () => {
         setItemMenuOpen(null);
         setLocationToLink('');
@@ -619,6 +708,11 @@ const Tracker = (_props: {}) => {
 
     const handleShopItemMenuClose = () => {
         setShopItemMenuOpen(null);
+        setLocationToLink('');
+    }
+
+    const handleHintMenuClose = () => {
+        setHintMenuOpen(null);
         setLocationToLink('');
     }
 
@@ -688,6 +782,7 @@ const Tracker = (_props: {}) => {
     }
 
     const contextMenuHandler = new ContextMenuHandler(handleItemMenuOpen);
+    const hintContextMenuHandler = new ContextMenuHandler(handleHintMenuOpen);
     const shopContextMenuHandler = new ContextMenuHandler(handleShopItemMenuOpen);
     const areaMenuHandler = new ContextMenuHandler(toggleAreaView);
     const reverseCollapseHandler = new ContextMenuHandler(toggleCollapseReverse);
@@ -720,9 +815,10 @@ const Tracker = (_props: {}) => {
         let graphCollectedItems = graph.get_collected_items_for_world(graph.worlds[trackerSettings.player_number]);
         let graphPlayerInventory = graph.get_player_inventory_for_world(graph.worlds[trackerSettings.player_number]);
         let multiselectSettingChoices = multiselectToUpdate ? graphSettingsOptions[multiselectToUpdate]?.choices : {};
-        let viewableRegions = graph.worlds[trackerSettings.player_number].region_groups.filter(r => 
-            r.page === trackerSettings.region_page && r.viewable).sort((a, b) => 
-                a.alias.localeCompare(b.alias));
+        let graphRegions = graph.worlds[trackerSettings.player_number].region_groups.sort((a, b) =>
+            a.alias.localeCompare(b.alias));
+        let viewableRegions = graphRegions.filter(r =>
+            r.page === trackerSettings.region_page && r.viewable);
         let pages: {[page: string]: GraphRegion[]} = {};
         for (let r of graph.worlds[trackerSettings.player_number].region_groups) {
             if (Object.keys(pages).includes(r.page)) {
@@ -733,11 +829,14 @@ const Tracker = (_props: {}) => {
         }
         let graphEntrances = graph.get_entrances_for_world(graph.worlds[trackerSettings.player_number]);
         let warpEntrances = graphEntrances.filter(e => e.is_warp);
+        let graphFullEntrancePool = graph.get_full_entrance_pool(graph.worlds[trackerSettings.player_number]);
+        let graphFullExitPool = graph.get_full_exit_pool(graph.worlds[trackerSettings.player_number]);
         let graphEntrancePool = entranceToLink !== '' ? graph.get_entrance_pool(graph.worlds[trackerSettings.player_number], graph.worlds[trackerSettings.player_number].get_entrance(entranceToLink)) : {};
         let graphEntranceToLink = entranceToLink !== '' ? graph.worlds[trackerSettings.player_number].get_entrance(entranceToLink) : null;
-        let graphLocations = graphInitialized ? graph.get_locations_for_world(graph.worlds[trackerSettings.player_number]) : [];
-        let graphLocationCount = graphInitialized ? graphLocations.filter(l => l.shuffled && !l.is_hint && !l.is_restricted) : [];
+        let graphLocations = graph.get_locations_for_world(graph.worlds[trackerSettings.player_number]);
+        let graphLocationCount = graphLocations.filter(l => l.shuffled && !l.is_hint && !l.is_restricted);
         let graphRewardHints = graph.worlds[trackerSettings.player_number].fixed_item_area_hints;
+        let sourceHintLocationType = locationToLink !== '' ? graph.worlds[trackerSettings.player_number].get_location(locationToLink).type : 'HintStone';
         return (
             <React.Fragment>
                 <ThemeProvider theme={customTheme}>
@@ -793,6 +892,7 @@ const Tracker = (_props: {}) => {
                             handleUnCheck={unCheckLocation}
                             handleContextMenu={contextMenuHandler}
                             handleShopContextMenu={shopContextMenuHandler}
+                            handleHintContextMenu={hintContextMenuHandler}
                             handleEntranceMenuOpen={handleEntranceMenuOpen}
                             handleDungeonTravel={handleDungeonTravel}
                             toggleWalletTiers={toggleWalletTiers}
@@ -810,6 +910,7 @@ const Tracker = (_props: {}) => {
                             handleLink={linkEntrance}
                             entrancePool={graphEntrancePool}
                             sourceEntrance={graphEntranceToLink}
+                            regions={graphRegions}
                             id="globalEntranceMenu"
                         />
                         <ItemMenu
@@ -825,6 +926,18 @@ const Tracker = (_props: {}) => {
                             handleFind={findItem}
                             anchorLocation={shopItemMenuOpen}
                             sourceLocation={locationToLink}
+                        />
+                        <HintMenu
+                            handleClose={handleHintMenuClose}
+                            handleFind={findHint}
+                            clearHint={clearHint}
+                            anchorLocation={hintMenuOpen}
+                            sourceLocation={locationToLink}
+                            sourceLocationType={sourceHintLocationType}
+                            regions={graphRegions}
+                            fullEntrancePool={graphFullEntrancePool}
+                            fullExitPool={graphFullExitPool}
+                            locations={graphLocationCount}
                         />
                         <SettingMultiselectMenu
                             handleClose={handleMultiselectMenuClose}

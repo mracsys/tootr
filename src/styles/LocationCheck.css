@@ -77,3 +77,19 @@
     margin-left: var(--theme-spacing);
     text-align: right;
 }
+.locationHintEqualSign {
+    font-size: x-large;
+    line-height: 24px;
+    padding: 0 var(--theme-spacing);
+}
+.locationHintArrow {
+    margin: 0 var(--theme-spacing);
+}
+.locationHintType,
+.locationHintRegion {
+    font-size: medium;
+    font-weight: bold;
+}
+.locationHintFoolish {
+    color: var()
+}

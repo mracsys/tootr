@@ -337,6 +337,18 @@ const itemMap: IconDict = {
     'Twinrova Soul': { img: '/images/souls/twinrova_32x32.png' },
     'Soul': { img: '/images/Soul_Icon.png' },
 
+    // Additional icons for path hints linked to locations
+    'Queen Gohma': { img: '/images/souls/queen-gohma_32x32.png' },
+    'King Dodongo': { img: '/images/souls/king-dodongo_32x32.png' },
+    'Barinade': { img: '/images/souls/barinade_32x32.png' },
+    'Phantom Ganon': { img: '/images/souls/phantom_ganon_32x32.png' },
+    'Volvagia': { img: '/images/souls/volvagia_32x32.png' },
+    'Morpha': { img: '/images/souls/morpha_32x32.png' },
+    'Bongo Bongo': { img: '/images/souls/bongo-bongo_32x32.png' },
+    'Twinrova': { img: '/images/souls/twinrova_32x32.png' },
+    'Ganons Tower Boss Key Chest': { img: '/images/trial_seed.png' },
+    'Ganon': { img: '/images/ganon.png' },
+
     'Buy Deku Nut (5)': { img: '/images/OoT_Deku_Nut_Icon.png' },
     'Buy Arrows (30)': { img: '/images/OoT_Arrows_Icon.png' },
     'Buy Arrows (50)': { img: '/images/OoT_Arrows_Icon.png' },

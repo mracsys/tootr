@@ -11,6 +11,7 @@ import type ContextMenuHandler from './ContextMenuHandler';
 import { GraphRegion, GraphEntrance, GraphLocation } from '@mracsys/randomizer-graph-tool';
 
 import '@/styles/GameArea.css';
+import OotItemIcon from './OotItemIcon';
 
 interface GameAreaProps {
     region: GraphRegion,
@@ -25,6 +26,7 @@ interface GameAreaProps {
     handleUnCheck: (locationName: string) => void,
     handleContextMenu: ContextMenuHandler,
     handleShopContextMenu: ContextMenuHandler,
+    handleHintContextMenu: ContextMenuHandler,
     handleEntranceMenuOpen: (e: MouseEvent<HTMLDivElement>, scrollRef: string) => void,
     handleDungeonTravel: (targetRegion: GraphRegion | null) => void,
     toggleWalletTiers: (locationName: string) => void,
@@ -56,6 +58,7 @@ const GameArea = ({
     handleUnCheck,
     handleContextMenu,
     handleShopContextMenu,
+    handleHintContextMenu,
     handleEntranceMenuOpen,
     handleDungeonTravel,
     toggleWalletTiers,
@@ -76,7 +79,7 @@ const GameArea = ({
     const preventDefault: MouseEventHandler = (event: MouseEvent) => event.preventDefault();
     let title = region.name;
 
-    let filteredLocations: GraphLocation[] = locations.filter((location) => showAreaLocations && locationFilter(location, collapsedRegions, title, showHints, searchTerm));
+    let filteredLocations: GraphLocation[] = locations.filter((location) => showAreaLocations && locationFilter(location, collapsedRegions, title, showHints, region.is_not_required, searchTerm));
     // At the moment, the only unshuffled entrances that have
     // connectors of a different entrance type are:
     //      Dampe's Grave -> Windmill exit
@@ -88,13 +91,13 @@ const GameArea = ({
     let connectorShuffled = false;
     let filteredEntrances: GraphEntrance[] = entrances.filter((entrance) => 
         ((!showUnshuffledEntrances && (entrance.shuffled || connectorShuffled)) || showUnshuffledEntrances) &&
-        entranceOrTargetMatchesTerm(entrance, collapsedRegions, title, searchTerm, showEntranceLocations, showShops, showHints)).sort((a, b) => a.type_priority - b.type_priority || a.alias.localeCompare(b.alias));
+        entranceOrTargetMatchesTerm(entrance, collapsedRegions, title, searchTerm, showEntranceLocations, showShops, showHints, region.is_not_required)).sort((a, b) => a.type_priority - b.type_priority || a.alias.localeCompare(b.alias));
 
     if (filteredEntrances.length === 0 && filteredLocations.length === 0 && searchTerm !== '') {
         return null;
     }
     return (
-        <div className="areaCard">
+        <div className={`areaCard ${region.is_required ? 'areaRequiredGeneric' : ''} ${!region.is_required && region.required_for.length > 0 ? 'areaRequiredSpecific' : ''} ${region.is_not_required ? 'areaNotRequired' : ''}`}>
             <a className="entranceAnchor" href={title} id={title} onClick={preventDefault}>
                 {/* Fake text here to make eslint happy.
                     Can't wrap the actual title with the link because the areaTitle class breaks margin collapse needed
@@ -102,7 +105,7 @@ const GameArea = ({
                 <span className="entranceAnchorFakeText">&nbsp;</span>
             </a>
             <div className="areaHeader" />
-            <div className="areaTitle">
+            <div className={`areaTitle ${region.is_required ? 'areaRequiredGeneric' : ''} ${!region.is_required && region.required_for.length > 0 ? 'areaRequiredSpecific' : ''} ${region.is_not_required ? 'areaNotRequired' : ''}`}>
                 <div
                     className="areaTitleCollapse"
                     onClick={() => collapseSwitch(title)}
@@ -123,12 +126,39 @@ const GameArea = ({
                 <span className="areaRefreshCounter">
                     {refreshCounter}
                 </span>
+                {
+                    region.hinted_items.map((item, i) => {
+                        return (
+                            <OotItemIcon key={`pathItem${i}`} className='areaTitleItemIcon' itemName={item.name} />
+                        )
+                    })
+                }
+                {
+                    region.hinted_items.length > 0 && region.required_for.length > 0 ?
+                        <span className='areaTitleIconSeparator'>|</span>
+                        : null
+                }
+                {
+                    region.required_for.map((g, i) => {
+                        if (!!g.item) {
+                            return (
+                                <OotItemIcon key={`pathItem${i}`} className='areaTitlePathIcon' itemName={g.item.name} />
+                            )
+                        }
+                        if (!!g.location) {
+                            return (
+                                <OotItemIcon key={`pathItem${i}`} className='areaTitlePathIcon' itemName={g.location.name} />
+                            )
+                        }
+                        return null;
+                    })
+                }
             </div>
             {
                 (collapsedRegions[title] !== 'all') ?
                 <div>
                     <div>
-                    { filteredLocations.map((location, i) => { 
+                    { !region.is_not_required ? filteredLocations.map((location, i) => { 
                         return (<React.Fragment key={title + 'locationcheckcontainer' + i}>
                             <LocationCheck
                                 key={title + "locationcheck" + i}
@@ -136,14 +166,14 @@ const GameArea = ({
                                 location={location}
                                 handleCheck={handleCheck}
                                 handleUnCheck={handleUnCheck}
-                                handleContextMenu={handleContextMenu}
+                                handleContextMenu={location.is_hint ? handleHintContextMenu : handleContextMenu}
                                 toggleWalletTiers={toggleWalletTiers}
                                 updateShopPrice={updateShopPrice}
                                 showShopInput={showShopInput}
                                 showShopRupee={showShopRupee}
                             />
                         </React.Fragment>)
-                    })}
+                    }) : null }
                     </div>
                     { filteredEntrances.map((entrance, i) => {
                         return (
@@ -161,6 +191,7 @@ const GameArea = ({
                                     handleUnCheck={handleUnCheck}
                                     handleContextMenu={handleContextMenu}
                                     handleShopContextMenu={handleShopContextMenu}
+                                    handleHintContextMenu={handleHintContextMenu}
                                     handleEntranceMenuOpen={handleEntranceMenuOpen}
                                     handleDungeonTravel={handleDungeonTravel}
                                     toggleWalletTiers={toggleWalletTiers}
@@ -170,6 +201,7 @@ const GameArea = ({
                                     showShopRupee={showShopRupee}
                                     showEntranceLocations={showEntranceLocations}
                                     showHints={showHints}
+                                    regionIsFoolish={region.is_not_required}
 
                                     connector={false}
                                     forceVisible={false}

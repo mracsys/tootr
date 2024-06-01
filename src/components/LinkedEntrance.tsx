@@ -32,6 +32,7 @@ interface LinkedEntranceProps {
     handleUnCheck: (locationName: string) => void,
     handleContextMenu: ContextMenuHandler,
     handleShopContextMenu: ContextMenuHandler,
+    handleHintContextMenu: ContextMenuHandler,
     handleEntranceMenuOpen: (e: MouseEvent<HTMLDivElement>, scrollRef: string) => void,
     handleDungeonTravel: (targetRegion: GraphRegion | null) => void,
     toggleWalletTiers: (locationName: string) => void,
@@ -45,6 +46,7 @@ interface LinkedEntranceProps {
     ekey: string,
     searchTerm: string,
     showEntranceLocations: boolean,
+    regionIsFoolish: boolean,
 }
 
 const LinkedEntrance = ({
@@ -63,6 +65,7 @@ const LinkedEntrance = ({
     handleUnCheck,
     handleContextMenu,
     handleShopContextMenu,
+    handleHintContextMenu,
     handleEntranceMenuOpen,
     handleDungeonTravel,
     toggleWalletTiers,
@@ -76,6 +79,7 @@ const LinkedEntrance = ({
     ekey,
     searchTerm,
     showEntranceLocations,
+    regionIsFoolish,
 }: LinkedEntranceProps) => {
     const buildEntranceURL = (reverseLink: GraphEntrance): string => {
         let href: string = '';
@@ -165,7 +169,7 @@ const LinkedEntrance = ({
                                 location={location}
                                 handleCheck={handleCheck}
                                 handleUnCheck={handleUnCheck}
-                                handleContextMenu={handleContextMenu}
+                                handleContextMenu={location.is_hint ? handleHintContextMenu : handleContextMenu}
                                 toggleWalletTiers={toggleWalletTiers}
                                 updateShopPrice={updateShopPrice}
                                 showShopInput={showShopInput}
@@ -194,6 +198,7 @@ const LinkedEntrance = ({
                         handleUnCheck={handleUnCheck}
                         handleContextMenu={handleContextMenu}
                         handleShopContextMenu={handleShopContextMenu}
+                        handleHintContextMenu={handleHintContextMenu}
                         handleEntranceMenuOpen={handleEntranceMenuOpen}
                         handleDungeonTravel={handleDungeonTravel}
                         toggleWalletTiers={toggleWalletTiers}
@@ -207,6 +212,7 @@ const LinkedEntrance = ({
                         key={entrance.name + otherEntrance.name + ekey + i}
                         searchTerm={searchTerm}
                         showEntranceLocations={showEntranceLocations}
+                        regionIsFoolish={regionIsFoolish}
                     />
                 )})
             }

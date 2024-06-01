@@ -1,7 +1,7 @@
 import Menu from '@mui/material/Menu';
 import Autocomplete, { createFilterOptions } from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
-import { GraphEntrance, GraphEntrancePool } from '@mracsys/randomizer-graph-tool';
+import { GraphEntrance, GraphEntrancePool, GraphRegion } from '@mracsys/randomizer-graph-tool';
 
 import '@/styles/EntranceMenu.css';
 
@@ -15,9 +15,11 @@ interface AutoOption {
 
 interface EntranceMenuProps {
     anchorLocation?: Element | null,
-    sourceEntrance: GraphEntrance | null,
+    sourceEntrance?: GraphEntrance | null,
     entrancePool: GraphEntrancePool,
+    regions: GraphRegion[],
     id: string,
+    asExits?: boolean,
     handleClose: () => void,
     handleLink: (dataLinkFrom: string, dataLinkTo: string) => void,
 }
@@ -26,9 +28,11 @@ const EntranceMenu = ({
     anchorLocation,
     sourceEntrance,
     entrancePool,
+    regions,
     id,
     handleClose,
     handleLink,
+    asExits = false,
 }: EntranceMenuProps) => {
     let eAutoOptions: AutoOption[] = [];
     let longestOption = "";
@@ -41,20 +45,30 @@ const EntranceMenu = ({
             return e1Alias.localeCompare(e2Alias);
         }
 
+        let sourceName = sourceEntrance === undefined ? 'noData' : sourceEntrance.name;
+
+        let regionNames = regions.map(r => r.name);
+
         for (let [areaCategory, entranceList] of Object.entries(entrancePool).sort((a, b) => a[0].localeCompare(b[0]))) {
             let aliasesAdded: string[] = [];
             for (let entrance of entranceList.sort(sortEntranceAliases)) {
                 let optionLabel: string;
-                if (!!entrance.reverse && entrance.target_group?.page !== '') {
-                    if (entrance.reverse.target_group?.page === '') {
-                        optionLabel = `from ${entrance.reverse.alias}`;
-                    } else {
-                        optionLabel = entrance.reverse.alias;
-                    }
-                } else if (entrance.use_target_alias) {
-                    optionLabel = entrance.target_alias;
-                } else {
+                if (asExits) {
                     optionLabel = entrance.alias;
+                } else {
+                    if (!!entrance.reverse && entrance.target_group?.page !== '') {
+                        if (entrance.reverse.target_group?.page === '') {
+                            optionLabel = `from ${entrance.reverse.alias}`;
+                        } else if (!regionNames.includes(areaCategory)) { // dungeon names
+                            optionLabel = entrance.alias;
+                        } else { // overworld "reverse"
+                            optionLabel = entrance.reverse.alias;
+                        }
+                    } else if (entrance.use_target_alias) {
+                        optionLabel = entrance.target_alias;
+                    } else {
+                        optionLabel = entrance.alias;
+                    }
                 }
                 if (aliasesAdded.includes(optionLabel)) continue;
                 aliasesAdded.push(optionLabel);
@@ -62,7 +76,7 @@ const EntranceMenu = ({
                     areaGroup: areaCategory,
                     eName: optionLabel,
                     dataLinkTo: entrance.name,
-                    dataLinkFrom: sourceEntrance.name,
+                    dataLinkFrom: sourceName,
                     handleLink: handleLink,
                 });
                 if (optionLabel.length > longestOption.length) {
@@ -74,6 +88,15 @@ const EntranceMenu = ({
         const filterOptions = createFilterOptions({
             stringify: (option: AutoOption) => option.eName + " " + option.areaGroup,
         });
+
+        const equalOptions = (option: AutoOption, value: AutoOption) => {
+            return (
+                option.areaGroup === value.areaGroup &&
+                option.eName === value.eName &&
+                option.dataLinkTo === value.dataLinkTo &&
+                option.dataLinkFrom === value.dataLinkFrom
+            );
+        };
 
         return (
             <Menu
@@ -101,6 +124,7 @@ const EntranceMenu = ({
                     groupBy={(option) => option.areaGroup}
                     getOptionLabel={(option) => option.eName}
                     filterOptions={filterOptions}
+                    isOptionEqualToValue={equalOptions}
                     renderInput={(params) => 
                         <div>
                         <div className="entranceAutoWidthHack">{longestOption}</div>

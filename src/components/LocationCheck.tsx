@@ -4,10 +4,12 @@ import OotItemIcon from './OotItemIcon';
 
 import CheckBoxOutlineBlankIcon from '@mui/icons-material/CheckBoxOutlineBlank';
 import DoneIcon from '@mui/icons-material/Done';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import ContextMenuHandler from './ContextMenuHandler';
+import LogicIndicator from './LogicIndicator';
+import { buildExitName, buildExitEntranceName } from './UnknownEntrance';
 
 import { GraphLocation } from '@mracsys/randomizer-graph-tool';
-import LogicIndicator from './LogicIndicator';
 
 import '@/styles/LocationCheck.css';
 
@@ -35,6 +37,7 @@ const LocationCheck = ({
     showShopRupee,
 }: LocationCheckProps) => {
     let locationIcons: {[locationType: string]: string} = {
+        "HintStone": "/images/OoT_Gossip_Stone_Model.png",
         "Gold Skulltula Token": '/images/OoT_Token_Icon.png',
         "Map": '/images/OoT_Dungeon_Map_Icon.png',
         "Compass": '/images/OoT_Compass_Icon.png',
@@ -60,9 +63,92 @@ const LocationCheck = ({
                 {
                     location.vanilla_item !== null && locationIcons.hasOwnProperty(location.vanilla_item.name.split(' (')[0]) ?
                     <img src={locationIcons[location.vanilla_item.name.split(' (')[0]]} alt={location.vanilla_item.name} className="locationIcon" /> :
+                    location.is_hint ? <img src="/images/gossip-stone_32x32.png" alt="Gossip Stone" className="locationIcon" /> :
                     <div className="locationIconBlank" />
                 }
                 <p className="locationText"><em>{location.alias}</em></p>
+                {
+                    location.is_hint && !!location.hint ?
+                        <React.Fragment>
+                            {
+                                location.hint.type === 'woth' ?
+                                    <React.Fragment>
+                                    <span className='locationHintRegion'>{location.hint.area?.name}</span>
+                                    <span className='locationHintEqualSign'>=</span>
+                                    <span className='locationHintType'>WOTH</span>
+                                    </React.Fragment>
+                                : location.hint.type === 'goal' && !!location.hint.goal ?
+                                    <React.Fragment>
+                                    <span className='locationHintRegion'>{location.hint.area?.name}</span>
+                                    <ArrowForwardIcon className='locationHintArrow' />
+                                    {
+                                        !!location.hint.goal.item ?
+                                            <OotItemIcon
+                                                itemName={location.hint.goal.item.name}
+                                                className="locationKnownItem"
+                                            />
+                                        : !!location.hint.goal.location ?
+                                            <OotItemIcon
+                                                itemName={location.hint.goal.location.name}
+                                                className="locationKnownItem"
+                                            />
+                                        : null
+                                    }
+                                    </React.Fragment>
+                                : location.hint.type === 'foolish' ?
+                                    <React.Fragment>
+                                    <span className='locationHintRegion'>{location.hint.area?.name}</span>
+                                    <span className='locationHintEqualSign'>=</span>
+                                    <span className='locationHintType'>Foolish</span>
+                                    </React.Fragment>
+                                : location.hint.type === 'location' && !!location.hint.item ?
+                                    <React.Fragment>
+                                    <span className='locationHintLocation'>{location.hint.location?.alias}</span>
+                                    <span className='locationHintEqualSign'>=</span>
+                                    <OotItemIcon
+                                        itemName={location.hint.item.name}
+                                        className="locationKnownItem"
+                                    />
+                                    </React.Fragment>
+                                : location.hint.type === 'entrance' && !!location.hint.entrance && !!location.hint.entrance.replaces ?
+                                    <React.Fragment>
+                                    <span className='locationHintEntrance'>
+                                        <div className="entranceLink">
+                                            <div className="entranceLink1">
+                                                {buildExitName(location.hint.entrance, true)}
+                                            </div>
+                                            <div className="entranceLink2">
+                                                {buildExitEntranceName(location.hint.entrance, true)}
+                                            </div>
+                                        </div>
+                                    </span>
+                                    <span className='locationHintEqualSign'>=</span>
+                                    <span className='locationHintEntrance'>
+                                        <div className="entranceLink">
+                                            <div className="entranceLink1">
+                                                {buildExitName(location.hint.entrance.replaces)}
+                                            </div>
+                                            <div className="entranceLink2">
+                                                {buildExitEntranceName(location.hint.entrance.replaces)}
+                                            </div>
+                                        </div>
+                                    </span>
+                                    </React.Fragment>
+                                : location.hint.type === 'misc' && !!location.hint.item ?
+                                    <React.Fragment>
+                                    <span className='locationHintRegion'>{location.hint.area?.name}</span>
+                                    <span className='locationHintEqualSign'>=</span>
+                                    <OotItemIcon
+                                        itemName={location.hint.item.name}
+                                        className="locationKnownItem"
+                                    />
+                                    </React.Fragment>
+                                : null
+                            }
+
+                        </React.Fragment>
+                        : null
+                }
                 {
                     (location.type === 'Shop' && location.item !== null) ?
                         <React.Fragment>

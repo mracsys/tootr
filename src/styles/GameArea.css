@@ -9,28 +9,33 @@
 @media screen and (max-width: 600px) {
     .areaCard {
         width: 100%;
-        display: block;
-        max-width: 100%;
-        margin-bottom: 20px;
-        background-color: var(--area-background);
-        border-radius: 4px;
-        overflow: hidden;
-        box-shadow: 0px 2px 1px -1px var(--area-box-shadow),0px 1px 1px 0px var(--area-box-shadow2),0px 1px 3px 0px var(--area-box-shadow3);
     }
 }
 
 @media screen and (min-width: 600px) {
     .areaCard {
-        display: block;
-        max-width: 100%;
-        margin-bottom: 20px;
-        background-color: var(--area-background);
-        border-radius: 4px;
-        overflow: hidden;
-        box-shadow: 0px 2px 1px -1px var(--area-box-shadow),0px 1px 1px 0px var(--area-box-shadow2),0px 1px 3px 0px var(--area-box-shadow3);
+        width: auto;
     }
 }
 
+.areaCard {
+    display: block;
+    max-width: 100%;
+    margin-bottom: 20px;
+    background-color: var(--area-background);
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0px 2px 1px -1px var(--area-box-shadow),0px 1px 1px 0px var(--area-box-shadow2),0px 1px 3px 0px var(--area-box-shadow3);
+}
+.areaCard.areaRequiredGeneric {
+    background-color: var(--area-background-required);;
+}
+.areaCard.areaRequiredSpecific {
+    background-color: var(--area-background-path);;
+}
+.areaCard.areaNotRequired {
+    background-color: var(--area-background-foolish);;
+}
 .areaHeader {
     padding: calc(var(--theme-spacing) * 0.75);
 }
@@ -40,6 +45,15 @@
     flex-direction: row;
     padding: var(--theme-spacing) calc(var(--theme-spacing) * 2) var(--theme-spacing) calc(var(--theme-spacing) * 0.5);
     align-items: center;
+}
+.areaTitle.areaRequiredGeneric {
+    background-color: var(--area-header-required);
+}
+.areaTitle.areaRequiredSpecific {
+    background-color: var(--area-header-path);
+}
+.areaTitle.areaNotRequired {
+    background-color: var(--area-header-foolish);
 }
 .areaTitleText {
     font-family: Roboto,sans-serif;
@@ -80,4 +94,16 @@
 }
 .collapseArea {
     cursor: pointer !important;
+}
+.areaTitlePathIcon {
+    margin-right: var(--theme-spacing);
+}
+.areaTitleItemIcon {
+    margin-left: var(--theme-spacing);
+}
+.areaTitleIconSeparator {
+    font-size: x-large;
+    font-weight: bold;
+    line-height: 24px;
+    margin: 0 var(--theme-spacing);
 }
