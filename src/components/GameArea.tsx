@@ -24,11 +24,13 @@ interface GameAreaProps {
     handleUnLink: (entrance: string, scrollRef: string) => void,
     handleCheck: (locationName: string) => void,
     handleUnCheck: (locationName: string) => void,
+    handleCheckEntrance: (entranceName: string) => void,
+    handleUnCheckEntrance: (entranceName: string) => void,
     handleContextMenu: ContextMenuHandler,
     handleShopContextMenu: ContextMenuHandler,
     handleHintContextMenu: ContextMenuHandler,
     handleEntranceMenuOpen: (e: MouseEvent<HTMLDivElement>, scrollRef: string) => void,
-    handleDungeonTravel: (targetRegion: GraphRegion | null) => void,
+    handleDungeonTravel: (targetRegion: GraphRegion | null, regionEntrance?: GraphEntrance | null) => void,
     toggleWalletTiers: (locationName: string) => void,
     updateShopPrice: (locationName: string, price: string) => void,
     showShops: boolean,
@@ -38,11 +40,13 @@ interface GameAreaProps {
     showAreaLocations: boolean,
     showEntranceLocations: boolean,
     showHints: boolean,
+    showAgeLogic: boolean,
     collapseSwitch: (areaName: string) => void,
     reverseCollapseSwitch: ContextMenuHandler,
     setRef: (entranceKey: string, e: HTMLDivElement | null) => void,
     refreshCounter: number,
     searchTerm: string,
+    simMode: boolean,
 }
 
 const GameArea = ({
@@ -56,6 +60,8 @@ const GameArea = ({
     handleUnLink,
     handleCheck,
     handleUnCheck,
+    handleCheckEntrance,
+    handleUnCheckEntrance,
     handleContextMenu,
     handleShopContextMenu,
     handleHintContextMenu,
@@ -70,11 +76,13 @@ const GameArea = ({
     showAreaLocations,
     showEntranceLocations,
     showHints,
+    showAgeLogic,
     collapseSwitch,
     reverseCollapseSwitch,
     setRef,
     refreshCounter,
     searchTerm,
+    simMode,
 }: GameAreaProps) => {
     const preventDefault: MouseEventHandler = (event: MouseEvent) => event.preventDefault();
     let title = region.name;
@@ -127,6 +135,17 @@ const GameArea = ({
                     {refreshCounter}
                 </span>
                 {
+                    region.num_major_items !== null ?
+                        <span className='areaTitleItemCount'>{region.num_major_items} Major Items</span>
+                        : null
+                }
+                {
+                    region.num_major_items !== null
+                    && (region.hinted_items.length > 0 || region.required_for.length > 0) ?
+                        <span className='areaTitleIconSeparator'>|</span>
+                        : null
+                }
+                {
                     region.hinted_items.map((item, i) => {
                         return (
                             <OotItemIcon key={`pathItem${i}`} className='areaTitleItemIcon' itemName={item.name} />
@@ -158,7 +177,7 @@ const GameArea = ({
                 (collapsedRegions[title] !== 'all') ?
                 <div>
                     <div>
-                    { !region.is_not_required ? filteredLocations.map((location, i) => { 
+                    { filteredLocations.map((location, i) => { 
                         return (<React.Fragment key={title + 'locationcheckcontainer' + i}>
                             <LocationCheck
                                 key={title + "locationcheck" + i}
@@ -171,9 +190,11 @@ const GameArea = ({
                                 updateShopPrice={updateShopPrice}
                                 showShopInput={showShopInput}
                                 showShopRupee={showShopRupee}
+                                showAgeLogic={showAgeLogic}
+                                simMode={simMode}
                             />
                         </React.Fragment>)
-                    }) : null }
+                    })}
                     </div>
                     { filteredEntrances.map((entrance, i) => {
                         return (
@@ -189,6 +210,8 @@ const GameArea = ({
                                     handleUnLink={handleUnLink}
                                     handleCheck={handleCheck}
                                     handleUnCheck={handleUnCheck}
+                                    handleCheckEntrance={handleCheckEntrance}
+                                    handleUnCheckEntrance={handleUnCheckEntrance}
                                     handleContextMenu={handleContextMenu}
                                     handleShopContextMenu={handleShopContextMenu}
                                     handleHintContextMenu={handleHintContextMenu}
@@ -201,6 +224,7 @@ const GameArea = ({
                                     showShopRupee={showShopRupee}
                                     showEntranceLocations={showEntranceLocations}
                                     showHints={showHints}
+                                    showAgeLogic={showAgeLogic}
                                     regionIsFoolish={region.is_not_required}
 
                                     connector={false}
@@ -211,6 +235,7 @@ const GameArea = ({
                                     key={title + "entranceContainer" + i}
                                     scrollRef={title + entrance.name}
                                     searchTerm={searchTerm}
+                                    simMode={simMode}
                                 />
                             </React.Fragment>
                         );

@@ -22,6 +22,8 @@ import {
     tracker_settings_default,
     copyTrackerSettings,
     tracker_setting_type,
+    region_visibility_values,
+    tracker_settings_defs,
     // tracker_settings_v1, // add specific versions if format ever changes for the upgrade function
 } from '@/data/tracker_settings';
 import { location_item_menu_layout, shop_item_menu_layout } from '@/data/location_item_menu_layout';
@@ -29,6 +31,7 @@ import { location_item_menu_layout, shop_item_menu_layout } from '@/data/locatio
 import { WorldGraphFactory, ExternalFileCacheFactory, ExternalFileCache, GraphEntrance, GraphRegion, GraphItem, GraphHintGoal } from '@mracsys/randomizer-graph-tool';
 
 import '@/styles/tracker.css';
+import { buildExitEntranceName } from './UnknownEntrance';
 
 
 interface ScrollerRef {
@@ -47,44 +50,52 @@ type TrackerSettingChangeEvent = {
     }
 }
 
+const localFileLocations: {[randoVersion: string]: string} = {
+    '7.1.195 R-1': '/ootr-local-roman-195',
+    '7.1.198 Rob-49': '/ootr-local-realrob-198',
+}
+
 // Changing the version will completely reset user preferences.
 // Only touch this if absolutely necessary.
 // Prefer in-place upgrades to settings in localstorage.
 const trackerVersion = '1.0.0';
 
 const Tracker = (_props: {}) => {
-    let [trackerSettings, setTrackerSettings] = useState<TrackerSettingsCurrent>(tracker_settings_default);
-    let [alertReset, setAlertReset] = useState<boolean>(false);
-    let [alertUpdate, setAlertUpdate] = useState<boolean>(false);
-    let [itemMenuOpen, setItemMenuOpen] = useState<Element | null>(null);
-    let [hintMenuOpen, setHintMenuOpen] = useState<Element | null>(null);
-    let [shopItemMenuOpen, setShopItemMenuOpen] = useState<Element | null>(null);
-    let [entranceMenuOpen, setEntranceMenuOpen] = useState<Element | null>(null);
-    let [multiselectMenuOpen, setMultiselectMenuOpen] = useState<Element | null>(null);
-    let [multiselectToUpdate, setMultiselectToUpdate] = useState<string>('');
-    let [entranceToLink, setEntranceToLink] = useState<string>('');
-    let [locationToLink, setLocationToLink] = useState<string>('');
-    let [delayedURL, setDelayedURL] = useState<string>('');
-    let [entranceRef, setEntranceRef] = useState<string>('');
-    let [scrollY, setScrollY] = useState<number | null>(null);
-    let [trackerInitialized, setTrackerInitialized] = useState<boolean>(false);
-    let [graphInitialized, setGraphInitialized] = useState<boolean>(false);
-    let [collapsedRegions, setCollapsedRegions] = useState<CollapsedRegions>({});
-    let [searchTerm, setSearchTerm] = useState<string>('');
-    let [cachedRaceMode, setCachedRaceMode] = useState<boolean | null>(null);
+    const [trackerSettings, setTrackerSettings] = useState<TrackerSettingsCurrent>(tracker_settings_default);
+    const [alertReset, setAlertReset] = useState<boolean>(false);
+    const [alertUpdate, setAlertUpdate] = useState<boolean>(false);
+    const [itemMenuOpen, setItemMenuOpen] = useState<Element | null>(null);
+    const [hintMenuOpen, setHintMenuOpen] = useState<Element | null>(null);
+    const [shopItemMenuOpen, setShopItemMenuOpen] = useState<Element | null>(null);
+    const [entranceMenuOpen, setEntranceMenuOpen] = useState<Element | null>(null);
+    const [multiselectMenuOpen, setMultiselectMenuOpen] = useState<Element | null>(null);
+    const [multiselectToUpdate, setMultiselectToUpdate] = useState<string>('');
+    const [entranceToLink, setEntranceToLink] = useState<string>('');
+    const [locationToLink, setLocationToLink] = useState<string>('');
+    const [delayedURL, setDelayedURL] = useState<string>('');
+    const [entranceRef, setEntranceRef] = useState<string>('');
+    const [scrollY, setScrollY] = useState<number | null>(null);
+    const [trackerInitialized, setTrackerInitialized] = useState<boolean>(false);
+    const [graphInitialized, setGraphInitialized] = useState<boolean>(false);
+    const [collapsedRegions, setCollapsedRegions] = useState<CollapsedRegions>({});
+    const [searchTerm, setSearchTerm] = useState<string>('');
+    const [cachedRaceMode, setCachedRaceMode] = useState<boolean | null>(null);
+    const [importSimMode, setImportSimMode] = useState<boolean>(false);
+    const [lastEntranceName, setLastEntranceName] = useState<string>('');
     const [_fileCache, setFileCache] = useState<ExternalFileCache>({files: {}});
+    const [graphVersion, setGraphVersion] = useState<string>('7.1.195 R-1');
     const scroller = useRef<ScrollerRef>({});
 
     // Graph state management to trigger rerender on memo change.
-    // Required as graph updates are not pure.
-    let [graphInitialState, setGraphInitialState] = useState<string>('{}');
-    let [graphRefreshCounter, setGraphRefreshCounter] = useState<number>(0);
-    let [graphImportFile, setGraphImportFile] = useState<string>('');
-    let [graphPresets, setGraphPresets] = useState<string[]>([]);
+    // Required as graph updates are not pure, so can't be in React state.
+    const [graphInitialState, setGraphInitialState] = useState<string>('{}');
+    const [graphRefreshCounter, setGraphRefreshCounter] = useState<number>(0);
+    const [graphImportFile, setGraphImportFile] = useState<string>('');
+    const [graphPresets, setGraphPresets] = useState<string[]>([]);
 
     let graph = useMemo(
-        () => WorldGraphFactory('ootr', {}, '7.1.195 R-1', _fileCache),
-        [_fileCache]
+        () => WorldGraphFactory('ootr', {}, graphVersion, _fileCache),
+        [_fileCache, graphVersion]
     );
 
     // run on mount and unmount
@@ -111,12 +122,23 @@ const Tracker = (_props: {}) => {
             // Override default dark mode setting based on browser/OS theme
             trackerSettingsInit.dark_mode = window.matchMedia("(prefers-color-scheme: dark)").matches;
         }
+        if (trackerSettingsInit.game_version === undefined) trackerSettingsInit.game_version = graphVersion;
 
         let clientCollapsedRegions = localStorage.getItem('CollapsedRegions');
         let collapsedRegionsInit: CollapsedRegions = !!(clientCollapsedRegions) ? JSON.parse(clientCollapsedRegions) : {};
-        let clientInitialGraphState = localStorage.getItem('GraphState');
-        let graphInitialStateInit = !!(clientInitialGraphState) ? JSON.parse(clientInitialGraphState) : {};
+        let graphInitialStateInit = '{}';
+        let clientSelectedGraphState = localStorage.getItem('SelectedGraphState');
+        if (!!clientSelectedGraphState) {
+            let savedState = getSavedGraphState(clientSelectedGraphState);
+            if (savedState !== null) {
+                if (Object.keys(savedState).includes(':version')) {
+                    trackerSettingsInit.game_version = savedState[':version'];
+                }
+                graphInitialStateInit = JSON.stringify(savedState);
+            }
+        }
 
+        if (trackerSettingsInit.game_version !== graphVersion) setGraphVersion(trackerSettingsInit.game_version);
         setGraphInitialState(graphInitialStateInit);
         setCollapsedRegions(collapsedRegionsInit);
         setTrackerSettings(trackerSettingsInit);
@@ -160,23 +182,24 @@ const Tracker = (_props: {}) => {
         
         const getGraph = async () => {
             if (Object.keys(_fileCache.files).length === 0) {
-                let graphFileCache = await ExternalFileCacheFactory('ootr', '7.1.195 R-1', { local_url: '/ootr-local-roman-195' });
+                let graphFileCache = await ExternalFileCacheFactory('ootr', graphVersion, { local_url: localFileLocations[graphVersion] });
                 if (!ignore) {
                     setFileCache(graphFileCache);
                 }
             }
             if (graph.initialized && !ignore && !graphInitialized) {
                 setGraphPresets(graph.get_settings_presets());
-                if (Object.keys(graphInitialState).length > 0) graph.import(graphInitialState);
-                let graphSettings = graph.get_settings_options();
-                graph.change_setting(graph.worlds[trackerSettings.player_number], graphSettings['graphplugin_world_search_mode'], trackerSettings.race_mode ? 'starting_items' : 'collected');
-                graph.change_setting(graph.worlds[trackerSettings.player_number], graphSettings['graphplugin_region_visibility_mode'], trackerSettings.region_visibility);
+                if (graphInitialState !== '') {
+                    let plando = JSON.parse(graphInitialState);
+                    graph.import(plando);
+                }
+                setTrackerPreferences();
                 setGraphInitialized(true);
             }
         }
         getGraph();
         
-        return () => { ignore = true; };    
+        return () => { ignore = true; };
     });
 
     useEffect(() => {
@@ -189,14 +212,29 @@ const Tracker = (_props: {}) => {
     useEffect(() => {
         if (graphInitialized && graphImportFile) {
             let importState = JSON.parse(graphImportFile);
+            if (importSimMode) {
+                importState['settings']['graphplugin_simulator_mode'] = true;
+                changeSetting({ target: { name: 'one_region_per_page', value: true }});
+                changeSetting({ target: { name: 'region_page', value: 'Warps' }});
+            }
             graph.import(importState);
+            setTrackerPreferences();
             refreshSearch();
+            setLastEntranceName('');
+            setImportSimMode(false);
             setCollapsedRegions({});
             setGraphInitialState(graphImportFile);
             setTrackerInitialized(true);
             setGraphImportFile('');
         }
     }, [graphImportFile]);
+
+    const setTrackerPreferences = () => {
+        let graphSettings = graph.get_settings_options();
+        graph.change_setting(graph.worlds[trackerSettings.player_number], graphSettings['graphplugin_world_search_mode'], trackerSettings.race_mode ? 'starting_items' : 'collected');
+        graph.change_setting(graph.worlds[trackerSettings.player_number], graphSettings['graphplugin_region_visibility_mode'], region_visibility_values[trackerSettings.region_visibility]);
+        graph.change_setting(graph.worlds[trackerSettings.player_number], graphSettings['graphplugin_viewable_unshuffled_items'], [...trackerSettings.show_unshuffled_locations]);
+    }
 
     const setRef = (index: string, element: HTMLDivElement | null): void => {
         if (!!element) scroller.current[index] = element;
@@ -221,7 +259,19 @@ const Tracker = (_props: {}) => {
 
     const resetState = (): void => {
         // reset graph state by re-importing only the settings
-        graph.import(graph.export(false, true));
+        let simMode = graph.worlds[trackerSettings.player_number].settings['graphplugin_simulator_mode'] as boolean;
+        let plando = graph.export(simMode, true);
+        // manually drop checked keys so that we can maintain location/entrance/hint fill
+        if (simMode) {
+            delete plando[':checked'];
+            delete plando[':checked_entrances'];
+            changeSetting({ target: { name: 'region_page', value: 'Warps' }});
+        } else {
+            changeSetting({ target: { name: 'region_page', value: 'Overworld' }});
+        }
+        setLastEntranceName('');
+        graph.import(plando);
+        setTrackerPreferences();
         refreshSearch();
         setGraphInitialState(JSON.stringify(graph.export(true)));
         setCollapsedRegions({});
@@ -232,6 +282,26 @@ const Tracker = (_props: {}) => {
         graph.collect_locations();
         graphRefreshCounter > 0 ? setGraphRefreshCounter(graphRefreshCounter-1) : setGraphRefreshCounter(graphRefreshCounter+1);
         localStorage.setItem('GraphState', JSON.stringify(graph.export(true)));
+    }
+
+    const getSavedGraphState = (saved_name: string) => {
+        let savedState = null;
+        let clientSavedGraphStates = localStorage.getItem('SavedGraphStates');
+        if (!!clientSavedGraphStates) {
+            let savedGraphStates = JSON.parse(clientSavedGraphStates);
+            if (Object.keys(savedGraphStates).includes(saved_name)) {
+                savedState = savedGraphStates[saved_name];
+            }
+        }
+        return savedState;
+    }
+
+    const loadGraphVersion = (version: string, blankState: boolean = true) => {
+        graph.initialized = false;
+        setFileCache({files: {}});
+        setGraphInitialized(false);
+        setGraphVersion(version);
+        if (blankState) setGraphInitialState('{}');
     }
 
     const loadGraphPreset = (preset_name: string) => {
@@ -248,7 +318,40 @@ const Tracker = (_props: {}) => {
         reader.onload = readerEvent => {
             let content = readerEvent.target?.result;
             if (!!content && typeof(content) === 'string') {
-                setTrackerInitialized(false);
+                setupImport(content);
+            }
+        }
+    }
+
+    const importSimGraphState = (inputEvent: ChangeEvent<HTMLInputElement>) => {
+        if (!inputEvent.target.files) return;
+        let file = inputEvent.target.files[0];
+        let reader = new FileReader();
+        reader.readAsText(file, 'UTF-8');
+        reader.onload = readerEvent => {
+            let content = readerEvent.target?.result;
+            if (!!content && typeof(content) === 'string') {
+                setImportSimMode(true);
+                setupImport(content);
+            }
+        }
+    }
+
+    const setupImport = (content: string) => {
+        setTrackerInitialized(false);
+        let plando = JSON.parse(content);
+        let newVersion = graphVersion;
+        if (Object.keys(plando).includes(':version')) {
+            newVersion = plando[':version'];
+        }
+        let supportedVersions = graph.get_game_versions();
+        if (supportedVersions.versions.filter(v => v.version === newVersion).length === 0) {
+            console.log(`Unsupported game version ${newVersion}`);
+        } else {
+            if (graphVersion !== newVersion) {
+                setGraphInitialState(content);
+                loadGraphVersion(newVersion, false);
+            } else {
                 setGraphImportFile(content);
             }
         }
@@ -265,9 +368,8 @@ const Tracker = (_props: {}) => {
     }
 
     const changeSetting = (setting: TrackerSettingChangeEvent) => {
-        console.log(setting.target.name, setting.target.value);
+        console.log(`[Setting] ${setting.target.name} changed to ${setting.target.value}`);
         let newTrackerSettings = copyTrackerSettings(trackerSettings);
-        setting.target
         newTrackerSettings[setting.target.name] = setting.target.value;
         setTrackerSettings(newTrackerSettings);
     }
@@ -279,10 +381,11 @@ const Tracker = (_props: {}) => {
             graph.change_setting(graph.worlds[trackerSettings.player_number], graphSettings['graphplugin_world_search_mode'], newRaceMode);
             let newTrackerSettings = copyTrackerSettings(trackerSettings);
             newTrackerSettings.race_mode = cachedRaceMode;
-            resetState()
+            //resetState();
             setTrackerSettings(newTrackerSettings);
             setCachedRaceMode(null);
         }
+        setAlertReset(false);
         refreshSearch();
     }
 
@@ -570,6 +673,10 @@ const Tracker = (_props: {}) => {
     const checkLocation = (location: string): void => {
         console.log(`${location} [Checked]`);
         let sourceLocation = graph.worlds[trackerSettings.player_number].get_location(location);
+        let simMode = graph.worlds[trackerSettings.player_number].settings['graphplugin_simulator_mode'] as boolean;
+        if (sourceLocation.is_hint && simMode) {
+            graph.unhide_hint(sourceLocation);
+        }
         graph.check_location(sourceLocation);
         refreshSearch();
     }
@@ -578,6 +685,24 @@ const Tracker = (_props: {}) => {
         console.log(`${location} [Unchecked]`);
         let sourceLocation = graph.worlds[trackerSettings.player_number].get_location(location);
         graph.uncheck_location(sourceLocation);
+        refreshSearch();
+    }
+
+    const checkEntrance = (entrance: string): void => {
+        console.log(`${entrance} [Checked]`);
+        let sourceEntrance = graph.worlds[trackerSettings.player_number].get_entrance(entrance);
+        graph.check_entrance(sourceEntrance);
+        if (trackerSettings.one_region_per_page && !tracker_settings_defs.region_page.options?.includes(trackerSettings.region_page)) {
+            let reverseLink = !!(sourceEntrance.replaces) ? sourceEntrance.replaces : sourceEntrance;
+            handleDungeonTravel(reverseLink.target_group, sourceEntrance);
+        }
+        refreshSearch();
+    }
+
+    const unCheckEntrance = (entrance: string): void => {
+        console.log(`${entrance} [Unchecked]`);
+        let sourceEntrance = graph.worlds[trackerSettings.player_number].get_entrance(entrance);
+        graph.uncheck_entrance(sourceEntrance);
         refreshSearch();
     }
 
@@ -613,7 +738,8 @@ const Tracker = (_props: {}) => {
             case 'path':
                 if (ootHint.hintRegion && ootHint.hintPath) {
                     let hintRegion = graph.worlds[trackerSettings.player_number].region_groups.filter(r => r.name === ootHint.hintRegion);
-                    let tempGoal: GraphHintGoal = { location: null, item: null, item_count: 1 };
+                    let tempGoal = new GraphHintGoal();
+                    tempGoal.item_count = 1;
                     if (Object.keys(pathItems).includes(ootHint.hintPath)) {
                         tempGoal.item = graph.worlds[trackerSettings.player_number].get_item(pathItems[ootHint.hintPath]);
                     }
@@ -637,12 +763,33 @@ const Tracker = (_props: {}) => {
                     }
                 }
                 break;
+            case 'important_check':
+                if (ootHint.hintRegion && ootHint.hintMajorItems !== undefined) {
+                    let hintRegion = graph.worlds[trackerSettings.player_number].region_groups.filter(r => r.name === ootHint.hintRegion);
+                    if (hintRegion.length === 1) {
+                        let hintLocation = graph.worlds[trackerSettings.player_number].get_location(locationToLink);
+                        graph.hint_area_num_items(hintLocation, hintRegion[0], ootHint.hintMajorItems);
+                        refreshSearch();
+                    }
+                }
+                break;
             case 'location':
                 if (ootHint.hintLocation && ootHint.hintItem) {
                     let hintLocation = graph.worlds[trackerSettings.player_number].get_location(locationToLink);
                     let hintedLocation = graph.worlds[trackerSettings.player_number].get_location(ootHint.hintLocation);
                     let hintedItem = graph.worlds[trackerSettings.player_number].get_item(ootHint.hintItem);
                     graph.hint_location(hintLocation, hintedLocation, hintedItem);
+                    refreshSearch();
+                }
+                break;
+            case 'dual':
+                if (ootHint.hintLocation && ootHint.hintItem && ootHint.hintLocation2 && ootHint.hintItem2) {
+                    let hintLocation = graph.worlds[trackerSettings.player_number].get_location(locationToLink);
+                    let hintedLocation = graph.worlds[trackerSettings.player_number].get_location(ootHint.hintLocation);
+                    let hintedItem = graph.worlds[trackerSettings.player_number].get_item(ootHint.hintItem);
+                    let hintedLocation2 = graph.worlds[trackerSettings.player_number].get_location(ootHint.hintLocation2);
+                    let hintedItem2 = graph.worlds[trackerSettings.player_number].get_item(ootHint.hintItem2);
+                    graph.hint_dual_locations(hintLocation, hintedLocation, hintedItem, hintedLocation2, hintedItem2);
                     refreshSearch();
                 }
                 break;
@@ -741,7 +888,7 @@ const Tracker = (_props: {}) => {
         setEntranceRef(eRef);
     }
 
-    const handleDungeonTravel = (targetRegion: GraphRegion | null) => {
+    const handleDungeonTravel = (targetRegion: GraphRegion | null, regionEntrance: GraphEntrance | null = null) => {
         let href = '#';
         let linkedRegion = targetRegion;
         if (!!(linkedRegion)) {
@@ -758,10 +905,29 @@ const Tracker = (_props: {}) => {
                 }
                 if (!foundNewEntrance) throw `Ran out of entrances to search for top level warp target region for starting region ${targetRegion?.alias}`;
             }
-            if (linkedRegion.page !== trackerSettings.region_page) {
-                changeSetting({target: { name: "region_page", value: linkedRegion.page }});
+            if (trackerSettings.one_region_per_page) {
+                if (linkedRegion.name !== trackerSettings.region_page) {
+                    changeSetting({target: { name: "region_page", value: linkedRegion.name }});
+                }
+            } else {
+                if (linkedRegion.page !== trackerSettings.region_page) {
+                    changeSetting({target: { name: "region_page", value: linkedRegion.page }});
+                }
             }
-            href = `#${linkedRegion.alias}`;
+            if (!!regionEntrance) {
+                // don't re-scroll if we're linking from within the same region
+                if (regionEntrance.source_group?.name !== linkedRegion.alias) {
+                    href = `#${linkedRegion.alias}`;
+                }
+            } else {
+                href = `#${linkedRegion.alias}`;
+            }
+            if (!!regionEntrance && !tracker_settings_defs.region_page.options?.includes(trackerSettings.region_page)) {
+                let exitedEntrance = buildExitEntranceName(regionEntrance);
+                setLastEntranceName(!!exitedEntrance ? exitedEntrance : '');
+            } else {
+                setLastEntranceName('');
+            }
         }
         if (href !== '#') {
             setDelayedURL(href);
@@ -809,6 +975,7 @@ const Tracker = (_props: {}) => {
         }
     });
     if (trackerInitialized && graphInitialized) {
+        let graphSupportedVersions = graph.get_game_versions();
         let graphSettingsOptions = graph.get_settings_options();
         let graphSettingsLayout = graph.get_settings_layout();
         let graphSettings = graph.worlds[trackerSettings.player_number].settings;
@@ -817,8 +984,19 @@ const Tracker = (_props: {}) => {
         let multiselectSettingChoices = multiselectToUpdate ? graphSettingsOptions[multiselectToUpdate]?.choices : {};
         let graphRegions = graph.worlds[trackerSettings.player_number].region_groups.sort((a, b) =>
             a.alias.localeCompare(b.alias));
-        let viewableRegions = graphRegions.filter(r =>
-            r.page === trackerSettings.region_page && r.viewable);
+        let viewableRegions: GraphRegion[] = [];
+        if (trackerSettings.one_region_per_page) {
+            if (tracker_settings_defs.region_page.options?.includes(trackerSettings.region_page)) {
+                viewableRegions = graphRegions.filter(r =>
+                    r.page === trackerSettings.region_page && r.viewable);
+            } else {
+                viewableRegions = graphRegions.filter(r =>
+                    r.name === trackerSettings.region_page);
+            }
+        } else {
+            viewableRegions = graphRegions.filter(r =>
+                r.page === trackerSettings.region_page && r.viewable);
+        }
         let pages: {[page: string]: GraphRegion[]} = {};
         for (let r of graph.worlds[trackerSettings.player_number].region_groups) {
             if (Object.keys(pages).includes(r.page)) {
@@ -837,14 +1015,18 @@ const Tracker = (_props: {}) => {
         let graphLocationCount = graphLocations.filter(l => l.shuffled && !l.is_hint && !l.is_restricted);
         let graphRewardHints = graph.worlds[trackerSettings.player_number].fixed_item_area_hints;
         let sourceHintLocationType = locationToLink !== '' ? graph.worlds[trackerSettings.player_number].get_location(locationToLink).type : 'HintStone';
+        let sourceHintLocationText = locationToLink !== '' ? graph.worlds[trackerSettings.player_number].get_location(locationToLink).hint_text : '';
+        sourceHintLocationText = sourceHintLocationText.replaceAll('#', '').replaceAll('^', '\n');
+        let simMode = graph.worlds[trackerSettings.player_number].settings['graphplugin_simulator_mode'] as boolean;
         return (
             <React.Fragment>
                 <ThemeProvider theme={customTheme}>
                     <CssBaseline />
-                    <div className={trackerSettings.dark_mode ? "root dark" : "root"}>
+                    <div className={`root ${trackerSettings.dark_mode ? "dark" : ""}`}>
                         <TrackerTopBar
                             importGraphState={importGraphState}
                             exportGraphState={exportGraphState}
+                            simGraphState={importSimGraphState}
                             loadGraphPreset={loadGraphPreset}
                             graphPresets={graphPresets}
                             graphLocationCount={graphLocationCount}
@@ -869,6 +1051,7 @@ const Tracker = (_props: {}) => {
                             graphRewardHints={graphRewardHints}
                             graphLocations={graphLocations}
                             graphEntrances={graphEntrances}
+                            graphRegions={graphRegions}
                             graphRefreshCounter={graphRefreshCounter}
                             cycleGraphSetting={cycleGraphSetting}
                             handleMultiselectMenuOpen={handleMultiselectMenuOpen}
@@ -882,6 +1065,8 @@ const Tracker = (_props: {}) => {
                             setCachedRaceMode={setCachedRaceMode}
                             setAlertReset={setAlertReset}
                             changeRegionMode={changeRegionMode}
+                            changeGraphVersion={loadGraphVersion}
+                            supportedGraphVersions={graphSupportedVersions}
                         />
                         <TrackerPaper
                             viewableRegions={viewableRegions}
@@ -890,6 +1075,8 @@ const Tracker = (_props: {}) => {
                             handleUnLink={unLinkEntrance}
                             handleCheck={checkLocation}
                             handleUnCheck={unCheckLocation}
+                            handleCheckEntrance={checkEntrance}
+                            handleUnCheckEntrance={unCheckEntrance}
                             handleContextMenu={contextMenuHandler}
                             handleShopContextMenu={shopContextMenuHandler}
                             handleHintContextMenu={hintContextMenuHandler}
@@ -903,6 +1090,8 @@ const Tracker = (_props: {}) => {
                             refreshCounter={graphRefreshCounter}
                             searchTerm={searchTerm}
                             trackerSettings={trackerSettings}
+                            simMode={simMode}
+                            lastEntranceName={lastEntranceName}
                         />
                         <EntranceMenu
                             anchorLocation={entranceMenuOpen}
@@ -934,6 +1123,7 @@ const Tracker = (_props: {}) => {
                             anchorLocation={hintMenuOpen}
                             sourceLocation={locationToLink}
                             sourceLocationType={sourceHintLocationType}
+                            sourceLocationHintText={sourceHintLocationText}
                             regions={graphRegions}
                             fullEntrancePool={graphFullEntrancePool}
                             fullExitPool={graphFullExitPool}

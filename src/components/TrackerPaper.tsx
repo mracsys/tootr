@@ -5,7 +5,7 @@ import { TrackerSettingsCurrent } from '@/data/tracker_settings';
 import type ContextMenuHandler from './ContextMenuHandler';
 import type { CollapsedRegions } from './Tracker';
 
-import { GraphRegion } from '@mracsys/randomizer-graph-tool';
+import { GraphRegion, GraphEntrance } from '@mracsys/randomizer-graph-tool';
 
 import '@/styles/TrackerPaper.css';
 
@@ -16,11 +16,13 @@ interface TrackerPaperProps {
     handleUnLink: (entrance: string, scrollRef: string) => void,
     handleCheck: (locationName: string) => void,
     handleUnCheck: (locationName: string) => void,
+    handleCheckEntrance: (entranceName: string) => void,
+    handleUnCheckEntrance: (entranceName: string) => void,
     handleContextMenu: ContextMenuHandler,
     handleShopContextMenu: ContextMenuHandler,
     handleHintContextMenu: ContextMenuHandler,
     handleEntranceMenuOpen: (e: MouseEvent<HTMLDivElement>, scrollRef: string) => void,
-    handleDungeonTravel: (targetRegion: GraphRegion | null) => void,
+    handleDungeonTravel: (targetRegion: GraphRegion | null, regionEntrance?: GraphEntrance | null) => void,
     toggleWalletTiers: (locationName: string) => void,
     updateShopPrice: (locationName: string, price: string) => void,
     collapseSwitch: (areaName: string) => void,
@@ -29,6 +31,8 @@ interface TrackerPaperProps {
     refreshCounter: number,
     searchTerm: string,
     trackerSettings: TrackerSettingsCurrent,
+    simMode: boolean,
+    lastEntranceName: string,
 }
 
 const TrackerPaper = ({
@@ -38,6 +42,8 @@ const TrackerPaper = ({
     handleUnLink,
     handleCheck,
     handleUnCheck,
+    handleCheckEntrance,
+    handleUnCheckEntrance,
     handleContextMenu,
     handleShopContextMenu,
     handleHintContextMenu,
@@ -51,6 +57,8 @@ const TrackerPaper = ({
     refreshCounter,
     searchTerm,
     trackerSettings,
+    simMode,
+    lastEntranceName,
 }: TrackerPaperProps) => {
     /*
         sidebar-width = 490px (expanded), 0px (hidden)
@@ -80,6 +88,11 @@ const TrackerPaper = ({
         >
             <div className="drawerHeader"></div>
             <div id='worldScrollContainer' className='worldInfo'>
+                {
+                    simMode && lastEntranceName !== '' ?
+                        <div className="lastEntranceNameMessage">{`Entered ${lastEntranceName}`}</div>
+                        : null
+                }
                 <ResponsiveMasonry columnsCountBreakPoints={masonryBreakpoints}>
                 <Masonry gutter="20px">
                 {
@@ -99,6 +112,8 @@ const TrackerPaper = ({
                                 handleUnLink={handleUnLink}
                                 handleCheck={handleCheck}
                                 handleUnCheck={handleUnCheck}
+                                handleCheckEntrance={handleCheckEntrance}
+                                handleUnCheckEntrance={handleUnCheckEntrance}
                                 handleContextMenu={handleContextMenu}
                                 handleShopContextMenu={handleShopContextMenu}
                                 handleHintContextMenu={handleHintContextMenu}
@@ -113,9 +128,11 @@ const TrackerPaper = ({
                                 showAreaLocations={['Yes'].includes(trackerSettings.show_locations)}
                                 showEntranceLocations={['Yes', 'Interiors Only'].includes(trackerSettings.show_locations)}
                                 showHints={trackerSettings.show_hints}
+                                showAgeLogic={trackerSettings.show_age_logic}
                                 key={regionIndex}
                                 refreshCounter={refreshCounter}
                                 searchTerm={searchTerm}
+                                simMode={simMode}
                             />
                         )
                     })

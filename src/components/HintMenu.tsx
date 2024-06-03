@@ -1,5 +1,5 @@
 import React, { useState, MouseEventHandler, MouseEvent, useEffect } from "react";
-import TabPanel from "./TabPanel";
+import TabPanel, { allyProps } from "./TabPanel";
 import { Menu, Tabs, Tab } from "@mui/material";
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import EntranceMenu from './EntranceMenu';
@@ -9,10 +9,13 @@ import { location_item_menu_layout } from '@/data/location_item_menu_layout';
 
 import { GraphRegion, GraphEntrancePool, GraphLocation } from '@mracsys/randomizer-graph-tool';
 
+import '@/styles/HintMenu.css';
+
 interface HintMenuProps {
     anchorLocation?: Element | null,
     sourceLocation: string | null,
     sourceLocationType: string,
+    sourceLocationHintText: string,
     handleClose: () => void,
     handleFind: (data: HintMenuData) => void,
     clearHint: () => void,
@@ -30,6 +33,9 @@ export interface HintMenuData {
     hintEntrance?: string,
     hintEntranceTarget?: string,
     hintItem?: string,
+    hintLocation2?: string,
+    hintItem2?: string,
+    hintMajorItems?: number,
 }
 
 // No path list support in the library because
@@ -71,6 +77,7 @@ export const pathLocations: {[pathName: string]: string} = {
     'Volvagia': 'Volvagia',
     'Morpha': 'Morpha',
     'Twinrova': 'Twinrova',
+    'Bongo Bongo': 'Bongo Bongo',
     'Tower': 'Ganons Tower Boss Key Chest',
     'Hero': 'Ganon',
 }
@@ -97,6 +104,7 @@ const HintMenu = ({
     anchorLocation,
     sourceLocation,
     sourceLocationType,
+    sourceLocationHintText,
     handleClose,
     handleFind,
     clearHint,
@@ -114,6 +122,9 @@ const HintMenu = ({
     const [hintItem, setHintItem] = useState<string>('');
     const [hintEntrance, setHintEntrance] = useState<string>('');
     const [hintEntranceTarget, setHintEntranceTarget] = useState<string>('');
+    const [hintLocation2, setHintLocation2] = useState<string>('');
+    const [hintItem2, setHintItem2] = useState<string>('');
+    const [hintMajorItems, setHintMajorItems] = useState<number | null>(null);
 
     const [itemMenuOpen, setItemMenuOpen] = useState<Element | null>(null);
     const [entranceMenuOpen, setEntranceMenuOpen] = useState<Element | null>(null);
@@ -121,6 +132,9 @@ const HintMenu = ({
     const [regionMenuOpen, setRegionMenuOpen] = useState<Element | null>(null);
     const [pathMenuOpen, setPathMenuOpen] = useState<Element | null>(null);
     const [locationMenuOpen, setLocationMenuOpen] = useState<Element | null>(null);
+    const [location2MenuOpen, setLocation2MenuOpen] = useState<Element | null>(null);
+    const [item2MenuOpen, setItem2MenuOpen] = useState<Element | null>(null);
+    const [numMenuOpen, setNumMenuOpen] = useState<Element | null>(null);
 
     useEffect(() => {
         if (anchorLocation === null) {
@@ -130,6 +144,9 @@ const HintMenu = ({
             setHintItem('');
             setHintEntrance('');
             setHintEntranceTarget('');
+            setHintLocation2('');
+            setHintItem2('');
+            setHintMajorItems(null);
         }
     }, [anchorLocation]);
 
@@ -184,6 +201,18 @@ const HintMenu = ({
                     }
                     break;
                 case 4:
+                    if (hintLocation && hintItem && hintLocation2 && hintItem2) {
+                        let data: HintMenuData = {
+                            hintType: 'dual',
+                            hintLocation: hintLocation,
+                            hintItem: hintItem,
+                            hintLocation2: hintLocation2,
+                            hintItem2: hintItem2,
+                        }
+                        handleFind(data);
+                    }
+                    break;
+                case 5:
                     if (hintEntrance && hintEntranceTarget) {
                         let data: HintMenuData = {
                             hintType: 'entrance',
@@ -193,11 +222,41 @@ const HintMenu = ({
                         handleFind(data);
                     }
                     break;
+                case 6:
+                    if (hintRegion && hintItem) {
+                        let data: HintMenuData = {
+                            hintType: 'misc',
+                            hintRegion: hintRegion,
+                            hintItem: hintItem,
+                        }
+                        handleFind(data);
+                    }
+                    break;
+                case 7:
+                    if (hintRegion && hintMajorItems !== null) {
+                        let data: HintMenuData = {
+                            hintType: 'important_check',
+                            hintRegion: hintRegion,
+                            hintMajorItems: hintMajorItems,
+                        }
+                        handleFind(data);
+                    }
+                    break;
                 default:
                     break;
             }
         }
-    }, [hintRegion, hintPath, hintLocation, hintItem, hintEntrance, hintEntranceTarget]);
+    }, [
+        hintRegion,
+        hintPath,
+        hintLocation,
+        hintItem,
+        hintEntrance,
+        hintEntranceTarget,
+        hintLocation2,
+        hintItem2,
+        hintMajorItems
+    ]);
 
     const handleTabChange = (event: React.SyntheticEvent, newTabValue: number) => {
         event.preventDefault();
@@ -208,6 +267,9 @@ const HintMenu = ({
         setHintItem('');
         setHintEntrance('');
         setHintEntranceTarget('');
+        setHintLocation2('');
+        setHintItem2('');
+        setHintMajorItems(null);
     }
 
     const handleRegionMenuOpen = (e: MouseEvent<HTMLDivElement>) => {
@@ -304,6 +366,54 @@ const HintMenu = ({
         handleExitMenuClose();
     }
 
+    const handleLocation2MenuOpen = (e: MouseEvent<HTMLDivElement>) => {
+        setLocation2MenuOpen(e.currentTarget);
+    }
+
+    const handleLocation2MenuClose = () => {
+        setLocation2MenuOpen(null);
+    }
+
+    const handleFindLocation2: MouseEventHandler<HTMLDivElement> = (e): void => {
+        const location = e.currentTarget.getAttribute('data-found-item');
+        if (!!location) {
+            setHintLocation2(location);
+        }
+        handleLocation2MenuClose();
+    }
+
+    const handleItem2MenuOpen = (e: MouseEvent<HTMLDivElement>) => {
+        setItem2MenuOpen(e.currentTarget);
+    }
+
+    const handleItem2MenuClose = () => {
+        setItem2MenuOpen(null);
+    }
+
+    const handleFindItem2: MouseEventHandler<HTMLDivElement> = (e): void => {
+        const item = e.currentTarget.getAttribute('data-found-item');
+        if (!!item) {
+            setHintItem2(item);
+        }
+        handleItem2MenuClose();
+    }
+
+    const handleNumMenuOpen = (e: MouseEvent<HTMLDivElement>) => {
+        setNumMenuOpen(e.currentTarget);
+    }
+
+    const handleNumMenuClose = () => {
+        setNumMenuOpen(null);
+    }
+
+    const handleFindNum: MouseEventHandler<HTMLDivElement> = (e): void => {
+        const item = e.currentTarget.getAttribute('data-found-item');
+        if (item !== undefined && item !== null) {
+            setHintMajorItems(parseInt(item));
+        }
+        handleNumMenuClose();
+    }
+
     let paths = [...pathIcons];
 
     return (
@@ -317,25 +427,28 @@ const HintMenu = ({
                 TransitionProps={{ timeout: 0 }}
                 disableScrollLock={true}
             >
+                <div className="hintMenuImportedHintText">{sourceLocationHintText}</div>
                 {
                     // All non-misc hints conveniently have the same location type HintStone
                     sourceLocationType === 'HintStone' ?
-                    <div>
-                        <div className="tabList">
-                            <Tabs className="hintMenuTabs" value={tabValue} onChange={handleTabChange}>
-                                <Tab label='WOTH' />
-                                <Tab label='Path' />
-                                <Tab label='Foolish' />
-                                <Tab label='Location' />
-                                <Tab label='Entrance' />
-                            </Tabs>
-                        </div>
-                        <TabPanel value={tabValue} index={0} className='drawerTab'>
+                    <div className="hintMenuTabContainer">
+                        <Tabs className="hintMenuTabs" value={tabValue} onChange={handleTabChange} orientation="vertical">
+                            <Tab {...allyProps(0, 'hintMenuDrawerTab')} label='WOTH' />
+                            <Tab {...allyProps(1, 'hintMenuDrawerTab')} label='Path' />
+                            <Tab {...allyProps(2, 'hintMenuDrawerTab')} label='Foolish' />
+                            <Tab {...allyProps(3, 'hintMenuDrawerTab')} label='Location' />
+                            <Tab {...allyProps(4, 'hintMenuDrawerTab')} label='Dual' />
+                            <Tab {...allyProps(5, 'hintMenuDrawerTab')} label='Entrance' />
+                            <Tab {...allyProps(6, 'hintMenuDrawerTab')} label='Item' />
+                            <Tab {...allyProps(7, 'hintMenuDrawerTab')} label='# Items' />
+                            <Tab {...allyProps(8, 'hintMenuDrawerTab')} label='Junk' />
+                        </Tabs>
+                        <TabPanel value={tabValue} index={0} className='hintMenuDrawerTab'>
                             <div className="hintRegionMenu" onClick={(e) => handleRegionMenuOpen(e)}>
                                 <span>{hintRegion ? hintRegion : 'Hinted Region'}</span><ArrowDropDownIcon />
                             </div>
                         </TabPanel>
-                        <TabPanel value={tabValue} index={1} className='drawerTab'>
+                        <TabPanel value={tabValue} index={1} className='hintMenuDrawerTab'>
                             <div className="hintRegionMenu" onClick={(e) => handleRegionMenuOpen(e)}>
                                 <span>{hintRegion ? hintRegion : 'Hinted Region'}</span><ArrowDropDownIcon />
                             </div>
@@ -343,12 +456,12 @@ const HintMenu = ({
                                 <span>{hintPath ? hintPath : 'Hinted Path'}</span><ArrowDropDownIcon />
                             </div>
                         </TabPanel>
-                        <TabPanel value={tabValue} index={2} className='drawerTab'>
+                        <TabPanel value={tabValue} index={2} className='hintMenuDrawerTab'>
                             <div className="hintRegionMenu" onClick={(e) => handleRegionMenuOpen(e)}>
                                 <span>{hintRegion ? hintRegion : 'Hinted Region'}</span><ArrowDropDownIcon />
                             </div>
                         </TabPanel>
-                        <TabPanel value={tabValue} index={3} className='drawerTab'>
+                        <TabPanel value={tabValue} index={3} className='hintMenuDrawerTab'>
                             <div className="hintLocationMenu" onClick={(e) => handleLocationMenuOpen(e)}>
                                 <span>{hintLocation ? hintLocation : 'Hinted Location'}</span><ArrowDropDownIcon />
                             </div>
@@ -356,7 +469,21 @@ const HintMenu = ({
                                 <span>{hintItem ? hintItem : 'Hinted Item'}</span><ArrowDropDownIcon />
                             </div>
                         </TabPanel>
-                        <TabPanel value={tabValue} index={4} className="drawerTab">
+                        <TabPanel value={tabValue} index={4} className='hintMenuDrawerTab'>
+                            <div className="hintLocationMenu" onClick={(e) => handleLocationMenuOpen(e)}>
+                                <span>{hintLocation ? hintLocation : 'Hinted Location 1'}</span><ArrowDropDownIcon />
+                            </div>
+                            <div className="hintItemMenu" onClick={(e) => handleItemMenuOpen(e)}>
+                                <span>{hintItem ? hintItem : 'Hinted Item 1'}</span><ArrowDropDownIcon />
+                            </div>
+                            <div className="hintLocationMenu" onClick={(e) => handleLocation2MenuOpen(e)}>
+                                <span>{hintLocation2 ? hintLocation2 : 'Hinted Location 2'}</span><ArrowDropDownIcon />
+                            </div>
+                            <div className="hintItemMenu" onClick={(e) => handleItem2MenuOpen(e)}>
+                                <span>{hintItem2 ? hintItem2 : 'Hinted Item 2'}</span><ArrowDropDownIcon />
+                            </div>
+                        </TabPanel>
+                        <TabPanel value={tabValue} index={5} className="hintMenuDrawerTab">
                             <div className="hintEntranceMenu"
                                 onClick={(e) => handleExitMenuOpen(e)}
                             >
@@ -368,7 +495,24 @@ const HintMenu = ({
                                 <span>{hintEntranceTarget ? hintEntranceTarget : 'Exit To'}</span><ArrowDropDownIcon />
                             </div>
                         </TabPanel>
-                        <div className="clearHintText" onClick={() => clearHint()}>Clear Hint</div>
+                        <TabPanel value={tabValue} index={6} className='hintMenuDrawerTab'>
+                            <div className="hintRegionMenu" onClick={(e) => handleRegionMenuOpen(e)}>
+                                <span>{hintRegion ? hintRegion : 'Hinted Region'}</span><ArrowDropDownIcon />
+                            </div>
+                            <div className="hintItemMenu" onClick={(e) => handleItemMenuOpen(e)}>
+                                <span>{hintItem ? hintItem : 'Hinted Item'}</span><ArrowDropDownIcon />
+                            </div>
+                        </TabPanel>
+                        <TabPanel value={tabValue} index={7} className='hintMenuDrawerTab'>
+                            <div className="hintRegionMenu" onClick={(e) => handleRegionMenuOpen(e)}>
+                                <span>{hintRegion ? hintRegion : 'Hinted Region'}</span><ArrowDropDownIcon />
+                            </div>
+                            <div className="hintNumMenu" onClick={(e) => handleNumMenuOpen(e)}>
+                                <span>{hintMajorItems !== null ? hintMajorItems : '# Major Items'}</span><ArrowDropDownIcon />
+                            </div>
+                        </TabPanel>
+                        <TabPanel value={tabValue} index={8} className='hintMenuDrawerTab'>
+                        </TabPanel>
                     </div>
                     : 
                     <div>
@@ -381,6 +525,7 @@ const HintMenu = ({
                         <div className="clearHintText" onClick={() => clearHint()}>Clear Hint</div>
                     </div>
                 }
+                <div className="clearHintText" onClick={() => clearHint()}>Clear Hint</div>
             </Menu>
             <EntranceMenu
                 anchorLocation={entranceMenuOpen}
@@ -406,6 +551,13 @@ const HintMenu = ({
                 anchorLocation={itemMenuOpen}
                 sourceLocation={sourceLocation}
             />
+            <ItemMenu
+                menuLayout={location_item_menu_layout}
+                handleClose={handleItem2MenuClose}
+                handleFind={handleFindItem2}
+                anchorLocation={item2MenuOpen}
+                sourceLocation={sourceLocation}
+            />
             <ListMenu
                 handleClose={handleRegionMenuClose}
                 handleFind={handleFindRegion}
@@ -429,6 +581,22 @@ const HintMenu = ({
                 sourceLocation={sourceLocation}
                 regions={locations.map(l => l.name)}
                 id="hintMenuLocationList"
+            />
+            <ListMenu
+                handleClose={handleLocation2MenuClose}
+                handleFind={handleFindLocation2}
+                anchorLocation={location2MenuOpen}
+                sourceLocation={sourceLocation}
+                regions={locations.map(l => l.name)}
+                id="hintMenuLocation2List"
+            />
+            <ListMenu
+                handleClose={handleNumMenuClose}
+                handleFind={handleFindNum}
+                anchorLocation={numMenuOpen}
+                sourceLocation={sourceLocation}
+                regions={Array(100).fill(0).map((_, i) => `${i}`)}
+                id="hintMenuNumList"
             />
 
         </React.Fragment>

@@ -15,6 +15,7 @@ interface SeedMenuProps {
     importFunction: ChangeEventHandler<HTMLInputElement>,
     exportFunction: () => void,
     presetFunction: (preset_name: string) => void,
+    simFunction: ChangeEventHandler<HTMLInputElement>,
     setAlertReset: Dispatch<SetStateAction<boolean>>,
     presets: string[],
 }
@@ -23,6 +24,7 @@ export const SeedMenu = ({
     importFunction,
     exportFunction,
     presetFunction,
+    simFunction,
     setAlertReset,
     presets,
 }: SeedMenuProps) => {
@@ -47,7 +49,11 @@ export const SeedMenu = ({
     }
     const handleFileOpen = () => {
         setAnchorEl(null);
-        document.getElementById('graphPlandoFileInput')?.click()
+        document.getElementById('graphPlandoFileInput')?.click();
+    }
+    const handleSimFileOpen = () => {
+        setAnchorEl(null);
+        document.getElementById('graphSimFileInput')?.click();
     }
     const handleTabChange = (event: React.SyntheticEvent, newTabValue: number) => {
         event.preventDefault();
@@ -65,6 +71,7 @@ export const SeedMenu = ({
 
     const handleReset = () => {
         setAlertReset(true);
+        setAnchorEl(null);
     }
 
     return (
@@ -72,6 +79,7 @@ export const SeedMenu = ({
             <div className="menuSeedButton">
                 <span onClick={handleClick} className="seedMenuButtonLabel">Seed 1 <ExpandMore /></span>
                 <input id='graphPlandoFileInput' style={{display: 'none'}} type='file' onChange={(e) => importFunction(e)} />
+                <input id='graphSimFileInput' style={{display: 'none'}} type='file' onChange={(e) => simFunction(e)} />
             </div>
             <Menu
                 id="seedMenu"
@@ -96,6 +104,7 @@ export const SeedMenu = ({
                     <Tabs value={tabValue} onChange={handleTabChange}>
                         <Tab label='From File' />
                         <Tab label='From Preset' />
+                        <Tab label='Simulate File' />
                     </Tabs>
                 </div>
                 <TabPanel value={tabValue} index={0} className='seedMenu'>
@@ -126,6 +135,17 @@ export const SeedMenu = ({
                     </DialogContent>
                     <DialogActions>
                         <Button onClick={handleLoadPreset}>Select Preset</Button>
+                        <Button onClick={handleClose}>Cancel</Button>
+                    </DialogActions>
+                </TabPanel>
+                <TabPanel value={tabValue} index={2} className='seedMenu'>
+                    <DialogContent>
+                        <DialogContentText>
+                            Simulate File
+                        </DialogContentText>
+                    </DialogContent>
+                    <DialogActions>
+                        <Button onClick={handleSimFileOpen}>Select File</Button>
                         <Button onClick={handleClose}>Cancel</Button>
                     </DialogActions>
                 </TabPanel>

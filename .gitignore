@@ -26,3 +26,4 @@ dist-ssr
 # local scripts and files
 *.tgz
 recompile-graph.sh
+public/ootr-local-*

@@ -8,11 +8,12 @@ import GameSettingMultiselect from "./GameSettingMultiselect";
 import GameSettingSwitch from "./GameSettingSwitch";
 import { Drawer, Tabs, Tab } from "@mui/material";
 import SettingMultiselectMenu from './SettingMultiselectMenu';
-import { TrackerSettingsCurrent, tracker_settings_defs, tracker_setting_definition, copyTrackerSettings } from "@/data/tracker_settings";
+import { TrackerSettingsCurrent, tracker_settings_defs, tracker_setting_definition, copyTrackerSettings, region_visibility_values } from "@/data/tracker_settings";
 
-import { GraphEntrance, GraphLocation, GraphSettingsConfiguration, GraphSettingsOptions, GraphSettingsLayout } from '@mracsys/randomizer-graph-tool';
+import { GraphGameVersions, GraphRegion, GraphEntrance, GraphLocation, GraphSettingsConfiguration, GraphSettingsOptions, GraphSettingsLayout } from '@mracsys/randomizer-graph-tool';
 
 import '@/styles/TrackerDrawer.css';
+import RaceTimer from "./RaceTimer";
 
 interface TrackerDrawerProps {
     addStartingItem: (item_name: string, count?: number) => void,
@@ -36,6 +37,7 @@ interface TrackerDrawerProps {
     graphRewardHints: {[item_name: string]: string},
     graphLocations: GraphLocation[],
     graphEntrances: GraphEntrance[],
+    graphRegions: GraphRegion[],
     graphRefreshCounter: number,
     cycleGraphSetting: ({graphSetting, reverseDirection}: {graphSetting?: string, reverseDirection?: boolean}) => void,
     handleMultiselectMenuOpen: (s: Element, n: string) => void,
@@ -49,6 +51,8 @@ interface TrackerDrawerProps {
     setCachedRaceMode: Dispatch<SetStateAction<boolean | null>>,
     setAlertReset: Dispatch<SetStateAction<boolean>>,
     changeRegionMode: (regionSearchMode: string) => void,
+    changeGraphVersion: (version: string) => void,
+    supportedGraphVersions: GraphGameVersions,
 }
 
 
@@ -68,6 +72,7 @@ const TrackerDrawer = ({
     graphRewardHints,
     graphLocations,
     graphEntrances,
+    graphRegions,
     graphRefreshCounter,
     cycleGraphSetting,
     handleMultiselectMenuOpen,
@@ -81,6 +86,8 @@ const TrackerDrawer = ({
     setCachedRaceMode,
     setAlertReset,
     changeRegionMode,
+    changeGraphVersion,
+    supportedGraphVersions,
 }: TrackerDrawerProps) => {
     const [tabValue, setTabValue] = useState<number>(0);
     let [multiselectMenuOpen, setMultiselectMenuOpen] = useState<Element | null>(null);
@@ -96,21 +103,11 @@ const TrackerDrawer = ({
         let newTrackerSettings = copyTrackerSettings(trackerSettings);
         let newValue = value;
         if (name === 'region_visibility') {
-            switch (value) {
-                case 'Logically Reachable':
-                    newValue = 'matching';
-                    break;
-                case 'Reachable with All Tricks':
-                    newValue = 'tricks';
-                    break;
-                case 'Connected':
-                    newValue = 'connected';
-                    break;
-                case 'Always Visible':
-                    newValue = 'always';
-                    break;
-            }
+            newValue = region_visibility_values[value];
             changeRegionMode(newValue);
+        }
+        if (name === 'game_version') {
+            changeGraphVersion(value);
         }
         newTrackerSettings[name] = value;
         setTrackerSettings(newTrackerSettings);
@@ -207,6 +204,11 @@ const TrackerDrawer = ({
                     graphEntrances={graphEntrances}
                     refreshCounter={graphRefreshCounter}
                 />
+                {
+                    trackerSettings.show_timer ?
+                        <RaceTimer />
+                        : null
+                }
                 <div className="tabList">
                     <Tabs className="sidebarTabs" value={tabValue} onChange={handleTabChange}>
                         <Tab label='Game Settings' />
@@ -249,10 +251,20 @@ const TrackerDrawer = ({
                         {
                             Object.entries(tracker_settings_defs).map(([setting, def]: [string, tracker_setting_definition], si) => {
                                 let userSetting = trackerSettings[setting]
-                                if (!!def.options) {
+                                if (def.options !== undefined) {
                                     let optionDict: {[name: string]: string} = {};
                                     for (let o of def.options) {
                                         optionDict[o] = o;
+                                    }
+                                    if (setting === 'region_page' && trackerSettings.one_region_per_page) {
+                                        for (let region of graphRegions) {
+                                            optionDict[region.name] = region.name;
+                                        }
+                                    }
+                                    if (setting === 'game_version') {
+                                        for (let gitBranch of supportedGraphVersions.versions) {
+                                            optionDict[gitBranch.version] = gitBranch.version;
+                                        }
                                     }
                                     if (typeof userSetting === 'string') {
                                         return (

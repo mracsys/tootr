@@ -30,23 +30,27 @@ interface LinkedEntranceProps {
     handleUnLink: (entrance: string, scrollRef: string) => void,
     handleCheck: (locationName: string) => void,
     handleUnCheck: (locationName: string) => void,
+    handleCheckEntrance: (entranceName: string) => void,
+    handleUnCheckEntrance: (entranceName: string) => void,
     handleContextMenu: ContextMenuHandler,
     handleShopContextMenu: ContextMenuHandler,
     handleHintContextMenu: ContextMenuHandler,
     handleEntranceMenuOpen: (e: MouseEvent<HTMLDivElement>, scrollRef: string) => void,
-    handleDungeonTravel: (targetRegion: GraphRegion | null) => void,
+    handleDungeonTravel: (targetRegion: GraphRegion | null, regionEntrance?: GraphEntrance | null) => void,
     toggleWalletTiers: (locationName: string) => void,
     updateShopPrice: (locationName: string, price: string) => void,
     showShops: boolean,
     showShopInput: boolean,
     showShopRupee: boolean,
     showHints: boolean,
+    showAgeLogic: boolean,
     forceVisible: boolean,
     scrollRef: string,
     ekey: string,
     searchTerm: string,
     showEntranceLocations: boolean,
     regionIsFoolish: boolean,
+    simMode: boolean,
 }
 
 const LinkedEntrance = ({
@@ -63,6 +67,8 @@ const LinkedEntrance = ({
     handleUnLink,
     handleCheck,
     handleUnCheck,
+    handleCheckEntrance,
+    handleUnCheckEntrance,
     handleContextMenu,
     handleShopContextMenu,
     handleHintContextMenu,
@@ -74,12 +80,14 @@ const LinkedEntrance = ({
     showShopInput,
     showShopRupee,
     showHints,
+    showAgeLogic,
     forceVisible,
     scrollRef,
     ekey,
     searchTerm,
     showEntranceLocations,
     regionIsFoolish,
+    simMode,
 }: LinkedEntranceProps) => {
     const buildEntranceURL = (reverseLink: GraphEntrance): string => {
         let href: string = '';
@@ -107,7 +115,7 @@ const LinkedEntrance = ({
     );
     return (
         <React.Fragment key={ekey}>
-            <LogicIndicator spot={entrance}>
+            <LogicIndicator spot={entrance} showAgeLogic={showAgeLogic}>
                 <div className="entranceContainer" key={entrance.name + "label"}>
                     { forceVisible ? <SubdirectoryArrowRightIcon /> : null }
                     <div className="entranceLabel">
@@ -118,7 +126,7 @@ const LinkedEntrance = ({
                         <a
                             href={buildEntranceURL(reverseLink)}
                             onClick={(reverseLink.target_group?.page !== currentPage) ?
-                                    () => handleDungeonTravel(reverseLink.target_group)
+                                    () => handleDungeonTravel(reverseLink.target_group, entrance)
                                     : () => {}}
                             className='overworldLinkAnchor'
                         >
@@ -131,7 +139,16 @@ const LinkedEntrance = ({
                     }
                     {
                         (oEntrance.shuffled === true) ?
-                            <IconButton className="areaButton" size="small" component="span" onClick={() => handleUnLink(entrance.name, scrollRef)}><ClearIcon /></IconButton> :
+                            <IconButton
+                                className="areaButton"
+                                size="small"
+                                component="span"
+                                onClick={() => (simMode && entrance.checked) ?
+                                    handleUnCheckEntrance(entrance.name) :
+                                    handleUnLink(entrance.name, scrollRef)}
+                                >
+                                    <ClearIcon />
+                                </IconButton> :
                             null
                     }
                 </div>
@@ -148,7 +165,10 @@ const LinkedEntrance = ({
                                             key={entrance.name + 'shopfixedlocationcheck' + k}
                                             lkey={entrance.name + k}
                                             location={location}
+                                            handleCheck={handleCheck}
+                                            handleUnCheck={handleUnCheck}
                                             handleContextMenu={handleShopContextMenu}
+                                            simMode={simMode}
                                         />
                                     );
                                 })
@@ -174,6 +194,8 @@ const LinkedEntrance = ({
                                 updateShopPrice={updateShopPrice}
                                 showShopInput={showShopInput}
                                 showShopRupee={showShopRupee}
+                                showAgeLogic={showAgeLogic}
+                                simMode={simMode}
                             />
                         );
                     } else {
@@ -196,6 +218,8 @@ const LinkedEntrance = ({
                         handleUnLink={handleUnLink}
                         handleCheck={handleCheck}
                         handleUnCheck={handleUnCheck}
+                        handleCheckEntrance={handleCheckEntrance}
+                        handleUnCheckEntrance={handleUnCheckEntrance}
                         handleContextMenu={handleContextMenu}
                         handleShopContextMenu={handleShopContextMenu}
                         handleHintContextMenu={handleHintContextMenu}
@@ -207,12 +231,14 @@ const LinkedEntrance = ({
                         showShopInput={showShopInput}
                         showShopRupee={showShopRupee}
                         showHints={showHints}
+                        showAgeLogic={showAgeLogic}
                         scrollRef={scrollRef}
                         ekey={entrance.name + otherEntrance.name + ekey}
                         key={entrance.name + otherEntrance.name + ekey + i}
                         searchTerm={searchTerm}
                         showEntranceLocations={showEntranceLocations}
                         regionIsFoolish={regionIsFoolish}
+                        simMode={simMode}
                     />
                 )})
             }

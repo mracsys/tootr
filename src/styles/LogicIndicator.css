@@ -2,12 +2,27 @@
 .logicContainer {
     display: flex;
 }
-.logicalGreen,
-.logicalYellow,
-.logicalRed,
-.logicalBlank {
+.logicIndicator {
     width: 10px;
     /* cursor: help; */
+}
+.logicMultiIndicator {
+    width: 24px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Hylia Serif Beta';
+    font-size: 1rem;
+    vertical-align: middle;
+}
+.logicMultiIndicator div {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logicMultiIndicator span {
+    display: block;
+    width: 100%;
 }
 .logicalGreen {
     background-color: var(--color-logical-green);

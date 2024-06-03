@@ -4,7 +4,7 @@ import IconButton from '@mui/material/IconButton';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
 import Brightness3Icon from '@mui/icons-material/Brightness3';
 import { SeedMenu } from "./SeedMenu";
-import { TrackerSettingsCurrent, copyTrackerSettings } from "@/data/tracker_settings";
+import { TrackerSettingsCurrent, copyTrackerSettings, tracker_settings_defs } from "@/data/tracker_settings";
 
 import { GraphLocation } from '@mracsys/randomizer-graph-tool';
 
@@ -13,6 +13,7 @@ import '@/styles/TrackerTopBar.css';
 interface TrackerTopBarProps {
     importGraphState: (inputEvent: ChangeEvent<HTMLInputElement>) => void,
     exportGraphState: () => void,
+    simGraphState: (inputEvent: ChangeEvent<HTMLInputElement>) => void,
     loadGraphPreset: (preset_name: string) => void,
     graphPresets: string[],
     graphLocationCount: GraphLocation[],
@@ -26,6 +27,7 @@ interface TrackerTopBarProps {
 const TrackerTopBar = ({
     importGraphState,
     exportGraphState,
+    simGraphState,
     loadGraphPreset,
     graphPresets,
     graphLocationCount,
@@ -62,13 +64,20 @@ const TrackerTopBar = ({
                     importFunction={importGraphState}
                     exportFunction={exportGraphState}
                     presetFunction={loadGraphPreset}
+                    simFunction={simGraphState}
                     presets={graphPresets}
                     setAlertReset={setAlertReset}
                 />
 
                 <div className="title">
                     <div>
-                        <div className="titleText">{trackerSettings.region_page}</div>
+                        <div className="titleText">
+                            {
+                                tracker_settings_defs.region_page.options?.includes(trackerSettings.region_page) ?
+                                    trackerSettings.region_page
+                                    : null
+                            }
+                        </div>
                     </div>
                 </div>
                 <div className='searchContainer'>

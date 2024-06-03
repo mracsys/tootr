@@ -23,6 +23,8 @@ interface LocationCheckProps {
     updateShopPrice: (locationName: string, price: string) => void,
     showShopInput: boolean,
     showShopRupee: boolean,
+    showAgeLogic: boolean,
+    simMode: boolean,
 }
 
 const LocationCheck = ({
@@ -35,6 +37,8 @@ const LocationCheck = ({
     updateShopPrice,
     showShopInput,
     showShopRupee,
+    showAgeLogic,
+    simMode,
 }: LocationCheckProps) => {
     let locationIcons: {[locationType: string]: string} = {
         "HintStone": "/images/OoT_Gossip_Stone_Model.png",
@@ -45,7 +49,7 @@ const LocationCheck = ({
         "Boss Key": '/images/OoT_Boss_Key_Icon.png',
     };
     return (
-        <LogicIndicator spot={location}>
+        <LogicIndicator spot={location} showAgeLogic={showAgeLogic}>
             <div
                 className="locationContainer"
                 key={lkey}
@@ -68,7 +72,7 @@ const LocationCheck = ({
                 }
                 <p className="locationText"><em>{location.alias}</em></p>
                 {
-                    location.is_hint && !!location.hint ?
+                    location.is_hint && !!location.hint && (!simMode || location.checked) ?
                         <React.Fragment>
                             {
                                 location.hint.type === 'woth' ?
@@ -110,6 +114,22 @@ const LocationCheck = ({
                                         className="locationKnownItem"
                                     />
                                     </React.Fragment>
+                                : location.hint.type === 'dual' && !!location.hint.item && !!location.hint.item2 ?
+                                    <React.Fragment>
+                                    <span className='locationHintLocation'>{location.hint.location?.alias}</span>
+                                    <span className='locationHintEqualSign'>=</span>
+                                    <OotItemIcon
+                                        itemName={location.hint.item.name}
+                                        className="locationKnownItem"
+                                    />
+                                    <span className='locationHintComma'>,</span>
+                                    <span className='locationHintLocation'>{location.hint.location2?.alias}</span>
+                                    <span className='locationHintEqualSign'>=</span>
+                                    <OotItemIcon
+                                        itemName={location.hint.item2.name}
+                                        className="locationKnownItem"
+                                    />
+                                    </React.Fragment>
                                 : location.hint.type === 'entrance' && !!location.hint.entrance && !!location.hint.entrance.replaces ?
                                     <React.Fragment>
                                     <span className='locationHintEntrance'>
@@ -143,6 +163,12 @@ const LocationCheck = ({
                                         className="locationKnownItem"
                                     />
                                     </React.Fragment>
+                                : location.hint.type === 'important_check' ?
+                                    <React.Fragment>
+                                    <span className='locationHintRegion'>{location.hint.area?.name}</span>
+                                    <span className='locationHintEqualSign'>=</span>
+                                    <span className='locationHintRegion'>{location.hint.area?.num_major_items} Major Items</span>
+                                    </React.Fragment>
                                 : null
                             }
 
@@ -150,7 +176,7 @@ const LocationCheck = ({
                         : null
                 }
                 {
-                    (location.type === 'Shop' && location.item !== null) ?
+                    (location.type === 'Shop' && location.item !== null && (!simMode || location.checked || location.hinted)) ?
                         <React.Fragment>
                             { showShopInput ?
                                 <input
@@ -181,7 +207,7 @@ const LocationCheck = ({
                         : null
                 }
                 {
-                    location.item === null ?
+                    location.item === null || (simMode && !location.checked && !location.hinted && !location.skipped) ?
                         null :
                         <OotItemIcon
                             itemName={location.item.name}

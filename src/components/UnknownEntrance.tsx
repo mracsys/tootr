@@ -41,10 +41,9 @@ export const buildExitEntranceName = (entrance: GraphEntrance, original: boolean
 }
 
 export const locationFilter = (l: GraphLocation, collapsedRegions: CollapsedRegions, title: string, showHints: boolean, regionIsFoolish: boolean, searchTerm: string = ''): boolean => {
-    return !regionIsFoolish &&
-            (!l.checked || collapsedRegions[title] === 'none') &&
+    return (!l.checked || collapsedRegions[title] === 'none') &&
             l.viewable(true) &&
-            (!l.is_hint || (showHints && l.alias !== l.name)) &&
+            ((!l.is_hint && !regionIsFoolish) || (l.is_hint && showHints && l.alias !== l.name)) &&
             (searchTerm === '' || 
                 l.alias.toLowerCase().includes(searchTerm.toLowerCase()) ||
                 (!!l.item && l.item.name.toLowerCase().includes(searchTerm.toLowerCase())));
@@ -105,22 +104,26 @@ interface UnknownEntranceProps {
     handleUnLink: (entrance: string, scrollRef: string) => void,
     handleCheck: (locationName: string) => void,
     handleUnCheck: (locationName: string) => void,
+    handleCheckEntrance: (entranceName: string) => void,
+    handleUnCheckEntrance: (entranceName: string) => void,
     handleContextMenu: ContextMenuHandler,
     handleShopContextMenu: ContextMenuHandler,
     handleHintContextMenu: ContextMenuHandler,
     handleEntranceMenuOpen: (e: MouseEvent<HTMLDivElement>, scrollRef: string) => void,
-    handleDungeonTravel: (targetRegion: GraphRegion | null) => void,
+    handleDungeonTravel: (targetRegion: GraphRegion | null, regionEntrance?: GraphEntrance | null) => void,
     toggleWalletTiers: (locationName: string) => void,
     updateShopPrice: (locationName: string, price: string) => void,
     showShops: boolean,
     showShopInput: boolean,
     showShopRupee: boolean,
     showHints: boolean,
+    showAgeLogic: boolean,
     ekey: string,
     scrollRef: string,
     searchTerm: string,
     showEntranceLocations: boolean,
     regionIsFoolish: boolean,
+    simMode: boolean,
 }
 
 const UnknownEntrance = ({
@@ -136,6 +139,8 @@ const UnknownEntrance = ({
     handleUnLink,
     handleCheck,
     handleUnCheck,
+    handleCheckEntrance,
+    handleUnCheckEntrance,
     handleContextMenu,
     handleShopContextMenu,
     handleHintContextMenu,
@@ -147,16 +152,18 @@ const UnknownEntrance = ({
     showShopInput,
     showShopRupee,
     showHints,
+    showAgeLogic,
     ekey,
     scrollRef,
     searchTerm,
     showEntranceLocations,
     regionIsFoolish,
+    simMode,
 }: UnknownEntranceProps) => {
     let eType = entrance.type;
     let reverseLink = !!(entrance.replaces) ? entrance.replaces : entrance;
     if (!!eType) {
-        if (entrance.connected_region === null) {
+        if (entrance.connected_region === null || (simMode && !entrance.checked && entrance.shuffled)) {
             return (
                 <React.Fragment>
                     { forceVisible === false ? <hr /> : null }
@@ -164,7 +171,10 @@ const UnknownEntrance = ({
                         entrance={entrance}
                         connector={connector}
                         handleEntranceMenuOpen={handleEntranceMenuOpen}
+                        handleCheckEntrance={handleCheckEntrance}
                         forceVisible={forceVisible}
+                        showAgeLogic={showAgeLogic}
+                        simMode={simMode}
                         scrollRef={scrollRef}
                         ekey={ekey}
                     />
@@ -205,6 +215,8 @@ const UnknownEntrance = ({
                             handleUnLink={handleUnLink}
                             handleCheck={handleCheck}
                             handleUnCheck={handleUnCheck}
+                            handleCheckEntrance={handleCheckEntrance}
+                            handleUnCheckEntrance={handleUnCheckEntrance}
                             handleContextMenu={handleContextMenu}
                             handleShopContextMenu={handleShopContextMenu}
                             handleHintContextMenu={handleHintContextMenu}
@@ -214,12 +226,14 @@ const UnknownEntrance = ({
                             showShopInput={showShopInput}
                             showShopRupee={showShopRupee}
                             showHints={showHints}
+                            showAgeLogic={showAgeLogic}
                             forceVisible={forceVisible}
                             scrollRef={scrollRef}
                             ekey={ekey}
                             searchTerm={searchTerm}
                             showEntranceLocations={showEntranceLocations}
                             regionIsFoolish={regionIsFoolish}
+                            simMode={simMode}
                         />
                     </React.Fragment>
                 );

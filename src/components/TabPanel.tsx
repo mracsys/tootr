@@ -15,6 +15,7 @@ const TabPanel = (props: TabPanelProps) => {
             hidden={value !== index}
             className={className}
             id={`${className}-tabpanel-${index}`}
+            aria-labelledby={`${className}-tab-${index}`}
             {...other}
         >
             {value === index && (
@@ -25,6 +26,13 @@ const TabPanel = (props: TabPanelProps) => {
         </div>
 
     );
+}
+
+export const allyProps = (index: number, className: string) => {
+    return {
+        id: `${className}-tab-${index}`,
+        'aria-controls': `${className}-tabpanel-${index}`,
+    }
 }
 
 export default TabPanel;
