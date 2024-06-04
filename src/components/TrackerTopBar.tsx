@@ -5,6 +5,7 @@ import Brightness7Icon from '@mui/icons-material/Brightness7';
 import Brightness3Icon from '@mui/icons-material/Brightness3';
 import { SeedMenu } from "./SeedMenu";
 import { TrackerSettingsCurrent, copyTrackerSettings, tracker_settings_defs } from "@/data/tracker_settings";
+import type { SavedTrackerState } from './Tracker';
 
 import { GraphLocation } from '@mracsys/randomizer-graph-tool';
 
@@ -21,6 +22,10 @@ interface TrackerTopBarProps {
     trackerSettings: TrackerSettingsCurrent,
     setTrackerSettings: Dispatch<SetStateAction<TrackerSettingsCurrent>>,
     setAlertReset: Dispatch<SetStateAction<boolean>>,
+    saveFunction: (saveName: string) => void,
+    loadFunction: (saveName: string) => void,
+    deleteFunction: (saveName: string) => void,
+    stateListFunction: () => {[savedName: string]: SavedTrackerState},
 }
 
 
@@ -35,6 +40,10 @@ const TrackerTopBar = ({
     trackerSettings,
     setTrackerSettings,
     setAlertReset,
+    saveFunction,
+    loadFunction,
+    deleteFunction,
+    stateListFunction,
 }: TrackerTopBarProps) => {
 
     const handleOpenSidebar = () => {
@@ -67,6 +76,10 @@ const TrackerTopBar = ({
                     simFunction={simGraphState}
                     presets={graphPresets}
                     setAlertReset={setAlertReset}
+                    saveFunction={saveFunction}
+                    loadFunction={loadFunction}
+                    deleteFunction={deleteFunction}
+                    stateListFunction={stateListFunction}
                 />
 
                 <div className="title">

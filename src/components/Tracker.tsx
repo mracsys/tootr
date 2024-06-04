@@ -33,6 +33,19 @@ import { WorldGraphFactory, ExternalFileCacheFactory, ExternalFileCache, GraphEn
 import '@/styles/tracker.css';
 import { buildExitEntranceName } from './UnknownEntrance';
 
+export interface SavedTrackerState {
+    SaveName: string,
+    GraphState: string,
+    PlayerNumber: number,
+    Branch: string,
+    RaceMode: boolean,
+    SimMode: boolean,
+    RegionPage: string,
+    RegionVisibility: string,
+    RegionsCollapsed: CollapsedRegions,
+    Created: number,
+    Modified: number,
+}
 
 interface ScrollerRef {
     [scrollRef: string]: HTMLDivElement,
@@ -82,12 +95,12 @@ const Tracker = (_props: {}) => {
     const [cachedRaceMode, setCachedRaceMode] = useState<boolean | null>(null);
     const [importSimMode, setImportSimMode] = useState<boolean>(false);
     const [lastEntranceName, setLastEntranceName] = useState<string>('');
-    const [_fileCache, setFileCache] = useState<ExternalFileCache>({files: {}});
-    const [graphVersion, setGraphVersion] = useState<string>('7.1.195 R-1');
     const scroller = useRef<ScrollerRef>({});
 
     // Graph state management to trigger rerender on memo change.
     // Required as graph updates are not pure, so can't be in React state.
+    const [_fileCache, setFileCache] = useState<ExternalFileCache>({files: {}});
+    const [graphVersion, setGraphVersion] = useState<string>('7.1.195 R-1');
     const [graphInitialState, setGraphInitialState] = useState<string>('{}');
     const [graphRefreshCounter, setGraphRefreshCounter] = useState<number>(0);
     const [graphImportFile, setGraphImportFile] = useState<string>('');
@@ -126,19 +139,14 @@ const Tracker = (_props: {}) => {
 
         let clientCollapsedRegions = localStorage.getItem('CollapsedRegions');
         let collapsedRegionsInit: CollapsedRegions = !!(clientCollapsedRegions) ? JSON.parse(clientCollapsedRegions) : {};
-        let graphInitialStateInit = '{}';
-        let clientSelectedGraphState = localStorage.getItem('SelectedGraphState');
-        if (!!clientSelectedGraphState) {
-            let savedState = getSavedGraphState(clientSelectedGraphState);
-            if (savedState !== null) {
-                if (Object.keys(savedState).includes(':version')) {
-                    trackerSettingsInit.game_version = savedState[':version'];
-                }
-                graphInitialStateInit = JSON.stringify(savedState);
-            }
+        let clientGraphInitialStateInit = localStorage.getItem('CurrentGraphState');
+        let graphInitialStateInit = !!(clientGraphInitialStateInit) ? clientGraphInitialStateInit : '{}';
+        let savedState = JSON.parse(graphInitialStateInit);
+        if (Object.keys(savedState).includes(':version')) {
+            trackerSettingsInit.game_version = savedState[':version'];
         }
 
-        if (trackerSettingsInit.game_version !== graphVersion) setGraphVersion(trackerSettingsInit.game_version);
+        setGraphVersion(trackerSettingsInit.game_version);
         setGraphInitialState(graphInitialStateInit);
         setCollapsedRegions(collapsedRegionsInit);
         setTrackerSettings(trackerSettingsInit);
@@ -222,7 +230,6 @@ const Tracker = (_props: {}) => {
             refreshSearch();
             setLastEntranceName('');
             setImportSimMode(false);
-            setCollapsedRegions({});
             setGraphInitialState(graphImportFile);
             setTrackerInitialized(true);
             setGraphImportFile('');
@@ -281,10 +288,10 @@ const Tracker = (_props: {}) => {
     const refreshSearch = () => {
         graph.collect_locations();
         graphRefreshCounter > 0 ? setGraphRefreshCounter(graphRefreshCounter-1) : setGraphRefreshCounter(graphRefreshCounter+1);
-        localStorage.setItem('GraphState', JSON.stringify(graph.export(true)));
+        localStorage.setItem('CurrentGraphState', JSON.stringify(graph.export(true)));
     }
 
-    const getSavedGraphState = (saved_name: string) => {
+    const getSavedGraphState = (saved_name: string): SavedTrackerState | null => {
         let savedState = null;
         let clientSavedGraphStates = localStorage.getItem('SavedGraphStates');
         if (!!clientSavedGraphStates) {
@@ -296,6 +303,68 @@ const Tracker = (_props: {}) => {
         return savedState;
     }
 
+    const getSavedGraphStates = (): {[savedName: string]: SavedTrackerState} => {
+        let clientSavedGraphStates = localStorage.getItem('SavedGraphStates');
+        let savedStates: {[savedName: string]: SavedTrackerState} = {};
+        if (!!clientSavedGraphStates) {
+            savedStates = JSON.parse(clientSavedGraphStates);
+        }
+        return savedStates;
+    }
+
+    const deleteSavedGraphState = (savedName: string) => {
+        let savedGraphStates = getSavedGraphStates();
+        if (Object.keys(savedGraphStates).includes(savedName)) {
+            delete savedGraphStates[savedName];
+            localStorage.setItem('SavedGraphStates', JSON.stringify(savedGraphStates));
+        }
+    }
+
+    const loadSavedGraphState = (savedName: string) => {
+        let savedState = getSavedGraphState(savedName);
+        if (savedState !== null) {
+            let newTrackerSettings = copyTrackerSettings(trackerSettings);
+            newTrackerSettings.player_number = savedState.PlayerNumber;
+            newTrackerSettings.race_mode = savedState.RaceMode;
+            newTrackerSettings.region_page = savedState.RegionPage;
+            newTrackerSettings.region_visibility = savedState.RegionVisibility;
+            if (savedState.Branch !== graphVersion) {
+                newTrackerSettings.game_version = savedState.Branch;
+                setGraphVersion(savedState.Branch);
+            }
+            if (savedState.SimMode) setImportSimMode(true);
+            setCollapsedRegions(savedState.RegionsCollapsed);
+            setTrackerSettings(newTrackerSettings);
+            setupImport(savedState.GraphState);
+        } else {
+            console.log(`Problem loading saved state ${savedName}: state does not exist.`)
+        }
+    }
+
+    const saveGraphState = (savedName: string) => {
+        let savedGraphStates = getSavedGraphStates();
+        let graphState = JSON.stringify(graph.export(true));
+        let createdDate = Date.now();
+        if (Object.keys(savedGraphStates).includes(savedName)) {
+            createdDate = savedGraphStates[savedName].Created;
+        }
+        let savedState: SavedTrackerState = {
+            SaveName: savedName,
+            GraphState: graphState,
+            PlayerNumber: trackerSettings.player_number,
+            Branch: graphVersion,
+            RaceMode: trackerSettings.race_mode,
+            SimMode: graph.worlds[trackerSettings.player_number].settings['graphplugin_simulator_mode'] as boolean,
+            RegionPage: trackerSettings.region_page,
+            RegionVisibility: trackerSettings.region_visibility,
+            RegionsCollapsed: collapsedRegions,
+            Created: createdDate,
+            Modified: Date.now(),
+        }
+        savedGraphStates[savedName] = savedState;
+        localStorage.setItem('SavedGraphStates', JSON.stringify(savedGraphStates));
+    }
+
     const loadGraphVersion = (version: string, blankState: boolean = true) => {
         graph.initialized = false;
         setFileCache({files: {}});
@@ -304,8 +373,8 @@ const Tracker = (_props: {}) => {
         if (blankState) setGraphInitialState('{}');
     }
 
-    const loadGraphPreset = (preset_name: string) => {
-        graph.load_settings_preset(preset_name);
+    const loadGraphPreset = (presetName: string) => {
+        graph.load_settings_preset(presetName);
         refreshSearch();
         setGraphInitialState(JSON.stringify(graph.export(true)));
     }
@@ -318,6 +387,7 @@ const Tracker = (_props: {}) => {
         reader.onload = readerEvent => {
             let content = readerEvent.target?.result;
             if (!!content && typeof(content) === 'string') {
+                setCollapsedRegions({});
                 setupImport(content);
             }
         }
@@ -332,6 +402,7 @@ const Tracker = (_props: {}) => {
             let content = readerEvent.target?.result;
             if (!!content && typeof(content) === 'string') {
                 setImportSimMode(true);
+                setCollapsedRegions({});
                 setupImport(content);
             }
         }
@@ -1034,6 +1105,10 @@ const Tracker = (_props: {}) => {
                             trackerSettings={trackerSettings}
                             setTrackerSettings={setTrackerSettings}
                             setAlertReset={setAlertReset}
+                            saveFunction={saveGraphState}
+                            loadFunction={loadSavedGraphState}
+                            deleteFunction={deleteSavedGraphState}
+                            stateListFunction={getSavedGraphStates}
                         />
                         <TrackerDrawer
                             addStartingItem={addStartingItem}
