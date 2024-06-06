@@ -51,6 +51,7 @@ interface LinkedEntranceProps {
     showEntranceLocations: boolean,
     regionIsFoolish: boolean,
     simMode: boolean,
+    lastLocationName: string[],
 }
 
 const LinkedEntrance = ({
@@ -88,6 +89,7 @@ const LinkedEntrance = ({
     showEntranceLocations,
     regionIsFoolish,
     simMode,
+    lastLocationName,
 }: LinkedEntranceProps) => {
     const buildEntranceURL = (reverseLink: GraphEntrance): string => {
         let href: string = '';
@@ -196,6 +198,7 @@ const LinkedEntrance = ({
                                 showShopRupee={showShopRupee}
                                 showAgeLogic={showAgeLogic}
                                 simMode={simMode}
+                                lastLocationName={lastLocationName}
                             />
                         );
                     } else {
@@ -239,6 +242,7 @@ const LinkedEntrance = ({
                         showEntranceLocations={showEntranceLocations}
                         regionIsFoolish={regionIsFoolish}
                         simMode={simMode}
+                        lastLocationName={lastLocationName}
                     />
                 )})
             }

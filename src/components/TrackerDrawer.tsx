@@ -34,7 +34,10 @@ interface TrackerDrawerProps {
     graphSettings: GraphSettingsConfiguration,
     graphCollectedItems: {[item_name: string]: number},
     graphPlayerInventory: {[item_name: string]: number},
-    graphRewardHints: {[item_name: string]: string},
+    graphRewardHints: {[item_name: string]: {
+        hint: string,
+        hinted: boolean,
+    }},
     graphLocations: GraphLocation[],
     graphEntrances: GraphEntrance[],
     graphRegions: GraphRegion[],
@@ -53,6 +56,7 @@ interface TrackerDrawerProps {
     changeRegionMode: (regionSearchMode: string) => void,
     changeGraphVersion: (version: string) => void,
     supportedGraphVersions: GraphGameVersions,
+    visitedSimRegions: Set<string>,
 }
 
 
@@ -88,6 +92,7 @@ const TrackerDrawer = ({
     changeRegionMode,
     changeGraphVersion,
     supportedGraphVersions,
+    visitedSimRegions,
 }: TrackerDrawerProps) => {
     const [tabValue, setTabValue] = useState<number>(0);
     let [multiselectMenuOpen, setMultiselectMenuOpen] = useState<Element | null>(null);
@@ -202,6 +207,7 @@ const TrackerDrawer = ({
                     graphRewardHints={graphRewardHints}
                     graphLocations={graphLocations}
                     graphEntrances={graphEntrances}
+                    visitedSimRegions={visitedSimRegions}
                     refreshCounter={graphRefreshCounter}
                 />
                 {

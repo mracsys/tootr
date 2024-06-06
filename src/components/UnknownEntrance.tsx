@@ -40,8 +40,8 @@ export const buildExitEntranceName = (entrance: GraphEntrance, original: boolean
     }
 }
 
-export const locationFilter = (l: GraphLocation, collapsedRegions: CollapsedRegions, title: string, showHints: boolean, regionIsFoolish: boolean, searchTerm: string = ''): boolean => {
-    return (!l.checked || collapsedRegions[title] === 'none') &&
+export const locationFilter = (l: GraphLocation, collapsedRegions: CollapsedRegions, title: string, showHints: boolean, regionIsFoolish: boolean, lastLocationName: string[], searchTerm: string = ''): boolean => {
+    return (!l.checked || collapsedRegions[title] === 'none' || lastLocationName.includes(l.name)) &&
             l.viewable(true) &&
             ((!l.is_hint && !regionIsFoolish) || (l.is_hint && showHints && l.alias !== l.name)) &&
             (searchTerm === '' || 
@@ -56,7 +56,7 @@ export const shopLocationFilter = (l: GraphLocation, showShops: boolean, searchT
                 (!!l.item && l.item.name.toLowerCase().includes(searchTerm.toLowerCase())));
 }
 
-export const entranceOrTargetMatchesTerm = (entrance: GraphEntrance, collapsedRegions: CollapsedRegions, title: string, searchTerm: string, showEntranceLocations: boolean, showShops: boolean, showHints: boolean, regionIsFoolish: boolean, renderedConnectors: GraphEntrance[] = []): boolean => {
+export const entranceOrTargetMatchesTerm = (entrance: GraphEntrance, collapsedRegions: CollapsedRegions, title: string, searchTerm: string, showEntranceLocations: boolean, showShops: boolean, showHints: boolean, regionIsFoolish: boolean, lastLocationName: string[], renderedConnectors: GraphEntrance[] = []): boolean => {
     // no filtering if no search term
     if (searchTerm === '') return true;
 
@@ -72,7 +72,7 @@ export const entranceOrTargetMatchesTerm = (entrance: GraphEntrance, collapsedRe
     if (!!targetEntrance.target_group && (!entrance.shuffled || entrance.connected_region !== null)) {
         if (targetEntrance.target_group.page === '') { // prevents chaining into other overworld area tiles
             // immediate target area locations match
-            let targetLocations = targetEntrance.target_group.locations.filter((location) => showEntranceLocations && locationFilter(location, collapsedRegions, title, showHints, regionIsFoolish, searchTerm) || shopLocationFilter(location, showShops, searchTerm));
+            let targetLocations = targetEntrance.target_group.locations.filter((location) => showEntranceLocations && locationFilter(location, collapsedRegions, title, showHints, regionIsFoolish, lastLocationName, searchTerm) || shopLocationFilter(location, showShops, searchTerm));
             if (targetLocations.length > 0) return true;
 
             // connector entrance recursion match
@@ -82,7 +82,7 @@ export const entranceOrTargetMatchesTerm = (entrance: GraphEntrance, collapsedRe
             }
             let connectors = targetEntrance.target_group.exits.filter(e => !(renderedConnectors.includes(e)) && (e.shuffled || e.target_group !== targetEntrance.source_group) && (e !== targetEntrance.reverse || (!e.coupled && e.shuffled)));
             for (let connector of connectors) {
-                if (entranceOrTargetMatchesTerm(connector, collapsedRegions, title, searchTerm, showEntranceLocations, showShops, showHints, regionIsFoolish, renderedConnectors)) {
+                if (entranceOrTargetMatchesTerm(connector, collapsedRegions, title, searchTerm, showEntranceLocations, showShops, showHints, regionIsFoolish, lastLocationName, renderedConnectors)) {
                     return true;
                 }
             }
@@ -124,6 +124,7 @@ interface UnknownEntranceProps {
     showEntranceLocations: boolean,
     regionIsFoolish: boolean,
     simMode: boolean,
+    lastLocationName: string[],
 }
 
 const UnknownEntrance = ({
@@ -159,6 +160,7 @@ const UnknownEntrance = ({
     showEntranceLocations,
     regionIsFoolish,
     simMode,
+    lastLocationName,
 }: UnknownEntranceProps) => {
     let eType = entrance.type;
     let reverseLink = !!(entrance.replaces) ? entrance.replaces : entrance;
@@ -185,13 +187,13 @@ const UnknownEntrance = ({
             let internalLocations: GraphLocation[] = [];
             let otherEntrances: GraphEntrance[] = [];
             if (!!reverseLink.target_group && reverseLink.target_group.page === '') {
-                internalLocations.push(...reverseLink.target_group.locations.filter(l => showEntranceLocations && locationFilter(l, collapsedRegions, title, showHints, regionIsFoolish, searchTerm)));
+                internalLocations.push(...reverseLink.target_group.locations.filter(l => showEntranceLocations && locationFilter(l, collapsedRegions, title, showHints, regionIsFoolish, lastLocationName, searchTerm)));
                 shopLocations.push(...reverseLink.target_group.locations.filter(l => showEntranceLocations && shopLocationFilter(l, showShops, searchTerm)));
                 otherEntrances.push(...reverseLink.target_group.exits.filter(e => 
                     !(renderedConnectors.includes(e)) &&
                     (e.shuffled || e.target_group !== reverseLink.source_group) &&
                     (e !== reverseLink.reverse || (!e.coupled && e.shuffled)) &&
-                    entranceOrTargetMatchesTerm(e, collapsedRegions, title, searchTerm, showEntranceLocations, showShops, showHints, regionIsFoolish, [...renderedConnectors])));
+                    entranceOrTargetMatchesTerm(e, collapsedRegions, title, searchTerm, showEntranceLocations, showShops, showHints, regionIsFoolish, lastLocationName, [...renderedConnectors])));
             }
             if ((reverseLink.target_group.page !== ''
             || reverseLink.is_warp
@@ -234,6 +236,7 @@ const UnknownEntrance = ({
                             showEntranceLocations={showEntranceLocations}
                             regionIsFoolish={regionIsFoolish}
                             simMode={simMode}
+                            lastLocationName={lastLocationName}
                         />
                     </React.Fragment>
                 );

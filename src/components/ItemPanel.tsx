@@ -22,9 +22,13 @@ interface ItemPanelProps {
     graphSettings: GraphSettingsConfiguration,
     graphCollectedItems: {[item_name: string]: number},
     graphPlayerInventory: {[item_name: string]: number},
-    graphRewardHints: {[item_name: string]: string},
+    graphRewardHints: {[item_name: string]: {
+        hint: string,
+        hinted: boolean,
+    }},
     graphLocations: GraphLocation[],
     graphEntrances: GraphEntrance[],
+    visitedSimRegions: Set<string>,
     refreshCounter: number,
 }
 
@@ -44,6 +48,7 @@ export const ItemPanel = ({
     graphRewardHints,
     graphLocations,
     graphEntrances,
+    visitedSimRegions,
     refreshCounter,
 }: ItemPanelProps) => {
     return (
@@ -65,6 +70,7 @@ export const ItemPanel = ({
                 graphLocations={graphLocations}
                 graphEntrances={graphEntrances}
                 refreshCounter={refreshCounter}
+                visitedSimRegions={visitedSimRegions}
             />
         </div>
     )

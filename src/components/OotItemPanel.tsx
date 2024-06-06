@@ -24,9 +24,13 @@ interface OotItemPanelProps {
     graphSettings: GraphSettingsConfiguration,
     graphCollectedItems: {[item_name: string]: number},
     graphPlayerInventory: {[item_name: string]: number},
-    graphRewardHints: {[item_name: string]: string},
+    graphRewardHints: {[item_name: string]: {
+        hint: string,
+        hinted: boolean,
+    }},
     graphLocations: GraphLocation[],
     graphEntrances: GraphEntrance[],
+    visitedSimRegions: Set<string>,
     refreshCounter: number,
 }
 
@@ -72,6 +76,7 @@ export const OotItemPanel = ({
     graphRewardHints,
     graphLocations,
     graphEntrances,
+    visitedSimRegions,
     refreshCounter,
 }: OotItemPanelProps) => {
     const [bottleSlots, setBottleSlots] = useState<(string|null)[]>([null, null, null, null]);
@@ -527,7 +532,7 @@ export const OotItemPanel = ({
         if (itemName !== 'Triforce Piece') {
             addItem = () => cycleGraphRewardHint({itemName: itemName});
             contextMenuHandler = new ContextMenuHandlerWithArgs(() => cycleGraphRewardHint({itemName: itemName, forward: false}), {});
-            subscript = graphRewardHints[itemName];
+            subscript = graphRewardHints[itemName].hinted ? graphRewardHints[itemName].hint : '????';
             drawItem = true;
         // triforce piece count moved to dungeon reward area for space if all three counters should be shown
         } else if (graphSettings['triforce_hunt'] && [graphSettings['shuffle_ganon_bosskey'], graphSettings['bridge']].includes('hearts')) {
@@ -650,6 +655,7 @@ export const OotItemPanel = ({
                             graphLocations={graphLocations}
                             graphEntrances={graphEntrances}
                             validSilverRupees={validSilverRupees}
+                            visitedSimRegions={visitedSimRegions}
                             includeBlankSilverRupeeSquare={true}
                             key={`${gridEntry.label}DungeonPanelEntryContainer`}
                         />
@@ -670,6 +676,7 @@ export const OotItemPanel = ({
                             graphLocations={graphLocations}
                             graphEntrances={graphEntrances}
                             validSilverRupees={validSilverRupees}
+                            visitedSimRegions={visitedSimRegions}
                             includeBlankSilverRupeeSquare={false}
                             key={`${gridEntry.label}DungeonPanelEntryContainer`}
                         />

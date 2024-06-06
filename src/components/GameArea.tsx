@@ -47,6 +47,7 @@ interface GameAreaProps {
     refreshCounter: number,
     searchTerm: string,
     simMode: boolean,
+    lastLocationName: string[],
 }
 
 const GameArea = ({
@@ -83,11 +84,12 @@ const GameArea = ({
     refreshCounter,
     searchTerm,
     simMode,
+    lastLocationName,
 }: GameAreaProps) => {
     const preventDefault: MouseEventHandler = (event: MouseEvent) => event.preventDefault();
     let title = region.name;
 
-    let filteredLocations: GraphLocation[] = locations.filter((location) => showAreaLocations && locationFilter(location, collapsedRegions, title, showHints, region.is_not_required, searchTerm));
+    let filteredLocations: GraphLocation[] = locations.filter((location) => showAreaLocations && locationFilter(location, collapsedRegions, title, showHints, region.is_not_required, lastLocationName, searchTerm));
     // At the moment, the only unshuffled entrances that have
     // connectors of a different entrance type are:
     //      Dampe's Grave -> Windmill exit
@@ -99,7 +101,7 @@ const GameArea = ({
     let connectorShuffled = false;
     let filteredEntrances: GraphEntrance[] = entrances.filter((entrance) => 
         ((!showUnshuffledEntrances && (entrance.shuffled || connectorShuffled)) || showUnshuffledEntrances) &&
-        entranceOrTargetMatchesTerm(entrance, collapsedRegions, title, searchTerm, showEntranceLocations, showShops, showHints, region.is_not_required)).sort((a, b) => a.type_priority - b.type_priority || a.alias.localeCompare(b.alias));
+        entranceOrTargetMatchesTerm(entrance, collapsedRegions, title, searchTerm, showEntranceLocations, showShops, showHints, region.is_not_required, lastLocationName)).sort((a, b) => a.type_priority - b.type_priority || a.alias.localeCompare(b.alias));
 
     if (filteredEntrances.length === 0 && filteredLocations.length === 0 && searchTerm !== '') {
         return null;
@@ -192,6 +194,7 @@ const GameArea = ({
                                 showShopRupee={showShopRupee}
                                 showAgeLogic={showAgeLogic}
                                 simMode={simMode}
+                                lastLocationName={lastLocationName}
                             />
                         </React.Fragment>)
                     })}
@@ -226,6 +229,7 @@ const GameArea = ({
                                     showHints={showHints}
                                     showAgeLogic={showAgeLogic}
                                     regionIsFoolish={region.is_not_required}
+                                    lastLocationName={lastLocationName}
 
                                     connector={false}
                                     forceVisible={false}

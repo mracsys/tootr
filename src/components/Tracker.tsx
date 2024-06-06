@@ -95,7 +95,11 @@ const Tracker = (_props: {}) => {
     const [cachedRaceMode, setCachedRaceMode] = useState<boolean | null>(null);
     const [importSimMode, setImportSimMode] = useState<boolean>(false);
     const [lastEntranceName, setLastEntranceName] = useState<string>('');
+    const [lastLocationName, setLastLocationName] = useState<string[]>([]);
+    const [visitedSimRegions, setVisitedSimRegions] = useState<Set<string>>(new Set());
     const scroller = useRef<ScrollerRef>({});
+    const timerRef = useRef<ReturnType<typeof setTimeout>[]>([]);
+    const listRef = useRef<string[]>([]);
 
     // Graph state management to trigger rerender on memo change.
     // Required as graph updates are not pure, so can't be in React state.
@@ -145,11 +149,17 @@ const Tracker = (_props: {}) => {
         if (Object.keys(savedState).includes(':version')) {
             trackerSettingsInit.game_version = savedState[':version'];
         }
+        let clientVisitedRegions = localStorage.getItem('SimModeVisitedRegions');
+        let visitedRegionsInit = !!clientVisitedRegions ? new Set<string>(JSON.parse(clientVisitedRegions)) : new Set<string>();
 
         setGraphVersion(trackerSettingsInit.game_version);
         setGraphInitialState(graphInitialStateInit);
         setCollapsedRegions(collapsedRegionsInit);
         setTrackerSettings(trackerSettingsInit);
+        setVisitedSimRegions(visitedRegionsInit);
+
+        // clear pending timeouts on unmount
+        return () => {if (timerRef.current !== null) { timerRef.current.forEach(t => clearTimeout(t)) }};
     }, []);
 
     // hooks to keep state saved in localstorage
@@ -236,6 +246,12 @@ const Tracker = (_props: {}) => {
         }
     }, [graphImportFile]);
 
+    useEffect(() => {
+        if (lastLocationName.length === 0) {
+            timerRef.current = [];
+        }
+    }, [lastLocationName]);
+
     const setTrackerPreferences = () => {
         let graphSettings = graph.get_settings_options();
         graph.change_setting(graph.worlds[trackerSettings.player_number], graphSettings['graphplugin_world_search_mode'], trackerSettings.race_mode ? 'starting_items' : 'collected');
@@ -267,7 +283,7 @@ const Tracker = (_props: {}) => {
     const resetState = (): void => {
         // reset graph state by re-importing only the settings
         let simMode = graph.worlds[trackerSettings.player_number].settings['graphplugin_simulator_mode'] as boolean;
-        let plando = graph.export(simMode, true);
+        let plando = graph.export(simMode, !simMode);
         // manually drop checked keys so that we can maintain location/entrance/hint fill
         if (simMode) {
             delete plando[':checked'];
@@ -370,6 +386,7 @@ const Tracker = (_props: {}) => {
         setFileCache({files: {}});
         setGraphInitialized(false);
         setGraphVersion(version);
+        changeSetting({target: { name: 'game_version', value: version}});
         if (blankState) setGraphInitialState('{}');
     }
 
@@ -422,9 +439,8 @@ const Tracker = (_props: {}) => {
             if (graphVersion !== newVersion) {
                 setGraphInitialState(content);
                 loadGraphVersion(newVersion, false);
-            } else {
-                setGraphImportFile(content);
             }
+            setGraphImportFile(content);
         }
     }
 
@@ -741,14 +757,27 @@ const Tracker = (_props: {}) => {
         }
     }
 
+    const clearLocationAnimation = () => {
+        let newLocationList = [...listRef.current];
+        newLocationList.shift();
+        listRef.current.shift();
+        setLastLocationName(newLocationList);
+    }
+
     const checkLocation = (location: string): void => {
         console.log(`${location} [Checked]`);
         let sourceLocation = graph.worlds[trackerSettings.player_number].get_location(location);
         let simMode = graph.worlds[trackerSettings.player_number].settings['graphplugin_simulator_mode'] as boolean;
-        if (sourceLocation.is_hint && simMode) {
+        graph.check_location(sourceLocation);
+        if ((sourceLocation.is_hint || sourceLocation.item?.name.includes('Compass')) && simMode) {
             graph.unhide_hint(sourceLocation);
         }
-        graph.check_location(sourceLocation);
+        if (simMode) {
+            let newLocationList = [...listRef.current, location];
+            listRef.current = newLocationList;
+            setLastLocationName(newLocationList);
+            timerRef.current.push(setTimeout(clearLocationAnimation, 2500));
+        }
         refreshSearch();
     }
 
@@ -978,7 +1007,11 @@ const Tracker = (_props: {}) => {
             }
             if (trackerSettings.one_region_per_page) {
                 if (linkedRegion.name !== trackerSettings.region_page) {
+                    let newRegions = new Set(visitedSimRegions);
+                    newRegions.add(linkedRegion.name);
+                    setVisitedSimRegions(newRegions);
                     changeSetting({target: { name: "region_page", value: linkedRegion.name }});
+                    localStorage.setItem('SimModeVisitedRegions', JSON.stringify([...newRegions.values()]));
                 }
             } else {
                 if (linkedRegion.page !== trackerSettings.region_page) {
@@ -995,9 +1028,7 @@ const Tracker = (_props: {}) => {
             }
             if (!!regionEntrance && !tracker_settings_defs.region_page.options?.includes(trackerSettings.region_page)) {
                 let exitedEntrance = buildExitEntranceName(regionEntrance);
-                setLastEntranceName(!!exitedEntrance ? exitedEntrance : '');
-            } else {
-                setLastEntranceName('');
+                if (!!exitedEntrance) setLastEntranceName(exitedEntrance);
             }
         }
         if (href !== '#') {
@@ -1142,6 +1173,7 @@ const Tracker = (_props: {}) => {
                             changeRegionMode={changeRegionMode}
                             changeGraphVersion={loadGraphVersion}
                             supportedGraphVersions={graphSupportedVersions}
+                            visitedSimRegions={visitedSimRegions}
                         />
                         <TrackerPaper
                             viewableRegions={viewableRegions}
@@ -1167,6 +1199,7 @@ const Tracker = (_props: {}) => {
                             trackerSettings={trackerSettings}
                             simMode={simMode}
                             lastEntranceName={lastEntranceName}
+                            lastLocationName={lastLocationName}
                         />
                         <EntranceMenu
                             anchorLocation={entranceMenuOpen}

@@ -33,6 +33,7 @@ interface TrackerPaperProps {
     trackerSettings: TrackerSettingsCurrent,
     simMode: boolean,
     lastEntranceName: string,
+    lastLocationName: string[],
 }
 
 const TrackerPaper = ({
@@ -59,6 +60,7 @@ const TrackerPaper = ({
     trackerSettings,
     simMode,
     lastEntranceName,
+    lastLocationName,
 }: TrackerPaperProps) => {
     /*
         sidebar-width = 490px (expanded), 0px (hidden)
@@ -133,6 +135,7 @@ const TrackerPaper = ({
                                 refreshCounter={refreshCounter}
                                 searchTerm={searchTerm}
                                 simMode={simMode}
+                                lastLocationName={lastLocationName}
                             />
                         )
                     })

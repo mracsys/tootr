@@ -190,8 +190,8 @@ packages:
     resolution: {integrity: sha512-Nms86NXrsaeU9vbBJKni6gXiEXZ4CVpYVzEjDH9Sb8vmZ3UljyA1GSOJl/6LGPO8EHLuSF9H+IxNXHPX8QHJ4g==}
     engines: {node: '>=6.9.0'}
 
-  '@babel/standalone@7.24.6':
-    resolution: {integrity: sha512-ch8nbtobUPLvSLKdG2s8pVAqS1zUc+mt7UE9k8/xpupvETbAFOaoqo0QcpgVD/f0xkMkbUnqedVY5eeVWOqtjw==}
+  '@babel/standalone@7.24.7':
+    resolution: {integrity: sha512-QRIRMJ2KTeN+vt4l9OjYlxDVXEpcor1Z6V7OeYzeBOw6Q8ew9oMTHjzTx8s6ClsZO7wVf6JgTRutihatN6K0yA==}
     engines: {node: '>=6.9.0'}
 
   '@babel/template@7.24.0':
@@ -465,7 +465,7 @@ packages:
     resolution: {integrity: sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ==}
 
   '@mracsys/randomizer-graph-tool@file:mracsys-randomizer-graph-tool-v2.0.0.tgz':
-    resolution: {integrity: sha512-urMqfr14+vAkMcqLtDDBEcvWg5qRypr8BFCoqTZq1BOvFTpzAaair3JB5o4sEmfml+gDocYmTb2th2d+DlYHyQ==, tarball: file:mracsys-randomizer-graph-tool-v2.0.0.tgz}
+    resolution: {integrity: sha512-AAq0ZYa8mtyOw1+S5RqBbG9T+zXEvU/8KrUEU55Ufn8SElMISFao05XFkSB/M9oOW0rBxvy7C0B4Ys/0dXy1Iw==, tarball: file:mracsys-randomizer-graph-tool-v2.0.0.tgz}
     version: 2.0.0
 
   '@mui/base@5.0.0-beta.40':
@@ -1532,7 +1532,7 @@ snapshots:
     dependencies:
       regenerator-runtime: 0.14.0
 
-  '@babel/standalone@7.24.6': {}
+  '@babel/standalone@7.24.7': {}
 
   '@babel/template@7.24.0':
     dependencies:
@@ -1787,7 +1787,7 @@ snapshots:
     dependencies:
       '@babel/generator': 7.24.5
       '@babel/parser': 7.24.5
-      '@babel/standalone': 7.24.6
+      '@babel/standalone': 7.24.7
       '@babel/types': 7.24.5
       semver: 7.5.4
 

@@ -25,6 +25,7 @@ interface LocationCheckProps {
     showShopRupee: boolean,
     showAgeLogic: boolean,
     simMode: boolean,
+    lastLocationName: string[],
 }
 
 const LocationCheck = ({
@@ -39,6 +40,7 @@ const LocationCheck = ({
     showShopRupee,
     showAgeLogic,
     simMode,
+    lastLocationName,
 }: LocationCheckProps) => {
     let locationIcons: {[locationType: string]: string} = {
         "HintStone": "/images/OoT_Gossip_Stone_Model.png",
@@ -51,7 +53,7 @@ const LocationCheck = ({
     return (
         <LogicIndicator spot={location} showAgeLogic={showAgeLogic}>
             <div
-                className="locationContainer"
+                className={`locationContainer ${lastLocationName.includes(location.name) ? 'checkedLocationContainer': ''}`}
                 key={lkey}
                 onClick={ location.checked ?
                             () => handleUnCheck(location.name) :

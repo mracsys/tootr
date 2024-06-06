@@ -1,4 +1,4 @@
-import { useState, Dispatch, SetStateAction, ChangeEventHandler } from 'react';
+import React, { useState, Dispatch, SetStateAction, ChangeEventHandler } from 'react';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
@@ -52,64 +52,66 @@ const NewSeedDialog = ({
     };
 
     return (
-        <Dialog
-            open={importDialogOpen}
-            onClose={handleClose}
-            disableScrollLock={true}
-        >
-            <DialogTitle>{"New Game"}</DialogTitle>
+        <React.Fragment>
             <input id='graphDialogPlandoFileInput' style={{display: 'none'}} type='file' onChange={(e) => importFunction(e)} />
             <input id='graphDialogSimFileInput' style={{display: 'none'}} type='file' onChange={(e) => simFunction(e)} />
-            <div style={{ minWidth: 600, borderBottom: 1, borderColor: '#ccc', borderBottomStyle: 'solid' }}>
-                <Tabs value={tabValue} onChange={handleTabChange}>
-                    <Tab label='From File' />
-                    <Tab label='From Preset' />
-                    <Tab label='Simulate File' />
-                </Tabs>
-            </div>
-            <TabPanel value={tabValue} index={0} className='seedMenu'>
-                <DialogContent>
-                    <DialogContentText>
-                        From File
-                    </DialogContentText>
-                </DialogContent>
-                <DialogActions>
-                    <Button onClick={handleFileOpen}>Select File</Button>
-                    <Button onClick={handleClose}>Cancel</Button>
-                </DialogActions>
-            </TabPanel>
-            <TabPanel value={tabValue} index={1} className='seedMenu'>
-                <DialogContent>
-                    <DialogContentText>
-                        <select
-                            id='graphPresetSelector'
-                            className="presetSelect"
-                            name='graphPresetSelector'
-                            defaultValue='Select a preset...'
-                        >
-                            {presets.map((p, i) => 
-                                <option key={i} value={p}>{p}</option>
-                            )}
-                        </select>
-                    </DialogContentText>
-                </DialogContent>
-                <DialogActions>
-                    <Button onClick={handleLoadPreset}>Select Preset</Button>
-                    <Button onClick={handleClose}>Cancel</Button>
-                </DialogActions>
-            </TabPanel>
-            <TabPanel value={tabValue} index={2} className='seedMenu'>
-                <DialogContent>
-                    <DialogContentText>
-                        Simulate File
-                    </DialogContentText>
-                </DialogContent>
-                <DialogActions>
-                    <Button onClick={handleSimFileOpen}>Select File</Button>
-                    <Button onClick={handleClose}>Cancel</Button>
-                </DialogActions>
-            </TabPanel>
-        </Dialog>
+            <Dialog
+                open={importDialogOpen}
+                onClose={handleClose}
+                disableScrollLock={true}
+            >
+                <DialogTitle>{"New Game"}</DialogTitle>
+                <div style={{ minWidth: 600, borderBottom: 1, borderColor: '#ccc', borderBottomStyle: 'solid' }}>
+                    <Tabs value={tabValue} onChange={handleTabChange}>
+                        <Tab label='From File' />
+                        <Tab label='From Preset' />
+                        <Tab label='Simulate File' />
+                    </Tabs>
+                </div>
+                <TabPanel value={tabValue} index={0} className='seedMenu'>
+                    <DialogContent>
+                        <DialogContentText>
+                            From File
+                        </DialogContentText>
+                    </DialogContent>
+                    <DialogActions>
+                        <Button onClick={handleFileOpen}>Select File</Button>
+                        <Button onClick={handleClose}>Cancel</Button>
+                    </DialogActions>
+                </TabPanel>
+                <TabPanel value={tabValue} index={1} className='seedMenu'>
+                    <DialogContent>
+                        <DialogContentText>
+                            <select
+                                id='graphPresetSelector'
+                                className="presetSelect"
+                                name='graphPresetSelector'
+                                defaultValue='Select a preset...'
+                            >
+                                {presets.map((p, i) => 
+                                    <option key={i} value={p}>{p}</option>
+                                )}
+                            </select>
+                        </DialogContentText>
+                    </DialogContent>
+                    <DialogActions>
+                        <Button onClick={handleLoadPreset}>Select Preset</Button>
+                        <Button onClick={handleClose}>Cancel</Button>
+                    </DialogActions>
+                </TabPanel>
+                <TabPanel value={tabValue} index={2} className='seedMenu'>
+                    <DialogContent>
+                        <DialogContentText>
+                            Simulate File
+                        </DialogContentText>
+                    </DialogContent>
+                    <DialogActions>
+                        <Button onClick={handleSimFileOpen}>Select File</Button>
+                        <Button onClick={handleClose}>Cancel</Button>
+                    </DialogActions>
+                </TabPanel>
+            </Dialog>
+        </React.Fragment>
     )
 }
 

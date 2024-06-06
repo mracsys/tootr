@@ -58,7 +58,8 @@ body {
     --color-entrance-menu-select-border-focus: rgba(0, 0, 0, 0.87);
 
     --color-location-background: #eeeeee; /*grey[200]*/
-    --color-location-hover: rgba(0, 0, 0, 0.04);
+    --color-location-hover: transparent;
+    --color-location-sim-scroll: rgba(0, 0, 0, 0.08);
     --color-entrance-background: #fafafa; /*grey[50]*/
     --color-unlinked-entrance: #FF0000;
 

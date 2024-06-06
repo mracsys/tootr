@@ -8,17 +8,43 @@
     align-items: center;
     justify-content: flex-start;
     cursor: pointer;
+    position: relative;
+    z-index: 2;
 }
 .locationContainer:hover {
     background-color: var(--color-location-hover);
 }
+.locationContainer.checkedLocationContainer {
+    background-color: transparent;
+}
+.locationContainer.checkedLocationContainer:hover {
+    background-color: transparent;
+}
+.locationContainer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: var(--color-location-sim-scroll);
+    z-index: 0; /* Ensure the pseudo-element is behind the text content */
+}
+.locationContainer.checkedLocationContainer::before {
+    width: 100%;
+    transition: width 2.5s linear;
+}
 .locationContainer .iconDiv {
     padding: 0px 1em 0px 0px;
+    position: relative;
+    z-index: 2;
 }
 .locationIcon {
     margin-right: calc(var(--theme-spacing) * 2);
     width: 24px;
     height: 24px;
+    position: relative;
+    z-index: 2;
 }
 .locationIconBlank {
     margin-right: calc(var(--theme-spacing) * 2 + 24px);
@@ -30,6 +56,8 @@
     font-size: 0.875rem;
     font-weight: 400;
     line-height: 1.43;
+    position: relative;
+    z-index: 2;
 }
 .locationMark {
     margin-right: 2px !important;
@@ -37,6 +65,8 @@
     height: 24px;
     width: 24px;
     margin: 0px 2px 0px 8px;
+    position: relative;
+    z-index: 2;
 }
 .locationPeek {
     margin-left: calc(var(--theme-spacing) * 3);
@@ -47,16 +77,22 @@
     color: var(--color-location-text);
     margin-top: 0;
     margin-bottom: 0;
+    position: relative;
+    z-index: 2;
 }
 .locationKnownItem img {
     width: 24px;
     height: 24px;
     vertical-align: middle;
+    position: relative;
+    z-index: 2;
 }
 .locationKnownItem .svgIcon {
     width: 24px;
     height: 24px;
     vertical-align: middle;
+    position: relative;
+    z-index: 2;
 }
 .locationKnownItem .iconRightText {
     text-shadow: 0px 0px 6px var(--color-location-icon-text-shadow), 0px 0px 2px var(--color-location-icon-text-shadow), 0px 0px 2px var(--color-location-icon-text-shadow), 0px 0px 2px var(--color-location-icon-text-shadow), 0px 0px 2px var(--color-location-icon-text-shadow);
@@ -66,35 +102,45 @@
     padding: 0;
     position: relative;
     color: var(--color-location-text);
+    z-index: 2;
 }
 .locationWalletTier .iconDiv img {
     width: 16px;
     height: 16px;
     vertical-align: middle;
+    position: relative;
+    z-index: 2;
 }
 .priceBox {
     width: 3em;
     margin-left: var(--theme-spacing);
     text-align: right;
+    position: relative;
+    z-index: 2;
 }
 .locationHintEqualSign {
     font-size: x-large;
     line-height: 24px;
     padding: 0 var(--theme-spacing);
+    position: relative;
+    z-index: 2;
 }
 .locationHintComma {
     font-size: x-large;
     line-height: 24px;
     padding-right: var(--theme-spacing);
+    position: relative;
+    z-index: 2;
 }
 .locationHintArrow {
     margin: 0 var(--theme-spacing);
+    position: relative;
+    z-index: 2;
 }
 .locationHintType,
 .locationHintRegion {
     font-size: medium;
     font-weight: bold;
-}
-.locationHintFoolish {
-    color: var()
+    position: relative;
+    z-index: 2;
 }

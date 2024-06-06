@@ -104,53 +104,57 @@ const SavedSeedDialog = ({
                             <span className='graphStateTableWarning'>{warningMsg}</span>
                             : null
                     }
-                    <label htmlFor="graphStateSortSelector">Sort by</label>
-                    <select
-                        id='graphStateSortSelector'
-                        className="presetSelect"
-                        name='graphStateSortSelector'
-                        defaultValue='SaveName'
-                        onChange={handleSortChange}
-                    >
-                        <option value="SaveName">Save Name</option>
-                        <option value="Modified">Modified Date</option>
-                        <option value="Created">Creation Date</option>
-                    </select>
-                    <table className='graphStateTable'>
-                        <tr>
-                            <td>Save Name</td>
-                            <td>Modified</td>
-                            <td>Created</td>
-                            <td></td>
-                        </tr>
-                        {
-                            stateList.length > 0 ?
-                            stateList.map((state, i) => {
-                                return (
-                                    <tr
-                                        key={`graphStateTableRow${i}`}
-                                        data-save-name={state.SaveName}
-                                        onClick={handleRowClick}
-                                        className={state.SaveName === saveName ? 'graphStateTableSelectedRow' : ''}
-                                    >
-                                        <td>{state.SaveName}</td>
-                                        <td>{new Date(state.Modified).toLocaleString()}</td>
-                                        <td>{new Date(state.Created).toLocaleString()}</td>
-                                        <td><IconButton
-                                            className="stateDeleteButton"
-                                            size="small"
-                                            component="span"
-                                            onClick={() => deleteFunction(state.SaveName)}
-                                        >
-                                            <ClearIcon />
-                                        </IconButton></td>
-                                    </tr>
-                                )
-                            }) :
-                            <tr className='graphStateTableEmpty'><td colSpan={4}>No Saved Games</td></tr>
-                        }
-                    </table>
                 </DialogContentText>
+                <label htmlFor="graphStateSortSelector">Sort by</label>
+                <select
+                    id='graphStateSortSelector'
+                    className="presetSelect"
+                    name='graphStateSortSelector'
+                    defaultValue='SaveName'
+                    onChange={handleSortChange}
+                >
+                    <option value="SaveName">Save Name</option>
+                    <option value="Modified">Modified Date</option>
+                    <option value="Created">Creation Date</option>
+                </select>
+                <table className='graphStateTable'>
+                    <thead>
+                    <tr>
+                        <td>Save Name</td>
+                        <td>Modified</td>
+                        <td>Created</td>
+                        <td></td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {
+                        stateList.length > 0 ?
+                        stateList.map((state, i) => {
+                            return (
+                                <tr
+                                    key={`graphStateTableRow${i}`}
+                                    data-save-name={state.SaveName}
+                                    onClick={handleRowClick}
+                                    className={state.SaveName === saveName ? 'graphStateTableSelectedRow' : ''}
+                                >
+                                    <td>{state.SaveName}</td>
+                                    <td>{new Date(state.Modified).toLocaleString()}</td>
+                                    <td>{new Date(state.Created).toLocaleString()}</td>
+                                    <td><IconButton
+                                        className="stateDeleteButton"
+                                        size="small"
+                                        component="span"
+                                        onClick={() => deleteFunction(state.SaveName)}
+                                    >
+                                        <ClearIcon />
+                                    </IconButton></td>
+                                </tr>
+                            )
+                        }) :
+                        <tr className='graphStateTableEmpty'><td colSpan={4}>No Saved Games</td></tr>
+                    }
+                    </tbody>
+                </table>
             </DialogContent>
             <DialogActions>
                 <input type="text" className='graphSaveNameInput' onChange={handleSaveNameChange} value={saveName} />

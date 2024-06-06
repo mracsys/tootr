@@ -53,6 +53,7 @@ interface OotDungeonTrackerProps {
     graphEntrances: GraphEntrance[],
     validSilverRupees: {[rupeeName: string]: number},
     includeBlankSilverRupeeSquare: boolean,
+    visitedSimRegions: Set<string>,
 }
 
 export const OotDungeonTracker = ({
@@ -68,6 +69,7 @@ export const OotDungeonTracker = ({
     graphEntrances,
     validSilverRupees,
     includeBlankSilverRupeeSquare,
+    visitedSimRegions,
 }: OotDungeonTrackerProps) => {
     let changeDungeon = () => {};
     let labelClass = 'ootDungeonName';
@@ -77,7 +79,11 @@ export const OotDungeonTracker = ({
         changeDungeon = () => cycleGraphMultiselectOption({graphSettingName: gridEntry.modify_setting, settingOptions: settingOptions});
         labelClass = `${labelClass} clickable`;
         let currentGraphSetting = graphSettings[gridEntry.modify_setting];
-        if (Array.isArray(currentGraphSetting) && currentGraphSetting.includes(gridEntry.setting_value)) {
+        let hasMap = Object.keys(graphCollectedItems).includes(`Map (${gridEntry.setting_value})`) && graphCollectedItems[`Map (${gridEntry.setting_value})`] > 0;
+        let mapInfo = graphSettings['enhance_map_compass'] as boolean;
+        let simMode = graphSettings['graphplugin_simulator_mode'] as boolean;
+        if (Array.isArray(currentGraphSetting) && currentGraphSetting.includes(gridEntry.setting_value) &&
+            (!simMode || (hasMap && mapInfo) || visitedSimRegions.has(gridEntry.setting_value))) {
             variantName = 'MQ';
         }
     }
