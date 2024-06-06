@@ -195,6 +195,7 @@ const GameArea = ({
                                 showAgeLogic={showAgeLogic}
                                 simMode={simMode}
                                 lastLocationName={lastLocationName}
+                                collapseRegion={collapsedRegions[title]}
                             />
                         </React.Fragment>)
                     })}

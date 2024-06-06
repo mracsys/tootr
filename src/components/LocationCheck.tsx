@@ -26,6 +26,7 @@ interface LocationCheckProps {
     showAgeLogic: boolean,
     simMode: boolean,
     lastLocationName: string[],
+    collapseRegion: string,
 }
 
 const LocationCheck = ({
@@ -41,6 +42,7 @@ const LocationCheck = ({
     showAgeLogic,
     simMode,
     lastLocationName,
+    collapseRegion,
 }: LocationCheckProps) => {
     let locationIcons: {[locationType: string]: string} = {
         "HintStone": "/images/OoT_Gossip_Stone_Model.png",
@@ -53,7 +55,7 @@ const LocationCheck = ({
     return (
         <LogicIndicator spot={location} showAgeLogic={showAgeLogic}>
             <div
-                className={`locationContainer ${lastLocationName.includes(location.name) ? 'checkedLocationContainer': ''}`}
+                className={`locationContainer ${collapseRegion !== 'none' && lastLocationName.includes(location.name) ? 'checkedLocationContainer': ''}`}
                 key={lkey}
                 onClick={ location.checked ?
                             () => handleUnCheck(location.name) :

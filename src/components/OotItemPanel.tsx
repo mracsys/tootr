@@ -517,6 +517,7 @@ export const OotItemPanel = ({
 
     let wincon_panel_children = [];
     entryNum = 0;
+    let simMode = graphSettings['graphplugin_simulator_mode'] as boolean;
     for (let [pos, gridEntry] of Object.entries(itemPanelLayout.win_cons.rewards)) {
         let itemName = gridEntry.item_name;
         let collected: number;
@@ -532,7 +533,7 @@ export const OotItemPanel = ({
         if (itemName !== 'Triforce Piece') {
             addItem = () => cycleGraphRewardHint({itemName: itemName});
             contextMenuHandler = new ContextMenuHandlerWithArgs(() => cycleGraphRewardHint({itemName: itemName, forward: false}), {});
-            subscript = graphRewardHints[itemName].hinted ? graphRewardHints[itemName].hint : '????';
+            subscript = graphRewardHints[itemName].hinted || !simMode ? graphRewardHints[itemName].hint : '????';
             drawItem = true;
         // triforce piece count moved to dungeon reward area for space if all three counters should be shown
         } else if (graphSettings['triforce_hunt'] && [graphSettings['shuffle_ganon_bosskey'], graphSettings['bridge']].includes('hearts')) {

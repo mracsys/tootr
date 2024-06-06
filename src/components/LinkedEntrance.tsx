@@ -199,6 +199,7 @@ const LinkedEntrance = ({
                                 showAgeLogic={showAgeLogic}
                                 simMode={simMode}
                                 lastLocationName={lastLocationName}
+                                collapseRegion={collapsedRegions[title]}
                             />
                         );
                     } else {

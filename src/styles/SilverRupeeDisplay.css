@@ -3,6 +3,9 @@
     width: 44px;
     height: 48px;
 }
+.ootSilverRupeeExpando div.ootSilverRupeeMask {
+    flex-wrap: nowrap;
+}
 .ootSilverRupeeMask {
     transition-property: background-color, max-width;
     transition-duration: 250ms, 250ms;
@@ -10,12 +13,13 @@
     max-width: 60px;
     border-radius: 24px;
 }
-.ootSilverRupeeNames {
+.ootSilverRupeeNamesContainer div.ootSilverRupeeNames {
     display: none;
     transition-property: opacity;
     transition-duration: 250ms;
     transition-delay: 250ms;
     opacity: 0;
+    flex-wrap: nowrap;
 }
 .ootSilverRupeeExpanded .ootSilverRupeeMask {
     position: absolute;
@@ -26,13 +30,14 @@
     z-index: 9000;
     float: none;
     display: flex;
+    flex-wrap: nowrap;
     max-width: 500px;
     overflow: hidden;
 }
 .ootSilverRupeeExpanded .ootSilverRupeeMask div {
     float: none;
 }
-.ootSilverRupeeExpanded .ootSilverRupeeNames {
+.ootSilverRupeeExpanded .ootSilverRupeeNamesContainer div.ootSilverRupeeNames {
     height: 48px;
     display: grid !important;
     grid-template-columns: 1fr 1fr;
@@ -54,7 +59,7 @@
 .ootSilverRupeeExpanded .iconRightText {
     opacity: 0;
 }
-.ootSilverRupeeNames div {
+.ootSilverRupeeNamesContainer .ootSilverRupeeNames div {
     padding: 0px 8px;
 }
 .ootSilverRupeeNames .noSilverRupee {

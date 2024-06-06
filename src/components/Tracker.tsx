@@ -624,7 +624,7 @@ const Tracker = (_props: {}) => {
     const cycleGraphRewardHint = ({itemName = '', forward = true}: {itemName?: string, forward?: boolean} = {}) => {
         graph.cycle_hinted_areas_for_item(itemName, graph.worlds[trackerSettings.player_number], forward);
         refreshSearch();
-        console.log(`[Reward Hint] ${itemName} area changed to ${graph.worlds[trackerSettings.player_number].fixed_item_area_hints[itemName]}`);
+        console.log(`[Reward Hint] ${itemName} area changed to ${graph.worlds[trackerSettings.player_number].fixed_item_area_hints[itemName].hint}`);
     }
 
     const addStartingItem = (item_name: string, count: number = 1) => {
