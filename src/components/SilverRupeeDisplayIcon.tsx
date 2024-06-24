@@ -25,10 +25,10 @@ export const SilverRupeeDisplayIcon = ({
     let rSuper = dungeonSilverRupeeCounts.length > 1 ? dungeonSilverRupeeCounts[1].collected.toString() : '';
     let lSub = dungeonSilverRupeeCounts.length > 2 ? dungeonSilverRupeeCounts[2].collected.toString() : '';
     let lSuper = dungeonSilverRupeeCounts.length > 3 ? dungeonSilverRupeeCounts[3].collected.toString() : '';
-    let rSubStyle = dungeonSilverRupeeCounts[0].collected >= dungeonSilverRupeeCounts[0].max ? { color: '#00FF00' } : {};
-    let rSuperStyle = dungeonSilverRupeeCounts.length > 1 && dungeonSilverRupeeCounts[1].collected >= dungeonSilverRupeeCounts[1].max ? { color: '#00FF00' } : {};
-    let lSubStyle = dungeonSilverRupeeCounts.length > 2 && dungeonSilverRupeeCounts[2].collected >= dungeonSilverRupeeCounts[2].max ? { color: '#00FF00' } : {};
-    let lSuperStyle = dungeonSilverRupeeCounts.length > 3 && dungeonSilverRupeeCounts[3].collected >= dungeonSilverRupeeCounts[3].max ? { color: '#00FF00' } : {};
+    let rSubStyle = dungeonSilverRupeeCounts[0].collected >= dungeonSilverRupeeCounts[0].max ? { color: 'var(--color-sidebar-upgrade)' } : {};
+    let rSuperStyle = dungeonSilverRupeeCounts.length > 1 && dungeonSilverRupeeCounts[1].collected >= dungeonSilverRupeeCounts[1].max ? { color: 'var(--color-sidebar-upgrade)' } : {};
+    let lSubStyle = dungeonSilverRupeeCounts.length > 2 && dungeonSilverRupeeCounts[2].collected >= dungeonSilverRupeeCounts[2].max ? { color: 'var(--color-sidebar-upgrade)' } : {};
+    let lSuperStyle = dungeonSilverRupeeCounts.length > 3 && dungeonSilverRupeeCounts[3].collected >= dungeonSilverRupeeCounts[3].max ? { color: 'var(--color-sidebar-upgrade)' } : {};
     return (
         <div
             className={'ootSilverRupeeExpando ' + (silverRupeeExpanded ? 'ootSilverRupeeExpanded' : '')}

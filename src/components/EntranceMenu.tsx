@@ -104,9 +104,13 @@ const EntranceMenu = ({
                 anchorEl={anchorLocation}
                 open={Boolean(anchorLocation)}
                 onClose={handleClose}
-                PaperProps={{
-                    style: {
-                        border: '1px black solid',
+                slotProps={{
+                    paper: {
+                        style: {
+                            border: '1px black solid',
+                            backgroundColor: 'var(--md-sys-color-surface-bright)',
+                            color: 'var(--md-sys-color-on-surface)',
+                        },
                     },
                 }}
                 anchorOrigin={{
@@ -149,6 +153,14 @@ const EntranceMenu = ({
                         inputRoot: "entranceAutoInput",
                         root: "entranceAutoSearchLabel",
                         paper: "entranceAutoPaper",
+                    }}
+                    slotProps={{
+                        paper: {
+                            style: {
+                                backgroundColor: 'var(--md-sys-color-surface-bright)',
+                                color: 'var(--md-sys-color-on-surface)',
+                            }
+                        },
                     }}
                 />
             </Menu>

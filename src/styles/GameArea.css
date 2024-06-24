@@ -22,38 +22,42 @@
     display: block;
     max-width: 100%;
     margin-bottom: 20px;
-    background-color: var(--area-background);
+    background-color: var(--color-area-background);
     border-radius: 4px;
     overflow: hidden;
-    box-shadow: 0px 2px 1px -1px var(--area-box-shadow),0px 1px 1px 0px var(--area-box-shadow2),0px 1px 3px 0px var(--area-box-shadow3);
+    box-shadow: 0px 1px 3px -1px var(--color-area-box-shadow);
 }
 .areaCard.areaRequiredGeneric {
-    background-color: var(--area-background-required);;
+    background-color: var(--color-area-background-required);
 }
 .areaCard.areaRequiredSpecific {
-    background-color: var(--area-background-path);;
+    background-color: var(--color-area-background-path);
 }
 .areaCard.areaNotRequired {
-    background-color: var(--area-background-foolish);;
+    background-color: var(--color-area-background-foolish);
 }
 .areaHeader {
     padding: calc(var(--theme-spacing) * 0.75);
 }
 .areaTitle {
-    background-color: var(--area-header);
+    background-color: var(--color-area-header);
+    color: var(--color-area-header-text);
     display: flex;
     flex-direction: row;
     padding: var(--theme-spacing) calc(var(--theme-spacing) * 2) var(--theme-spacing) calc(var(--theme-spacing) * 0.5);
     align-items: center;
 }
 .areaTitle.areaRequiredGeneric {
-    background-color: var(--area-header-required);
+    background-color: var(--color-area-header-required);
+    color: var(--color-area-header-text-required);
 }
 .areaTitle.areaRequiredSpecific {
-    background-color: var(--area-header-path);
+    background-color: var(--color-area-header-path);
+    color: var(--color-area-header-text-path);
 }
 .areaTitle.areaNotRequired {
-    background-color: var(--area-header-foolish);
+    background-color: var(--color-area-header-foolish);
+    color: var(--color-area-header-text-foolish);
 }
 .areaTitleText {
     font-family: Roboto,sans-serif;
@@ -68,8 +72,10 @@
     line-height: 1.6;
 }
 .areaRefreshCounter {
-    color: var(--area-header);
+    color: var(--color-area-header);
     opacity: 0;
+    height: 0px;
+    line-height: 0;
 }
 .areaTitleCollapse {
     flex-grow: 1;
@@ -103,13 +109,20 @@
 }
 .areaTitlePathIcon {
     margin-right: var(--theme-spacing);
+    height: 32px;
 }
 .areaTitleItemIcon {
     margin-left: var(--theme-spacing);
+    height: 32px;
 }
 .areaTitleIconSeparator {
     font-size: x-large;
     font-weight: bold;
     line-height: 24px;
     margin: 0 var(--theme-spacing);
+}
+hr {
+    height: 0px;
+    margin: 0px;
+    border: none;
 }

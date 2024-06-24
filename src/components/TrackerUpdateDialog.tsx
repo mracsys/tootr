@@ -26,6 +26,7 @@ const TrackerUpdateDialog = ({
             open={alertUpdate}
             onClose={() => cancelUpdate()}
             disableScrollLock={true}
+            className='tootrDialog'
         >
             <DialogTitle>{"Scheduled Updates"}</DialogTitle>
             <DialogContent>

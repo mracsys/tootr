@@ -168,7 +168,6 @@ const UnknownEntrance = ({
         if (entrance.connected_region === null || (simMode && !entrance.checked && entrance.shuffled)) {
             return (
                 <React.Fragment>
-                    { forceVisible === false ? <hr /> : null }
                     <UnLinkedEntrance
                         entrance={entrance}
                         connector={connector}
@@ -200,7 +199,6 @@ const UnknownEntrance = ({
             || (reverseLink.target_group.page === '' && (searchTerm !== '' || internalLocations.length > 0 || shopLocations.length > 0 || otherEntrances.length > 0)))) {
                 return (
                     <React.Fragment>
-                        { forceVisible === false ? <hr /> : null }
                         <LinkedEntrance
                             title={title}
                             playerNum={playerNum}

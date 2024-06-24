@@ -441,7 +441,6 @@ const HintMenu = ({
                             <Tab {...allyProps(5, 'hintMenuDrawerTab')} label='Entrance' />
                             <Tab {...allyProps(6, 'hintMenuDrawerTab')} label='Item' />
                             <Tab {...allyProps(7, 'hintMenuDrawerTab')} label='# Items' />
-                            <Tab {...allyProps(8, 'hintMenuDrawerTab')} label='Junk' />
                         </Tabs>
                         <TabPanel value={tabValue} index={0} className='hintMenuDrawerTab'>
                             <div className="hintRegionMenu" onClick={(e) => handleRegionMenuOpen(e)}>
@@ -511,8 +510,6 @@ const HintMenu = ({
                                 <span>{hintMajorItems !== null ? hintMajorItems : '# Major Items'}</span><ArrowDropDownIcon />
                             </div>
                         </TabPanel>
-                        <TabPanel value={tabValue} index={8} className='hintMenuDrawerTab'>
-                        </TabPanel>
                     </div>
                     : 
                     <div>
@@ -550,6 +547,7 @@ const HintMenu = ({
                 handleFind={handleFindItem}
                 anchorLocation={itemMenuOpen}
                 sourceLocation={sourceLocation}
+                showClearButton={false}
             />
             <ItemMenu
                 menuLayout={location_item_menu_layout}
@@ -557,6 +555,7 @@ const HintMenu = ({
                 handleFind={handleFindItem2}
                 anchorLocation={item2MenuOpen}
                 sourceLocation={sourceLocation}
+                showClearButton={false}
             />
             <ListMenu
                 handleClose={handleRegionMenuClose}

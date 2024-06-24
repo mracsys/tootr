@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "localdeploy": "tsc && vite build && ssh m32 \"rm -rf ~/tootr/*\" && scp -r ./dist/* m32:~/tootr/",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },

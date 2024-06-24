@@ -325,6 +325,7 @@ const OotIcon = ({
             </div>
                 {
                     !!imageData.tooltip ?
+                        <div className="iconTooltipWrapper">
                         <div className="iconTooltip">
                             <div>{imageData.tooltip}</div>
                             {
@@ -335,6 +336,7 @@ const OotIcon = ({
                                 !!imageData.tooltip3 ?
                                 <div>{imageData.tooltip3}</div> : null
                             }
+                        </div>
                         </div>
                     : null
                 }

@@ -1,0 +1,25 @@
+.graphStateTable {
+    margin: var(--theme-spacing) 0;
+    border-collapse: collapse;
+}
+.graphStateTable td {
+    padding: calc(var(--theme-spacing) * 0.5) calc(var(--theme-spacing) * 2) 0 0;
+}
+.graphSaveNameInput {
+    flex-grow: 1;
+    margin-left: var(--theme-spacing);
+}
+.graphStateDialog label {
+    padding-right: var(--theme-spacing);
+}
+.graphStateTable thead td {
+    font-weight: bold;
+    border-bottom: 2px solid var(--md-sys-color-outline);
+}
+.graphStateDialog input,
+.graphStateDialog select {
+    background-color: var(--md-sys-color-surface-container);
+    color: var(--md-sys-color-on-surface);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    padding: var(--theme-spacing);
+}

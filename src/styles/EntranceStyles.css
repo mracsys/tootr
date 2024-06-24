@@ -1,5 +1,10 @@
 .areaButton {
     margin-left: var(--theme-spacing) !important;
+    color: var(--md-sys-color-on-surface) !important;
+    transition: none !important;
+}
+.areaButton:hover {
+    background-color: var(--color-hover) !important;
 }
 .shopContainer {
     padding: var(--theme-spacing) calc(var(--theme-spacing) * 2);
@@ -97,7 +102,6 @@
 }
 .falseLinkAnchor {
     text-decoration: none;
-    color:var(--color-entrance-menu-select-border-focus);
 }
 .falseLinkAnchor:hover {
     text-decoration: none;

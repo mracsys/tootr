@@ -32,7 +32,6 @@ interface TrackerPaperProps {
     searchTerm: string,
     trackerSettings: TrackerSettingsCurrent,
     simMode: boolean,
-    lastEntranceName: string,
     lastLocationName: string[],
 }
 
@@ -59,7 +58,6 @@ const TrackerPaper = ({
     searchTerm,
     trackerSettings,
     simMode,
-    lastEntranceName,
     lastLocationName,
 }: TrackerPaperProps) => {
     /*
@@ -90,11 +88,6 @@ const TrackerPaper = ({
         >
             <div className="drawerHeader"></div>
             <div id='worldScrollContainer' className='worldInfo'>
-                {
-                    simMode && lastEntranceName !== '' ?
-                        <div className="lastEntranceNameMessage">{`Entered ${lastEntranceName}`}</div>
-                        : null
-                }
                 <ResponsiveMasonry columnsCountBreakPoints={masonryBreakpoints}>
                 <Masonry gutter="20px">
                 {

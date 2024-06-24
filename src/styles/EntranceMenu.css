@@ -35,6 +35,9 @@
 .entranceAutoSearchLabel .Mui-focused {
     color: var(--color-entrance-menu-input-text) !important;
 }
+.entranceAutoSearchLabel .MuiFormLabel-root {
+    color: var(--color-entrance-menu-input-text) !important;
+}
 .entranceAutoNoButton {
     display: none !important;
 }
@@ -70,6 +73,7 @@
     font-weight: bold !important;
     font-style: italic !important;
     color: var(--color-entrance-menu-option-text) !important;
+    background-color: var(--color-entrance-menu-input) !important;
 }
 .entranceAreaText:hover {
     text-decoration: none;

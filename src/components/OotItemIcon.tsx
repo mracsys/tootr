@@ -30,6 +30,7 @@ type KeyTextDict = {
 }
 
 const keyMap: KeyTextDict = {
+    // Shared between keys, silver rupees, and souls
     'Deku Tree': 'DT',
     'Dodongos Cavern': 'DC',
     'Jabu Jabus Belly': 'JJ',
@@ -44,7 +45,18 @@ const keyMap: KeyTextDict = {
     'Gerudo Training Ground': 'GTG',
     'Thieves Hideout': 'Hi',
     'Treasure Chest Game': 'TCG',
-    '???': '?'
+    '???': '?',
+    // Regional souls only
+    'Forest Area': 'KF',
+    'Hyrule Field': 'HF',
+    'Lake Hylia': 'La',
+    'Gerudo Area': 'Ge',
+    'Market': 'Ma',
+    'Kakariko': 'Kak',
+    'Goron Area': 'Go',
+    'Zora Area': 'Zo',
+    'Lon Lon Ranch': 'LLR',
+    'Grottos': 'Gr',
 };
 
 const itemMap: IconDict = {
@@ -211,15 +223,15 @@ const itemMap: IconDict = {
     'Eyeball Frog': { img: '/images/OoT_Eyeball_Frog_Icon.png' },
     'Eyedrops': { img: '/images/OoT_Worlds_Finest_Eye_Drops_Icon.png' },
     'Claim Check': { img: '/images/OoT_Claim_Check_Icon.png' },
-    'Kokiri Emerald': { img: '/images/OoT_Spiritual_Stone_of_the_Forest_Icon.png' },
-    'Goron Ruby': { img: '/images/OoT_Spiritual_Stone_of_Fire_Icon.png' },
-    'Zora Sapphire': { img: '/images/OoT_Spiritual_Stone_of_Water_Icon.png' },
-    'Forest Medallion': { img: '/images/OoT_Forest_Medallion_Icon.png' },
-    'Fire Medallion': { img: '/images/OoT_Fire_Medallion_Icon.png' },
-    'Water Medallion': { img: '/images/OoT_Water_Medallion_Icon.png' },
-    'Spirit Medallion': { img: '/images/OoT_Spirit_Medallion_Icon.png' },
-    'Shadow Medallion': { img: '/images/OoT_Shadow_Medallion_Icon.png' },
-    'Light Medallion': { img: '/images/OoT_Light_Medallion_Icon.png' },
+    'Kokiri Emerald': { img: '/images/rewards/kokiri_emerald.png' },
+    'Goron Ruby': { img: '/images/rewards/goron_ruby.png' },
+    'Zora Sapphire': { img: '/images/rewards/zora_sapphire.png' },
+    'Forest Medallion': { img: '/images/rewards/forest_medallion.png' },
+    'Fire Medallion': { img: '/images/rewards/fire_medallion.png' },
+    'Water Medallion': { img: '/images/rewards/water_medallion.png' },
+    'Spirit Medallion': { img: '/images/rewards/spirit_medallion.png' },
+    'Shadow Medallion': { img: '/images/rewards/shadow_medallion.png' },
+    'Light Medallion': { img: '/images/rewards/light_medallion.png' },
     'Silver Rupee (Dodongos Cavern Staircase)': { img: '/images/silver_rupee_vertical.png', rSub: 'DC', text: 'Staircase' },
     'Silver Rupee (Dodongos Cavern)': { img: '/images/silver_rupee_vertical.png', rSub: 'DC' },
     'Silver Rupee (Ice Cavern Spinning Scythe)': { img: '/images/silver_rupee_vertical.png', rSub: 'Ice', text: 'Spinning Scythe' },
@@ -288,6 +300,7 @@ const itemMap: IconDict = {
     'Ocarina C right Button': { img: '/images/ocarina_c_right.yellow.png' },
     'Ocarina C left Button': { img: '/images/ocarina_c_left.yellow.png' },
 
+    // Individual souls
     'Stalfos Soul': { img: '/images/souls/stalfos_32x32.png' },
     'Octorok Soul': { img: '/images/souls/octorok_32x32.png' },
     'Wallmaster Soul': { img: '/images/souls/wallmaster_32x32.png' },
@@ -336,6 +349,30 @@ const itemMap: IconDict = {
     'Bongo Bongo Soul': { img: '/images/souls/bongo-bongo_32x32.png' },
     'Twinrova Soul': { img: '/images/souls/twinrova_32x32.png' },
     'Soul': { img: '/images/Soul_Icon.png' },
+
+    // Regional souls
+    'Deku Tree Souls': { img: '/images/Soul_Icon.png', rSub: keyMap['Deku Tree'] },
+    'Dodongos Cavern Souls': { img: '/images/Soul_Icon.png', rSub: keyMap['Dodongos Cavern'] },
+    'Jabu Jabus Belly Souls': { img: '/images/Soul_Icon.png', rSub: keyMap['Jabu Jabus Belly'] },
+    'Forest Temple Souls': { img: '/images/Soul_Icon.png', rSub: keyMap['Forest Temple'] },
+    'Fire Temple Souls': { img: '/images/Soul_Icon.png', rSub: keyMap['Fire Temple'] },
+    'Water Temple Souls': { img: '/images/Soul_Icon.png', rSub: keyMap['Water Temple'] },
+    'Shadow Temple Souls': { img: '/images/Soul_Icon.png', rSub: keyMap['Shadow Temple'] },
+    'Spirit Temple Souls': { img: '/images/Soul_Icon.png', rSub: keyMap['Spirit Temple'] },
+    'Bottom of the Well Souls': { img: '/images/Soul_Icon.png', rSub: keyMap['Bottom of the Well'] },
+    'Ice Cavern Souls': { img: '/images/Soul_Icon.png', rSub: keyMap['Ice Cavern'] },
+    'Gerudo Training Ground Souls': { img: '/images/Soul_Icon.png', rSub: keyMap['Gerudo Training Ground'] },
+    'Ganons Castle Souls': { img: '/images/Soul_Icon.png', rSub: keyMap['Ganons Castle'] },
+    'Forest Area Souls': { img: '/images/Soul_Icon.png', rSub: keyMap['Forest Area'] },
+    'Hyrule Field Souls': { img: '/images/Soul_Icon.png', rSub: keyMap['Hyrule Field'] },
+    'Lake Hylia Souls': { img: '/images/Soul_Icon.png', rSub: keyMap['Lake Hylia'] },
+    'Gerudo Area Souls': { img: '/images/Soul_Icon.png', rSub: keyMap['Gerudo Area'] },
+    'Market Area Souls': { img: '/images/Soul_Icon.png', rSub: keyMap['Market'] },
+    'Kakariko Area Souls': { img: '/images/Soul_Icon.png', rSub: keyMap['Kakariko'] },
+    'Goron Area Souls': { img: '/images/Soul_Icon.png', rSub: keyMap['Goron Area'] },
+    'Zora Area Souls': { img: '/images/Soul_Icon.png', rSub: keyMap['Zora Area'] },
+    'Lon Lon Ranch Souls': { img: '/images/Soul_Icon.png', rSub: keyMap['Lon Lon Ranch'] },
+    'Grottos Souls': { img: '/images/Soul_Icon.png', rSub: keyMap['Grottos'] },
 
     // Additional icons for path hints linked to locations
     'Queen Gohma': { img: '/images/souls/queen-gohma_32x32.png' },

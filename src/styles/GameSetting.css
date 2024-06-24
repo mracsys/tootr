@@ -65,7 +65,7 @@
     line-height: 1.66;
     letter-spacing: 0.03333em;
     border-top: 1px solid var(--color-sidebar-text-border);
-    transition: border-top 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    /* transition: border-top 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms; */
 }
 
 .settingMultiSelect .MuiSelect-icon {

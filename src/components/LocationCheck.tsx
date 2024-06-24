@@ -45,7 +45,7 @@ const LocationCheck = ({
     collapseRegion,
 }: LocationCheckProps) => {
     let locationIcons: {[locationType: string]: string} = {
-        "HintStone": "/images/OoT_Gossip_Stone_Model.png",
+        "HintStone": "/images/gossip-stone_32x32.png",
         "Gold Skulltula Token": '/images/OoT_Token_Icon.png',
         "Map": '/images/OoT_Dungeon_Map_Icon.png',
         "Compass": '/images/OoT_Compass_Icon.png',

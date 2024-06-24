@@ -69,7 +69,7 @@ export const tracker_settings_default: TrackerSettingsCurrent = {
     one_region_per_page: false,
     expand_sidebar: true,
     dark_mode: false,
-    show_age_logic: true,
+    show_age_logic: false,
     race_mode: true,
     region_visibility: 'Reachable with All Tricks',
     show_unshuffled_entrances: true,

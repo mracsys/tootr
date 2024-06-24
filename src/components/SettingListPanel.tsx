@@ -1,6 +1,4 @@
 import { ChangeEvent } from "react";
-import { OotSettingAssetMapFactory } from "./OotSettingAssetMap";
-import { IconDict } from "./OotIcon";
 import GameSetting from "./GameSetting";
 import GameSettingMultiselect from "./GameSettingMultiselect";
 import GameSettingSwitch from "./GameSettingSwitch";
@@ -28,10 +26,7 @@ export const SettingListPanel = ({
     changeGraphNumericSetting,
     handleMultiselectMenuOpen,
 }: SettingListPanelProps) => {
-    let settingAssetMap: IconDict
-    if (!!graphSettings && !!graphSettingsOptions) {
-        settingAssetMap = OotSettingAssetMapFactory(graphSettings, graphSettingsOptions);
-    } else {
+    if (graphSettingsOptions === undefined || graphSettingsOptions === null) {
         return null;
     }
 

@@ -1,4 +1,46 @@
+.locationHintMenu .MuiPaper-root {
+    background-color: var(--md-sys-color-surface-bright);
+    color: var(--md-sys-color-on-surface);
+    border: 1px solid var(--md-sys-color-outline);
+    width: 500px;
+}
+.locationHintMenu .MuiButtonBase-root {
+    color: var(--md-sys-color-on-surface);
+}
+.locationHintMenu .MuiTypography-root {
+    color: var(--md-sys-color-on-surface);
+}
+.locationHintMenu .MuiTabs-indicator {
+    background-color: var(--md-sys-color-outline);
+    width: 5px;
+}
 .hintMenuTabContainer {
     display: flex;
     flex-grow: 1;
+    border-bottom: 1px solid var(--md-sys-color-outline);
+}
+.hintMenuDrawerTab {
+    padding: calc(var(--theme-spacing) * 2);
+}
+.hintMenuTabs {
+    border-right: 1px solid var(--md-sys-color-outline);
+}
+.clearHintText {
+    display: flex;
+    place-content: center;
+    padding: calc(var(--theme-spacing) * 2);
+}
+.clearHintText:hover {
+    background-color: var(--color-hover);
+    cursor: pointer;
+}
+.hintRegionMenu,
+.hintLocationMenu,
+.hintEntranceMenu,
+.hintItemMenu,
+.hintPathMenu,
+.hintNumMenu {
+    display: flex;
+    align-content: center;
+    cursor: pointer;
 }

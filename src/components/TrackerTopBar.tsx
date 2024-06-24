@@ -1,10 +1,9 @@
 import { ChangeEvent, Dispatch, SetStateAction } from "react";
-import MenuIcon from '@mui/icons-material/Menu';
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import IconButton from '@mui/material/IconButton';
-import Brightness7Icon from '@mui/icons-material/Brightness7';
-import Brightness3Icon from '@mui/icons-material/Brightness3';
 import { SeedMenu } from "./SeedMenu";
-import { TrackerSettingsCurrent, copyTrackerSettings, tracker_settings_defs } from "@/data/tracker_settings";
+import { TrackerSettingsCurrent, copyTrackerSettings } from "@/data/tracker_settings";
 import type { SavedTrackerState } from './Tracker';
 
 import { GraphLocation } from '@mracsys/randomizer-graph-tool';
@@ -17,6 +16,7 @@ interface TrackerTopBarProps {
     simGraphState: (inputEvent: ChangeEvent<HTMLInputElement>) => void,
     loadGraphPreset: (preset_name: string) => void,
     graphPresets: string[],
+    currentPreset: string,
     graphLocationCount: GraphLocation[],
     searchTracker: React.ChangeEventHandler<HTMLInputElement>,
     trackerSettings: TrackerSettingsCurrent,
@@ -26,6 +26,7 @@ interface TrackerTopBarProps {
     loadFunction: (saveName: string) => void,
     deleteFunction: (saveName: string) => void,
     stateListFunction: () => {[savedName: string]: SavedTrackerState},
+    lastEntranceName: string,
 }
 
 
@@ -35,6 +36,7 @@ const TrackerTopBar = ({
     simGraphState,
     loadGraphPreset,
     graphPresets,
+    currentPreset,
     graphLocationCount,
     searchTracker,
     trackerSettings,
@@ -44,6 +46,7 @@ const TrackerTopBar = ({
     loadFunction,
     deleteFunction,
     stateListFunction,
+    lastEntranceName,
 }: TrackerTopBarProps) => {
 
     const handleOpenSidebar = () => {
@@ -52,78 +55,71 @@ const TrackerTopBar = ({
         setTrackerSettings(newTrackerSettings);
     }
 
-    const changeDarkMode = () => {
-        const name = 'dark_mode';
-        const checked = !trackerSettings.dark_mode;
-        console.log('[Setting]', name, 'changed to', checked);
-        let newTrackerSettings = copyTrackerSettings(trackerSettings);
-        newTrackerSettings[name] = checked;
-        setTrackerSettings(newTrackerSettings);
-    }
-
     return (
-        <div className="topBar">
-                <IconButton
-                    onClick={() => handleOpenSidebar()}
-                >
-                    <MenuIcon />
-                </IconButton>
+        <div className={`topBar ${trackerSettings.race_mode ? 'raceModeBar' : ''}`}>
+            <IconButton
+                onClick={() => handleOpenSidebar()}
+            >
+                {
+                    trackerSettings.expand_sidebar ?
+                        <ArrowBackIosNewIcon /> :
+                        <ArrowForwardIosIcon />
+                }
+            </IconButton>
 
-                <SeedMenu
-                    importFunction={importGraphState}
-                    exportFunction={exportGraphState}
-                    presetFunction={loadGraphPreset}
-                    simFunction={simGraphState}
-                    presets={graphPresets}
-                    setAlertReset={setAlertReset}
-                    saveFunction={saveFunction}
-                    loadFunction={loadFunction}
-                    deleteFunction={deleteFunction}
-                    stateListFunction={stateListFunction}
-                />
-
-                <div className="title">
-                    <div>
-                        <div className="titleText">
-                            {
-                                tracker_settings_defs.region_page.options?.includes(trackerSettings.region_page) ?
-                                    trackerSettings.region_page
-                                    : null
-                            }
-                        </div>
+            <div className="title">
+                <div>
+                    <div className="titleText">
+                        {`${trackerSettings.region_page} ${trackerSettings.one_region_per_page ? lastEntranceName : ''}`}
                     </div>
                 </div>
-                <div className='searchContainer'>
-                    <input id='trackerGlobalSearchBox' type='search' placeholder='Search' onChange={searchTracker} />
-                </div>
-                {
-                    trackerSettings.show_check_counter ?
-                    <div className="checkCount">
-                        {
-                            graphLocationCount.filter(l => l.checked).length
-                        }
-                        /
-                        {
-                            graphLocationCount.length
-                        }
-                    </div> : null
-                }
-                <button
-                    onClick={() => setAlertReset(true)}
-                    className="menuButton"
-                >
-                    <span className="menuButtonLabel">Reset</span>
-                </button>
-                <button
-                    onClick={() => changeDarkMode()}
-                    className="menuButton"
-                >
+            </div>
+            <div className='searchContainer'>
+                <input id='trackerGlobalSearchBox' type='search' placeholder='Search' onChange={searchTracker} />
+            </div>
+            {
+                trackerSettings.show_check_counter ?
+                <div className="checkCount">
                     {
-                        trackerSettings.dark_mode ?
-                            <span className="menuButtonLabel"><Brightness3Icon /></span> :
-                            <span className="menuButtonLabel"><Brightness7Icon /></span>
+                        graphLocationCount.filter(l => l.checked).length
                     }
-                </button>
+                    /
+                    {
+                        graphLocationCount.length
+                    }
+                </div> : null
+            }
+            {/*<button
+                onClick={() => setAlertReset(true)}
+                className="menuButton"
+            >
+                <span className="menuButtonLabel">Reset</span>
+            </button>*/}
+            {
+                trackerSettings.race_mode ?
+                <div className="raceModeText">
+                    Race Mode
+                    <div className="raceModeTooltip">
+                        <p>Items marked on locations are treated as starting items when collected.</p>
+                        <p>Disable in tracker settings for more accurate logic indicators.</p>
+                        <p>Race Mode is <em>required</em> for any race on racetime.gg!</p>
+                    </div>
+                </div>
+                : null
+            }
+            <SeedMenu
+                importFunction={importGraphState}
+                exportFunction={exportGraphState}
+                presetFunction={loadGraphPreset}
+                simFunction={simGraphState}
+                presets={graphPresets}
+                currentPreset={currentPreset}
+                setAlertReset={setAlertReset}
+                saveFunction={saveFunction}
+                loadFunction={loadFunction}
+                deleteFunction={deleteFunction}
+                stateListFunction={stateListFunction}
+            />
         </div>
     );
 }

@@ -2,27 +2,31 @@
 .logicContainer {
     display: flex;
 }
+.logicContainer:has(.entranceContainer) {
+    border-top: 1px solid var(--color-logic-border);
+}
+.logicContainer:has(.entranceContainer) + .logicContainer:has(.locationContainer),
+.shopContainer,
+.areaLocations {
+    border-top: 1px solid var(--color-logic-border);
+}
 .logicIndicator {
     width: 10px;
     /* cursor: help; */
 }
 .logicMultiIndicator {
-    width: 24px;
+    width: 40px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     font-family: 'Hylia Serif Beta';
     font-size: 1rem;
     vertical-align: middle;
 }
-.logicMultiIndicator div {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.logicMultiIndicator span {
-    display: block;
-    width: 100%;
+.logicMultiIndicator img {
+    width: 36px;
+    height: 36px;
 }
 .logicalGreen {
     background-color: var(--color-logical-green);

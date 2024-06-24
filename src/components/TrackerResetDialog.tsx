@@ -39,6 +39,7 @@ const TrackerResetDialog = ({
             open={alertReset}
             onClose={() => cancelAlert()}
             disableScrollLock={true}
+            className='tootrDialog'
         >
             <DialogTitle>{"Reset Tracker?"}</DialogTitle>
             <DialogContent>

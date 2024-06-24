@@ -4,15 +4,19 @@ import { SvgIconComponent } from "@mui/icons-material";
 /*import PublicIcon from '@mui/icons-material/Public';
 import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
 import VisibilityIcon from '@mui/icons-material/Visibility';*/
+import LoopIcon from '@mui/icons-material/Loop';
 import ClearIcon from '@mui/icons-material/Clear';
 import ShortcutIcon from '@mui/icons-material/Shortcut';
 import HomeIcon from '@mui/icons-material/Home';
 import BlenderIcon from '@mui/icons-material/Blender';
 import MobiledataOffIcon from '@mui/icons-material/MobiledataOff';
 import Brightness3Icon from '@mui/icons-material/Brightness3';
+import Brightness5Icon from '@mui/icons-material/Brightness5';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
+import { merge } from "lodash";
 
 import { GraphSettingsOptions, GraphSettingsConfiguration, GraphSetting } from '@mracsys/randomizer-graph-tool';
+import MusicNote from "./MusicNote";
 
 const settingValueDisplay = (graphSettings: GraphSettingsConfiguration, setting: GraphSetting): string => {
     return !!setting.choices && !!graphSettings[setting.name] ? setting.choices[graphSettings[setting.name] as string] : '';
@@ -20,7 +24,10 @@ const settingValueDisplay = (graphSettings: GraphSettingsConfiguration, setting:
 
 export const OotSettingAssetMapFactory = (graphSettings: GraphSettingsConfiguration, graphSettingsOptions: GraphSettingsOptions): IconDict => {
     let smallFontSize = { left: '-12px' }; // shrink font size for numbers > 99 in setting subscripts
-    let settingMap: IconDict = {
+    // Fenhl changed the types of some settings
+    let isFenhlBranch = Object.keys(graphSettings).includes('shuffle_child_spawn');
+    let isRealRobBranch = Object.keys(graphSettings).includes('fix_broken_actors');
+    let baseSettingMap: IconDict = {
         /*'count': {
             img: PublicIcon,
             rSub: graphSettings['count'],
@@ -31,7 +38,8 @@ export const OotSettingAssetMapFactory = (graphSettings: GraphSettingsConfigurat
             rSub: graphSettings['player_num'],
             tooltip: graphSettingsOptions['player_num'].display_name,
         },*/
-        'logic_rules': { img: {
+        'logic_rules': {
+            img: {
                 'glitchless': '/images/OoT_Hylian_Shield_Icon.png',
                 'glitched': '/images/distorted_shield.png',
                 'none': '/images/shield_x.png',
@@ -148,12 +156,6 @@ export const OotSettingAssetMapFactory = (graphSettings: GraphSettingsConfigurat
             rSubSource: 'graphplugin_trials_specific',
             tooltip: graphSettingsOptions['graphplugin_trials_specific'].display_name,
         },
-        /*'graphplugin_viewable_unshuffled_items': {
-            img: VisibilityIcon,
-            rSub: Array.isArray(graphSettings['graphplugin_viewable_unshuffled_items']) ? graphSettings['graphplugin_viewable_unshuffled_items'].length.toString() : '0',
-            rSubSource: 'graphplugin_viewable_unshuffled_items',
-            tooltip: graphSettingsOptions['graphplugin_viewable_unshuffled_items'].display_name,
-        },*/
         'shuffle_hideoutkeys': {
             img: '/images/jail_door.png',
             rImg: {
@@ -257,15 +259,6 @@ export const OotSettingAssetMapFactory = (graphSettings: GraphSettingsConfigurat
             tooltip: graphSettingsOptions['shuffle_bosskeys'].display_name,
             tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['shuffle_bosskeys']),
         },
-        'open_forest': {
-            img: {
-                'open': '/images/lw_exit.png',
-                'closed_deku': '/images/mido.png',
-                'closed': '/images/kokiri_kid.png',
-            }[graphSettings['open_forest'] as string] as string,
-            tooltip: graphSettingsOptions['open_forest'].display_name,
-            tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['open_forest']),
-        },
         'open_kakariko': {
             img: {
                 'open': '/images/open_kak_gate.png',
@@ -333,11 +326,6 @@ export const OotSettingAssetMapFactory = (graphSettings: GraphSettingsConfigurat
             tooltip: graphSettingsOptions['shuffle_interior_entrances'].display_name,
             tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['shuffle_interior_entrances']),
         },
-        'shuffle_hideout_entrances': {
-            img: '/images/gerudo_symbol.png',
-            fade: !graphSettings['shuffle_hideout_entrances'],
-            tooltip: graphSettingsOptions['shuffle_hideout_entrances'].display_name,
-        },
         'shuffle_grotto_entrances': {
             img: '/images/grotto.png',
             fade: !graphSettings['shuffle_grotto_entrances'],
@@ -363,43 +351,16 @@ export const OotSettingAssetMapFactory = (graphSettings: GraphSettingsConfigurat
             fade: !graphSettings['shuffle_overworld_entrances'],
             tooltip: graphSettingsOptions['shuffle_overworld_entrances'].display_name,
         },
-        'shuffle_gerudo_valley_river_exit': {
-            img: '/images/gerudo_valley_waterfall.png',
-            fade: !graphSettings['shuffle_gerudo_valley_river_exit'],
-            tooltip: graphSettingsOptions['shuffle_gerudo_valley_river_exit'].display_name,
-        },
-        'owl_drops': {
-            img: '/images/kaepora.png',
-            fade: !graphSettings['owl_drops'],
-            tooltip: graphSettingsOptions['owl_drops'].display_name,
-        },
-        'warp_songs': {
-            img: '/images/warp_pad.png',
-            fade: !graphSettings['warp_songs'],
-            tooltip: graphSettingsOptions['warp_songs'].display_name,
-        },
-        'spawn_positions': {
-            img: HomeIcon,
-            rSub: {
-                '': 'Off',
-                'child': 'C',
-                'adult': 'A',
-                'child,adult': 'All',
-                'adult,child': 'All',
-            }[(Array.isArray(graphSettings['spawn_positions']) ? graphSettings['spawn_positions'].toString() : '') as string] as string,
-            rSubSource: 'spawn_positions',
-            tooltip: graphSettingsOptions['spawn_positions'].display_name,
-        },
         'mix_entrance_pools': {
             img: BlenderIcon,
-            rSub: Array.isArray(graphSettings['mix_entrance_pools']) ? graphSettings['mix_entrance_pools'].length.toString() : '0',
+            rSub: !(Object.keys(graphSettings).includes('mix_entrance_pools')) ? undefined : Array.isArray(graphSettings['mix_entrance_pools']) ? graphSettings['mix_entrance_pools'].length.toString() : '0',
             rSubSource: 'mix_entrance_pools',
-            tooltip: graphSettingsOptions['mix_entrance_pools'].display_name,
+            tooltip: !(Object.keys(graphSettings).includes('mix_entrance_pools')) ? undefined : graphSettingsOptions['mix_entrance_pools'].display_name,
         },
         'decouple_entrances': {
             img: MobiledataOffIcon,
-            fade: !graphSettings['decouple_entrances'],
-            tooltip: graphSettingsOptions['decouple_entrances'].display_name,
+            fade: !(Object.keys(graphSettings).includes('decouple_entrances')) ? undefined : !graphSettings['decouple_entrances'],
+            tooltip: !(Object.keys(graphSettings).includes('decouple_entrances')) ? undefined : graphSettingsOptions['decouple_entrances'].display_name,
         },
         'free_bombchu_drops': {
             img: '/images/bombchu_bag.png',
@@ -407,7 +368,8 @@ export const OotSettingAssetMapFactory = (graphSettings: GraphSettingsConfigurat
             tooltip: graphSettingsOptions['free_bombchu_drops'].display_name,
         },
         'shuffle_song_items': {
-            img: '/images/Grey_Note.png',
+            img: MusicNote,
+            imgClass: 'greenNote',
             rImg: {
                 'song': '/images/Red_Note.png',
                 'dungeon': '/images/dungeon_entrance.png',
@@ -415,30 +377,6 @@ export const OotSettingAssetMapFactory = (graphSettings: GraphSettingsConfigurat
             fade: graphSettings['shuffle_song_items'] === 'vanilla',
             tooltip: graphSettingsOptions['shuffle_song_items'].display_name,
             tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['shuffle_song_items']),
-        },
-        'shopsanity': {
-            img: '/images/shopkeeper.png',
-            rSub: {
-                '0': '0',
-                '1': '1',
-                '2': '2',
-                '3': '3',
-                '4': '4',
-                'random': '?',
-            }[graphSettings['shopsanity'] as string] as string,
-            lImg: {
-                'random': '/images/Red_Rupee.png',
-                'random_starting': '/images/Green_Rupee.png',
-                'random_adult': '/images/Blue_Rupee.png',
-                'random_giant': '/images/Red_Rupee.png',
-                'random_tycoon': '/images/Purple_Rupee.png',
-                'affordable': '/images/Yellow_Rupee.png',
-            }[graphSettings['shopsanity_prices'] as string] as string,
-            lSubSource: 'shopsanity_prices',
-            fade: graphSettings['shopsanity'] === 'off',
-            tooltip: graphSettingsOptions['shopsanity'].display_name,
-            tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['shopsanity']),
-            tooltip3: settingValueDisplay(graphSettings, graphSettingsOptions['shopsanity_prices']),
         },
         'tokensanity': {
             img: '/images/OoT_Token_Icon.png',
@@ -583,16 +521,6 @@ export const OotSettingAssetMapFactory = (graphSettings: GraphSettingsConfigurat
             rSub: graphSettings['big_poe_count']?.toString(),
             tooltip: graphSettingsOptions['big_poe_count'].display_name,
         },
-        'ocarina_songs': {
-            img: '/images/treble.png',
-            rImg: {
-                'frog': '/images/OoT_Eyeball_Frog_Icon.png',
-                'warp': '/images/Grey_Note.png',
-            }[graphSettings['ocarina_songs'] as string] as string,
-            fade: graphSettings['ocarina_songs'] === 'off',
-            tooltip: graphSettingsOptions['ocarina_songs'].display_name,
-            tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['ocarina_songs']),
-        },
         'damage_multiplier': {
             img: '/images/double_defense.png',
             rSub: {
@@ -640,11 +568,6 @@ export const OotSettingAssetMapFactory = (graphSettings: GraphSettingsConfigurat
             fade: !graphSettings['blue_fire_arrows'],
             tooltip: graphSettingsOptions['blue_fire_arrows'].display_name,
         },
-        'fix_broken_drops': {
-            img: '/images/OoT_Deku_Shield_Icon.png',
-            fade: !graphSettings['fix_broken_drops'],
-            tooltip: graphSettingsOptions['fix_broken_drops'].display_name,
-        },
         'adult_trade_shuffle': {
             img: {
                 'On': '/images/OoT_Cojiro_Icon.png',
@@ -674,7 +597,318 @@ export const OotSettingAssetMapFactory = (graphSettings: GraphSettingsConfigurat
             tooltip: graphSettingsOptions['disabled_locations'].display_name,
             tooltip2: Array.isArray(graphSettings['disabled_locations']) ? graphSettings['disabled_locations'].length.toString() + ' locations' : '0 locations',
         },
-
     }
-    return settingMap;
+
+    let mainSettingMap = {};
+    let stableSettingMap = {};
+    let fenhlSettingMap = {};
+    let realRobSettingMap = {};
+
+    if (!isFenhlBranch) {
+    mainSettingMap = {
+        'open_forest': {
+            img: {
+                'open': '/images/lw_exit.png',
+                'closed_deku': '/images/mido.png',
+                'closed': '/images/kokiri_kid.png',
+            }[graphSettings['open_forest'] as string] as string,
+            tooltip: graphSettingsOptions['open_forest'].display_name,
+            tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['open_forest']),
+        },
+        'shopsanity': {
+            img: '/images/shopkeeper.png',
+            rSub: {
+                '0': '0',
+                '1': '1',
+                '2': '2',
+                '3': '3',
+                '4': '4',
+                'random': '?',
+            }[graphSettings['shopsanity'] as string] as string,
+            lImg: {
+                'random': '/images/Red_Rupee.png',
+                'random_starting': '/images/Green_Rupee.png',
+                'random_adult': '/images/Blue_Rupee.png',
+                'random_giant': '/images/Red_Rupee.png',
+                'random_tycoon': '/images/Purple_Rupee.png',
+                'affordable': '/images/Yellow_Rupee.png',
+            }[graphSettings['shopsanity_prices'] as string] as string,
+            lSubSource: 'shopsanity_prices',
+            fade: graphSettings['shopsanity'] === 'off',
+            tooltip: graphSettingsOptions['shopsanity'].display_name,
+            tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['shopsanity']),
+            tooltip3: settingValueDisplay(graphSettings, graphSettingsOptions['shopsanity_prices']),
+        },
+        'shuffle_hideout_entrances': {
+            img: '/images/gerudo_symbol.png',
+            fade: !graphSettings['shuffle_hideout_entrances'],
+            tooltip: graphSettingsOptions['shuffle_hideout_entrances'].display_name,
+        },
+        'spawn_positions': {
+            img: HomeIcon,
+            rSub: {
+                '': 'Off',
+                'child': 'C',
+                'adult': 'A',
+                'child,adult': 'All',
+                'adult,child': 'All',
+            }[(Array.isArray(graphSettings['spawn_positions']) ? graphSettings['spawn_positions'].toString() : '') as string] as string,
+            rSubSource: 'spawn_positions',
+            tooltip: graphSettingsOptions['spawn_positions'].display_name,
+        },
+        'shuffle_gerudo_valley_river_exit': {
+            img: '/images/gerudo_valley_waterfall.png',
+            fade: !graphSettings['shuffle_gerudo_valley_river_exit'],
+            tooltip: graphSettingsOptions['shuffle_gerudo_valley_river_exit'].display_name,
+        },
+        'owl_drops': {
+            img: '/images/kaepora.png',
+            fade: !graphSettings['owl_drops'],
+            tooltip: graphSettingsOptions['owl_drops'].display_name,
+        },
+        'warp_songs': {
+            img: '/images/warp_pad.png',
+            fade: !graphSettings['warp_songs'],
+            tooltip: graphSettingsOptions['warp_songs'].display_name,
+        },
+        'ocarina_songs': {
+            img: '/images/treble.png',
+            rImg: {
+                'frog': '/images/OoT_Eyeball_Frog_Icon.png',
+                'warp': '/images/Grey_Note.png',
+            }[graphSettings['ocarina_songs'] as string] as string,
+            fade: graphSettings['ocarina_songs'] === 'off',
+            tooltip: graphSettingsOptions['ocarina_songs'].display_name,
+            tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['ocarina_songs']),
+        },
+    };
+    }
+
+    if (!isRealRobBranch) {
+    stableSettingMap = {
+        'fix_broken_drops': {
+            img: '/images/OoT_Deku_Shield_Icon.png',
+            fade: !graphSettings['fix_broken_drops'],
+            tooltip: graphSettingsOptions['fix_broken_drops'].display_name,
+        },
+    };
+    }
+
+    if (isFenhlBranch) {
+    fenhlSettingMap = {
+        'ocarina_songs': {
+            img: '/images/treble.png',
+            rSub: Array.isArray(graphSettings['ocarina_songs']) ? graphSettings['ocarina_songs'].length.toString() : '0',
+            rSubSource: 'ocarina_songs',
+            fade: Array.isArray(graphSettings['ocarina_songs']) ? graphSettings['ocarina_songs'].length === 0 : true,
+            tooltip: graphSettingsOptions['ocarina_songs'].display_name,
+            tooltip2: Array.isArray(graphSettings['ocarina_songs']) ? graphSettings['ocarina_songs'].join('\n') : 'None',
+        },
+        'require_gohma': {
+            img: '/images/gohma_eye.png',
+            fade: !graphSettings['require_gohma'],
+            tooltip: graphSettingsOptions['require_gohma'].display_name,
+            tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['require_gohma']),
+        },
+        'open_forest': {
+            img: '/images/kokiri_kid.png',
+            fade: !graphSettings['open_forest'],
+            tooltip: graphSettingsOptions['open_forest'].display_name,
+            tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['open_forest']),
+        },
+        'open_deku': {
+            img: '/images/mido.png',
+            fade: !graphSettings['open_deku'],
+            tooltip: graphSettingsOptions['open_deku'].display_name,
+            tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['open_deku']),
+        },
+        'shopsanity': {
+            img: '/images/shopkeeper.png',
+            rSub: {
+                '0': '0',
+                '1': '1',
+                '2': '2',
+                '3': '3',
+                '4': '4',
+                'random': '?',
+            }[graphSettings['shopsanity'] as string] as string,
+            fade: graphSettings['shopsanity'] === 'off',
+            tooltip: graphSettingsOptions['shopsanity'].display_name,
+            tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['shopsanity']),
+        },
+        'shuffle_ganon_tower': {
+            img: '/images/ganon.png',
+            fade: !graphSettings['shuffle_ganon_tower'],
+            tooltip: graphSettingsOptions['shuffle_ganon_tower'].display_name,
+            tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['shuffle_ganon_tower']),
+        },
+        'shuffle_hideout_entrances': {
+            img: '/images/gerudo_symbol.png',
+            fade: graphSettings['shuffle_hideout_entrances'] === 'off',
+            tooltip: graphSettingsOptions['shuffle_hideout_entrances'].display_name,
+            tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['shuffle_hideout_entrances']),
+        },
+        'shuffle_child_spawn': {
+            img: HomeIcon,
+            rSub: 'C',
+            fade: !graphSettings['shuffle_child_spawn'],
+            tooltip: graphSettingsOptions['shuffle_child_spawn'].display_name,
+        },
+        'shuffle_adult_spawn': {
+            img: HomeIcon,
+            rSub: 'A',
+            fade: !graphSettings['shuffle_adult_spawn'],
+            tooltip: graphSettingsOptions['shuffle_adult_spawn'].display_name,
+        },
+        'owl_drops': {
+            img: '/images/kaepora.png',
+            fade: graphSettings['owl_drops'] === 'off',
+            tooltip: graphSettingsOptions['owl_drops'].display_name,
+            tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['owl_drops']),
+        },
+        'warp_songs': {
+            img: '/images/warp_pad.png',
+            fade: graphSettings['warp_songs'] === 'off',
+            tooltip: graphSettingsOptions['warp_songs'].display_name,
+            tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['warp_songs']),
+        },
+        'shuffle_gerudo_valley_river_exit': {
+            img: '/images/gerudo_valley_waterfall.png',
+            fade: graphSettings['shuffle_gerudo_valley_river_exit'] === 'off',
+            tooltip: graphSettingsOptions['shuffle_gerudo_valley_river_exit'].display_name,
+            tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['shuffle_gerudo_valley_river_exit']),
+        },
+        'blue_warps': {
+            img: Brightness5Icon,
+            imgClass: 'blueWarpIcon',
+            fade: graphSettings['blue_warps'] === 'dungeon',
+            tooltip: graphSettingsOptions['blue_warps'].display_name,
+            tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['blue_warps']),
+        },
+        'dungeon_back_access': {
+            img: '/images/ganon.png',
+            fade: !graphSettings['dungeon_back_access'],
+            tooltip: graphSettingsOptions['dungeon_back_access'].display_name,
+            tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['dungeon_back_access']),
+        },
+        'logic_water_gold_scale_no_entry': {
+            img: '/images/iron_gold.png',
+            fade: !graphSettings['logic_water_gold_scale_no_entry'],
+            tooltip: graphSettingsOptions['logic_water_gold_scale_no_entry'].display_name,
+            tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['logic_water_gold_scale_no_entry']),
+        },
+        'skip_reward_from_rauru': {
+            img: '/images/rauru.png',
+            fade: !graphSettings['skip_reward_from_rauru'],
+            tooltip: graphSettingsOptions['skip_reward_from_rauru'].display_name,
+            tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['skip_reward_from_rauru']),
+        },
+        'shuffle_items': {
+            img: LoopIcon,
+            fade: !graphSettings['shuffle_items'],
+            tooltip: graphSettingsOptions['shuffle_items'].display_name,
+            tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['shuffle_items']),
+        },
+        'shuffle_base_item_pool': {
+            img: '/images/OoT_Heart_Container_Icon.png',
+            fade: !graphSettings['shuffle_base_item_pool'],
+            tooltip: graphSettingsOptions['shuffle_base_item_pool'].display_name,
+            tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['shuffle_base_item_pool']),
+        },
+        'shuffle_gerudo_fortress_heart_piece': {
+            img: '/images/OoT_Piece_of_Heart_Icon.png',
+            fade: graphSettings['shuffle_gerudo_fortress_heart_piece'] === 'vanilla',
+            tooltip: graphSettingsOptions['shuffle_gerudo_fortress_heart_piece'].display_name,
+            tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['shuffle_gerudo_fortress_heart_piece']),
+        },
+    };
+    }
+
+    if (isRealRobBranch) {
+    realRobSettingMap = {
+        'fix_broken_actors': {
+            img: '/images/OoT_Deku_Shield_Icon.png',
+            fade: !graphSettings['fix_broken_actors'],
+            tooltip: graphSettingsOptions['fix_broken_actors'].display_name,
+        },
+        'shuffle_fishies': {
+            img: '/images/OoT_Fish_Icon.png',
+            fade: !graphSettings['shuffle_fishies'],
+            tooltip: graphSettingsOptions['shuffle_fishies'].display_name,
+        },
+        'shuffle_grass': {
+            img: '/images/grass.png',
+            fade: !graphSettings['shuffle_grass'],
+            tooltip: graphSettingsOptions['shuffle_grass'].display_name,
+        },
+        'shuffle_gossipstones': {
+            img: '/images/gossip-stone_32x32.png',
+            fade: !graphSettings['shuffle_gossipstones'],
+            tooltip: graphSettingsOptions['shuffle_gossipstones'].display_name,
+        },
+        'shuffle_wonderitems': {
+            img: '/images/navi.png',
+            fade: !graphSettings['shuffle_wonderitems'],
+            tooltip: graphSettingsOptions['shuffle_wonderitems'].display_name,
+        },
+        'shuffle_enemy_drops': {
+            img: '/images/souls/skull-kid_32x32.png',
+            fade: !graphSettings['shuffle_enemy_drops'],
+            tooltip: graphSettingsOptions['shuffle_enemy_drops'].display_name,
+        },
+        'shuffle_enemy_spawns': {
+            img: '/images/Soul_Icon.png',
+            rImg: {
+                'regional': '/images/medallion_wheel.png',
+                'bosses': '/images/gohma_eye.png',
+            }[graphSettings['shuffle_enemy_spawns'] as string] as string,
+            fade: graphSettings['shuffle_enemy_spawns'] === 'off',
+            tooltip: graphSettingsOptions['shuffle_enemy_spawns'].display_name,
+            tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['shuffle_enemy_spawns']),
+        },
+        'shuffle_pots': {
+            img: '/images/pot.png',
+            lImg: {
+                'dungeons': '/images/dungeon_entrance.png',
+                'overworld': '/images/outline_public_white_36dp.png',
+            }[graphSettings['shuffle_pots'] as string] as string,
+            rSub: {
+                'true': 'All',
+                'false': 'Drop',
+            }[graphSettings['shuffle_empty_pots']?.toString() as string],
+            rSubSource: 'shuffle_empty_pots',
+            fade: graphSettings['shuffle_pots'] === 'off',
+            tooltip: graphSettingsOptions['shuffle_pots'].display_name,
+            tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['shuffle_pots']),
+        },
+        'shuffle_crates': {
+            img: '/images/crate.png',
+            lImg: {
+                'dungeons': '/images/dungeon_entrance.png',
+                'overworld': '/images/outline_public_white_36dp.png',
+            }[graphSettings['shuffle_crates'] as string] as string,
+            rSub: {
+                'true': 'All',
+                'false': 'Drop',
+            }[graphSettings['shuffle_empty_crates']?.toString() as string],
+            rSubSource: 'shuffle_empty_crates',
+            fade: graphSettings['shuffle_crates'] === 'off',
+            tooltip: graphSettingsOptions['shuffle_crates'].display_name,
+            tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['shuffle_crates']),
+        },
+    };
+    }
+
+    let mergedSettingMap = {};
+    if (isFenhlBranch) {
+        mergedSettingMap = merge(baseSettingMap, fenhlSettingMap);
+        mergedSettingMap = merge(mergedSettingMap, stableSettingMap);
+    } else if (isRealRobBranch) {
+        mergedSettingMap = merge(baseSettingMap, mainSettingMap);
+        mergedSettingMap = merge(mergedSettingMap, realRobSettingMap);
+    } else {
+        mergedSettingMap = merge(baseSettingMap, mainSettingMap);
+        mergedSettingMap = merge(mergedSettingMap, stableSettingMap);
+    }
+    return mergedSettingMap;
 }

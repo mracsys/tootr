@@ -1,3 +1,27 @@
+.root {
+    display: flex !important;
+}
+.greenNote {
+    fill: #508835;
+}
+.redNote {
+    fill: #882B15;
+}
+.blueNote {
+    fill: #355088;
+}
+.orangeNote {
+    fill: #885500;
+}
+.purpleNote {
+    fill: #883588;
+}
+.yellowNote {
+    fill: #888035;
+}
+.greyNote {
+    fill: #888888;
+}
 body {
     margin: 0px !important;
     font-size: 0.875rem !important;
@@ -5,8 +29,124 @@ body {
     font-weight: 400 !important;
     line-height: 1.43 !important;
     letter-spacing: 0.01071em !important;
+
     --theme-spacing: 8px;
-    --drawer-width: 496px;
+    --drawer-width: 480px;
+
+    /*
+        Theme colors generated from:
+        https://material-foundation.github.io/material-theme-builder/
+
+        See styles/themes/material-theme.json for source colors
+
+        Item tracker colors:
+        - blue: 779ac9
+        - green: 75a975
+        - purple: 7164a0
+        - tan: fffce5
+    */
+
+    color: var(--md-sys-color-on-surface) !important;
+    background-color: var(--md-sys-color-surface-dim) !important;
+
+    --color-header: var(--md-sys-color-tertiary-container);
+    --color-header-race-mode: var(--md-extended-color-logic-red-color-container);
+    --color-header-text: rgb(240 240 247);
+    --color-header-border: var(--md-sys-color-outline);
+    --color-header-menu-button-hover: var(--color-hover-state-overlay);
+    --color-header-button: var(--md-sys-color-surface-container-highest);
+    --color-header-button-text: var(--md-sys-color-on-surface);
+    --color-header-button-shadow: var(--md-sys-color-shadow);
+
+    --color-warpmenu: var(--md-sys-color-tertiary-container);
+    --color-warpmenu-hover: var(--color-hover);
+    --color-warpmenu-text: rgb(240 240 247);
+    --color-warpmenu-text-disabled: #ACABAE;
+    --color-warpmenu-border: var(--md-sys-color-outline);
+    --color-warpmenu-text-shadow: var(--color-shadowed-text-shadow);
+
+    /*
+        Note that the select controls have hard-coded
+        colors for the dropdown arrow.
+    */
+    --color-sidebar: var(--md-sys-color-surface-bright);
+    --color-sidebar-hover: var(--md-sys-color-surface-dim);
+    --color-sidebar-border: var(--md-sys-color-outline);
+    --color-sidebar-text: var(--md-sys-color-on-surface);
+    --color-sidebar-text-secondary: var(--md-sys-color-outline);
+    --color-sidebar-text-border-focus: var(--md-sys-color-on-surface-variant);
+    --color-sidebar-text-border: var(--md-sys-color-on-surface-variant);
+    --color-sidebar-text-select: var(--md-sys-color-on-surface);
+    --color-sidebar-text-select-hover: var(--md-sys-color-on-surface);
+    --color-sidebar-shadow: var(--md-sys-color-shadow);
+    --color-sidebar-mq: var(--md-extended-color-woth-color);
+    --color-sidebar-upgrade: var(--color-shadowed-text-max);
+    --color-sidebar-expando: var(--md-sys-color-surface-container-lowest);
+    --color-sidebar-expando-text: var(--md-sys-color-on-surface);
+
+    --color-sidebar-menu: var(--md-sys-color-surface-bright);
+    --color-sidebar-menu-hover: var(--md-sys-color-surface-dim);
+    --color-sidebar-menu-text: var(--md-sys-color-on-surface);
+    --color-sidebar-menu-header-border: var(--md-sys-color-outline);
+
+    --color-entrance-menu-option-hover: var(--md-sys-color-surface-dim);
+    --color-entrance-menu-option-text-hover: var(--md-sys-color-on-surface);
+    --color-entrance-menu-option-text: var(--md-sys-color-on-surface);
+    --color-entrance-menu-input: var(--md-sys-color-surface-bright);
+    --color-entrance-menu-input-text: var(--md-sys-color-on-surface);
+    --color-entrance-menu-border: var(--md-sys-color-outline);
+    --color-entrance-menu-select-border: var(--md-sys-color-outline);
+    --color-entrance-menu-select-border-focus: var(--md-sys-color-on-surface-variant);
+
+    --color-location-background: var(--md-sys-color-surface-container-high);
+    --color-location-hover: var(--md-sys-color-surface-dim);
+    --color-location-sim-scroll: var(--md-sys-color-outline);
+    --color-entrance-background: var(--md-sys-color-surface-bright);
+    --color-unlinked-entrance: var(--md-sys-color-error);
+
+    --color-location-icon-text-shadow: var(--color-shadowed-text-shadow);
+    --color-location-text: var(--md-sys-color-on-surface);
+
+    --color-area-header: var(--md-sys-color-primary-container);
+    --color-area-background: var(--md-sys-color-primary);
+    --color-area-header-text: var(--md-sys-color-on-primary-container);
+    --color-area-box-shadow: var(--md-sys-color-shadow);
+    --color-area-header-required: var(--md-extended-color-woth-color-container);
+    --color-area-header-text-required: var(--md-extended-color-woth-on-color-container);
+    --color-area-background-required: var(--md-extended-color-woth-color);
+    --color-area-header-path: var(--md-extended-color-path-color-container);
+    --color-area-header-text-path: var(--md-extended-color-path-on-color-container);
+    --color-area-background-path: var(--md-extended-color-path-color);
+    --color-area-header-foolish: var(--md-extended-color-foolish-color-container);
+    --color-area-header-text-foolish: var(--md-extended-color-foolish-on-color-container);
+    --color-area-background-foolish: var(--md-extended-color-foolish-color);
+
+    --color-item-menu-text: var(--md-sys-color-on-surface);
+    --color-item-menu: var(--md-sys-color-surface-bright);
+    --color-item-menu-hover: var(--md-sys-color-surface-dim);
+    --color-item-menu-submenu: var(--md-sys-color-surface-container-lowest);
+    --color-item-menu-submenu-hover: var(--md-sys-color-surface-variant);
+
+    --color-logic-border: var(--md-sys-color-outline-variant);
+
+    --color-logical-green: var(--md-extended-color-logic-green-color-container);
+    --color-logical-yellow: var(--md-extended-color-logic-yellow-color-container);
+    --color-logical-red: var(--md-extended-color-logic-red-color-container);
+    --color-logical-grey: var(--md-extended-color-logic-grey-color-container);
+
+    --color-dialog-alert: var(--md-sys-color-error);
+
+    --color-icon-text-shadow: var(--color-shadowed-text-shadow);
+    --color-icon-text: var(--md-sys-color-on-surface);
+    --color-icon-tooltip: var(--md-sys-color-surface-container-highest);
+    --color-icon-tooltip-border: var(--md-sys-color-outline);
+    --color-icon-tooltip-text: var(--md-sys-color-on-surface);
+    --color-icon-tooltip-shadow: var(--md-sys-color-shadow);
+}
+
+
+
+.root.old {
 
     color: rgba(0, 0, 0, 0.87) !important;
     background-color: rgb(215, 215, 215) !important;
@@ -66,17 +206,17 @@ body {
     --color-location-icon-text-shadow: #EEEEEE;
     --color-location-text: black;
 
-    --area-header: #fff59d; /*yellow[200]*/
-    --area-background: #cbc26d;
-    --area-box-shadow: rgba(0,0,0,0.2);
-    --area-box-shadow2: rgba(0,0,0,0.14);
-    --area-box-shadow3: rgba(0,0,0,0.12);
-    --area-header-required: #BBDEFB;
-    --area-background-required: #42A5F5;
-    --area-header-path: #C8E6C9;
-    --area-background-path: #66BB6A;
-    --area-header-foolish: #E0E0E0;
-    --area-background-foolish: #bdbdbd;
+    --color-area-header: #fff59d; /*yellow[200]*/
+    --color-area-background: #cbc26d;
+    --color-area-box-shadow: rgba(0,0,0,0.2);
+    --color-area-box-shadow2: rgba(0,0,0,0.14);
+    --color-area-box-shadow3: rgba(0,0,0,0.12);
+    --color-area-header-required: #BBDEFB;
+    --color-area-background-required: #42A5F5;
+    --color-area-header-path: #C8E6C9;
+    --color-area-background-path: #66BB6A;
+    --color-area-header-foolish: #E0E0E0;
+    --color-area-background-foolish: #bdbdbd;
 
     --color-item-menu-text: #FFFFFF;
     --color-item-menu: #212121; /*grey[900]*/
@@ -99,31 +239,4 @@ body {
     --color-icon-tooltip-shadow: rgba(0,0,0,0.2);
     --color-icon-tooltip-shadow2: rgba(0,0,0,0.14);
     --color-icon-tooltip-shadow3: rgba(0,0,0,0.12);
-}
-.root.dark {
-    --color-header: #546e7a;
-}
-.root {
-    display: flex !important;
-}
-.greenNote {
-    fill: #508835;
-}
-.redNote {
-    fill: #882B15;
-}
-.blueNote {
-    fill: #355088;
-}
-.orangeNote {
-    fill: #885500;
-}
-.purpleNote {
-    fill: #883588;
-}
-.yellowNote {
-    fill: #888035;
-}
-.greyNote {
-    fill: #888888;
 }

@@ -96,6 +96,8 @@
 }
 .locationKnownItem .iconRightText {
     text-shadow: 0px 0px 6px var(--color-location-icon-text-shadow), 0px 0px 2px var(--color-location-icon-text-shadow), 0px 0px 2px var(--color-location-icon-text-shadow), 0px 0px 2px var(--color-location-icon-text-shadow), 0px 0px 2px var(--color-location-icon-text-shadow);
+    color: var(--color-shadowed-text);
+    right: -4px;
 }
 .locationWalletTier .iconDiv {
     margin-left: var(--theme-spacing);

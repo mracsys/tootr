@@ -12,6 +12,7 @@ export interface ItemMenuProps {
     menuLayout: item_menu_layout,
     handleClose: () => void,
     handleFind: MouseEventHandler,
+    showClearButton: boolean,
 }
 
 const ItemMenu = ({
@@ -20,6 +21,7 @@ const ItemMenu = ({
     menuLayout,
     handleClose,
     handleFind,
+    showClearButton,
 }: ItemMenuProps) => {
     let [anchor, setAnchor] = useState<Element | null>(null);
     let openSubMenu: MouseEventHandler = (e) => {
@@ -55,6 +57,7 @@ const ItemMenu = ({
                                                     menuLayout={row_item.menu_list}
                                                     handleClose={handleSubClose}
                                                     handleFind={handleFind}
+                                                    showClearButton={false}
                                                 />
                                             </React.Fragment>
                                         : !!row_item.item_list ?
@@ -79,11 +82,15 @@ const ItemMenu = ({
                     )
                 })
             }
+            {
+            showClearButton ?
             <div className="itemMenuRow">
                 <div className="itemMenuClear" onClick={handleFind} data-found-in={sourceLocation} data-found-item="">
                     <p className="locationMenuClear">Clear Item</p>
                 </div>
             </div>
+            : null
+            }
         </Menu>
     );
 }

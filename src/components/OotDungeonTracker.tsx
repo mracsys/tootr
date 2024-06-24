@@ -4,6 +4,7 @@ import ContextMenuHandlerWithArgs from './ContextMenuHandlerWithArgs';
 import { GraphEntrance, GraphLocation, GraphSettingsConfiguration } from '@mracsys/randomizer-graph-tool';
 import { createBlankTrackerItem } from "./OotItemPanel";
 import OotItemIcon from './OotItemIcon';
+import ContextMenuHandler from "./ContextMenuHandler";
 
 import '@/styles/DungeonPanel.css';
 
@@ -87,8 +88,10 @@ export const OotDungeonTracker = ({
             variantName = 'MQ';
         }
     }
+    const contextMenuHandler = new ContextMenuHandler(changeDungeon);
     let dungeon_item_children = [];
     let entryNum = 0;
+    let dungeon_item_length = 0;
     for (let itemEntry of gridEntry.item_list) {
         if (itemEntry.item_name === 'DungeonReward') {
             let itemName: string;
@@ -144,18 +147,8 @@ export const OotDungeonTracker = ({
             let addItem = (!collected || (!!(itemEntry.sub_variants) && itemEntry.sub_variants.length > collected)) ? () => addStartingItem(itemEntry.item_name) : () => {};
             let contextMenuHandler = new ContextMenuHandlerWithArgs(() => removeStartingItem(itemEntry.item_name), {});
             let subscript = ' '; // must be non-empty string to override the boss key subscripts
-            let subscriptStyle = {};
+            let subscriptClass = '';
             if (itemEntry.item_name.includes('Small Key')) {
-                /* if (itemEntry.item_name.includes('Fire Temple')) {
-                    // remove fake small key added by logic to simulate unlocking the boss key loop
-                    let mq_dungeons = graphSettings['mq_dungeons_specific'];
-                    let shuffle_smallkeys = graphSettings['shuffle_smallkeys'] as string;
-                    let keysanity = ['keysanity', 'remove', 'any_dungeon', 'overworld', 'regional'].includes(shuffle_smallkeys);
-                    let fireMQ = Array.isArray(mq_dungeons) && mq_dungeons.includes('Fire Temple');
-                    if (!keysanity && !fireMQ && collected > 0) {
-                        collected--;
-                    }
-                } */
                 let max_keys = graphLocations.filter((l) => l.vanilla_item?.name === itemEntry.item_name).length;
                 if (itemEntry.item_name === 'Small Key (Thieves Hideout)' && Object.keys(graphSettings).includes('gerudo_fortress') && graphSettings['gerudo_fortress'] === 'fast') {
                     // gerudo guard locations still exist with fast fortress even though they are disabled
@@ -164,7 +157,7 @@ export const OotDungeonTracker = ({
                 subscript = `${collected.toString()}/${max_keys}`;
                 addItem = (collected < max_keys) ? () => addStartingItem(itemEntry.item_name) : () => {};
                 if (collected >= max_keys && graphLocations.length > 0) {
-                    subscriptStyle = { color: '#00FF00' };
+                    subscriptClass = 'ootMaxItemUpgrade';
                 }
             }
             const smallKeys = [
@@ -202,14 +195,16 @@ export const OotDungeonTracker = ({
             } else {
                 dungeon_item_children.push(<OotItemIcon
                     itemName={itemEntry.item_name}
+                    className={subscriptClass}
                     fade={collected ? false : true}
                     hideLabels={false}
                     onClick={addItem}
                     handleContextMenu={contextMenuHandler}
                     subscript={subscript}
-                    subscriptStyle={subscriptStyle}
                     key={`${itemEntry.item_name}DungeonPanelEntry${gridEntry.label}${entryNum}`}
                 />);
+                if (itemEntry.item_name.includes('Small Key')) dungeon_item_length = 1;
+                if (itemEntry.item_name.includes('Boss Key') || itemEntry.item_name.includes('Membership')) dungeon_item_length = 2;
             }
         }
         entryNum++;
@@ -259,6 +254,7 @@ export const OotDungeonTracker = ({
                     } else {
                         collected = 0;
                     }
+                    if (collected > max) collected = max;
                     dungeonSilverRupeeCounts.push({
                         name: extractSilverRupeeName(itemEntry.item_name, gridEntry.setting_value),
                         collected: collected,
@@ -279,6 +275,11 @@ export const OotDungeonTracker = ({
                     key={`${itemName}DungeonPanelSilverRupee${gridEntry.label}${entryNum}`}
                 />);
                 entryNum++;
+                if (itemName === 'Silver Rupee (Dodongos Cavern Staircase)') {
+                    dungeon_item_length = 1;
+                } else {
+                    dungeon_item_length = 3;
+                }
             }
         }
         if (isBlank && includeBlankSilverRupeeSquare) {
@@ -290,10 +291,37 @@ export const OotDungeonTracker = ({
     return (
         <div className='ootDungeonContainer' key={`${gridEntry.label}DungeonPanelEntry`}>
             <div className='ootDungeonLabelContainer'>
-                <div className={labelClass} onClick={changeDungeon}>{gridEntry.label}</div>
-                <div className='ootDungeonVariantContainer' onClick={changeDungeon}><div className='ootDungeonVariant'>{variantName}</div></div>
+                <div
+                    className={labelClass}
+                    onClick={changeDungeon}
+                    onContextMenu={contextMenuHandler.onContextMenu}
+                    onTouchStart={contextMenuHandler.onTouchStart}
+                    onTouchCancel={contextMenuHandler.onTouchCancel}
+                    onTouchEnd={contextMenuHandler.onTouchEnd}
+                    onTouchMove={contextMenuHandler.onTouchMove}
+                >
+                    {gridEntry.label}
+                </div>
+                <div
+                    className='ootDungeonVariantContainer'
+                    onClick={changeDungeon}
+                    onContextMenu={contextMenuHandler.onContextMenu}
+                    onTouchStart={contextMenuHandler.onTouchStart}
+                    onTouchCancel={contextMenuHandler.onTouchCancel}
+                    onTouchEnd={contextMenuHandler.onTouchEnd}
+                    onTouchMove={contextMenuHandler.onTouchMove}
+                >
+                    <div className='ootDungeonVariant'>{variantName}</div>
+                </div>
             </div>
-            <div className='ootDungeonItems'>{dungeon_item_children}</div>
+            <div className="ootDungeonInsetContainer">
+                {
+                    dungeon_item_length > 0 ?
+                        <div className={`ootDungeonInset${dungeon_item_length}`}></div>
+                        : null
+                }
+                <div className='ootDungeonItems'>{dungeon_item_children}</div>
+            </div>
         </div>
     );
 }

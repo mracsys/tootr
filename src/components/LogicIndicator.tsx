@@ -13,23 +13,44 @@ const LogicIndicator = ({
     spot,
     showAgeLogic,
 }: PropsWithChildren<LogicIndicator>) => {
-    let logicColor: string = '';
-    let adultColor: string = '';
-    let childColor: string = '';
+    let logicColor = '';
+    let adultColor = 0;
+    let childColor = 0;
+    let childVisited = false;
+    let adultVisited = false;
+    let ageColor = '';
+    let ageImage: string | null = null;
+    let logicColors = [
+        'logicalBlank',
+        'logicalYellow',
+        'logicalGreen',
+    ]
     if (showAgeLogic) {
         if (spot.adult_visited) {
-            adultColor = 'logicalGreen';
+            adultColor = 2;
+            adultVisited = true;
         } else if (spot.adult_visited_with_other_tricks) {
-            adultColor = 'logicalYellow';
+            adultColor = 1;
+            adultVisited = true;
         } else {
-            adultColor = 'logicalBlank';
+            adultColor = 0;
         }
         if (spot.child_visited) {
-            childColor = 'logicalGreen';
+            childColor = 2;
+            childVisited = true;
         } else if (spot.child_visited_with_other_tricks) {
-            childColor = 'logicalYellow';
+            childColor = 1;
+            childVisited = true;
         } else {
-            childColor = 'logicalBlank';
+            childColor = 0;
+        }
+        ageColor = logicColors[Math.max(adultColor, childColor)];
+        if (childVisited && adultVisited) {
+            ageImage = '/images/both_logic.png';
+        } else if (adultVisited) {
+            ageImage = '/images/adult_logic.png';
+        } else if (childVisited) {
+            ageImage = '/images/child_logic.png';
         }
     }
     if (spot.visited) {
@@ -43,27 +64,11 @@ const LogicIndicator = ({
         <div className='logicContainer'>
             {
                 showAgeLogic ?
-                <div className='logicMultiIndicator'>
+                <div className={`logicMultiIndicator ${ageColor}`}>
                     {
-                        spot.child_visited || spot.child_visited_with_other_tricks ?
-                        <div className={childColor}>
-                            {/*<img src="/images/OoT_Kokiri_Sword_Icon.png" alt="Child Logical Access" />*/}
-                            C
-                        </div>
-                        : null
-                    }
-                    {
-                        spot.adult_visited || spot.adult_visited_with_other_tricks ?
-                        <div className={adultColor}>
-                            {/*<img src="/images/OoT_Master_Sword_Icon.png" alt="Adult Logical Access" />*/}
-                            A
-                        </div>
-                        : null
-                    }
-                    {
-                        !spot.visited && !spot.visited_with_other_tricks ?
-                        <div className={logicColor}></div>
-                        : null
+                        !!ageImage ?
+                            <img src={ageImage} alt='Age Access Indicator' />
+                            : null
                     }
                 </div> :
                 <div className={`logicIndicator ${logicColor}`}></div>

@@ -29,7 +29,6 @@ interface ItemPanelProps {
     graphLocations: GraphLocation[],
     graphEntrances: GraphEntrance[],
     visitedSimRegions: Set<string>,
-    refreshCounter: number,
 }
 
 export const ItemPanel = ({
@@ -49,7 +48,6 @@ export const ItemPanel = ({
     graphLocations,
     graphEntrances,
     visitedSimRegions,
-    refreshCounter,
 }: ItemPanelProps) => {
     return (
         <div className="itemsHeldContainer">
@@ -69,7 +67,6 @@ export const ItemPanel = ({
                 graphRewardHints={graphRewardHints}
                 graphLocations={graphLocations}
                 graphEntrances={graphEntrances}
-                refreshCounter={refreshCounter}
                 visitedSimRegions={visitedSimRegions}
             />
         </div>

@@ -17,6 +17,7 @@ interface WarpMenuProps {
     areaMenuHandler: ContextMenuHandler;
     pages: {[page: string]: GraphRegion[]};
     warps: GraphEntrance[];
+    raceMode: boolean;
 }
 
 const WarpMenu = ({
@@ -25,6 +26,7 @@ const WarpMenu = ({
     areaMenuHandler,
     pages,
     warps,
+    raceMode,
 }: WarpMenuProps) => {
     let [expandWarpMenu, setExpandWarpMenu] = useState<boolean>(false);
     let [expandDungeonMenu, setExpandDungeonMenu] = useState<boolean>(false);
@@ -64,7 +66,7 @@ const WarpMenu = ({
     return (
         <div
             id="warpMenu"
-            className="warpMenu"
+            className={`warpMenu ${raceMode ? 'raceModeBar' : ''}`}
         >
             <div
                 id="warpMenuVisible"

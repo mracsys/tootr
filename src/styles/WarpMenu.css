@@ -9,13 +9,13 @@
         display: flex;
         flex-direction: column;
         background-color: var(--color-warpmenu);
-        box-shadow: -2px -2px 4px -1px rgba(0,0,0,0.2),-4px -4px 5px 0px rgba(0,0,0,0.14),-1px -1px 10px 0px rgba(0,0,0,0.12);
+        box-shadow: -2px -2px 4px -1px var(--color-warpmenu-text-shadow);
         max-height: 50%;
     }
 }
 @media screen and (min-width: 600px) {
     .warpMenu {
-        border-radius: 8px 8px 0 0;
+        border-radius: 8px 0px 0 0;
         overflow: hidden;
         position: fixed;
         bottom: 0;
@@ -24,15 +24,19 @@
         display: flex;
         flex-direction: column;
         background-color: var(--color-warpmenu);
-        box-shadow: -2px -2px 4px -1px rgba(0,0,0,0.2),-4px -4px 5px 0px rgba(0,0,0,0.14),-1px -1px 10px 0px rgba(0,0,0,0.12);
+        border-top: 1px solid var(--color-warpmenu-border);
+        border-left: 1px solid var(--color-warpmenu-border);
         max-height: 50%;
     }    
 }
+.warpMenu.raceModeBar {
+    background-color: var(--color-header-race-mode) !important;
+}
 .warpMenu .iconRightText {
-    color: var(--color-warpmenu-text);
+    color: var(--color-shadowed-text);
 }
 .warpMenu .iconTradeText {
-    color: var(--color-warpmenu-text);
+    color: var(--color-shadowed-text);
 }
 .warpIcon {
     cursor: pointer;
@@ -60,9 +64,6 @@
     width: 32px !important;
     height: 100% !important;
     cursor: pointer !important;
-}
-.expandWarpMenu:hover {
-    background-color: var(--color-warpmenu-hover) !important;
 }
 .MuiCollapse-root.warpAreaList {
     overflow-y: auto !important;

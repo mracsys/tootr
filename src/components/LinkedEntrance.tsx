@@ -176,7 +176,6 @@ const LinkedEntrance = ({
                                 })
                             }
                         </div>
-                        <hr />
                     </React.Fragment>
                     : null
             }

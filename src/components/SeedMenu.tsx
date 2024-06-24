@@ -1,7 +1,6 @@
 import { useState, MouseEvent, ChangeEventHandler, Dispatch, SetStateAction } from 'react';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import ExpandMore from '@mui/icons-material/ExpandMore';
 import NewSeedDialog from './NewSeedDialog';
 import type { SavedTrackerState } from './Tracker';
 import SavedSeedDialog from './SavedSeedDialog';
@@ -17,6 +16,7 @@ interface SeedMenuProps {
     stateListFunction: () => {[savedName: string]: SavedTrackerState},
     setAlertReset: Dispatch<SetStateAction<boolean>>,
     presets: string[],
+    currentPreset: string,
 }
 
 export const SeedMenu = ({
@@ -30,6 +30,7 @@ export const SeedMenu = ({
     stateListFunction,
     setAlertReset,
     presets,
+    currentPreset,
 }: SeedMenuProps) => {
     const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
     const [importDialogOpen, setImportDialogOpen] = useState<boolean>(false);
@@ -37,7 +38,7 @@ export const SeedMenu = ({
     const [saving, setSaving] = useState<boolean>(false);
     const open = Boolean(anchorEl);
 
-    const handleClick = (event: MouseEvent<HTMLDivElement>) => {
+    const handleClick = (event: MouseEvent<HTMLButtonElement>) => {
         setAnchorEl(event.currentTarget);
     };
     const handleClose = () => {
@@ -72,10 +73,13 @@ export const SeedMenu = ({
 
     return (
         <div className='seedMenuContainer'>
-            <div className="menuSeedButton">
-                <span onClick={handleClick} className="seedMenuButtonLabel">Seed 1 <ExpandMore /></span>
-                <input id='graphPlandoFileInput' style={{display: 'none'}} type='file' onChange={(e) => importFunction(e)} />
-            </div>
+            <button
+                onClick={handleClick}
+                className="menuButton"
+            >
+                <span className="menuButtonLabel">File</span>
+            </button>
+            <input id='graphPlandoFileInput' style={{display: 'none'}} type='file' onChange={(e) => importFunction(e)} />
             <Menu
                 id="seedMenu"
                 anchorEl={anchorEl}
@@ -94,6 +98,7 @@ export const SeedMenu = ({
                 simFunction={simFunction}
                 presetFunction={presetFunction}
                 presets={presets}
+                currentPreset={currentPreset}
                 importDialogOpen={importDialogOpen}
                 setImportDialogOpen={setImportDialogOpen}
             />

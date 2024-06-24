@@ -31,7 +31,6 @@ interface OotItemPanelProps {
     graphLocations: GraphLocation[],
     graphEntrances: GraphEntrance[],
     visitedSimRegions: Set<string>,
-    refreshCounter: number,
 }
 
 export const createBlankTrackerItem = (entryNum: number) => {
@@ -77,7 +76,6 @@ export const OotItemPanel = ({
     graphLocations,
     graphEntrances,
     visitedSimRegions,
-    refreshCounter,
 }: OotItemPanelProps) => {
     const [bottleSlots, setBottleSlots] = useState<(string|null)[]>([null, null, null, null]);
     const [lockedSlots, setLockedSlots] = useState<boolean[]>([false, false, false, false]);
@@ -232,7 +230,7 @@ export const OotItemPanel = ({
                 itemName = gridEntry.item_name;
                 addItem = (!collected || (!!(gridEntry.sub_variants) && gridEntry.sub_variants.length > collected)) ? () => addStartingItem(gridEntry.item_name) : () => {};
                 // if either trade quest shuffle is off, compress the C button icons to make room for the trade item(s)
-                if ((!child_trade || !adult_trade) && !!gridEntry.position) {
+                if (!!gridEntry.position) {
                     subClass = gridEntry.position;
                 }
             } else if (gridEntry.item_name === 'Scarecrow Song') {
@@ -264,6 +262,14 @@ export const OotItemPanel = ({
                 subscript = collected > 0 ? '' + collected : '';
                 subscriptClass = collected >= 10 ? 'ootMaxItemUpgrade' : '';
                 addItem = 10 > collected ? () => addStartingItem(gridEntry.item_name) : () => {};
+            } else if (gridEntry.item_name === 'Like-like Soul') {
+                itemName = gridEntry.item_name;
+                if (Object.keys(graphPlayerInventory).includes('Likelike Soul')) {
+                    collected = graphPlayerInventory['Likelike Soul'];
+                } else {
+                    collected = 0;
+                }
+                addItem = (!collected || (!!(gridEntry.sub_variants) && gridEntry.sub_variants.length > collected)) ? () => addStartingItem(gridEntry.item_name) : () => {};
             } else {
                 itemName = gridEntry.item_name;
                 addItem = (!collected || (!!(gridEntry.sub_variants) && gridEntry.sub_variants.length > collected)) ? () => addStartingItem(gridEntry.item_name) : () => {};
@@ -329,7 +335,7 @@ export const OotItemPanel = ({
                 // quest. Otherwise each item must be considered separately.
                 if (child_trade) {
                     // whole row used potentially for ocarina buttons if both trade quests are on
-                    return adult_trade ? null : createBlankTrackerItem(entryNum);
+                    return createBlankTrackerItem(entryNum);
                 } else {
                     let currentStartingIndex = 0;
                     if (!!(graphSettings.starting_items)) {
@@ -365,7 +371,7 @@ export const OotItemPanel = ({
                 // if unshuffled, otherwise each item must be considered separately.
                 if (adult_trade) {
                     // whole row used potentially for ocarina buttons if both trade quests are on
-                    return child_trade ? null : createBlankTrackerItem(entryNum);
+                    return createBlankTrackerItem(entryNum);
                 } else {
                     let currentStartingIndex = 0;
                     if (!!(graphSettings.starting_items)) {
@@ -439,16 +445,20 @@ export const OotItemPanel = ({
         if (subscriptClass) {
             className = `${className} ${subscriptClass}`;
         }
-        return (<OotItemIcon
-            itemName={itemName}
-            className={className}
-            onClick={addItem}
-            handleContextMenu={contextMenuHandler}
-            subscript={subscript}
-            fade={fade}
-            hideLabels={false}
-            key={`${itemName}itemPanelEntry${entryNum}`}
-        />);
+        return (
+            <div className='itemPanelEntry' key={`${itemName}itemPanelEntry${entryNum}`}>
+                <div className={`itemPanelInset ${!fade ? 'found' : ''}`}></div>
+                <OotItemIcon
+                    itemName={itemName}
+                    className={className}
+                    onClick={addItem}
+                    handleContextMenu={contextMenuHandler}
+                    subscript={subscript}
+                    fade={fade}
+                    hideLabels={false}
+                />
+            </div>
+        );
     }
 
     let main_panel_children = [];
@@ -465,29 +475,92 @@ export const OotItemPanel = ({
         }
     }
 
-    let main_panel_last_row = [];
-    let collapsed_ocarina_buttons = [];
-    let main_panel_trade_items = [];
-    for (let gridEntry of itemPanelLayout.last_items_row) {
+    let song_panel_children = [];
+    for (let gridEntry of itemPanelLayout.song_items) {
         if (Object.keys(gridEntry).includes('item_name') && !!(gridEntry.item_name)) {
             let trackerItem = createTrackerItem(gridEntry, entryNum);
             if (!!trackerItem) {
-                if (gridEntry.item_name.includes('Ocarina C') && gridEntry.item_name.includes('Button') && (!child_trade || !adult_trade)) {
+                song_panel_children.push(trackerItem);
+                entryNum++;
+            }
+        }
+    }
+
+    let equip_panel_children = [];
+    for (let gridEntry of itemPanelLayout.equipment) {
+        if (Object.keys(gridEntry).includes('item_name') && !!(gridEntry.item_name)) {
+            let trackerItem = createTrackerItem(gridEntry, entryNum);
+            if (!!trackerItem) {
+                equip_panel_children.push(trackerItem);
+                entryNum++;
+            }
+        }
+    }
+
+    let boss_soul_panel_children = [];
+    let boss_souls = !!graphSettings.shuffle_enemy_spawns && typeof graphSettings.shuffle_enemy_spawns === 'string' && ['all', 'bosses'].includes(graphSettings.shuffle_enemy_spawns);
+    if (boss_souls) {
+        for (let gridEntry of itemPanelLayout.boss_souls) {
+            if (Object.keys(gridEntry).includes('item_name') && !!(gridEntry.item_name)) {
+                let trackerItem = createTrackerItem(gridEntry, entryNum);
+                if (!!trackerItem) {
+                    boss_soul_panel_children.push(trackerItem);
+                    entryNum++;
+                }
+            }
+        }
+    }
+
+    let enemy_soul_panel_children = [];
+    let enemy_souls = !!graphSettings.shuffle_enemy_spawns && graphSettings.shuffle_enemy_spawns === 'all';
+    if (enemy_souls) {
+        for (let gridEntry of itemPanelLayout.enemy_souls) {
+            if (Object.keys(gridEntry).includes('item_name') && !!(gridEntry.item_name)) {
+                let trackerItem = createTrackerItem(gridEntry, entryNum);
+                if (!!trackerItem) {
+                    enemy_soul_panel_children.push(trackerItem);
+                    entryNum++;
+                }
+            }
+        }
+    }
+
+    let regional_soul_panel_children = [];
+    let regional_souls = !!graphSettings.shuffle_enemy_spawns && graphSettings.shuffle_enemy_spawns === 'regional';
+    if (regional_souls) {
+        for (let gridEntry of itemPanelLayout.regional_souls) {
+            if (Object.keys(gridEntry).includes('item_name') && !!(gridEntry.item_name)) {
+                let trackerItem = createTrackerItem(gridEntry, entryNum);
+                if (!!trackerItem) {
+                    regional_soul_panel_children.push(trackerItem);
+                    entryNum++;
+                }
+            }
+        }
+    }
+
+    let song_panel_last_row = [];
+    let collapsed_ocarina_buttons = [];
+    for (let gridEntry of itemPanelLayout.last_song_row) {
+        if (Object.keys(gridEntry).includes('item_name') && !!(gridEntry.item_name)) {
+            let trackerItem = createTrackerItem(gridEntry, entryNum);
+            if (!!trackerItem) {
+                if (gridEntry.item_name.includes('Ocarina C') && gridEntry.item_name.includes('Button')) {
                     collapsed_ocarina_buttons.push(trackerItem);
-                } else if (gridEntry.item_name === 'Weird Egg' || gridEntry.item_name === 'Pocket Egg') {
-                    main_panel_trade_items.push(trackerItem);
                 } else {
-                    main_panel_last_row.push(trackerItem);
+                    song_panel_last_row.push(trackerItem);
                 }
                 entryNum++;
             }
         }
     }
     if (collapsed_ocarina_buttons.length > 0) {
-        main_panel_last_row.push(<div className='ootCompressedCButtons' key={`ootCompressedCButtonsContainer`}>{collapsed_ocarina_buttons}</div>);
-    }
-    if (main_panel_trade_items.length > 0) {
-        main_panel_last_row.push(...main_panel_trade_items);
+        song_panel_last_row.push(
+            <div className='ootCompressedCButtons' key={`ootCompressedCButtonsContainer`}>
+                <div className='ootCompressedInset'></div>
+                {collapsed_ocarina_buttons}
+            </div>
+        );
     }
 
     let child_trade_children = [];
@@ -623,69 +696,95 @@ export const OotItemPanel = ({
             <div className="ootItemsHeldContainer">
                 {main_panel_children}
             </div>
-            <div className='ootWinConsContainer'>
-                <div className='ootRewardWinCons'>
-                    {wincon_panel_children}
+            <div className="ootEquipmentHeldContainer">
+                {equip_panel_children}
+            </div>
+            <div className='ootQuestInfoContainer'>
+                <div className="ootSongsHeldContainer">
+                    {song_panel_children}
                 </div>
-                <div className='ootCounterWinCons'>
-                    <div className='ootCounterItems'>
-                        {counter_panel_children}
+                <div className='ootWinConsContainer'>
+                    <div className='ootRewardWinCons'>
+                        {wincon_panel_children}
+                    </div>
+                    <div className='ootCounterWinCons'>
+                        <div className='ootCounterItems'>
+                            {counter_panel_children}
+                        </div>
                     </div>
                 </div>
+                <div className='ootItemsHeldLastRowContainer'>
+                    {song_panel_last_row}
+                </div>
             </div>
-            <div className='ootItemsHeldLastRowContainer'>
-                {main_panel_last_row}
-            </div>
+            { child_trade ?
             <div className='ootChildTradeItemsContainer'>
                 {child_trade_children}
-            </div>
-            <div className='ootAdultTradeItemsContainer'>
+            </div> : null
+            }
+            { adult_trade ?
+            <div className={`ootAdultTradeItemsContainer${child_trade ? 1 : 0}`}>
                 {adult_trade_children}
+            </div> : null
+            }
+            { enemy_souls ?
+            <div className='ootEnemySoulsContainer'>
+                {enemy_soul_panel_children}
+            </div> : null
+            }
+            { boss_souls ?
+            <div className='ootBossSoulsContainer'>
+                {boss_soul_panel_children}
+            </div> : null
+            }
+            { regional_souls ?
+            <div className='ootRegionalSoulsContainer'>
+                {regional_soul_panel_children}
+            </div> : null
+            }
+            <div className={`ootAllDungeonItemsContainer ootAllDungeonItemsContainer${child_trade && adult_trade ? 2 : child_trade || adult_trade ? 1 : 0}`}>
+                <div className='ootDungeonItemsContainer'>
+                    {itemPanelLayout.dungeon_items.map((gridEntry) => {
+                        return <OotDungeonTracker
+                                addStartingItem={addStartingItem}
+                                removeStartingItem={removeStartingItem}
+                                cycleGraphMultiselectOption={cycleGraphMultiselectOption}
+                                handleCheck={handleCheck}
+                                handleUnCheck={handleUnCheck}
+                                gridEntry={gridEntry}
+                                graphSettings={graphSettings}
+                                graphCollectedItems={graphPlayerInventory}
+                                graphLocations={graphLocations}
+                                graphEntrances={graphEntrances}
+                                validSilverRupees={validSilverRupees}
+                                visitedSimRegions={visitedSimRegions}
+                                includeBlankSilverRupeeSquare={true}
+                                key={`${gridEntry.label}DungeonPanelEntryContainer`}
+                            />
+                    })}
+                </div>
+                <div className={hideTCGKeys ? 'ootDungeonItemsLastRow' : 'ootDungeonTCGItemsLastRow'}>
+                    {itemPanelLayout.stone_dungeon_items.map((gridEntry) => {
+                        if (gridEntry.label === 'TCG' && hideTCGKeys) return null;
+                        return <OotDungeonTracker
+                                addStartingItem={addStartingItem}
+                                removeStartingItem={removeStartingItem}
+                                cycleGraphMultiselectOption={cycleGraphMultiselectOption}
+                                handleCheck={handleCheck}
+                                handleUnCheck={handleUnCheck}
+                                gridEntry={gridEntry}
+                                graphSettings={graphSettings}
+                                graphCollectedItems={graphPlayerInventory}
+                                graphLocations={graphLocations}
+                                graphEntrances={graphEntrances}
+                                validSilverRupees={validSilverRupees}
+                                visitedSimRegions={visitedSimRegions}
+                                includeBlankSilverRupeeSquare={false}
+                                key={`${gridEntry.label}DungeonPanelEntryContainer`}
+                            />
+                    })}
+                </div>
             </div>
-            <div className='ootDungeonItemsContainer'>
-                {itemPanelLayout.dungeon_items.map((gridEntry) => {
-                    return <OotDungeonTracker
-                            addStartingItem={addStartingItem}
-                            removeStartingItem={removeStartingItem}
-                            cycleGraphMultiselectOption={cycleGraphMultiselectOption}
-                            handleCheck={handleCheck}
-                            handleUnCheck={handleUnCheck}
-                            gridEntry={gridEntry}
-                            graphSettings={graphSettings}
-                            graphCollectedItems={graphPlayerInventory}
-                            graphLocations={graphLocations}
-                            graphEntrances={graphEntrances}
-                            validSilverRupees={validSilverRupees}
-                            visitedSimRegions={visitedSimRegions}
-                            includeBlankSilverRupeeSquare={true}
-                            key={`${gridEntry.label}DungeonPanelEntryContainer`}
-                        />
-                })}
-            </div>
-            <div className={hideTCGKeys ? 'ootDungeonItemsLastRow' : 'ootDungeonTCGItemsLastRow'}>
-                {itemPanelLayout.stone_dungeon_items.map((gridEntry) => {
-                    if (gridEntry.label === 'TCG' && hideTCGKeys) return null;
-                    return <OotDungeonTracker
-                            addStartingItem={addStartingItem}
-                            removeStartingItem={removeStartingItem}
-                            cycleGraphMultiselectOption={cycleGraphMultiselectOption}
-                            handleCheck={handleCheck}
-                            handleUnCheck={handleUnCheck}
-                            gridEntry={gridEntry}
-                            graphSettings={graphSettings}
-                            graphCollectedItems={graphPlayerInventory}
-                            graphLocations={graphLocations}
-                            graphEntrances={graphEntrances}
-                            validSilverRupees={validSilverRupees}
-                            visitedSimRegions={visitedSimRegions}
-                            includeBlankSilverRupeeSquare={false}
-                            key={`${gridEntry.label}DungeonPanelEntryContainer`}
-                        />
-                })}
-            </div>
-            <span className="areaRefreshCounter">
-                {refreshCounter}
-            </span>
         </div>
     )
 }

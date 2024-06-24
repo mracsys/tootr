@@ -1,0 +1,17 @@
+.tootrDialog .MuiPaper-root {
+    background-color: var(--md-sys-color-surface-bright);
+    color: var(--md-sys-color-on-surface);
+}
+.tootrDialog .MuiButtonBase-root {
+    color: var(--md-sys-color-on-surface);
+}
+.tootrDialog .MuiTypography-root {
+    color: var(--md-sys-color-on-surface);
+}
+.tootrDialog .MuiTabs-indicator {
+    background-color: var(--md-sys-color-on-surface);
+}
+.tootrDialog select {
+    background-color: var(--md-sys-color-surface-bright);
+    color: var(--md-sys-color-on-surface);
+}

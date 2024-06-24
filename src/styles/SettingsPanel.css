@@ -52,19 +52,19 @@
     width: 32px !important;
 }
 .settingCollectionContainer .iconLeftText {
-    color: var(--color-sidebar-text);
+    color: var(--color-shadowed-text);
 }
 .settingCollectionContainer .iconLeftTopText {
-    color: var(--color-sidebar-text);
+    color: var(--color-shadowed-text);
 }
 .settingCollectionContainer .iconCenterText {
-    color: var(--color-sidebar-text);
+    color: var(--color-shadowed-text);
 }
 .settingCollectionContainer .iconRightText {
-    color: var(--color-sidebar-text);
+    color: var(--color-shadowed-text);
 }
 .settingCollectionContainer .iconRightTopText {
-    color: var(--color-sidebar-text);
+    color: var(--color-shadowed-text);
 }
 .settingCollectionContainer .iconDiv {
     padding: 8px;
@@ -78,27 +78,55 @@
     white-space: nowrap;
     background-color: var(--color-sidebar);
 }
-.iconTooltipLeftTop ~ .iconTooltip {
+.settingMenuRow label {
+    max-width: 400px;
+    text-wrap: wrap;
+}
+.iconTooltipLeftTop ~ .iconTooltipWrapper {
     right: auto;
     left: 0px;
     top: auto;
     bottom: 48px;
 }
-.iconTooltipRightTop ~ .iconTooltip {
+.iconTooltipLeftTop ~ .iconTooltipWrapper .iconTooltip {
+    right: auto;
+    left: 0px;
+    top: auto;
+    bottom: 0px;
+}
+.iconTooltipRightTop ~ .iconTooltipWrapper {
     right: 0px;
     left: auto;
     top: auto;
     bottom: 48px;
 }
-.iconTooltipLeftBottom ~ .iconTooltip {
+.iconTooltipRightTop ~ .iconTooltipWrapper .iconTooltip {
+    right: 0px;
+    left: auto;
+    top: auto;
+    bottom: 0px;
+}
+.iconTooltipLeftBottom ~ .iconTooltipWrapper {
     right: auto;
     left: 0px;
     top: 48px;
     bottom: auto;
 }
-.iconTooltipRightBottom ~ .iconTooltip {
+.iconTooltipLeftBottom ~ .iconTooltipWrapper .iconTooltip {
+    right: auto;
+    left: 0px;
+    top: 0px;
+    bottom: auto;
+}
+.iconTooltipRightBottom ~ .iconTooltipWrapper {
     right: 0px;
     left: auto;
     top: 48px;
+    bottom: auto;
+}
+.iconTooltipRightBottom ~ .iconTooltipWrapper .iconTooltip {
+    right: 0px;
+    left: auto;
+    top: 0px;
     bottom: auto;
 }

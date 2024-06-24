@@ -8,11 +8,14 @@ import Button from '@mui/material/Button';
 import { Tab, Tabs } from '@mui/material';
 import TabPanel from './TabPanel';
 
+import '@/styles/NewSeedDialog.css';
+
 interface SeedMenuProps {
     importFunction: ChangeEventHandler<HTMLInputElement>,
     simFunction: ChangeEventHandler<HTMLInputElement>,
     presetFunction: (preset_name: string) => void,
     presets: string[],
+    currentPreset: string,
     importDialogOpen: boolean,
     setImportDialogOpen: Dispatch<SetStateAction<boolean>>,
 }
@@ -22,6 +25,7 @@ const NewSeedDialog = ({
     simFunction,
     presetFunction,
     presets,
+    currentPreset,
     importDialogOpen,
     setImportDialogOpen,
 }: SeedMenuProps) => {
@@ -53,40 +57,30 @@ const NewSeedDialog = ({
 
     return (
         <React.Fragment>
-            <input id='graphDialogPlandoFileInput' style={{display: 'none'}} type='file' onChange={(e) => importFunction(e)} />
             <input id='graphDialogSimFileInput' style={{display: 'none'}} type='file' onChange={(e) => simFunction(e)} />
+            <input id='graphDialogPlandoFileInput' style={{display: 'none'}} type='file' onChange={(e) => importFunction(e)} />
             <Dialog
                 open={importDialogOpen}
                 onClose={handleClose}
                 disableScrollLock={true}
+                className='tootrDialog'
             >
                 <DialogTitle>{"New Game"}</DialogTitle>
                 <div style={{ minWidth: 600, borderBottom: 1, borderColor: '#ccc', borderBottomStyle: 'solid' }}>
                     <Tabs value={tabValue} onChange={handleTabChange}>
-                        <Tab label='From File' />
                         <Tab label='From Preset' />
+                        <Tab label='From File' />
                         <Tab label='Simulate File' />
                     </Tabs>
                 </div>
                 <TabPanel value={tabValue} index={0} className='seedMenu'>
                     <DialogContent>
                         <DialogContentText>
-                            From File
-                        </DialogContentText>
-                    </DialogContent>
-                    <DialogActions>
-                        <Button onClick={handleFileOpen}>Select File</Button>
-                        <Button onClick={handleClose}>Cancel</Button>
-                    </DialogActions>
-                </TabPanel>
-                <TabPanel value={tabValue} index={1} className='seedMenu'>
-                    <DialogContent>
-                        <DialogContentText>
                             <select
                                 id='graphPresetSelector'
                                 className="presetSelect"
                                 name='graphPresetSelector'
-                                defaultValue='Select a preset...'
+                                defaultValue={currentPreset}
                             >
                                 {presets.map((p, i) => 
                                     <option key={i} value={p}>{p}</option>
@@ -99,10 +93,21 @@ const NewSeedDialog = ({
                         <Button onClick={handleClose}>Cancel</Button>
                     </DialogActions>
                 </TabPanel>
+                <TabPanel value={tabValue} index={1} className='seedMenu'>
+                    <DialogContent>
+                        <DialogContentText>
+                            <input id='graphDialogTabPlandoFileInput' type='file' onChange={(e) => importFunction(e)} />
+                        </DialogContentText>
+                    </DialogContent>
+                    <DialogActions>
+                        <Button onClick={handleFileOpen}>Select File</Button>
+                        <Button onClick={handleClose}>Cancel</Button>
+                    </DialogActions>
+                </TabPanel>
                 <TabPanel value={tabValue} index={2} className='seedMenu'>
                     <DialogContent>
                         <DialogContentText>
-                            Simulate File
+                            <input id='graphDialogTabSimFileInput' type='file' onChange={(e) => simFunction(e)} />
                         </DialogContentText>
                     </DialogContent>
                     <DialogActions>

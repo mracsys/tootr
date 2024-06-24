@@ -11,7 +11,11 @@
     background-color: var(--color-item-menu-hover);
     cursor: pointer;
 }
-
+.itemMenuRow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .locationItemMenu {
     line-height: 0;
     padding: 0;
@@ -21,19 +25,19 @@
     background-color: var(--color-item-menu);
 }
 .locationItemMenu .iconLeftText {
-    color: var(--color-item-menu-text);
+    color: var(--color-shadowed-text);
 }
 .locationItemMenu .iconLeftTopText {
-    color: var(--color-item-menu-text);
+    color: var(--color-shadowed-text);
 }
 .locationItemMenu .iconCenterText {
-    color: var(--color-item-menu-text);
+    color: var(--color-shadowed-text);
 }
 .locationItemMenu .iconRightText {
-    color: var(--color-item-menu-text);
+    color: var(--color-shadowed-text);
 }
 .locationItemMenu .iconRightTopText {
-    color: var(--color-item-menu-text);
+    color: var(--color-shadowed-text);
 }
 .locationItemMenu .iconDiv {
     padding: 8px;

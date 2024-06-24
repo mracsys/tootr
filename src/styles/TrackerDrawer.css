@@ -23,15 +23,17 @@
 }
 .tabList {
     border-top: 2px solid var(--color-sidebar-text);
-    width: 496px;
-    margin-bottom: calc(var(--theme-spacing) * 1);
+    width: var(--drawer-width);
+    padding-bottom: calc(var(--theme-spacing) * 1);
+    background-color: var(--color-sidebar);
 }
 .gameInfo {
     display: flex;
     flex-direction: column;
-    width: var(--drawer-width);
+    width: calc(var(--drawer-width) + 1px);
     height: calc(100vh - 64px);
-    background-color: var(--color-sidebar);
+    /* background-color: var(--color-sidebar); */
+    border-right: 1px solid var(--color-sidebar-border);
 }
 @media screen and (max-width: 600px) {
     .settingsDrawer .MuiPaper-root {
@@ -47,30 +49,28 @@
         align-items: center;
     }
 }
-.itemsHeldContainer {
-    margin: var(--theme-spacing);
-}
 .drawerTab {
-    width: 496px;
+    width: var(--drawer-width);
     overflow-y: auto;
     flex-grow: 1;
+    background-color: var(--color-sidebar);
 }
 .drawerTab::-webkit-scrollbar-track
 {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-    background-color: #F5F5F5;
+    background-color: var(--color-sidebar);
 }
 
 .drawerTab::-webkit-scrollbar
 {
     width: 12px;
-    background-color: #F5F5F5;
+    background-color: var(--color-sidebar);
 }
 
 .drawerTab::-webkit-scrollbar-thumb
 {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-    background-color: #555;
+    background-color: var(--color-sidebar-text);
 }
 .sidebarTabs .MuiTab-root {
     color: var(--color-sidebar-text);
@@ -85,6 +85,7 @@
 }
 .sidebarTabs .MuiTabs-indicator {
     background-color: var(--color-sidebar-text);
+    transition: left 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .devLink {
     display: flex;
@@ -103,4 +104,13 @@
 }
 .devLink span {
     margin-left: var(--theme-spacing);
+}
+.raceModeIndicator {
+    text-align: center;
+    font-weight: bold;
+    color: var(--md-sys-color-on-error-container);
+    background-color: var(--md-sys-color-error-container);
+    border-top: 2px solid var(--color-sidebar-text);
+    padding: var(--theme-spacing);
+    text-transform: uppercase;
 }

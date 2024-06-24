@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useRef, useMemo, ChangeEvent, MouseEventHandler, MouseEvent } from 'react';
-import cloneDeep from 'lodash/cloneDeep';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 
@@ -28,9 +27,11 @@ import {
 } from '@/data/tracker_settings';
 import { location_item_menu_layout, shop_item_menu_layout } from '@/data/location_item_menu_layout';
 
-import { WorldGraphFactory, ExternalFileCacheFactory, ExternalFileCache, GraphEntrance, GraphRegion, GraphItem, GraphHintGoal } from '@mracsys/randomizer-graph-tool';
+import { WorldGraphFactory, ExternalFileCacheFactory, ExternalFileCache, GraphEntrance, GraphRegion, GraphItem, GraphHintGoal, GraphPlugin } from '@mracsys/randomizer-graph-tool';
 
 import '@/styles/tracker.css';
+import '@/styles/themes/light.css';
+import '@/styles/themes/dark.css';
 import { buildExitEntranceName } from './UnknownEntrance';
 
 export interface SavedTrackerState {
@@ -64,8 +65,9 @@ type TrackerSettingChangeEvent = {
 }
 
 const localFileLocations: {[randoVersion: string]: string} = {
-    '7.1.195 R-1': '/ootr-local-roman-195',
-    '7.1.198 Rob-49': '/ootr-local-realrob-198',
+    '8.1 Stable': '/ootr-local-8-1-0',
+    '8.1.45 Fenhl-3': '/ootr-local-fenhl-8-1-45-3',
+    '8.1.29 Rob-104': '/ootr-local-realrob-8-1-29-104',
 }
 
 // Changing the version will completely reset user preferences.
@@ -74,6 +76,7 @@ const localFileLocations: {[randoVersion: string]: string} = {
 const trackerVersion = '1.0.0';
 
 const Tracker = (_props: {}) => {
+    const [userSettingsLoaded, setUserSettingsLoaded] = useState<boolean>(false);
     const [trackerSettings, setTrackerSettings] = useState<TrackerSettingsCurrent>(tracker_settings_default);
     const [alertReset, setAlertReset] = useState<boolean>(false);
     const [alertUpdate, setAlertUpdate] = useState<boolean>(false);
@@ -104,16 +107,60 @@ const Tracker = (_props: {}) => {
     // Graph state management to trigger rerender on memo change.
     // Required as graph updates are not pure, so can't be in React state.
     const [_fileCache, setFileCache] = useState<ExternalFileCache>({files: {}});
-    const [graphVersion, setGraphVersion] = useState<string>('7.1.195 R-1');
-    const [graphInitialState, setGraphInitialState] = useState<string>('{}');
+    const [graphVersion, setGraphVersion] = useState<string>('8.1.45 Fenhl-3');
     const [graphRefreshCounter, setGraphRefreshCounter] = useState<number>(0);
     const [graphImportFile, setGraphImportFile] = useState<string>('');
     const [graphPresets, setGraphPresets] = useState<string[]>([]);
+    const [currentGraphPreset, setCurrentGraphPreset] = useState<string>('Random Settings League');
 
-    let graph = useMemo(
-        () => WorldGraphFactory('ootr', {}, graphVersion, _fileCache),
-        [_fileCache, graphVersion]
-    );
+    const setTrackerPreferences = (graphGlobal: GraphPlugin) => {
+        if (graphGlobal.initialized) {
+            let graphSettings = graphGlobal.get_settings_options();
+            graphGlobal.change_setting(graphGlobal.worlds[trackerSettings.player_number], graphSettings['graphplugin_world_search_mode'], trackerSettings.race_mode ? 'starting_items' : 'collected');
+            graphGlobal.change_setting(graphGlobal.worlds[trackerSettings.player_number], graphSettings['graphplugin_region_visibility_mode'], region_visibility_values[trackerSettings.region_visibility]);
+            graphGlobal.change_setting(graphGlobal.worlds[trackerSettings.player_number], graphSettings['graphplugin_viewable_unshuffled_items'], [...trackerSettings.show_unshuffled_locations]);
+        }
+    }
+
+    let graph = useMemo(() => {
+        let clientGraphInitialStateInit = localStorage.getItem('CurrentGraphState');
+        let graphInitialStateInit = '{}';
+        let loadingState = false;
+        if (clientGraphInitialStateInit !== null) {
+            graphInitialStateInit = clientGraphInitialStateInit;
+            loadingState = true;
+        }
+        let savedState = JSON.parse(graphInitialStateInit);
+        if (Object.keys(savedState).includes(':version')) {
+            // This function initially runs before the saved graphVersion is retrieved
+            // from localstorage. It runs again after the file cache and version are
+            // fully loaded. Until then, don't inadvertently throw out user graph state.
+            if (userSettingsLoaded && savedState[':version'] !== graphVersion) {
+                console.log('Graph version mismatch! Resetting saved graph state');
+                savedState = {};
+                loadingState = false;
+            }
+        }
+        let graphGlobal = WorldGraphFactory('ootr', savedState, graphVersion, _fileCache);
+        if (!loadingState) {
+            console.log('No saved state found, loading default preset');
+            let activePresets = graphGlobal.get_settings_presets();
+            // During initial loading, presets aren't available yet
+            if (activePresets.length > 0) {
+                let loadPreset = currentGraphPreset;
+                if (!activePresets.includes(loadPreset)) {
+                    // This preset is created by the graph library and guaranteed to exist for every version.
+                    loadPreset = 'Random Settings League';
+                }
+                graphGlobal.load_settings_preset(loadPreset);
+                if (loadPreset !== currentGraphPreset) {
+                    setCurrentGraphPreset(loadPreset);
+                }
+            }
+        }
+        setTrackerPreferences(graphGlobal);
+        return graphGlobal;
+    }, [_fileCache, graphVersion]);
 
     // run on mount and unmount
     useEffect(() => {
@@ -139,7 +186,13 @@ const Tracker = (_props: {}) => {
             // Override default dark mode setting based on browser/OS theme
             trackerSettingsInit.dark_mode = window.matchMedia("(prefers-color-scheme: dark)").matches;
         }
-        if (trackerSettingsInit.game_version === undefined) trackerSettingsInit.game_version = graphVersion;
+        if (trackerSettingsInit.game_version === undefined || trackerSettingsInit.game_version === '') trackerSettingsInit.game_version = graphVersion;
+
+        if (trackerSettingsInit.dark_mode) {
+            document.body.classList.add('dark');
+        } else {
+            document.body.classList.add('light');
+        }
 
         let clientCollapsedRegions = localStorage.getItem('CollapsedRegions');
         let collapsedRegionsInit: CollapsedRegions = !!(clientCollapsedRegions) ? JSON.parse(clientCollapsedRegions) : {};
@@ -153,10 +206,10 @@ const Tracker = (_props: {}) => {
         let visitedRegionsInit = !!clientVisitedRegions ? new Set<string>(JSON.parse(clientVisitedRegions)) : new Set<string>();
 
         setGraphVersion(trackerSettingsInit.game_version);
-        setGraphInitialState(graphInitialStateInit);
         setCollapsedRegions(collapsedRegionsInit);
         setTrackerSettings(trackerSettingsInit);
         setVisitedSimRegions(visitedRegionsInit);
+        setUserSettingsLoaded(true);
 
         // clear pending timeouts on unmount
         return () => {if (timerRef.current !== null) { timerRef.current.forEach(t => clearTimeout(t)) }};
@@ -196,8 +249,14 @@ const Tracker = (_props: {}) => {
             });
         }
 
+        if (trackerSettings.dark_mode) {
+            document.body.classList.replace('light', 'dark');
+        } else {
+            document.body.classList.replace('dark', 'light');
+        }
+
         let ignore = false;
-        
+
         const getGraph = async () => {
             if (Object.keys(_fileCache.files).length === 0) {
                 let graphFileCache = await ExternalFileCacheFactory('ootr', graphVersion, { local_url: localFileLocations[graphVersion] });
@@ -207,11 +266,7 @@ const Tracker = (_props: {}) => {
             }
             if (graph.initialized && !ignore && !graphInitialized) {
                 setGraphPresets(graph.get_settings_presets());
-                if (graphInitialState !== '') {
-                    let plando = JSON.parse(graphInitialState);
-                    graph.import(plando);
-                }
-                setTrackerPreferences();
+                setTrackerPreferences(graph);
                 setGraphInitialized(true);
             }
         }
@@ -236,11 +291,10 @@ const Tracker = (_props: {}) => {
                 changeSetting({ target: { name: 'region_page', value: 'Warps' }});
             }
             graph.import(importState);
-            setTrackerPreferences();
+            setTrackerPreferences(graph);
             refreshSearch();
             setLastEntranceName('');
             setImportSimMode(false);
-            setGraphInitialState(graphImportFile);
             setTrackerInitialized(true);
             setGraphImportFile('');
         }
@@ -251,13 +305,6 @@ const Tracker = (_props: {}) => {
             timerRef.current = [];
         }
     }, [lastLocationName]);
-
-    const setTrackerPreferences = () => {
-        let graphSettings = graph.get_settings_options();
-        graph.change_setting(graph.worlds[trackerSettings.player_number], graphSettings['graphplugin_world_search_mode'], trackerSettings.race_mode ? 'starting_items' : 'collected');
-        graph.change_setting(graph.worlds[trackerSettings.player_number], graphSettings['graphplugin_region_visibility_mode'], region_visibility_values[trackerSettings.region_visibility]);
-        graph.change_setting(graph.worlds[trackerSettings.player_number], graphSettings['graphplugin_viewable_unshuffled_items'], [...trackerSettings.show_unshuffled_locations]);
-    }
 
     const setRef = (index: string, element: HTMLDivElement | null): void => {
         if (!!element) scroller.current[index] = element;
@@ -294,9 +341,8 @@ const Tracker = (_props: {}) => {
         }
         setLastEntranceName('');
         graph.import(plando);
-        setTrackerPreferences();
+        setTrackerPreferences(graph);
         refreshSearch();
-        setGraphInitialState(JSON.stringify(graph.export(true)));
         setCollapsedRegions({});
         setAlertReset(false);
     }
@@ -387,13 +433,15 @@ const Tracker = (_props: {}) => {
         setGraphInitialized(false);
         setGraphVersion(version);
         changeSetting({target: { name: 'game_version', value: version}});
-        if (blankState) setGraphInitialState('{}');
+        if (blankState) {
+            localStorage.setItem('CurrentGraphState', '{}');
+        }
     }
 
     const loadGraphPreset = (presetName: string) => {
         graph.load_settings_preset(presetName);
         refreshSearch();
-        setGraphInitialState(JSON.stringify(graph.export(true)));
+        setCurrentGraphPreset(presetName);
     }
 
     const importGraphState = (inputEvent: ChangeEvent<HTMLInputElement>) => {
@@ -437,7 +485,7 @@ const Tracker = (_props: {}) => {
             console.log(`Unsupported game version ${newVersion}`);
         } else {
             if (graphVersion !== newVersion) {
-                setGraphInitialState(content);
+                localStorage.setItem('CurrentGraphState', '{}');
                 loadGraphVersion(newVersion, false);
             }
             setGraphImportFile(content);
@@ -538,7 +586,13 @@ const Tracker = (_props: {}) => {
     }
 
     const cycleGraphMultiselectOption = ({graphSettingName = '', settingOptions = ['']}: {graphSettingName?: string, settingOptions?: string[]} = {}) => {
-        let settingValue = cloneDeep(graph.worlds[trackerSettings.player_number].settings[graphSettingName]);
+        let settingValue: string[] = [];
+        let settingArray = graph.worlds[trackerSettings.player_number].settings[graphSettingName];
+        if (settingArray !== undefined && settingArray !== null && Array.isArray(settingArray)) {
+            settingValue = [...settingArray];
+        } else {
+            return;
+        }
         let graphSettingsOptions = graph.get_settings_options();
         let graphSetting = graphSettingsOptions[graphSettingName];
         if (settingValue === undefined || settingValue === null || graphSetting === undefined) return;
@@ -669,7 +723,7 @@ const Tracker = (_props: {}) => {
     }
 
     const toggleCollapse = (area: string): void => {
-        let stateCollapsedRegions = cloneDeep(collapsedRegions);
+        let stateCollapsedRegions = Object.assign({}, collapsedRegions);
         let collapse = stateCollapsedRegions[area];
         if (collapse === undefined) collapse = 'some';
         if (collapse === 'none') {
@@ -685,7 +739,7 @@ const Tracker = (_props: {}) => {
 
     const toggleCollapseReverse = (areaDiv: HTMLDivElement) => {
         let area = areaDiv.innerText;
-        let stateCollapsedRegions = cloneDeep(collapsedRegions);
+        let stateCollapsedRegions = Object.assign({}, collapsedRegions);
         let collapse = stateCollapsedRegions[area];
         if (collapse === undefined) collapse = 'some';
         if (collapse === 'none') {
@@ -1124,13 +1178,14 @@ const Tracker = (_props: {}) => {
             <React.Fragment>
                 <ThemeProvider theme={customTheme}>
                     <CssBaseline />
-                    <div className={`root ${trackerSettings.dark_mode ? "dark" : ""}`}>
+                    <div className={`root`}>
                         <TrackerTopBar
                             importGraphState={importGraphState}
                             exportGraphState={exportGraphState}
                             simGraphState={importSimGraphState}
                             loadGraphPreset={loadGraphPreset}
                             graphPresets={graphPresets}
+                            currentPreset={currentGraphPreset}
                             graphLocationCount={graphLocationCount}
                             searchTracker={searchTracker}
                             trackerSettings={trackerSettings}
@@ -1140,6 +1195,7 @@ const Tracker = (_props: {}) => {
                             loadFunction={loadSavedGraphState}
                             deleteFunction={deleteSavedGraphState}
                             stateListFunction={getSavedGraphStates}
+                            lastEntranceName={lastEntranceName}
                         />
                         <TrackerDrawer
                             addStartingItem={addStartingItem}
@@ -1158,7 +1214,6 @@ const Tracker = (_props: {}) => {
                             graphLocations={graphLocations}
                             graphEntrances={graphEntrances}
                             graphRegions={graphRegions}
-                            graphRefreshCounter={graphRefreshCounter}
                             cycleGraphSetting={cycleGraphSetting}
                             handleMultiselectMenuOpen={handleMultiselectMenuOpen}
                             graphSettingsOptions={graphSettingsOptions}
@@ -1198,7 +1253,6 @@ const Tracker = (_props: {}) => {
                             searchTerm={searchTerm}
                             trackerSettings={trackerSettings}
                             simMode={simMode}
-                            lastEntranceName={lastEntranceName}
                             lastLocationName={lastLocationName}
                         />
                         <EntranceMenu
@@ -1216,6 +1270,7 @@ const Tracker = (_props: {}) => {
                             handleFind={findItem}
                             anchorLocation={itemMenuOpen}
                             sourceLocation={locationToLink}
+                            showClearButton={true}
                         />
                         <ItemMenu
                             menuLayout={shop_item_menu_layout}
@@ -1223,6 +1278,7 @@ const Tracker = (_props: {}) => {
                             handleFind={findItem}
                             anchorLocation={shopItemMenuOpen}
                             sourceLocation={locationToLink}
+                            showClearButton={true}
                         />
                         <HintMenu
                             handleClose={handleHintMenuClose}
@@ -1253,6 +1309,7 @@ const Tracker = (_props: {}) => {
                             areaMenuHandler={areaMenuHandler}
                             pages={pages}
                             warps={warpEntrances}
+                            raceMode={trackerSettings.race_mode}
                         />
                         <TrackerUpdateDialog
                             alertUpdate={alertUpdate}

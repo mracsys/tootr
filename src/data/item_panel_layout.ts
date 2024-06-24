@@ -1,6 +1,8 @@
 interface panelLayout {
     main_items: itemEntry[],
-    last_items_row: itemEntry[],
+    song_items: itemEntry[],
+    equipment: itemEntry[],
+    last_song_row: itemEntry[],
     child_trade_items: itemEntry[],
     adult_trade_items: itemEntry[],
     win_cons: winconEntry,
@@ -8,6 +10,7 @@ interface panelLayout {
     stone_dungeon_items: labelEntry[],
     enemy_souls: itemEntry[],
     boss_souls: itemEntry[],
+    regional_souls: itemEntry[],
 }
 
 export interface itemEntry {
@@ -71,8 +74,6 @@ export const itemPanelLayout: panelLayout = {
         },
         { item_name: "Fire Arrows" },
         { item_name: "Dins Fire" },
-        { item_name: "Zeldas Lullaby" },
-        { item_name: "Minuet of Forest" },
         { item_name: "Boomerang" },
         { item_name: "Bombchus" },
         {
@@ -94,15 +95,11 @@ export const itemPanelLayout: panelLayout = {
             ]
         },
         { item_name: "Farores Wind" },
-        { item_name: "Eponas Song" },
-        { item_name: "Bolero of Fire" },
         { item_name: "Lens of Truth" },
         { item_name: "Magic Bean" },
         { item_name: "Megaton Hammer" },
         { item_name: "Light Arrows" },
         { item_name: "Nayrus Love" },
-        { item_name: "Sarias Song" },
-        { item_name: "Serenade of Water" },
         {
             item_name: "Bottle0",
             group_variants: [
@@ -171,25 +168,35 @@ export const itemPanelLayout: panelLayout = {
                 "Bottle with Big Poe"
             ]
         },
-        { item_name: "Magic Meter" },
+        { item_name: "Stone of Agony" },
+    ],
+    song_items: [
+        { item_name: "Zeldas Lullaby" },
+        { item_name: "Minuet of Forest" },
+        { item_name: "Eponas Song" },
+        { item_name: "Bolero of Fire" },
+        { item_name: "Sarias Song" },
+        { item_name: "Serenade of Water" },
         { item_name: "Suns Song" },
         { item_name: "Requiem of Spirit" },
-        { item_name: "Kokiri Sword" },
-        { item_name: "Biggoron Sword" },
-        { item_name: "Stone of Agony" },
-        { item_name: "Goron Tunic" },
-        { item_name: "Zora Tunic" },
         { item_name: "Song of Time" },
         { item_name: "Nocturne of Shadow" },
-        { item_name: "Deku Shield" },
-        { item_name: "Hylian Shield" },
-        { item_name: "Mirror Shield" },
-        { item_name: "Iron Boots" },
-        { item_name: "Hover Boots" },
         { item_name: "Song of Storms" },
         { item_name: "Prelude of Light" },
     ],
-    last_items_row: [
+    equipment: [
+        {
+            item_name: "Progressive Strength Upgrade",
+            item_variants: [
+                "Goron Bracelet",
+                "Silver Gauntlets",
+                "Gold Gauntlets",
+            ]
+        },
+        { item_name: "Magic Meter" },
+        { item_name: "Kokiri Sword" },
+        { item_name: "Goron Tunic" },
+        { item_name: "Iron Boots" },
         {
             item_name: "Progressive Wallet",
             sub_variants: [
@@ -206,39 +213,9 @@ export const itemPanelLayout: panelLayout = {
                 "Gold Scale",
             ]
         },
-        {
-            item_name: "Progressive Strength Upgrade",
-            item_variants: [
-                "Goron Bracelet",
-                "Silver Gauntlets",
-                "Gold Gauntlets",
-            ]
-        },
-        {
-            item_name: "Ocarina",
-            item_variants: [
-                "Ocarina",
-                "Ocarina of Time",
-            ]
-        },
-        { item_name: "Scarecrow Song" },
-        { item_name: "Ocarina A Button" },
-        {
-            item_name: "Ocarina C down Button",
-            position: "downButton",
-        },
-        {
-            item_name: "Ocarina C right Button",
-            position: "rightButton",
-        },
-        {
-            item_name: "Ocarina C left Button",
-            position: "leftButton",
-        },
-        {
-            item_name: "Ocarina C up Button",
-            position: "upButton",
-        },
+        { item_name: "Biggoron Sword" },
+        { item_name: "Zora Tunic" },
+        { item_name: "Hover Boots" },
         {
             item_name: "Weird Egg",
             group_variants: [
@@ -268,6 +245,36 @@ export const itemPanelLayout: panelLayout = {
                 "Claim Check",
             ]
         },
+        { item_name: "Deku Shield" },
+        { item_name: "Hylian Shield" },
+        { item_name: "Mirror Shield" },
+    ],
+    last_song_row: [
+        {
+            item_name: "Ocarina",
+            item_variants: [
+                "Ocarina",
+                "Ocarina of Time",
+            ]
+        },
+        { item_name: "Scarecrow Song" },
+        { item_name: "Ocarina A Button" },
+        {
+            item_name: "Ocarina C down Button",
+            position: "downButton",
+        },
+        {
+            item_name: "Ocarina C right Button",
+            position: "rightButton",
+        },
+        {
+            item_name: "Ocarina C left Button",
+            position: "leftButton",
+        },
+        {
+            item_name: "Ocarina C up Button",
+            position: "upButton",
+        },
     ],
     child_trade_items: [
         { item_name: "Weird Egg" },
@@ -295,12 +302,12 @@ export const itemPanelLayout: panelLayout = {
     ],
     win_cons: {
         rewards: {
-            top: { item_name: "Forest Medallion" },
-            rightTop: { item_name: "Fire Medallion" },
-            rightBottom: { item_name: "Water Medallion" },
-            bottom: { item_name: "Spirit Medallion" },
-            leftBottom: { item_name: "Shadow Medallion" },
-            leftTop: { item_name: "Light Medallion" },
+            top: { item_name: "Light Medallion" },
+            rightTop: { item_name: "Forest Medallion" },
+            rightBottom: { item_name: "Fire Medallion" },
+            bottom: { item_name: "Water Medallion" },
+            leftBottom: { item_name: "Spirit Medallion" },
+            leftTop: { item_name: "Shadow Medallion" },
             triforce: { item_name: "Triforce Piece" },
             left: { item_name: "Kokiri Emerald" },
             middle: { item_name: "Goron Ruby" },
@@ -546,5 +553,29 @@ export const itemPanelLayout: panelLayout = {
         { item_name: "Morpha Soul" },
         { item_name: "Bongo Bongo Soul" },
         { item_name: "Twinrova Soul" },
+    ],
+    regional_souls: [
+        { item_name: 'Deku Tree Souls' },
+        { item_name: 'Dodongos Cavern Souls' },
+        { item_name: 'Jabu Jabus Belly Souls' },
+        { item_name: 'Forest Temple Souls' },
+        { item_name: 'Fire Temple Souls' },
+        { item_name: 'Water Temple Souls' },
+        { item_name: 'Shadow Temple Souls' },
+        { item_name: 'Spirit Temple Souls' },
+        { item_name: 'Bottom of the Well Souls' },
+        { item_name: 'Ice Cavern Souls' },
+        { item_name: 'Gerudo Training Ground Souls' },
+        { item_name: 'Ganons Castle Souls' },
+        { item_name: 'Forest Area Souls' },
+        { item_name: 'Hyrule Field Souls' },
+        { item_name: 'Lake Hylia Souls' },
+        { item_name: 'Gerudo Area Souls' },
+        { item_name: 'Market Area Souls' },
+        { item_name: 'Kakariko Area Souls' },
+        { item_name: 'Goron Area Souls' },
+        { item_name: 'Zora Area Souls' },
+        { item_name: 'Lon Lon Ranch Souls' },
+        { item_name: 'Grottos Souls' },
     ],
 }

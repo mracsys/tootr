@@ -9,6 +9,8 @@ import IconButton from '@mui/material/IconButton';
 import ClearIcon from '@mui/icons-material/Clear';
 import type { SavedTrackerState } from './Tracker';
 
+import '@/styles/SavedSeedDialog.css';
+
 interface SavedSeedDialogProps {
     saving: boolean,
     saveDialogOpen: boolean,
@@ -58,12 +60,12 @@ const SavedSeedDialog = ({
             }
         } else {
             if (saving) {
-                saveFunction(saveName);
                 handleClose();
+                saveFunction(saveName);
             } else {
                 if (stateNameList.includes(saveName)) {
-                    loadFunction(saveName);
                     handleClose();
+                    loadFunction(saveName);
                 } else {
                     setWarningMsg('Cannot load game. The selected game save name does not exist.')
                 }
@@ -94,6 +96,7 @@ const SavedSeedDialog = ({
             open={saveDialogOpen}
             onClose={handleClose}
             disableScrollLock={true}
+            className='tootrDialog graphStateDialog'
         >
             <DialogTitle>{saving ? "Save Game" : "Load Game"}</DialogTitle>
 

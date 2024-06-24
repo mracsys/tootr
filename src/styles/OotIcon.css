@@ -22,30 +22,35 @@
     right: 0px;
     width: 16px;
     text-align: right;
+    z-index: 3;
 }
 .iconRightTopText {
     top: -4px;
     right: 0px;
     width: 16px;
     text-align: right;
+    z-index: 3;
 }
 .iconCenterText {
     bottom: -4px;
     left: 0px;
     width: 32px;
     text-align: center;
+    z-index: 3;
 }
 .iconLeftText {
     bottom: -4px;
     left: 0px;
     width: 16px;
     text-align: left;
+    z-index: 3;
 }
 .iconLeftTopText {
     top: -4px;
     left: 0px;
     width: 16px;
     text-align: left;
+    z-index: 3;
 }
 .svgIcon.iconRightSub,
 .iconRightSub {
@@ -55,6 +60,7 @@
     width: 16px !important;
     height: 16px !important;
     color: var(--color-icon-text) !important;
+    filter: drop-shadow(0px 0px 2px var(--color-icon-text-shadow)) drop-shadow(0px 0px 2px var(--color-icon-text-shadow));
 }
 .svgIcon.iconRightTopSub,
 .iconRightTopSub {
@@ -64,6 +70,7 @@
     width: 16px !important;
     height: 16px !important;
     color: var(--color-icon-text) !important;
+    filter: drop-shadow(0px 0px 6px var(--color-icon-text-shadow));
 }
 .svgIcon.iconCenterSub,
 .iconCenterSub {
@@ -73,6 +80,7 @@
     width: 32px !important;
     height: 16px !important;
     color: var(--color-icon-text) !important;
+    filter: drop-shadow(0px 0px 6px var(--color-icon-text-shadow));
 }
 .svgIcon.iconLeftSub,
 .iconLeftSub {
@@ -82,6 +90,7 @@
     width: 16px !important;
     height: 16px !important;
     color: var(--color-icon-text) !important;
+    filter: drop-shadow(0px 0px 6px var(--color-icon-text-shadow));
 }
 .svgIcon.iconLeftTopSub,
 .iconLeftTopSub {
@@ -91,6 +100,7 @@
     width: 16px !important;
     height: 16px !important;
     color: var(--color-icon-text) !important;
+    filter: drop-shadow(0px 0px 6px var(--color-icon-text-shadow));
 }
 .iconContainer {
     position: relative;
@@ -102,6 +112,7 @@
     color: var(--color-icon-text) !important;
     width: 32px;
     height: 100% !important;
+    filter: drop-shadow(0px 0px 1px var(--color-icon-text-shadow));
 }
 .iconRightText.disabledSettingIcon,
 .iconRightTopText.disabledSettingIcon,
@@ -115,15 +126,20 @@
 .iconLeftTopSub.disabledSettingIcon,
 .svgIcon.disabledSettingIcon,
 .iconContainer.disabledSettingIcon {
-    opacity: 30%;
+    filter: grayscale(100%);
+    opacity: 70%;
 }
 .iconLabelContainer {
     position: relative;
 }
+.iconTooltipWrapper {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 240px;
+}
 .iconTooltip {
     position: absolute;
-    top: 48px;
-    left: 0px;
     color: var(--color-icon-tooltip-text);
     font-family: 'Hylia Serif Beta';
     flex-direction: column;
@@ -131,17 +147,18 @@
     padding: var(--theme-spacing);
     border: var(--color-icon-tooltip-border) 1px solid;
     background-color: var(--color-icon-tooltip);
-    box-shadow: 0px 2px 1px -1px var(--color-icon-tooltip-shadow),0px 1px 1px 0px var(--color-icon-tooltip-shadow2),0px 1px 3px 0px var(--color-icon-tooltip-shadow3);
+    box-shadow: 0px 2px 1px -1px var(--color-icon-tooltip-shadow);
     z-index: 1300;
     display: none !important;
 }
-.iconDiv:hover + .iconTooltip {
+.iconDiv:hover + .iconTooltipWrapper .iconTooltip {
     display: flex !important;
 }
 .iconTooltip div {
-    height: 24px;
+    max-width: 240px;
     text-align: center;
     line-height: 1.43em;
+    white-space: normal;
 }
 .iconSideText {
     display: flex;
@@ -152,4 +169,7 @@
     word-wrap: break-word;
     text-wrap: wrap;
     line-height: 1.43;
+}
+.svgIcon.blueWarpIcon {
+    color: #30f1ff !important;
 }

@@ -2,8 +2,9 @@
 .ootDungeonContainer {
     height: 48px;
     color: var(--color-sidebar-text);
+    color: #fff;
     font-family: 'Hylia Serif Beta';
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     line-height: 48px;
     display: flex;
 }
@@ -32,9 +33,11 @@
 .ootDungeonItems {
     font-size: 0.875rem;
     line-height: 0;
+    margin-right: 8px;
 }
 .ootDungeonLabelContainer {
     width: 48px;
+    margin-left: 8px;
     flex-grow: 1;
     position: relative;
 }
@@ -49,6 +52,10 @@
     display: flex;
     justify-content: center;
 }
+.ootDungeonTCGItemsLastRow .ootDungeonItems,
+.ootDungeonItemsLastRow .ootDungeonItems {
+    margin-right: 0;
+}
 .ootDungeonTCGItemsLastRow .ootDungeonContainer {
     min-width: 117px;
     width: auto;
@@ -62,6 +69,37 @@
     width: auto;
     margin-right: 6px;
 }
-.ootDungeonContainer .ootDungeonItems .iconDiv {
+.ootAllDungeonItemsContainer .ootDungeonContainer .ootDungeonItems .iconDiv {
     padding: 8px 6px;
+}
+.ootDungeonInsetContainer {
+    position: relative;
+}
+.ootDungeonInset1,
+.ootDungeonInset2,
+.ootDungeonInset3 {
+    position: absolute;
+    height: 40px;
+    background-color: rgba(0,0,0,0.25);
+    border-radius: 5px;
+    top: 4px;
+    box-shadow: inset -0.2em -0.2em 0.2em 0 rgba(255,255,255,0.2), inset 0.2em 0.2em 0.2em 0 rgba(0,0,0,0.3);
+    z-index: -3;
+}
+.ootDungeonTCGItemsLastRow .ootDungeonInset1,
+.ootDungeonItemsLastRow .ootDungeonInset1 {
+    width: 40px;
+    right: 4px;
+}
+.ootDungeonInset1 {
+    width: 40px;
+    right: 100px;
+}
+.ootDungeonInset2 {
+    width: 88px;
+    right: 52px;
+}
+.ootDungeonInset3 {
+    width: 136px;
+    right: 4px;
 }

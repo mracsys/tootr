@@ -178,7 +178,7 @@ const GameArea = ({
             {
                 (collapsedRegions[title] !== 'all') ?
                 <div>
-                    <div>
+                    <div className='areaLocations'>
                     { filteredLocations.map((location, i) => { 
                         return (<React.Fragment key={title + 'locationcheckcontainer' + i}>
                             <LocationCheck

@@ -41,7 +41,6 @@ interface TrackerDrawerProps {
     graphLocations: GraphLocation[],
     graphEntrances: GraphEntrance[],
     graphRegions: GraphRegion[],
-    graphRefreshCounter: number,
     cycleGraphSetting: ({graphSetting, reverseDirection}: {graphSetting?: string, reverseDirection?: boolean}) => void,
     handleMultiselectMenuOpen: (s: Element, n: string) => void,
     graphSettingsOptions: GraphSettingsOptions,
@@ -77,7 +76,6 @@ const TrackerDrawer = ({
     graphLocations,
     graphEntrances,
     graphRegions,
-    graphRefreshCounter,
     cycleGraphSetting,
     handleMultiselectMenuOpen,
     graphSettingsOptions,
@@ -123,6 +121,9 @@ const TrackerDrawer = ({
         console.log('[Setting]', name, 'changed to', checked);
         let newTrackerSettings = copyTrackerSettings(trackerSettings);
         newTrackerSettings[name] = checked;
+        if (name === 'one_region_per_page' && !checked) {
+            newTrackerSettings.region_page = 'Overworld';
+        }
         if (name === 'race_mode') {
             setAlertReset(true);
             setCachedRaceMode(checked);
@@ -191,25 +192,26 @@ const TrackerDrawer = ({
         >
             <div className="drawerHeader"></div>
             <div className="gameInfo">
-                <ItemPanel
-                    addStartingItem={addStartingItem}
-                    addStartingItems={addStartingItems}
-                    removeStartingItem={removeStartingItem}
-                    removeStartingItems={removeStartingItems}
-                    replaceStartingItem={replaceStartingItem}
-                    cycleGraphMultiselectOption={cycleGraphMultiselectOption}
-                    cycleGraphRewardHint={cycleGraphRewardHint}
-                    handleCheck={checkLocation}
-                    handleUnCheck={unCheckLocation}
-                    graphSettings={graphSettings}
-                    graphCollectedItems={graphCollectedItems}
-                    graphPlayerInventory={graphPlayerInventory}
-                    graphRewardHints={graphRewardHints}
-                    graphLocations={graphLocations}
-                    graphEntrances={graphEntrances}
-                    visitedSimRegions={visitedSimRegions}
-                    refreshCounter={graphRefreshCounter}
-                />
+                <div className="ootItemPanelContainer">
+                    <ItemPanel
+                        addStartingItem={addStartingItem}
+                        addStartingItems={addStartingItems}
+                        removeStartingItem={removeStartingItem}
+                        removeStartingItems={removeStartingItems}
+                        replaceStartingItem={replaceStartingItem}
+                        cycleGraphMultiselectOption={cycleGraphMultiselectOption}
+                        cycleGraphRewardHint={cycleGraphRewardHint}
+                        handleCheck={checkLocation}
+                        handleUnCheck={unCheckLocation}
+                        graphSettings={graphSettings}
+                        graphCollectedItems={graphCollectedItems}
+                        graphPlayerInventory={graphPlayerInventory}
+                        graphRewardHints={graphRewardHints}
+                        graphLocations={graphLocations}
+                        graphEntrances={graphEntrances}
+                        visitedSimRegions={visitedSimRegions}
+                    />
+                </div>
                 {
                     trackerSettings.show_timer ?
                         <RaceTimer />

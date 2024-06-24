@@ -1,55 +1,179 @@
 .ootItemTracker {
-    width: 480px;
+    width: var(--drawer-width);
     line-height: 0;
     padding: 0;
     white-space: nowrap;
-    background-color: var(--color-sidebar);
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 0px;
+    grid-auto-rows: minmax(48px, 48px);
+}
+.ootItemsBackground {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -10;
+}
+.ootItemPanelContainer {
     display: flex;
     flex-wrap: wrap;
 }
+.itemsHeldContainer {
+    width: var(--drawer-width);
+}
 .ootItemTracker ul {
     padding: 0;
-    background-color: var(--color-sidebar);
 }
 .ootItemTracker .iconLeftText {
-    color: var(--color-sidebar-text);
+    color: var(--color-shadowed-text);
 }
 .ootItemTracker .iconLeftTopText {
-    color: var(--color-sidebar-text);
+    color: var(--color-shadowed-text);
 }
 .ootItemTracker .iconCenterText {
-    color: var(--color-sidebar-text);
+    color: var(--color-shadowed-text);
 }
 .ootItemTracker .iconRightText {
-    color: var(--color-sidebar-text);
+    color: var(--color-shadowed-text);
 }
 .ootItemTracker .iconRightTopText {
-    color: var(--color-sidebar-text);
+    color: var(--color-shadowed-text);
 }
 .ootItemTracker .iconDiv {
+    padding: 4px;
+}
+.ootItemTracker .iconContainer {
+    width: 40px;
+    height: 40px;
+}
+.ootItemTracker .svgIcon {
+    width: 40px;
+    height: 40px;
+}
+.ootItemTracker .ootAllDungeonItemsContainer .iconDiv {
     padding: 8px;
 }
+.ootItemTracker .ootAllDungeonItemsContainer .iconContainer {
+    width: 32px;
+    height: 32px;
+}
 .ootItemTracker .iconDiv:hover {
-    background-color: var(--color-sidebar-hover);
     cursor: pointer;
-    margin: 0 auto;
-    border-radius: 24px;
+}
+
+.ootItemTracker .iconDiv:hover .svgIcon.disabledSettingIcon,
+.ootItemTracker .iconDiv:hover .iconContainer.disabledSettingIcon {
+    filter: none;
 }
 .ootItemTracker .iconSideText {
     display: none;
 }
-.ootItemsHeldContainer {
-    width: calc(48px * 7);
+.itemPanelEntry {
+    position: relative;
 }
+.itemPanelInset {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0,0,0,0.25);
+    border-radius: 5px;
+    top: 4px;
+    left: 4px;
+    box-shadow: inset -0.2em -0.2em 0.2em 0 rgba(255,255,255,0.20), inset 0.2em 0.2em 0.2em 0 rgba(0,0,0,0.3);
+}
+.itemPanelInset.found {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+.ootCompressedCButtons .itemPanelInset {
+    display: none;
+}
+.ootItemsHeldContainer {
+    grid-column: 1 / 6;
+    grid-row: 1 / 5;
+    width: calc(48px * 5);
+    background-color: var(--color-item-menu-items);
+}
+.ootEquipmentHeldContainer {
+    grid-column: 1 / 6;
+    grid-row: 5 / 8;
+    width: calc(48px * 5);
+    background-color: var(--color-item-menu-equip);
+}
+.ootSongsHeldContainer {
+    grid-column: 6 / 8;
+    grid-row: 1 / 7;
+    width: calc(48px * 2);
+}
+.ootQuestInfoContainer {
+    grid-column: 6 / 11;
+    grid-row: 1 / 8;
+    background-color: var(--color-item-menu-quest);
+}
+.ootWinConsContainer {
+    grid-column: 8 / 11;
+    grid-row: 1 / 7;
+    width: calc(48px * 3);
+}
+.ootItemsHeldLastRowContainer {
+    grid-column: 6 / 11;
+    grid-row: 7 / 8;
+    width: calc(48px * 5);
+}
+.ootChildTradeItemsContainer {
+    grid-column: 1 / 11;
+    /*grid-row: 8 / 9;*/
+    grid-row-end: span 1;
+    width: var(--drawer-width);
+    background-color: var(--color-item-menu-trade);
+}
+.ootAdultTradeItemsContainer0,
+.ootAdultTradeItemsContainer1 {
+    grid-column: 1 / 11;
+    grid-row-end: span 1;
+    width: var(--drawer-width);
+    background-color: var(--color-item-menu-trade);
+}
+.ootAllDungeonItemsContainer {
+    grid-column: 1 / 11;
+    grid-row-end: span 6;
+    width: var(--drawer-width);
+    backdrop-filter: saturate(0%) brightness(500%);
+    background-color: var(--color-item-menu-keys);
+}
+.ootEnemySoulsContainer {
+    grid-column: 1 / 11;
+    grid-row-end: span 4;
+    place-content: center;
+    background-color: var(--color-item-menu-souls);
+    
+}
+.ootBossSoulsContainer {
+    grid-column: 1 / 11;
+    grid-row-end: span 1;
+    place-content: center;
+    background-color: var(--color-item-menu-souls);
+}
+.ootRegionalSoulsContainer {
+    grid-column: 1 / 11;
+    grid-row-end: span 3;
+    place-content: center;
+    background-color: var(--color-item-menu-souls);
+}
+/*.ootAllDungeonItemsContainer0 {
+    grid-row: 8 / 14;
+}
+.ootAllDungeonItemsContainer1 {
+    grid-row: 9 / 15;
+}
+.ootAllDungeonItemsContainer2 {
+    grid-row: 10 / 16;
+}*/
 .ootItemTracker div {
     display: flex;
     flex-wrap: wrap;
 }
 .ootItemTracker .ootMaxItemUpgrade .iconRightText {
     color: var(--color-sidebar-upgrade);
-}
-.ootWinConsContainer {
-    width: calc(48px * 3);
 }
 
 .ootRewardWinCons {
@@ -71,22 +195,22 @@
 .ootRewardWinCons .iconTooltipContainer:has(.leftTop) {
     position: absolute;
     top: 24px;
-    left: 0px;
+    left: 8px;
 }
 .ootRewardWinCons .iconTooltipContainer:has(.rightTop) {
     position: absolute;
     top: 24px;
-    left: 96px;
+    left: 88px;
 }
 .ootRewardWinCons .iconTooltipContainer:has(.leftBottom) {
     position: absolute;
     top: 72px;
-    left: 0px;
+    left: 8px;
 }
 .ootRewardWinCons .iconTooltipContainer:has(.rightBottom) {
     position: absolute;
     top: 72px;
-    left: 96px;
+    left: 88px;
 }
 .ootRewardWinCons .iconTooltipContainer:has(.bottom) {
     position: absolute;
@@ -96,7 +220,7 @@
 .ootRewardWinCons .iconTooltipContainer:has(.left) {
     position: absolute;
     top: 144px;
-    left: 0px;
+    left: 8px;
 }
 .ootRewardWinCons .iconTooltipContainer:has(.middle) {
     position: absolute;
@@ -106,7 +230,7 @@
 .ootRewardWinCons .iconTooltipContainer:has(.right) {
     position: absolute;
     top: 144px;
-    left: 96px;
+    left: 88px;
 }
 .ootRewardWinCons .iconTooltipContainer:has(.triforce) {
     position: absolute;
@@ -115,15 +239,23 @@
 }
 .ootRewardWinCons .triforce .iconContainer {
     opacity: 1;
+    filter: none;
 }
 .ootRewardWinCons .iconCenterText {
     opacity: 100%;
+    filter: none;
+    width: 40px;
 }
 .ootCounterWinCons {
     width: 144px;
     height: 96px;
     display: flex;
     align-items: center;
+    position: relative;
+}
+.ootCounterWinCons .iconContainer {
+    filter: none;
+    opacity: 100%;
 }
 .ootCounterItem {
     width: 144px;
@@ -146,7 +278,7 @@
 .ootCounterItem .ootCounterLabel {
     color: var(--color-sidebar-text);
     font-family: 'Hylia Serif Beta';
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     line-height: 1.43;
     width: 96px;
     text-align: center;
@@ -156,12 +288,22 @@
     width: 96px;
     height: 48px;
 }
+.ootCompressedInset {
+    position: absolute;
+    width: 88px;
+    height: 40px;
+    background-color: rgba(0,0,0,0.25);
+    border-radius: 5px;
+    top: 4px;
+    left: 4px;
+    box-shadow: inset -0.2em -0.2em 0.2em 0 rgba(255,255,255,0.2), inset 0.2em 0.2em 0.2em 0 rgba(0,0,0,0.3);
+}
 .ootCompressedCButtons .iconDiv {
-    padding: 4px;
+    padding: 1px;
 }
 .ootCompressedCButtons .iconContainer {
-    width: 16px;
-    height: 16px;
+    width: 22px;
+    height: 22px;
 }
 .ootCompressedCButtons .iconTooltipContainer {
     position: absolute;
