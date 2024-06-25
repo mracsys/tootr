@@ -723,28 +723,31 @@ export const OotItemPanel = ({
             </div> : null
             }
             { adult_trade ?
-            <div className={`ootAdultTradeItemsContainer${child_trade ? 1 : 0}`}>
+            <div className={`ootAdultTradeItemsContainer ootAdultTradeItemsContainer${child_trade ? 1 : 0}`}>
                 {adult_trade_children}
             </div> : null
             }
             { enemy_souls ?
-            <div className='ootEnemySoulsContainer'>
+            <div className={`ootEnemySoulsContainer ootEnemySoulsContainer${child_trade && adult_trade ? 2 : child_trade || adult_trade ? 1 : 0}`}>
                 {enemy_soul_panel_children}
             </div> : null
             }
             { boss_souls ?
-            <div className='ootBossSoulsContainer'>
+            <div className={`ootBossSoulsContainer ootBossSoulsContainer${child_trade && adult_trade && enemy_souls ? 7
+                                                                        : (enemy_souls && child_trade) || (enemy_souls && adult_trade) ? 6
+                                                                        : enemy_souls && !(child_trade || adult_trade) ? 5
+                                                                        : !enemy_souls && child_trade && adult_trade ? 2
+                                                                        : !enemy_souls && (child_trade || adult_trade) ? 1 : 0}`}>
                 {boss_soul_panel_children}
             </div> : null
             }
             { regional_souls ?
-            <div className='ootRegionalSoulsContainer'>
+            <div className={`ootRegionalSoulsContainer ootRegionalSoulsContainer${child_trade && adult_trade ? 2 : child_trade || adult_trade ? 1 : 0}`}>
                 {regional_soul_panel_children}
             </div> : null
             }
-            <div className={`ootAllDungeonItemsContainer ootAllDungeonItemsContainer${child_trade && adult_trade ? 2 : child_trade || adult_trade ? 1 : 0}`}>
-                <div className='ootDungeonItemsContainer'>
-                    {itemPanelLayout.dungeon_items.map((gridEntry) => {
+                <div className='ootDungeonMedItemsContainer med'>
+                    {itemPanelLayout.med_dungeon_items.map((gridEntry) => {
                         return <OotDungeonTracker
                                 addStartingItem={addStartingItem}
                                 removeStartingItem={removeStartingItem}
@@ -763,7 +766,27 @@ export const OotItemPanel = ({
                             />
                     })}
                 </div>
-                <div className={hideTCGKeys ? 'ootDungeonItemsLastRow' : 'ootDungeonTCGItemsLastRow'}>
+                <div className='ootDungeonSideItemsContainer stone'>
+                    {itemPanelLayout.side_dungeon_items.map((gridEntry) => {
+                        return <OotDungeonTracker
+                                addStartingItem={addStartingItem}
+                                removeStartingItem={removeStartingItem}
+                                cycleGraphMultiselectOption={cycleGraphMultiselectOption}
+                                handleCheck={handleCheck}
+                                handleUnCheck={handleUnCheck}
+                                gridEntry={gridEntry}
+                                graphSettings={graphSettings}
+                                graphCollectedItems={graphPlayerInventory}
+                                graphLocations={graphLocations}
+                                graphEntrances={graphEntrances}
+                                validSilverRupees={validSilverRupees}
+                                visitedSimRegions={visitedSimRegions}
+                                includeBlankSilverRupeeSquare={true}
+                                key={`${gridEntry.label}DungeonPanelEntryContainer`}
+                            />
+                    })}
+                </div>
+                <div className={`ootDungeonStoneItemsContainer ${hideTCGKeys ? 'ootDungeonItemsLastRow' : 'ootDungeonTCGItemsLastRow'}`}>
                     {itemPanelLayout.stone_dungeon_items.map((gridEntry) => {
                         if (gridEntry.label === 'TCG' && hideTCGKeys) return null;
                         return <OotDungeonTracker
@@ -784,7 +807,6 @@ export const OotItemPanel = ({
                             />
                     })}
                 </div>
-            </div>
         </div>
     )
 }

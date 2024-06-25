@@ -10,6 +10,7 @@ interface SilverRupeeDisplayIconProps {
     itemName: string,
     entryNum: number,
     dungeonSilverRupeeCounts: RupeeCount[],
+    openLeft: boolean,
 }
 
 
@@ -18,8 +19,9 @@ export const SilverRupeeDisplayIcon = ({
     itemName,
     entryNum,
     dungeonSilverRupeeCounts,
+    openLeft,
 }: SilverRupeeDisplayIconProps) => {
-    let [silverRupeeExpanded, setSilverRupeeExpanded] = useState<boolean>(false);
+    const [silverRupeeExpanded, setSilverRupeeExpanded] = useState<boolean>(false);
 
     let rSub = dungeonSilverRupeeCounts[0].collected.toString();
     let rSuper = dungeonSilverRupeeCounts.length > 1 ? dungeonSilverRupeeCounts[1].collected.toString() : '';
@@ -29,27 +31,47 @@ export const SilverRupeeDisplayIcon = ({
     let rSuperStyle = dungeonSilverRupeeCounts.length > 1 && dungeonSilverRupeeCounts[1].collected >= dungeonSilverRupeeCounts[1].max ? { color: 'var(--color-sidebar-upgrade)' } : {};
     let lSubStyle = dungeonSilverRupeeCounts.length > 2 && dungeonSilverRupeeCounts[2].collected >= dungeonSilverRupeeCounts[2].max ? { color: 'var(--color-sidebar-upgrade)' } : {};
     let lSuperStyle = dungeonSilverRupeeCounts.length > 3 && dungeonSilverRupeeCounts[3].collected >= dungeonSilverRupeeCounts[3].max ? { color: 'var(--color-sidebar-upgrade)' } : {};
+    if (openLeft && dungeonSilverRupeeCounts.length > 2) {
+        let tempRSub = rSub;
+        let tempRSuper = rSuper;
+        let tempLSub = lSub;
+        let tempLSuper = lSuper;
+        let tempRSubStyle = rSubStyle;
+        let tempRSuperStyle = rSuperStyle;
+        let tempLSubStyle = lSubStyle;
+        let tempLSuperStyle = lSuperStyle;
+        rSub = tempLSub;
+        rSubStyle = tempLSubStyle;
+        lSub = tempRSub;
+        lSubStyle = tempRSubStyle;
+        if (dungeonSilverRupeeCounts.length > 3) {
+            rSuper = tempLSuper;
+            rSuperStyle = tempLSuperStyle;
+            lSuper = tempRSuper;
+            lSuperStyle = tempRSuperStyle;
+        }
+    }
     return (
         <div
-            className={'ootSilverRupeeExpando ' + (silverRupeeExpanded ? 'ootSilverRupeeExpanded' : '')}
+            className={`ootSilverRupeeExpando ${openLeft ? 'ootSilverRupeeOpenLeft': ''} ${silverRupeeExpanded ? 'ootSilverRupeeExpanded' : ''}`}
             onBlur={() => setSilverRupeeExpanded(false)}
             tabIndex={0}
         >
             <div className='ootSilverRupeeMask'>
-                <OotItemIcon
-                    itemName={itemName}
-                    className="ootSilverRupeeTracker"
-                    subscript={rSub}
-                    leftLabel={lSub}
-                    topRightLabel={rSuper}
-                    topLeftLabel={lSuper}
-                    subscriptStyle={rSubStyle}
-                    topRightStyle={rSuperStyle}
-                    leftSubStyle={lSubStyle}
-                    topLeftStyle={lSuperStyle}
-                    onClick={() => setSilverRupeeExpanded(!silverRupeeExpanded)}
-                    key={`${itemName}DungeonPanelEntry${gridEntry.label}${entryNum}`}
-                />
+                    <OotItemIcon
+                        itemName={itemName}
+                        className="ootSilverRupeeTracker"
+                        subscript={rSub}
+                        leftLabel={lSub}
+                        topRightLabel={rSuper}
+                        topLeftLabel={lSuper}
+                        subscriptStyle={rSubStyle}
+                        topRightStyle={rSuperStyle}
+                        leftSubStyle={lSubStyle}
+                        topLeftStyle={lSuperStyle}
+                        onClick={() => setSilverRupeeExpanded(!silverRupeeExpanded)}
+                        key={`${itemName}DungeonPanelEntry${gridEntry.label}${entryNum}`}
+                    />
                 <div className='ootSilverRupeeNamesContainer'>
                     <div className='ootSilverRupeeNames'>
                         { dungeonSilverRupeeCounts.length > 3 ?

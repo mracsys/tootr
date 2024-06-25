@@ -261,7 +261,7 @@ const itemMap: IconDict = {
     'Silver Rupee (Ganons Castle Water Trial)': { img: '/images/silver_rupee_vertical.png', rSub: 'WaT', text: 'Water Trial' },
     'Silver Rupee (Ganons Castle Forest Trial)': { img: '/images/silver_rupee_vertical.png', rSub: 'FoT', text: 'Forest Trial' },
     'Silver Rupee (Ganons Castle)': { img: '/images/silver_rupee_vertical.png', rSub: 'GC' },
-    'Silver Rupee (???)': { img: '/images/silver_rupee_vertical.png', rSub: '?' },
+    'Silver Rupee (???)': { img: '/images/silver_rupee_vertical.png', rSub: '?', text: '???' },
     'Silver Rupee': { img: '/images/silver_rupee_vertical.png' },
     'Silver Rupee Pouch (Dodongos Cavern Staircase)': { img: '/images/silver_rupee_pouch.png', rSub: 'DC', text: 'Staircase' },
     'Silver Rupee Pouch (Dodongos Cavern)': { img: '/images/silver_rupee_pouch.png', rSub: 'DC' },
@@ -292,7 +292,7 @@ const itemMap: IconDict = {
     'Silver Rupee Pouch (Ganons Castle Water Trial)': { img: '/images/silver_rupee_pouch.png', rSub: 'WaT', text: 'Water Trial' },
     'Silver Rupee Pouch (Ganons Castle Forest Trial)': { img: '/images/silver_rupee_pouch.png', rSub: 'FoT', text: 'Forest Trial' },
     'Silver Rupee Pouch (Ganons Castle)': { img: '/images/silver_rupee_pouch.png', rSub: 'GC' },
-    'Silver Rupee Pouch (???)': { img: '/images/silver_rupee_pouch.png', rSub: '?' },
+    'Silver Rupee Pouch (???)': { img: '/images/silver_rupee_pouch.png', rSub: '?', text: '???' },
     'Silver Rupee Pouch': { img: '/images/silver_rupee_pouch.png' },
     'Ocarina A Button': { img: '/images/ocarina_a.blue.png' },
     'Ocarina C up Button': { img: '/images/ocarina_c_up.yellow.png' },
@@ -349,6 +349,7 @@ const itemMap: IconDict = {
     'Bongo Bongo Soul': { img: '/images/souls/bongo-bongo_32x32.png' },
     'Twinrova Soul': { img: '/images/souls/twinrova_32x32.png' },
     'Soul': { img: '/images/Soul_Icon.png' },
+    'Soul (???)': { img: '/images/Soul_Icon.png', rSub: '?' },
 
     // Regional souls
     'Deku Tree Souls': { img: '/images/Soul_Icon.png', rSub: keyMap['Deku Tree'] },

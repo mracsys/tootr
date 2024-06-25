@@ -100,7 +100,8 @@
   --md-sys-color-inverse-on-surface: rgb(46 48 54);
 
   --color-shadowed-text: #fff;
-  --color-shadowed-text-max: #FFF;
+  --color-shadowed-text-max: #00FF00;
+  --color-shadowed-text-mq: #006da3;
   --color-shadowed-text-shadow: rgba(0, 0, 0, 1);
 
   --color-hover: rgba(255, 255, 255, 0.2);

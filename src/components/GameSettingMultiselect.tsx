@@ -48,7 +48,6 @@ export const GameSettingMultiselect = ({
                     </div>
                 </div>
             </div>
-            <hr />
         </React.Fragment>
     );
 }

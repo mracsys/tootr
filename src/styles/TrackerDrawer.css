@@ -24,7 +24,6 @@
 .tabList {
     border-top: 2px solid var(--color-sidebar-text);
     width: var(--drawer-width);
-    padding-bottom: calc(var(--theme-spacing) * 1);
     background-color: var(--color-sidebar);
 }
 .gameInfo {
@@ -42,18 +41,17 @@
     .gameInfo {
         width: 100%;
     }
-    .settingsTabContainer,
-    .gameInfo .itemsHeldContainer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .ootItemPanelContainer {
+        width: 100%;
     }
 }
 .drawerTab {
-    width: var(--drawer-width);
-    overflow-y: auto;
     flex-grow: 1;
     background-color: var(--color-sidebar);
+}
+.drawerTab.scrollable {
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 .drawerTab::-webkit-scrollbar-track
 {
@@ -72,9 +70,18 @@
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
     background-color: var(--color-sidebar-text);
 }
+.paddedTab {
+    padding: calc(var(--theme-spacing) * 2) 0;
+}
+.sidebarTabs {
+    display: flex;
+    justify-content: stretch;
+}
 .sidebarTabs .MuiTab-root {
     color: var(--color-sidebar-text);
     opacity: 30%;
+    flex: 1;
+
 }
 .sidebarTabs .MuiTab-root:hover {
     opacity: 100%;
@@ -104,13 +111,4 @@
 }
 .devLink span {
     margin-left: var(--theme-spacing);
-}
-.raceModeIndicator {
-    text-align: center;
-    font-weight: bold;
-    color: var(--md-sys-color-on-error-container);
-    background-color: var(--md-sys-color-error-container);
-    border-top: 2px solid var(--color-sidebar-text);
-    padding: var(--theme-spacing);
-    text-transform: uppercase;
 }

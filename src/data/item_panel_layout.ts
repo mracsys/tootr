@@ -6,8 +6,9 @@ interface panelLayout {
     child_trade_items: itemEntry[],
     adult_trade_items: itemEntry[],
     win_cons: winconEntry,
-    dungeon_items: labelEntry[],
+    med_dungeon_items: labelEntry[],
     stone_dungeon_items: labelEntry[],
+    side_dungeon_items: labelEntry[],
     enemy_souls: itemEntry[],
     boss_souls: itemEntry[],
     regional_souls: itemEntry[],
@@ -183,6 +184,14 @@ export const itemPanelLayout: panelLayout = {
         { item_name: "Nocturne of Shadow" },
         { item_name: "Song of Storms" },
         { item_name: "Prelude of Light" },
+        {
+            item_name: "Ocarina",
+            item_variants: [
+                "Ocarina",
+                "Ocarina of Time",
+            ]
+        },
+        { item_name: "Scarecrow Song" },
     ],
     equipment: [
         {
@@ -250,14 +259,6 @@ export const itemPanelLayout: panelLayout = {
         { item_name: "Mirror Shield" },
     ],
     last_song_row: [
-        {
-            item_name: "Ocarina",
-            item_variants: [
-                "Ocarina",
-                "Ocarina of Time",
-            ]
-        },
-        { item_name: "Scarecrow Song" },
         { item_name: "Ocarina A Button" },
         {
             item_name: "Ocarina C down Button",
@@ -319,7 +320,7 @@ export const itemPanelLayout: panelLayout = {
             { item_name: "Gold Skulltula Token" },
         ]
     },
-    dungeon_items: [
+    med_dungeon_items: [
         {
             label: "Forest",
             modify_setting: "mq_dungeons_specific",
@@ -328,21 +329,6 @@ export const itemPanelLayout: panelLayout = {
                 { item_name: "DungeonReward" },
                 { item_name: "Small Key (Forest Temple)" },
                 { item_name: "Boss Key (Forest Temple)" },
-            ]
-        },
-        {
-            label: "Well",
-            modify_setting: "mq_dungeons_specific",
-            setting_value: "Bottom of the Well",
-            item_list: [
-                { item_name: "Small Key (Bottom of the Well)" },
-                { item_name: "BlankSpace" },
-            ],
-            // Filter these in the UI via location vanilla items.
-            // There are always no more than 4 silver rupee rooms
-            // per dungeon in vanilla and MQ.
-            silver_rupees: [
-                { item_name: "Silver Rupee (Bottom of the Well Basement)" },
             ]
         },
         {
@@ -356,22 +342,6 @@ export const itemPanelLayout: panelLayout = {
             ]
         },
         {
-            label: "Ice",
-            modify_setting: "mq_dungeons_specific",
-            setting_value: "Ice Cavern",
-            item_list: [
-                { item_name: "BlankSpace" },
-                { item_name: "BlankSpace" },
-            ],
-            // Filter these in the UI via location vanilla items.
-            // There are always no more than 4 silver rupee rooms
-            // per dungeon in vanilla and MQ.
-            silver_rupees: [
-                { item_name: "Silver Rupee (Ice Cavern Spinning Scythe)" },
-                { item_name: "Silver Rupee (Ice Cavern Push Block)" },
-            ]
-        },
-        {
             label: "Water",
             modify_setting: "mq_dungeons_specific",
             setting_value: "Water Temple",
@@ -379,23 +349,6 @@ export const itemPanelLayout: panelLayout = {
                 { item_name: "DungeonReward" },
                 { item_name: "Small Key (Water Temple)" },
                 { item_name: "Boss Key (Water Temple)" },
-            ]
-        },
-        {
-            label: "GTG",
-            modify_setting: "mq_dungeons_specific",
-            setting_value: "Gerudo Training Ground",
-            item_list: [
-                { item_name: "Small Key (Gerudo Training Ground)" },
-                { item_name: "BlankSpace" },
-            ],
-            // Filter these in the UI via location vanilla items.
-            // There are always no more than 4 silver rupee rooms
-            // per dungeon in vanilla and MQ.
-            silver_rupees: [
-                { item_name: "Silver Rupee (Gerudo Training Ground Slopes)" },
-                { item_name: "Silver Rupee (Gerudo Training Ground Lava)" },
-                { item_name: "Silver Rupee (Gerudo Training Ground Water)" },
             ]
         },
         {
@@ -419,13 +372,6 @@ export const itemPanelLayout: panelLayout = {
             ]
         },
         {
-            label: "Hideout",
-            item_list: [
-                { item_name: "Small Key (Thieves Hideout)" },
-                { item_name: "Gerudo Membership Card" },
-            ]
-        },
-        {
             label: "Shadow",
             modify_setting: "mq_dungeons_specific",
             setting_value: "Shadow Temple",
@@ -442,6 +388,63 @@ export const itemPanelLayout: panelLayout = {
                 { item_name: "Silver Rupee (Shadow Temple Invisible Blades)" },
                 { item_name: "Silver Rupee (Shadow Temple Huge Pit)" },
                 { item_name: "Silver Rupee (Shadow Temple Invisible Spikes)" },
+            ]
+        },
+    ],
+    side_dungeon_items: [
+        {
+            label: "Well",
+            modify_setting: "mq_dungeons_specific",
+            setting_value: "Bottom of the Well",
+            item_list: [
+                { item_name: "Small Key (Bottom of the Well)" },
+                { item_name: "BlankSpace" },
+            ],
+            // Filter these in the UI via location vanilla items.
+            // There are always no more than 4 silver rupee rooms
+            // per dungeon in vanilla and MQ.
+            silver_rupees: [
+                { item_name: "Silver Rupee (Bottom of the Well Basement)" },
+            ]
+        },
+        {
+            label: "Ice",
+            modify_setting: "mq_dungeons_specific",
+            setting_value: "Ice Cavern",
+            item_list: [
+                { item_name: "BlankSpace" },
+                { item_name: "BlankSpace" },
+            ],
+            // Filter these in the UI via location vanilla items.
+            // There are always no more than 4 silver rupee rooms
+            // per dungeon in vanilla and MQ.
+            silver_rupees: [
+                { item_name: "Silver Rupee (Ice Cavern Spinning Scythe)" },
+                { item_name: "Silver Rupee (Ice Cavern Push Block)" },
+            ]
+        },
+        {
+            label: "GTG",
+            modify_setting: "mq_dungeons_specific",
+            setting_value: "Gerudo Training Ground",
+            item_list: [
+                { item_name: "Small Key (Gerudo Training Ground)" },
+                { item_name: "BlankSpace" },
+            ],
+            // Filter these in the UI via location vanilla items.
+            // There are always no more than 4 silver rupee rooms
+            // per dungeon in vanilla and MQ.
+            silver_rupees: [
+                { item_name: "Silver Rupee (Gerudo Training Ground Slopes)" },
+                { item_name: "Silver Rupee (Gerudo Training Ground Lava)" },
+                { item_name: "Silver Rupee (Gerudo Training Ground Water)" },
+            ]
+        },
+        {
+            label: "Hideout",
+            item_list: [
+                { item_name: "Small Key (Thieves Hideout)" },
+                { item_name: "Gerudo Membership Card" },
             ]
         },
         {

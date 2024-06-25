@@ -29,7 +29,11 @@ export const SettingPanel = ({
     }
 
     let tab_output = [];
+    let isWide = window.matchMedia(`(min-width: 460px)`).matches;
     let settingIconsPerRow = 8;
+    if (!isWide) {
+        settingIconsPerRow = 6;
+    }
     let m = 0;
     for (let [tab_name, tab] of Object.entries(graphSettingsLayout)) {
         let visible_tab_settings = tab.settings.filter(s => Object.keys(settingAssetMap).includes(s.name) && !(s.disabled(graphSettings)));

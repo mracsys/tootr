@@ -2,7 +2,7 @@
     background-color: var(--md-sys-color-surface-bright);
     color: var(--md-sys-color-on-surface);
     border: 1px solid var(--md-sys-color-outline);
-    width: 500px;
+    width: 390px;
 }
 .locationHintMenu .MuiButtonBase-root {
     color: var(--md-sys-color-on-surface);
@@ -43,4 +43,5 @@
     display: flex;
     align-content: center;
     cursor: pointer;
+    padding: var(--theme-spacing) 0;
 }

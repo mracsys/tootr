@@ -10,6 +10,7 @@ import { location_item_menu_layout } from '@/data/location_item_menu_layout';
 import { GraphRegion, GraphEntrancePool, GraphLocation } from '@mracsys/randomizer-graph-tool';
 
 import '@/styles/HintMenu.css';
+import { location_item_menu_layout_vertical } from "@/data/location_item_menu_layout_vertical";
 
 interface HintMenuProps {
     anchorLocation?: Element | null,
@@ -415,6 +416,7 @@ const HintMenu = ({
     }
 
     let paths = [...pathIcons];
+    let isWide = window.matchMedia(`(min-width: 510px)`).matches;
 
     return (
         <React.Fragment>
@@ -512,14 +514,13 @@ const HintMenu = ({
                         </TabPanel>
                     </div>
                     : 
-                    <div>
+                    <div className="hintMenuDrawerTab">
                         <div className="hintRegionMenu" onClick={(e) => handleRegionMenuOpen(e)}>
                             <span>{hintRegion ? hintRegion : 'Hinted Region'}</span><ArrowDropDownIcon />
                         </div>
                         <div className="hintItemMenu" onClick={(e) => handleItemMenuOpen(e)}>
                             <span>{hintItem ? hintItem : 'Hinted Item'}</span><ArrowDropDownIcon />
                         </div>
-                        <div className="clearHintText" onClick={() => clearHint()}>Clear Hint</div>
                     </div>
                 }
                 <div className="clearHintText" onClick={() => clearHint()}>Clear Hint</div>
@@ -542,7 +543,7 @@ const HintMenu = ({
                 asExits={true}
             />
             <ItemMenu
-                menuLayout={location_item_menu_layout}
+                menuLayout={isWide ? location_item_menu_layout : location_item_menu_layout_vertical}
                 handleClose={handleItemMenuClose}
                 handleFind={handleFindItem}
                 anchorLocation={itemMenuOpen}
@@ -550,7 +551,7 @@ const HintMenu = ({
                 showClearButton={false}
             />
             <ItemMenu
-                menuLayout={location_item_menu_layout}
+                menuLayout={isWide ? location_item_menu_layout : location_item_menu_layout_vertical}
                 handleClose={handleItem2MenuClose}
                 handleFind={handleFindItem2}
                 anchorLocation={item2MenuOpen}

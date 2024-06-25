@@ -4,6 +4,7 @@ import GameArea from './GameArea';
 import { TrackerSettingsCurrent } from '@/data/tracker_settings';
 import type ContextMenuHandler from './ContextMenuHandler';
 import type { CollapsedRegions } from './Tracker';
+import WarpMenu from './WarpMenu';
 
 import { GraphRegion, GraphEntrance } from '@mracsys/randomizer-graph-tool';
 
@@ -33,6 +34,10 @@ interface TrackerPaperProps {
     trackerSettings: TrackerSettingsCurrent,
     simMode: boolean,
     lastLocationName: string[],
+    isWarpAreaLinked: (entrance: GraphEntrance) => boolean;
+    areaMenuHandler: ContextMenuHandler;
+    pages: {[page: string]: GraphRegion[]};
+    warps: GraphEntrance[];
 }
 
 const TrackerPaper = ({
@@ -59,27 +64,35 @@ const TrackerPaper = ({
     trackerSettings,
     simMode,
     lastLocationName,
+    isWarpAreaLinked,
+    areaMenuHandler,
+    pages,
+    warps,
 }: TrackerPaperProps) => {
     /*
-        sidebar-width = 490px (expanded), 0px (hidden)
+        sidebar-width = 480px (expanded), 0px (hidden)
         window-padding = sidebar-width + areaPaper.padding(20px) * 2
         column-gap = 20px
         min-column-width = 540px
         cutoff = window-padding + (column-width + column-gap) * column-count
     */
     const masonryBreakpoints: {[breakpoint: number]: number} = trackerSettings.expand_sidebar ? {
-        0: 1,
-        1650: 2,
-        2210: 3,
-        2770: 4,
-        3330: 5,
+        0:    1,
+        1360: 2,
+        1780: 3,
+        2200: 4,
+        2620: 5,
+        3040: 6,
+        3460: 7,
     } : {
-        0: 1,
-        1160: 2,
-        1720: 3,
-        2280: 4,
-        2840: 5,
-        3400: 6,
+        0:    1,
+        880:  2,
+        1300: 3,
+        1720: 4,
+        2140: 5,
+        2560: 6,
+        2980: 7,
+        3400: 8,
     };
 
     return (
@@ -136,6 +149,14 @@ const TrackerPaper = ({
                 </Masonry>
                 </ResponsiveMasonry>
             </div>
+            <WarpMenu
+                isWarpAreaLinked={isWarpAreaLinked}
+                handleDungeonTravel={handleDungeonTravel}
+                areaMenuHandler={areaMenuHandler}
+                pages={pages}
+                warps={warps}
+                raceMode={trackerSettings.race_mode}
+            />
         </div>
     )
 }

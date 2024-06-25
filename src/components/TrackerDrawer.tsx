@@ -1,4 +1,4 @@
-import { useState, ChangeEvent, Dispatch, SetStateAction } from "react";
+import { useState, ChangeEvent, Dispatch, SetStateAction, useEffect } from "react";
 import TabPanel from "./TabPanel";
 import { ItemPanel } from "./ItemPanel";
 import { SettingPanel } from "./SettingsPanel";
@@ -47,6 +47,7 @@ interface TrackerDrawerProps {
     graphSettingsLayout: GraphSettingsLayout,
     trackerSettings: TrackerSettingsCurrent,
     setTrackerSettings: Dispatch<SetStateAction<TrackerSettingsCurrent>>,
+    setLastEntranceName: Dispatch<SetStateAction<string>>,
     changeGraphStringSetting: (s: ChangeEvent<HTMLSelectElement>) => void,
     changeGraphBooleanSetting: (s: ChangeEvent<HTMLInputElement>) => void,
     changeGraphNumericSetting: (s: ChangeEvent<HTMLSelectElement>) => void,
@@ -82,6 +83,7 @@ const TrackerDrawer = ({
     graphSettingsLayout,
     trackerSettings,
     setTrackerSettings,
+    setLastEntranceName,
     changeGraphStringSetting,
     changeGraphBooleanSetting,
     changeGraphNumericSetting,
@@ -93,8 +95,10 @@ const TrackerDrawer = ({
     visitedSimRegions,
 }: TrackerDrawerProps) => {
     const [tabValue, setTabValue] = useState<number>(0);
-    let [multiselectMenuOpen, setMultiselectMenuOpen] = useState<Element | null>(null);
-    let [multiselectToUpdate, setMultiselectToUpdate] = useState<string>('');
+    const [multiselectMenuOpen, setMultiselectMenuOpen] = useState<Element | null>(null);
+    const [multiselectToUpdate, setMultiselectToUpdate] = useState<string>('');
+    const [itemPanelAsTab, setItemPanelAsTab] = useState<boolean>(false);
+
     const handleTabChange = (event: React.SyntheticEvent, newTabValue: number) => {
         event.preventDefault();
         setTabValue(newTabValue);
@@ -111,6 +115,9 @@ const TrackerDrawer = ({
         }
         if (name === 'game_version') {
             changeGraphVersion(value);
+        }
+        if (name === 'region_page') {
+            setLastEntranceName('');
         }
         newTrackerSettings[name] = value;
         setTrackerSettings(newTrackerSettings);
@@ -179,6 +186,39 @@ const TrackerDrawer = ({
         multiselectSettingChoices = multiselectDef.options.reduce((o, key) => ({ ...o, [key]: key}), {});
     }
 
+    useEffect(() => {
+        const handleResize = () => {
+            let adult_trade = graphSettings['adult_trade_shuffle'] && (Array.isArray(graphSettings['adult_trade_start']) && graphSettings['adult_trade_start'].length > 0);
+            let child_trade = Array.isArray(graphSettings['shuffle_child_trade']) && graphSettings['shuffle_child_trade'].length > 0;
+            let boss_souls = !!graphSettings.shuffle_enemy_spawns && typeof graphSettings.shuffle_enemy_spawns === 'string' && ['all', 'bosses'].includes(graphSettings.shuffle_enemy_spawns);
+            let enemy_souls = !!graphSettings.shuffle_enemy_spawns && graphSettings.shuffle_enemy_spawns === 'all';
+            let regional_souls = !!graphSettings.shuffle_enemy_spawns && graphSettings.shuffle_enemy_spawns === 'regional';
+        
+            let tabsBreakPoint = 64  // top bar height
+                            + 624    // base item tracker height (13 rows * 48px)
+                            + 300    // minimum settings panel height
+                            + 58     // tab list height
+                            + (child_trade ? 48 : 0)
+                            + (adult_trade ? 48 : 0)
+                            + (boss_souls ? 48 : 0)
+                            + (enemy_souls ? 192 : 0)
+                            + (regional_souls ? 144 : 0)
+                            + (trackerSettings.show_timer ? 82 : 0);
+            let isTall = window.matchMedia(`(min-height: ${tabsBreakPoint}px)`).matches;
+            // item panel expands vertically significantly for mobile screens
+            // less than 480px, assume no vertical room rather than recalculate
+            // the vertical breakpoint
+            let isWide = window.matchMedia(`(min-width: 480px)`).matches;
+            setItemPanelAsTab(!isTall || !isWide);
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        return () => { window.removeEventListener('resize', handleResize) };
+    }, []);
+
+    let tabOffset = itemPanelAsTab ? 1 : 0;
+
     return (
         <Drawer
             className="settingsDrawer"
@@ -186,44 +226,68 @@ const TrackerDrawer = ({
             anchor="left"
             open={trackerSettings.expand_sidebar}
             classes={{paper: "drawerPaper"}}
-            SlideProps={{
-                unmountOnExit: true,
-            }}
         >
             <div className="drawerHeader"></div>
             <div className="gameInfo">
-                <div className="ootItemPanelContainer">
-                    <ItemPanel
-                        addStartingItem={addStartingItem}
-                        addStartingItems={addStartingItems}
-                        removeStartingItem={removeStartingItem}
-                        removeStartingItems={removeStartingItems}
-                        replaceStartingItem={replaceStartingItem}
-                        cycleGraphMultiselectOption={cycleGraphMultiselectOption}
-                        cycleGraphRewardHint={cycleGraphRewardHint}
-                        handleCheck={checkLocation}
-                        handleUnCheck={unCheckLocation}
-                        graphSettings={graphSettings}
-                        graphCollectedItems={graphCollectedItems}
-                        graphPlayerInventory={graphPlayerInventory}
-                        graphRewardHints={graphRewardHints}
-                        graphLocations={graphLocations}
-                        graphEntrances={graphEntrances}
-                        visitedSimRegions={visitedSimRegions}
-                    />
-                </div>
+                { !itemPanelAsTab ?
+                    <div className="ootItemPanelContainer">
+                        <ItemPanel
+                            addStartingItem={addStartingItem}
+                            addStartingItems={addStartingItems}
+                            removeStartingItem={removeStartingItem}
+                            removeStartingItems={removeStartingItems}
+                            replaceStartingItem={replaceStartingItem}
+                            cycleGraphMultiselectOption={cycleGraphMultiselectOption}
+                            cycleGraphRewardHint={cycleGraphRewardHint}
+                            handleCheck={checkLocation}
+                            handleUnCheck={unCheckLocation}
+                            graphSettings={graphSettings}
+                            graphCollectedItems={graphCollectedItems}
+                            graphPlayerInventory={graphPlayerInventory}
+                            graphRewardHints={graphRewardHints}
+                            graphLocations={graphLocations}
+                            graphEntrances={graphEntrances}
+                            visitedSimRegions={visitedSimRegions}
+                        />
+                    </div>
+                    : null
+                }
                 {
-                    trackerSettings.show_timer ?
+                    !itemPanelAsTab && trackerSettings.show_timer ?
                         <RaceTimer />
                         : null
                 }
-                <div className="tabList">
-                    <Tabs className="sidebarTabs" value={tabValue} onChange={handleTabChange}>
-                        <Tab label='Game Settings' />
-                        <Tab label='Tracker Settings' />
-                    </Tabs>
-                </div>
-                <TabPanel value={tabValue} index={0} className='drawerTab'>
+                { itemPanelAsTab ?
+                    <TabPanel value={tabValue} index={0} className="drawerTab scrollable">
+                        <div className="ootItemPanelContainer">
+                            <ItemPanel
+                                addStartingItem={addStartingItem}
+                                addStartingItems={addStartingItems}
+                                removeStartingItem={removeStartingItem}
+                                removeStartingItems={removeStartingItems}
+                                replaceStartingItem={replaceStartingItem}
+                                cycleGraphMultiselectOption={cycleGraphMultiselectOption}
+                                cycleGraphRewardHint={cycleGraphRewardHint}
+                                handleCheck={checkLocation}
+                                handleUnCheck={unCheckLocation}
+                                graphSettings={graphSettings}
+                                graphCollectedItems={graphCollectedItems}
+                                graphPlayerInventory={graphPlayerInventory}
+                                graphRewardHints={graphRewardHints}
+                                graphLocations={graphLocations}
+                                graphEntrances={graphEntrances}
+                                visitedSimRegions={visitedSimRegions}
+                            />
+                        </div>
+                        {
+                            itemPanelAsTab && trackerSettings.show_timer ?
+                                <RaceTimer />
+                                : null
+                        }
+                    </TabPanel>
+                    : null
+                }
+                <TabPanel value={tabValue} index={0 + tabOffset} className='drawerTab scrollable'>
                     {
                         trackerSettings.setting_icons ?
                         <SettingPanel
@@ -244,7 +308,7 @@ const TrackerDrawer = ({
                         />
                     }
                 </TabPanel>
-                <TabPanel value={tabValue} index={1} className='drawerTab'>
+                <TabPanel value={tabValue} index={1 + tabOffset} className='drawerTab scrollable paddedTab'>
                     <SettingMultiselectMenu
                         handleClose={handleInternalMultiselectMenuClose}
                         handleChange={cycleInternalMultiselectOption}
@@ -315,6 +379,16 @@ const TrackerDrawer = ({
                         </li>
                     </ul>
                 </TabPanel>
+                <div className="tabList">
+                    <Tabs className="sidebarTabs" value={tabValue} onChange={handleTabChange}>
+                        { itemPanelAsTab ?
+                            <Tab label='Inventory' />
+                            : null
+                        }
+                        <Tab label='Game Settings' />
+                        <Tab label='Tracker Settings' />
+                    </Tabs>
+                </div>
             </div>
         </Drawer>
     );

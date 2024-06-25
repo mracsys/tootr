@@ -7,6 +7,9 @@
     grid-template-columns: repeat(10, 1fr);
     gap: 0px;
     grid-auto-rows: minmax(48px, 48px);
+    border-bottom: 1px solid var(--color-sidebar-border);
+    overflow-x: visible;
+    background-color: var(--color-sidebar);
 }
 .ootItemsBackground {
     position: absolute;
@@ -50,13 +53,6 @@
     width: 40px;
     height: 40px;
 }
-.ootItemTracker .ootAllDungeonItemsContainer .iconDiv {
-    padding: 8px;
-}
-.ootItemTracker .ootAllDungeonItemsContainer .iconContainer {
-    width: 32px;
-    height: 32px;
-}
 .ootItemTracker .iconDiv:hover {
     cursor: pointer;
 }
@@ -87,90 +83,283 @@
 .ootCompressedCButtons .itemPanelInset {
     display: none;
 }
+@media screen and (max-width: 480px) {
+    .ootItemTracker {
+        grid-template-columns: 1fr repeat(8, 48px) 1fr !important;
+    }
+    .ootEquipmentHeldContainer,
+    .ootItemsHeldContainer {
+        grid-column: 2 / 7 !important;
+    }
+    .ootSongsHeldContainer {
+        grid-row: 8 / 15 !important;
+    }
+    .ootQuestInfoContainer {
+        grid-column: 7 / 10 !important;
+        grid-row: 1 / 15 !important;
+        grid-template-columns: 1fr !important;
+    }
+    .ootChildTradeItemsContainer,
+    .ootAdultTradeItemsContainer {
+        grid-column: 2 / 10 !important;
+        grid-row-end: span 2 !important;
+        width: auto !important;
+        display: grid !important;
+        grid-template-columns: repeat(5, 1fr);
+        grid-auto-rows: minmax(48px, 48px);
+        justify-items: center;
+    }
+    .ootChildTradeItemsContainer {
+        grid-row-start: 18 !important;
+    }
+    .ootAdultTradeItemsContainer0 {
+        grid-row-start: 18 !important;
+    }
+    .ootAdultTradeItemsContainer1 {
+        grid-row-start: 20 !important;
+    }
+    .ootDungeonMedItemsContainer,
+    .ootDungeonSideItemsContainer,
+    .ootDungeonStoneItemsContainer {
+        grid-column: 2 / 7 !important;
+        justify-content: left !important;
+    }
+    .med .ootDungeonContainer {
+        width: 240px !important;
+    }
+    .stone .ootDungeonContainer {
+        width: 240px !important;
+    }
+    .ootDungeonMedItemsContainer .ootDungeonItems > .iconTooltipContainer:first-child  {
+        display: none;
+    }
+    .ootDungeonStoneItemsContainer {
+        width: auto !important;
+        grid-column: 7 / 10 !important;
+        grid-row-end: span 3 !important;
+        grid-template-columns: repeat(2, 72px) !important;
+        grid-auto-rows: minmax(48px, 48px);
+    }
+    .ootDungeonTCGItemsLastRow .ootDungeonContainer:nth-child(odd) {
+        grid-column-end: span 1;
+        grid-row-start: 1;
+    }
+    .ootDungeonTCGItemsLastRow .ootDungeonContainer:nth-child(2) {
+        grid-column-end: span 2;
+        grid-row-start: 2;
+    }
+    .ootDungeonTCGItemsLastRow .ootDungeonContainer:nth-child(4) {
+        grid-column-end: span 2;
+        grid-row-start: 3;
+    }
+    .ootDungeonItemsLastRow .ootDungeonContainer {
+        grid-column-end: span 2;
+        grid-row-end: span 1;
+    }
+    .ootDungeonStoneItemsContainer .ootDungeonItems > .iconTooltipContainer:first-child {
+        display: none;
+    }
+    .ootDungeonStoneItemsContainer .ootDungeonContainer:nth-child(4) .ootDungeonItems > .iconTooltipContainer:first-child {
+        display: flex;
+    }
+    .ootDungeonStoneItemsContainer .ootDungeonItems > .iconTooltipContainer:first-child .iconDiv {
+        padding-right: 6px !important;
+    }
+    .ootDungeonStoneItemsContainer .ootDungeonContainer {
+        justify-content: left !important;
+        width: auto !important;
+    }
+    .ootDungeonStoneItemsContainer .ootDungeonLabelContainer {
+        flex-grow: 1;
+    }
+    .ootDungeonStoneItemsContainer .ootDungeonItems > .ootSilverRupeeExpando {
+        left: -4px !important;
+    }
+    .ootDungeonTCGItemsLastRow .ootDungeonInset1,
+    .ootDungeonItemsLastRow .ootDungeonInset1 {
+        right: 4px !important;
+    }
+    .ootEnemySoulsContainer,
+    .ootBossSoulsContainer,
+    .ootRegionalSoulsContainer {
+        grid-column: 2 / 10 !important;
+    }
+    .ootEnemySoulsContainer {
+        grid-row-end: span 5 !important;
+    }
+    .ootEnemySoulsContainer0 {
+        grid-row-start: 18 !important;
+    }
+    .ootEnemySoulsContainer1 {
+        grid-row-start: 20 !important;
+    }
+    .ootEnemySoulsContainer2 {
+        grid-row-start: 22 !important;
+    }
+    .ootRegionalSoulsContainer0 {
+        grid-row-start: 18 !important;
+    }
+    .ootRegionalSoulsContainer1 {
+        grid-row-start: 20 !important;
+    }
+    .ootRegionalSoulsContainer2 {
+        grid-row-start: 22 !important;
+    }
+    .ootBossSoulsContainer0 {
+        grid-row-start: 18 !important;
+    }
+    .ootBossSoulsContainer1 {
+        grid-row-start: 20 !important;
+    }
+    .ootBossSoulsContainer2 {
+        grid-row-start: 22 !important;
+    }
+    .ootBossSoulsContainer5 {
+        grid-row-start: 23 !important;
+    }
+    .ootBossSoulsContainer6 {
+        grid-row-start: 25 !important;
+    }
+    .ootBossSoulsContainer7 {
+        grid-row-start: 27 !important;
+    }
+}
 .ootItemsHeldContainer {
     grid-column: 1 / 6;
     grid-row: 1 / 5;
-    width: calc(48px * 5);
     background-color: var(--color-item-menu-items);
+    display: grid;
+    grid-template-columns: 1fr repeat(4, 48px);
+    gap: 0px;
+    grid-auto-rows: minmax(48px, 48px);
+    justify-items: end;
 }
 .ootEquipmentHeldContainer {
     grid-column: 1 / 6;
     grid-row: 5 / 8;
-    width: calc(48px * 5);
     background-color: var(--color-item-menu-equip);
+    display: grid;
+    grid-template-columns: 1fr repeat(4, 48px);
+    gap: 0px;
+    grid-auto-rows: minmax(48px, 48px);
+    justify-items: end;
 }
 .ootSongsHeldContainer {
-    grid-column: 6 / 8;
-    grid-row: 1 / 7;
-    width: calc(48px * 2);
+    grid-row: span 7;
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    gap: 0px;
+    grid-auto-rows: minmax(48px, 48px);
 }
 .ootQuestInfoContainer {
     grid-column: 6 / 11;
     grid-row: 1 / 8;
     background-color: var(--color-item-menu-quest);
+    display: grid;
+    grid-template-columns: 96px 144px;
+    gap: 0px;
+    grid-auto-rows: minmax(48px, 48px);
 }
 .ootWinConsContainer {
-    grid-column: 8 / 11;
-    grid-row: 1 / 7;
+    grid-row: span 6;
     width: calc(48px * 3);
 }
 .ootItemsHeldLastRowContainer {
-    grid-column: 6 / 11;
-    grid-row: 7 / 8;
-    width: calc(48px * 5);
+    grid-row: span 1;
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    gap: 0px;
+    grid-auto-rows: minmax(48px, 48px);
+    justify-items: left;
+
 }
 .ootChildTradeItemsContainer {
     grid-column: 1 / 11;
-    /*grid-row: 8 / 9;*/
     grid-row-end: span 1;
     width: var(--drawer-width);
     background-color: var(--color-item-menu-trade);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
-.ootAdultTradeItemsContainer0,
-.ootAdultTradeItemsContainer1 {
+.ootAdultTradeItemsContainer {
     grid-column: 1 / 11;
     grid-row-end: span 1;
     width: var(--drawer-width);
     background-color: var(--color-item-menu-trade);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
-.ootAllDungeonItemsContainer {
-    grid-column: 1 / 11;
-    grid-row-end: span 6;
-    width: var(--drawer-width);
+.ootDungeonMedItemsContainer {
+    grid-column: 1 / 6;
+    grid-row-end: span 5;
     backdrop-filter: saturate(0%) brightness(500%);
     background-color: var(--color-item-menu-keys);
+    display: grid;
+    z-index: 2;
+}
+.ootDungeonSideItemsContainer {
+    grid-column: 6 / 11;
+    grid-row-end: span 5;
+    backdrop-filter: saturate(0%) brightness(500%);
+    background-color: var(--color-item-menu-keys);
+    display: grid;
+    justify-content: end;
+}
+@media screen and (max-width: 930px) {
+    .ootDungeonMedItemsContainer {
+        justify-content: end;
+    }
+    .ootDungeonSideItemsContainer {
+        justify-content: left;
+    }
+}
+.ootDungeonStoneItemsContainer {
+    grid-column: 1 / 11;
+    grid-row-end: span 1;
+    backdrop-filter: saturate(0%) brightness(500%);
+    background-color: var(--color-item-menu-keys);
+    display: grid;
+}
+.ootDungeonStoneItemsContainer .ootDungeonItems > .iconTooltipContainer:first-child .iconDiv {
+    padding-right: 0px;
+}
+.ootDungeonStoneItemsContainer .ootDungeonItems > .ootSilverRupeeExpando {
+    left: 5px;
+}
+.ootDungeonItemsLastRow {
+    grid-template-columns: repeat(3, 1fr);
+}
+.ootDungeonTCGItemsLastRow {
+    grid-template-columns: repeat(4, 1fr);
 }
 .ootEnemySoulsContainer {
     grid-column: 1 / 11;
     grid-row-end: span 4;
     place-content: center;
     background-color: var(--color-item-menu-souls);
-    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .ootBossSoulsContainer {
     grid-column: 1 / 11;
     grid-row-end: span 1;
     place-content: center;
     background-color: var(--color-item-menu-souls);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .ootRegionalSoulsContainer {
     grid-column: 1 / 11;
     grid-row-end: span 3;
     place-content: center;
     background-color: var(--color-item-menu-souls);
-}
-/*.ootAllDungeonItemsContainer0 {
-    grid-row: 8 / 14;
-}
-.ootAllDungeonItemsContainer1 {
-    grid-row: 9 / 15;
-}
-.ootAllDungeonItemsContainer2 {
-    grid-row: 10 / 16;
-}*/
-.ootItemTracker div {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 .ootItemTracker .ootMaxItemUpgrade .iconRightText {
     color: var(--color-sidebar-upgrade);

@@ -1,28 +1,17 @@
-export type item_menu_layout = (
-    string |
-    {
-        button_item: string;
-        item_list?: string[] | {[item_name: string]: string[]};
-        menu_list?: string[][];
-    }
-)[][];
+import type { item_menu_layout } from "./location_item_menu_layout";
 
 // Horizontal layout
-// 10x5 items, plus extra row for clear button.
-// Rows 4/5 organized to mitigate radial submenu spillover
-// beyond menu width.
-export const location_item_menu_layout: item_menu_layout = [
+// 5x10 items, plus extra row for clear button.
+// Rows organized to mitigate radial submenu spillover
+// beyond menu width. Submenus generally kept to
+// columns 3, 4, 5.
+export const location_item_menu_layout_vertical: item_menu_layout = [
     [
         'Slingshot',
         'Bomb Bag',
         'Bow',
         'Fire Arrows',
         'Dins Fire',
-        'Kokiri Sword',
-        'Biggoron Sword',
-        'Stone of Agony',
-        'Goron Tunic',
-        'Zora Tunic',
     ],
     [
         'Boomerang',
@@ -36,11 +25,6 @@ export const location_item_menu_layout: item_menu_layout = [
             ]
         },
         'Farores Wind',
-        'Deku Shield',
-        'Hylian Shield',
-        'Mirror Shield',
-        'Iron Boots',
-        'Hover Boots',
     ],
     [
         'Lens of Truth',
@@ -54,6 +38,22 @@ export const location_item_menu_layout: item_menu_layout = [
         'Megaton Hammer',
         'Light Arrows',
         'Nayrus Love',
+    ],
+    [
+        'Kokiri Sword',
+        'Biggoron Sword',
+        'Stone of Agony',
+        'Goron Tunic',
+        'Zora Tunic',
+    ],
+    [
+        'Deku Shield',
+        'Hylian Shield',
+        'Mirror Shield',
+        'Iron Boots',
+        'Hover Boots',
+    ],
+    [
         'Progressive Wallet',
         'Progressive Scale',
         'Progressive Strength Upgrade',
@@ -107,22 +107,26 @@ export const location_item_menu_layout: item_menu_layout = [
             ]
         },
         {
-            button_item: 'Map',
+            button_item: 'Deku Stick',
             item_list: [
-                'Map (Deku Tree)',
-                'Map (Dodongos Cavern)',
-                'Map (Jabu Jabus Belly)',
-                'Map (Forest Temple)',
-                'Map (Fire Temple)',
-                'Map (Water Temple)',
-                'Map (Spirit Temple)',
-                'Map (Shadow Temple)',
-                'Map (Ice Cavern)',
-                'Map (Bottom of the Well)',
-                'Map (Ganons Castle)',
-                'Map (???)',
+                'Deku Stick (1)',
+                'Deku Nuts (5)',
+                'Deku Seeds (30)',
+                'Bombs (5)',
+                'Arrows (5)',
+                'Recovery Heart',
+                'Rupee (1)',
+                'Rupees (5)',
+                'Rupees (20)',
+                'Rupees (50)',
+                'Rupees (200)',
+                'Double Defense',
             ]
         },
+    ],
+    [
+        'Piece of Heart',
+        'Gold Skulltula Token',
         {
             button_item: 'Weird Egg',
             item_list: [
@@ -156,22 +160,25 @@ export const location_item_menu_layout: item_menu_layout = [
             ]
         },
         {
-            button_item: 'Deku Stick',
+            button_item: 'Map',
             item_list: [
-                'Deku Stick (1)',
-                'Deku Nuts (5)',
-                'Deku Seeds (30)',
-                'Bombs (5)',
-                'Arrows (5)',
-                'Recovery Heart',
-                'Rupee (1)',
-                'Rupees (5)',
-                'Rupees (20)',
-                'Rupees (50)',
-                'Rupees (200)',
-                'Double Defense',
+                'Map (Deku Tree)',
+                'Map (Dodongos Cavern)',
+                'Map (Jabu Jabus Belly)',
+                'Map (Forest Temple)',
+                'Map (Fire Temple)',
+                'Map (Water Temple)',
+                'Map (Spirit Temple)',
+                'Map (Shadow Temple)',
+                'Map (Ice Cavern)',
+                'Map (Bottom of the Well)',
+                'Map (Ganons Castle)',
+                'Map (???)',
             ]
         },
+    ],
+    [
+        'Heart Container',
         {
             button_item: 'Soul',
             menu_list: [
@@ -263,7 +270,99 @@ export const location_item_menu_layout: item_menu_layout = [
                 ]
             ]
         },
-        'Gold Skulltula Token',
+        {
+            button_item: 'Silver Rupee',
+            item_list: {
+                'Silver Rupee (Bottom of the Well)': ['Silver Rupee (Bottom of the Well Basement)'],
+                'Silver Rupee (Ice Cavern)': [
+                    'Silver Rupee (Ice Cavern Spinning Scythe)',
+                    'Silver Rupee (Ice Cavern Push Block)',
+                ],
+                'Silver Rupee (Gerudo Training Ground)': [
+                    'Silver Rupee (Gerudo Training Ground Slopes)',
+                    'Silver Rupee (Gerudo Training Ground Lava)',
+                    'Silver Rupee (Gerudo Training Ground Water)',
+                ],
+                'Silver Rupee (Shadow Temple)': [
+                    'Silver Rupee (Shadow Temple Invisible Blades)',
+                    'Silver Rupee (Shadow Temple Invisible Spikes)',
+                    'Silver Rupee (Shadow Temple Scythe Shortcut)',
+                    'Silver Rupee (Shadow Temple Huge Pit)',
+                ],
+                'Silver Rupee (Spirit Temple)': [
+                    'Silver Rupee (Spirit Temple Child Early Torches)',
+                    'Silver Rupee (Spirit Temple Adult Boulders)',
+                    'Silver Rupee (Spirit Temple Lobby and Lower Adult)',
+                    'Silver Rupee (Spirit Temple Sun Block)',
+                    'Silver Rupee (Spirit Temple Adult Climb)',
+                ],
+                'Silver Rupee (Ganons Castle)': [
+                    'Silver Rupee (Ganons Castle Forest Trial)',
+                    'Silver Rupee (Ganons Castle Fire Trial)',
+                    'Silver Rupee (Ganons Castle Water Trial)',
+                    'Silver Rupee (Ganons Castle Spirit Trial)',
+                    'Silver Rupee (Ganons Castle Shadow Trial)',
+                    'Silver Rupee (Ganons Castle Light Trial)',
+                ],
+                'Silver Rupee (Dodongos Cavern)': ['Silver Rupee (Dodongos Cavern Staircase)'],
+                'Silver Rupee (???)': ['Silver Rupee (???)'],
+            }
+        },
+        {
+            button_item: 'Silver Rupee Pouch',
+            item_list: {
+                'Silver Rupee Pouch (Bottom of the Well)': ['Silver Rupee Pouch (Bottom of the Well Basement)'],
+                'Silver Rupee Pouch (Ice Cavern)': [
+                    'Silver Rupee Pouch (Ice Cavern Spinning Scythe)',
+                    'Silver Rupee Pouch (Ice Cavern Push Block)',
+                ],
+                'Silver Rupee Pouch (Gerudo Training Ground)': [
+                    'Silver Rupee Pouch (Gerudo Training Ground Slopes)',
+                    'Silver Rupee Pouch (Gerudo Training Ground Lava)',
+                    'Silver Rupee Pouch (Gerudo Training Ground Water)',
+                ],
+                'Silver Rupee Pouch (Shadow Temple)': [
+                    'Silver Rupee Pouch (Shadow Temple Invisible Blades)',
+                    'Silver Rupee Pouch (Shadow Temple Invisible Spikes)',
+                    'Silver Rupee Pouch (Shadow Temple Scythe Shortcut)',
+                    'Silver Rupee Pouch (Shadow Temple Huge Pit)',
+                ],
+                'Silver Rupee Pouch (Spirit Temple)': [
+                    'Silver Rupee Pouch (Spirit Temple Child Early Torches)',
+                    'Silver Rupee Pouch (Spirit Temple Adult Boulders)',
+                    'Silver Rupee Pouch (Spirit Temple Lobby and Lower Adult)',
+                    'Silver Rupee Pouch (Spirit Temple Sun Block)',
+                    'Silver Rupee Pouch (Spirit Temple Adult Climb)',
+                ],
+                'Silver Rupee Pouch (Ganons Castle)': [
+                    'Silver Rupee Pouch (Ganons Castle Forest Trial)',
+                    'Silver Rupee Pouch (Ganons Castle Fire Trial)',
+                    'Silver Rupee Pouch (Ganons Castle Water Trial)',
+                    'Silver Rupee Pouch (Ganons Castle Spirit Trial)',
+                    'Silver Rupee Pouch (Ganons Castle Shadow Trial)',
+                    'Silver Rupee Pouch (Ganons Castle Light Trial)',
+                ],
+                'Silver Rupee Pouch (Dodongos Cavern)': ['Silver Rupee Pouch (Dodongos Cavern Staircase)'],
+                'Silver Rupee Pouch (???)': ['Silver Rupee Pouch (???)'],
+            }
+        },
+        {
+            button_item: 'Compass',
+            item_list: [
+                'Compass (Deku Tree)',
+                'Compass (Dodongos Cavern)',
+                'Compass (Jabu Jabus Belly)',
+                'Compass (Forest Temple)',
+                'Compass (Fire Temple)',
+                'Compass (Water Temple)',
+                'Compass (Spirit Temple)',
+                'Compass (Shadow Temple)',
+                'Compass (Ice Cavern)',
+                'Compass (Bottom of the Well)',
+                'Compass (Ganons Castle)',
+                'Compass (???)',
+            ]
+        },
     ],
     [
         'Triforce Piece',
@@ -312,99 +411,6 @@ export const location_item_menu_layout: item_menu_layout = [
             ]
         },
         {
-            button_item: 'Compass',
-            item_list: [
-                'Compass (Deku Tree)',
-                'Compass (Dodongos Cavern)',
-                'Compass (Jabu Jabus Belly)',
-                'Compass (Forest Temple)',
-                'Compass (Fire Temple)',
-                'Compass (Water Temple)',
-                'Compass (Spirit Temple)',
-                'Compass (Shadow Temple)',
-                'Compass (Ice Cavern)',
-                'Compass (Bottom of the Well)',
-                'Compass (Ganons Castle)',
-                'Compass (???)',
-            ]
-        },
-        {
-            button_item: 'Silver Rupee Pouch',
-            item_list: {
-                'Silver Rupee Pouch (Bottom of the Well)': ['Silver Rupee Pouch (Bottom of the Well Basement)'],
-                'Silver Rupee Pouch (Ice Cavern)': [
-                    'Silver Rupee Pouch (Ice Cavern Spinning Scythe)',
-                    'Silver Rupee Pouch (Ice Cavern Push Block)',
-                ],
-                'Silver Rupee Pouch (Gerudo Training Ground)': [
-                    'Silver Rupee Pouch (Gerudo Training Ground Slopes)',
-                    'Silver Rupee Pouch (Gerudo Training Ground Lava)',
-                    'Silver Rupee Pouch (Gerudo Training Ground Water)',
-                ],
-                'Silver Rupee Pouch (Shadow Temple)': [
-                    'Silver Rupee Pouch (Shadow Temple Invisible Blades)',
-                    'Silver Rupee Pouch (Shadow Temple Invisible Spikes)',
-                    'Silver Rupee Pouch (Shadow Temple Scythe Shortcut)',
-                    'Silver Rupee Pouch (Shadow Temple Huge Pit)',
-                ],
-                'Silver Rupee Pouch (Spirit Temple)': [
-                    'Silver Rupee Pouch (Spirit Temple Child Early Torches)',
-                    'Silver Rupee Pouch (Spirit Temple Adult Boulders)',
-                    'Silver Rupee Pouch (Spirit Temple Lobby and Lower Adult)',
-                    'Silver Rupee Pouch (Spirit Temple Sun Block)',
-                    'Silver Rupee Pouch (Spirit Temple Adult Climb)',
-                ],
-                'Silver Rupee Pouch (Ganons Castle)': [
-                    'Silver Rupee Pouch (Ganons Castle Forest Trial)',
-                    'Silver Rupee Pouch (Ganons Castle Fire Trial)',
-                    'Silver Rupee Pouch (Ganons Castle Water Trial)',
-                    'Silver Rupee Pouch (Ganons Castle Spirit Trial)',
-                    'Silver Rupee Pouch (Ganons Castle Shadow Trial)',
-                    'Silver Rupee Pouch (Ganons Castle Light Trial)',
-                ],
-                'Silver Rupee Pouch (Dodongos Cavern)': ['Silver Rupee Pouch (Dodongos Cavern Staircase)'],
-                'Silver Rupee Pouch (???)': ['Silver Rupee Pouch (???)'],
-            }
-        },
-        {
-            button_item: 'Silver Rupee',
-            item_list: {
-                'Silver Rupee (Bottom of the Well)': ['Silver Rupee (Bottom of the Well Basement)'],
-                'Silver Rupee (Ice Cavern)': [
-                    'Silver Rupee (Ice Cavern Spinning Scythe)',
-                    'Silver Rupee (Ice Cavern Push Block)',
-                ],
-                'Silver Rupee (Gerudo Training Ground)': [
-                    'Silver Rupee (Gerudo Training Ground Slopes)',
-                    'Silver Rupee (Gerudo Training Ground Lava)',
-                    'Silver Rupee (Gerudo Training Ground Water)',
-                ],
-                'Silver Rupee (Shadow Temple)': [
-                    'Silver Rupee (Shadow Temple Invisible Blades)',
-                    'Silver Rupee (Shadow Temple Invisible Spikes)',
-                    'Silver Rupee (Shadow Temple Scythe Shortcut)',
-                    'Silver Rupee (Shadow Temple Huge Pit)',
-                ],
-                'Silver Rupee (Spirit Temple)': [
-                    'Silver Rupee (Spirit Temple Child Early Torches)',
-                    'Silver Rupee (Spirit Temple Adult Boulders)',
-                    'Silver Rupee (Spirit Temple Lobby and Lower Adult)',
-                    'Silver Rupee (Spirit Temple Sun Block)',
-                    'Silver Rupee (Spirit Temple Adult Climb)',
-                ],
-                'Silver Rupee (Ganons Castle)': [
-                    'Silver Rupee (Ganons Castle Forest Trial)',
-                    'Silver Rupee (Ganons Castle Fire Trial)',
-                    'Silver Rupee (Ganons Castle Water Trial)',
-                    'Silver Rupee (Ganons Castle Spirit Trial)',
-                    'Silver Rupee (Ganons Castle Shadow Trial)',
-                    'Silver Rupee (Ganons Castle Light Trial)',
-                ],
-                'Silver Rupee (Dodongos Cavern)': ['Silver Rupee (Dodongos Cavern Staircase)'],
-                'Silver Rupee (???)': ['Silver Rupee (???)'],
-            }
-        },
-        {
             button_item: 'Zora Sapphire',
             item_list: [
                 'Water Medallion',
@@ -418,8 +424,6 @@ export const location_item_menu_layout: item_menu_layout = [
                 'Spirit Medallion',
             ]
         },
-        'Piece of Heart',
-        'Heart Container',
     ]
 ];
 

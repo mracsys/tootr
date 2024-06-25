@@ -1,33 +1,26 @@
 
-@media screen and (max-width: 600px) {
+@container areaPaper (max-width: 600px) {
     .warpMenu {
-        width: 100%;
-        position: fixed;
-        bottom: 0;
-        right: 0;
-        z-index: 10;
-        display: flex;
-        flex-direction: column;
-        background-color: var(--color-warpmenu);
-        box-shadow: -2px -2px 4px -1px var(--color-warpmenu-text-shadow);
-        max-height: 50%;
+        width: calc(100% - 12px);
     }
 }
-@media screen and (min-width: 600px) {
+@container areaPaper (min-width: 600px) {
     .warpMenu {
         border-radius: 8px 0px 0 0;
         overflow: hidden;
-        position: fixed;
-        bottom: 0;
-        right: 12px;
-        z-index: 10;
-        display: flex;
-        flex-direction: column;
-        background-color: var(--color-warpmenu);
-        border-top: 1px solid var(--color-warpmenu-border);
         border-left: 1px solid var(--color-warpmenu-border);
-        max-height: 50%;
     }    
+}
+.warpMenu {
+    position: fixed;
+    bottom: 0;
+    right: 12px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-warpmenu);
+    border-top: 1px solid var(--color-warpmenu-border);
+    max-height: 50%;
 }
 .warpMenu.raceModeBar {
     background-color: var(--color-header-race-mode) !important;
@@ -85,27 +78,27 @@
     font-weight: bold;
     padding: var(--theme-spacing);
 }
-@media screen and (max-width: 600px) {
+@container areaPaper (max-width: 600px) {
     .warpSongsBig {
         display: none;
     }
 }
-@media screen and (min-width: 600px) {
+@container areaPaper (min-width: 600px) {
     .warpSongsBig {
         display: flex;
     }
 }
-@media screen and (max-width: 600px) {
+@container areaPaper (max-width: 600px) {
     .warpSongsSmall {
         display: flex;
     }
 }
-@media screen and (min-width: 600px) {
+@container areaPaper (min-width: 600px) {
     .warpSongsSmall {
         display: none;
     }
 }
-@media screen and (max-width: 600px) {
+@container areaPaper (max-width: 600px) {
     .warpSongsBlank {
         color: var(--color-warpmenu-text-disabled);
         width: 32px;
@@ -113,7 +106,7 @@
         cursor: pointer;
     }
 }
-@media screen and (min-width: 600px) {
+@container areaPaper (min-width: 600px) {
     .warpSongsBlank {
         display: none;
     }

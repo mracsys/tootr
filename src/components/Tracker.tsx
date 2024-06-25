@@ -10,7 +10,6 @@ import ItemMenu from './ItemMenu';
 import SettingMultiselectMenu from './SettingMultiselectMenu';
 import HintMenu, { HintMenuData, pathLocations, pathItems } from './HintMenu';
 import ContextMenuHandler from './ContextMenuHandler';
-import WarpMenu from './WarpMenu';
 import TrackerUpdateDialog from './TrackerUpdateDialog';
 import TrackerResetDialog from './TrackerResetDialog';
 
@@ -33,6 +32,7 @@ import '@/styles/tracker.css';
 import '@/styles/themes/light.css';
 import '@/styles/themes/dark.css';
 import { buildExitEntranceName } from './UnknownEntrance';
+import { location_item_menu_layout_vertical } from '@/data/location_item_menu_layout_vertical';
 
 export interface SavedTrackerState {
     SaveName: string,
@@ -65,6 +65,7 @@ type TrackerSettingChangeEvent = {
 }
 
 const localFileLocations: {[randoVersion: string]: string} = {
+    'v8.1.0': '/ootr-local-8-1-0',
     '8.1 Stable': '/ootr-local-8-1-0',
     '8.1.45 Fenhl-3': '/ootr-local-fenhl-8-1-45-3',
     '8.1.29 Rob-104': '/ootr-local-realrob-8-1-29-104',
@@ -160,7 +161,7 @@ const Tracker = (_props: {}) => {
         }
         setTrackerPreferences(graphGlobal);
         return graphGlobal;
-    }, [_fileCache, graphVersion]);
+    }, [_fileCache, graphVersion, userSettingsLoaded]);
 
     // run on mount and unmount
     useEffect(() => {
@@ -204,11 +205,17 @@ const Tracker = (_props: {}) => {
         }
         let clientVisitedRegions = localStorage.getItem('SimModeVisitedRegions');
         let visitedRegionsInit = !!clientVisitedRegions ? new Set<string>(JSON.parse(clientVisitedRegions)) : new Set<string>();
+        let clientLastEntranceName = localStorage.getItem('SimModeLastEntranceName');
+        let lastEntranceNameInit = !!clientLastEntranceName ? clientLastEntranceName : '';
+        let clientCurrentPreset = localStorage.getItem('CurrentGraphPreset');
+        let currentPresetInit = !!clientCurrentPreset ? clientCurrentPreset : 'Random Settings League';
 
         setGraphVersion(trackerSettingsInit.game_version);
         setCollapsedRegions(collapsedRegionsInit);
         setTrackerSettings(trackerSettingsInit);
         setVisitedSimRegions(visitedRegionsInit);
+        setLastEntranceName(lastEntranceNameInit);
+        setCurrentGraphPreset(currentPresetInit);
         setUserSettingsLoaded(true);
 
         // clear pending timeouts on unmount
@@ -218,10 +225,39 @@ const Tracker = (_props: {}) => {
     // hooks to keep state saved in localstorage
     useEffect(() => {
         if (trackerInitialized) localStorage.setItem('TrackerSettings', JSON.stringify(trackerSettings));
-    }, [trackerSettings]);
+    }, [
+        trackerSettings,
+        trackerSettings.version,
+        trackerSettings.game_version,
+        trackerSettings.player_number,
+        trackerSettings.setting_icons,
+        trackerSettings.region_page,
+        trackerSettings.one_region_per_page,
+        trackerSettings.expand_sidebar,
+        trackerSettings.dark_mode,
+        trackerSettings.show_age_logic,
+        trackerSettings.race_mode,
+        trackerSettings.region_visibility,
+        trackerSettings.show_unshuffled_entrances,
+        trackerSettings.show_unshuffled_locations,
+        trackerSettings.show_hints,
+        trackerSettings.show_locations,
+        trackerSettings.shop_price_tracking,
+        trackerSettings.show_timer,
+        trackerSettings.show_check_counter,
+    ]);
     useEffect(() => {
         if (trackerInitialized) localStorage.setItem('CollapsedRegions', JSON.stringify(collapsedRegions));
-    }, [collapsedRegions]);
+    }, [Object.keys(collapsedRegions).length]);
+    useEffect(() => {
+        if (trackerInitialized) localStorage.setItem('SimModeVisitedRegions', JSON.stringify(Array.from(visitedSimRegions.values())));
+    }, [visitedSimRegions.size]);
+    useEffect(() => {
+        if (trackerInitialized) localStorage.setItem('SimModeLastEntranceName', lastEntranceName);
+    }, [lastEntranceName]);
+    useEffect(() => {
+        if (trackerInitialized) localStorage.setItem('CurrentGraphPreset', currentGraphPreset);
+    }, [currentGraphPreset]);
 
     // When swapping between Overworld and Dungeon views, anchors don't
     // work until after rendering. Ugly workaround incoming.
@@ -297,6 +333,7 @@ const Tracker = (_props: {}) => {
             setImportSimMode(false);
             setTrackerInitialized(true);
             setGraphImportFile('');
+            setVisitedSimRegions(new Set());
         }
     }, [graphImportFile]);
 
@@ -327,24 +364,29 @@ const Tracker = (_props: {}) => {
         return oldTrackerSettings;
     }
 
-    const resetState = (): void => {
+    const resetState = (resetToPreset: boolean = true): void => {
         // reset graph state by re-importing only the settings
         let simMode = graph.worlds[trackerSettings.player_number].settings['graphplugin_simulator_mode'] as boolean;
-        let plando = graph.export(simMode, !simMode);
-        // manually drop checked keys so that we can maintain location/entrance/hint fill
-        if (simMode) {
-            delete plando[':checked'];
-            delete plando[':checked_entrances'];
-            changeSetting({ target: { name: 'region_page', value: 'Warps' }});
+        if (!resetToPreset) {
+            let plando = graph.export(simMode, !simMode);
+            // manually drop checked keys so that we can maintain location/entrance/hint fill
+            if (simMode) {
+                delete plando[':checked'];
+                delete plando[':checked_entrances'];
+                changeSetting({ target: { name: 'region_page', value: 'Warps' }});
+            } else {
+                changeSetting({ target: { name: 'region_page', value: 'Overworld' }});
+            }
+            graph.import(plando);
         } else {
-            changeSetting({ target: { name: 'region_page', value: 'Overworld' }});
+            graph.load_settings_preset(currentGraphPreset);
         }
-        setLastEntranceName('');
-        graph.import(plando);
         setTrackerPreferences(graph);
         refreshSearch();
         setCollapsedRegions({});
         setAlertReset(false);
+        setVisitedSimRegions(new Set());
+        setLastEntranceName('');
     }
 
     const refreshSearch = () => {
@@ -507,6 +549,9 @@ const Tracker = (_props: {}) => {
         let newTrackerSettings = copyTrackerSettings(trackerSettings);
         newTrackerSettings[setting.target.name] = setting.target.value;
         setTrackerSettings(newTrackerSettings);
+        if (setting.target.name === 'region_page') {
+            setLastEntranceName('');
+        }
     }
 
     const changeRaceMode = (): void => {
@@ -516,7 +561,7 @@ const Tracker = (_props: {}) => {
             graph.change_setting(graph.worlds[trackerSettings.player_number], graphSettings['graphplugin_world_search_mode'], newRaceMode);
             let newTrackerSettings = copyTrackerSettings(trackerSettings);
             newTrackerSettings.race_mode = cachedRaceMode;
-            //resetState();
+            resetState(false);
             setTrackerSettings(newTrackerSettings);
             setCachedRaceMode(null);
         }
@@ -1064,12 +1109,15 @@ const Tracker = (_props: {}) => {
                     let newRegions = new Set(visitedSimRegions);
                     newRegions.add(linkedRegion.name);
                     setVisitedSimRegions(newRegions);
-                    changeSetting({target: { name: "region_page", value: linkedRegion.name }});
-                    localStorage.setItem('SimModeVisitedRegions', JSON.stringify([...newRegions.values()]));
+                    let newTrackerSettings = copyTrackerSettings(trackerSettings);
+                    newTrackerSettings["region_page"] = linkedRegion.name;
+                    setTrackerSettings(newTrackerSettings);
                 }
             } else {
                 if (linkedRegion.page !== trackerSettings.region_page) {
-                    changeSetting({target: { name: "region_page", value: linkedRegion.page }});
+                    let newTrackerSettings = copyTrackerSettings(trackerSettings);
+                    newTrackerSettings["region_page"] = linkedRegion.name;
+                    setTrackerSettings(newTrackerSettings);
                 }
             }
             if (!!regionEntrance) {
@@ -1081,8 +1129,31 @@ const Tracker = (_props: {}) => {
                 href = `#${linkedRegion.alias}`;
             }
             if (!!regionEntrance && !tracker_settings_defs.region_page.options?.includes(trackerSettings.region_page)) {
-                let exitedEntrance = buildExitEntranceName(regionEntrance);
-                if (!!exitedEntrance) setLastEntranceName(exitedEntrance);
+                if (regionEntrance.is_warp) {
+                    let eLink = !!(regionEntrance.replaces) ? regionEntrance.replaces : regionEntrance;
+                    let exitedEntrance = '';
+                    if (!!eLink.reverse && eLink.reverse.target_group?.page !== '') {
+                        exitedEntrance = `from ${eLink.use_target_alias ? eLink.target_alias : eLink.alias}`;
+                    } else if (eLink.reverse === null) {
+                        exitedEntrance = `from ${eLink.use_target_alias ? eLink.target_alias : eLink.alias}`;
+                    } else if (eLink.reverse.target_group?.page === '') {
+                        exitedEntrance = `from ${eLink.reverse.alias}`;
+                    }
+                    if (!!exitedEntrance) {
+                        setLastEntranceName(exitedEntrance);
+                    } else {
+                        setLastEntranceName('');
+                    }
+                } else {
+                    let exitedEntrance = buildExitEntranceName(regionEntrance);
+                    if (!!exitedEntrance) {
+                        setLastEntranceName(exitedEntrance);
+                    } else {
+                        setLastEntranceName('');
+                    }
+                }
+            } else {
+                setLastEntranceName('');
             }
         }
         if (href !== '#') {
@@ -1174,6 +1245,10 @@ const Tracker = (_props: {}) => {
         let sourceHintLocationText = locationToLink !== '' ? graph.worlds[trackerSettings.player_number].get_location(locationToLink).hint_text : '';
         sourceHintLocationText = sourceHintLocationText.replaceAll('#', '').replaceAll('^', '\n');
         let simMode = graph.worlds[trackerSettings.player_number].settings['graphplugin_simulator_mode'] as boolean;
+
+        // Used to swap between wide/tall item menus (10x5 or 5x10 layouts)
+        // 10x items at 48px plus 30px from paper left edge.
+        let isWide = window.matchMedia(`(min-width: 510px)`).matches;
         return (
             <React.Fragment>
                 <ThemeProvider theme={customTheme}>
@@ -1220,6 +1295,7 @@ const Tracker = (_props: {}) => {
                             graphSettingsLayout={graphSettingsLayout}
                             trackerSettings={trackerSettings}
                             setTrackerSettings={setTrackerSettings}
+                            setLastEntranceName={setLastEntranceName}
                             changeGraphStringSetting={changeGraphStringSetting}
                             changeGraphBooleanSetting={changeGraphBooleanSetting}
                             changeGraphNumericSetting={changeGraphNumericSetting}
@@ -1254,6 +1330,10 @@ const Tracker = (_props: {}) => {
                             trackerSettings={trackerSettings}
                             simMode={simMode}
                             lastLocationName={lastLocationName}
+                            isWarpAreaLinked={isWarpAreaLinked}
+                            areaMenuHandler={areaMenuHandler}
+                            pages={pages}
+                            warps={warpEntrances}
                         />
                         <EntranceMenu
                             anchorLocation={entranceMenuOpen}
@@ -1264,14 +1344,25 @@ const Tracker = (_props: {}) => {
                             regions={graphRegions}
                             id="globalEntranceMenu"
                         />
-                        <ItemMenu
-                            menuLayout={location_item_menu_layout}
-                            handleClose={handleItemMenuClose}
-                            handleFind={findItem}
-                            anchorLocation={itemMenuOpen}
-                            sourceLocation={locationToLink}
-                            showClearButton={true}
-                        />
+                        {
+                            isWide ?
+                            <ItemMenu
+                                menuLayout={location_item_menu_layout}
+                                handleClose={handleItemMenuClose}
+                                handleFind={findItem}
+                                anchorLocation={itemMenuOpen}
+                                sourceLocation={locationToLink}
+                                showClearButton={true}
+                            /> :
+                            <ItemMenu
+                                menuLayout={location_item_menu_layout_vertical}
+                                handleClose={handleItemMenuClose}
+                                handleFind={findItem}
+                                anchorLocation={itemMenuOpen}
+                                sourceLocation={locationToLink}
+                                showClearButton={true}
+                            />
+                        }
                         <ItemMenu
                             menuLayout={shop_item_menu_layout}
                             handleClose={handleShopItemMenuClose}
@@ -1303,14 +1394,6 @@ const Tracker = (_props: {}) => {
                             choices={multiselectSettingChoices === undefined ? {} : multiselectSettingChoices}
                             id="globalMultiselectOptionMenu"
                         />
-                        <WarpMenu
-                            isWarpAreaLinked={isWarpAreaLinked}
-                            handleDungeonTravel={handleDungeonTravel}
-                            areaMenuHandler={areaMenuHandler}
-                            pages={pages}
-                            warps={warpEntrances}
-                            raceMode={trackerSettings.race_mode}
-                        />
                         <TrackerUpdateDialog
                             alertUpdate={alertUpdate}
                             setAlertUpdate={setAlertUpdate}
@@ -1328,9 +1411,10 @@ const Tracker = (_props: {}) => {
         )
     } else {
         return (
-            <React.Fragment>
-                Loading
-            </React.Fragment>
+            <div className='loadingScreen' aria-busy="true" aria-describedby="loadingBar">
+                <div className='loadingText'>Loading</div>
+                <progress id='loadingBar' className='loadingBar'></progress>
+            </div>
         )
     }
 }

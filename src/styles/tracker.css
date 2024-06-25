@@ -1,6 +1,19 @@
 .root {
     display: flex !important;
 }
+.loadingScreen {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    place-content: center;
+    font-size: x-large;
+    font-family: 'Hylia Serif Beta';
+}
+.loadingBar {
+    margin: var(--theme-spacing);
+}
 .greenNote {
     fill: #508835;
 }
@@ -22,6 +35,11 @@
 .greyNote {
     fill: #888888;
 }
+@media screen and (max-width: 930px) {
+    body {
+        --drawer-width: 100vw !important;
+    }
+}
 body {
     margin: 0px !important;
     font-size: 0.875rem !important;
@@ -34,16 +52,8 @@ body {
     --drawer-width: 480px;
 
     /*
-        Theme colors generated from:
+        Theme colors generated from multiple profiles on:
         https://material-foundation.github.io/material-theme-builder/
-
-        See styles/themes/material-theme.json for source colors
-
-        Item tracker colors:
-        - blue: 779ac9
-        - green: 75a975
-        - purple: 7164a0
-        - tan: fffce5
     */
 
     color: var(--md-sys-color-on-surface) !important;
@@ -79,7 +89,7 @@ body {
     --color-sidebar-text-select: var(--md-sys-color-on-surface);
     --color-sidebar-text-select-hover: var(--md-sys-color-on-surface);
     --color-sidebar-shadow: var(--md-sys-color-shadow);
-    --color-sidebar-mq: var(--md-extended-color-woth-color);
+    --color-sidebar-mq: var(--color-shadowed-text-mq);
     --color-sidebar-upgrade: var(--color-shadowed-text-max);
     --color-sidebar-expando: var(--md-sys-color-surface-container-lowest);
     --color-sidebar-expando-text: var(--md-sys-color-on-surface);

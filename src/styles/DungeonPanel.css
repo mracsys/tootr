@@ -8,10 +8,14 @@
     line-height: 48px;
     display: flex;
 }
-.ootDungeonContainer:nth-child(odd) {
+.ootDungeonContainer div {
+    display: flex;
+    flex-wrap: wrap;
+}
+.med .ootDungeonContainer {
     width: 264px;
 }
-.ootDungeonContainer:nth-child(even) {
+.stone .ootDungeonContainer {
     width: 216px;
 }
 .ootDungeonName.clickable:hover {
@@ -43,7 +47,7 @@
 }
 .ootDungeonTCGItemsLastRow,
 .ootDungeonItemsLastRow {
-    width: 480px;
+    width: var(--drawer-width);
     display: flex;
     justify-content: center;
 }
@@ -69,7 +73,9 @@
     width: auto;
     margin-right: 6px;
 }
-.ootAllDungeonItemsContainer .ootDungeonContainer .ootDungeonItems .iconDiv {
+.ootDungeonMedItemsContainer .ootDungeonContainer .ootDungeonItems .iconDiv,
+.ootDungeonSideItemsContainer .ootDungeonContainer .ootDungeonItems .iconDiv,
+.ootDungeonStoneItemsContainer .ootDungeonContainer .ootDungeonItems .iconDiv {
     padding: 8px 6px;
 }
 .ootDungeonInsetContainer {
@@ -89,7 +95,7 @@
 .ootDungeonTCGItemsLastRow .ootDungeonInset1,
 .ootDungeonItemsLastRow .ootDungeonInset1 {
     width: 40px;
-    right: 4px;
+    right: -4px;
 }
 .ootDungeonInset1 {
     width: 40px;
@@ -102,4 +108,11 @@
 .ootDungeonInset3 {
     width: 136px;
     right: 4px;
+}
+.ootItemTracker .ootDungeonContainer .iconDiv {
+    padding: 8px;
+}
+.ootItemTracker .ootDungeonContainer .iconContainer {
+    width: 32px;
+    height: 32px;
 }

@@ -35,7 +35,6 @@ const GameSettingSwitch = ({
                     </div>
                 </div>
             }
-            <hr />
         </React.Fragment>
     );
 }

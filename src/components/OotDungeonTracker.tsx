@@ -38,6 +38,14 @@ const entranceToBossRewardMap: {[entranceName: string]: string} = {
     "Shadow Temple Before Boss -> Bongo Bongo Boss Room": "Bongo Bongo",
 };
 
+const leftWardsSilverRupeeMenus = [
+    'Well',
+    'Ice',
+    'GTG',
+    'Ganon',
+    'DC',
+];
+
 interface OotDungeonTrackerProps {
     addStartingItem: (item_name: string, count?: number) => void,
     removeStartingItem: (item_name: string, count?: number) => void,
@@ -213,6 +221,8 @@ export const OotDungeonTracker = ({
     if (Object.keys(graphSettings).includes('shuffle_silver_rupees')) {
         silverRupeeSetting = graphSettings['shuffle_silver_rupees'] as string;
     }
+    let isWide = window.matchMedia(`(min-width: 480px)`).matches;
+    let openLeft = leftWardsSilverRupeeMenus.includes(gridEntry.label) && isWide;
     if (!(['remove', 'vanilla'].includes(silverRupeeSetting))) {
         
         let isBlank = true;
@@ -273,6 +283,7 @@ export const OotDungeonTracker = ({
                     entryNum={entryNum}
                     dungeonSilverRupeeCounts={dungeonSilverRupeeCounts}
                     key={`${itemName}DungeonPanelSilverRupee${gridEntry.label}${entryNum}`}
+                    openLeft={openLeft}
                 />);
                 entryNum++;
                 if (itemName === 'Silver Rupee (Dodongos Cavern Staircase)') {

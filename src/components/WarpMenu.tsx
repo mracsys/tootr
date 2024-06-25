@@ -13,7 +13,7 @@ import '@/styles/WarpMenu.css';
 
 interface WarpMenuProps {
     isWarpAreaLinked: (entrance: GraphEntrance) => boolean;
-    handleDungeonTravel: (targetRegion: GraphRegion | null) => void;
+    handleDungeonTravel: (targetRegion: GraphRegion | null, regionEntrance?: GraphEntrance | null) => void;
     areaMenuHandler: ContextMenuHandler;
     pages: {[page: string]: GraphRegion[]};
     warps: GraphEntrance[];
@@ -83,7 +83,7 @@ const WarpMenu = ({
                                         "" :
                                         "grayscaleMenuIcon"}
                                     onClick={isWarpAreaLinked(w) ?
-                                        () => handleDungeonTravel(!!w.replaces ? w.replaces.target_group : w.target_group)
+                                        () => handleDungeonTravel(!!w.replaces ? w.replaces.target_group : w.target_group, w)
                                         : () => handleDungeonTravel(warpRegion)}
                                 />
                             );
@@ -141,7 +141,7 @@ const WarpMenu = ({
                         <span
                             key={'quickSongMenu'+ia}
                             className="warpMenuArea"
-                            onClick={() => handleDungeonTravel(song.target_group)}
+                            onClick={() => handleDungeonTravel(!!song.replaces ? song.replaces.target_group : song.target_group, song)}
                         >
                             {song.alias}
                         </span>

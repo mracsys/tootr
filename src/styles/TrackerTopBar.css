@@ -55,34 +55,17 @@
 .topBar .MuiIconButton-root:hover {
     background-color: rgba(0, 0, 0, 0.3);
 }
-@media screen and (max-width: 830px) {
+@media screen and (max-width: 700px) {
     .title {
         display: none;
     }
-    .seedMenuContainer {
-        flex-grow: 1;
-    }
-}
-@media screen and (max-width: 680px) {
-    .menuButton {
-        display: none;
-    }
-    .seedMenuContainer {
-        flex-grow: 1;
-    }
-}
-@media screen and (max-width: 600px) {
-    .checkCount {
-        display: none;
-    }
-    .menuButton {
-        display: none;
-    }
-    .seedMenuContainer {
-        flex-grow: 0;
-    }
     .searchContainer {
         flex-grow: 1;
+    }
+}
+@media screen and (max-width: 480px) {
+    .checkCount {
+        display: none;
     }
 }
 .menuButton {

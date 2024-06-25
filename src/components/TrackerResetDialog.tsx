@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction } from "react";
+import React, { Dispatch, SetStateAction } from "react";
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
@@ -10,7 +10,7 @@ interface TrackerResetDialogProps {
     alertReset: boolean,
     newRaceMode: boolean | null,
     setAlertReset: Dispatch<SetStateAction<boolean>>,
-    resetState: () => void,
+    resetState: (usePreset?: boolean) => void,
     changeRaceMode: (raceMode: boolean) => void;
 }
 
@@ -26,11 +26,11 @@ const TrackerResetDialog = ({
         setAlertReset(false);
     }
 
-    const confirmAlert = () => {
+    const confirmAlert = (usePreset: boolean) => {
         if (newRaceMode !== null) {
             changeRaceMode(newRaceMode);
         } else {
-            resetState();
+            resetState(usePreset);
         }
     }
 
@@ -48,8 +48,15 @@ const TrackerResetDialog = ({
                 </DialogContentText>
             </DialogContent>
             <DialogActions>
-                <Button onClick={() => confirmAlert()}>Yes</Button>
-                <Button onClick={() => cancelAlert()}>No</Button>
+                {
+                    newRaceMode !== null ?
+                    <Button onClick={() => confirmAlert(false)}>OK</Button> :
+                    <React.Fragment>
+                        <Button onClick={() => confirmAlert(false)}>Reset with Current Settings</Button>
+                        <Button onClick={() => confirmAlert(true)}>Rest to last Preset</Button>
+                    </React.Fragment>
+                }
+                <Button onClick={() => cancelAlert()}>Cancel</Button>
             </DialogActions>
         </Dialog>
     )
