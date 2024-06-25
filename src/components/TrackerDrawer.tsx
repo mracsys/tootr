@@ -214,6 +214,9 @@ const TrackerDrawer = ({
 
         window.addEventListener('resize', handleResize);
 
+        // initial run for component mount
+        handleResize();
+
         return () => { window.removeEventListener('resize', handleResize) };
     }, []);
 

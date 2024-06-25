@@ -3,7 +3,7 @@
 }
 .loadingScreen {
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
     display: flex;
     flex-direction: column;
     place-items: center;
@@ -60,7 +60,7 @@ body {
     background-color: var(--md-sys-color-surface-dim) !important;
 
     --color-header: var(--md-sys-color-tertiary-container);
-    --color-header-race-mode: var(--md-extended-color-logic-red-color-container);
+    --color-header-race-mode: var(--color-race-mode);
     --color-header-text: rgb(240 240 247);
     --color-header-border: var(--md-sys-color-outline);
     --color-header-menu-button-hover: var(--color-hover-state-overlay);

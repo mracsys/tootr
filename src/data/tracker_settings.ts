@@ -99,9 +99,27 @@ export const tracker_settings_defs: tracker_settings_definitions_v1 = {
         display_name: 'Player Number',
         type: 'int',
     },
-    setting_icons: {
-        display_name: 'Show Game Settings as Icons',
+    dark_mode: {
+        display_name: 'Dark Mode',
         type: 'bool',
+    },
+    race_mode: {
+        display_name: 'Race Mode',
+        type: 'bool',
+    },
+    show_age_logic: {
+        display_name: 'Show Age Logic Indicators',
+        type: 'bool',
+    },
+    region_visibility: {
+        display_name: 'Region Visibility',
+        type: 'str',
+        options: [
+            'Logically Reachable',
+            'Reachable with All Tricks',
+            'Connected',
+            'Always Visible'
+        ]
     },
     region_page: {
         display_name: 'Region View',
@@ -115,31 +133,30 @@ export const tracker_settings_defs: tracker_settings_definitions_v1 = {
         display_name: 'Show Individual Region Pages',
         type: 'bool',
     },
-    dark_mode: {
-        display_name: 'Dark Mode',
+    setting_icons: {
+        display_name: 'Show Game Settings as Icons',
         type: 'bool',
     },
-    show_age_logic: {
-        display_name: 'Show Age Logic Indicators',
+    show_check_counter: {
+        display_name: 'Show Check Counter',
         type: 'bool',
     },
-    race_mode: {
-        display_name: 'Race Mode',
+    show_timer: {
+        display_name: 'Show Timer',
         type: 'bool',
-    },
-    region_visibility: {
-        display_name: 'Region Visibility',
-        type: 'str',
-        options: [
-            'Logically Reachable',
-            'Reachable with All Tricks',
-            'Connected',
-            'Always Visible'
-        ]
     },
     show_unshuffled_entrances: {
         display_name: 'Show Unshuffled Entrances',
         type: 'bool',
+    },
+    show_locations: {
+        display_name: 'Show All Locations',
+        type: 'str',
+        options: [
+            'Yes',
+            'Interiors Only',
+            'No',
+        ]
     },
     // This option is controlled by the graph library.
     // Reproduced here for reference, but the only thing
@@ -168,15 +185,6 @@ export const tracker_settings_defs: tracker_settings_definitions_v1 = {
         display_name: 'Show Hint Locations',
         type: 'bool',
     },
-    show_locations: {
-        display_name: 'Show All Locations',
-        type: 'str',
-        options: [
-            'Yes',
-            'Interiors Only',
-            'No',
-        ]
-    },
     shop_price_tracking: {
         display_name: 'Shop Price Tracking',
         type: 'str',
@@ -185,13 +193,5 @@ export const tracker_settings_defs: tracker_settings_definitions_v1 = {
             'Price Only',
             'Wallet Tier',
         ]
-    },
-    show_timer: {
-        display_name: 'Show Timer',
-        type: 'bool',
-    },
-    show_check_counter: {
-        display_name: 'Show Check Counter',
-        type: 'bool',
     },
 };

@@ -99,6 +99,8 @@
   --md-sys-color-inverse-surface: rgb(226 226 233);
   --md-sys-color-inverse-on-surface: rgb(46 48 54);
 
+  --color-race-mode: #2d542f;
+
   --color-shadowed-text: #fff;
   --color-shadowed-text-max: #00FF00;
   --color-shadowed-text-mq: #006da3;

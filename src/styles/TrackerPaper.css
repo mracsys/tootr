@@ -4,7 +4,7 @@
     padding: 0 0 0 0;
     container-name: areaPaper;
     container-type: size;
-    height: 100vh;
+    height: 100dvh;
 }
 .areaPaperShift {
     margin-left: var(--drawer-width)
@@ -13,7 +13,7 @@
     padding: 20px 20px 56px 20px;
     overflow-y: scroll;
     overflow-x: auto;
-    height: calc(100vh - 64px);
+    height: calc(100dvh - 64px);
 }
 .worldInfo::-webkit-scrollbar-track
 {
