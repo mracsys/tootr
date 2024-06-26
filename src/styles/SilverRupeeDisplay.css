@@ -75,6 +75,9 @@
     cursor: pointer;
     background-color: var(--color-sidebar-hover);
 }
+.silverRupeeCount {
+    text-shadow: 0px 0px 6px var(--color-icon-text-shadow), 0px 0px 2px var(--color-icon-text-shadow), 0px 0px 2px var(--color-icon-text-shadow), 0px 0px 2px var(--color-icon-text-shadow), 0px 0px 2px var(--color-icon-text-shadow);
+}
 .silverRupeeLabel {
     color: var(--color-sidebar-expando-text);
     font-style: italic;

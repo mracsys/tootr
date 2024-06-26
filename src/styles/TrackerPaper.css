@@ -38,3 +38,8 @@
     font-weight: bold;
     font-style: italic;
 }
+@media screen and (min-width: 1250px) {
+    .lastEntranceNameMessage {
+        display: none;
+    }
+}

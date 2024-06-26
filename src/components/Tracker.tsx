@@ -146,6 +146,13 @@ const Tracker = (_props: {}) => {
                 savedState = {};
                 loadingState = false;
             }
+        } else if (graphInitialStateInit === '{}' && userSettingsLoaded) {
+            // If the user does not interact at all with the tracker on first run,
+            // there is no state to retrieve. The user can swap game versions which
+            // would rerun this memo and potentially ignore the current preset,
+            // resetting all tracker settings to upstream default settings, which should
+            // never happen unless explicitly requested.
+            loadingState = false;
         }
         let graphGlobal = WorldGraphFactory('ootr', savedState, graphVersion, _fileCache);
         if (!loadingState) {
@@ -1207,8 +1214,15 @@ const Tracker = (_props: {}) => {
     }
 
     const isWarpAreaLinked = (entrance: GraphEntrance) => {
-        let eLink = !!(entrance.replaces) ? entrance.replaces : entrance;
-        return !!(eLink.connected_region && eLink.visited_with_other_tricks);
+        let canReach = true;
+        if (entrance.type === 'WarpSong') {
+            let itemName = entrance.name.split(' Warp -> ')[0];
+            let playerInventory = graph.get_player_inventory_for_world(graph.worlds[trackerSettings.player_number]);
+            if (!(Object.keys(playerInventory).includes(itemName)) || playerInventory.itemName === 0) {
+                canReach = false;
+            }
+        }
+        return !!(entrance.connected_region && canReach);
     }
 
     const toggleAreaView = () => {
@@ -1374,6 +1388,7 @@ const Tracker = (_props: {}) => {
                             trackerSettings={trackerSettings}
                             simMode={simMode}
                             lastLocationName={lastLocationName}
+                            lastEntranceName={lastEntranceName}
                             isWarpAreaLinked={isWarpAreaLinked}
                             areaMenuHandler={areaMenuHandler}
                             pages={pages}

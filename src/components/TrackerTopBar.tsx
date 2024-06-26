@@ -70,7 +70,8 @@ const TrackerTopBar = ({
             <div className="title">
                 <div>
                     <div className="titleText">
-                        {`${trackerSettings.region_page} ${trackerSettings.one_region_per_page ? lastEntranceName : ''}`}
+                        {`${trackerSettings.region_page}`}
+                        <span>{` ${trackerSettings.one_region_per_page ? lastEntranceName : ''}`}</span>
                     </div>
                 </div>
             </div>
@@ -89,12 +90,6 @@ const TrackerTopBar = ({
                     }
                 </div> : null
             }
-            {/*<button
-                onClick={() => setAlertReset(true)}
-                className="menuButton"
-            >
-                <span className="menuButtonLabel">Reset</span>
-            </button>*/}
             {
                 trackerSettings.race_mode ?
                 <div className="raceModeText">

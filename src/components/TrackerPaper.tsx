@@ -34,6 +34,7 @@ interface TrackerPaperProps {
     trackerSettings: TrackerSettingsCurrent,
     simMode: boolean,
     lastLocationName: string[],
+    lastEntranceName: string,
     isWarpAreaLinked: (entrance: GraphEntrance) => boolean;
     areaMenuHandler: ContextMenuHandler;
     pages: {[page: string]: GraphRegion[]};
@@ -64,6 +65,7 @@ const TrackerPaper = ({
     trackerSettings,
     simMode,
     lastLocationName,
+    lastEntranceName,
     isWarpAreaLinked,
     areaMenuHandler,
     pages,
@@ -101,6 +103,7 @@ const TrackerPaper = ({
         >
             <div className="drawerHeader"></div>
             <div id='worldScrollContainer' className='worldInfo'>
+                <div className="lastEntranceNameMessage">{`Entered ${lastEntranceName}`}</div>
                 <ResponsiveMasonry columnsCountBreakPoints={masonryBreakpoints}>
                 <Masonry gutter="20px">
                 {

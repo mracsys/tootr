@@ -415,26 +415,6 @@ export const OotSettingAssetMapFactory = (graphSettings: GraphSettingsConfigurat
             tooltip: graphSettingsOptions['shuffle_freestanding_items'].display_name,
             tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['shuffle_freestanding_items']),
         },
-        'shuffle_pots': {
-            img: '/images/pot.png',
-            rImg: {
-                'dungeons': '/images/dungeon_entrance.png',
-                'overworld': '/images/outline_public_white_36dp.png',
-            }[graphSettings['shuffle_pots'] as string] as string,
-            fade: graphSettings['shuffle_pots'] === 'off',
-            tooltip: graphSettingsOptions['shuffle_pots'].display_name,
-            tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['shuffle_pots']),
-        },
-        'shuffle_crates': {
-            img: '/images/crate.png',
-            rImg: {
-                'dungeons': '/images/dungeon_entrance.png',
-                'overworld': '/images/outline_public_white_36dp.png',
-            }[graphSettings['shuffle_crates'] as string] as string,
-            fade: graphSettings['shuffle_crates'] === 'off',
-            tooltip: graphSettingsOptions['shuffle_crates'].display_name,
-            tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['shuffle_crates']),
-        },
         'shuffle_cows': {
             img: '/images/cow.png',
             fade: !graphSettings['shuffle_cows'],
@@ -691,6 +671,26 @@ export const OotSettingAssetMapFactory = (graphSettings: GraphSettingsConfigurat
             fade: !graphSettings['fix_broken_drops'],
             tooltip: graphSettingsOptions['fix_broken_drops'].display_name,
         },
+        'shuffle_pots': {
+            img: '/images/pot.png',
+            rImg: {
+                'dungeons': '/images/dungeon_entrance.png',
+                'overworld': '/images/outline_public_white_36dp.png',
+            }[graphSettings['shuffle_pots'] as string] as string,
+            fade: graphSettings['shuffle_pots'] === 'off',
+            tooltip: graphSettingsOptions['shuffle_pots'].display_name,
+            tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['shuffle_pots']),
+        },
+        'shuffle_crates': {
+            img: '/images/crate.png',
+            rImg: {
+                'dungeons': '/images/dungeon_entrance.png',
+                'overworld': '/images/outline_public_white_36dp.png',
+            }[graphSettings['shuffle_crates'] as string] as string,
+            fade: graphSettings['shuffle_crates'] === 'off',
+            tooltip: graphSettingsOptions['shuffle_crates'].display_name,
+            tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['shuffle_crates']),
+        },
     };
     }
 
@@ -752,13 +752,13 @@ export const OotSettingAssetMapFactory = (graphSettings: GraphSettingsConfigurat
             img: HomeIcon,
             rSub: 'C',
             fade: !graphSettings['shuffle_child_spawn'],
-            tooltip: graphSettingsOptions['shuffle_child_spawn'].display_name,
+            tooltip: settingValueDisplay(graphSettings, graphSettingsOptions['shuffle_child_spawn']),
         },
         'shuffle_adult_spawn': {
             img: HomeIcon,
             rSub: 'A',
             fade: !graphSettings['shuffle_adult_spawn'],
-            tooltip: graphSettingsOptions['shuffle_adult_spawn'].display_name,
+            tooltip: settingValueDisplay(graphSettings, graphSettingsOptions['shuffle_adult_spawn']),
         },
         'owl_drops': {
             img: '/images/kaepora.png',

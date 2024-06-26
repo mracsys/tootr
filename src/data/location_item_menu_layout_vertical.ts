@@ -125,8 +125,26 @@ export const location_item_menu_layout_vertical: item_menu_layout = [
         },
     ],
     [
-        'Piece of Heart',
-        'Gold Skulltula Token',
+        {
+            button_item: 'Heart Container',
+            item_list: [
+                'Piece of Heart',
+                'Heart Container',
+            ]
+        },
+        {
+            button_item: 'Fishing Rod',
+            item_list: [
+                'Fishing Rod',
+                'Fish (Child 6 lb)',
+                'Fish (Child 8 lb)',
+                'Fish (Child 10 lb)',
+                'Fish (Adult 10 lb)',
+                'Fish (Adult 12 lb)',
+                'Fish (Adult 16 lb)',
+                'Hylian Loach',
+            ]
+        },
         {
             button_item: 'Weird Egg',
             item_list: [
@@ -178,7 +196,7 @@ export const location_item_menu_layout_vertical: item_menu_layout = [
         },
     ],
     [
-        'Heart Container',
+        'Gold Skulltula Token',
         {
             button_item: 'Soul',
             menu_list: [

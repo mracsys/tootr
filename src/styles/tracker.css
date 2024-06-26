@@ -134,7 +134,7 @@ body {
     --color-item-menu-text: var(--md-sys-color-on-surface);
     --color-item-menu: var(--md-sys-color-surface-bright);
     --color-item-menu-hover: var(--md-sys-color-surface-dim);
-    --color-item-menu-submenu: var(--md-sys-color-surface-container-lowest);
+    --color-item-menu-submenu: var(--md-sys-color-surface-container-low);
     --color-item-menu-submenu-hover: var(--md-sys-color-surface-variant);
 
     --color-logic-border: var(--md-sys-color-outline-variant);

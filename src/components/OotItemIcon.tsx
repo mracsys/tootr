@@ -375,6 +375,15 @@ const itemMap: IconDict = {
     'Lon Lon Ranch Souls': { img: '/images/Soul_Icon.png', rSub: keyMap['Lon Lon Ranch'] },
     'Grottos Souls': { img: '/images/Soul_Icon.png', rSub: keyMap['Grottos'] },
 
+    'Fishing Rod': { img: '/images/OoT_Fishing_Pole_Icon.png' },
+    'Fish (Child 6 lb)': { img: '/images/fish.png', rSub: '6', lSub: 'C' },
+    'Fish (Child 8 lb)': { img: '/images/fish.png', rSub: '8', lSub: 'C' },
+    'Fish (Child 10 lb)': { img: '/images/fish.png', rSub: '10', lSub: 'C' },
+    'Fish (Adult 10 lb)': { img: '/images/fish.png', rSub: '10', lSub: 'A' },
+    'Fish (Adult 12 lb)': { img: '/images/fish.png', rSub: '12', lSub: 'A' },
+    'Fish (Adult 16 lb)': { img: '/images/fish.png', rSub: '16', lSub: 'A' },
+    'Hylian Loach': { img: '/images/fish.png', rSub: 'L' },
+
     // Additional icons for path hints linked to locations
     'Queen Gohma': { img: '/images/souls/queen-gohma_32x32.png' },
     'King Dodongo': { img: '/images/souls/king-dodongo_32x32.png' },
@@ -451,6 +460,7 @@ const itemMap: IconDict = {
     'Bottle with Bugs': { img: '/images/OoT_Bug_Icon.png' },
     'Bottle with Poe': { img: '/images/OoT_Poe_Soul_Icon.png' },
     'Recovery Heart': { img: '/images/OoT_Heart_Icon.png' },
+    'Fairy Drop': { img: '/images/navi.png' },
     'Ice Trap': { img: '/images/icetrap.png' },
     'Double Defense': { img: '/images/double_defense.png' },
     'Scarecrow Song': { img: '/images/scarecrow.png' },

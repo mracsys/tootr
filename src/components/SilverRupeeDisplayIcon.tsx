@@ -85,7 +85,7 @@ export const SilverRupeeDisplayIcon = ({
                             onTouchMove={dungeonSilverRupeeCounts[3].removeItem.onTouchMove}
                         >
                             { dungeonSilverRupeeCounts.length > 3 ? <span>
-                                <span className={dungeonSilverRupeeCounts[3].max === dungeonSilverRupeeCounts[3].collected ? 'dungeonItemMaxCollected' : ''}>{dungeonSilverRupeeCounts[3].collected} </span>
+                                <span className={`silverRupeeCount ${dungeonSilverRupeeCounts[3].max === dungeonSilverRupeeCounts[3].collected ? 'dungeonItemMaxCollected' : ''}`}>{dungeonSilverRupeeCounts[3].collected} </span>
                                 <span className='silverRupeeLabel'>{dungeonSilverRupeeCounts[3].name}</span>
                             </span> : null }
                         </div>
@@ -101,7 +101,7 @@ export const SilverRupeeDisplayIcon = ({
                             onTouchMove={dungeonSilverRupeeCounts[2].removeItem.onTouchMove}
                         >
                             { dungeonSilverRupeeCounts.length > 2 ? <span>
-                                <span className={dungeonSilverRupeeCounts[2].max === dungeonSilverRupeeCounts[2].collected ? 'dungeonItemMaxCollected' : ''}>{dungeonSilverRupeeCounts[2].collected} </span>
+                                <span className={`silverRupeeCount ${dungeonSilverRupeeCounts[2].max === dungeonSilverRupeeCounts[2].collected ? 'dungeonItemMaxCollected' : ''}`}>{dungeonSilverRupeeCounts[2].collected} </span>
                                 <span className='silverRupeeLabel'>{dungeonSilverRupeeCounts[2].name}</span>
                             </span> : null }
                         </div>
@@ -117,7 +117,7 @@ export const SilverRupeeDisplayIcon = ({
                             onTouchMove={dungeonSilverRupeeCounts[1].removeItem.onTouchMove}
                         >
                             { dungeonSilverRupeeCounts.length > 1 ? <span>
-                                <span className={dungeonSilverRupeeCounts[1].max === dungeonSilverRupeeCounts[1].collected ? 'dungeonItemMaxCollected' : ''}>{dungeonSilverRupeeCounts[1].collected} </span>
+                                <span className={`silverRupeeCount ${dungeonSilverRupeeCounts[1].max === dungeonSilverRupeeCounts[1].collected ? 'dungeonItemMaxCollected' : ''}`}>{dungeonSilverRupeeCounts[1].collected} </span>
                                 <span className='silverRupeeLabel'>{dungeonSilverRupeeCounts[1].name}</span>
                             </span> : null }
                         </div>
@@ -132,7 +132,7 @@ export const SilverRupeeDisplayIcon = ({
                             onTouchMove={dungeonSilverRupeeCounts[0].removeItem.onTouchMove}
                         >
                             { dungeonSilverRupeeCounts.length > 0 ? <span>
-                                <span className={dungeonSilverRupeeCounts[0].max === dungeonSilverRupeeCounts[0].collected ? 'dungeonItemMaxCollected' : ''}>{dungeonSilverRupeeCounts[0].collected} </span>
+                                <span className={`silverRupeeCount ${dungeonSilverRupeeCounts[0].max === dungeonSilverRupeeCounts[0].collected ? 'dungeonItemMaxCollected' : ''}`}>{dungeonSilverRupeeCounts[0].collected} </span>
                                 <span className='silverRupeeLabel'>{dungeonSilverRupeeCounts[0].name}</span>
                             </span> : null }
                         </div>
