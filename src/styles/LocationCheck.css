@@ -94,7 +94,8 @@
     position: relative;
     z-index: 2;
 }
-.locationKnownItem .iconRightText {
+.locationKnownItem .iconRightText,
+.locationKnownItem .iconLeftText {
     text-shadow: 0px 0px 6px var(--color-location-icon-text-shadow), 0px 0px 2px var(--color-location-icon-text-shadow), 0px 0px 2px var(--color-location-icon-text-shadow), 0px 0px 2px var(--color-location-icon-text-shadow), 0px 0px 2px var(--color-location-icon-text-shadow);
     color: var(--color-shadowed-text);
     right: -4px;
