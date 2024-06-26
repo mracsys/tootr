@@ -24,6 +24,7 @@ interface HintMenuProps {
     fullEntrancePool: GraphEntrancePool,
     fullExitPool: GraphEntrancePool,
     locations: GraphLocation[],
+    isWide: boolean,
 }
 
 export interface HintMenuData {
@@ -113,6 +114,7 @@ const HintMenu = ({
     fullEntrancePool,
     fullExitPool,
     locations,
+    isWide,
 
 }: HintMenuProps) => {
     const [tabValue, setTabValue] = useState<number>(0);
@@ -416,7 +418,6 @@ const HintMenu = ({
     }
 
     let paths = [...pathIcons];
-    let isWide = window.matchMedia(`(min-width: 510px)`).matches;
 
     return (
         <React.Fragment>

@@ -12,6 +12,7 @@ interface SettingPanelProps {
     graphSettings: GraphSettingsConfiguration,
     graphSettingsOptions: GraphSettingsOptions,
     graphSettingsLayout: GraphSettingsLayout,
+    isWide: boolean,
 }
 
 export const SettingPanel = ({
@@ -20,6 +21,7 @@ export const SettingPanel = ({
     graphSettings,
     graphSettingsOptions,
     graphSettingsLayout,
+    isWide,
 }: SettingPanelProps) => {
     let settingAssetMap: IconDict
     if (!!graphSettings && !!graphSettingsOptions) {
@@ -29,7 +31,6 @@ export const SettingPanel = ({
     }
 
     let tab_output = [];
-    let isWide = window.matchMedia(`(min-width: 460px)`).matches;
     let settingIconsPerRow = 8;
     if (!isWide) {
         settingIconsPerRow = 6;

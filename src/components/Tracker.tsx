@@ -105,6 +105,11 @@ const Tracker = (_props: {}) => {
     const timerRef = useRef<ReturnType<typeof setTimeout>[]>([]);
     const listRef = useRef<string[]>([]);
 
+    // safe defaults for 1080p fullscreen
+    const [isNotMobile, setIsNotMobile] = useState<boolean>(false);
+    const [isWide, setIsWide] = useState<boolean>(true);
+    const [isTall, setIsTall] = useState<boolean>(false);
+
     // Graph state management to trigger rerender on memo change.
     // Required as graph updates are not pure, so can't be in React state.
     const [_fileCache, setFileCache] = useState<ExternalFileCache>({files: {}});
@@ -163,6 +168,38 @@ const Tracker = (_props: {}) => {
         return graphGlobal;
     }, [_fileCache, graphVersion, userSettingsLoaded]);
 
+    const handleResize = () => {
+        if (graph.initialized) {
+            let settings = graph.worlds[trackerSettings.player_number].settings;
+            let adult_trade = settings.adult_trade_shuffle && (Array.isArray(settings.adult_trade_start) && settings.adult_trade_start.length > 0);
+            let child_trade = Array.isArray(settings.shuffle_child_trade) && settings.shuffle_child_trade.length > 0;
+            let boss_souls = !!settings.shuffle_enemy_spawns && typeof settings.shuffle_enemy_spawns === 'string' && ['all', 'bosses'].includes(settings.shuffle_enemy_spawns);
+            let enemy_souls = !!settings.shuffle_enemy_spawns && settings.shuffle_enemy_spawns === 'all';
+            let regional_souls = !!settings.shuffle_enemy_spawns && settings.shuffle_enemy_spawns === 'regional';
+
+            let tabsBreakPoint = 64  // top bar height
+                            + 624    // base item tracker height (13 rows * 48px)
+                            + 300    // minimum settings panel height
+                            + 58     // tab list height
+                            + (child_trade ? 48 : 0)
+                            + (adult_trade ? 48 : 0)
+                            + (boss_souls ? 48 : 0)
+                            + (enemy_souls ? 192 : 0)
+                            + (regional_souls ? 144 : 0)
+                            + (trackerSettings.show_timer ? 82 : 0);
+            let viewportIsTall = window.matchMedia(`(min-height: ${tabsBreakPoint}px)`).matches;
+            // item panel expands vertically significantly for mobile screens
+            // less than 480px, assume no vertical room rather than recalculate
+            // the vertical breakpoint
+            let viewportIsMobile = window.matchMedia(`(min-width: 480px)`).matches;
+            let viewportIsWide = window.matchMedia(`(min-width: 510px)`).matches;
+            
+            setIsNotMobile(viewportIsMobile);
+            setIsWide(viewportIsWide);
+            setIsTall(viewportIsTall);
+        }
+    };
+
     // run on mount and unmount
     useEffect(() => {
         let clientTrackerVersion = localStorage.getItem('TrackerVersion');
@@ -218,8 +255,14 @@ const Tracker = (_props: {}) => {
         setCurrentGraphPreset(currentPresetInit);
         setUserSettingsLoaded(true);
 
-        // clear pending timeouts on unmount
-        return () => {if (timerRef.current !== null) { timerRef.current.forEach(t => clearTimeout(t)) }};
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            // clear pending timeouts on unmount
+            if (timerRef.current !== null) { timerRef.current.forEach(t => clearTimeout(t)) }
+            // clean up event listeners
+            window.removeEventListener('resize', handleResize);
+        };
     }, []);
 
     // hooks to keep state saved in localstorage
@@ -304,6 +347,8 @@ const Tracker = (_props: {}) => {
                 setGraphPresets(graph.get_settings_presets());
                 setTrackerPreferences(graph);
                 setGraphInitialized(true);
+                // initial run for component mount
+                handleResize();
             }
         }
         getGraph();
@@ -1246,9 +1291,6 @@ const Tracker = (_props: {}) => {
         sourceHintLocationText = sourceHintLocationText.replaceAll('#', '').replaceAll('^', '\n');
         let simMode = graph.worlds[trackerSettings.player_number].settings['graphplugin_simulator_mode'] as boolean;
 
-        // Used to swap between wide/tall item menus (10x5 or 5x10 layouts)
-        // 10x items at 48px plus 30px from paper left edge.
-        let isWide = window.matchMedia(`(min-width: 510px)`).matches;
         return (
             <React.Fragment>
                 <ThemeProvider theme={customTheme}>
@@ -1305,6 +1347,8 @@ const Tracker = (_props: {}) => {
                             changeGraphVersion={loadGraphVersion}
                             supportedGraphVersions={graphSupportedVersions}
                             visitedSimRegions={visitedSimRegions}
+                            itemPanelAsTab={!isTall || !isNotMobile}
+                            isNotMobile={isNotMobile}
                         />
                         <TrackerPaper
                             viewableRegions={viewableRegions}
@@ -1383,6 +1427,7 @@ const Tracker = (_props: {}) => {
                             fullEntrancePool={graphFullEntrancePool}
                             fullExitPool={graphFullExitPool}
                             locations={graphLocationCount}
+                            isWide={isWide}
                         />
                         <SettingMultiselectMenu
                             handleClose={handleMultiselectMenuClose}

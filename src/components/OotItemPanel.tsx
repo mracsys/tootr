@@ -31,6 +31,7 @@ interface OotItemPanelProps {
     graphLocations: GraphLocation[],
     graphEntrances: GraphEntrance[],
     visitedSimRegions: Set<string>,
+    isNotMobile: boolean,
 }
 
 export const createBlankTrackerItem = (entryNum: number) => {
@@ -76,6 +77,7 @@ export const OotItemPanel = ({
     graphLocations,
     graphEntrances,
     visitedSimRegions,
+    isNotMobile,
 }: OotItemPanelProps) => {
     const [bottleSlots, setBottleSlots] = useState<(string|null)[]>([null, null, null, null]);
     const [lockedSlots, setLockedSlots] = useState<boolean[]>([false, false, false, false]);
@@ -762,6 +764,7 @@ export const OotItemPanel = ({
                                 validSilverRupees={validSilverRupees}
                                 visitedSimRegions={visitedSimRegions}
                                 includeBlankSilverRupeeSquare={true}
+                                isWide={isNotMobile}
                                 key={`${gridEntry.label}DungeonPanelEntryContainer`}
                             />
                     })}
@@ -782,6 +785,7 @@ export const OotItemPanel = ({
                                 validSilverRupees={validSilverRupees}
                                 visitedSimRegions={visitedSimRegions}
                                 includeBlankSilverRupeeSquare={true}
+                                isWide={isNotMobile}
                                 key={`${gridEntry.label}DungeonPanelEntryContainer`}
                             />
                     })}
@@ -803,6 +807,7 @@ export const OotItemPanel = ({
                                 validSilverRupees={validSilverRupees}
                                 visitedSimRegions={visitedSimRegions}
                                 includeBlankSilverRupeeSquare={false}
+                                isWide={isNotMobile}
                                 key={`${gridEntry.label}DungeonPanelEntryContainer`}
                             />
                     })}

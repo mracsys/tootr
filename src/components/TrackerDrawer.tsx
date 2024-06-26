@@ -1,4 +1,4 @@
-import { useState, ChangeEvent, Dispatch, SetStateAction, useEffect } from "react";
+import { useState, ChangeEvent, Dispatch, SetStateAction } from "react";
 import TabPanel from "./TabPanel";
 import { ItemPanel } from "./ItemPanel";
 import { SettingPanel } from "./SettingsPanel";
@@ -57,6 +57,8 @@ interface TrackerDrawerProps {
     changeGraphVersion: (version: string) => void,
     supportedGraphVersions: GraphGameVersions,
     visitedSimRegions: Set<string>,
+    itemPanelAsTab: boolean,
+    isNotMobile: boolean,
 }
 
 
@@ -93,11 +95,12 @@ const TrackerDrawer = ({
     changeGraphVersion,
     supportedGraphVersions,
     visitedSimRegions,
+    itemPanelAsTab,
+    isNotMobile,
 }: TrackerDrawerProps) => {
     const [tabValue, setTabValue] = useState<number>(0);
     const [multiselectMenuOpen, setMultiselectMenuOpen] = useState<Element | null>(null);
     const [multiselectToUpdate, setMultiselectToUpdate] = useState<string>('');
-    const [itemPanelAsTab, setItemPanelAsTab] = useState<boolean>(false);
 
     const handleTabChange = (event: React.SyntheticEvent, newTabValue: number) => {
         event.preventDefault();
@@ -186,40 +189,6 @@ const TrackerDrawer = ({
         multiselectSettingChoices = multiselectDef.options.reduce((o, key) => ({ ...o, [key]: key}), {});
     }
 
-    useEffect(() => {
-        const handleResize = () => {
-            let adult_trade = graphSettings['adult_trade_shuffle'] && (Array.isArray(graphSettings['adult_trade_start']) && graphSettings['adult_trade_start'].length > 0);
-            let child_trade = Array.isArray(graphSettings['shuffle_child_trade']) && graphSettings['shuffle_child_trade'].length > 0;
-            let boss_souls = !!graphSettings.shuffle_enemy_spawns && typeof graphSettings.shuffle_enemy_spawns === 'string' && ['all', 'bosses'].includes(graphSettings.shuffle_enemy_spawns);
-            let enemy_souls = !!graphSettings.shuffle_enemy_spawns && graphSettings.shuffle_enemy_spawns === 'all';
-            let regional_souls = !!graphSettings.shuffle_enemy_spawns && graphSettings.shuffle_enemy_spawns === 'regional';
-        
-            let tabsBreakPoint = 64  // top bar height
-                            + 624    // base item tracker height (13 rows * 48px)
-                            + 300    // minimum settings panel height
-                            + 58     // tab list height
-                            + (child_trade ? 48 : 0)
-                            + (adult_trade ? 48 : 0)
-                            + (boss_souls ? 48 : 0)
-                            + (enemy_souls ? 192 : 0)
-                            + (regional_souls ? 144 : 0)
-                            + (trackerSettings.show_timer ? 82 : 0);
-            let isTall = window.matchMedia(`(min-height: ${tabsBreakPoint}px)`).matches;
-            // item panel expands vertically significantly for mobile screens
-            // less than 480px, assume no vertical room rather than recalculate
-            // the vertical breakpoint
-            let isWide = window.matchMedia(`(min-width: 480px)`).matches;
-            setItemPanelAsTab(!isTall || !isWide);
-        };
-
-        window.addEventListener('resize', handleResize);
-
-        // initial run for component mount
-        handleResize();
-
-        return () => { window.removeEventListener('resize', handleResize) };
-    }, []);
-
     let tabOffset = itemPanelAsTab ? 1 : 0;
 
     return (
@@ -251,6 +220,7 @@ const TrackerDrawer = ({
                             graphLocations={graphLocations}
                             graphEntrances={graphEntrances}
                             visitedSimRegions={visitedSimRegions}
+                            isNotMobile={isNotMobile}
                         />
                     </div>
                     : null
@@ -280,6 +250,7 @@ const TrackerDrawer = ({
                                 graphLocations={graphLocations}
                                 graphEntrances={graphEntrances}
                                 visitedSimRegions={visitedSimRegions}
+                                isNotMobile={isNotMobile}
                             />
                         </div>
                         {
@@ -299,6 +270,7 @@ const TrackerDrawer = ({
                             graphSettings={graphSettings}
                             graphSettingsOptions={graphSettingsOptions}
                             graphSettingsLayout={graphSettingsLayout}
+                            isWide={isNotMobile}
                         /> :
                         <SettingListPanel
                             graphSettings={graphSettings}

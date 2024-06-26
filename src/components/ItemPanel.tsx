@@ -29,6 +29,7 @@ interface ItemPanelProps {
     graphLocations: GraphLocation[],
     graphEntrances: GraphEntrance[],
     visitedSimRegions: Set<string>,
+    isNotMobile: boolean,
 }
 
 export const ItemPanel = ({
@@ -48,6 +49,7 @@ export const ItemPanel = ({
     graphLocations,
     graphEntrances,
     visitedSimRegions,
+    isNotMobile,
 }: ItemPanelProps) => {
     return (
         <div className="itemsHeldContainer">
@@ -68,6 +70,7 @@ export const ItemPanel = ({
                 graphLocations={graphLocations}
                 graphEntrances={graphEntrances}
                 visitedSimRegions={visitedSimRegions}
+                isNotMobile={isNotMobile}
             />
         </div>
     )

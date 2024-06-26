@@ -63,6 +63,7 @@ interface OotDungeonTrackerProps {
     validSilverRupees: {[rupeeName: string]: number},
     includeBlankSilverRupeeSquare: boolean,
     visitedSimRegions: Set<string>,
+    isWide: boolean,
 }
 
 export const OotDungeonTracker = ({
@@ -79,6 +80,7 @@ export const OotDungeonTracker = ({
     validSilverRupees,
     includeBlankSilverRupeeSquare,
     visitedSimRegions,
+    isWide,
 }: OotDungeonTrackerProps) => {
     let changeDungeon = () => {};
     let labelClass = 'ootDungeonName';
@@ -221,7 +223,6 @@ export const OotDungeonTracker = ({
     if (Object.keys(graphSettings).includes('shuffle_silver_rupees')) {
         silverRupeeSetting = graphSettings['shuffle_silver_rupees'] as string;
     }
-    let isWide = window.matchMedia(`(min-width: 480px)`).matches;
     let openLeft = leftWardsSilverRupeeMenus.includes(gridEntry.label) && isWide;
     if (!(['remove', 'vanilla'].includes(silverRupeeSetting))) {
         
