@@ -52,6 +52,7 @@ const SettingMultiselectMenu = ({
             anchorEl={anchorLocation}
             open={Boolean(anchorLocation)}
             onClose={handleClose}
+            className='multiselectMenuContainer'
         >
             <div key="multiselectContainerDiv" className="multiselectSettingMenu">
                 <div key="multiselectNameDiv" className="multiselectSettingMenuTitle">{title}</div>

@@ -1,4 +1,4 @@
-import { useState, ChangeEvent, Dispatch, SetStateAction } from "react";
+import { useState, useEffect, ChangeEvent, Dispatch, SetStateAction } from "react";
 import TabPanel from "./TabPanel";
 import { ItemPanel } from "./ItemPanel";
 import { SettingPanel } from "./SettingsPanel";
@@ -188,6 +188,12 @@ const TrackerDrawer = ({
     if (!!multiselectDef && !!multiselectDef.options) {
         multiselectSettingChoices = multiselectDef.options.reduce((o, key) => ({ ...o, [key]: key}), {});
     }
+
+    useEffect(() => {
+        if (!itemPanelAsTab && tabValue === 2) {
+            setTabValue(1);
+        }
+    }, [itemPanelAsTab, tabValue]);
 
     let tabOffset = itemPanelAsTab ? 1 : 0;
 

@@ -264,18 +264,18 @@ const Tracker = (_props: {}) => {
         setUserSettingsLoaded(true);
 
         window.addEventListener('resize', handleResize);
-        if (screen.orientation) {
+        /*if (screen.orientation) {
             screen.orientation.addEventListener('change', handleResize);
         } else {
             alert('no support');
-        }
+        }*/
 
         return () => {
             // clear pending timeouts on unmount
             if (timerRef.current !== null) { timerRef.current.forEach(t => clearTimeout(t)) }
             // clean up event listeners
             window.removeEventListener('resize', handleResize);
-            screen.orientation.removeEventListener('change', handleResize);
+            //screen.orientation.removeEventListener('change', handleResize);
         };
     }, []);
 
