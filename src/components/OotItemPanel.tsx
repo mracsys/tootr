@@ -2,7 +2,7 @@ import OotItemIcon from './OotItemIcon';
 import ContextMenuHandlerWithArgs from './ContextMenuHandlerWithArgs';
 import { GraphEntrance, GraphLocation, GraphSettingsConfiguration } from '@mracsys/randomizer-graph-tool';
 import { itemPanelLayout, itemEntry } from '@/data/item_panel_layout.ts';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { OotDungeonTracker } from './OotDungeonTracker';
 
 interface OotItemPanelProps {
@@ -748,6 +748,57 @@ export const OotItemPanel = ({
                 {regional_soul_panel_children}
             </div> : null
             }
+            {   /* 
+                    Slight overlap required between the two columns to make
+                    the dungeon rewards fit in non-mobile layout. Mobile
+                    splits the dungeons from two columns in one grid to two
+                    grids in series vertically.
+                */
+                isNotMobile ?
+                <div className='ootDungeonMedItemsContainer'>
+                    {[0, 1, 2, 3, 4].map(i => {
+                        return (
+                            <React.Fragment key={`DungeonPanelPairRow${i}`}>
+                                <OotDungeonTracker
+                                    addStartingItem={addStartingItem}
+                                    removeStartingItem={removeStartingItem}
+                                    cycleGraphMultiselectOption={cycleGraphMultiselectOption}
+                                    handleCheck={handleCheck}
+                                    handleUnCheck={handleUnCheck}
+                                    gridEntry={itemPanelLayout.med_dungeon_items[i]}
+                                    graphSettings={graphSettings}
+                                    graphCollectedItems={graphPlayerInventory}
+                                    graphLocations={graphLocations}
+                                    graphEntrances={graphEntrances}
+                                    validSilverRupees={validSilverRupees}
+                                    visitedSimRegions={visitedSimRegions}
+                                    includeBlankSilverRupeeSquare={true}
+                                    isWide={isNotMobile}
+                                    key={`${itemPanelLayout.med_dungeon_items[i].label}DungeonPanelEntryContainer`}
+                                />
+                                <OotDungeonTracker
+                                    addStartingItem={addStartingItem}
+                                    removeStartingItem={removeStartingItem}
+                                    cycleGraphMultiselectOption={cycleGraphMultiselectOption}
+                                    handleCheck={handleCheck}
+                                    handleUnCheck={handleUnCheck}
+                                    gridEntry={itemPanelLayout.side_dungeon_items[i]}
+                                    graphSettings={graphSettings}
+                                    graphCollectedItems={graphPlayerInventory}
+                                    graphLocations={graphLocations}
+                                    graphEntrances={graphEntrances}
+                                    validSilverRupees={validSilverRupees}
+                                    visitedSimRegions={visitedSimRegions}
+                                    includeBlankSilverRupeeSquare={true}
+                                    isWide={isNotMobile}
+                                    key={`${itemPanelLayout.side_dungeon_items[i].label}DungeonPanelEntryContainer`}
+                                />
+                            </React.Fragment>
+                        )
+                    })}
+                </div>
+                :
+                <React.Fragment>
                 <div className='ootDungeonMedItemsContainer med'>
                     {itemPanelLayout.med_dungeon_items.map((gridEntry) => {
                         return <OotDungeonTracker
@@ -790,6 +841,8 @@ export const OotItemPanel = ({
                             />
                     })}
                 </div>
+                </React.Fragment>
+            }
                 <div className={`ootDungeonStoneItemsContainer ${hideTCGKeys ? 'ootDungeonItemsLastRow' : 'ootDungeonTCGItemsLastRow'}`}>
                     {itemPanelLayout.stone_dungeon_items.map((gridEntry) => {
                         if (gridEntry.label === 'TCG' && hideTCGKeys) return null;
@@ -807,7 +860,7 @@ export const OotItemPanel = ({
                                 validSilverRupees={validSilverRupees}
                                 visitedSimRegions={visitedSimRegions}
                                 includeBlankSilverRupeeSquare={false}
-                                isWide={isNotMobile}
+                                isWide={!isNotMobile}
                                 key={`${gridEntry.label}DungeonPanelEntryContainer`}
                             />
                     })}

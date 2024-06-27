@@ -57,7 +57,52 @@ export const SilverRupeeDisplayIcon = ({
             onBlur={() => setSilverRupeeExpanded(false)}
             tabIndex={0}
         >
-            <div className='ootSilverRupeeMask'>
+                {
+                    !openLeft && dungeonSilverRupeeCounts.length > 2 ?
+                    <div className='ootSilverRupeeMask maskLeft'>
+                            <div className="rupeeIconPadding"></div>
+                    <div className='ootSilverRupeeNamesContainer'>
+                        <div className='ootSilverRupeeNames'>
+                            { dungeonSilverRupeeCounts.length > 3 ?
+                            <div
+                                key={`${itemName}name4${gridEntry.label}${entryNum}`}
+                                className="activeSilverRupee"
+                                onClick={dungeonSilverRupeeCounts[3].addItem}
+                                onContextMenu={dungeonSilverRupeeCounts[3].removeItem.onContextMenu}
+                                onTouchStart={dungeonSilverRupeeCounts[3].removeItem.onTouchStart}
+                                onTouchCancel={dungeonSilverRupeeCounts[3].removeItem.onTouchCancel}
+                                onTouchEnd={dungeonSilverRupeeCounts[3].removeItem.onTouchEnd}
+                                onTouchMove={dungeonSilverRupeeCounts[3].removeItem.onTouchMove}
+                            >
+                                { dungeonSilverRupeeCounts.length > 3 ? <span>
+                                    <span className={`silverRupeeCount ${dungeonSilverRupeeCounts[3].max === dungeonSilverRupeeCounts[3].collected ? 'dungeonItemMaxCollected' : ''}`}>{dungeonSilverRupeeCounts[3].collected} </span>
+                                    <span className='silverRupeeLabel'>{dungeonSilverRupeeCounts[3].name}</span>
+                                </span> : null }
+                            </div>
+                            : <div className='noSilverRupee'></div> }
+                            { dungeonSilverRupeeCounts.length > 2 ?
+                            <div
+                                key={`${itemName}name3${gridEntry.label}${entryNum}`}
+                                className="activeSilverRupee"
+                                onClick={dungeonSilverRupeeCounts[2].addItem}
+                                onContextMenu={dungeonSilverRupeeCounts[2].removeItem.onContextMenu}
+                                onTouchStart={dungeonSilverRupeeCounts[2].removeItem.onTouchStart}
+                                onTouchCancel={dungeonSilverRupeeCounts[2].removeItem.onTouchCancel}
+                                onTouchEnd={dungeonSilverRupeeCounts[2].removeItem.onTouchEnd}
+                                onTouchMove={dungeonSilverRupeeCounts[2].removeItem.onTouchMove}
+                            >
+                                { dungeonSilverRupeeCounts.length > 2 ? <span>
+                                    <span className={`silverRupeeCount ${dungeonSilverRupeeCounts[2].max === dungeonSilverRupeeCounts[2].collected ? 'dungeonItemMaxCollected' : ''}`}>{dungeonSilverRupeeCounts[2].collected} </span>
+                                    <span className='silverRupeeLabel'>{dungeonSilverRupeeCounts[2].name}</span>
+                                </span> : null }
+                            </div>
+                            : <div className='noSilverRupee'></div> }
+                        </div>
+                    </div>
+                    </div>
+                    : null
+                }
+            <div className={`ootSilverRupeeMask ${!openLeft ? 'maskRight' : ''}`}>
                     <OotItemIcon
                         itemName={itemName}
                         className="ootSilverRupeeTracker"
@@ -74,9 +119,10 @@ export const SilverRupeeDisplayIcon = ({
                     />
                 <div className='ootSilverRupeeNamesContainer'>
                     <div className='ootSilverRupeeNames'>
-                        { dungeonSilverRupeeCounts.length > 3 ?
+                        { dungeonSilverRupeeCounts.length > 3 && openLeft ?
                         <div
                             key={`${itemName}name4${gridEntry.label}${entryNum}`}
+                            className="activeSilverRupee"
                             onClick={dungeonSilverRupeeCounts[3].addItem}
                             onContextMenu={dungeonSilverRupeeCounts[3].removeItem.onContextMenu}
                             onTouchStart={dungeonSilverRupeeCounts[3].removeItem.onTouchStart}
@@ -89,10 +135,11 @@ export const SilverRupeeDisplayIcon = ({
                                 <span className='silverRupeeLabel'>{dungeonSilverRupeeCounts[3].name}</span>
                             </span> : null }
                         </div>
-                        : <div className='noSilverRupee'></div> }
-                        { dungeonSilverRupeeCounts.length > 2 ?
+                        : openLeft ? <div className='noSilverRupee'></div> : null }
+                        { dungeonSilverRupeeCounts.length > 2 && openLeft ?
                         <div
                             key={`${itemName}name3${gridEntry.label}${entryNum}`}
+                            className="activeSilverRupee"
                             onClick={dungeonSilverRupeeCounts[2].addItem}
                             onContextMenu={dungeonSilverRupeeCounts[2].removeItem.onContextMenu}
                             onTouchStart={dungeonSilverRupeeCounts[2].removeItem.onTouchStart}
@@ -105,10 +152,11 @@ export const SilverRupeeDisplayIcon = ({
                                 <span className='silverRupeeLabel'>{dungeonSilverRupeeCounts[2].name}</span>
                             </span> : null }
                         </div>
-                        : <div className='noSilverRupee'></div> }
+                        : openLeft ? <div className='noSilverRupee'></div> : null }
                         { dungeonSilverRupeeCounts.length > 1 ?
                         <div
                             key={`${itemName}name2${gridEntry.label}${entryNum}`}
+                            className="activeSilverRupee"
                             onClick={dungeonSilverRupeeCounts[1].addItem}
                             onContextMenu={dungeonSilverRupeeCounts[1].removeItem.onContextMenu}
                             onTouchStart={dungeonSilverRupeeCounts[1].removeItem.onTouchStart}
@@ -124,6 +172,7 @@ export const SilverRupeeDisplayIcon = ({
                         : <div className='noSilverRupee'></div> }
                         <div
                             key={`${itemName}name1${gridEntry.label}${entryNum}`}
+                            className="activeSilverRupee"
                             onClick={dungeonSilverRupeeCounts[0].addItem}
                             onContextMenu={dungeonSilverRupeeCounts[0].removeItem.onContextMenu}
                             onTouchStart={dungeonSilverRupeeCounts[0].removeItem.onTouchStart}

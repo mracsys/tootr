@@ -67,6 +67,7 @@ type TrackerSettingChangeEvent = {
 const localFileLocations: {[randoVersion: string]: string} = {
     'v8.1.0': '/ootr-local-8-1-0',
     '8.1 Stable': '/ootr-local-8-1-0',
+    '8.1.0 Release': '/ootr-local-8-1-0',
     '8.1.45 Fenhl-3': '/ootr-local-fenhl-8-1-45-3',
     '8.1.29 Rob-104': '/ootr-local-realrob-8-1-29-104',
 }
@@ -198,7 +199,7 @@ const Tracker = (_props: {}) => {
             // item panel expands vertically significantly for mobile screens
             // less than 480px, assume no vertical room rather than recalculate
             // the vertical breakpoint
-            let viewportIsMobile = window.matchMedia(`(min-width: 480px)`).matches;
+            let viewportIsMobile = window.matchMedia(`(min-width: 481px)`).matches; // JS is off-by-one compared to same CSS rule
             let viewportIsWide = window.matchMedia(`(min-width: 510px)`).matches;
             
             setIsNotMobile(viewportIsMobile);
@@ -263,12 +264,18 @@ const Tracker = (_props: {}) => {
         setUserSettingsLoaded(true);
 
         window.addEventListener('resize', handleResize);
+        if (screen.orientation) {
+            screen.orientation.addEventListener('change', handleResize);
+        } else {
+            alert('no support');
+        }
 
         return () => {
             // clear pending timeouts on unmount
             if (timerRef.current !== null) { timerRef.current.forEach(t => clearTimeout(t)) }
             // clean up event listeners
             window.removeEventListener('resize', handleResize);
+            screen.orientation.removeEventListener('change', handleResize);
         };
     }, []);
 
@@ -364,30 +371,43 @@ const Tracker = (_props: {}) => {
     });
 
     useEffect(() => {
-        if (graphInitialized) {
+        if (graphInitialized && !graphImportFile) {
             refreshSearch();
             setTrackerInitialized(true);
         }
-    }, [graphInitialized]);
-
-    useEffect(() => {
+        console.log('[Import] Checking if we should import');
         if (graphInitialized && graphImportFile) {
+            console.log('[Import] Importing plando');
             let importState = JSON.parse(graphImportFile);
             if (importSimMode) {
+                console.log('[Import] Updating plando to enable sim mode');
                 importState['settings']['graphplugin_simulator_mode'] = true;
-                changeSetting({ target: { name: 'one_region_per_page', value: true }});
-                changeSetting({ target: { name: 'region_page', value: 'Warps' }});
+            } else {
+                console.log('[Import] Not changing sim mode setting in plando');
             }
             graph.import(importState);
             setTrackerPreferences(graph);
             refreshSearch();
             setLastEntranceName('');
-            setImportSimMode(false);
             setTrackerInitialized(true);
             setGraphImportFile('');
             setVisitedSimRegions(new Set());
         }
-    }, [graphImportFile]);
+    }, [graphImportFile, graphInitialized]);
+
+    useEffect(() => {
+        if (trackerInitialized) {
+            if (importSimMode) {
+                console.log('[Import] Setting sim mode');
+                changeSetting({ target: { name: 'region_page', value: 'Warps' }});
+                changeSetting({ target: { name: 'one_region_per_page', value: true }});
+            } else {
+                console.log('[Import] Exiting sim mode');
+                changeSetting({ target: { name: 'region_page', value: 'Overworld' }});
+                changeSetting({ target: { name: 'one_region_per_page', value: false }});
+            }
+        }
+    }, [importSimMode, trackerInitialized]);
 
     useEffect(() => {
         if (lastLocationName.length === 0) {
@@ -420,7 +440,11 @@ const Tracker = (_props: {}) => {
         // reset graph state by re-importing only the settings
         let simMode = graph.worlds[trackerSettings.player_number].settings['graphplugin_simulator_mode'] as boolean;
         if (!resetToPreset) {
-            let plando = graph.export(simMode, !simMode);
+            // Need to make a copy of the export to prevent the plando
+            // sharing the same object as the internal world settings
+            // during import, which would otherwise reset plando settings
+            // to their defaults.
+            let plando = JSON.parse(JSON.stringify(graph.export(simMode, !simMode)));
             // manually drop checked keys so that we can maintain location/entrance/hint fill
             if (simMode) {
                 delete plando[':checked'];
@@ -488,7 +512,7 @@ const Tracker = (_props: {}) => {
                 newTrackerSettings.game_version = savedState.Branch;
                 setGraphVersion(savedState.Branch);
             }
-            if (savedState.SimMode) setImportSimMode(true);
+            setImportSimMode(savedState.SimMode);
             setCollapsedRegions(savedState.RegionsCollapsed);
             setTrackerSettings(newTrackerSettings);
             setupImport(savedState.GraphState);
@@ -546,6 +570,7 @@ const Tracker = (_props: {}) => {
         reader.onload = readerEvent => {
             let content = readerEvent.target?.result;
             if (!!content && typeof(content) === 'string') {
+                setImportSimMode(false);
                 setCollapsedRegions({});
                 setupImport(content);
             }
@@ -576,7 +601,8 @@ const Tracker = (_props: {}) => {
         }
         let supportedVersions = graph.get_game_versions();
         if (supportedVersions.versions.filter(v => v.version === newVersion).length === 0) {
-            console.log(`Unsupported game version ${newVersion}`);
+            alert(`Unsupported game version ${newVersion}`);
+            setTrackerInitialized(true);
         } else {
             if (graphVersion !== newVersion) {
                 localStorage.setItem('CurrentGraphState', '{}');

@@ -43,7 +43,7 @@ export const buildExitEntranceName = (entrance: GraphEntrance, original: boolean
 export const locationFilter = (l: GraphLocation, collapsedRegions: CollapsedRegions, title: string, showHints: boolean, regionIsFoolish: boolean, lastLocationName: string[], searchTerm: string = ''): boolean => {
     return (!l.checked || collapsedRegions[title] === 'none' || lastLocationName.includes(l.name)) &&
             l.viewable(true) &&
-            ((!l.is_hint && !regionIsFoolish) || (l.is_hint && showHints && l.alias !== l.name)) &&
+            ((!l.is_hint && (!regionIsFoolish || collapsedRegions[title] === 'none')) || (l.is_hint && showHints && l.alias !== l.name) || l.is_restricted) &&
             (searchTerm === '' || 
                 l.alias.toLowerCase().includes(searchTerm.toLowerCase()) ||
                 (!!l.item && l.item.name.toLowerCase().includes(searchTerm.toLowerCase())));

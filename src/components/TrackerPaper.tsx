@@ -103,7 +103,10 @@ const TrackerPaper = ({
         >
             <div className="drawerHeader"></div>
             <div id='worldScrollContainer' className='worldInfo'>
-                <div className="lastEntranceNameMessage">{`Entered ${lastEntranceName}`}</div>
+                {!!lastEntranceName ?
+                    <div className="lastEntranceNameMessage">{`Entered ${lastEntranceName}`}</div>
+                    : null
+                }
                 <ResponsiveMasonry columnsCountBreakPoints={masonryBreakpoints}>
                 <Masonry gutter="20px">
                 {

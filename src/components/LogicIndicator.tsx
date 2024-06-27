@@ -64,7 +64,7 @@ const LogicIndicator = ({
         <div className='logicContainer'>
             {
                 showAgeLogic ?
-                <div className={`logicMultiIndicator ${ageColor}`}>
+                <div className={`logicMultiIndicator ${ageColor !== logicColor && ageColor === 'logicalBlank' ? logicColor : ageColor}`}>
                     {
                         !!ageImage ?
                             <img src={ageImage} alt='Age Access Indicator' />

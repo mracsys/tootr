@@ -115,6 +115,10 @@
     margin-left: var(--theme-spacing);
     height: 32px;
 }
+.areaTitleItemIcon .iconRightText,
+.areaTitleItemIcon .iconLeftText {
+    color: var(--color-shadowed-text) !important;
+}
 .areaTitleIconSeparator {
     font-size: x-large;
     font-weight: bold;

@@ -27,17 +27,35 @@
     padding-left: 8px;
     padding-right: 8px;
     background-color: var(--color-sidebar-expando);
-    z-index: 9000;
+    overflow: hidden;
     float: none;
     display: flex;
     flex-wrap: nowrap;
+    z-index: 9000;
     max-width: 500px;
-    overflow: hidden;
 }
 .ootSilverRupeeExpanded.ootSilverRupeeOpenLeft .ootSilverRupeeMask {
     right: -8px;
     left: auto;
     direction: rtl;
+}
+.ootSilverRupeeExpanded .ootSilverRupeeMask.maskLeft {
+    right: -8px;
+    left: auto;
+    direction: rtl;
+    border-radius: 24px;
+}
+.ootSilverRupeeMask.maskRight {
+    border-radius: 24px;
+}
+.ootSilverRupeeMask .rupeeIconPadding {
+    width: 44px;
+    height: 48px;
+    display: none;
+    margin-right: 20px;
+}
+.ootSilverRupeeExpanded .ootSilverRupeeMask .rupeeIconPadding {
+    display: block;
 }
 .ootSilverRupeeExpanded .ootSilverRupeeMask div {
     float: none;
@@ -50,6 +68,10 @@
     grid-auto-flow: column;
     line-height: 1.5;
     opacity: 1;
+}
+.ootDungeonStoneItemsContainer .ootSilverRupeeNames .noSilverRupee:nth-child(1),
+.ootDungeonStoneItemsContainer .ootSilverRupeeNames .noSilverRupee:nth-child(2) {
+    display: none;
 }
 .ootSilverRupeeExpando .iconLeftTopText,
 .ootSilverRupeeExpando .iconLeftText,
@@ -71,7 +93,7 @@
     width: 0px;
     padding: 0px;
 }
-.ootSilverRupeeNames div:hover {
+.ootSilverRupeeNames .activeSilverRupee:hover {
     cursor: pointer;
     background-color: var(--color-sidebar-hover);
 }

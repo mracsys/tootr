@@ -110,7 +110,7 @@ body {
 
     --color-location-background: var(--md-sys-color-surface-container-high);
     --color-location-hover: var(--md-sys-color-surface-dim);
-    --color-location-sim-scroll: var(--md-sys-color-outline);
+    --color-location-sim-scroll: var(--color-hover);
     --color-entrance-background: var(--md-sys-color-surface-bright);
     --color-unlinked-entrance: var(--md-sys-color-error);
 

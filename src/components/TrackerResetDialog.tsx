@@ -53,7 +53,7 @@ const TrackerResetDialog = ({
                     <Button onClick={() => confirmAlert(false)}>OK</Button> :
                     <React.Fragment>
                         <Button onClick={() => confirmAlert(false)}>Reset with Current Settings</Button>
-                        <Button onClick={() => confirmAlert(true)}>Rest to last Preset</Button>
+                        <Button onClick={() => confirmAlert(true)}>Reset to last Preset</Button>
                     </React.Fragment>
                 }
                 <Button onClick={() => cancelAlert()}>Cancel</Button>
