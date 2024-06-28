@@ -3,7 +3,7 @@ import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import IconButton from '@mui/material/IconButton';
 import { SeedMenu } from "./SeedMenu";
-import { TrackerSettingsCurrent, copyTrackerSettings } from "@/data/tracker_settings";
+import { TrackerSettingsCurrent } from "@/data/tracker_settings";
 import type { SavedTrackerState } from './Tracker';
 
 import { GraphLocation } from '@mracsys/randomizer-graph-tool';
@@ -20,7 +20,7 @@ interface TrackerTopBarProps {
     graphLocationCount: GraphLocation[],
     searchTracker: React.ChangeEventHandler<HTMLInputElement>,
     trackerSettings: TrackerSettingsCurrent,
-    setTrackerSettings: Dispatch<SetStateAction<TrackerSettingsCurrent>>,
+    setExpandSidebar: Dispatch<SetStateAction<boolean>>,
     setAlertReset: Dispatch<SetStateAction<boolean>>,
     saveFunction: (saveName: string) => void,
     loadFunction: (saveName: string) => void,
@@ -40,7 +40,7 @@ const TrackerTopBar = ({
     graphLocationCount,
     searchTracker,
     trackerSettings,
-    setTrackerSettings,
+    setExpandSidebar,
     setAlertReset,
     saveFunction,
     loadFunction,
@@ -50,9 +50,7 @@ const TrackerTopBar = ({
 }: TrackerTopBarProps) => {
 
     const handleOpenSidebar = () => {
-        let newTrackerSettings = copyTrackerSettings(trackerSettings);
-        newTrackerSettings.expand_sidebar = !trackerSettings.expand_sidebar;
-        setTrackerSettings(newTrackerSettings);
+        setExpandSidebar(!trackerSettings.expand_sidebar);
     }
 
     return (

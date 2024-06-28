@@ -46,7 +46,7 @@ interface TrackerDrawerProps {
     graphSettingsOptions: GraphSettingsOptions,
     graphSettingsLayout: GraphSettingsLayout,
     trackerSettings: TrackerSettingsCurrent,
-    setTrackerSettings: Dispatch<SetStateAction<TrackerSettingsCurrent>>,
+    setTrackerSettings: (newSettings: TrackerSettingsCurrent) => void,
     setLastEntranceName: Dispatch<SetStateAction<string>>,
     changeGraphStringSetting: (s: ChangeEvent<HTMLSelectElement>) => void,
     changeGraphBooleanSetting: (s: ChangeEvent<HTMLInputElement>) => void,

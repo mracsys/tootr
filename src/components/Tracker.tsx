@@ -14,14 +14,10 @@ import TrackerUpdateDialog from './TrackerUpdateDialog';
 import TrackerResetDialog from './TrackerResetDialog';
 
 import {
-    all_tracker_settings_versions,
-    current_settings_version,
-    TrackerSettingsCurrent,
-    tracker_settings_default,
-    copyTrackerSettings,
     tracker_setting_type,
     region_visibility_values,
     tracker_settings_defs,
+    TrackerSettingsCurrent,
     // tracker_settings_v1, // add specific versions if format ever changes for the upgrade function
 } from '@/data/tracker_settings';
 import { location_item_menu_layout, shop_item_menu_layout } from '@/data/location_item_menu_layout';
@@ -44,6 +40,7 @@ export interface SavedTrackerState {
     RegionPage: string,
     RegionVisibility: string,
     RegionsCollapsed: CollapsedRegions,
+    VisitedSimRegions: string[],
     Created: number,
     Modified: number,
 }
@@ -79,7 +76,6 @@ const trackerVersion = '1.0.0';
 
 const Tracker = (_props: {}) => {
     const [userSettingsLoaded, setUserSettingsLoaded] = useState<boolean>(false);
-    const [trackerSettings, setTrackerSettings] = useState<TrackerSettingsCurrent>(tracker_settings_default);
     const [alertReset, setAlertReset] = useState<boolean>(false);
     const [alertUpdate, setAlertUpdate] = useState<boolean>(false);
     const [itemMenuOpen, setItemMenuOpen] = useState<Element | null>(null);
@@ -95,16 +91,39 @@ const Tracker = (_props: {}) => {
     const [scrollY, setScrollY] = useState<number | null>(null);
     const [trackerInitialized, setTrackerInitialized] = useState<boolean>(false);
     const [graphInitialized, setGraphInitialized] = useState<boolean>(false);
-    const [collapsedRegions, setCollapsedRegions] = useState<CollapsedRegions>({});
     const [searchTerm, setSearchTerm] = useState<string>('');
     const [cachedRaceMode, setCachedRaceMode] = useState<boolean | null>(null);
     const [importSimMode, setImportSimMode] = useState<boolean>(false);
-    const [lastEntranceName, setLastEntranceName] = useState<string>('');
     const [lastLocationName, setLastLocationName] = useState<string[]>([]);
-    const [visitedSimRegions, setVisitedSimRegions] = useState<Set<string>>(new Set());
     const scroller = useRef<ScrollerRef>({});
     const timerRef = useRef<ReturnType<typeof setTimeout>[]>([]);
     const listRef = useRef<string[]>([]);
+
+    // user settings panel
+    const [savedSettingsVersion, setSavedSettingsVersion] = useState<number>(1);
+    const [graphVersion, setGraphVersion] = useState<string>('8.1.45 Fenhl-3');
+    const [playerNumber, setPlayerNumber] = useState<number>(0);
+    const [settingIcons, setSettingIcons] = useState<boolean>(true);
+    const [regionPage, setRegionPage] = useState<string>('Overworld');
+    const [oneRegionPerPage, setOneRegionPerPage] = useState<boolean>(false);
+    const [expandSidebar, setExpandSidebar] = useState<boolean>(true);
+    const [darkMode, setDarkMode] = useState<boolean>(false);
+    const [showAgeLogic, setShowAgeLogic] = useState<boolean>(false);
+    const [raceMode, setRaceMode] = useState<boolean>(true);
+    const [regionVisibility, setRegionVisibility] = useState<string>('Reachable with All Tricks');
+    const [showUnshuffledEntrances, setShowUnshuffledEntrances] = useState<boolean>(true);
+    const [showUnshuffledLocations, setShowUnshuffledLocations] = useState<string[]>([]);
+    const [showHints, setShowHints] = useState<boolean>(true);
+    const [showLocations, setShowLocations] = useState<string>('Yes');
+    const [showPriceTracking, setShowPriceTracking] = useState<string>('Both');
+    const [showTimer, setShowTimer] = useState<boolean>(false);
+    const [showCheckCounter, setShowCheckCounter] = useState<boolean>(true);
+
+    // other settings that need to be persistent across sessions
+    const [collapsedRegions, setCollapsedRegions] = useState<CollapsedRegions>({});
+    const [visitedSimRegions, setVisitedSimRegions] = useState<Set<string>>(new Set());
+    const [lastEntranceName, setLastEntranceName] = useState<string>('');
+    const [currentGraphPreset, setCurrentGraphPreset] = useState<string>('Random Settings League');
 
     // safe defaults for 1080p fullscreen
     const [isNotMobile, setIsNotMobile] = useState<boolean>(false);
@@ -114,18 +133,16 @@ const Tracker = (_props: {}) => {
     // Graph state management to trigger rerender on memo change.
     // Required as graph updates are not pure, so can't be in React state.
     const [_fileCache, setFileCache] = useState<ExternalFileCache>({files: {}});
-    const [graphVersion, setGraphVersion] = useState<string>('8.1.45 Fenhl-3');
     const [graphRefreshCounter, setGraphRefreshCounter] = useState<number>(0);
     const [graphImportFile, setGraphImportFile] = useState<string>('');
     const [graphPresets, setGraphPresets] = useState<string[]>([]);
-    const [currentGraphPreset, setCurrentGraphPreset] = useState<string>('Random Settings League');
 
     const setTrackerPreferences = (graphGlobal: GraphPlugin) => {
         if (graphGlobal.initialized) {
             let graphSettings = graphGlobal.get_settings_options();
-            graphGlobal.change_setting(graphGlobal.worlds[trackerSettings.player_number], graphSettings['graphplugin_world_search_mode'], trackerSettings.race_mode ? 'starting_items' : 'collected');
-            graphGlobal.change_setting(graphGlobal.worlds[trackerSettings.player_number], graphSettings['graphplugin_region_visibility_mode'], region_visibility_values[trackerSettings.region_visibility]);
-            graphGlobal.change_setting(graphGlobal.worlds[trackerSettings.player_number], graphSettings['graphplugin_viewable_unshuffled_items'], [...trackerSettings.show_unshuffled_locations]);
+            graphGlobal.change_setting(graphGlobal.worlds[playerNumber], graphSettings['graphplugin_world_search_mode'], raceMode ? 'starting_items' : 'collected');
+            graphGlobal.change_setting(graphGlobal.worlds[playerNumber], graphSettings['graphplugin_region_visibility_mode'], region_visibility_values[regionVisibility]);
+            graphGlobal.change_setting(graphGlobal.worlds[playerNumber], graphSettings['graphplugin_viewable_unshuffled_items'], [...showUnshuffledLocations]);
         }
     }
 
@@ -178,7 +195,7 @@ const Tracker = (_props: {}) => {
 
     const handleResize = () => {
         if (graph.initialized) {
-            let settings = graph.worlds[trackerSettings.player_number].settings;
+            let settings = graph.worlds[playerNumber].settings;
             let adult_trade = settings.adult_trade_shuffle && (Array.isArray(settings.adult_trade_start) && settings.adult_trade_start.length > 0);
             let child_trade = Array.isArray(settings.shuffle_child_trade) && settings.shuffle_child_trade.length > 0;
             let boss_souls = !!settings.shuffle_enemy_spawns && typeof settings.shuffle_enemy_spawns === 'string' && ['all', 'bosses'].includes(settings.shuffle_enemy_spawns);
@@ -194,7 +211,7 @@ const Tracker = (_props: {}) => {
                             + (boss_souls ? 48 : 0)
                             + (enemy_souls ? 192 : 0)
                             + (regional_souls ? 144 : 0)
-                            + (trackerSettings.show_timer ? 82 : 0);
+                            + (showTimer ? 82 : 0);
             let viewportIsTall = window.matchMedia(`(min-height: ${tabsBreakPoint}px)`).matches;
             // item panel expands vertically significantly for mobile screens
             // less than 480px, assume no vertical room rather than recalculate
@@ -219,35 +236,83 @@ const Tracker = (_props: {}) => {
             // no version key, assume outdated
             majorTrackerUpgrade();
         }
-        let clientTrackerSettings = localStorage.getItem('TrackerSettings');
-        let trackerSettingsInit = tracker_settings_default;
-        if (!!clientTrackerSettings) {
-            let trackerSettingsStored: all_tracker_settings_versions = JSON.parse(clientTrackerSettings);
-            if (trackerSettingsStored.version !== current_settings_version) {
-                trackerSettingsInit = upgradeTrackerSettings(trackerSettingsStored);
-            } else {
-                trackerSettingsInit = trackerSettingsStored;
-            }
-        } else {
-            // Override default dark mode setting based on browser/OS theme
-            trackerSettingsInit.dark_mode = window.matchMedia("(prefers-color-scheme: dark)").matches;
-        }
-        if (trackerSettingsInit.game_version === undefined || trackerSettingsInit.game_version === '') trackerSettingsInit.game_version = graphVersion;
 
-        if (trackerSettingsInit.dark_mode) {
+        let clientTrackerSettingsVersion = localStorage.getItem('SavedSettingsVersion');
+        let clientGraphVersion = localStorage.getItem('GraphVersion');
+        let clientPlayerNumber = localStorage.getItem('PlayerNumber');
+        let clientSettingIcons = localStorage.getItem('SettingIcons');
+        let clientRegionPage = localStorage.getItem('RegionPage');
+        let clientOneRegionPerPage = localStorage.getItem('OneRegionPerPage');
+        let clientExpandSidebar = localStorage.getItem('ExpandSidebar');
+        let clientDarkMode = localStorage.getItem('DarkMode');
+        let clientShowAgeLogic = localStorage.getItem('ShowAgeLogic');
+        let clientRaceMode = localStorage.getItem('RaceMode');
+        let clientRegionVisibility = localStorage.getItem('RegionVisibility');
+        let clientShowUnshuffledEntrances = localStorage.getItem('ShowUnshuffledEntrances');
+        let clientShowUnshuffledLocations = localStorage.getItem('ShowUnshuffledLocations');
+        let clientShowHints = localStorage.getItem('ShowHints');
+        let clientShowLocations = localStorage.getItem('ShowLocations');
+        let clientShowPriceTracking = localStorage.getItem('ShowPriceTracking');
+        let clientShowTimer = localStorage.getItem('ShowTimer');
+        let clientShowCheckCounter = localStorage.getItem('ShowCheckCounter');
+        let trackerSettingsVersionInit = clientTrackerSettingsVersion !== null ? JSON.parse(clientTrackerSettingsVersion) : savedSettingsVersion;
+        let graphVersionInit = clientGraphVersion !== null ? JSON.parse(clientGraphVersion) : graphVersion;
+        let playerNumberInit = clientPlayerNumber !== null ? JSON.parse(clientPlayerNumber) : playerNumber;
+        let settingIconsInit = clientSettingIcons !== null ? JSON.parse(clientSettingIcons) : settingIcons;
+        let regionPageInit = clientRegionPage !== null ? JSON.parse(clientRegionPage) : regionPage;
+        let oneRegionPerPageInit = clientOneRegionPerPage !== null ? JSON.parse(clientOneRegionPerPage) : oneRegionPerPage;
+        let expandSidebarInit = clientExpandSidebar !== null ? JSON.parse(clientExpandSidebar) : expandSidebar;
+        let darkModeInit = clientDarkMode !== null ? JSON.parse(clientDarkMode) : darkMode;
+        let showAgeLogicInit = clientShowAgeLogic !== null ? JSON.parse(clientShowAgeLogic) : showAgeLogic;
+        let raceModeInit = clientRaceMode !== null ? JSON.parse(clientRaceMode) : raceMode;
+        let regionVisibilityInit = clientRegionVisibility !== null ? JSON.parse(clientRegionVisibility) : regionVisibility;
+        let showUnshuffledEntrancesInit = clientShowUnshuffledEntrances !== null ? JSON.parse(clientShowUnshuffledEntrances) : showUnshuffledEntrances;
+        let showUnshuffledLocationsInit = clientShowUnshuffledLocations !== null ? JSON.parse(clientShowUnshuffledLocations) : showUnshuffledLocations;
+        let showHintsInit = clientShowHints !== null ? JSON.parse(clientShowHints) : showHints;
+        let showLocationsInit = clientShowLocations !== null ? JSON.parse(clientShowLocations) : showLocations;
+        let showPriceTrackingInit = clientShowPriceTracking !== null ? JSON.parse(clientShowPriceTracking) : showPriceTracking;
+        let showTimerInit = clientShowTimer !== null ? JSON.parse(clientShowTimer) : showTimer;
+        let showCheckCounterInit = clientShowCheckCounter !== null ? JSON.parse(clientShowCheckCounter) : showCheckCounter;
+
+        if (trackerSettingsVersionInit !== savedSettingsVersion) {
+            // handle tracker settings upgrades
+        }
+
+        if (clientDarkMode !== null) {
+            // Override default dark mode setting based on browser/OS theme
+            darkModeInit = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        }
+        // Shouldn't be possible, but just in case
+        if (graphVersionInit === '') {
+            graphVersionInit = graphVersion
+        }
+        // Settings toggle replaces theme classes, add initial one here
+        if (darkModeInit) {
             document.body.classList.add('dark');
         } else {
             document.body.classList.add('light');
         }
+        let twoColumnFormat = window.matchMedia(`(min-width: 601px)`).matches; // JS is off-by-one compared to same CSS rule
+        if (!twoColumnFormat) {
+            // Show areas by default on first load if viewport isn't wide enough for both
+            // the sidebar and the area cards
+            expandSidebarInit = false;
+        }
 
         let clientCollapsedRegions = localStorage.getItem('CollapsedRegions');
         let collapsedRegionsInit: CollapsedRegions = !!(clientCollapsedRegions) ? JSON.parse(clientCollapsedRegions) : {};
+
         let clientGraphInitialStateInit = localStorage.getItem('CurrentGraphState');
         let graphInitialStateInit = !!(clientGraphInitialStateInit) ? clientGraphInitialStateInit : '{}';
         let savedState = JSON.parse(graphInitialStateInit);
         if (Object.keys(savedState).includes(':version')) {
-            trackerSettingsInit.game_version = savedState[':version'];
+            graphVersionInit = savedState[':version'];
         }
+        // Don't allow race mode to be bypassed through localstorage manipulation
+        if (savedState.settings?.graphplugin_world_search_mode === 'starting_items') {
+            raceModeInit = true;
+        }
+
         let clientVisitedRegions = localStorage.getItem('SimModeVisitedRegions');
         let visitedRegionsInit = !!clientVisitedRegions ? new Set<string>(JSON.parse(clientVisitedRegions)) : new Set<string>();
         let clientLastEntranceName = localStorage.getItem('SimModeLastEntranceName');
@@ -255,54 +320,97 @@ const Tracker = (_props: {}) => {
         let clientCurrentPreset = localStorage.getItem('CurrentGraphPreset');
         let currentPresetInit = !!clientCurrentPreset ? clientCurrentPreset : 'Random Settings League';
 
-        setGraphVersion(trackerSettingsInit.game_version);
         setCollapsedRegions(collapsedRegionsInit);
-        setTrackerSettings(trackerSettingsInit);
         setVisitedSimRegions(visitedRegionsInit);
         setLastEntranceName(lastEntranceNameInit);
         setCurrentGraphPreset(currentPresetInit);
+
+        setSavedSettingsVersion(trackerSettingsVersionInit);
+        setGraphVersion(graphVersionInit);
+        setPlayerNumber(playerNumberInit);
+        setSettingIcons(settingIconsInit);
+        setRegionPage(regionPageInit);
+        setOneRegionPerPage(oneRegionPerPageInit);
+        setExpandSidebar(expandSidebarInit);
+        setDarkMode(darkModeInit);
+        setShowAgeLogic(showAgeLogicInit);
+        setRaceMode(raceModeInit);
+        setRegionVisibility(regionVisibilityInit);
+        setShowUnshuffledEntrances(showUnshuffledEntrancesInit);
+        setShowUnshuffledLocations(showUnshuffledLocationsInit);
+        setShowHints(showHintsInit);
+        setShowLocations(showLocationsInit);
+        setShowPriceTracking(showPriceTrackingInit);
+        setShowTimer(showTimerInit);
+        setShowCheckCounter(showCheckCounterInit);
+
         setUserSettingsLoaded(true);
 
         window.addEventListener('resize', handleResize);
-        /*if (screen.orientation) {
-            screen.orientation.addEventListener('change', handleResize);
-        } else {
-            alert('no support');
-        }*/
 
         return () => {
             // clear pending timeouts on unmount
             if (timerRef.current !== null) { timerRef.current.forEach(t => clearTimeout(t)) }
             // clean up event listeners
             window.removeEventListener('resize', handleResize);
-            //screen.orientation.removeEventListener('change', handleResize);
         };
     }, []);
 
     // hooks to keep state saved in localstorage
     useEffect(() => {
-        if (trackerInitialized) localStorage.setItem('TrackerSettings', JSON.stringify(trackerSettings));
-    }, [
-        trackerSettings,
-        trackerSettings.version,
-        trackerSettings.game_version,
-        trackerSettings.player_number,
-        trackerSettings.setting_icons,
-        trackerSettings.region_page,
-        trackerSettings.one_region_per_page,
-        trackerSettings.expand_sidebar,
-        trackerSettings.dark_mode,
-        trackerSettings.show_age_logic,
-        trackerSettings.race_mode,
-        trackerSettings.region_visibility,
-        trackerSettings.show_unshuffled_entrances,
-        trackerSettings.show_unshuffled_locations,
-        trackerSettings.show_hints,
-        trackerSettings.show_locations,
-        trackerSettings.shop_price_tracking,
-        trackerSettings.show_timer,
-        trackerSettings.show_check_counter,
-    ]);
+        if (trackerInitialized) localStorage.setItem('SavedSettingsVersion', JSON.stringify(savedSettingsVersion));
+    }, [savedSettingsVersion]);
+    useEffect(() => {
+        if (trackerInitialized) localStorage.setItem('GraphVersion', JSON.stringify(graphVersion));
+    }, [graphVersion]);
+    useEffect(() => {
+        if (trackerInitialized) localStorage.setItem('PlayerNumber', JSON.stringify(playerNumber));
+    }, [playerNumber]);
+    useEffect(() => {
+        if (trackerInitialized) localStorage.setItem('SettingIcons', JSON.stringify(settingIcons));
+    }, [settingIcons]);
+    useEffect(() => {
+        if (trackerInitialized) localStorage.setItem('RegionPage', JSON.stringify(regionPage));
+    }, [regionPage]);
+    useEffect(() => {
+        if (trackerInitialized) localStorage.setItem('OneRegionPerPage', JSON.stringify(oneRegionPerPage));
+    }, [oneRegionPerPage]);
+    useEffect(() => {
+        if (trackerInitialized) localStorage.setItem('ExpandSidebar', JSON.stringify(expandSidebar));
+    }, [expandSidebar]);
+    useEffect(() => {
+        if (trackerInitialized) localStorage.setItem('DarkMode', JSON.stringify(darkMode));
+    }, [darkMode]);
+    useEffect(() => {
+        if (trackerInitialized) localStorage.setItem('ShowAgeLogic', JSON.stringify(showAgeLogic));
+    }, [showAgeLogic]);
+    useEffect(() => {
+        if (trackerInitialized) localStorage.setItem('RaceMode', JSON.stringify(raceMode));
+    }, [raceMode]);
+    useEffect(() => {
+        if (trackerInitialized) localStorage.setItem('RegionVisibility', JSON.stringify(regionVisibility));
+    }, [regionVisibility]);
+    useEffect(() => {
+        if (trackerInitialized) localStorage.setItem('ShowUnshuffledEntrances', JSON.stringify(showUnshuffledEntrances));
+    }, [showUnshuffledEntrances]);
+    useEffect(() => {
+        if (trackerInitialized) localStorage.setItem('ShowUnshuffledLocations', JSON.stringify(showUnshuffledLocations));
+    }, [showUnshuffledLocations]);
+    useEffect(() => {
+        if (trackerInitialized) localStorage.setItem('ShowHints', JSON.stringify(showHints));
+    }, [showHints]);
+    useEffect(() => {
+        if (trackerInitialized) localStorage.setItem('ShowLocations', JSON.stringify(showLocations));
+    }, [showLocations]);
+    useEffect(() => {
+        if (trackerInitialized) localStorage.setItem('ShowPriceTracking', JSON.stringify(showPriceTracking));
+    }, [showPriceTracking]);
+    useEffect(() => {
+        if (trackerInitialized) localStorage.setItem('ShowTimer', JSON.stringify(showTimer));
+    }, [showTimer]);
+    useEffect(() => {
+        if (trackerInitialized) localStorage.setItem('ShowCheckCounter', JSON.stringify(showCheckCounter));
+    }, [showCheckCounter]);
     useEffect(() => {
         if (trackerInitialized) localStorage.setItem('CollapsedRegions', JSON.stringify(collapsedRegions));
     }, [Object.keys(collapsedRegions).length]);
@@ -342,7 +450,7 @@ const Tracker = (_props: {}) => {
             });
         }
 
-        if (trackerSettings.dark_mode) {
+        if (darkMode) {
             document.body.classList.replace('light', 'dark');
         } else {
             document.body.classList.replace('dark', 'light');
@@ -399,12 +507,14 @@ const Tracker = (_props: {}) => {
         if (trackerInitialized) {
             if (importSimMode) {
                 console.log('[Import] Setting sim mode');
-                changeSetting({ target: { name: 'region_page', value: 'Warps' }});
-                changeSetting({ target: { name: 'one_region_per_page', value: true }});
+                setRegionPage('Warps');
+                setOneRegionPerPage(true);
+                setLastEntranceName('');
             } else {
                 console.log('[Import] Exiting sim mode');
-                changeSetting({ target: { name: 'region_page', value: 'Overworld' }});
-                changeSetting({ target: { name: 'one_region_per_page', value: false }});
+                setRegionPage('Overworld');
+                setOneRegionPerPage(false);
+                setLastEntranceName('');
             }
         }
     }, [importSimMode, trackerInitialized]);
@@ -430,15 +540,9 @@ const Tracker = (_props: {}) => {
         localStorage.setItem('TrackerVersion', trackerVersion);
     }
 
-    const upgradeTrackerSettings = (oldTrackerSettings: all_tracker_settings_versions): TrackerSettingsCurrent => {
-        // Modify stored settings as needed if they change in the future.
-        // Independent of stored graph state.
-        return oldTrackerSettings;
-    }
-
     const resetState = (resetToPreset: boolean = true): void => {
         // reset graph state by re-importing only the settings
-        let simMode = graph.worlds[trackerSettings.player_number].settings['graphplugin_simulator_mode'] as boolean;
+        let simMode = graph.worlds[playerNumber].settings['graphplugin_simulator_mode'] as boolean;
         if (!resetToPreset) {
             // Need to make a copy of the export to prevent the plando
             // sharing the same object as the internal world settings
@@ -449,9 +553,11 @@ const Tracker = (_props: {}) => {
             if (simMode) {
                 delete plando[':checked'];
                 delete plando[':checked_entrances'];
-                changeSetting({ target: { name: 'region_page', value: 'Warps' }});
+                setRegionPage('Warps');
+                setOneRegionPerPage(true);
             } else {
-                changeSetting({ target: { name: 'region_page', value: 'Overworld' }});
+                setRegionPage('Overworld');
+                setOneRegionPerPage(false);
             }
             graph.import(plando);
         } else {
@@ -467,6 +573,7 @@ const Tracker = (_props: {}) => {
 
     const refreshSearch = () => {
         graph.collect_locations();
+        // number change triggers rerender after graph memo mutation
         graphRefreshCounter > 0 ? setGraphRefreshCounter(graphRefreshCounter-1) : setGraphRefreshCounter(graphRefreshCounter+1);
         localStorage.setItem('CurrentGraphState', JSON.stringify(graph.export(true)));
     }
@@ -503,18 +610,16 @@ const Tracker = (_props: {}) => {
     const loadSavedGraphState = (savedName: string) => {
         let savedState = getSavedGraphState(savedName);
         if (savedState !== null) {
-            let newTrackerSettings = copyTrackerSettings(trackerSettings);
-            newTrackerSettings.player_number = savedState.PlayerNumber;
-            newTrackerSettings.race_mode = savedState.RaceMode;
-            newTrackerSettings.region_page = savedState.RegionPage;
-            newTrackerSettings.region_visibility = savedState.RegionVisibility;
             if (savedState.Branch !== graphVersion) {
-                newTrackerSettings.game_version = savedState.Branch;
                 setGraphVersion(savedState.Branch);
             }
             setImportSimMode(savedState.SimMode);
             setCollapsedRegions(savedState.RegionsCollapsed);
-            setTrackerSettings(newTrackerSettings);
+            setVisitedSimRegions(new Set(savedState.VisitedSimRegions));
+            setPlayerNumber(savedState.PlayerNumber);
+            setRaceMode(savedState.RaceMode);
+            setRegionPage(savedState.RegionPage);
+            setRegionVisibility(savedState.RegionVisibility);
             setupImport(savedState.GraphState);
         } else {
             console.log(`Problem loading saved state ${savedName}: state does not exist.`)
@@ -531,13 +636,14 @@ const Tracker = (_props: {}) => {
         let savedState: SavedTrackerState = {
             SaveName: savedName,
             GraphState: graphState,
-            PlayerNumber: trackerSettings.player_number,
+            PlayerNumber: playerNumber,
             Branch: graphVersion,
-            RaceMode: trackerSettings.race_mode,
-            SimMode: graph.worlds[trackerSettings.player_number].settings['graphplugin_simulator_mode'] as boolean,
-            RegionPage: trackerSettings.region_page,
-            RegionVisibility: trackerSettings.region_visibility,
+            RaceMode: raceMode,
+            SimMode: graph.worlds[playerNumber].settings['graphplugin_simulator_mode'] as boolean,
+            RegionPage: regionPage,
+            RegionVisibility: regionVisibility,
             RegionsCollapsed: collapsedRegions,
+            VisitedSimRegions: Array.from(visitedSimRegions),
             Created: createdDate,
             Modified: Date.now(),
         }
@@ -560,6 +666,11 @@ const Tracker = (_props: {}) => {
         graph.load_settings_preset(presetName);
         refreshSearch();
         setCurrentGraphPreset(presetName);
+        setRegionPage('Overworld');
+        setOneRegionPerPage(false);
+        setCollapsedRegions({});
+        setVisitedSimRegions(new Set());
+        setLastEntranceName('');
     }
 
     const importGraphState = (inputEvent: ChangeEvent<HTMLInputElement>) => {
@@ -623,12 +734,71 @@ const Tracker = (_props: {}) => {
     }
 
     const changeSetting = (setting: TrackerSettingChangeEvent) => {
+        switch (setting.target.name) {
+            case 'game_version':
+                setGraphVersion(setting.target.value as string);
+                break;
+            case 'player_number':
+                setPlayerNumber(setting.target.value as number);
+                break;
+            case 'setting_icons':
+                setSettingIcons(setting.target.value as boolean);
+                break;
+            case 'region_page':
+                setRegionPage(setting.target.value as string);
+                setLastEntranceName('');
+                break;
+            case 'one_region_per_page':
+                setOneRegionPerPage(setting.target.value as boolean);
+                break;
+            case 'expand_sidebar':
+                setExpandSidebar(setting.target.value as boolean);
+                break;
+            case 'dark_mode':
+                setDarkMode(setting.target.value as boolean);
+                break;
+            case 'show_age_logic':
+                setShowAgeLogic(setting.target.value as boolean);
+                break;
+            case 'race_mode':
+                setRaceMode(setting.target.value as boolean);
+                break;
+            case 'region_visibility':
+                setRegionVisibility(setting.target.value as string);
+                break;
+            case 'show_unshuffled_entrances':
+                setShowUnshuffledEntrances(setting.target.value as boolean);
+                break;
+            case 'show_unshuffled_locations':
+                setShowUnshuffledLocations([...(setting.target.value as string[])]);
+                break;
+            case 'show_hints':
+                setShowHints(setting.target.value as boolean);
+                break;
+            case 'show_locations':
+                setShowLocations(setting.target.value as string);
+                break;
+            case 'shop_price_tracking':
+                setShowPriceTracking(setting.target.value as string);
+                break;
+            case 'show_timer':
+                setShowTimer(setting.target.value as boolean);
+                break;
+            case 'show_check_counter':
+                setShowCheckCounter(setting.target.value as boolean);
+                break;
+        }
         console.log(`[Setting] ${setting.target.name} changed to ${setting.target.value}`);
-        let newTrackerSettings = copyTrackerSettings(trackerSettings);
-        newTrackerSettings[setting.target.name] = setting.target.value;
-        setTrackerSettings(newTrackerSettings);
-        if (setting.target.name === 'region_page') {
-            setLastEntranceName('');
+    }
+
+    const setTrackerSettings = (newTrackerSettings: TrackerSettingsCurrent) => {
+        for (let [settingName, settingValue] of Object.entries(newTrackerSettings)) {
+            changeSetting({
+                target: {
+                    name: settingName,
+                    value: settingValue,
+                }
+            });
         }
     }
 
@@ -636,11 +806,9 @@ const Tracker = (_props: {}) => {
         if (cachedRaceMode !== null) {
             let graphSettings = graph.get_settings_options();
             let newRaceMode = cachedRaceMode ? 'starting_items' : 'collected';
-            graph.change_setting(graph.worlds[trackerSettings.player_number], graphSettings['graphplugin_world_search_mode'], newRaceMode);
-            let newTrackerSettings = copyTrackerSettings(trackerSettings);
-            newTrackerSettings.race_mode = cachedRaceMode;
+            graph.change_setting(graph.worlds[playerNumber], graphSettings['graphplugin_world_search_mode'], newRaceMode);
+            setRaceMode(cachedRaceMode);
             resetState(false);
-            setTrackerSettings(newTrackerSettings);
             setCachedRaceMode(null);
         }
         setAlertReset(false);
@@ -649,20 +817,20 @@ const Tracker = (_props: {}) => {
 
     const changeRegionMode = (regionSearchMode: string): void => {
         let graphSettings = graph.get_settings_options();
-        graph.change_setting(graph.worlds[trackerSettings.player_number], graphSettings['graphplugin_region_visibility_mode'], regionSearchMode);
+        graph.change_setting(graph.worlds[playerNumber], graphSettings['graphplugin_region_visibility_mode'], regionSearchMode);
         refreshSearch();
     }
 
     // default to reverse direction so that right-click/long-touch handler only needs
     // to pass one argument
     const cycleGraphSetting = ({graphSettingName = '', reverseDirection = true}: {graphSettingName?: string, reverseDirection?: boolean} = {}): void => {
-        let settingValue = graph.worlds[trackerSettings.player_number].settings[graphSettingName];
+        let settingValue = graph.worlds[playerNumber].settings[graphSettingName];
         let graphSettingsOptions = graph.get_settings_options();
         let graphSetting = graphSettingsOptions[graphSettingName];
         if (settingValue === undefined || settingValue === null || graphSetting === undefined) return;
         if (typeof settingValue === 'boolean') {
-            graph.change_setting(graph.worlds[trackerSettings.player_number], graphSetting, !settingValue);
-            //graph.worlds[trackerSettings.player_number].settings[graphSettingName] = !(settingValue);
+            graph.change_setting(graph.worlds[playerNumber], graphSetting, !settingValue);
+            //graph.worlds[playerNumber].settings[graphSettingName] = !(settingValue);
         } else if (typeof settingValue === 'string') {
             let settingChoices = graphSettingsOptions[graphSettingName].choices;
             if (!!settingChoices) {
@@ -687,8 +855,8 @@ const Tracker = (_props: {}) => {
                         if (settingIndex < 0) settingIndex = settingOptions.length - 1;
                     }
                 }
-                graph.change_setting(graph.worlds[trackerSettings.player_number], graphSetting, settingOptions[settingIndex]);
-                //graph.worlds[trackerSettings.player_number].settings[graphSettingName] = settingOptions[settingIndex];
+                graph.change_setting(graph.worlds[playerNumber], graphSetting, settingOptions[settingIndex]);
+                //graph.worlds[playerNumber].settings[graphSettingName] = settingOptions[settingIndex];
             }
         } else if (typeof settingValue === 'number') {
             let optionMax = graphSettingsOptions[graphSettingName].maximum;
@@ -700,17 +868,17 @@ const Tracker = (_props: {}) => {
                 } else {
                     (settingValue === optionMin) ? settingValue = optionMax : settingValue--;
                 }
-                graph.change_setting(graph.worlds[trackerSettings.player_number], graphSetting, settingValue);
-                //graph.worlds[trackerSettings.player_number].settings[graphSettingName] = settingValue;
+                graph.change_setting(graph.worlds[playerNumber], graphSetting, settingValue);
+                //graph.worlds[playerNumber].settings[graphSettingName] = settingValue;
             }
         }
         refreshSearch();
-        console.log(`[Setting] ${graphSettingName} changed to ${graph.worlds[trackerSettings.player_number].settings[graphSettingName]}`);
+        console.log(`[Setting] ${graphSettingName} changed to ${graph.worlds[playerNumber].settings[graphSettingName]}`);
     }
 
     const cycleGraphMultiselectOption = ({graphSettingName = '', settingOptions = ['']}: {graphSettingName?: string, settingOptions?: string[]} = {}) => {
         let settingValue: string[] = [];
-        let settingArray = graph.worlds[trackerSettings.player_number].settings[graphSettingName];
+        let settingArray = graph.worlds[playerNumber].settings[graphSettingName];
         if (settingArray !== undefined && settingArray !== null && Array.isArray(settingArray)) {
             settingValue = [...settingArray];
         } else {
@@ -730,15 +898,15 @@ const Tracker = (_props: {}) => {
                     settingValue.push(settingOption);
                 }
             }
-            graph.change_setting(graph.worlds[trackerSettings.player_number], graphSetting, settingValue);
+            graph.change_setting(graph.worlds[playerNumber], graphSetting, settingValue);
         }
         refreshSearch();
-        console.log(`[Setting] ${graphSettingName} changed to ${graph.worlds[trackerSettings.player_number].settings[graphSettingName]}`);
+        console.log(`[Setting] ${graphSettingName} changed to ${graph.worlds[playerNumber].settings[graphSettingName]}`);
     }
 
     const changeGraphStringSetting = (s: ChangeEvent<HTMLSelectElement>): void => {
         const {target: { name, value }} = s;
-        let settingValue = graph.worlds[trackerSettings.player_number].settings[name];
+        let settingValue = graph.worlds[playerNumber].settings[name];
         let graphSettingsOptions = graph.get_settings_options();
         let graphSetting = graphSettingsOptions[name];
         if (settingValue === undefined || settingValue === null || graphSetting === undefined) return;
@@ -746,7 +914,7 @@ const Tracker = (_props: {}) => {
             let settingChoices = graphSettingsOptions[name].choices;
             if (!!settingChoices) {
                 if (Object.keys(settingChoices).includes(value)) {
-                    graph.change_setting(graph.worlds[trackerSettings.player_number], graphSetting, value);
+                    graph.change_setting(graph.worlds[playerNumber], graphSetting, value);
                 } else {
                     console.log(`[Setting] Tried to change ${name} to non-existent option ${value}`);
                     return;
@@ -759,13 +927,13 @@ const Tracker = (_props: {}) => {
 
     const changeGraphBooleanSetting = (s: ChangeEvent<HTMLInputElement>): void => {
         const {target: { name, checked }} = s;
-        let settingValue = graph.worlds[trackerSettings.player_number].settings[name];
+        let settingValue = graph.worlds[playerNumber].settings[name];
         let graphSettingsOptions = graph.get_settings_options();
         let graphSetting = graphSettingsOptions[name];
         if (settingValue === undefined || settingValue === null || graphSetting === undefined) return;
         if (typeof settingValue === 'boolean') {
             if (typeof checked === 'boolean') {
-                graph.change_setting(graph.worlds[trackerSettings.player_number], graphSetting, checked);
+                graph.change_setting(graph.worlds[playerNumber], graphSetting, checked);
             } else {
                 console.log(`[Setting] Tried to change boolean setting ${name} to non-boolean value ${checked}`);
                 return;
@@ -778,7 +946,7 @@ const Tracker = (_props: {}) => {
     const changeGraphNumericSetting = (s: ChangeEvent<HTMLSelectElement>): void => {
         const {target: { name, value }} = s;
         const numValue = parseInt(value);
-        let settingValue = graph.worlds[trackerSettings.player_number].settings[name];
+        let settingValue = graph.worlds[playerNumber].settings[name];
         let graphSettingsOptions = graph.get_settings_options();
         let graphSetting = graphSettingsOptions[name];
         if (settingValue === undefined || settingValue === null || graphSetting === undefined) return;
@@ -788,7 +956,7 @@ const Tracker = (_props: {}) => {
                     console.log(`[Setting] Tried to change numeric setting ${name} to value ${numValue} outside max ${graphSetting.maximum} and min ${graphSetting.minimum}`);
                     return;
                 }
-                graph.change_setting(graph.worlds[trackerSettings.player_number], graphSetting, numValue);
+                graph.change_setting(graph.worlds[playerNumber], graphSetting, numValue);
             } else {
                 console.log(`[Setting] Tried to change numeric setting ${name} to non-numeric value ${numValue}`);
                 return;
@@ -799,21 +967,21 @@ const Tracker = (_props: {}) => {
     }
 
     const cycleGraphRewardHint = ({itemName = '', forward = true}: {itemName?: string, forward?: boolean} = {}) => {
-        graph.cycle_hinted_areas_for_item(itemName, graph.worlds[trackerSettings.player_number], forward);
+        graph.cycle_hinted_areas_for_item(itemName, graph.worlds[playerNumber], forward);
         refreshSearch();
-        console.log(`[Reward Hint] ${itemName} area changed to ${graph.worlds[trackerSettings.player_number].fixed_item_area_hints[itemName].hint}`);
+        console.log(`[Reward Hint] ${itemName} area changed to ${graph.worlds[playerNumber].fixed_item_area_hints[itemName].hint}`);
     }
 
     const addStartingItem = (item_name: string, count: number = 1) => {
-        let graphItem = graph.get_item(graph.worlds[trackerSettings.player_number], item_name);
-        graph.add_starting_item(graph.worlds[trackerSettings.player_number], graphItem, count);
+        let graphItem = graph.get_item(graph.worlds[playerNumber], item_name);
+        graph.add_starting_item(graph.worlds[playerNumber], graphItem, count);
         refreshSearch();
         console.log(`[Item] Added ${count} ${item_name} to starting items`);
     }
 
     const removeStartingItem = (item_name: string, count: number = 1) => {
-        let graphItem = graph.get_item(graph.worlds[trackerSettings.player_number], item_name);
-        graph.remove_starting_item(graph.worlds[trackerSettings.player_number], graphItem, count);
+        let graphItem = graph.get_item(graph.worlds[playerNumber], item_name);
+        graph.remove_starting_item(graph.worlds[playerNumber], graphItem, count);
         refreshSearch();
         console.log(`[Item] Removed ${count} ${item_name} from starting items`);
     }
@@ -821,9 +989,9 @@ const Tracker = (_props: {}) => {
     const addStartingItems = (item_names: string[]) => {
         let graphItems: GraphItem[] = [];
         for (let item_name of item_names) {
-            graphItems.push(graph.get_item(graph.worlds[trackerSettings.player_number], item_name));
+            graphItems.push(graph.get_item(graph.worlds[playerNumber], item_name));
         }
-        graph.add_starting_items(graph.worlds[trackerSettings.player_number], graphItems);
+        graph.add_starting_items(graph.worlds[playerNumber], graphItems);
         refreshSearch();
         console.log(`[Item] Added ${item_names} to starting items`);
     }
@@ -831,17 +999,17 @@ const Tracker = (_props: {}) => {
     const removeStartingItems = (item_names: string[]) => {
         let graphItems: GraphItem[] = [];
         for (let item_name of item_names) {
-            graphItems.push(graph.get_item(graph.worlds[trackerSettings.player_number], item_name));
+            graphItems.push(graph.get_item(graph.worlds[playerNumber], item_name));
         }
-        graph.remove_starting_items(graph.worlds[trackerSettings.player_number], graphItems);
+        graph.remove_starting_items(graph.worlds[playerNumber], graphItems);
         refreshSearch();
         console.log(`[Item] Removed ${item_names} to starting items`);
     }
 
     const replaceStartingItem = (add_item_name: string, remove_item_name: string) => {
-        let addGraphItem = graph.get_item(graph.worlds[trackerSettings.player_number], add_item_name);
-        let removeGraphItem = graph.get_item(graph.worlds[trackerSettings.player_number], remove_item_name);
-        graph.replace_starting_item(graph.worlds[trackerSettings.player_number], addGraphItem, removeGraphItem);
+        let addGraphItem = graph.get_item(graph.worlds[playerNumber], add_item_name);
+        let removeGraphItem = graph.get_item(graph.worlds[playerNumber], remove_item_name);
+        graph.replace_starting_item(graph.worlds[playerNumber], addGraphItem, removeGraphItem);
         refreshSearch();
     }
 
@@ -877,8 +1045,8 @@ const Tracker = (_props: {}) => {
     }
 
     const linkEntrance = (dataLinkFrom: string, dataLinkTo: string): void => {
-        let sourceEntrance = graph.worlds[trackerSettings.player_number].get_entrance(dataLinkFrom);
-        let targetEntrance = graph.worlds[trackerSettings.player_number].get_entrance(dataLinkTo);
+        let sourceEntrance = graph.worlds[playerNumber].get_entrance(dataLinkFrom);
+        let targetEntrance = graph.worlds[playerNumber].get_entrance(dataLinkTo);
         console.log(`${dataLinkFrom} <> ${dataLinkTo} [Connected]`);
         graph.set_entrance(sourceEntrance, targetEntrance);
         refreshSearch();
@@ -892,7 +1060,7 @@ const Tracker = (_props: {}) => {
     }
 
     const unLinkEntrance = (entrance: string, scrollRef: string): void => {
-        let sourceEntrance = graph.worlds[trackerSettings.player_number].get_entrance(entrance);
+        let sourceEntrance = graph.worlds[playerNumber].get_entrance(entrance);
         console.log(`${entrance} [Disconnected]`);
         graph.set_entrance(sourceEntrance, null);
         refreshSearch();
@@ -906,7 +1074,7 @@ const Tracker = (_props: {}) => {
     }
 
     const toggleWalletTiers = (location: string): void => {
-        let sourceLocation = graph.worlds[trackerSettings.player_number].get_location(location);
+        let sourceLocation = graph.worlds[playerNumber].get_location(location);
         if (!!sourceLocation.item) {
             let itemPrice = sourceLocation.item.price;
             if (itemPrice === null || itemPrice <= 99) {
@@ -925,7 +1093,7 @@ const Tracker = (_props: {}) => {
     }
 
     const updateShopPrice = (location: string, priceValue: string): void => {
-        let sourceLocation = graph.worlds[trackerSettings.player_number].get_location(location);
+        let sourceLocation = graph.worlds[playerNumber].get_location(location);
         if (!!sourceLocation.item) {
             sourceLocation.item.price = parseInt(priceValue);
             graph.set_location_item(sourceLocation, sourceLocation.item, sourceLocation.item.price);
@@ -943,8 +1111,8 @@ const Tracker = (_props: {}) => {
 
     const checkLocation = (location: string): void => {
         console.log(`${location} [Checked]`);
-        let sourceLocation = graph.worlds[trackerSettings.player_number].get_location(location);
-        let simMode = graph.worlds[trackerSettings.player_number].settings['graphplugin_simulator_mode'] as boolean;
+        let sourceLocation = graph.worlds[playerNumber].get_location(location);
+        let simMode = graph.worlds[playerNumber].settings['graphplugin_simulator_mode'] as boolean;
         graph.check_location(sourceLocation);
         if ((sourceLocation.is_hint || sourceLocation.item?.name.includes('Compass')) && simMode) {
             graph.unhide_hint(sourceLocation);
@@ -960,16 +1128,16 @@ const Tracker = (_props: {}) => {
 
     const unCheckLocation = (location: string): void => {
         console.log(`${location} [Unchecked]`);
-        let sourceLocation = graph.worlds[trackerSettings.player_number].get_location(location);
+        let sourceLocation = graph.worlds[playerNumber].get_location(location);
         graph.uncheck_location(sourceLocation);
         refreshSearch();
     }
 
     const checkEntrance = (entrance: string): void => {
         console.log(`${entrance} [Checked]`);
-        let sourceEntrance = graph.worlds[trackerSettings.player_number].get_entrance(entrance);
+        let sourceEntrance = graph.worlds[playerNumber].get_entrance(entrance);
         graph.check_entrance(sourceEntrance);
-        if (trackerSettings.one_region_per_page && !tracker_settings_defs.region_page.options?.includes(trackerSettings.region_page)) {
+        if (oneRegionPerPage && !tracker_settings_defs.region_page.options?.includes(regionPage)) {
             let reverseLink = !!(sourceEntrance.replaces) ? sourceEntrance.replaces : sourceEntrance;
             handleDungeonTravel(reverseLink.target_group, sourceEntrance);
         }
@@ -978,7 +1146,7 @@ const Tracker = (_props: {}) => {
 
     const unCheckEntrance = (entrance: string): void => {
         console.log(`${entrance} [Unchecked]`);
-        let sourceEntrance = graph.worlds[trackerSettings.player_number].get_entrance(entrance);
+        let sourceEntrance = graph.worlds[playerNumber].get_entrance(entrance);
         graph.uncheck_entrance(sourceEntrance);
         refreshSearch();
     }
@@ -987,10 +1155,10 @@ const Tracker = (_props: {}) => {
         let originator = ootItem.currentTarget.getAttribute('data-found-in');
         let foundItem = ootItem.currentTarget.getAttribute('data-found-item');
         if (originator === null) throw `Cannot assign item to null location`;
-        let sourceLocation = graph.worlds[trackerSettings.player_number].get_location(originator);
+        let sourceLocation = graph.worlds[playerNumber].get_location(originator);
         if (!!(foundItem) || (foundItem !== '' && typeof(foundItem) === 'string')) {
             console.log(originator, "[holds]", foundItem);
-            graph.set_location_item(sourceLocation, graph.worlds[trackerSettings.player_number].get_item(foundItem));
+            graph.set_location_item(sourceLocation, graph.worlds[playerNumber].get_item(foundItem));
         } else {
             console.log(originator, "[cleared]");
             graph.set_location_item(sourceLocation, null);
@@ -1004,9 +1172,9 @@ const Tracker = (_props: {}) => {
         switch (ootHint.hintType) {
             case 'woth':
                 if (ootHint.hintRegion) {
-                    let hintRegion = graph.worlds[trackerSettings.player_number].region_groups.filter(r => r.name === ootHint.hintRegion);
+                    let hintRegion = graph.worlds[playerNumber].region_groups.filter(r => r.name === ootHint.hintRegion);
                     if (hintRegion.length === 1) {
-                        let hintLocation = graph.worlds[trackerSettings.player_number].get_location(locationToLink);
+                        let hintLocation = graph.worlds[playerNumber].get_location(locationToLink);
                         graph.hint_required_area(hintLocation, hintRegion[0]);
                         refreshSearch();
                     }
@@ -1014,17 +1182,17 @@ const Tracker = (_props: {}) => {
                 break;
             case 'path':
                 if (ootHint.hintRegion && ootHint.hintPath) {
-                    let hintRegion = graph.worlds[trackerSettings.player_number].region_groups.filter(r => r.name === ootHint.hintRegion);
+                    let hintRegion = graph.worlds[playerNumber].region_groups.filter(r => r.name === ootHint.hintRegion);
                     let tempGoal = new GraphHintGoal();
                     tempGoal.item_count = 1;
                     if (Object.keys(pathItems).includes(ootHint.hintPath)) {
-                        tempGoal.item = graph.worlds[trackerSettings.player_number].get_item(pathItems[ootHint.hintPath]);
+                        tempGoal.item = graph.worlds[playerNumber].get_item(pathItems[ootHint.hintPath]);
                     }
                     if (Object.keys(pathLocations).includes(ootHint.hintPath)) {
-                        tempGoal.location = graph.worlds[trackerSettings.player_number].get_location(pathLocations[ootHint.hintPath]);
+                        tempGoal.location = graph.worlds[playerNumber].get_location(pathLocations[ootHint.hintPath]);
                     }
                     if (hintRegion.length === 1) {
-                        let hintLocation = graph.worlds[trackerSettings.player_number].get_location(locationToLink);
+                        let hintLocation = graph.worlds[playerNumber].get_location(locationToLink);
                         graph.hint_area_required_for_goal(hintLocation, hintRegion[0], tempGoal);
                         refreshSearch();
                     }
@@ -1032,9 +1200,9 @@ const Tracker = (_props: {}) => {
                 break;
             case 'foolish':
                 if (ootHint.hintRegion) {
-                    let hintRegion = graph.worlds[trackerSettings.player_number].region_groups.filter(r => r.name === ootHint.hintRegion);
+                    let hintRegion = graph.worlds[playerNumber].region_groups.filter(r => r.name === ootHint.hintRegion);
                     if (hintRegion.length === 1) {
-                        let hintLocation = graph.worlds[trackerSettings.player_number].get_location(locationToLink);
+                        let hintLocation = graph.worlds[playerNumber].get_location(locationToLink);
                         graph.hint_unrequired_area(hintLocation, hintRegion[0]);
                         refreshSearch();
                     }
@@ -1042,9 +1210,9 @@ const Tracker = (_props: {}) => {
                 break;
             case 'important_check':
                 if (ootHint.hintRegion && ootHint.hintMajorItems !== undefined) {
-                    let hintRegion = graph.worlds[trackerSettings.player_number].region_groups.filter(r => r.name === ootHint.hintRegion);
+                    let hintRegion = graph.worlds[playerNumber].region_groups.filter(r => r.name === ootHint.hintRegion);
                     if (hintRegion.length === 1) {
-                        let hintLocation = graph.worlds[trackerSettings.player_number].get_location(locationToLink);
+                        let hintLocation = graph.worlds[playerNumber].get_location(locationToLink);
                         graph.hint_area_num_items(hintLocation, hintRegion[0], ootHint.hintMajorItems);
                         refreshSearch();
                     }
@@ -1052,39 +1220,39 @@ const Tracker = (_props: {}) => {
                 break;
             case 'location':
                 if (ootHint.hintLocation && ootHint.hintItem) {
-                    let hintLocation = graph.worlds[trackerSettings.player_number].get_location(locationToLink);
-                    let hintedLocation = graph.worlds[trackerSettings.player_number].get_location(ootHint.hintLocation);
-                    let hintedItem = graph.worlds[trackerSettings.player_number].get_item(ootHint.hintItem);
+                    let hintLocation = graph.worlds[playerNumber].get_location(locationToLink);
+                    let hintedLocation = graph.worlds[playerNumber].get_location(ootHint.hintLocation);
+                    let hintedItem = graph.worlds[playerNumber].get_item(ootHint.hintItem);
                     graph.hint_location(hintLocation, hintedLocation, hintedItem);
                     refreshSearch();
                 }
                 break;
             case 'dual':
                 if (ootHint.hintLocation && ootHint.hintItem && ootHint.hintLocation2 && ootHint.hintItem2) {
-                    let hintLocation = graph.worlds[trackerSettings.player_number].get_location(locationToLink);
-                    let hintedLocation = graph.worlds[trackerSettings.player_number].get_location(ootHint.hintLocation);
-                    let hintedItem = graph.worlds[trackerSettings.player_number].get_item(ootHint.hintItem);
-                    let hintedLocation2 = graph.worlds[trackerSettings.player_number].get_location(ootHint.hintLocation2);
-                    let hintedItem2 = graph.worlds[trackerSettings.player_number].get_item(ootHint.hintItem2);
+                    let hintLocation = graph.worlds[playerNumber].get_location(locationToLink);
+                    let hintedLocation = graph.worlds[playerNumber].get_location(ootHint.hintLocation);
+                    let hintedItem = graph.worlds[playerNumber].get_item(ootHint.hintItem);
+                    let hintedLocation2 = graph.worlds[playerNumber].get_location(ootHint.hintLocation2);
+                    let hintedItem2 = graph.worlds[playerNumber].get_item(ootHint.hintItem2);
                     graph.hint_dual_locations(hintLocation, hintedLocation, hintedItem, hintedLocation2, hintedItem2);
                     refreshSearch();
                 }
                 break;
             case 'entrance':
                 if (ootHint.hintEntrance && ootHint.hintEntranceTarget) {
-                    let hintLocation = graph.worlds[trackerSettings.player_number].get_location(locationToLink);
-                    let hintedExit = graph.worlds[trackerSettings.player_number].get_entrance(ootHint.hintEntrance);
-                    let hintedTarget = graph.worlds[trackerSettings.player_number].get_entrance(ootHint.hintEntranceTarget);
+                    let hintLocation = graph.worlds[playerNumber].get_location(locationToLink);
+                    let hintedExit = graph.worlds[playerNumber].get_entrance(ootHint.hintEntrance);
+                    let hintedTarget = graph.worlds[playerNumber].get_entrance(ootHint.hintEntranceTarget);
                     graph.hint_entrance(hintLocation, hintedExit, hintedTarget);
                     refreshSearch();
                 }
                 break;
             case 'misc':
                 if (ootHint.hintRegion && ootHint.hintItem) {
-                    let hintRegion = graph.worlds[trackerSettings.player_number].region_groups.filter(r => r.name === ootHint.hintRegion);
+                    let hintRegion = graph.worlds[playerNumber].region_groups.filter(r => r.name === ootHint.hintRegion);
                     if (hintRegion.length === 1) {
-                        let hintLocation = graph.worlds[trackerSettings.player_number].get_location(locationToLink);
-                        let hintedItem = graph.worlds[trackerSettings.player_number].get_item(ootHint.hintItem);
+                        let hintLocation = graph.worlds[playerNumber].get_location(locationToLink);
+                        let hintedItem = graph.worlds[playerNumber].get_item(ootHint.hintItem);
                         graph.hint_item_in_area(hintLocation, hintRegion[0], hintedItem);
                         refreshSearch();
                     }
@@ -1097,7 +1265,7 @@ const Tracker = (_props: {}) => {
     }
 
     const clearHint = () => {
-        let hintLocation = graph.worlds[trackerSettings.player_number].get_location(locationToLink);
+        let hintLocation = graph.worlds[playerNumber].get_location(locationToLink);
         graph.unhint(hintLocation);
         refreshSearch();
         handleHintMenuClose();
@@ -1182,20 +1350,16 @@ const Tracker = (_props: {}) => {
                 }
                 if (!foundNewEntrance) throw `Ran out of entrances to search for top level warp target region for starting region ${targetRegion?.alias}`;
             }
-            if (trackerSettings.one_region_per_page) {
-                if (linkedRegion.name !== trackerSettings.region_page) {
+            if (oneRegionPerPage) {
+                if (linkedRegion.name !== regionPage) {
                     let newRegions = new Set(visitedSimRegions);
                     newRegions.add(linkedRegion.name);
                     setVisitedSimRegions(newRegions);
-                    let newTrackerSettings = copyTrackerSettings(trackerSettings);
-                    newTrackerSettings["region_page"] = linkedRegion.name;
-                    setTrackerSettings(newTrackerSettings);
+                    setRegionPage(linkedRegion.name);
                 }
             } else {
-                if (linkedRegion.page !== trackerSettings.region_page) {
-                    let newTrackerSettings = copyTrackerSettings(trackerSettings);
-                    newTrackerSettings["region_page"] = linkedRegion.name;
-                    setTrackerSettings(newTrackerSettings);
+                if (linkedRegion.page !== regionPage) {
+                    setRegionPage(linkedRegion.name);
                 }
             }
             if (!!regionEntrance) {
@@ -1206,7 +1370,7 @@ const Tracker = (_props: {}) => {
             } else {
                 href = `#${linkedRegion.alias}`;
             }
-            if (!!regionEntrance && !tracker_settings_defs.region_page.options?.includes(trackerSettings.region_page)) {
+            if (!!regionEntrance && !tracker_settings_defs.region_page.options?.includes(regionPage)) {
                 if (regionEntrance.is_warp) {
                     let eLink = !!(regionEntrance.replaces) ? regionEntrance.replaces : regionEntrance;
                     let exitedEntrance = '';
@@ -1243,7 +1407,7 @@ const Tracker = (_props: {}) => {
         let canReach = true;
         if (entrance.type === 'WarpSong') {
             let itemName = entrance.name.split(' Warp -> ')[0];
-            let playerInventory = graph.get_player_inventory_for_world(graph.worlds[trackerSettings.player_number]);
+            let playerInventory = graph.get_player_inventory_for_world(graph.worlds[playerNumber]);
             if (!(Object.keys(playerInventory).includes(itemName)) || playerInventory.itemName === 0) {
                 canReach = false;
             }
@@ -1252,7 +1416,7 @@ const Tracker = (_props: {}) => {
     }
 
     const toggleAreaView = () => {
-        if (trackerSettings.region_page === "Overworld") {
+        if (regionPage === "Overworld") {
             changeSetting({target: { name: "region_page", value: "Dungeons" }});
         } else {
             changeSetting({target: { name: "region_page", value: "Overworld" }});
@@ -1290,46 +1454,66 @@ const Tracker = (_props: {}) => {
         let graphSupportedVersions = graph.get_game_versions();
         let graphSettingsOptions = graph.get_settings_options();
         let graphSettingsLayout = graph.get_settings_layout();
-        let graphSettings = graph.worlds[trackerSettings.player_number].settings;
-        let graphCollectedItems = graph.get_collected_items_for_world(graph.worlds[trackerSettings.player_number]);
-        let graphPlayerInventory = graph.get_player_inventory_for_world(graph.worlds[trackerSettings.player_number]);
+        let graphSettings = graph.worlds[playerNumber].settings;
+        let graphCollectedItems = graph.get_collected_items_for_world(graph.worlds[playerNumber]);
+        let graphPlayerInventory = graph.get_player_inventory_for_world(graph.worlds[playerNumber]);
         let multiselectSettingChoices = multiselectToUpdate ? graphSettingsOptions[multiselectToUpdate]?.choices : {};
-        let graphRegions = graph.worlds[trackerSettings.player_number].region_groups.sort((a, b) =>
+        let graphRegions = graph.worlds[playerNumber].region_groups.sort((a, b) =>
             a.alias.localeCompare(b.alias));
         let viewableRegions: GraphRegion[] = [];
-        if (trackerSettings.one_region_per_page) {
-            if (tracker_settings_defs.region_page.options?.includes(trackerSettings.region_page)) {
+        if (oneRegionPerPage) {
+            if (tracker_settings_defs.region_page.options?.includes(regionPage)) {
                 viewableRegions = graphRegions.filter(r =>
-                    r.page === trackerSettings.region_page && r.viewable);
+                    r.page === regionPage && r.viewable);
             } else {
                 viewableRegions = graphRegions.filter(r =>
-                    r.name === trackerSettings.region_page);
+                    r.name === regionPage);
             }
         } else {
             viewableRegions = graphRegions.filter(r =>
-                r.page === trackerSettings.region_page && r.viewable);
+                r.page === regionPage && r.viewable);
         }
         let pages: {[page: string]: GraphRegion[]} = {};
-        for (let r of graph.worlds[trackerSettings.player_number].region_groups) {
+        for (let r of graph.worlds[playerNumber].region_groups) {
             if (Object.keys(pages).includes(r.page)) {
                 pages[r.page].push(r);
             } else {
                 pages[r.page] = [r];
             }
         }
-        let graphEntrances = graph.get_entrances_for_world(graph.worlds[trackerSettings.player_number]);
+        let graphEntrances = graph.get_entrances_for_world(graph.worlds[playerNumber]);
         let warpEntrances = graphEntrances.filter(e => e.is_warp);
-        let graphFullEntrancePool = graph.get_full_entrance_pool(graph.worlds[trackerSettings.player_number]);
-        let graphFullExitPool = graph.get_full_exit_pool(graph.worlds[trackerSettings.player_number]);
-        let graphEntrancePool = entranceToLink !== '' ? graph.get_entrance_pool(graph.worlds[trackerSettings.player_number], graph.worlds[trackerSettings.player_number].get_entrance(entranceToLink)) : {};
-        let graphEntranceToLink = entranceToLink !== '' ? graph.worlds[trackerSettings.player_number].get_entrance(entranceToLink) : null;
-        let graphLocations = graph.get_locations_for_world(graph.worlds[trackerSettings.player_number]);
+        let graphFullEntrancePool = graph.get_full_entrance_pool(graph.worlds[playerNumber]);
+        let graphFullExitPool = graph.get_full_exit_pool(graph.worlds[playerNumber]);
+        let graphEntrancePool = entranceToLink !== '' ? graph.get_entrance_pool(graph.worlds[playerNumber], graph.worlds[playerNumber].get_entrance(entranceToLink)) : {};
+        let graphEntranceToLink = entranceToLink !== '' ? graph.worlds[playerNumber].get_entrance(entranceToLink) : null;
+        let graphLocations = graph.get_locations_for_world(graph.worlds[playerNumber]);
         let graphLocationCount = graphLocations.filter(l => l.shuffled && !l.is_hint && !l.is_restricted);
-        let graphRewardHints = graph.worlds[trackerSettings.player_number].fixed_item_area_hints;
-        let sourceHintLocationType = locationToLink !== '' ? graph.worlds[trackerSettings.player_number].get_location(locationToLink).type : 'HintStone';
-        let sourceHintLocationText = locationToLink !== '' ? graph.worlds[trackerSettings.player_number].get_location(locationToLink).hint_text : '';
+        let graphRewardHints = graph.worlds[playerNumber].fixed_item_area_hints;
+        let sourceHintLocationType = locationToLink !== '' ? graph.worlds[playerNumber].get_location(locationToLink).type : 'HintStone';
+        let sourceHintLocationText = locationToLink !== '' ? graph.worlds[playerNumber].get_location(locationToLink).hint_text : '';
         sourceHintLocationText = sourceHintLocationText.replaceAll('#', '').replaceAll('^', '\n');
-        let simMode = graph.worlds[trackerSettings.player_number].settings['graphplugin_simulator_mode'] as boolean;
+        let simMode = graph.worlds[playerNumber].settings['graphplugin_simulator_mode'] as boolean;
+        let trackerSettings = {
+            version: savedSettingsVersion,
+            game_version: graphVersion,
+            player_number: playerNumber,
+            setting_icons: settingIcons,
+            region_page: regionPage,
+            one_region_per_page: oneRegionPerPage,
+            expand_sidebar: expandSidebar,
+            dark_mode: darkMode,
+            show_age_logic: showAgeLogic,
+            race_mode: raceMode,
+            region_visibility: regionVisibility,
+            show_unshuffled_entrances: showUnshuffledEntrances,
+            show_unshuffled_locations: showUnshuffledLocations,
+            show_hints: showHints,
+            show_locations: showLocations,
+            shop_price_tracking: showPriceTracking,
+            show_timer: showTimer,
+            show_check_counter: showCheckCounter,
+        };
 
         return (
             <React.Fragment>
@@ -1346,7 +1530,7 @@ const Tracker = (_props: {}) => {
                             graphLocationCount={graphLocationCount}
                             searchTracker={searchTracker}
                             trackerSettings={trackerSettings}
-                            setTrackerSettings={setTrackerSettings}
+                            setExpandSidebar={setExpandSidebar}
                             setAlertReset={setAlertReset}
                             saveFunction={saveGraphState}
                             loadFunction={loadSavedGraphState}
