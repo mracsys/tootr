@@ -1,7 +1,7 @@
 import { labelEntry } from "@/data/item_panel_layout";
 import OotItemIcon from "./OotItemIcon";
 import { RupeeCount } from "./OotDungeonTracker";
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 import '@/styles/SilverRupeeDisplay.css';
 

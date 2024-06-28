@@ -1,4 +1,4 @@
-import { MouseEventHandler } from "react";
+import React, { MouseEventHandler } from "react";
 import OotItemIcon from "./OotItemIcon";
 
 import '@/styles/RadialMenu.css';

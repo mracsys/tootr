@@ -1,3 +1,5 @@
+import React from 'react';
+
 const MusicNote = (_props: {
     className?: string,
 }) => {

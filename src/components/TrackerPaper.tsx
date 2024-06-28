@@ -1,4 +1,4 @@
-import { MouseEvent } from "react";
+import React, { MouseEvent } from "react";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import GameArea from './GameArea';
 import { TrackerSettingsCurrent } from '@/data/tracker_settings';

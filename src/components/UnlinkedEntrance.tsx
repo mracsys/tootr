@@ -1,6 +1,6 @@
 import SubdirectoryArrowRightIcon from '@mui/icons-material/SubdirectoryArrowRight';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-import type { MouseEvent } from 'react';
+import React, { MouseEvent } from 'react';
 import { buildEntranceName } from './UnknownEntrance';
 
 import { GraphEntrance } from '@mracsys/randomizer-graph-tool';

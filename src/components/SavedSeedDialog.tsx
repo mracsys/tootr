@@ -1,4 +1,4 @@
-import { useState, Dispatch, SetStateAction, ChangeEvent, MouseEventHandler } from 'react';
+import React, { useState, Dispatch, SetStateAction, ChangeEvent, MouseEventHandler } from 'react';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';

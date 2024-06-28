@@ -61,6 +61,8 @@ type TrackerSettingChangeEvent = {
     }
 }
 
+const useLocalFiles = false;
+
 const localFileLocations: {[randoVersion: string]: string} = {
     'v8.1.0': '/ootr-local-8-1-0',
     '8.1 Stable': '/ootr-local-8-1-0',
@@ -460,7 +462,12 @@ const Tracker = (_props: {}) => {
 
         const getGraph = async () => {
             if (Object.keys(_fileCache.files).length === 0) {
-                let graphFileCache = await ExternalFileCacheFactory('ootr', graphVersion, { local_url: localFileLocations[graphVersion] });
+                let graphFileCache: ExternalFileCache
+                if (useLocalFiles) {
+                    graphFileCache = await ExternalFileCacheFactory('ootr', graphVersion, { local_url: localFileLocations[graphVersion] });
+                } else {
+                    graphFileCache = await ExternalFileCacheFactory('ootr', graphVersion, {});
+                }
                 if (!ignore) {
                     setFileCache(graphFileCache);
                 }

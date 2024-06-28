@@ -1,3 +1,4 @@
+import React from 'react';
 import Menu from '@mui/material/Menu';
 import { ContextCallback } from './ContextMenuHandlerWithArgs';
 import '@/styles/SettingMultiselectMenu.css';

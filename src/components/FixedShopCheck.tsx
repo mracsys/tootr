@@ -1,3 +1,4 @@
+import React from 'react';
 import OotItemIcon, { haveOotItemIcon } from './OotItemIcon';
 import AddIcon from '@mui/icons-material/Add';
 import QuestionMarkIcon from '@mui/icons-material/QuestionMark';

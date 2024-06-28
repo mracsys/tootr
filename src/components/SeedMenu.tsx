@@ -1,4 +1,4 @@
-import { useState, MouseEvent, ChangeEventHandler, Dispatch, SetStateAction } from 'react';
+import React, { useState, MouseEvent, ChangeEventHandler, Dispatch, SetStateAction } from 'react';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import NewSeedDialog from './NewSeedDialog';

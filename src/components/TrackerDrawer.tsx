@@ -1,4 +1,4 @@
-import { useState, useEffect, ChangeEvent, Dispatch, SetStateAction } from "react";
+import React, { useState, useEffect, ChangeEvent, Dispatch, SetStateAction } from "react";
 import TabPanel from "./TabPanel";
 import { ItemPanel } from "./ItemPanel";
 import { SettingPanel } from "./SettingsPanel";

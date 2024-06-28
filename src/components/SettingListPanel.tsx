@@ -1,4 +1,4 @@
-import { ChangeEvent } from "react";
+import React, { ChangeEvent } from "react";
 import GameSetting from "./GameSetting";
 import GameSettingMultiselect from "./GameSettingMultiselect";
 import GameSettingSwitch from "./GameSettingSwitch";

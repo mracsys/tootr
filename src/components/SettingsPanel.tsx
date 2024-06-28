@@ -1,3 +1,4 @@
+import React from 'react';
 import OotSettingIcon from "./OotSettingIcon";
 import { OotSettingAssetMapFactory } from "./OotSettingAssetMap";
 import { IconDict } from "./OotIcon";

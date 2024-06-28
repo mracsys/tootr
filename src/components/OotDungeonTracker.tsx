@@ -1,3 +1,4 @@
+import React from 'react';
 import { labelEntry } from "@/data/item_panel_layout";
 import { SilverRupeeDisplayIcon } from './SilverRupeeDisplayIcon';
 import ContextMenuHandlerWithArgs from './ContextMenuHandlerWithArgs';

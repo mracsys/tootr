@@ -1,3 +1,4 @@
+import React from 'react';
 import { MouseEventHandler } from "react";
 import ContextMenuHandlerWithArgs from "./ContextMenuHandlerWithArgs";
 import type { ContextCallback } from "./ContextMenuHandlerWithArgs";
