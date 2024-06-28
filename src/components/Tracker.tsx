@@ -280,7 +280,7 @@ const Tracker = (_props: {}) => {
             // handle tracker settings upgrades
         }
 
-        if (clientDarkMode !== null) {
+        if (clientDarkMode === null) {
             // Override default dark mode setting based on browser/OS theme
             darkModeInit = window.matchMedia("(prefers-color-scheme: dark)").matches;
         }
