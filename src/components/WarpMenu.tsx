@@ -140,8 +140,14 @@ const WarpMenu = ({
                     return (
                         <span
                             key={'quickSongMenu'+ia}
-                            className="warpMenuArea"
-                            onClick={() => handleDungeonTravel(!!song.replaces ? song.replaces.target_group : song.target_group, song)}
+                            className={isWarpAreaLinked(song) ?
+                                "warpMenuArea" :
+                                "warpMenuAreaHidden"
+                            }
+                            onClick={isWarpAreaLinked(song) ?
+                                () => handleDungeonTravel(!!song.replaces ? song.replaces.target_group : song.target_group, song)
+                                : undefined
+                            }
                         >
                             {song.alias}
                         </span>
