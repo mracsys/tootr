@@ -61,6 +61,10 @@ interface OotDungeonTrackerProps {
     graphCollectedItems: {[item_name: string]: number},
     graphLocations: GraphLocation[],
     graphEntrances: GraphEntrance[],
+    graphRewardHints: {[item_name: string]: {
+        hint: string,
+        hinted: boolean,
+    }},
     validSilverRupees: {[rupeeName: string]: number},
     includeBlankSilverRupeeSquare: boolean,
     visitedSimRegions: Set<string>,
@@ -78,6 +82,7 @@ export const OotDungeonTracker = ({
     graphCollectedItems,
     graphLocations,
     graphEntrances,
+    graphRewardHints,
     validSilverRupees,
     includeBlankSilverRupeeSquare,
     visitedSimRegions,
@@ -86,6 +91,7 @@ export const OotDungeonTracker = ({
     let changeDungeon = () => {};
     let labelClass = 'ootDungeonName';
     let variantName = '';
+    let simMode = graphSettings['graphplugin_simulator_mode'] as boolean;
     if (!!gridEntry.modify_setting && !!gridEntry.setting_value) {
         let settingOptions = [gridEntry.setting_value];
         changeDungeon = () => cycleGraphMultiselectOption({graphSettingName: gridEntry.modify_setting, settingOptions: settingOptions});
@@ -93,7 +99,6 @@ export const OotDungeonTracker = ({
         let currentGraphSetting = graphSettings[gridEntry.modify_setting];
         let hasMap = Object.keys(graphCollectedItems).includes(`Map (${gridEntry.setting_value})`) && graphCollectedItems[`Map (${gridEntry.setting_value})`] > 0;
         let mapInfo = graphSettings['enhance_map_compass'] as boolean;
-        let simMode = graphSettings['graphplugin_simulator_mode'] as boolean;
         if (Array.isArray(currentGraphSetting) && currentGraphSetting.includes(gridEntry.setting_value) &&
             (!simMode || (hasMap && mapInfo) || visitedSimRegions.has(gridEntry.setting_value))) {
             variantName = 'MQ';
@@ -126,7 +131,8 @@ export const OotDungeonTracker = ({
                     continue;
                 }
                 let bossReward = bossRewards[0];
-                if (!!bossReward.item && !!bossEntrances[0].connected_region) {
+                if (!!bossReward.item && !!bossEntrances[0].connected_region && (!simMode || bossReward.hinted || bossReward.checked
+                || (Object.keys(graphRewardHints) && graphRewardHints[bossReward.item.name].hinted))) {
                     itemName = bossReward.item.name;
                     if (bossReward.checked) {
                         clickAction = () => handleUnCheck(bossReward.name);
