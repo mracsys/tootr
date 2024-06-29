@@ -309,6 +309,10 @@ const Tracker = (_props: {}) => {
         if (savedState.settings?.graphplugin_world_search_mode === 'starting_items') {
             raceModeInit = true;
         }
+        let simModeInit = false;
+        if (savedState.settings?.graphplugin_simulator_mode === true) {
+            simModeInit = true;
+        }
         // Settings toggle replaces theme classes, add initial one here
         if (darkModeInit) {
             document.body.classList.add('dark');
@@ -329,6 +333,7 @@ const Tracker = (_props: {}) => {
         setVisitedSimRegions(visitedRegionsInit);
         setLastEntranceName(lastEntranceNameInit);
         setCurrentGraphPreset(currentPresetInit);
+        setImportSimMode(simModeInit);
 
         setSavedSettingsVersion(trackerSettingsVersionInit);
         setGraphVersion(graphVersionInit);
