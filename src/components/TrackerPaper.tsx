@@ -35,10 +35,11 @@ interface TrackerPaperProps {
     simMode: boolean,
     lastLocationName: string[],
     lastEntranceName: string,
-    isWarpAreaLinked: (entrance: GraphEntrance) => boolean;
-    areaMenuHandler: ContextMenuHandler;
-    pages: {[page: string]: GraphRegion[]};
-    warps: GraphEntrance[];
+    isWarpAreaLinked: (entrance: GraphEntrance) => boolean,
+    areaMenuHandler: ContextMenuHandler,
+    pages: {[page: string]: GraphRegion[]},
+    warps: GraphEntrance[],
+    peekedLocations: Set<string>,
 }
 
 const TrackerPaper = ({
@@ -70,6 +71,7 @@ const TrackerPaper = ({
     areaMenuHandler,
     pages,
     warps,
+    peekedLocations,
 }: TrackerPaperProps) => {
     /*
         sidebar-width = 480px (expanded), 0px (hidden)
@@ -148,6 +150,7 @@ const TrackerPaper = ({
                                 searchTerm={searchTerm}
                                 simMode={simMode}
                                 lastLocationName={lastLocationName}
+                                peekedLocations={peekedLocations}
                             />
                         )
                     })

@@ -41,6 +41,7 @@ export interface SavedTrackerState {
     RegionVisibility: string,
     RegionsCollapsed: CollapsedRegions,
     VisitedSimRegions: string[],
+    PeekedSimLocations: string[],
     Created: number,
     Modified: number,
 }
@@ -121,6 +122,7 @@ const Tracker = (_props: {}) => {
     // other settings that need to be persistent across sessions
     const [collapsedRegions, setCollapsedRegions] = useState<CollapsedRegions>({});
     const [visitedSimRegions, setVisitedSimRegions] = useState<Set<string>>(new Set());
+    const [peekedSimLocations, setPeekedSimLocations] = useState<Set<string>>(new Set());
     const [lastEntranceName, setLastEntranceName] = useState<string>('');
     const [currentGraphPreset, setCurrentGraphPreset] = useState<string>('Random Settings League');
 
@@ -326,12 +328,15 @@ const Tracker = (_props: {}) => {
         let visitedRegionsInit = !!clientVisitedRegions ? new Set<string>(JSON.parse(clientVisitedRegions)) : new Set<string>();
         let clientLastEntranceName = localStorage.getItem('SimModeLastEntranceName');
         let lastEntranceNameInit = !!clientLastEntranceName ? clientLastEntranceName : '';
+        let clientPeekedLocations = localStorage.getItem('SimModePeekedLocations');
+        let peekedLocationsInit = !!clientPeekedLocations ? new Set<string>(JSON.parse(clientPeekedLocations)) : new Set<string>();
         let clientCurrentPreset = localStorage.getItem('CurrentGraphPreset');
         let currentPresetInit = !!clientCurrentPreset ? clientCurrentPreset : 'Random Settings League';
 
         setCollapsedRegions(collapsedRegionsInit);
         setVisitedSimRegions(visitedRegionsInit);
         setLastEntranceName(lastEntranceNameInit);
+        setPeekedSimLocations(peekedLocationsInit);
         setCurrentGraphPreset(currentPresetInit);
         setImportSimMode(simModeInit);
 
@@ -428,6 +433,9 @@ const Tracker = (_props: {}) => {
     useEffect(() => {
         if (trackerInitialized) localStorage.setItem('SimModeVisitedRegions', JSON.stringify(Array.from(visitedSimRegions.values())));
     }, [visitedSimRegions.size]);
+    useEffect(() => {
+        if (trackerInitialized) localStorage.setItem('SimModePeekedLocations', JSON.stringify(Array.from(peekedSimLocations.values())));
+    }, [peekedSimLocations.size]);
     useEffect(() => {
         if (trackerInitialized) localStorage.setItem('SimModeLastEntranceName', lastEntranceName);
     }, [lastEntranceName]);
@@ -532,6 +540,7 @@ const Tracker = (_props: {}) => {
             setTrackerInitialized(true);
             setGraphImportFile('');
             setVisitedSimRegions(new Set());
+            setPeekedSimLocations(new Set());
         }
     }, [graphImportFile, graphInitialized]);
 
@@ -600,6 +609,7 @@ const Tracker = (_props: {}) => {
         setCollapsedRegions({});
         setAlertReset(false);
         setVisitedSimRegions(new Set());
+        setPeekedSimLocations(new Set());
         setLastEntranceName('');
     }
 
@@ -648,6 +658,7 @@ const Tracker = (_props: {}) => {
             setImportSimMode(savedState.SimMode);
             setCollapsedRegions(savedState.RegionsCollapsed);
             setVisitedSimRegions(new Set(savedState.VisitedSimRegions));
+            setPeekedSimLocations(new Set(savedState.PeekedSimLocations));
             setPlayerNumber(savedState.PlayerNumber);
             setRaceMode(savedState.RaceMode);
             setRegionPage(savedState.RegionPage);
@@ -676,6 +687,7 @@ const Tracker = (_props: {}) => {
             RegionVisibility: regionVisibility,
             RegionsCollapsed: collapsedRegions,
             VisitedSimRegions: Array.from(visitedSimRegions),
+            PeekedSimLocations: Array.from(peekedSimLocations),
             Created: createdDate,
             Modified: Date.now(),
         }
@@ -702,6 +714,7 @@ const Tracker = (_props: {}) => {
         setOneRegionPerPage(false);
         setCollapsedRegions({});
         setVisitedSimRegions(new Set());
+        setPeekedSimLocations(new Set());
         setLastEntranceName('');
     }
 
@@ -1313,6 +1326,19 @@ const Tracker = (_props: {}) => {
         setLocationToLink(dataSource);
     }
 
+    const handleSimModePeek = (_: HTMLDivElement, dataSource: string | null) => {
+        if (dataSource === null) return;
+        let sourceLocation = graph.worlds[playerNumber].get_location(dataSource);
+        console.log(sourceLocation.name, "[peeked]", sourceLocation.item?.name);
+        let newPeeked = new Set(peekedSimLocations);
+        if (newPeeked.has(dataSource)) {
+            newPeeked.delete(dataSource);
+        } else {
+            newPeeked.add(dataSource);
+        }
+        setPeekedSimLocations(newPeeked);
+    }
+
     const handleShopItemMenuOpen = (location: HTMLDivElement, dataSource: string | null) => {
         if (dataSource === null) return;
         setShopItemMenuOpen(location);
@@ -1455,7 +1481,7 @@ const Tracker = (_props: {}) => {
         }
     }
 
-    const contextMenuHandler = new ContextMenuHandler(handleItemMenuOpen);
+    let contextMenuHandler = new ContextMenuHandler(handleItemMenuOpen);
     const hintContextMenuHandler = new ContextMenuHandler(handleHintMenuOpen);
     const shopContextMenuHandler = new ContextMenuHandler(handleShopItemMenuOpen);
     const areaMenuHandler = new ContextMenuHandler(toggleAreaView);
@@ -1527,6 +1553,9 @@ const Tracker = (_props: {}) => {
         let sourceHintLocationText = locationToLink !== '' ? graph.worlds[playerNumber].get_location(locationToLink).hint_text : '';
         sourceHintLocationText = sourceHintLocationText.replaceAll('#', '').replaceAll('^', '\n');
         let simMode = graph.worlds[playerNumber].settings['graphplugin_simulator_mode'] as boolean;
+        if (simMode) {
+            contextMenuHandler = new ContextMenuHandler(handleSimModePeek);
+        }
         let trackerSettings = {
             version: savedSettingsVersion,
             game_version: graphVersion,
@@ -1637,6 +1666,7 @@ const Tracker = (_props: {}) => {
                             areaMenuHandler={areaMenuHandler}
                             pages={pages}
                             warps={warpEntrances}
+                            peekedLocations={peekedSimLocations}
                         />
                         <EntranceMenu
                             anchorLocation={entranceMenuOpen}

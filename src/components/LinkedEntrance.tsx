@@ -52,6 +52,7 @@ interface LinkedEntranceProps {
     regionIsFoolish: boolean,
     simMode: boolean,
     lastLocationName: string[],
+    peekedLocations: Set<string>,
 }
 
 const LinkedEntrance = ({
@@ -90,6 +91,7 @@ const LinkedEntrance = ({
     regionIsFoolish,
     simMode,
     lastLocationName,
+    peekedLocations,
 }: LinkedEntranceProps) => {
     const buildEntranceURL = (reverseLink: GraphEntrance): string => {
         let href: string = '';
@@ -199,6 +201,7 @@ const LinkedEntrance = ({
                                 simMode={simMode}
                                 lastLocationName={lastLocationName}
                                 collapseRegion={collapsedRegions[title]}
+                                peekedLocations={peekedLocations}
                             />
                         );
                     } else {
@@ -243,6 +246,7 @@ const LinkedEntrance = ({
                         regionIsFoolish={regionIsFoolish}
                         simMode={simMode}
                         lastLocationName={lastLocationName}
+                        peekedLocations={peekedLocations}
                     />
                 )})
             }

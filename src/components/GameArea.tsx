@@ -48,6 +48,7 @@ interface GameAreaProps {
     searchTerm: string,
     simMode: boolean,
     lastLocationName: string[],
+    peekedLocations: Set<string>,
 }
 
 const GameArea = ({
@@ -85,6 +86,7 @@ const GameArea = ({
     searchTerm,
     simMode,
     lastLocationName,
+    peekedLocations,
 }: GameAreaProps) => {
     const preventDefault: MouseEventHandler = (event: MouseEvent) => event.preventDefault();
     let title = region.name;
@@ -196,6 +198,7 @@ const GameArea = ({
                                 simMode={simMode}
                                 lastLocationName={lastLocationName}
                                 collapseRegion={collapsedRegions[title]}
+                                peekedLocations={peekedLocations}
                             />
                         </React.Fragment>)
                     })}
@@ -231,6 +234,7 @@ const GameArea = ({
                                     showAgeLogic={showAgeLogic}
                                     regionIsFoolish={region.is_not_required}
                                     lastLocationName={lastLocationName}
+                                    peekedLocations={peekedLocations}
 
                                     connector={false}
                                     forceVisible={false}

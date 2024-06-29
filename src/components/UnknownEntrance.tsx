@@ -125,6 +125,7 @@ interface UnknownEntranceProps {
     regionIsFoolish: boolean,
     simMode: boolean,
     lastLocationName: string[],
+    peekedLocations: Set<string>,
 }
 
 const UnknownEntrance = ({
@@ -161,6 +162,7 @@ const UnknownEntrance = ({
     regionIsFoolish,
     simMode,
     lastLocationName,
+    peekedLocations,
 }: UnknownEntranceProps) => {
     let eType = entrance.type;
     let reverseLink = !!(entrance.replaces) ? entrance.replaces : entrance;
@@ -235,6 +237,7 @@ const UnknownEntrance = ({
                             regionIsFoolish={regionIsFoolish}
                             simMode={simMode}
                             lastLocationName={lastLocationName}
+                            peekedLocations={peekedLocations}
                         />
                     </React.Fragment>
                 );

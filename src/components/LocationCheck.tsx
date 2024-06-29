@@ -27,6 +27,7 @@ interface LocationCheckProps {
     simMode: boolean,
     lastLocationName: string[],
     collapseRegion: string,
+    peekedLocations: Set<string>,
 }
 
 const LocationCheck = ({
@@ -43,6 +44,7 @@ const LocationCheck = ({
     simMode,
     lastLocationName,
     collapseRegion,
+    peekedLocations,
 }: LocationCheckProps) => {
     let locationIcons: {[locationType: string]: string} = {
         "HintStone": "/images/gossip-stone_32x32.png",
@@ -211,7 +213,7 @@ const LocationCheck = ({
                         : null
                 }
                 {
-                    location.item === null || (simMode && !location.checked && !location.hinted && !location.skipped) ?
+                    location.item === null || (simMode && !peekedLocations.has(location.name) && !location.checked && !location.hinted && !location.skipped) ?
                         null :
                         <OotItemIcon
                             itemName={location.item.name}
