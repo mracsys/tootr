@@ -1,32 +1,58 @@
-name: Node CI
+name: Publish
 
 on:
   push:
-    branches: [ master ]
+    branches: 
+      - master
+      - logic-refactor
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      # https://github.com/actions/checkout
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      # https://github.com/actions/setup-node
-      - uses: actions/setup-node@v3
+      - uses: pnpm/action-setup@v4
+        name: Install pnpm
+        with:
+          version: 9
+          run_install: false
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: pnpm
+          cache: 'pnpm'
+          registry-url: https://registry.npmjs.org
 
-      - name: Build
+      - name: Build static site
         run: |
-          rm -rf node_modules && pnpm install --frozen-lockfile
-          pnpm build
-          touch dist/.nojekyll
+          pnpm install --frozen-lockfile
+          pnpm run build
 
-      - name: Deploy
-        # https://github.com/JamesIves/github-pages-deploy-action
-        uses: JamesIves/github-pages-deploy-action@4.4.3
-        with:
-          branch: gh-pages
-          folder: dist
+      - name: Create SSH key
+        run: |
+          mkdir -p ~/.ssh/
+          echo "$SSH_PRIVATE_KEY" > ../private.key
+          sudo chmod 600 ../private.key
+          ssh-keyscan -p $SSH_PORT -H $SSH_HOST >> ~/.ssh/known_hosts
+        shell: bash
+        env:
+          SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
+          SSH_HOST: ${{secrets.SSH_HOST}}
+          SSH_PORT: ${{secrets.SSH_PORT}}
+          SSH_KEY_PATH: ${{ github.workspace }}/../private.key
+
+      - name: Login and upload files
+        run: |
+          ssh -i $SSH_KEY_PATH -p $SSH_PORT $SSH_USER@$SSH_HOST "find /srv/www/tootr/* -not -path '/srv/www/tootr/ootr-local-*' -delete"
+          rsync -rav -e "ssh -i ${{ secrets.SSH_PRIVATE_KEY }} -p ${{ secrets.SSH_PORT }}" ./dist/ $SSH_USER@$SSH_HOST:/srv/www/tootr/
+          ssh -i $SSH_KEY_PATH -p $SSH_PORT $SSH_USER@$SSH_HOST "chown -R $SSH_USER:$SSH_GROUP /srv/www/tootr/"
+        env:
+          SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
+          SSH_HOST: ${{secrets.SSH_HOST}}
+          SSH_USER: ${{secrets.SSH_USER}}
+          SSH_GROUP: ${{secrets.SSH_GROUP}}
+          SSH_PORT: ${{secrets.SSH_PORT}}
+          SSH_KEY_PATH: ${{ github.workspace }}/../private.key
