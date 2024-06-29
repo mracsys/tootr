@@ -224,6 +224,10 @@ const Tracker = (_props: {}) => {
         }
     };
 
+    const handleThemeChange = (e: MediaQueryListEvent) => {
+        setDarkMode(e.matches);
+    }
+
     // run on mount and unmount
     useEffect(() => {
         let clientTrackerVersion = localStorage.getItem('TrackerVersion');
@@ -348,6 +352,7 @@ const Tracker = (_props: {}) => {
         setUserSettingsLoaded(true);
 
         window.addEventListener('resize', handleResize);
+        window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', handleThemeChange);
 
         return () => {
             // clear pending timeouts on unmount
