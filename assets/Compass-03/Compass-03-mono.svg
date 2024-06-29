@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 24.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 512 512"
+   style="enable-background:new 0 0 512 512;"
+   xml:space="preserve"
+   sodipodi:docname="Compass-03-mono.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+   id="defs894" /><sodipodi:namedview
+   id="namedview892"
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1.0"
+   inkscape:pageshadow="2"
+   inkscape:pageopacity="0.0"
+   inkscape:pagecheckerboard="0"
+   showgrid="false"
+   inkscape:zoom="2.5507812"
+   inkscape:cx="256"
+   inkscape:cy="256"
+   inkscape:window-width="2560"
+   inkscape:window-height="1515"
+   inkscape:window-x="0"
+   inkscape:window-y="560"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="XMLID_1_" />
+<style
+   type="text/css"
+   id="style876">
+	.st0{fill:#95A5A6;}
+	.st1{fill:#BDC3C7;}
+	.st2{fill:#3498DB;}
+	.st3{fill:#2980B9;}
+	.st4{fill:#E74C3C;}
+	.st5{fill:#ECF0F1;}
+	.st6{fill:#C0392B;}
+	.st7{fill:#7F8C8D;}
+</style>
+<g
+   id="XMLID_1_">
+	
+	
+	
+	
+	
+	<polygon
+   id="XMLID_8_"
+   class="st4"
+   points="300.4,267.3 211.6,222.9 344.8,67  "
+   style="fill:#000000" />
+	<polygon
+   id="XMLID_9_"
+   class="st5"
+   points="211.6,222.9 300.4,267.3 167.2,423.2  "
+   style="fill:#000000" />
+	<path
+   id="XMLID_12_"
+   class="st1"
+   d="M256,0C121.2,0,11.3,109.2,11.3,244.7c0,134,109.9,244.7,244.7,244.7S500.7,378,500.7,244.7   C500.7,109.2,390.8,0,256,0z M256,44.4c110.7,0,200.3,88.8,200.3,200.3C456.3,353.9,366.7,445,256,445S55.7,353.9,55.7,244.7   C55.7,134,145.3,44.4,256,44.4z"
+   style="fill:#000000" />
+	<polygon
+   id="XMLID_13_"
+   class="st6"
+   points="344.8,67 256,244.7 300.4,267.3  "
+   style="fill:#000000" />
+	<path
+   id="XMLID_14_"
+   class="st1"
+   d="M256,222.9c-12,0-22.6,9-22.6,22.6h45.2C278.6,231.9,268,222.9,256,222.9z"
+   style="fill:#ffffff" />
+	<polygon
+   id="XMLID_15_"
+   class="st1"
+   points="256,244.7 167.2,423.2 300.4,267.3  "
+   style="fill:#000000" />
+	<path
+   id="XMLID_16_"
+   class="st7"
+   d="M256,267.3c12,0,22.6-11.3,22.6-22.6h-45.2C233.4,256,244,267.3,256,267.3z"
+   style="fill:#ffffff" />
+</g>
+</svg>

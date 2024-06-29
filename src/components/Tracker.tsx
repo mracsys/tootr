@@ -22,7 +22,7 @@ import {
 } from '@/data/tracker_settings';
 import { location_item_menu_layout, shop_item_menu_layout } from '@/data/location_item_menu_layout';
 
-import { WorldGraphFactory, ExternalFileCacheFactory, ExternalFileCache, GraphEntrance, GraphRegion, GraphItem, GraphHintGoal, GraphPlugin } from '@mracsys/randomizer-graph-tool';
+import { WorldGraphFactory, ExternalFileCacheFactory, ExternalFileCache, ExternalFileCacheList, GraphEntrance, GraphRegion, GraphItem, GraphHintGoal, GraphPlugin } from '@mracsys/randomizer-graph-tool';
 
 import '@/styles/tracker.css';
 import '@/styles/themes/light.css';
@@ -61,20 +61,17 @@ type TrackerSettingChangeEvent = {
     }
 }
 
-const useLocalFiles = false;
-
-const localFileLocations: {[randoVersion: string]: string} = {
-    'v8.1.0': '/ootr-local-8-1-0',
-    '8.1 Stable': '/ootr-local-8-1-0',
-    '8.1.0 Release': '/ootr-local-8-1-0',
-    '8.1.45 Fenhl-3': '/ootr-local-fenhl-8-1-45-3',
-    '8.1.29 Rob-104': '/ootr-local-realrob-8-1-29-104',
-}
+const useLocalFiles = true;
 
 // Changing the version will completely reset user preferences.
 // Only touch this if absolutely necessary.
 // Prefer in-place upgrades to settings in localstorage.
 const trackerVersion = '1.0.0';
+
+const lightNormalMode = '#546E7A';
+const lightRaceMode = '#39693b';
+const darkNormalMode = '#37474F';
+const darkRaceMode = '#2d542f';
 
 const Tracker = (_props: {}) => {
     const [userSettingsLoaded, setUserSettingsLoaded] = useState<boolean>(false);
@@ -134,7 +131,7 @@ const Tracker = (_props: {}) => {
 
     // Graph state management to trigger rerender on memo change.
     // Required as graph updates are not pure, so can't be in React state.
-    const [_fileCache, setFileCache] = useState<ExternalFileCache>({files: {}});
+    const [_fileCache, setFileCache] = useState<ExternalFileCache>({files: {}, subfolder: ''});
     const [graphRefreshCounter, setGraphRefreshCounter] = useState<number>(0);
     const [graphImportFile, setGraphImportFile] = useState<string>('');
     const [graphPresets, setGraphPresets] = useState<string[]>([]);
@@ -288,12 +285,6 @@ const Tracker = (_props: {}) => {
         if (graphVersionInit === '') {
             graphVersionInit = graphVersion
         }
-        // Settings toggle replaces theme classes, add initial one here
-        if (darkModeInit) {
-            document.body.classList.add('dark');
-        } else {
-            document.body.classList.add('light');
-        }
         let twoColumnFormat = window.matchMedia(`(min-width: 601px)`).matches; // JS is off-by-one compared to same CSS rule
         if (!twoColumnFormat) {
             // Show areas by default on first load if viewport isn't wide enough for both
@@ -313,6 +304,14 @@ const Tracker = (_props: {}) => {
         // Don't allow race mode to be bypassed through localstorage manipulation
         if (savedState.settings?.graphplugin_world_search_mode === 'starting_items') {
             raceModeInit = true;
+        }
+        // Settings toggle replaces theme classes, add initial one here
+        if (darkModeInit) {
+            document.body.classList.add('dark');
+            document.querySelector("meta[name=theme-color]")?.setAttribute('content', raceModeInit ? darkRaceMode : darkNormalMode);
+        } else {
+            document.body.classList.add('light');
+            document.querySelector("meta[name=theme-color]")?.setAttribute('content', raceModeInit ? lightRaceMode : lightNormalMode);
         }
 
         let clientVisitedRegions = localStorage.getItem('SimModeVisitedRegions');
@@ -452,24 +451,30 @@ const Tracker = (_props: {}) => {
             });
         }
 
-        if (darkMode) {
-            document.body.classList.replace('light', 'dark');
-        } else {
-            document.body.classList.replace('dark', 'light');
-        }
-
         let ignore = false;
 
         const getGraph = async () => {
             if (Object.keys(_fileCache.files).length === 0) {
                 let graphFileCache: ExternalFileCache
-                if (useLocalFiles) {
-                    graphFileCache = await ExternalFileCacheFactory('ootr', graphVersion, { local_url: localFileLocations[graphVersion] });
-                } else {
-                    graphFileCache = await ExternalFileCacheFactory('ootr', graphVersion, {});
-                }
-                if (!ignore) {
-                    setFileCache(graphFileCache);
+                let filesDownloaded = false;
+                let fileList = ExternalFileCacheList('ootr', graphVersion);
+                while (!filesDownloaded) {
+                    if (useLocalFiles) {
+                        graphFileCache = await ExternalFileCacheFactory('ootr', graphVersion, { local_url: '/' });
+                        filesDownloaded = true;
+                    } else {
+                        graphFileCache = await ExternalFileCacheFactory('ootr', graphVersion, {});
+                        filesDownloaded = true;
+                    }
+                    for (let f of fileList) {
+                        if (graphFileCache.files[f] === undefined) {
+                            filesDownloaded = false;
+                            console.log(`Failed to download external file ${f}`);
+                        }
+                    }
+                    if (!ignore && filesDownloaded) {
+                        setFileCache(graphFileCache);
+                    }
                 }
             }
             if (graph.initialized && !ignore && !graphInitialized) {
@@ -486,11 +491,21 @@ const Tracker = (_props: {}) => {
     });
 
     useEffect(() => {
+        if (darkMode) {
+            document.body.classList.replace('light', 'dark');
+            document.querySelector("meta[name=theme-color]")?.setAttribute('content', raceMode ? darkRaceMode : darkNormalMode);
+        } else {
+            document.body.classList.replace('dark', 'light');
+            document.querySelector("meta[name=theme-color]")?.setAttribute('content', raceMode ? lightRaceMode : lightNormalMode);
+        }
+    }, [darkMode, raceMode]);
+
+    useEffect(() => {
         if (graphInitialized && !graphImportFile) {
+            console.log('[Import] No plando specified, refreshing current graph');
             refreshSearch();
             setTrackerInitialized(true);
         }
-        console.log('[Import] Checking if we should import');
         if (graphInitialized && graphImportFile) {
             console.log('[Import] Importing plando');
             let importState = JSON.parse(graphImportFile);
@@ -513,12 +528,12 @@ const Tracker = (_props: {}) => {
     useEffect(() => {
         if (trackerInitialized) {
             if (importSimMode) {
-                console.log('[Import] Setting sim mode');
+                console.log('[Simulator] Enabling sim mode');
                 setRegionPage('Warps');
                 setOneRegionPerPage(true);
                 setLastEntranceName('');
             } else {
-                console.log('[Import] Exiting sim mode');
+                console.log('[Simulator] Disabling sim mode');
                 setRegionPage('Overworld');
                 setOneRegionPerPage(false);
                 setLastEntranceName('');
@@ -660,7 +675,7 @@ const Tracker = (_props: {}) => {
 
     const loadGraphVersion = (version: string, blankState: boolean = true) => {
         graph.initialized = false;
-        setFileCache({files: {}});
+        setFileCache({files: {}, subfolder: ''});
         setGraphInitialized(false);
         setGraphVersion(version);
         changeSetting({target: { name: 'game_version', value: version}});
