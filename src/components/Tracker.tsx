@@ -362,7 +362,6 @@ const Tracker = (_props: {}) => {
         setUserSettingsLoaded(true);
 
         window.addEventListener('resize', handleResize);
-        screen.orientation.addEventListener('change', handleResize);
         window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', handleThemeChange);
 
         return () => {
