@@ -362,13 +362,12 @@ const Tracker = (_props: {}) => {
         setUserSettingsLoaded(true);
 
         window.addEventListener('resize', handleResize);
+        screen.orientation.addEventListener('change', handleResize);
         window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', handleThemeChange);
 
         return () => {
             // clear pending timeouts on unmount
             if (timerRef.current !== null) { timerRef.current.forEach(t => clearTimeout(t)) }
-            // clean up event listeners
-            window.removeEventListener('resize', handleResize);
         };
     }, []);
 
