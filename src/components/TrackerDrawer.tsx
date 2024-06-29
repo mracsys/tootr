@@ -10,7 +10,7 @@ import { Drawer, Tabs, Tab } from "@mui/material";
 import SettingMultiselectMenu from './SettingMultiselectMenu';
 import { TrackerSettingsCurrent, tracker_settings_defs, tracker_setting_definition, copyTrackerSettings, region_visibility_values } from "@/data/tracker_settings";
 
-import { GraphGameVersions, GraphRegion, GraphEntrance, GraphLocation, GraphSettingsConfiguration, GraphSettingsOptions, GraphSettingsLayout } from '@mracsys/randomizer-graph-tool';
+import { GraphGameVersions, GraphRegion, GraphEntrance, GraphLocation, GraphSettingsConfiguration, GraphSettingsOptions, GraphSettingsLayout, GameVersion } from '@mracsys/randomizer-graph-tool';
 
 import '@/styles/TrackerDrawer.css';
 import RaceTimer from "./RaceTimer";
@@ -45,6 +45,7 @@ interface TrackerDrawerProps {
     handleMultiselectMenuOpen: (s: Element, n: string) => void,
     graphSettingsOptions: GraphSettingsOptions,
     graphSettingsLayout: GraphSettingsLayout,
+    graphVersion: GameVersion,
     trackerSettings: TrackerSettingsCurrent,
     setTrackerSettings: (newSettings: TrackerSettingsCurrent) => void,
     setLastEntranceName: Dispatch<SetStateAction<string>>,
@@ -83,6 +84,7 @@ const TrackerDrawer = ({
     handleMultiselectMenuOpen,
     graphSettingsOptions,
     graphSettingsLayout,
+    graphVersion,
     trackerSettings,
     setTrackerSettings,
     setLastEntranceName,
@@ -276,6 +278,7 @@ const TrackerDrawer = ({
                             graphSettings={graphSettings}
                             graphSettingsOptions={graphSettingsOptions}
                             graphSettingsLayout={graphSettingsLayout}
+                            graphVersion={graphVersion}
                             isWide={isNotMobile}
                         /> :
                         <SettingListPanel
@@ -318,6 +321,7 @@ const TrackerDrawer = ({
                                         for (let gitBranch of supportedGraphVersions.versions) {
                                             optionDict[gitBranch.version] = gitBranch.version;
                                         }
+                                        userSetting = graphVersion.version;
                                     }
                                     if (typeof userSetting === 'string') {
                                         return (

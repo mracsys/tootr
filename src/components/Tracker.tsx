@@ -1479,6 +1479,7 @@ const Tracker = (_props: {}) => {
     });
     if (trackerInitialized && graphInitialized) {
         let graphSupportedVersions = graph.get_game_versions();
+        let fullGraphVersion = graph.version;
         let graphSettingsOptions = graph.get_settings_options();
         let graphSettingsLayout = graph.get_settings_layout();
         let graphSettings = graph.worlds[playerNumber].settings;
@@ -1586,6 +1587,7 @@ const Tracker = (_props: {}) => {
                             handleMultiselectMenuOpen={handleMultiselectMenuOpen}
                             graphSettingsOptions={graphSettingsOptions}
                             graphSettingsLayout={graphSettingsLayout}
+                            graphVersion={fullGraphVersion}
                             trackerSettings={trackerSettings}
                             setTrackerSettings={setTrackerSettings}
                             setLastEntranceName={setLastEntranceName}

@@ -3,7 +3,7 @@ import OotSettingIcon from "./OotSettingIcon";
 import { OotSettingAssetMapFactory } from "./OotSettingAssetMap";
 import { IconDict } from "./OotIcon";
 
-import { GraphSettingsOptions, GraphSettingsConfiguration, GraphSettingsLayout, GraphSetting } from '@mracsys/randomizer-graph-tool';
+import { GraphSettingsOptions, GraphSettingsConfiguration, GraphSettingsLayout, GraphSetting, GameVersion } from '@mracsys/randomizer-graph-tool';
 
 import '@/styles/SettingsPanel.css';
 
@@ -13,6 +13,7 @@ interface SettingPanelProps {
     graphSettings: GraphSettingsConfiguration,
     graphSettingsOptions: GraphSettingsOptions,
     graphSettingsLayout: GraphSettingsLayout,
+    graphVersion: GameVersion,
     isWide: boolean,
 }
 
@@ -22,11 +23,12 @@ export const SettingPanel = ({
     graphSettings,
     graphSettingsOptions,
     graphSettingsLayout,
+    graphVersion,
     isWide,
 }: SettingPanelProps) => {
     let settingAssetMap: IconDict
     if (!!graphSettings && !!graphSettingsOptions) {
-        settingAssetMap = OotSettingAssetMapFactory(graphSettings, graphSettingsOptions);
+        settingAssetMap = OotSettingAssetMapFactory(graphSettings, graphSettingsOptions, graphVersion);
     } else {
         return null;
     }
