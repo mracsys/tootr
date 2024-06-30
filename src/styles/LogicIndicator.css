@@ -12,10 +12,12 @@
 }
 .logicIndicator {
     width: 10px;
+    min-width: 10px;
     /* cursor: help; */
 }
 .logicMultiIndicator {
     width: 40px;
+    min-width: 40px;
     display: flex;
     flex-direction: row;
     align-items: center;
