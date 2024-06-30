@@ -328,7 +328,7 @@ const itemMap: IconDict = {
     'Skullwalltula Soul': { img: '/images/souls/skullwalltula_32x32.png' },
     'Flare Dancer Soul': { img: '/images/souls/flare-dancer_32x32.png' },
     'Dead hand Soul': { img: '/images/souls/dead-hand_32x32.png' },
-    'Shell blade Soul': { img: '/images/souls/shell-blade_32x32.png' },
+    'Shell Blade Soul': { img: '/images/souls/shell-blade_32x32.png' },
     'Like-like Soul': { img: '/images/souls/like-like_32x32.png' },
     'Spike Enemy Soul': { img: '/images/souls/spike_32x32.png' },
     'Anubis Soul': { img: '/images/souls/anubis_32x32.png' },

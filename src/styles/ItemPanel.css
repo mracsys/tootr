@@ -319,7 +319,7 @@
 }
 @media screen and (max-width: 930px) {
     .ootDungeonMedItemsContainer {
-        justify-content: end;
+        justify-content: center;
     }
     .ootDungeonSideItemsContainer {
         justify-content: left;

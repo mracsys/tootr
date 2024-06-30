@@ -62,6 +62,13 @@ type TrackerSettingChangeEvent = {
     }
 }
 
+type StateRef = {
+    graphInitialized: boolean,
+    showTimer: boolean,
+    playerNumber: number,
+    graph: GraphPlugin,
+}
+
 const useLocalFiles = true;
 
 // Changing the version will completely reset user preferences.
@@ -147,6 +154,14 @@ const Tracker = (_props: {}) => {
         }
     }
 
+    // Keep select state values available to event listeners via ref
+    const stateRef = useRef<StateRef>({
+        graphInitialized: graphInitialized,
+        showTimer: showTimer,
+        playerNumber: playerNumber,
+        graph: WorldGraphFactory('empty'),
+    });
+
     let graph = useMemo(() => {
         let clientGraphInitialStateInit = localStorage.getItem('CurrentGraphState');
         let graphInitialStateInit = '{}';
@@ -191,12 +206,13 @@ const Tracker = (_props: {}) => {
             }
         }
         setTrackerPreferences(graphGlobal);
+        stateRef.current.graph = graphGlobal;
         return graphGlobal;
     }, [_fileCache, graphVersion, userSettingsLoaded]);
 
     const handleResize = () => {
-        if (graph.initialized) {
-            let settings = graph.worlds[playerNumber].settings;
+        if (stateRef.current.graphInitialized && stateRef.current.graph.worlds.length > 0) {
+            let settings = stateRef.current.graph.worlds[stateRef.current.playerNumber].settings;
             let adult_trade = settings.adult_trade_shuffle && (Array.isArray(settings.adult_trade_start) && settings.adult_trade_start.length > 0);
             let child_trade = Array.isArray(settings.shuffle_child_trade) && settings.shuffle_child_trade.length > 0;
             let boss_souls = !!settings.shuffle_enemy_spawns && typeof settings.shuffle_enemy_spawns === 'string' && ['all', 'bosses'].includes(settings.shuffle_enemy_spawns);
@@ -212,23 +228,34 @@ const Tracker = (_props: {}) => {
                             + (boss_souls ? 48 : 0)
                             + (enemy_souls ? 192 : 0)
                             + (regional_souls ? 144 : 0)
-                            + (showTimer ? 82 : 0);
+                            + (stateRef.current.showTimer ? 82 : 0);
             let viewportIsTall = window.matchMedia(`(min-height: ${tabsBreakPoint}px)`).matches;
-            // item panel expands vertically significantly for mobile screens
-            // less than 480px, assume no vertical room rather than recalculate
-            // the vertical breakpoint
-            let viewportIsMobile = window.matchMedia(`(min-width: 481px)`).matches; // JS is off-by-one compared to same CSS rule
-            let viewportIsWide = window.matchMedia(`(min-width: 510px)`).matches;
             
-            setIsNotMobile(viewportIsMobile);
-            setIsWide(viewportIsWide);
             setIsTall(viewportIsTall);
         }
+        // item panel expands vertically significantly for mobile screens
+        // less than 480px, assume no vertical room rather than recalculate
+        // the vertical breakpoint
+        let viewportIsMobile = window.matchMedia(`(min-width: 481px)`).matches; // JS is off-by-one compared to same CSS rule
+        let viewportIsWide = window.matchMedia(`(min-width: 510px)`).matches;
+        setIsNotMobile(viewportIsMobile);
+        setIsWide(viewportIsWide);
     };
 
     const handleThemeChange = (e: MediaQueryListEvent) => {
         setDarkMode(e.matches);
     }
+
+    // keep select state values available to event listeners via ref
+    useEffect(() => {
+        stateRef.current = {
+            graphInitialized: graphInitialized,
+            showTimer: showTimer,
+            playerNumber: playerNumber,
+            graph: graph,
+        }
+        handleResize();
+    }, [graphInitialized, showTimer, playerNumber])
 
     // run on mount and unmount
     useEffect(() => {
@@ -362,6 +389,7 @@ const Tracker = (_props: {}) => {
         setUserSettingsLoaded(true);
 
         window.addEventListener('resize', handleResize);
+        screen.orientation.addEventListener('change', handleResize);
         window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', handleThemeChange);
 
         return () => {

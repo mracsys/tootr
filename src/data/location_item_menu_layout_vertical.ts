@@ -196,6 +196,70 @@ export const location_item_menu_layout_vertical: item_menu_layout = [
         },
     ],
     [
+        'Triforce Piece',
+        {
+            button_item: 'Boss Key',
+            item_list: [
+                'Boss Key (Forest Temple)',
+                'Boss Key (Fire Temple)',
+                'Boss Key (Water Temple)',
+                'Boss Key (Spirit Temple)',
+                'Boss Key (Shadow Temple)',
+                'Boss Key (Ganons Castle)',
+                'Boss Key (???)',
+            ]
+        },
+        {
+            button_item: 'Small Key',
+            item_list: [
+                'Small Key (Forest Temple)',
+                'Small Key (Fire Temple)',
+                'Small Key (Water Temple)',
+                'Small Key (Spirit Temple)',
+                'Small Key (Shadow Temple)',
+                'Small Key (Treasure Chest Game)',
+                'Small Key (Bottom of the Well)',
+                'Small Key (Gerudo Training Ground)',
+                'Small Key (Thieves Hideout)',
+                'Small Key (Ganons Castle)',
+                'Small Key (???)',
+            ]
+        },
+        {
+            button_item: 'Small Key Ring',
+            item_list: [
+                'Small Key Ring (Forest Temple)',
+                'Small Key Ring (Fire Temple)',
+                'Small Key Ring (Water Temple)',
+                'Small Key Ring (Spirit Temple)',
+                'Small Key Ring (Shadow Temple)',
+                'Small Key Ring (Treasure Chest Game)',
+                'Small Key Ring (Bottom of the Well)',
+                'Small Key Ring (Gerudo Training Ground)',
+                'Small Key Ring (Thieves Hideout)',
+                'Small Key Ring (Ganons Castle)',
+                'Small Key Ring (???)',
+            ]
+        },
+        {
+            button_item: 'Compass',
+            item_list: [
+                'Compass (Deku Tree)',
+                'Compass (Dodongos Cavern)',
+                'Compass (Jabu Jabus Belly)',
+                'Compass (Forest Temple)',
+                'Compass (Fire Temple)',
+                'Compass (Water Temple)',
+                'Compass (Spirit Temple)',
+                'Compass (Shadow Temple)',
+                'Compass (Ice Cavern)',
+                'Compass (Bottom of the Well)',
+                'Compass (Ganons Castle)',
+                'Compass (???)',
+            ]
+        },
+    ],
+    [
         'Gold Skulltula Token',
         {
             button_item: 'Soul',
@@ -208,24 +272,26 @@ export const location_item_menu_layout_vertical: item_menu_layout = [
                     'Keese Soul',
                     'Tektite Soul',
                     'Peahat Soul',
+                ],
+                [
                     'Lizalfos and Dinalfos Soul',
                     'Gohma Larvae Soul',
                     'Shabom Soul',
-                ],
-                [
                     'Baby Dodongo Soul',
                     'Biri and Bari Soul',
                     'Tailpasaran Soul',
                     'Skulltula Soul',
+                ],
+                [
                     'Torch Slug Soul',
                     'Moblin Soul',
                     'Armos Soul',
                     'Deku Baba Soul',
                     'Deku Scrub Soul',
-                ],
-                [
                     'Bubble Soul',
                     'Beamos Soul',
+                ],
+                [
                     'Floormaster Soul',
                     'Redead and Gibdo Soul',
                     'Skullwalltula Soul',
@@ -233,24 +299,26 @@ export const location_item_menu_layout_vertical: item_menu_layout = [
                     'Dead hand Soul',
                     'Shell Blade Soul',
                     'Like-like Soul',
-                    'Spike Enemy Soul',
-                    'Anubis Soul',
                 ],
                 [
+                    'Spike Enemy Soul',
+                    'Anubis Soul',
                     'Iron Knuckle Soul',
                     'Skull Kid Soul',
                     'Flying Pot Soul',
                     'Freezard Soul',
                     'Stinger Soul',
+                ],
+                [
                     'Wolfos Soul',
                     'Guay Soul',
                     'Jabu Jabu Tentacle Soul',
                     'Dark Link Soul',
-                ],
-                [
                     'Queen Gohma Soul',
                     'King Dodongo Soul',
                     'Barinade Soul',
+                ],
+                [
                     'Phantom Ganon Soul',
                     'Volvagia Soul',
                     'Morpha Soul',
@@ -265,24 +333,26 @@ export const location_item_menu_layout_vertical: item_menu_layout = [
                     'Fire Temple Souls',
                     'Water Temple Souls',
                     'Shadow Temple Souls',
-                    'Spirit Temple Souls',
                 ],
                 [
+                    'Spirit Temple Souls',
                     'Bottom of the Well Souls',
                     'Ice Cavern Souls',
                     'Gerudo Training Ground Souls',
                     'Ganons Castle Souls',
                     'Forest Area Souls',
                     'Hyrule Field Souls',
-                    'Lake Hylia Souls',
                 ],
                 [
+                    'Lake Hylia Souls',
                     'Gerudo Area Souls',
                     'Market Area Souls',
                     'Kakariko Area Souls',
                     'Goron Area Souls',
                     'Zora Area Souls',
                     'Lon Lon Ranch Souls',
+                ],
+                [
                     'Grottos Souls',
                     'Soul (???)',
                 ]
@@ -363,70 +433,6 @@ export const location_item_menu_layout_vertical: item_menu_layout = [
                 'Silver Rupee Pouch (Dodongos Cavern)': ['Silver Rupee Pouch (Dodongos Cavern Staircase)'],
                 'Silver Rupee Pouch (???)': ['Silver Rupee Pouch (???)'],
             }
-        },
-        {
-            button_item: 'Compass',
-            item_list: [
-                'Compass (Deku Tree)',
-                'Compass (Dodongos Cavern)',
-                'Compass (Jabu Jabus Belly)',
-                'Compass (Forest Temple)',
-                'Compass (Fire Temple)',
-                'Compass (Water Temple)',
-                'Compass (Spirit Temple)',
-                'Compass (Shadow Temple)',
-                'Compass (Ice Cavern)',
-                'Compass (Bottom of the Well)',
-                'Compass (Ganons Castle)',
-                'Compass (???)',
-            ]
-        },
-    ],
-    [
-        'Triforce Piece',
-        {
-            button_item: 'Boss Key',
-            item_list: [
-                'Boss Key (Forest Temple)',
-                'Boss Key (Fire Temple)',
-                'Boss Key (Water Temple)',
-                'Boss Key (Spirit Temple)',
-                'Boss Key (Shadow Temple)',
-                'Boss Key (Ganons Castle)',
-                'Boss Key (???)',
-            ]
-        },
-        {
-            button_item: 'Small Key',
-            item_list: [
-                'Small Key (Forest Temple)',
-                'Small Key (Fire Temple)',
-                'Small Key (Water Temple)',
-                'Small Key (Spirit Temple)',
-                'Small Key (Shadow Temple)',
-                'Small Key (Treasure Chest Game)',
-                'Small Key (Bottom of the Well)',
-                'Small Key (Gerudo Training Ground)',
-                'Small Key (Thieves Hideout)',
-                'Small Key (Ganons Castle)',
-                'Small Key (???)',
-            ]
-        },
-        {
-            button_item: 'Small Key Ring',
-            item_list: [
-                'Small Key Ring (Forest Temple)',
-                'Small Key Ring (Fire Temple)',
-                'Small Key Ring (Water Temple)',
-                'Small Key Ring (Spirit Temple)',
-                'Small Key Ring (Shadow Temple)',
-                'Small Key Ring (Treasure Chest Game)',
-                'Small Key Ring (Bottom of the Well)',
-                'Small Key Ring (Gerudo Training Ground)',
-                'Small Key Ring (Thieves Hideout)',
-                'Small Key Ring (Ganons Castle)',
-                'Small Key Ring (???)',
-            ]
         },
         {
             button_item: 'Zora Sapphire',

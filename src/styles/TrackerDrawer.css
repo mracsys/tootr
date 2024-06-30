@@ -81,7 +81,7 @@
     color: var(--color-sidebar-text);
     opacity: 30%;
     flex: 1;
-
+    max-width: none;
 }
 .sidebarTabs .MuiTab-root:hover {
     opacity: 100%;

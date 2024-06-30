@@ -24,6 +24,9 @@
     padding: 0;
     background-color: var(--color-item-menu);
 }
+.locationItemMenu.MuiMenu-root {
+    overflow: auto;
+}
 .locationItemMenu .iconLeftText {
     color: var(--color-shadowed-text);
 }
