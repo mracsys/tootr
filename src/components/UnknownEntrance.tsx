@@ -40,13 +40,13 @@ export const buildExitEntranceName = (entrance: GraphEntrance, original: boolean
     }
 }
 
-export const locationFilter = (l: GraphLocation, collapsedRegions: CollapsedRegions, title: string, showHints: boolean, regionIsFoolish: boolean, lastLocationName: string[], searchTerm: string = ''): boolean => {
+export const locationFilter = (l: GraphLocation, collapsedRegions: CollapsedRegions, title: string, showHints: boolean, regionIsFoolish: boolean, lastLocationName: string[], simMode: boolean, peekedLocations: Set<string>, searchTerm: string = ''): boolean => {
     return (!l.checked || collapsedRegions[title] === 'none' || lastLocationName.includes(l.name)) &&
             l.viewable(true) &&
             ((!l.is_hint && (!regionIsFoolish || collapsedRegions[title] === 'none')) || (l.is_hint && showHints && l.alias !== l.name) || l.is_restricted) &&
             (searchTerm === '' || 
                 l.alias.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                (!!l.item && l.item.name.toLowerCase().includes(searchTerm.toLowerCase())));
+                (!!l.item && l.item.name.toLowerCase().includes(searchTerm.toLowerCase()) && (!simMode || l.checked || peekedLocations.has(l.name))));
 }
 
 export const shopLocationFilter = (l: GraphLocation, showShops: boolean, searchTerm: string = ''): boolean => {
@@ -56,23 +56,24 @@ export const shopLocationFilter = (l: GraphLocation, showShops: boolean, searchT
                 (!!l.item && l.item.name.toLowerCase().includes(searchTerm.toLowerCase())));
 }
 
-export const entranceOrTargetMatchesTerm = (entrance: GraphEntrance, collapsedRegions: CollapsedRegions, title: string, searchTerm: string, showEntranceLocations: boolean, showShops: boolean, showHints: boolean, regionIsFoolish: boolean, lastLocationName: string[], renderedConnectors: GraphEntrance[] = []): boolean => {
+export const entranceOrTargetMatchesTerm = (entrance: GraphEntrance, collapsedRegions: CollapsedRegions, title: string, searchTerm: string, showEntranceLocations: boolean, showShops: boolean, showHints: boolean, regionIsFoolish: boolean, lastLocationName: string[], simMode: boolean, peekedLocations: Set<string>, renderedConnectors: GraphEntrance[] = []): boolean => {
     // no filtering if no search term
     if (searchTerm === '') return true;
 
     // main entrance name or target name match
     let searchTermTest = searchTerm.toLowerCase();
-    let targetEntrance = !!(entrance.replaces) ? entrance.replaces : entrance;
-    let entranceFrom = buildExitEntranceName(targetEntrance);
-    let searchMatch = buildEntranceName(targetEntrance).toLowerCase().includes(searchTermTest)
-                    || buildExitName(targetEntrance).toLowerCase().includes(searchTermTest)
-                    || (entranceFrom !== null && entranceFrom.toLowerCase().includes(searchTermTest));
+    let entranceFrom = buildExitEntranceName(entrance);
+    let searchMatch = buildEntranceName(entrance).toLowerCase().includes(searchTermTest)
+                    || ((!simMode || entrance.checked)
+                        && (buildExitName(entrance).toLowerCase().includes(searchTermTest)
+                        || (entranceFrom !== null && entranceFrom.toLowerCase().includes(searchTermTest))));
     if (searchMatch) return true;
 
-    if (!!targetEntrance.target_group && (!entrance.shuffled || entrance.connected_region !== null)) {
+    let targetEntrance = !!(entrance.replaces) ? entrance.replaces : entrance;
+    if (!!targetEntrance.target_group && targetEntrance.target_group.page === '' && (!entrance.shuffled || (entrance.connected_region !== null && (!simMode || entrance.checked)))) {
         if (targetEntrance.target_group.page === '') { // prevents chaining into other overworld area tiles
             // immediate target area locations match
-            let targetLocations = targetEntrance.target_group.locations.filter((location) => showEntranceLocations && locationFilter(location, collapsedRegions, title, showHints, regionIsFoolish, lastLocationName, searchTerm) || shopLocationFilter(location, showShops, searchTerm));
+            let targetLocations = targetEntrance.target_group.locations.filter((location) => showEntranceLocations && locationFilter(location, collapsedRegions, title, showHints, regionIsFoolish, lastLocationName, simMode, peekedLocations, searchTerm) || shopLocationFilter(location, showShops, searchTerm));
             if (targetLocations.length > 0) return true;
 
             // connector entrance recursion match
@@ -82,7 +83,7 @@ export const entranceOrTargetMatchesTerm = (entrance: GraphEntrance, collapsedRe
             }
             let connectors = targetEntrance.target_group.exits.filter(e => !(renderedConnectors.includes(e)) && (e.shuffled || e.target_group !== targetEntrance.source_group) && (e !== targetEntrance.reverse || (!e.coupled && e.shuffled)));
             for (let connector of connectors) {
-                if (entranceOrTargetMatchesTerm(connector, collapsedRegions, title, searchTerm, showEntranceLocations, showShops, showHints, regionIsFoolish, lastLocationName, renderedConnectors)) {
+                if (entranceOrTargetMatchesTerm(connector, collapsedRegions, title, searchTerm, showEntranceLocations, showShops, showHints, regionIsFoolish, lastLocationName, simMode, peekedLocations, renderedConnectors)) {
                     return true;
                 }
             }
@@ -188,13 +189,13 @@ const UnknownEntrance = ({
             let internalLocations: GraphLocation[] = [];
             let otherEntrances: GraphEntrance[] = [];
             if (!!reverseLink.target_group && reverseLink.target_group.page === '') {
-                internalLocations.push(...reverseLink.target_group.locations.filter(l => showEntranceLocations && locationFilter(l, collapsedRegions, title, showHints, regionIsFoolish, lastLocationName, searchTerm)));
+                internalLocations.push(...reverseLink.target_group.locations.filter(l => showEntranceLocations && locationFilter(l, collapsedRegions, title, showHints, regionIsFoolish, lastLocationName, simMode, peekedLocations, searchTerm)));
                 shopLocations.push(...reverseLink.target_group.locations.filter(l => showEntranceLocations && shopLocationFilter(l, showShops, searchTerm)));
                 otherEntrances.push(...reverseLink.target_group.exits.filter(e => 
                     !(renderedConnectors.includes(e)) &&
                     (e.shuffled || e.target_group !== reverseLink.source_group) &&
                     (e !== reverseLink.reverse || (!e.coupled && e.shuffled)) &&
-                    entranceOrTargetMatchesTerm(e, collapsedRegions, title, searchTerm, showEntranceLocations, showShops, showHints, regionIsFoolish, lastLocationName, [...renderedConnectors])));
+                    entranceOrTargetMatchesTerm(e, collapsedRegions, title, searchTerm, showEntranceLocations, showShops, showHints, regionIsFoolish, lastLocationName, simMode, peekedLocations, [...renderedConnectors])));
             }
             if ((reverseLink.target_group.page !== ''
             || reverseLink.is_warp

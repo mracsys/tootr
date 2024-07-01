@@ -421,7 +421,7 @@ export const OotSettingAssetMapFactory = (graphSettings: GraphSettingsConfigurat
             tooltip2: Array.isArray(graphSettings['shuffle_child_trade']) ? graphSettings['shuffle_child_trade'].length > 0 ? graphSettings['shuffle_child_trade'].join('\n') : 'None' : '',
         },
         'shuffle_freestanding_items': {
-            img: '/images/freestanding_rupee.png',
+            img: '/images/green_rupee_vertical.png',
             rImg: {
                 'dungeons': '/images/dungeon_entrance.png',
                 'overworld': '/images/outline_public_white_36dp.png',

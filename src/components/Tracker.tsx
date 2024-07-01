@@ -1417,33 +1417,50 @@ const Tracker = (_props: {}) => {
         setEntranceRef(eRef);
     }
 
-    const handleDungeonTravel = (targetRegion: GraphRegion | null, regionEntrance: GraphEntrance | null = null) => {
+    const handleDungeonTravel = (targetRegion: GraphRegion | null, regionEntrance: GraphEntrance | null = null, fromWarpMenu: boolean = false) => {
         let href = '#';
         let linkedRegion = targetRegion;
-        if (!!(linkedRegion)) {
-            let visitedEntrances: GraphEntrance[] = [];
-            while (linkedRegion.page === '') {
-                let foundNewEntrance = false;
-                for (let i = 0; i < linkedRegion.entrances.length; i++) {
-                    if (!(visitedEntrances.includes(linkedRegion.entrances[i])) && !(linkedRegion.entrances[i].is_warp) && linkedRegion !== linkedRegion.entrances[i].source_group) {
-                        linkedRegion = linkedRegion.entrances[i].source_group;
-                        if (linkedRegion === null) throw `Failed to find top level warp target region for starting region ${targetRegion?.alias}`;
-                        foundNewEntrance = true;
-                        break;
+        if (!!(linkedRegion) && (linkedRegion.page !== '' || fromWarpMenu)) {
+            let warpExit: GraphEntrance | null = null;
+            if (fromWarpMenu || (!!regionEntrance && regionEntrance.reverse === null)) {
+                while (linkedRegion.page === '') {
+                    let foundNewEntrance = false;
+                    if (linkedRegion.exits.filter(e => !e.is_warp).length > 1) {
+                        if (!!regionEntrance?.source_group) {
+                            linkedRegion = regionEntrance?.source_group;
+                            setLastEntranceName('');
+                            break;
+                        } else {
+                            console.log(`Could not find source group for warp ${regionEntrance?.name} with target group containing multiple exits`);
+                            return;
+                        }
                     }
+                    for (let i = 0; i < linkedRegion.exits.length; i++) {
+                        let replacedExit: GraphEntrance | null = linkedRegion.exits[i].replaces;
+                        warpExit = !!(replacedExit) ? replacedExit : linkedRegion.exits[i];
+                        if (!(linkedRegion.exits[i].is_warp) && linkedRegion !== warpExit.target_group) {
+                            linkedRegion = warpExit.target_group;
+                            if (linkedRegion === null) throw `Failed to find top level warp target region for starting region ${targetRegion?.alias}`;
+                            foundNewEntrance = true;
+                            break;
+                        }
+                    }
+                    if (!foundNewEntrance) throw `Ran out of entrances to search for top level warp target region for starting region ${targetRegion?.alias}`;
                 }
-                if (!foundNewEntrance) throw `Ran out of entrances to search for top level warp target region for starting region ${targetRegion?.alias}`;
             }
+            let newPage = '';
             if (oneRegionPerPage) {
                 if (linkedRegion.name !== regionPage) {
                     let newRegions = new Set(visitedSimRegions);
                     newRegions.add(linkedRegion.name);
                     setVisitedSimRegions(newRegions);
                     setRegionPage(linkedRegion.name);
+                    newPage = linkedRegion.name;
                 }
             } else {
                 if (linkedRegion.page !== regionPage) {
-                    setRegionPage(linkedRegion.name);
+                    setRegionPage(linkedRegion.page);
+                    newPage = linkedRegion.page;
                 }
             }
             if (!!regionEntrance) {
@@ -1454,12 +1471,14 @@ const Tracker = (_props: {}) => {
             } else {
                 href = `#${linkedRegion.alias}`;
             }
-            if (!!regionEntrance && !tracker_settings_defs.region_page.options?.includes(regionPage)) {
+            if (!!regionEntrance && !tracker_settings_defs.region_page.options?.includes(newPage) && newPage !== 'Warps') {
                 if (regionEntrance.is_warp) {
                     let eLink = !!(regionEntrance.replaces) ? regionEntrance.replaces : regionEntrance;
                     let exitedEntrance = '';
                     if (!!eLink.reverse && eLink.reverse.target_group?.page !== '') {
-                        exitedEntrance = `from ${eLink.use_target_alias ? eLink.target_alias : eLink.alias}`;
+                        exitedEntrance = `from ${eLink.reverse.alias}`;
+                    } else if (eLink.reverse === null && !!warpExit?.reverse) {
+                        exitedEntrance = `from ${warpExit.reverse.use_target_alias ? warpExit.reverse.target_alias : warpExit.reverse.alias}`;
                     } else if (eLink.reverse === null) {
                         exitedEntrance = `from ${eLink.use_target_alias ? eLink.target_alias : eLink.alias}`;
                     } else if (eLink.reverse.target_group?.page === '') {
@@ -1474,6 +1493,9 @@ const Tracker = (_props: {}) => {
                     let exitedEntrance = buildExitEntranceName(regionEntrance);
                     if (!!exitedEntrance) {
                         setLastEntranceName(exitedEntrance);
+                    } else if (regionEntrance.reverse === null) {
+                        let target = !!regionEntrance.replaces ? regionEntrance.replaces : regionEntrance;
+                        setLastEntranceName(`from ${target.use_target_alias ? target.target_alias : target.alias}`);
                     } else {
                         setLastEntranceName('');
                     }
@@ -1485,6 +1507,7 @@ const Tracker = (_props: {}) => {
         if (href !== '#') {
             setDelayedURL(href);
         }
+        setSearchTerm('');
     }
 
     const isWarpAreaLinked = (entrance: GraphEntrance) => {

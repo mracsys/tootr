@@ -91,7 +91,7 @@ const GameArea = ({
     const preventDefault: MouseEventHandler = (event: MouseEvent) => event.preventDefault();
     let title = region.name;
 
-    let filteredLocations: GraphLocation[] = locations.filter((location) => showAreaLocations && locationFilter(location, collapsedRegions, title, showHints, region.is_not_required, lastLocationName, searchTerm));
+    let filteredLocations: GraphLocation[] = locations.filter((location) => showAreaLocations && locationFilter(location, collapsedRegions, title, showHints, region.is_not_required, lastLocationName, simMode, peekedLocations, searchTerm));
     // At the moment, the only unshuffled entrances that have
     // connectors of a different entrance type are:
     //      Dampe's Grave -> Windmill exit
@@ -103,7 +103,7 @@ const GameArea = ({
     let connectorShuffled = false;
     let filteredEntrances: GraphEntrance[] = entrances.filter((entrance) => 
         ((!showUnshuffledEntrances && (entrance.shuffled || connectorShuffled)) || showUnshuffledEntrances) &&
-        entranceOrTargetMatchesTerm(entrance, collapsedRegions, title, searchTerm, showEntranceLocations, showShops, showHints, region.is_not_required, lastLocationName)).sort((a, b) => a.type_priority - b.type_priority || a.alias.localeCompare(b.alias));
+        entranceOrTargetMatchesTerm(entrance, collapsedRegions, title, searchTerm, showEntranceLocations, showShops, showHints, region.is_not_required, lastLocationName, simMode, peekedLocations)).sort((a, b) => a.type_priority - b.type_priority || a.alias.localeCompare(b.alias));
 
     if (filteredEntrances.length === 0 && filteredLocations.length === 0 && searchTerm !== '') {
         return null;

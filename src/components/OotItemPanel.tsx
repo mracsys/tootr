@@ -272,6 +272,19 @@ export const OotItemPanel = ({
                     collected = 0;
                 }
                 addItem = (!collected || (!!(gridEntry.sub_variants) && gridEntry.sub_variants.length > collected)) ? () => addStartingItem(gridEntry.item_name) : () => {};
+            } else if (gridEntry.item_name === 'Bombchus') {
+                itemName = gridEntry.item_name;
+                let bombchuVariants = [
+                    'Bombchus (5)',
+                    'Bombchus (10)',
+                    'Bombchus (20)',
+                    'Bombchus',
+                ];
+                for (let v of bombchuVariants) {
+                    if (!collected && Object.keys(graphPlayerInventory).includes(v)) {
+                        collected = graphPlayerInventory[v];
+                    }
+                }
             } else {
                 itemName = gridEntry.item_name;
                 addItem = (!collected || (!!(gridEntry.sub_variants) && gridEntry.sub_variants.length > collected)) ? () => addStartingItem(gridEntry.item_name) : () => {};
