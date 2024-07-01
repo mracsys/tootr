@@ -15,8 +15,8 @@ importers:
         specifier: ^11.11.5
         version: 11.11.5(@emotion/react@11.11.4(@types/react@18.3.3)(react@18.3.1))(@types/react@18.3.3)(react@18.3.1)
       '@mracsys/randomizer-graph-tool':
-        specifier: ^2.0.4
-        version: 2.0.4
+        specifier: ^2.0.5
+        version: 2.0.5
       '@mui/icons-material':
         specifier: ^5.15.20
         version: 5.15.20(@mui/material@5.15.20(@emotion/react@11.11.4(@types/react@18.3.3)(react@18.3.1))(@emotion/styled@11.11.5(@emotion/react@11.11.4(@types/react@18.3.3)(react@18.3.1))(@types/react@18.3.3)(react@18.3.1))(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@types/react@18.3.3)(react@18.3.1)
@@ -468,8 +468,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.25':
     resolution: {integrity: sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ==}
 
-  '@mracsys/randomizer-graph-tool@2.0.4':
-    resolution: {integrity: sha512-bJAd+vU2PWZOkzY7J9dynlB0lfQA65svBbgjATETziZWib1Ce8L8vrCwsKVkZCL9CGyn1h0ApjIxtirp+UVjIA==}
+  '@mracsys/randomizer-graph-tool@2.0.5':
+    resolution: {integrity: sha512-is4+CtArtiMJiBZV6nu/4Z2hiTXGda5pHU/SLilbRXarUybziWAb12hT8fLza6I3upgUDfhhQwoSmtac+XNPNA==}
 
   '@mui/base@5.0.0-beta.40':
     resolution: {integrity: sha512-I/lGHztkCzvwlXpjD2+SNmvNQvB4227xBXhISPjEaJUXGImOQ9f3D2Yj/T3KasSI/h0MLWy74X0J6clhPmsRbQ==}
@@ -1905,7 +1905,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.4.15
 
-  '@mracsys/randomizer-graph-tool@2.0.4':
+  '@mracsys/randomizer-graph-tool@2.0.5':
     dependencies:
       '@babel/generator': 7.24.7
       '@babel/parser': 7.24.7
