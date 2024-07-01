@@ -13,6 +13,7 @@ import MobiledataOffIcon from '@mui/icons-material/MobiledataOff';
 import Brightness3Icon from '@mui/icons-material/Brightness3';
 import Brightness5Icon from '@mui/icons-material/Brightness5';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
+import HistoryToggleOffIcon from '@mui/icons-material/HistoryToggleOff';
 import { merge } from "lodash";
 
 import { GraphSettingsOptions, GraphSettingsConfiguration, GraphSetting, GameVersion } from '@mracsys/randomizer-graph-tool';
@@ -99,6 +100,7 @@ export const OotSettingAssetMapFactory = (graphSettings: GraphSettingsConfigurat
                 'dungeons': '/images/OoT_Medallion_Stone_Split_Icon.png',
                 'tokens': '/images/OoT_Token_Icon.png',
                 'hearts': '/images/OoT_Heart_Container_Icon.png',
+                'random': '/images/question_mark_text.png',
             }[graphSettings['bridge'] as string] as string,
             lSub: {
                 'medallions': graphSettings['bridge_medallions'],
@@ -106,6 +108,7 @@ export const OotSettingAssetMapFactory = (graphSettings: GraphSettingsConfigurat
                 'dungeons': graphSettings['bridge_rewards'],
                 'tokens': graphSettings['bridge_tokens'],
                 'hearts': graphSettings['bridge_hearts'],
+                'random': '',
             }[graphSettings['bridge'] as string] as string,
             lSubSource: {
                 'medallions': 'bridge_medallions',
@@ -322,6 +325,7 @@ export const OotSettingAssetMapFactory = (graphSettings: GraphSettingsConfigurat
             img: {
                 'child': '/images/master_sword_in_pedestal.png',
                 'adult': '/images/pedestal.png',
+                'random': '/images/pedestal_random.png',
             }[graphSettings['starting_age'] as string] as string,
             tooltip: graphSettingsOptions['starting_age'].display_name,
             tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['starting_age']),
@@ -560,7 +564,7 @@ export const OotSettingAssetMapFactory = (graphSettings: GraphSettingsConfigurat
         'starting_tod': {
             img: {
                 'default': Brightness7Icon,
-                'random': Brightness7Icon,
+                'random': HistoryToggleOffIcon,
                 'sunrise': Brightness7Icon,
                 'morning': Brightness7Icon,
                 'noon': Brightness7Icon,

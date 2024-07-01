@@ -110,8 +110,8 @@ export const OotDungeonTracker = ({
     let dungeon_item_length = 0;
     for (let itemEntry of gridEntry.item_list) {
         if (itemEntry.item_name === 'DungeonReward') {
-            let itemName: string;
-            let clickAction: () => void;
+            let itemName: string = '?';
+            let clickAction: () => void = () => {};
             let fadeIcon = false;
             if (graphEntrances.length === 0 || graphLocations.length === 0) {
                 itemName = '?';
@@ -121,28 +121,32 @@ export const OotDungeonTracker = ({
                 let bossEntrances = graphEntrances.filter((e) => e.name === dungeonToEntranceMap[dungeonName]);
                 if (bossEntrances.length !== 1) {
                     console.log(`[ERROR] Unable to find boss entrance for item tracker dungeon: ${dungeonName}`);
-                    continue;
-                }
-                let bossEntrance = bossEntrances[0];
-                if (!!bossEntrance.replaces) bossEntrance = bossEntrance.replaces;
-                let bossRewards = graphLocations.filter((l) => l.name === entranceToBossRewardMap[bossEntrance.name]);
-                if (bossEntrances.length !== 1) {
-                    console.log(`Unable to find boss reward for item tracker dungeon: ${dungeonName}, entrance: ${bossEntrance.name}`);
-                    continue;
-                }
-                let bossReward = bossRewards[0];
-                if (!!bossReward.item && !!bossEntrances[0].connected_region && (!simMode || bossReward.hinted || bossReward.checked
-                || (Object.keys(graphRewardHints) && graphRewardHints[bossReward.item.name].hinted))) {
-                    itemName = bossReward.item.name;
-                    if (bossReward.checked) {
-                        clickAction = () => handleUnCheck(bossReward.name);
-                    } else {
-                        clickAction = () => handleCheck(bossReward.name);
-                        fadeIcon = true;
-                    }
+                    //continue;
                 } else {
-                    itemName = '?';
-                    clickAction = () => {};
+                    let bossEntrance = bossEntrances[0];
+                    if (!!bossEntrance.replaces) bossEntrance = bossEntrance.replaces;
+                    let bossRewards = graphLocations.filter((l) => l.name === entranceToBossRewardMap[bossEntrance.name]);
+                    if (bossRewards.length !== 1) {
+                        if (bossEntrance.name === 'Ganons Castle Main -> Ganons Castle Tower') {
+                            // do nothing, no reward in Ganon's Tower even if shuffled to a blue warp dungeon
+                        } else {
+                            console.log(`Unable to find boss reward for item tracker dungeon: ${dungeonName}, entrance: ${bossEntrance.name}`);
+                        }
+                        //continue;
+                    } else {
+                        let bossReward = bossRewards[0];
+                        if (!!bossReward.item && !!bossEntrances[0].connected_region) {
+                            if (!simMode || bossReward.hinted || bossReward.checked || (Object.keys(graphRewardHints) && graphRewardHints[bossReward.item.name].hinted)) {
+                                itemName = bossReward.item.name;
+                                if (bossReward.checked) {
+                                    clickAction = () => handleUnCheck(bossReward.name);
+                                } else {
+                                    clickAction = () => handleCheck(bossReward.name);
+                                    fadeIcon = true;
+                                }
+                            }
+                        }
+                    }
                 }
             }
             dungeon_item_children.push(<OotItemIcon
