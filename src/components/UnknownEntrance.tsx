@@ -127,6 +127,7 @@ interface UnknownEntranceProps {
     simMode: boolean,
     lastLocationName: string[],
     peekedLocations: Set<string>,
+    fromWarp?: boolean,
 }
 
 const UnknownEntrance = ({
@@ -164,9 +165,11 @@ const UnknownEntrance = ({
     simMode,
     lastLocationName,
     peekedLocations,
+    fromWarp = false,
 }: UnknownEntranceProps) => {
     let eType = entrance.type;
     let reverseLink = !!(entrance.replaces) ? entrance.replaces : entrance;
+    let rootIsWarp = fromWarp || entrance.is_warp || entrance.reverse === null;
     if (!!eType) {
         if (entrance.connected_region === null || (simMode && !entrance.checked && entrance.shuffled)) {
             return (
@@ -194,11 +197,11 @@ const UnknownEntrance = ({
                 otherEntrances.push(...reverseLink.target_group.exits.filter(e => 
                     !(renderedConnectors.includes(e)) &&
                     (e.shuffled || e.target_group !== reverseLink.source_group) &&
-                    (e !== reverseLink.reverse || (!e.coupled && e.shuffled)) &&
+                    (e !== reverseLink.reverse || ((!e.coupled || rootIsWarp) && e.shuffled)) &&
                     entranceOrTargetMatchesTerm(e, collapsedRegions, title, searchTerm, showEntranceLocations, showShops, showHints, regionIsFoolish, lastLocationName, simMode, peekedLocations, [...renderedConnectors])));
             }
             if ((reverseLink.target_group.page !== ''
-            || reverseLink.is_warp
+            || entrance.is_warp
             || (reverseLink.target_group.page === '' && (searchTerm !== '' || internalLocations.length > 0 || shopLocations.length > 0 || otherEntrances.length > 0 || collapsedRegions[title] === 'none')))) {
                 return (
                     <React.Fragment>
@@ -239,6 +242,7 @@ const UnknownEntrance = ({
                             simMode={simMode}
                             lastLocationName={lastLocationName}
                             peekedLocations={peekedLocations}
+                            fromWarp={rootIsWarp}
                         />
                     </React.Fragment>
                 );

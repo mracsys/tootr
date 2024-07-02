@@ -53,6 +53,7 @@ interface LinkedEntranceProps {
     simMode: boolean,
     lastLocationName: string[],
     peekedLocations: Set<string>,
+    fromWarp: boolean,
 }
 
 const LinkedEntrance = ({
@@ -92,6 +93,7 @@ const LinkedEntrance = ({
     simMode,
     lastLocationName,
     peekedLocations,
+    fromWarp,
 }: LinkedEntranceProps) => {
     const buildEntranceURL = (reverseLink: GraphEntrance): string => {
         let href: string = '';
@@ -247,6 +249,7 @@ const LinkedEntrance = ({
                         simMode={simMode}
                         lastLocationName={lastLocationName}
                         peekedLocations={peekedLocations}
+                        fromWarp={fromWarp}
                     />
                 )})
             }
