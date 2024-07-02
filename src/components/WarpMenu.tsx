@@ -14,6 +14,7 @@ import '@/styles/WarpMenu.css';
 interface WarpMenuProps {
     isWarpAreaLinked: (entrance: GraphEntrance) => boolean;
     handleDungeonTravel: (targetRegion: GraphRegion | null, regionEntrance?: GraphEntrance | null, fromWarpMenu?: boolean) => void;
+    checkEntrance: (entrance: string, fromWarp: boolean) => void;
     areaMenuHandler: ContextMenuHandler;
     pages: {[page: string]: GraphRegion[]};
     warps: GraphEntrance[];
@@ -23,6 +24,7 @@ interface WarpMenuProps {
 const WarpMenu = ({
     isWarpAreaLinked,
     handleDungeonTravel,
+    checkEntrance,
     areaMenuHandler,
     pages,
     warps,
@@ -83,7 +85,9 @@ const WarpMenu = ({
                                         "" :
                                         "grayscaleMenuIcon"}
                                     onClick={isWarpAreaLinked(w) ?
-                                        () => handleDungeonTravel(!!w.replaces ? w.replaces.target_group : w.target_group, w, true)
+                                        w.checked ?
+                                            () => handleDungeonTravel(!!w.replaces ? w.replaces.target_group : w.target_group, w, true)
+                                            : () => checkEntrance(w.name, true)
                                         : () => handleDungeonTravel(warpRegion)}
                                 />
                             );

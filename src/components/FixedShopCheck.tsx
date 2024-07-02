@@ -42,7 +42,7 @@ const FixedShopCheck = ({
                 location.item === null || !haveOotItemIcon(location.item.name) ?
                     <AddIcon className="fixedShopIcon" />
                     /*<p className="fixedShopIcon">+</p>*/ :
-                    (!simMode || location.checked) ?
+                    (!simMode || location.checked || !location.shuffled) ?
                         <OotItemIcon
                             itemName={location.item.name}
                             className="fixedShopIcon"

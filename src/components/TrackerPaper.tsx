@@ -17,7 +17,7 @@ interface TrackerPaperProps {
     handleUnLink: (entrance: string, scrollRef: string) => void,
     handleCheck: (locationName: string) => void,
     handleUnCheck: (locationName: string) => void,
-    handleCheckEntrance: (entranceName: string) => void,
+    handleCheckEntrance: (entranceName: string, fromWarp?: boolean) => void,
     handleUnCheckEntrance: (entranceName: string) => void,
     handleContextMenu: ContextMenuHandler,
     handleShopContextMenu: ContextMenuHandler,
@@ -161,6 +161,7 @@ const TrackerPaper = ({
             <WarpMenu
                 isWarpAreaLinked={isWarpAreaLinked}
                 handleDungeonTravel={handleDungeonTravel}
+                checkEntrance={handleCheckEntrance}
                 areaMenuHandler={areaMenuHandler}
                 pages={pages}
                 warps={warps}

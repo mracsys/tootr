@@ -667,7 +667,8 @@ export const OotItemPanel = ({
         } else {
             available = 0;
         }
-        let show_available_tokens = Object.keys(graphSettings).includes('tokensanity') && graphSettings['tokensanity'] === 'off' && itemName === 'Gold Skulltula Token';
+        let show_available_tokens = Object.keys(graphSettings).includes('tokensanity') && graphSettings['tokensanity'] === 'off'
+            && Array.isArray(graphSettings.graphplugin_viewable_unshuffled_items) && !graphSettings.graphplugin_viewable_unshuffled_items.includes('Gold Skulltula Tokens') && itemName === 'Gold Skulltula Token';
         // Display hearts with the 3 minimum starting hearts. The randomizer logic internally assumes these are always there and starts at 0
         if (itemName === 'Heart Container') collected += 3;
         let addItem = () => addStartingItem(gridEntry.item_name);

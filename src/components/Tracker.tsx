@@ -1204,11 +1204,11 @@ const Tracker = (_props: {}) => {
         refreshSearch();
     }
 
-    const checkEntrance = (entrance: string): void => {
+    const checkEntrance = (entrance: string, fromWarp: boolean = false): void => {
         console.log(`${entrance} [Checked]`);
         let sourceEntrance = graph.worlds[playerNumber].get_entrance(entrance);
         graph.check_entrance(sourceEntrance);
-        if (oneRegionPerPage && !tracker_settings_defs.region_page.options?.includes(regionPage)) {
+        if (fromWarp || (oneRegionPerPage && !tracker_settings_defs.region_page.options?.includes(regionPage))) {
             let reverseLink = !!(sourceEntrance.replaces) ? sourceEntrance.replaces : sourceEntrance;
             handleDungeonTravel(reverseLink.target_group, sourceEntrance);
         }

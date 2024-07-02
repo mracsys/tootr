@@ -199,7 +199,7 @@ const UnknownEntrance = ({
             }
             if ((reverseLink.target_group.page !== ''
             || reverseLink.is_warp
-            || (reverseLink.target_group.page === '' && (searchTerm !== '' || internalLocations.length > 0 || shopLocations.length > 0 || otherEntrances.length > 0)))) {
+            || (reverseLink.target_group.page === '' && (searchTerm !== '' || internalLocations.length > 0 || shopLocations.length > 0 || otherEntrances.length > 0 || collapsedRegions[title] === 'none')))) {
                 return (
                     <React.Fragment>
                         <LinkedEntrance
