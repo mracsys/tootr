@@ -196,12 +196,12 @@ const UnknownEntrance = ({
                 shopLocations.push(...reverseLink.target_group.locations.filter(l => showEntranceLocations && shopLocationFilter(l, showShops, searchTerm)));
                 otherEntrances.push(...reverseLink.target_group.exits.filter(e => 
                     !(renderedConnectors.includes(e)) &&
-                    (e.shuffled || e.target_group !== reverseLink.source_group) &&
-                    (e !== reverseLink.reverse || ((!e.coupled || rootIsWarp) && e.shuffled)) &&
+                    (e.shuffled || e.target_group !== reverseLink.source_group || rootIsWarp) &&
+                    (e !== reverseLink.reverse || rootIsWarp || (!e.coupled && e.shuffled)) &&
                     entranceOrTargetMatchesTerm(e, collapsedRegions, title, searchTerm, showEntranceLocations, showShops, showHints, regionIsFoolish, lastLocationName, simMode, peekedLocations, [...renderedConnectors])));
             }
             if ((reverseLink.target_group.page !== ''
-            || entrance.is_warp
+            || rootIsWarp
             || (reverseLink.target_group.page === '' && (searchTerm !== '' || internalLocations.length > 0 || shopLocations.length > 0 || otherEntrances.length > 0 || collapsedRegions[title] === 'none')))) {
                 return (
                     <React.Fragment>
