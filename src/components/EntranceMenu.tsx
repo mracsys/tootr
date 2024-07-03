@@ -133,7 +133,7 @@ const EntranceMenu = ({
                     renderInput={(params) => 
                         <div>
                         <div className="entranceAutoWidthHack">{longestOption}</div>
-                        <TextField {...params} key={id + "autocomplete-input"} label="Search Entrances" variant="filled" />
+                        <TextField {...params} autoFocus key={id + "autocomplete-input"} label="Search Entrances" variant="filled" />
                         </div>
                     }
                     onChange={(_event, newValue: AutoOption | null, _reason) => {

@@ -27,9 +27,11 @@ const FixedShopCheck = ({
     return (
         <div
             key={lkey}
-            onClick={ location.checked ?
-                        () => handleUnCheck(location.name) :
-                        () => handleCheck(location.name)
+            onClick={ location.item === null ?
+                        handleContextMenu.onContextMenu
+                        : location.checked ?
+                            () => handleUnCheck(location.name) :
+                            () => handleCheck(location.name)
                     }
             onContextMenu={handleContextMenu.onContextMenu}
             onTouchStart={handleContextMenu.onTouchStart}
