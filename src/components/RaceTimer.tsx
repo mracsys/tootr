@@ -1,14 +1,27 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Dispatch, SetStateAction } from "react";
 import ContextMenuHandler from "./ContextMenuHandler";
 
 import '@/styles/RaceTimer.css';
 
-const RaceTimer = ({
+interface RaceTimerProps {
+    startTime: number,
+    running: boolean,
+    setStartTime: Dispatch<SetStateAction<number>>,
+    setRunning: Dispatch<SetStateAction<boolean>>,
+}
 
-}) => {
-    const [startTime, setStartTime] = useState<number>(0);
+const RaceTimer = ({
+    startTime,
+    running,
+    setStartTime,
+    setRunning,
+}: RaceTimerProps) => {
     const [currentTime, setCurrentTime] = useState<number>(0);
-    const [running, setRunning] = useState<boolean>(false);
+
+    // Initial clock value if the timer got unmounted after start
+    useEffect(() => {
+        if (running) setCurrentTime(Date.now());
+    }, [])
 
     useEffect(() => {
         let interval = setInterval(() => {

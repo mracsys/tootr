@@ -60,6 +60,10 @@ interface TrackerDrawerProps {
     visitedSimRegions: Set<string>,
     itemPanelAsTab: boolean,
     isNotMobile: boolean,
+    startTime: number,
+    running: boolean,
+    setStartTime: Dispatch<SetStateAction<number>>,
+    setRunning: Dispatch<SetStateAction<boolean>>,
 }
 
 
@@ -99,6 +103,10 @@ const TrackerDrawer = ({
     visitedSimRegions,
     itemPanelAsTab,
     isNotMobile,
+    startTime,
+    running,
+    setStartTime,
+    setRunning,
 }: TrackerDrawerProps) => {
     const [tabValue, setTabValue] = useState<number>(0);
     const [multiselectMenuOpen, setMultiselectMenuOpen] = useState<Element | null>(null);
@@ -235,7 +243,12 @@ const TrackerDrawer = ({
                 }
                 {
                     !itemPanelAsTab && trackerSettings.show_timer ?
-                        <RaceTimer />
+                        <RaceTimer
+                            startTime={startTime}
+                            running={running}
+                            setStartTime={setStartTime}
+                            setRunning={setRunning}
+                        />
                         : null
                 }
                 { itemPanelAsTab ?
@@ -263,7 +276,12 @@ const TrackerDrawer = ({
                         </div>
                         {
                             itemPanelAsTab && trackerSettings.show_timer ?
-                                <RaceTimer />
+                                <RaceTimer
+                                    startTime={startTime}
+                                    running={running}
+                                    setStartTime={setStartTime}
+                                    setRunning={setRunning}
+                                />
                                 : null
                         }
                     </TabPanel>

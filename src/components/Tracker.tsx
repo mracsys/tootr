@@ -102,6 +102,8 @@ const Tracker = (_props: {}) => {
     const [cachedRaceMode, setCachedRaceMode] = useState<boolean | null>(null);
     const [importSimMode, setImportSimMode] = useState<boolean>(false);
     const [lastLocationName, setLastLocationName] = useState<string[]>([]);
+    const [startTime, setStartTime] = useState<number>(0);
+    const [running, setRunning] = useState<boolean>(false);
     const scroller = useRef<ScrollerRef>({});
     const timerRef = useRef<ReturnType<typeof setTimeout>[]>([]);
     const listRef = useRef<string[]>([]);
@@ -1685,6 +1687,10 @@ const Tracker = (_props: {}) => {
                             visitedSimRegions={visitedSimRegions}
                             itemPanelAsTab={!isTall || !isNotMobile}
                             isNotMobile={isNotMobile}
+                            startTime={startTime}
+                            running={running}
+                            setStartTime={setStartTime}
+                            setRunning={setRunning}
                         />
                         <TrackerPaper
                             viewableRegions={viewableRegions}
