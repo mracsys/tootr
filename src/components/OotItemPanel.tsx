@@ -7,9 +7,7 @@ import { OotDungeonTracker } from './OotDungeonTracker';
 
 interface OotItemPanelProps {
     addStartingItem: (item_name: string, count?: number) => void,
-    addStartingItems: (item_names: string[]) => void,
     removeStartingItem: (item_name: string, count?: number) => void,
-    removeStartingItems: (item_names: string[]) => void,
     replaceStartingItem: (add_item_name: string, remove_item_name: string) => void,
     cycleGraphMultiselectOption: ({}?: {
         graphSettingName?: string | undefined;
@@ -62,9 +60,7 @@ export const bottleVariants = [
 
 export const OotItemPanel = ({
     addStartingItem,
-    addStartingItems,
     removeStartingItem,
-    removeStartingItems,
     replaceStartingItem,
     cycleGraphMultiselectOption,
     cycleGraphRewardHint,
@@ -177,26 +173,91 @@ export const OotItemPanel = ({
         setLockedSlots(newLockedSlots);
     }
 
-    const addCumulativeStartingItems = (itemList: string[], itemIndex: number) => {
-        let newStartingItems: string[] = [];
-        for (let i = 0; i <= itemIndex; i++) {
-            if (!!(graphSettings.starting_items) && !(Object.keys(graphSettings.starting_items).includes(itemList[i]))) {
-                newStartingItems.push(itemList[i]);
+    const revertAdultTradeQuest = (currentTradeItem: string) => {
+        const prevItemLocations: {[itemName: string]: string | string[]} = {
+            //'Pocket Egg': 'Kak Anju as Adult',
+            'Cojiro': ['Kak Anju Trade Pocket Cucco'],
+            'Odd Mushroom': 'LW Trade Cojiro',
+            'Odd Potion': 'Kak Granny Trade Odd Mushroom',
+            'Poachers Saw': 'LW Trade Odd Potion',
+            'Broken Sword': 'GV Trade Poachers Saw',
+            'Prescription': 'DMT Trade Broken Sword',
+            'Eyeball Frog': 'ZD Trade Prescription',
+            'Eyedrops': 'LH Trade Eyeball Frog',
+            'Claim Check': 'DMT Trade Eyedrops',
+        };
+        if (Object.keys(prevItemLocations).includes(currentTradeItem)) {
+            if (Array.isArray(prevItemLocations[currentTradeItem])) {
+                for (let location of prevItemLocations[currentTradeItem]) {
+                    handleUnCheck(location);
+                }
+            } else {
+                handleUnCheck(prevItemLocations[currentTradeItem]);
             }
         }
-        addStartingItems(newStartingItems);
     }
 
-    const removeCumulativeStartingItems = (itemList: string[], itemIndex: number) => {
-        let newStartingItems: string[] = [];
-        for (let i = itemList.length - 1; i >= itemIndex; i--) {
-            // Only remove current starting items. Technically the graph already
-            // handles this, but better to be thorough.
-            if (!!(graphSettings.starting_items) && Object.keys(graphSettings.starting_items).includes(itemList[i])) {
-                newStartingItems.push(itemList[i]);
+    const progressAdultTradeQuest = (currentTradeItem: string) => {
+        const nextItemLocations: {[itemName: string]: string | string[]} = {
+            // This function only runs with full adult trade quest off,
+            // which means that Kak Anju as Adult is always a shuffled item
+            // that shouldn't be collected automatically for Pocket Egg.
+            //'None': 'Kak Anju as Adult',
+            'Pocket Egg': ['Kak Anju Trade Pocket Cucco'],
+            'Pocket Cucco': ['Kak Anju Trade Pocket Cucco'],
+            'Cojiro': 'LW Trade Cojiro',
+            'Odd Mushroom': 'Kak Granny Trade Odd Mushroom',
+            'Odd Potion': 'LW Trade Odd Potion',
+            'Poachers Saw': 'GV Trade Poachers Saw',
+            'Broken Sword': 'DMT Trade Broken Sword',
+            'Prescription': 'ZD Trade Prescription',
+            'Eyeball Frog': 'LH Trade Eyeball Frog',
+            'Eyedrops': 'DMT Trade Eyedrops',
+        };
+        if (Object.keys(nextItemLocations).includes(currentTradeItem)) {
+            if (Array.isArray(nextItemLocations[currentTradeItem])) {
+                for (let location of nextItemLocations[currentTradeItem]) {
+                    handleCheck(location);
+                }
+            } else {
+                handleCheck(nextItemLocations[currentTradeItem]);
             }
         }
-        removeStartingItems(newStartingItems);
+    }
+
+    const revertChildTradeQuest = (currentTradeItem: string) => {
+        const prevItemLocations: {[itemName: string]: string[]} = {
+            'Weird Egg': ['HC Malon Egg'],
+            'Zeldas Letter': ['HC Zeldas Letter'],
+            'Keaton Mask': ['Market Mask Shop Item 6'],
+            'Skull Mask': ['Market Mask Shop Item 5'],
+            'Spooky Mask': ['Market Mask Shop Item 8'],
+            'Bunny Hood': ['Market Mask Shop Item 7'],
+            'Mask of Truth': ['Market Mask Shop Item 3'],
+        };
+        if (Object.keys(prevItemLocations).includes(currentTradeItem)) {
+            for (let location of prevItemLocations[currentTradeItem]) {
+                handleUnCheck(location);
+            }
+        }
+    }
+
+    const progressChildTradeQuest = (currentTradeItem: string) => {
+        const nextItemLocations: {[itemName: string]: string[]} = {
+            'None': ['HC Malon Egg'],
+            'Weird Egg': ['HC Zeldas Letter'],
+            'Chicken': ['HC Zeldas Letter'],
+            'Zeldas Letter': ['Market Mask Shop Item 6'],
+            'Keaton Mask': ['Market Mask Shop Item 5'],
+            'Skull Mask': ['Market Mask Shop Item 8'],
+            'Spooky Mask': ['Market Mask Shop Item 7'],
+            'Bunny Hood': ['Market Mask Shop Item 3'],
+        };
+        if (Object.keys(nextItemLocations).includes(currentTradeItem)) {
+            for (let location of nextItemLocations[currentTradeItem]) {
+                handleCheck(location);
+            }
+        }
     }
 
     const createTrackerItem = (gridEntry: itemEntry, entryNum: number): JSX.Element | null => {
@@ -280,6 +341,7 @@ export const OotItemPanel = ({
                     'Bombchus (20)',
                     'Bombchus',
                 ];
+                collected = 0;
                 for (let v of bombchuVariants) {
                     if (!collected && Object.keys(graphPlayerInventory).includes(v)) {
                         collected = graphPlayerInventory[v];
@@ -352,16 +414,6 @@ export const OotItemPanel = ({
                     // whole row used potentially for ocarina buttons if both trade quests are on
                     return createBlankTrackerItem(entryNum);
                 } else {
-                    let currentStartingIndex = 0;
-                    if (!!(graphSettings.starting_items)) {
-                        for (let i = gridEntry.group_variants.length - 1; i >= 0; i--) {
-                            if (Object.keys(graphSettings.starting_items).includes(gridEntry.group_variants[i])) {
-                                collected = 1;
-                                currentStartingIndex = i;
-                                break;
-                            }
-                        }
-                    }
                     let currentInventoryIndex = 0;
                     for (let i = gridEntry.group_variants.length - 1; i >= 0; i--) {
                         if (Object.keys(graphPlayerInventory).includes(gridEntry.group_variants[i])) {
@@ -370,7 +422,7 @@ export const OotItemPanel = ({
                             break;
                         }
                     }
-                    let latestTradeIndex = currentInventoryIndex > currentStartingIndex ? currentInventoryIndex : currentStartingIndex;
+                    let latestTradeIndex = currentInventoryIndex;
                     
                     let tradeList = gridEntry.group_variants;
                     itemName = tradeList[latestTradeIndex];
@@ -378,8 +430,13 @@ export const OotItemPanel = ({
                     let prevTradeIndex = latestTradeIndex;
                     if (nextTradeIndex >= tradeList.length) nextTradeIndex = tradeList.length - 1;
                     if (prevTradeIndex < 0) prevTradeIndex = 0;
-                    addItem = () => addStartingItem(tradeList[nextTradeIndex]);
-                    contextMenuHandler = new ContextMenuHandlerWithArgs(() => removeStartingItem(tradeList[prevTradeIndex]), {});
+                    if (collected) {
+                        addItem = () => progressChildTradeQuest(itemName);
+                        contextMenuHandler = new ContextMenuHandlerWithArgs(() => revertChildTradeQuest(itemName), {});
+                    } else {
+                        addItem = () => progressChildTradeQuest('None');
+                        contextMenuHandler = new ContextMenuHandlerWithArgs(() => {}, {});
+                    }
                 }
             } else if (gridEntry.item_name === 'Pocket Egg') {
                 // adult trade shuffle can be also treated as increasing starting items
@@ -391,17 +448,12 @@ export const OotItemPanel = ({
                     let currentStartingIndex = 0;
                     if (!!(graphSettings.starting_items)) {
                         for (let i = gridEntry.group_variants.length - 1; i >= 0; i--) {
-                            if (Object.keys(graphSettings.starting_items).includes(gridEntry.group_variants[i])) {
+                            if (Object.keys(graphPlayerInventory).includes(gridEntry.group_variants[i])) {
                                 collected = 1;
                                 currentStartingIndex = i;
                                 break;
                             }
                         }
-                    }
-                    if (currentStartingIndex === 0 && Object.keys(graphPlayerInventory).includes('Pocket Cucco')
-                    && (graphSettings.starting_items === undefined || graphSettings.starting_items === null || !(Object.keys(graphSettings.starting_items).includes('Pocket Egg')))) {
-                        currentStartingIndex = 1;
-                        collected = 1;
                     }
                     let tradeList = gridEntry.group_variants;
                     itemName = tradeList[currentStartingIndex];
@@ -409,8 +461,13 @@ export const OotItemPanel = ({
                     let prevTradeIndex = currentStartingIndex;
                     if (nextTradeIndex >= tradeList.length) nextTradeIndex = tradeList.length - 1;
                     if (prevTradeIndex < 0) prevTradeIndex = 0;
-                    addItem = () => addCumulativeStartingItems(tradeList, nextTradeIndex);
-                    contextMenuHandler = new ContextMenuHandlerWithArgs(() => removeCumulativeStartingItems(tradeList, prevTradeIndex), {});
+                    if (collected) {
+                        addItem = () => progressAdultTradeQuest(itemName);
+                        contextMenuHandler = new ContextMenuHandlerWithArgs(() => revertAdultTradeQuest(itemName), {});
+                    } else {
+                        addItem = () => {};
+                        contextMenuHandler = new ContextMenuHandlerWithArgs(() => {}, {});
+                    }
                 }
             } else if (gridEntry.item_name === 'Blue Arrows') {
                 // Don't use replaceStartingItem function for Ice Arrows <-> Blue Fire Arrows

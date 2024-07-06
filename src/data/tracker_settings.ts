@@ -179,6 +179,7 @@ export const tracker_settings_defs: tracker_settings_definitions_v1 = {
             'Plant Magic Beans',
             "Malon's Obstacle Course",
             'Set Scarecrow Song',
+            'Buy Bombchus',
         ]
     },
     show_hints: {

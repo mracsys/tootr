@@ -17,9 +17,7 @@ import RaceTimer from "./RaceTimer";
 
 interface TrackerDrawerProps {
     addStartingItem: (item_name: string, count?: number) => void,
-    addStartingItems: (item_names: string[]) => void,
     removeStartingItem: (item_name: string, count?: number) => void,
-    removeStartingItems: (item_names: string[]) => void,
     replaceStartingItem: (add_item_name: string, remove_item_name: string) => void,
     cycleGraphMultiselectOption: ({}?: {
         graphSettingName?: string | undefined;
@@ -69,9 +67,7 @@ interface TrackerDrawerProps {
 
 const TrackerDrawer = ({
     addStartingItem,
-    addStartingItems,
     removeStartingItem,
-    removeStartingItems,
     replaceStartingItem,
     cycleGraphMultiselectOption,
     cycleGraphRewardHint,
@@ -221,9 +217,7 @@ const TrackerDrawer = ({
                     <div className="ootItemPanelContainer">
                         <ItemPanel
                             addStartingItem={addStartingItem}
-                            addStartingItems={addStartingItems}
                             removeStartingItem={removeStartingItem}
-                            removeStartingItems={removeStartingItems}
                             replaceStartingItem={replaceStartingItem}
                             cycleGraphMultiselectOption={cycleGraphMultiselectOption}
                             cycleGraphRewardHint={cycleGraphRewardHint}
@@ -256,9 +250,7 @@ const TrackerDrawer = ({
                         <div className="ootItemPanelContainer">
                             <ItemPanel
                                 addStartingItem={addStartingItem}
-                                addStartingItems={addStartingItems}
                                 removeStartingItem={removeStartingItem}
-                                removeStartingItems={removeStartingItems}
                                 replaceStartingItem={replaceStartingItem}
                                 cycleGraphMultiselectOption={cycleGraphMultiselectOption}
                                 cycleGraphRewardHint={cycleGraphRewardHint}

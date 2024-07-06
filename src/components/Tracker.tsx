@@ -22,7 +22,7 @@ import {
 } from '@/data/tracker_settings';
 import { location_item_menu_layout, shop_item_menu_layout } from '@/data/location_item_menu_layout';
 
-import { WorldGraphFactory, ExternalFileCacheFactory, ExternalFileCache, ExternalFileCacheList, GraphEntrance, GraphRegion, GraphItem, GraphHintGoal, GraphPlugin } from '@mracsys/randomizer-graph-tool';
+import { WorldGraphFactory, ExternalFileCacheFactory, ExternalFileCache, ExternalFileCacheList, GraphEntrance, GraphRegion, GraphHintGoal, GraphPlugin } from '@mracsys/randomizer-graph-tool';
 
 import '@/styles/tracker.css';
 import '@/styles/themes/light.css';
@@ -1059,26 +1059,6 @@ const Tracker = (_props: {}) => {
         console.log(`[Item] Removed ${count} ${item_name} from starting items`);
     }
 
-    const addStartingItems = (item_names: string[]) => {
-        let graphItems: GraphItem[] = [];
-        for (let item_name of item_names) {
-            graphItems.push(graph.get_item(graph.worlds[playerNumber], item_name));
-        }
-        graph.add_starting_items(graph.worlds[playerNumber], graphItems);
-        refreshSearch();
-        console.log(`[Item] Added ${item_names} to starting items`);
-    }
-
-    const removeStartingItems = (item_names: string[]) => {
-        let graphItems: GraphItem[] = [];
-        for (let item_name of item_names) {
-            graphItems.push(graph.get_item(graph.worlds[playerNumber], item_name));
-        }
-        graph.remove_starting_items(graph.worlds[playerNumber], graphItems);
-        refreshSearch();
-        console.log(`[Item] Removed ${item_names} to starting items`);
-    }
-
     const replaceStartingItem = (add_item_name: string, remove_item_name: string) => {
         let addGraphItem = graph.get_item(graph.worlds[playerNumber], add_item_name);
         let removeGraphItem = graph.get_item(graph.worlds[playerNumber], remove_item_name);
@@ -1653,9 +1633,7 @@ const Tracker = (_props: {}) => {
                         />
                         <TrackerDrawer
                             addStartingItem={addStartingItem}
-                            addStartingItems={addStartingItems}
                             removeStartingItem={removeStartingItem}
-                            removeStartingItems={removeStartingItems}
                             replaceStartingItem={replaceStartingItem}
                             cycleGraphMultiselectOption={cycleGraphMultiselectOption}
                             cycleGraphRewardHint={cycleGraphRewardHint}

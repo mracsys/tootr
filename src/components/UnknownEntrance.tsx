@@ -196,7 +196,7 @@ const UnknownEntrance = ({
                 shopLocations.push(...reverseLink.target_group.locations.filter(l => showEntranceLocations && shopLocationFilter(l, showShops, searchTerm)));
                 otherEntrances.push(...reverseLink.target_group.exits.filter(e => 
                     !(renderedConnectors.includes(e)) &&
-                    (e.shuffled || e.target_group !== reverseLink.source_group || rootIsWarp) &&
+                    (e.shuffled || entrance.source_group !== (!!e.replaces ? e.replaces : e).target_group || rootIsWarp) && // || e.target_group !== reverseLink.source_group
                     (e !== reverseLink.reverse || rootIsWarp || (!e.coupled && e.shuffled)) &&
                     entranceOrTargetMatchesTerm(e, collapsedRegions, title, searchTerm, showEntranceLocations, showShops, showHints, regionIsFoolish, lastLocationName, simMode, peekedLocations, [...renderedConnectors])));
             }

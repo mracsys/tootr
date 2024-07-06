@@ -6,9 +6,7 @@ import '@/styles/ItemPanel.css';
 
 interface ItemPanelProps {
     addStartingItem: (item_name: string, count?: number) => void,
-    addStartingItems: (item_names: string[]) => void,
     removeStartingItem: (item_name: string, count?: number) => void,
-    removeStartingItems: (item_names: string[]) => void,
     replaceStartingItem: (add_item_name: string, remove_item_name: string) => void,
     cycleGraphMultiselectOption: ({}?: {
         graphSettingName?: string | undefined;
@@ -35,9 +33,7 @@ interface ItemPanelProps {
 
 export const ItemPanel = ({
     addStartingItem,
-    addStartingItems,
     removeStartingItem,
-    removeStartingItems,
     replaceStartingItem,
     cycleGraphMultiselectOption,
     cycleGraphRewardHint,
@@ -56,9 +52,7 @@ export const ItemPanel = ({
         <div className="itemsHeldContainer">
             <OotItemPanel
                 addStartingItem={addStartingItem}
-                addStartingItems={addStartingItems}
                 removeStartingItem={removeStartingItem}
-                removeStartingItems={removeStartingItems}
                 replaceStartingItem={replaceStartingItem}
                 cycleGraphMultiselectOption={cycleGraphMultiselectOption}
                 cycleGraphRewardHint={cycleGraphRewardHint}
