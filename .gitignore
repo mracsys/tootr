@@ -27,3 +27,4 @@ dist-ssr
 *.tgz
 recompile-graph.sh
 public/ootr-local-*
+assets/randomizers
