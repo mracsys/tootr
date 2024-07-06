@@ -46,7 +46,7 @@ jobs:
 
       - name: Login and upload files
         run: |
-          ssh -i $SSH_KEY_PATH -p $SSH_PORT $SSH_USER@$SSH_HOST "find /srv/www/tootr/* -not -path '/srv/www/tootr/ootr-local-*' -delete"
+          ssh -i $SSH_KEY_PATH -p $SSH_PORT $SSH_USER@$SSH_HOST "find /srv/www/tootr/* -not -path '/srv/www/tootr/ootr-local-*' -not -path '/srv/www/tootr/assets*' -delete"
           rsync -rav -e "ssh -i $SSH_KEY_PATH -p $SSH_PORT" ./dist/ $SSH_USER@$SSH_HOST:/srv/www/tootr/
           ssh -i $SSH_KEY_PATH -p $SSH_PORT $SSH_USER@$SSH_HOST "chown -R $SSH_USER:$SSH_GROUP /srv/www/tootr/"
         env:
