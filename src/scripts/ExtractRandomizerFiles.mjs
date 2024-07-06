@@ -5,7 +5,7 @@ import { resolve, dirname } from 'path';
 
 const ExtractRandomizerFiles = () => {
     let ootr = WorldGraphFactory('ootr');
-    let ootrSupportedVersions = ootr.get_game_versions();
+    let ootrSupportedVersions = ootr.get_game_versions(true);
     const outputFolder = process.env.TOOTRDEBUG !== undefined ? 'public' : 'dist';
     const randoRoot = './assets/randomizers/';
     const buildRoot = `./${outputFolder}/`;
