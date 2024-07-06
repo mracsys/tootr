@@ -10,6 +10,7 @@ const ExtractRandomizerFiles = () => {
     const randoRoot = './assets/randomizers/';
     const buildRoot = `./${outputFolder}/`;
     const relativeBuildRoot = `../../../${outputFolder}/`;
+    mkdirSync(resolve(randoRoot), { recursive: true });
     let currentFolders = readdirSync(randoRoot, {withFileTypes: true}).filter(d => d.isDirectory()).map(d => d.name);
     for (let ootrVersion of ootrSupportedVersions.versions) {
         console.log(`Starting version ${ootrVersion.version}`);

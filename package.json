@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build && node ./src/scripts/ExtractRandomizerFiles.mjs",
+    "build": "tsc && vite build",
     "localdeploy": "tsc && vite build && ssh m32 \"find /srv/www/tootr/* -not -path '/srv/www/tootr/ootr-local-*' -not -path '/srv/www/tootr/assets*' -delete\" && rsync -rav -e ssh --exclude 'ootr-local-*' ./dist/ m32:/srv/www/tootr/ && ssh tootr \"chown -R mracsys:www-data /srv/www/tootr/\"",
     "deploy": "tsc && vite build && ssh tootr \"find /srv/www/tootr/* -not -path '/srv/www/tootr/ootr-local-*' -not -path '/srv/www/tootr/assets*' -delete\" && rsync -rav -e ssh --exclude 'ootr-local-*' ./dist/ tootr:/srv/www/tootr/ && ssh tootr \"chown -R mracsys:www-data /srv/www/tootr/\"",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
