@@ -110,7 +110,7 @@ const Tracker = (_props: {}) => {
 
     // user settings panel
     const [savedSettingsVersion, setSavedSettingsVersion] = useState<number>(1);
-    const [graphVersion, setGraphVersion] = useState<string>('8.1.45 Fenhl-3');
+    const [graphVersion, setGraphVersion] = useState<string>('8.1.51 Fenhl-1');
     const [playerNumber, setPlayerNumber] = useState<number>(0);
     const [settingIcons, setSettingIcons] = useState<boolean>(true);
     const [regionPage, setRegionPage] = useState<string>('Overworld');
