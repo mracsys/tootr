@@ -8,7 +8,7 @@ Entrance and location tracker for Ocarina of Time Randomizer. Supports extended 
 
 Learn how to use TOoTR in this video:
 
-[<img src="https://img.youtube.com/vi/mNgKcKv2cT0/hqdefault.jpg" width="600" height="300" />](https://www.youtube.com/embed/mNgKcKv2cT0)
+[![Watch the video](https://img.youtube.com/vi/mNgKcKv2cT0/maxresdefault.jpg)](https://youtu.be/mNgKcKv2cT0)
 
 ## Dev Environment
 
