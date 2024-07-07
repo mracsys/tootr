@@ -783,7 +783,14 @@ const Tracker = (_props: {}) => {
         if (Object.keys(plando).includes(':version')) {
             newVersion = plando[':version'];
         }
-        let supportedVersions = graph.get_game_versions();
+        // handle Fenhl's riir variant
+        if (newVersion.split(' ').length > 2) {
+            newVersion = newVersion.split(' ')[0] + ' ' + newVersion.split(' ')[1];
+            if (Object.keys(plando).includes(':version')) {
+                plando[':version'] = newVersion;
+            }
+        }
+        let supportedVersions = graph.get_game_versions(true);
         if (supportedVersions.versions.filter(v => v.version === newVersion).length === 0) {
             alert(`Unsupported game version ${newVersion}`);
             setTrackerInitialized(true);
