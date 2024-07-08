@@ -443,6 +443,8 @@ export const location_item_menu_layout: item_menu_layout = [
 
 export const shop_item_menu_layout = [
     [
+        'Buy Bottle Bug',
+        'Buy Fish',
         'Buy Goron Tunic',
         'Buy Zora Tunic',
         'Buy Bombs (20)',
@@ -451,7 +453,9 @@ export const shop_item_menu_layout = [
     ],
     [
         'Buy Blue Fire',
+        'Buy Fairy\'s Spirit',
         'Buy Deku Stick (1)',
+        'Buy Deku Nut (10)',
         'Buy Arrows (30)',
         'Buy Deku Seeds (30)',
         'Buy Hylian Shield',
