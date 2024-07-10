@@ -16,6 +16,23 @@ const ExtractRandomizerFiles = () => {
         console.log(`Starting version ${ootrVersion.version}`);
         let github = ootrVersion.github_repo();
         let asset_folder = `${ootrVersion.branch === '' ? 'main' : ootrVersion.branch}`;
+        switch (ootrVersion.branch) {
+            case '':
+                asset_folder = 'main';
+                break;
+            case 'Dev':
+            case 'f.LUM':
+            case 'Stable':
+            case 'Release':
+                asset_folder = 'Dev';
+                break;
+            case 'R':
+            case 'Rob':
+            case 'Fenhl':
+            default:
+                asset_folder = ootrVersion.branch;
+                break;
+        }
         // skip branches that were already downloaded
         if (currentFolders.includes(asset_folder)) {
             console.log(`Skipping checkout for already downloaded branch ${asset_folder}`);
