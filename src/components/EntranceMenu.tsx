@@ -37,7 +37,7 @@ const EntranceMenu = ({
 }: EntranceMenuProps) => {
     let eAutoOptions: AutoOption[] = [];
     let longestOption = "";
-    if (sourceEntrance === null) {
+    if (sourceEntrance === null || anchorLocation === null || anchorLocation === undefined) {
         return null;
     } else {
         const sortEntranceAliases = (e1: GraphEntrance, e2: GraphEntrance) => {
