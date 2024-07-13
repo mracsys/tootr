@@ -122,6 +122,7 @@ interface UnknownEntranceProps {
     ekey: string,
     scrollRef: string,
     searchTerm: string,
+    showAreaLocations: boolean,
     showEntranceLocations: boolean,
     regionIsFoolish: boolean,
     simMode: boolean,
@@ -160,6 +161,7 @@ const UnknownEntrance = ({
     ekey,
     scrollRef,
     searchTerm,
+    showAreaLocations,
     showEntranceLocations,
     regionIsFoolish,
     simMode,
@@ -191,6 +193,7 @@ const UnknownEntrance = ({
             let shopLocations: GraphLocation[] = [];
             let internalLocations: GraphLocation[] = [];
             let otherEntrances: GraphEntrance[] = [];
+            let showHideoutExit = false;
             if (!!reverseLink.target_group && reverseLink.target_group.page === '') {
                 internalLocations.push(...reverseLink.target_group.locations.filter(l => showEntranceLocations && locationFilter(l, collapsedRegions, title, showHints, regionIsFoolish, lastLocationName, simMode, peekedLocations, searchTerm)));
                 shopLocations.push(...reverseLink.target_group.locations.filter(l => showEntranceLocations && shopLocationFilter(l, showShops, searchTerm)));
@@ -199,10 +202,16 @@ const UnknownEntrance = ({
                     (e.shuffled || entrance.source_group !== (!!e.replaces ? e.replaces : e).target_group || rootIsWarp) && // || e.target_group !== reverseLink.source_group
                     (e !== reverseLink.reverse || rootIsWarp || (!e.coupled && e.shuffled)) &&
                     entranceOrTargetMatchesTerm(e, collapsedRegions, title, searchTerm, showEntranceLocations, showShops, showHints, regionIsFoolish, lastLocationName, simMode, peekedLocations, [...renderedConnectors])));
+            } else if (!!reverseLink.target_group && reverseLink.use_target_alias && reverseLink.target_group.page !== '') {
+                let target_foolish = reverseLink.target_group.is_not_required;
+                let filteredLocations: GraphLocation[] = reverseLink.target_group.locations.filter((location) => showAreaLocations && locationFilter(location, collapsedRegions, title, showHints, target_foolish, lastLocationName, simMode, peekedLocations, searchTerm));
+                let filteredEntrances: GraphEntrance[] = reverseLink.target_group.entrances.filter((e) => e.shuffled || (!e.use_target_alias && !e.is_reverse()) || (!!e.reverse && !e.reverse.use_target_alias && e.is_reverse()));
+                showHideoutExit = filteredEntrances.length !== 0 || filteredLocations.length !== 0;
             }
-            if ((reverseLink.target_group.page !== ''
+            if (((reverseLink.target_group.page !== '' && !reverseLink.use_target_alias)
+                || (reverseLink.target_group.page !== '' && showHideoutExit))
             || rootIsWarp
-            || (reverseLink.target_group.page === '' && (searchTerm !== '' || internalLocations.length > 0 || shopLocations.length > 0 || otherEntrances.length > 0 || collapsedRegions[title] === 'none')))) {
+            || (reverseLink.target_group.page === '' && (searchTerm !== '' || internalLocations.length > 0 || shopLocations.length > 0 || otherEntrances.length > 0 || collapsedRegions[title] === 'none'))) {
                 return (
                     <React.Fragment>
                         <LinkedEntrance
@@ -237,6 +246,7 @@ const UnknownEntrance = ({
                             scrollRef={scrollRef}
                             ekey={ekey}
                             searchTerm={searchTerm}
+                            showAreaLocations={showAreaLocations}
                             showEntranceLocations={showEntranceLocations}
                             regionIsFoolish={regionIsFoolish}
                             simMode={simMode}

@@ -48,6 +48,7 @@ interface LinkedEntranceProps {
     scrollRef: string,
     ekey: string,
     searchTerm: string,
+    showAreaLocations: boolean,
     showEntranceLocations: boolean,
     regionIsFoolish: boolean,
     simMode: boolean,
@@ -88,6 +89,7 @@ const LinkedEntrance = ({
     scrollRef,
     ekey,
     searchTerm,
+    showAreaLocations,
     showEntranceLocations,
     regionIsFoolish,
     simMode,
@@ -244,6 +246,7 @@ const LinkedEntrance = ({
                         ekey={entrance.name + otherEntrance.name + ekey}
                         key={entrance.name + otherEntrance.name + ekey + i}
                         searchTerm={searchTerm}
+                        showAreaLocations={showAreaLocations}
                         showEntranceLocations={showEntranceLocations}
                         regionIsFoolish={regionIsFoolish}
                         simMode={simMode}

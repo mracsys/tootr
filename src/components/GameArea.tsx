@@ -105,7 +105,14 @@ const GameArea = ({
         ((!showUnshuffledEntrances && (entrance.shuffled || connectorShuffled)) || showUnshuffledEntrances) &&
         entranceOrTargetMatchesTerm(entrance, collapsedRegions, title, searchTerm, showEntranceLocations, showShops, showHints, region.is_not_required, lastLocationName, simMode, peekedLocations)).sort((a, b) => a.type_priority - b.type_priority || a.alias.localeCompare(b.alias));
 
+    // Don't show areas that don't match search criteria
     if (filteredEntrances.length === 0 && filteredLocations.length === 0 && searchTerm !== '') {
+        return null;
+    }
+    // Don't show areas with unshuffled entrances that all lead to the same area.
+    // Used to filter out Thieves Hideout subregions when unshuffled without pots/crates/keys shuffled
+    if (entrances.filter((e) => e.shuffled || (!e.use_target_alias && !e.is_reverse()) || (!!e.reverse && !e.reverse.use_target_alias && e.is_reverse())).length === 0
+    && filteredLocations.length === 0) {
         return null;
     }
     return (
@@ -229,6 +236,7 @@ const GameArea = ({
                                     showShops={showShops}
                                     showShopInput={showShopInput}
                                     showShopRupee={showShopRupee}
+                                    showAreaLocations={showAreaLocations}
                                     showEntranceLocations={showEntranceLocations}
                                     showHints={showHints}
                                     showAgeLogic={showAgeLogic}
