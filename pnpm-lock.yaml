@@ -15,8 +15,8 @@ importers:
         specifier: ^11.11.5
         version: 11.11.5(@emotion/react@11.11.4(@types/react@18.3.3)(react@18.3.1))(@types/react@18.3.3)(react@18.3.1)
       '@mracsys/randomizer-graph-tool':
-        specifier: ^2.0.18
-        version: 2.0.18
+        specifier: ^2.0.20
+        version: 2.0.20
       '@mui/icons-material':
         specifier: ^5.15.20
         version: 5.15.20(@mui/material@5.15.20(@emotion/react@11.11.4(@types/react@18.3.3)(react@18.3.1))(@emotion/styled@11.11.5(@emotion/react@11.11.4(@types/react@18.3.3)(react@18.3.1))(@types/react@18.3.3)(react@18.3.1))(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@types/react@18.3.3)(react@18.3.1)
@@ -189,8 +189,8 @@ packages:
     resolution: {integrity: sha512-UwgBRMjJP+xv857DCngvqXI3Iq6J4v0wXmwc6sapg+zyhbwmQX67LUEFrkK5tbyJ30jGuG3ZvWpBiB9LCy1kWw==}
     engines: {node: '>=6.9.0'}
 
-  '@babel/standalone@7.24.7':
-    resolution: {integrity: sha512-QRIRMJ2KTeN+vt4l9OjYlxDVXEpcor1Z6V7OeYzeBOw6Q8ew9oMTHjzTx8s6ClsZO7wVf6JgTRutihatN6K0yA==}
+  '@babel/standalone@7.24.8':
+    resolution: {integrity: sha512-qo6KonLh/hNmzRrg70rWc3noctWIh6oXuyBIa2RZlSqJpIGKvrSTWaI4zlOGZS19ChfA5uSEGuaXdN4xs6G+Cw==}
     engines: {node: '>=6.9.0'}
 
   '@babel/template@7.24.7':
@@ -471,8 +471,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.25':
     resolution: {integrity: sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ==}
 
-  '@mracsys/randomizer-graph-tool@2.0.18':
-    resolution: {integrity: sha512-JlnV9lfT8G8jnfjW2+GmNaOopbZDNzKrRmnB9oevZUPBiXa5gb7UdFXPc5q9ttwCNLK28ZSqS8kRzKsCrW4xxw==}
+  '@mracsys/randomizer-graph-tool@2.0.20':
+    resolution: {integrity: sha512-5/+enBdvDM5nZTA3tWL6gA6w9ZghZG/LdOnLL3v5gObSA9X6Nm8ws5ZCZiI0ch/memeaEVL1sPWOgy/x3WHMpA==}
 
   '@mui/base@5.0.0-beta.40':
     resolution: {integrity: sha512-I/lGHztkCzvwlXpjD2+SNmvNQvB4227xBXhISPjEaJUXGImOQ9f3D2Yj/T3KasSI/h0MLWy74X0J6clhPmsRbQ==}
@@ -1653,7 +1653,7 @@ snapshots:
     dependencies:
       regenerator-runtime: 0.14.1
 
-  '@babel/standalone@7.24.7': {}
+  '@babel/standalone@7.24.8': {}
 
   '@babel/template@7.24.7':
     dependencies:
@@ -1913,11 +1913,11 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.4.15
 
-  '@mracsys/randomizer-graph-tool@2.0.18':
+  '@mracsys/randomizer-graph-tool@2.0.20':
     dependencies:
       '@babel/generator': 7.24.7
       '@babel/parser': 7.24.7
-      '@babel/standalone': 7.24.7
+      '@babel/standalone': 7.24.8
       '@babel/types': 7.24.7
       semver: 7.6.2
 
