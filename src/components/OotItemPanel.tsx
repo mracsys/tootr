@@ -347,6 +347,7 @@ export const OotItemPanel = ({
                         collected = graphPlayerInventory[v];
                     }
                 }
+                addItem = !collected ? () => addStartingItem(gridEntry.item_name) : () => {};
             } else {
                 itemName = gridEntry.item_name;
                 addItem = (!collected || (!!(gridEntry.sub_variants) && gridEntry.sub_variants.length > collected)) ? () => addStartingItem(gridEntry.item_name) : () => {};
