@@ -125,7 +125,8 @@ const LinkedEntrance = ({
     let region = entrance.connected_region?.parent_group;
     if (region === null || region === undefined) throw `Linked entrance somehow does not have a connected region: ${entrance.name}`;
     let hintColor = '';
-    if (region.page === '') {
+    let showHintMetadata = region.page === '';
+    if (showHintMetadata) {
         hintColor = `${region.is_required ? 'entranceContainerRequiredGeneric' : ''} ${!region.is_required && region.required_for.length > 0 ? 'entranceContainerRequiredSpecific' : ''} ${region.is_not_required ? 'entranceContainerNotRequired' : ''}`;
     }
     return (
@@ -137,30 +138,30 @@ const LinkedEntrance = ({
                         {buildEntranceName(entrance)}
                     </div>
                     {
-                        region.num_major_items !== null ?
+                        region.num_major_items !== null && showHintMetadata ?
                             <span className='areaTitleItemCount'>{region.num_major_items} Major Items</span>
                             : null
                     }
                     {
-                        region.num_major_items !== null
+                        region.num_major_items !== null && showHintMetadata
                         && (region.hinted_items.length > 0 || region.required_for.length > 0) ?
                             <span className='areaTitleIconSeparator'>|</span>
                             : null
                     }
                     {
-                        region.hinted_items.map((item, i) => {
+                        showHintMetadata ? region.hinted_items.map((item, i) => {
                             return (
                                 <OotItemIcon key={`pathItem${i}`} className='areaTitleItemIcon' itemName={item.name} />
                             )
-                        })
+                        }) : null
                     }
                     {
-                        region.hinted_items.length > 0 && region.required_for.length > 0 ?
+                        region.hinted_items.length > 0 && region.required_for.length > 0 && showHintMetadata ?
                             <span className='areaTitleIconSeparator'>|</span>
                             : null
                     }
                     {
-                        region.required_for.map((g, i) => {
+                        showHintMetadata ? region.required_for.map((g, i) => {
                             if (!!g.item) {
                                 return (
                                     <OotItemIcon key={`pathItem${i}`} className='areaTitlePathIcon' itemName={g.item.name} />
@@ -172,10 +173,10 @@ const LinkedEntrance = ({
                                 )
                             }
                             return null;
-                        })
+                        }) : null
                     }
                     {
-                        region.num_major_items !== null || region.hinted_items.length > 0 || region.required_for.length > 0 ?
+                        (region.num_major_items !== null || region.hinted_items.length > 0 || region.required_for.length > 0) && showHintMetadata ?
                         <span className='areaTitleIconSeparator'>|</span>
                         : null
                     }

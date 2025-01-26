@@ -285,10 +285,9 @@ const HintMenu = ({
         setRegionMenuOpen(null);
     }
 
-    const handleFindRegion: MouseEventHandler<HTMLDivElement> = (e): void => {
-        const region = e.currentTarget.getAttribute('data-found-item');
-        if (!!region) {
-            setHintRegion(region);
+    const handleFindRegion: (option: string) => void = (option) => {
+        if (!!option) {
+            setHintRegion(option);
         }
         handleRegionMenuClose();
     }
@@ -301,10 +300,9 @@ const HintMenu = ({
         setPathMenuOpen(null);
     }
 
-    const handleFindPath: MouseEventHandler<HTMLDivElement> = (e): void => {
-        const path = e.currentTarget.getAttribute('data-found-item');
-        if (!!path) {
-            setHintPath(path);
+    const handleFindPath: (option: string) => void = (option) => {
+        if (!!option) {
+            setHintPath(option);
         }
         handlePathMenuClose();
     }
@@ -317,10 +315,9 @@ const HintMenu = ({
         setLocationMenuOpen(null);
     }
 
-    const handleFindLocation: MouseEventHandler<HTMLDivElement> = (e): void => {
-        const location = e.currentTarget.getAttribute('data-found-item');
-        if (!!location) {
-            setHintLocation(location);
+    const handleFindLocation: (option: string) => void = (option) => {
+        if (!!option) {
+            setHintLocation(option);
         }
         handleLocationMenuClose();
     }
@@ -379,10 +376,9 @@ const HintMenu = ({
         setLocation2MenuOpen(null);
     }
 
-    const handleFindLocation2: MouseEventHandler<HTMLDivElement> = (e): void => {
-        const location = e.currentTarget.getAttribute('data-found-item');
-        if (!!location) {
-            setHintLocation2(location);
+    const handleFindLocation2: (option: string) => void = (option) => {
+        if (!!option) {
+            setHintLocation2(option);
         }
         handleLocation2MenuClose();
     }
@@ -411,10 +407,9 @@ const HintMenu = ({
         setNumMenuOpen(null);
     }
 
-    const handleFindNum: MouseEventHandler<HTMLDivElement> = (e): void => {
-        const item = e.currentTarget.getAttribute('data-found-item');
-        if (item !== undefined && item !== null) {
-            setHintMajorItems(parseInt(item));
+    const handleFindNum: (option: string) => void = (option) => {
+        if (!!option || option === '0') {
+            setHintMajorItems(parseInt(option));
         }
         handleNumMenuClose();
     }
@@ -565,7 +560,6 @@ const HintMenu = ({
                 handleClose={handleRegionMenuClose}
                 handleFind={handleFindRegion}
                 anchorLocation={regionMenuOpen}
-                sourceLocation={sourceLocation}
                 regions={hintRegions}
                 id="hintMenuRegionList"
             />
@@ -573,7 +567,6 @@ const HintMenu = ({
                 handleClose={handlePathMenuClose}
                 handleFind={handleFindPath}
                 anchorLocation={pathMenuOpen}
-                sourceLocation={sourceLocation}
                 regions={paths}
                 id="hintMenuPathList"
             />
@@ -581,7 +574,6 @@ const HintMenu = ({
                 handleClose={handleLocationMenuClose}
                 handleFind={handleFindLocation}
                 anchorLocation={locationMenuOpen}
-                sourceLocation={sourceLocation}
                 regions={locations.map(l => l.name)}
                 id="hintMenuLocationList"
             />
@@ -589,7 +581,6 @@ const HintMenu = ({
                 handleClose={handleLocation2MenuClose}
                 handleFind={handleFindLocation2}
                 anchorLocation={location2MenuOpen}
-                sourceLocation={sourceLocation}
                 regions={locations.map(l => l.name)}
                 id="hintMenuLocation2List"
             />
@@ -597,7 +588,6 @@ const HintMenu = ({
                 handleClose={handleNumMenuClose}
                 handleFind={handleFindNum}
                 anchorLocation={numMenuOpen}
-                sourceLocation={sourceLocation}
                 regions={Array(100).fill(0).map((_, i) => `${i}`)}
                 id="hintMenuNumList"
             />

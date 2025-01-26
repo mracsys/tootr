@@ -1,26 +1,42 @@
-import React, { MouseEventHandler } from "react";
+import React from "react";
 import { Menu } from "@mui/material";
+import TextField from '@mui/material/TextField';
+import Autocomplete, { createFilterOptions } from '@mui/material/Autocomplete';
 
 import '@/styles/ListMenu.css';
 
 interface ListMenuProps {
     anchorLocation?: Element | null,
-    sourceLocation: string | null,
     handleClose: () => void,
-    handleFind: MouseEventHandler,
+    handleFind: (option: string) => void,
     regions: string[],
     id: string,
 }
 
 const ListMenu = ({
     anchorLocation,
-    sourceLocation,
     handleClose,
     handleFind,
     regions,
     id,
 
 }: ListMenuProps) => {
+
+    const filterOptions = createFilterOptions({
+        stringify: (option: string) => option,
+    });
+
+    const equalOptions = (option: string, value: string) => {
+        return option === value;
+    };
+
+    let longestOption: string = '';
+
+    for (let r of regions) {
+        if (r.length > longestOption.length) {
+            longestOption = r;
+        }
+    }
 
     return (
         <React.Fragment>
@@ -32,24 +48,63 @@ const ListMenu = ({
                 className="hintListMenu"
                 TransitionProps={{ timeout: 0 }}
                 disableScrollLock={true}
+                slotProps={{
+                    paper: {
+                        style: {
+                            border: '1px black solid',
+                            backgroundColor: 'var(--md-sys-color-surface-bright)',
+                            color: 'var(--md-sys-color-on-surface)',
+                        },
+                    },
+                }}
+                anchorOrigin={{
+                    vertical: 'bottom',
+                    horizontal: 'right',
+                }}
+                transformOrigin={{
+                    vertical: 'top',
+                    horizontal: 'right',
+                }}
             >
-                <div className="listMenuContainer">
-                    {
-                        regions.map((r, i) => {
-                            return (
-                                <div
-                                    className="listMenuText"
-                                    onClick={handleFind}
-                                    data-found-in={sourceLocation}
-                                    data-found-item={r}
-                                    key={`listMenuItem${r}${i}`}
-                                >
-                                    {r}
-                                </div>
-                            )
-                        })
+                <Autocomplete
+                    id={id + "hint-autocomplete"}
+                    options={regions}
+                    filterOptions={filterOptions}
+                    isOptionEqualToValue={equalOptions}
+                    renderInput={(params) => 
+                        <div>
+                        <div className="entranceAutoWidthHack">{longestOption}</div>
+                        <TextField {...params} autoFocus key={id + "hint-autocomplete-input"} label="Search..." variant="filled" />
+                        </div>
                     }
-                </div>
+                    onChange={(_event, newValue: string | null, _reason) => {
+                        if (!!newValue)
+                            handleFind(newValue);
+                    }}
+                    onKeyDown={(e) => e.stopPropagation()}
+                    open={true}
+                    disablePortal={true}
+                    fullWidth={true}
+                    classes={{
+                        option: "entranceAutoOption entranceText",
+                        groupUl: "entranceAutoUl",
+                        groupLabel: "entranceAreaText",
+                        endAdornment: "entranceAutoNoButton",
+                        listbox: "entranceAutoListBox",
+                        popper: "entranceAutoPopper",
+                        inputRoot: "entranceAutoInput",
+                        root: "entranceAutoSearchLabel",
+                        paper: "entranceAutoPaper",
+                    }}
+                    slotProps={{
+                        paper: {
+                            style: {
+                                backgroundColor: 'var(--md-sys-color-surface-bright)',
+                                color: 'var(--md-sys-color-on-surface)',
+                            }
+                        },
+                    }}
+                />
             </Menu>
         </React.Fragment>
     );
