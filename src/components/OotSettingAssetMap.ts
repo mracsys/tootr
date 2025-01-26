@@ -811,17 +811,6 @@ export const OotSettingAssetMapFactory = (graphSettings: GraphSettingsConfigurat
         };
     }
 
-    if (isFenhlBranch || graphVersion.gte('8.2.0')) {
-        towerShuffle = {
-            'shuffle_ganon_tower': {
-                img: '/images/ganon.png',
-                fade: !graphSettings['shuffle_ganon_tower'],
-                tooltip: graphSettingsOptions['shuffle_ganon_tower'].display_name,
-                tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['shuffle_ganon_tower']),
-            },
-        };
-    }
-
     if (graphVersion.gte('8.2.14')) {
         tcgLens = {
             'tcg_requires_lens': {
@@ -829,6 +818,17 @@ export const OotSettingAssetMapFactory = (graphSettings: GraphSettingsConfigurat
                 fade: !graphSettings['tcg_requires_lens'],
                 tooltip: graphSettingsOptions['tcg_requires_lens'].display_name,
                 tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['tcg_requires_lens']),
+            },
+        };
+    }
+
+    if (isFenhlBranch || graphVersion.gte('8.2.37')) {
+        towerShuffle = {
+            'shuffle_ganon_tower': {
+                img: '/images/ganon.png',
+                fade: !graphSettings['shuffle_ganon_tower'],
+                tooltip: graphSettingsOptions['shuffle_ganon_tower'].display_name,
+                tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['shuffle_ganon_tower']),
             },
         };
     }
@@ -1022,6 +1022,7 @@ export const OotSettingAssetMapFactory = (graphSettings: GraphSettingsConfigurat
         mergedSettingMap = merge(mergedSettingMap, towerShuffle);
         mergedSettingMap = merge(mergedSettingMap, fortressHP);
         mergedSettingMap = merge(mergedSettingMap, tcgLens);
+        mergedSettingMap = merge(mergedSettingMap, skulls100);
         if (graphVersion.lt('8.1.48')) {
             mergedSettingMap = merge(mergedSettingMap, potSanity2);
         } else {
