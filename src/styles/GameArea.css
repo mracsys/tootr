@@ -59,6 +59,25 @@
     background-color: var(--color-area-header-foolish);
     color: var(--color-area-header-text-foolish);
 }
+.subAreaTitle {
+    color: var(--color-area-header-text);
+    display: flex;
+    flex-direction: row;
+    padding: calc(var(--theme-spacing) * 0.5) calc(var(--theme-spacing) * 2) calc(var(--theme-spacing) * 0.5) calc(var(--theme-spacing) * 4);
+    align-items: center;
+}
+.subAreaTitle.areaRequiredGeneric {
+    background-color: var(--color-area-background-required);
+    color: var(--color-area-header-text-required);
+}
+.subAreaTitle.areaRequiredSpecific {
+    background-color: var(--color-area-background-path);
+    color: var(--color-area-header-text-path);
+}
+.subAreaTitle.areaNotRequired {
+    background-color: var(--color-area-background-foolish);
+    color: var(--color-area-header-text-foolish);
+}
 .areaTitleText {
     font-family: Roboto,sans-serif;
     font-size: 1.25rem;
@@ -71,17 +90,23 @@
     font-weight: 500;
     line-height: 1.6;
 }
+.subAreaTitle .areaTitleText,
+.subAreaTitle .areaTitleItemCount {
+    font-size: 1rem;
+}
 .areaRefreshCounter {
     color: var(--color-area-header);
     opacity: 0;
     height: 0px;
     line-height: 0;
 }
-.areaTitleCollapse {
+.areaTitleTextContainer {
     flex-grow: 1;
-    cursor: pointer;
     display: flex;
     align-items: center;
+}
+.areaTitleCollapse {
+    cursor: pointer;
 }
 .entranceAnchor {
     text-decoration: none;

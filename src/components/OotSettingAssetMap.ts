@@ -628,6 +628,10 @@ export const OotSettingAssetMapFactory = (graphSettings: GraphSettingsConfigurat
     let potSanity2 = {};
     let potSanity3 = {};
     let rewardShuffle = {};
+    let towerShuffle = {};
+    let fortressHP = {};
+    let tcgLens = {};
+    let skulls100 = {};
 
     if (!isFenhlBranch) {
     mainSettingMap = {
@@ -807,130 +811,162 @@ export const OotSettingAssetMapFactory = (graphSettings: GraphSettingsConfigurat
         };
     }
 
+    if (isFenhlBranch || graphVersion.gte('8.2.0')) {
+        towerShuffle = {
+            'shuffle_ganon_tower': {
+                img: '/images/ganon.png',
+                fade: !graphSettings['shuffle_ganon_tower'],
+                tooltip: graphSettingsOptions['shuffle_ganon_tower'].display_name,
+                tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['shuffle_ganon_tower']),
+            },
+        };
+    }
+
+    if (graphVersion.gte('8.2.14')) {
+        tcgLens = {
+            'tcg_requires_lens': {
+                img: '/images/OoT_Lens_of_Truth_Icon.png',
+                fade: !graphSettings['tcg_requires_lens'],
+                tooltip: graphSettingsOptions['tcg_requires_lens'].display_name,
+                tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['tcg_requires_lens']),
+            },
+        };
+    }
+
+    if (isFenhlBranch || graphVersion.gte('8.2.39')) {
+        fortressHP = {
+            'shuffle_gerudo_fortress_heart_piece': {
+                img: '/images/OoT_Piece_of_Heart_Icon.png',
+                fade: graphSettings['shuffle_gerudo_fortress_heart_piece'] !== 'shuffle',
+                tooltip: graphSettingsOptions['shuffle_gerudo_fortress_heart_piece'].display_name,
+                tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['shuffle_gerudo_fortress_heart_piece']),
+            },
+        };
+    }
+
     if (isFenhlBranch) {
-    fenhlSettingMap = {
-        'ocarina_songs': {
-            img: '/images/treble.png',
-            rSub: Array.isArray(graphSettings['ocarina_songs']) ? graphSettings['ocarina_songs'].length.toString() : '0',
-            rSubSource: 'ocarina_songs',
-            fade: Array.isArray(graphSettings['ocarina_songs']) ? graphSettings['ocarina_songs'].length === 0 : true,
-            tooltip: graphSettingsOptions['ocarina_songs'].display_name,
-            tooltip2: Array.isArray(graphSettings['ocarina_songs']) ? graphSettings['ocarina_songs'].length > 0 ? graphSettings['ocarina_songs'].join('\n') : 'None' : '',
-        },
-        'require_gohma': {
-            img: '/images/gohma_eye.png',
-            fade: !graphSettings['require_gohma'],
-            tooltip: graphSettingsOptions['require_gohma'].display_name,
-            tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['require_gohma']),
-        },
-        'open_forest': {
-            img: '/images/kokiri_kid.png',
-            fade: !graphSettings['open_forest'],
-            tooltip: graphSettingsOptions['open_forest'].display_name,
-            tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['open_forest']),
-        },
-        'open_deku': {
-            img: '/images/mido.png',
-            fade: !graphSettings['open_deku'],
-            tooltip: graphSettingsOptions['open_deku'].display_name,
-            tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['open_deku']),
-        },
-        'shopsanity': {
-            img: '/images/shopkeeper.png',
-            rSub: {
-                '0': '0',
-                '1': '1',
-                '2': '2',
-                '3': '3',
-                '4': '4',
-                'random': '?',
-            }[graphSettings['shopsanity'] as string] as string,
-            fade: graphSettings['shopsanity'] === 'off',
-            tooltip: graphSettingsOptions['shopsanity'].display_name,
-            tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['shopsanity']),
-        },
-        'shuffle_ganon_tower': {
-            img: '/images/ganon.png',
-            fade: !graphSettings['shuffle_ganon_tower'],
-            tooltip: graphSettingsOptions['shuffle_ganon_tower'].display_name,
-            tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['shuffle_ganon_tower']),
-        },
-        'shuffle_hideout_entrances': {
-            img: '/images/gerudo_symbol.png',
-            fade: graphSettings['shuffle_hideout_entrances'] === 'off',
-            tooltip: graphSettingsOptions['shuffle_hideout_entrances'].display_name,
-            tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['shuffle_hideout_entrances']),
-        },
-        'shuffle_child_spawn': {
-            img: HomeIcon,
-            rSub: 'C',
-            fade: !graphSettings['shuffle_child_spawn'],
-            tooltip: graphSettingsOptions['shuffle_child_spawn'].display_name,
-            tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['shuffle_child_spawn']),
-        },
-        'shuffle_adult_spawn': {
-            img: HomeIcon,
-            rSub: 'A',
-            fade: !graphSettings['shuffle_adult_spawn'],
-            tooltip: graphSettingsOptions['shuffle_adult_spawn'].display_name,
-            tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['shuffle_adult_spawn']),
-        },
-        'owl_drops': {
-            img: '/images/kaepora.png',
-            fade: graphSettings['owl_drops'] === 'off',
-            tooltip: graphSettingsOptions['owl_drops'].display_name,
-            tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['owl_drops']),
-        },
-        'warp_songs': {
-            img: '/images/warp_pad.png',
-            fade: graphSettings['warp_songs'] === 'off',
-            tooltip: graphSettingsOptions['warp_songs'].display_name,
-            tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['warp_songs']),
-        },
-        'shuffle_gerudo_valley_river_exit': {
-            img: '/images/gerudo_valley_waterfall.png',
-            fade: graphSettings['shuffle_gerudo_valley_river_exit'] === 'off',
-            tooltip: graphSettingsOptions['shuffle_gerudo_valley_river_exit'].display_name,
-            tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['shuffle_gerudo_valley_river_exit']),
-        },
-        'blue_warps': {
-            img: Brightness5Icon,
-            imgClass: 'blueWarpIcon',
-            fade: graphSettings['blue_warps'] === 'dungeon',
-            tooltip: graphSettingsOptions['blue_warps'].display_name,
-            tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['blue_warps']),
-        },
-        'dungeon_back_access': {
-            img: '/images/ganon.png',
-            fade: !graphSettings['dungeon_back_access'],
-            tooltip: graphSettingsOptions['dungeon_back_access'].display_name,
-            tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['dungeon_back_access']),
-        },
-        'logic_water_gold_scale_no_entry': {
-            img: '/images/iron_gold.png',
-            fade: !graphSettings['logic_water_gold_scale_no_entry'],
-            tooltip: graphSettingsOptions['logic_water_gold_scale_no_entry'].display_name,
-            tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['logic_water_gold_scale_no_entry']),
-        },
-        'shuffle_items': {
-            img: LoopIcon,
-            fade: !graphSettings['shuffle_items'],
-            tooltip: graphSettingsOptions['shuffle_items'].display_name,
-            tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['shuffle_items']),
-        },
-        'shuffle_base_item_pool': {
-            img: '/images/OoT_Heart_Container_Icon.png',
-            fade: !graphSettings['shuffle_base_item_pool'],
-            tooltip: graphSettingsOptions['shuffle_base_item_pool'].display_name,
-            tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['shuffle_base_item_pool']),
-        },
-        'shuffle_gerudo_fortress_heart_piece': {
-            img: '/images/OoT_Piece_of_Heart_Icon.png',
-            fade: graphSettings['shuffle_gerudo_fortress_heart_piece'] !== 'shuffle',
-            tooltip: graphSettingsOptions['shuffle_gerudo_fortress_heart_piece'].display_name,
-            tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['shuffle_gerudo_fortress_heart_piece']),
-        },
-    };
+        fenhlSettingMap = {
+            'ocarina_songs': {
+                img: '/images/treble.png',
+                rSub: Array.isArray(graphSettings['ocarina_songs']) ? graphSettings['ocarina_songs'].length.toString() : '0',
+                rSubSource: 'ocarina_songs',
+                fade: Array.isArray(graphSettings['ocarina_songs']) ? graphSettings['ocarina_songs'].length === 0 : true,
+                tooltip: graphSettingsOptions['ocarina_songs'].display_name,
+                tooltip2: Array.isArray(graphSettings['ocarina_songs']) ? graphSettings['ocarina_songs'].length > 0 ? graphSettings['ocarina_songs'].join('\n') : 'None' : '',
+            },
+            'require_gohma': {
+                img: '/images/gohma_eye.png',
+                fade: !graphSettings['require_gohma'],
+                tooltip: graphSettingsOptions['require_gohma'].display_name,
+                tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['require_gohma']),
+            },
+            'open_forest': {
+                img: '/images/kokiri_kid.png',
+                fade: !graphSettings['open_forest'],
+                tooltip: graphSettingsOptions['open_forest'].display_name,
+                tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['open_forest']),
+            },
+            'open_deku': {
+                img: '/images/mido.png',
+                fade: !graphSettings['open_deku'],
+                tooltip: graphSettingsOptions['open_deku'].display_name,
+                tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['open_deku']),
+            },
+            'shopsanity': {
+                img: '/images/shopkeeper.png',
+                rSub: {
+                    '0': '0',
+                    '1': '1',
+                    '2': '2',
+                    '3': '3',
+                    '4': '4',
+                    'random': '?',
+                }[graphSettings['shopsanity'] as string] as string,
+                fade: graphSettings['shopsanity'] === 'off',
+                tooltip: graphSettingsOptions['shopsanity'].display_name,
+                tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['shopsanity']),
+            },
+            'shuffle_hideout_entrances': {
+                img: '/images/gerudo_symbol.png',
+                fade: graphSettings['shuffle_hideout_entrances'] === 'off',
+                tooltip: graphSettingsOptions['shuffle_hideout_entrances'].display_name,
+                tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['shuffle_hideout_entrances']),
+            },
+            'shuffle_child_spawn': {
+                img: HomeIcon,
+                rSub: 'C',
+                fade: !graphSettings['shuffle_child_spawn'],
+                tooltip: graphSettingsOptions['shuffle_child_spawn'].display_name,
+                tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['shuffle_child_spawn']),
+            },
+            'shuffle_adult_spawn': {
+                img: HomeIcon,
+                rSub: 'A',
+                fade: !graphSettings['shuffle_adult_spawn'],
+                tooltip: graphSettingsOptions['shuffle_adult_spawn'].display_name,
+                tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['shuffle_adult_spawn']),
+            },
+            'owl_drops': {
+                img: '/images/kaepora.png',
+                fade: graphSettings['owl_drops'] === 'off',
+                tooltip: graphSettingsOptions['owl_drops'].display_name,
+                tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['owl_drops']),
+            },
+            'warp_songs': {
+                img: '/images/warp_pad.png',
+                fade: graphSettings['warp_songs'] === 'off',
+                tooltip: graphSettingsOptions['warp_songs'].display_name,
+                tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['warp_songs']),
+            },
+            'shuffle_gerudo_valley_river_exit': {
+                img: '/images/gerudo_valley_waterfall.png',
+                fade: graphSettings['shuffle_gerudo_valley_river_exit'] === 'off',
+                tooltip: graphSettingsOptions['shuffle_gerudo_valley_river_exit'].display_name,
+                tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['shuffle_gerudo_valley_river_exit']),
+            },
+            'blue_warps': {
+                img: Brightness5Icon,
+                imgClass: 'blueWarpIcon',
+                fade: graphSettings['blue_warps'] === 'dungeon',
+                tooltip: graphSettingsOptions['blue_warps'].display_name,
+                tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['blue_warps']),
+            },
+            'dungeon_back_access': {
+                img: '/images/ganon.png',
+                fade: !graphSettings['dungeon_back_access'],
+                tooltip: graphSettingsOptions['dungeon_back_access'].display_name,
+                tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['dungeon_back_access']),
+            },
+            'logic_water_gold_scale_no_entry': {
+                img: '/images/iron_gold.png',
+                fade: !graphSettings['logic_water_gold_scale_no_entry'],
+                tooltip: graphSettingsOptions['logic_water_gold_scale_no_entry'].display_name,
+                tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['logic_water_gold_scale_no_entry']),
+            },
+            'shuffle_items': {
+                img: LoopIcon,
+                fade: !graphSettings['shuffle_items'],
+                tooltip: graphSettingsOptions['shuffle_items'].display_name,
+                tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['shuffle_items']),
+            },
+            'shuffle_base_item_pool': {
+                img: '/images/OoT_Heart_Container_Icon.png',
+                fade: !graphSettings['shuffle_base_item_pool'],
+                tooltip: graphSettingsOptions['shuffle_base_item_pool'].display_name,
+                tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['shuffle_base_item_pool']),
+            },
+        };
+        if (graphVersion.gte('8.2.0')) {
+            skulls100 = {
+                'shuffle_100_skulltula_rupee': {
+                    img: '/images/OoT_Token_Icon.png',
+                    rSub: '100',
+                    fade: !graphSettings['shuffle_100_skulltula_rupee'],
+                    tooltip: graphSettingsOptions['shuffle_100_skulltula_rupee'].display_name,
+                    tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['shuffle_100_skulltula_rupee']),
+                },
+            }
+        }
     }
 
     if (isRealRobBranch) {
@@ -983,6 +1019,9 @@ export const OotSettingAssetMapFactory = (graphSettings: GraphSettingsConfigurat
         mergedSettingMap = merge(baseSettingMap, fenhlSettingMap);
         mergedSettingMap = merge(mergedSettingMap, stableSettingMap);
         mergedSettingMap = merge(mergedSettingMap, rewardShuffle);
+        mergedSettingMap = merge(mergedSettingMap, towerShuffle);
+        mergedSettingMap = merge(mergedSettingMap, fortressHP);
+        mergedSettingMap = merge(mergedSettingMap, tcgLens);
         if (graphVersion.lt('8.1.48')) {
             mergedSettingMap = merge(mergedSettingMap, potSanity2);
         } else {
@@ -992,12 +1031,18 @@ export const OotSettingAssetMapFactory = (graphSettings: GraphSettingsConfigurat
         mergedSettingMap = merge(baseSettingMap, mainSettingMap);
         mergedSettingMap = merge(mergedSettingMap, realRobSettingMap);
         mergedSettingMap = merge(mergedSettingMap, potSanity3);
+        mergedSettingMap = merge(mergedSettingMap, towerShuffle);
+        mergedSettingMap = merge(mergedSettingMap, fortressHP);
+        mergedSettingMap = merge(mergedSettingMap, tcgLens);
         if (graphVersion.gte('8.1.38')) {
             mergedSettingMap = merge(mergedSettingMap, rewardShuffle);
         }
     } else {
         mergedSettingMap = merge(baseSettingMap, mainSettingMap);
         mergedSettingMap = merge(mergedSettingMap, stableSettingMap);
+        mergedSettingMap = merge(mergedSettingMap, towerShuffle);
+        mergedSettingMap = merge(mergedSettingMap, fortressHP);
+        mergedSettingMap = merge(mergedSettingMap, tcgLens);
         if (graphVersion.gte('8.1.38')) {
             mergedSettingMap = merge(mergedSettingMap, rewardShuffle);
         }

@@ -21,6 +21,7 @@ interface HintMenuProps {
     handleFind: (data: HintMenuData) => void,
     clearHint: () => void,
     regions: GraphRegion[],
+    hintRegions: string[],
     fullEntrancePool: GraphEntrancePool,
     fullExitPool: GraphEntrancePool,
     locations: GraphLocation[],
@@ -111,6 +112,7 @@ const HintMenu = ({
     handleFind,
     clearHint,
     regions,
+    hintRegions,
     fullEntrancePool,
     fullExitPool,
     locations,
@@ -564,7 +566,7 @@ const HintMenu = ({
                 handleFind={handleFindRegion}
                 anchorLocation={regionMenuOpen}
                 sourceLocation={sourceLocation}
-                regions={regions.map(r => r.name)}
+                regions={hintRegions}
                 id="hintMenuRegionList"
             />
             <ListMenu

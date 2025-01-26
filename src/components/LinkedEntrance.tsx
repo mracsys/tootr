@@ -15,6 +15,7 @@ import { GraphRegion, GraphEntrance, GraphLocation } from '@mracsys/randomizer-g
 import LogicIndicator from './LogicIndicator';
 
 import '@/styles/EntranceStyles.css';
+import OotItemIcon from './OotItemIcon';
 
 interface LinkedEntranceProps {
     title: string,
@@ -121,14 +122,63 @@ const LinkedEntrance = ({
             </div>
         </div>
     );
+    let region = entrance.connected_region?.parent_group;
+    if (region === null || region === undefined) throw `Linked entrance somehow does not have a connected region: ${entrance.name}`;
+    let hintColor = '';
+    if (region.page === '') {
+        hintColor = `${region.is_required ? 'entranceContainerRequiredGeneric' : ''} ${!region.is_required && region.required_for.length > 0 ? 'entranceContainerRequiredSpecific' : ''} ${region.is_not_required ? 'entranceContainerNotRequired' : ''}`;
+    }
     return (
         <React.Fragment key={ekey}>
             <LogicIndicator spot={entrance} showAgeLogic={showAgeLogic}>
-                <div className="entranceContainer" key={entrance.name + "label"}>
+                <div className={`entranceContainer ${hintColor}`} key={entrance.name + "label"}>
                     { forceVisible ? <SubdirectoryArrowRightIcon /> : null }
                     <div className="entranceLabel">
                         {buildEntranceName(entrance)}
                     </div>
+                    {
+                        region.num_major_items !== null ?
+                            <span className='areaTitleItemCount'>{region.num_major_items} Major Items</span>
+                            : null
+                    }
+                    {
+                        region.num_major_items !== null
+                        && (region.hinted_items.length > 0 || region.required_for.length > 0) ?
+                            <span className='areaTitleIconSeparator'>|</span>
+                            : null
+                    }
+                    {
+                        region.hinted_items.map((item, i) => {
+                            return (
+                                <OotItemIcon key={`pathItem${i}`} className='areaTitleItemIcon' itemName={item.name} />
+                            )
+                        })
+                    }
+                    {
+                        region.hinted_items.length > 0 && region.required_for.length > 0 ?
+                            <span className='areaTitleIconSeparator'>|</span>
+                            : null
+                    }
+                    {
+                        region.required_for.map((g, i) => {
+                            if (!!g.item) {
+                                return (
+                                    <OotItemIcon key={`pathItem${i}`} className='areaTitlePathIcon' itemName={g.item.name} />
+                                )
+                            }
+                            if (!!g.location) {
+                                return (
+                                    <OotItemIcon key={`pathItem${i}`} className='areaTitlePathIcon' itemName={g.location.name} />
+                                )
+                            }
+                            return null;
+                        })
+                    }
+                    {
+                        region.num_major_items !== null || region.hinted_items.length > 0 || region.required_for.length > 0 ?
+                        <span className='areaTitleIconSeparator'>|</span>
+                        : null
+                    }
                     {
                         reverseLink.target_group?.page !== '' ?
                         <a
@@ -188,7 +238,7 @@ const LinkedEntrance = ({
             {
                 /* All other interior locations */
                 internalLocations.map((location, k) => {
-                    if (reverseLink.type !== 'Dungeon' && location.viewable(true) === true) {
+                    if (reverseLink.type !== 'Dungeon' && location.viewable(true) === true && (!region.is_not_required || location.is_hint || collapsedRegions[title] === 'none')) {
                         return (
                             <LocationCheck
                                 key={entrance + 'entrancelocationcheck' + k}

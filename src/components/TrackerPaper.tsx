@@ -5,8 +5,9 @@ import { TrackerSettingsCurrent } from '@/data/tracker_settings';
 import type ContextMenuHandler from './ContextMenuHandler';
 import type { CollapsedRegions } from './Tracker';
 import WarpMenu from './WarpMenu';
+import { locationFilter, entranceOrTargetMatchesTerm } from './UnknownEntrance';
 
-import { GraphRegion, GraphEntrance } from '@mracsys/randomizer-graph-tool';
+import { GraphRegion, GraphEntrance, GraphLocation } from '@mracsys/randomizer-graph-tool';
 
 import '@/styles/TrackerPaper.css';
 
@@ -99,6 +100,79 @@ const TrackerPaper = ({
         3400: 8,
     };
 
+    let cards = viewableRegions.map((region, regionIndex) => {
+        let title = region.name;
+        let showAreaLocations = ['Yes'].includes(trackerSettings.show_locations);
+        let showHints = trackerSettings.show_hints;
+        let filteredLocations: GraphLocation[] = region.locations.filter((location) => showAreaLocations && locationFilter(location, collapsedRegions, title, showHints, region.is_not_required, lastLocationName, simMode, peekedLocations, searchTerm));
+        // At the moment, the only unshuffled entrances that have
+        // connectors of a different entrance type are:
+        //      Dampe's Grave -> Windmill exit
+        //      Spawn points
+        //      Warp songs
+        // Dampe's Grave has locations that will always be visible,
+        // and the one-ways are forced visible, so checking for connector
+        // visibility to determine main entrance visibility is redundant.
+        let connectorShuffled = false;
+        let showUnshuffledEntrances = trackerSettings.show_unshuffled_entrances;
+        let showEntranceLocations = ['Yes', 'Interiors Only'].includes(trackerSettings.show_locations);
+        let showShops = trackerSettings.show_unshuffled_locations.includes('Shop Items');
+        let filteredEntrances: GraphEntrance[] = region.exits.filter((entrance) => 
+            ((!showUnshuffledEntrances && (entrance.shuffled || connectorShuffled)) || showUnshuffledEntrances) &&
+            entranceOrTargetMatchesTerm(entrance, collapsedRegions, title, searchTerm, showEntranceLocations, showShops, showHints, region.is_not_required, lastLocationName, simMode, peekedLocations)).sort((a, b) => a.type_priority - b.type_priority || a.alias.localeCompare(b.alias));
+    
+        // Don't show areas that don't match search criteria
+        if (filteredEntrances.length === 0 && filteredLocations.length === 0 && searchTerm !== '') {
+            return null;
+        }
+        // Don't show areas with unshuffled entrances that all lead to the same area.
+        // Used to filter out Thieves Hideout subregions when unshuffled without pots/crates/keys shuffled
+        if (region.exits.filter((e) => e.shuffled || (!e.use_target_alias && !e.is_reverse()) || (!!e.reverse && !e.reverse.use_target_alias && e.is_reverse())).length === 0
+        && filteredLocations.length === 0) {
+            return null;
+        }
+
+        return (
+            <GameArea
+                region={region}
+                playerNum={trackerSettings.player_number}
+                collapsedRegions={collapsedRegions}
+                currentPage={trackerSettings.region_page}
+                collapseSwitch={collapseSwitch}
+                reverseCollapseSwitch={reverseCollapseSwitch}
+                setRef={setRef}
+                handleLink={handleLink}
+                handleUnLink={handleUnLink}
+                handleCheck={handleCheck}
+                handleUnCheck={handleUnCheck}
+                handleCheckEntrance={handleCheckEntrance}
+                handleUnCheckEntrance={handleUnCheckEntrance}
+                handleContextMenu={handleContextMenu}
+                handleShopContextMenu={handleShopContextMenu}
+                handleHintContextMenu={handleHintContextMenu}
+                handleEntranceMenuOpen={handleEntranceMenuOpen}
+                handleDungeonTravel={handleDungeonTravel}
+                toggleWalletTiers={toggleWalletTiers}
+                updateShopPrice={updateShopPrice}
+                showShops={showShops}
+                showShopInput={['Both','Price Only'].includes(trackerSettings.shop_price_tracking)}
+                showShopRupee={['Both','Wallet Tier'].includes(trackerSettings.shop_price_tracking)}
+                showUnshuffledEntrances={showUnshuffledEntrances}
+                showAreaLocations={showAreaLocations}
+                showEntranceLocations={showEntranceLocations}
+                showHints={showHints}
+                showAgeLogic={trackerSettings.show_age_logic}
+                key={regionIndex}
+                refreshCounter={refreshCounter}
+                searchTerm={searchTerm}
+                simMode={simMode}
+                lastLocationName={lastLocationName}
+                peekedLocations={peekedLocations}
+                isSubArea={false}
+            />
+        )
+    }).filter(a => a !== null);
+
     return (
         <div
             className={trackerSettings.expand_sidebar ? "areaPaper areaPaperShift" : "areaPaper"}
@@ -111,50 +185,7 @@ const TrackerPaper = ({
                 }
                 <ResponsiveMasonry columnsCountBreakPoints={masonryBreakpoints}>
                 <Masonry gutter="20px">
-                {
-                    viewableRegions.map((region, regionIndex) => {
-                        return (
-                            <GameArea
-                                region={region}
-                                playerNum={trackerSettings.player_number}
-                                collapsedRegions={collapsedRegions}
-                                entrances={region.exits}
-                                locations={region.locations}
-                                currentPage={trackerSettings.region_page}
-                                collapseSwitch={collapseSwitch}
-                                reverseCollapseSwitch={reverseCollapseSwitch}
-                                setRef={setRef}
-                                handleLink={handleLink}
-                                handleUnLink={handleUnLink}
-                                handleCheck={handleCheck}
-                                handleUnCheck={handleUnCheck}
-                                handleCheckEntrance={handleCheckEntrance}
-                                handleUnCheckEntrance={handleUnCheckEntrance}
-                                handleContextMenu={handleContextMenu}
-                                handleShopContextMenu={handleShopContextMenu}
-                                handleHintContextMenu={handleHintContextMenu}
-                                handleEntranceMenuOpen={handleEntranceMenuOpen}
-                                handleDungeonTravel={handleDungeonTravel}
-                                toggleWalletTiers={toggleWalletTiers}
-                                updateShopPrice={updateShopPrice}
-                                showShops={trackerSettings.show_unshuffled_locations.includes('Shop Items')}
-                                showShopInput={['Both','Price Only'].includes(trackerSettings.shop_price_tracking)}
-                                showShopRupee={['Both','Wallet Tier'].includes(trackerSettings.shop_price_tracking)}
-                                showUnshuffledEntrances={trackerSettings.show_unshuffled_entrances}
-                                showAreaLocations={['Yes'].includes(trackerSettings.show_locations)}
-                                showEntranceLocations={['Yes', 'Interiors Only'].includes(trackerSettings.show_locations)}
-                                showHints={trackerSettings.show_hints}
-                                showAgeLogic={trackerSettings.show_age_logic}
-                                key={regionIndex}
-                                refreshCounter={refreshCounter}
-                                searchTerm={searchTerm}
-                                simMode={simMode}
-                                lastLocationName={lastLocationName}
-                                peekedLocations={peekedLocations}
-                            />
-                        )
-                    })
-                }
+                    {cards}
                 </Masonry>
                 </ResponsiveMasonry>
             </div>

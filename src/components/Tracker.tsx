@@ -457,7 +457,7 @@ const Tracker = (_props: {}) => {
     }, [showCheckCounter]);
     useEffect(() => {
         if (trackerInitialized) localStorage.setItem('CollapsedRegions', JSON.stringify(collapsedRegions));
-    }, [Object.keys(collapsedRegions).length]);
+    }, [...Object.values(collapsedRegions)]);
     useEffect(() => {
         if (trackerInitialized) localStorage.setItem('SimModeVisitedRegions', JSON.stringify(Array.from(visitedSimRegions.values())));
     }, [visitedSimRegions.size]);
@@ -1232,17 +1232,13 @@ const Tracker = (_props: {}) => {
         switch (ootHint.hintType) {
             case 'woth':
                 if (ootHint.hintRegion) {
-                    let hintRegion = graph.worlds[playerNumber].region_groups.filter(r => r.name === ootHint.hintRegion);
-                    if (hintRegion.length === 1) {
-                        let hintLocation = graph.worlds[playerNumber].get_location(locationToLink);
-                        graph.hint_required_area(hintLocation, hintRegion[0]);
-                        refreshSearch();
-                    }
+                    let hintLocation = graph.worlds[playerNumber].get_location(locationToLink);
+                    graph.hint_required_area(hintLocation, ootHint.hintRegion);
+                    refreshSearch();
                 }
                 break;
             case 'path':
                 if (ootHint.hintRegion && ootHint.hintPath) {
-                    let hintRegion = graph.worlds[playerNumber].region_groups.filter(r => r.name === ootHint.hintRegion);
                     let tempGoal = new GraphHintGoal();
                     tempGoal.item_count = 1;
                     if (Object.keys(pathItems).includes(ootHint.hintPath)) {
@@ -1251,31 +1247,23 @@ const Tracker = (_props: {}) => {
                     if (Object.keys(pathLocations).includes(ootHint.hintPath)) {
                         tempGoal.location = graph.worlds[playerNumber].get_location(pathLocations[ootHint.hintPath]);
                     }
-                    if (hintRegion.length === 1) {
-                        let hintLocation = graph.worlds[playerNumber].get_location(locationToLink);
-                        graph.hint_area_required_for_goal(hintLocation, hintRegion[0], tempGoal);
-                        refreshSearch();
-                    }
+                    let hintLocation = graph.worlds[playerNumber].get_location(locationToLink);
+                    graph.hint_area_required_for_goal(hintLocation, ootHint.hintRegion, tempGoal);
+                    refreshSearch();
                 }
                 break;
             case 'foolish':
                 if (ootHint.hintRegion) {
-                    let hintRegion = graph.worlds[playerNumber].region_groups.filter(r => r.name === ootHint.hintRegion);
-                    if (hintRegion.length === 1) {
-                        let hintLocation = graph.worlds[playerNumber].get_location(locationToLink);
-                        graph.hint_unrequired_area(hintLocation, hintRegion[0]);
-                        refreshSearch();
-                    }
+                    let hintLocation = graph.worlds[playerNumber].get_location(locationToLink);
+                    graph.hint_unrequired_area(hintLocation, ootHint.hintRegion);
+                    refreshSearch();
                 }
                 break;
             case 'important_check':
                 if (ootHint.hintRegion && ootHint.hintMajorItems !== undefined) {
-                    let hintRegion = graph.worlds[playerNumber].region_groups.filter(r => r.name === ootHint.hintRegion);
-                    if (hintRegion.length === 1) {
-                        let hintLocation = graph.worlds[playerNumber].get_location(locationToLink);
-                        graph.hint_area_num_items(hintLocation, hintRegion[0], ootHint.hintMajorItems);
-                        refreshSearch();
-                    }
+                    let hintLocation = graph.worlds[playerNumber].get_location(locationToLink);
+                    graph.hint_area_num_items(hintLocation, ootHint.hintRegion, ootHint.hintMajorItems);
+                    refreshSearch();
                 }
                 break;
             case 'location':
@@ -1309,13 +1297,10 @@ const Tracker = (_props: {}) => {
                 break;
             case 'misc':
                 if (ootHint.hintRegion && ootHint.hintItem) {
-                    let hintRegion = graph.worlds[playerNumber].region_groups.filter(r => r.name === ootHint.hintRegion);
-                    if (hintRegion.length === 1) {
-                        let hintLocation = graph.worlds[playerNumber].get_location(locationToLink);
-                        let hintedItem = graph.worlds[playerNumber].get_item(ootHint.hintItem);
-                        graph.hint_item_in_area(hintLocation, hintRegion[0], hintedItem);
-                        refreshSearch();
-                    }
+                    let hintLocation = graph.worlds[playerNumber].get_location(locationToLink);
+                    let hintedItem = graph.worlds[playerNumber].get_item(ootHint.hintItem);
+                    graph.hint_item_in_area(hintLocation, ootHint.hintRegion, hintedItem);
+                    refreshSearch();
                 }
                 break;
             default:
@@ -1586,6 +1571,7 @@ const Tracker = (_props: {}) => {
         let graphEntranceToLink = entranceToLink !== '' ? graph.worlds[playerNumber].get_entrance(entranceToLink) : null;
         let graphLocations = graph.get_locations_for_world(graph.worlds[playerNumber]);
         let graphLocationCount = graphLocations.filter(l => l.shuffled && !l.is_hint && !l.is_restricted);
+        let graphHintRegions = graph.get_hint_regions().sort();
         let graphRewardHints = graph.worlds[playerNumber].fixed_item_area_hints;
         let sourceHintLocationType = locationToLink !== '' ? graph.worlds[playerNumber].get_location(locationToLink).type : 'HintStone';
         let sourceHintLocationText = locationToLink !== '' ? graph.worlds[playerNumber].get_location(locationToLink).hint_text : '';
@@ -1753,6 +1739,7 @@ const Tracker = (_props: {}) => {
                             sourceLocationType={sourceHintLocationType}
                             sourceLocationHintText={sourceHintLocationText}
                             regions={graphRegions}
+                            hintRegions={graphHintRegions}
                             fullEntrancePool={graphFullEntrancePool}
                             fullExitPool={graphFullExitPool}
                             locations={graphLocationCount}

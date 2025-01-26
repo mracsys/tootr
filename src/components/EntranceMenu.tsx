@@ -58,10 +58,14 @@ const EntranceMenu = ({
                     optionLabel = entrance.alias;
                 } else {
                     if (!!entrance.reverse && entrance.target_group?.page !== '') {
-                        if (entrance.reverse.target_group?.page === '') {
+                        if (entrance.use_target_alias) {
+                            optionLabel = entrance.target_alias;
+                        } else if (entrance.reverse.target_group?.page === '') {
                             optionLabel = `from ${entrance.reverse.alias}`;
-                        } else if (!regionNames.includes(areaCategory)) { // dungeon names
-                            optionLabel = entrance.alias;
+                        } else if (!regionNames.includes(areaCategory)  // dungeon names
+                            && (entrance.parent_region.parent_group === null || !regionNames.includes(entrance.parent_region.parent_group.name))
+                            && (entrance.parent_region.parent_group === null || entrance.parent_region.parent_group.parent_group === null || !regionNames.includes(entrance.parent_region.parent_group.parent_group.name))) {
+                                optionLabel = entrance.alias;
                         } else { // overworld "reverse"
                             optionLabel = entrance.reverse.alias;
                         }

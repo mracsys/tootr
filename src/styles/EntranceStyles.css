@@ -31,6 +31,15 @@
     align-items: center;
     background-color: var(--color-entrance-background);
 }
+.entranceContainer.entranceContainerRequiredGeneric {
+    background-color: var(--color-area-background-required);
+}
+.entranceContainer.entranceContainerRequiredSpecific {
+    background-color: var(--color-area-background-path);
+}
+.entranceContainer.entranceContainerNotRequired {
+    background-color: var(--color-area-background-foolish);
+}
 .entranceLabel {
     vertical-align: center;
     margin-right: 20px;

@@ -17,8 +17,6 @@ interface GameAreaProps {
     region: GraphRegion,
     playerNum: number,
     collapsedRegions: CollapsedRegions,
-    entrances: GraphEntrance[],
-    locations: GraphLocation[],
     currentPage: string,
     handleLink: (dataLinkFrom: string, dataLinkTo: string) => void,
     handleUnLink: (entrance: string, scrollRef: string) => void,
@@ -49,14 +47,13 @@ interface GameAreaProps {
     simMode: boolean,
     lastLocationName: string[],
     peekedLocations: Set<string>,
+    isSubArea: boolean,
 }
 
 const GameArea = ({
     region,
     playerNum,
     collapsedRegions,
-    entrances,
-    locations,
     currentPage,
     handleLink,
     handleUnLink,
@@ -87,23 +84,18 @@ const GameArea = ({
     simMode,
     lastLocationName,
     peekedLocations,
+    isSubArea,
 }: GameAreaProps) => {
     const preventDefault: MouseEventHandler = (event: MouseEvent) => event.preventDefault();
     let title = region.name;
+    let filter_title = title;
+    if (isSubArea && !!region.parent_group) filter_title = region.parent_group.name;
 
-    let filteredLocations: GraphLocation[] = locations.filter((location) => showAreaLocations && locationFilter(location, collapsedRegions, title, showHints, region.is_not_required, lastLocationName, simMode, peekedLocations, searchTerm));
-    // At the moment, the only unshuffled entrances that have
-    // connectors of a different entrance type are:
-    //      Dampe's Grave -> Windmill exit
-    //      Spawn points
-    //      Warp songs
-    // Dampe's Grave has locations that will always be visible,
-    // and the one-ways are forced visible, so checking for connector
-    // visibility to determine main entrance visibility is redundant.
     let connectorShuffled = false;
-    let filteredEntrances: GraphEntrance[] = entrances.filter((entrance) => 
+    let filteredLocations: GraphLocation[] = region.locations.filter((location) => showAreaLocations && locationFilter(location, collapsedRegions, filter_title, showHints, region.is_not_required, lastLocationName, simMode, peekedLocations, searchTerm));
+    let filteredEntrances: GraphEntrance[] = region.exits.filter((entrance) => 
         ((!showUnshuffledEntrances && (entrance.shuffled || connectorShuffled)) || showUnshuffledEntrances) &&
-        entranceOrTargetMatchesTerm(entrance, collapsedRegions, title, searchTerm, showEntranceLocations, showShops, showHints, region.is_not_required, lastLocationName, simMode, peekedLocations)).sort((a, b) => a.type_priority - b.type_priority || a.alias.localeCompare(b.alias));
+        entranceOrTargetMatchesTerm(entrance, collapsedRegions, filter_title, searchTerm, showEntranceLocations, showShops, showHints, region.is_not_required, lastLocationName, simMode, peekedLocations)).sort((a, b) => a.type_priority - b.type_priority || a.alias.localeCompare(b.alias));
 
     // Don't show areas that don't match search criteria
     if (filteredEntrances.length === 0 && filteredLocations.length === 0 && searchTerm !== '') {
@@ -111,79 +103,135 @@ const GameArea = ({
     }
     // Don't show areas with unshuffled entrances that all lead to the same area.
     // Used to filter out Thieves Hideout subregions when unshuffled without pots/crates/keys shuffled
-    if (entrances.filter((e) => e.shuffled || (!e.use_target_alias && !e.is_reverse()) || (!!e.reverse && !e.reverse.use_target_alias && e.is_reverse())).length === 0
+    if (region.exits.filter((e) => e.shuffled || (!e.use_target_alias && !e.is_reverse()) || (!!e.reverse && !e.reverse.use_target_alias && e.is_reverse())).length === 0
     && filteredLocations.length === 0) {
         return null;
     }
+    filteredLocations = region.local_locations.filter((location) => showAreaLocations && locationFilter(location, collapsedRegions, filter_title, showHints, region.is_not_required, lastLocationName, simMode, peekedLocations, searchTerm));
+    filteredEntrances = region.local_exits.filter((entrance) => 
+        ((!showUnshuffledEntrances && (entrance.shuffled || connectorShuffled)) || showUnshuffledEntrances) &&
+        entranceOrTargetMatchesTerm(entrance, collapsedRegions, filter_title, searchTerm, showEntranceLocations, showShops, showHints, region.is_not_required, lastLocationName, simMode, peekedLocations)).sort((a, b) => a.type_priority - b.type_priority || a.alias.localeCompare(b.alias));
+
     return (
-        <div className={`areaCard ${region.is_required ? 'areaRequiredGeneric' : ''} ${!region.is_required && region.required_for.length > 0 ? 'areaRequiredSpecific' : ''} ${region.is_not_required ? 'areaNotRequired' : ''}`}>
-            <a className="entranceAnchor" href={title} id={title} onClick={preventDefault}>
-                {/* Fake text here to make eslint happy.
-                    Can't wrap the actual title with the link because the areaTitle class breaks margin collapse needed
-                    to offset the anchor below the appbar */}
-                <span className="entranceAnchorFakeText">&nbsp;</span>
-            </a>
-            <div className="areaHeader" />
-            <div className={`areaTitle ${region.is_required ? 'areaRequiredGeneric' : ''} ${!region.is_required && region.required_for.length > 0 ? 'areaRequiredSpecific' : ''} ${region.is_not_required ? 'areaNotRequired' : ''}`}>
-                <div
-                    className="areaTitleCollapse"
-                    onClick={() => collapseSwitch(title)}
-                    onContextMenu={reverseCollapseSwitch.onContextMenu}
-                    data-source={title}
-                >
-                    {
-                        (collapsedRegions[title] === 'none') ?
-                            <ExpandMore className="collapseArea" />
-                            : (collapsedRegions[title] === 'some' || collapsedRegions[title] === undefined) ?
-                            <ChevronRightIcon className="collapseArea" /> :
-                            <ExpandLess className="collapseArea" />
-                    }
-                    <span className="areaTitleText">
-                        {title}
+        <div className={!isSubArea ? `areaCard ${region.is_required ? 'areaRequiredGeneric' : ''} ${!region.is_required && region.required_for.length > 0 ? 'areaRequiredSpecific' : ''} ${region.is_not_required ? 'areaNotRequired' : ''}` : 'subAreaCard'}>
+            {!isSubArea ?
+            <div>
+                <a className="entranceAnchor" href={title} id={title} onClick={preventDefault}>
+                    {/* Fake text here to make eslint happy.
+                        Can't wrap the actual title with the link because the areaTitle class breaks margin collapse needed
+                        to offset the anchor below the appbar */}
+                    <span className="entranceAnchorFakeText">&nbsp;</span>
+                </a>
+                <div className="areaHeader" />
+                <div className={`areaTitle ${region.is_required ? 'areaRequiredGeneric' : ''} ${!region.is_required && region.required_for.length > 0 ? 'areaRequiredSpecific' : ''} ${region.is_not_required ? 'areaNotRequired' : ''}`}>
+                    <div
+                        className="areaTitleTextContainer areaTitleCollapse"
+                        onClick={() => collapseSwitch(title)}
+                        onContextMenu={reverseCollapseSwitch.onContextMenu}
+                        data-source={title}
+                    >
+                        {
+                            (collapsedRegions[title] === 'none') ?
+                                <ExpandMore className="collapseArea" />
+                                : (collapsedRegions[title] === 'some' || collapsedRegions[title] === undefined) ?
+                                <ChevronRightIcon className="collapseArea" /> :
+                                <ExpandLess className="collapseArea" />
+                        }
+                        <span className="areaTitleText">
+                            {title}
+                        </span>
+                    </div>
+                    <span className="areaRefreshCounter">
+                        {refreshCounter}
                     </span>
+                    {
+                        region.num_major_items !== null ?
+                            <span className='areaTitleItemCount'>{region.num_major_items} Major Items</span>
+                            : null
+                    }
+                    {
+                        region.num_major_items !== null
+                        && (region.hinted_items.length > 0 || region.required_for.length > 0) ?
+                            <span className='areaTitleIconSeparator'>|</span>
+                            : null
+                    }
+                    {
+                        region.hinted_items.map((item, i) => {
+                            return (
+                                <OotItemIcon key={`pathItem${i}`} className='areaTitleItemIcon' itemName={item.name} />
+                            )
+                        })
+                    }
+                    {
+                        region.hinted_items.length > 0 && region.required_for.length > 0 ?
+                            <span className='areaTitleIconSeparator'>|</span>
+                            : null
+                    }
+                    {
+                        region.required_for.map((g, i) => {
+                            if (!!g.item) {
+                                return (
+                                    <OotItemIcon key={`pathItem${i}`} className='areaTitlePathIcon' itemName={g.item.name} />
+                                )
+                            }
+                            if (!!g.location) {
+                                return (
+                                    <OotItemIcon key={`pathItem${i}`} className='areaTitlePathIcon' itemName={g.location.name} />
+                                )
+                            }
+                            return null;
+                        })
+                    }
                 </div>
-                <span className="areaRefreshCounter">
-                    {refreshCounter}
-                </span>
-                {
-                    region.num_major_items !== null ?
-                        <span className='areaTitleItemCount'>{region.num_major_items} Major Items</span>
-                        : null
-                }
-                {
-                    region.num_major_items !== null
-                    && (region.hinted_items.length > 0 || region.required_for.length > 0) ?
-                        <span className='areaTitleIconSeparator'>|</span>
-                        : null
-                }
-                {
-                    region.hinted_items.map((item, i) => {
-                        return (
-                            <OotItemIcon key={`pathItem${i}`} className='areaTitleItemIcon' itemName={item.name} />
-                        )
-                    })
-                }
-                {
-                    region.hinted_items.length > 0 && region.required_for.length > 0 ?
-                        <span className='areaTitleIconSeparator'>|</span>
-                        : null
-                }
-                {
-                    region.required_for.map((g, i) => {
-                        if (!!g.item) {
-                            return (
-                                <OotItemIcon key={`pathItem${i}`} className='areaTitlePathIcon' itemName={g.item.name} />
-                            )
-                        }
-                        if (!!g.location) {
-                            return (
-                                <OotItemIcon key={`pathItem${i}`} className='areaTitlePathIcon' itemName={g.location.name} />
-                            )
-                        }
-                        return null;
-                    })
-                }
             </div>
+            :
+            <div>
+                <div className={`subAreaTitle ${region.is_required ? 'areaRequiredGeneric' : ''} ${!region.is_required && region.required_for.length > 0 ? 'areaRequiredSpecific' : ''} ${region.is_not_required ? 'areaNotRequired' : ''}`}>
+                    <div className='areaTitleTextContainer'>
+                        <span className="areaTitleText">
+                            {title}
+                        </span>
+                    </div>
+                    {
+                        region.num_major_items !== null ?
+                            <span className='areaTitleItemCount'>{region.num_major_items} Major Items</span>
+                            : null
+                    }
+                    {
+                        region.num_major_items !== null
+                        && (region.hinted_items.length > 0 || region.required_for.length > 0) ?
+                            <span className='areaTitleIconSeparator'>|</span>
+                            : null
+                    }
+                    {
+                        region.hinted_items.map((item, i) => {
+                            return (
+                                <OotItemIcon key={`pathItem${i}`} className='areaTitleItemIcon' itemName={item.name} />
+                            )
+                        })
+                    }
+                    {
+                        region.hinted_items.length > 0 && region.required_for.length > 0 ?
+                            <span className='areaTitleIconSeparator'>|</span>
+                            : null
+                    }
+                    {
+                        region.required_for.map((g, i) => {
+                            if (!!g.item) {
+                                return (
+                                    <OotItemIcon key={`pathItem${i}`} className='areaTitlePathIcon' itemName={g.item.name} />
+                                )
+                            }
+                            if (!!g.location) {
+                                return (
+                                    <OotItemIcon key={`pathItem${i}`} className='areaTitlePathIcon' itemName={g.location.name} />
+                                )
+                            }
+                            return null;
+                        })
+                    }
+                </div>
+            </div>}
             {
                 (collapsedRegions[title] !== 'all') ?
                 <div>
@@ -258,6 +306,49 @@ const GameArea = ({
                         );
                     })}
                 </div> : null
+            }
+            {
+                region.child_regions.map((region, regionIndex) => {
+                    return (
+                        <GameArea
+                            region={region}
+                            playerNum={playerNum}
+                            collapsedRegions={collapsedRegions}
+                            currentPage={currentPage}
+                            collapseSwitch={collapseSwitch}
+                            reverseCollapseSwitch={reverseCollapseSwitch}
+                            setRef={setRef}
+                            handleLink={handleLink}
+                            handleUnLink={handleUnLink}
+                            handleCheck={handleCheck}
+                            handleUnCheck={handleUnCheck}
+                            handleCheckEntrance={handleCheckEntrance}
+                            handleUnCheckEntrance={handleUnCheckEntrance}
+                            handleContextMenu={handleContextMenu}
+                            handleShopContextMenu={handleShopContextMenu}
+                            handleHintContextMenu={handleHintContextMenu}
+                            handleEntranceMenuOpen={handleEntranceMenuOpen}
+                            handleDungeonTravel={handleDungeonTravel}
+                            toggleWalletTiers={toggleWalletTiers}
+                            updateShopPrice={updateShopPrice}
+                            showShops={showShops}
+                            showShopInput={showShopInput}
+                            showShopRupee={showShopRupee}
+                            showUnshuffledEntrances={showUnshuffledEntrances}
+                            showAreaLocations={showAreaLocations}
+                            showEntranceLocations={showEntranceLocations}
+                            showHints={showHints}
+                            showAgeLogic={showAgeLogic}
+                            key={regionIndex}
+                            refreshCounter={refreshCounter}
+                            searchTerm={searchTerm}
+                            simMode={simMode}
+                            lastLocationName={lastLocationName}
+                            peekedLocations={peekedLocations}
+                            isSubArea={true}
+                        />
+                    )
+                })
             }
         </div>
     );
