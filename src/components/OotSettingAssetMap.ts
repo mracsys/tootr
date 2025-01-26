@@ -962,6 +962,7 @@ export const OotSettingAssetMapFactory = (graphSettings: GraphSettingsConfigurat
                     img: '/images/OoT_Token_Icon.png',
                     rSub: '100',
                     fade: !graphSettings['shuffle_100_skulltula_rupee'],
+                    hideLabels: false,
                     tooltip: graphSettingsOptions['shuffle_100_skulltula_rupee'].display_name,
                     tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['shuffle_100_skulltula_rupee']),
                 },
