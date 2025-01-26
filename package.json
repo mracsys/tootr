@@ -1,7 +1,7 @@
 {
   "name": "tootr",
   "private": true,
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -15,7 +15,7 @@
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
-    "@mracsys/randomizer-graph-tool": "^2.0.21",
+    "@mracsys/randomizer-graph-tool": "2.0.21",
     "@mui/icons-material": "^5.15.20",
     "@mui/material": "^5.15.20",
     "cross-env": "^7.0.3",
