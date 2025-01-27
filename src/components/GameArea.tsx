@@ -186,6 +186,12 @@ const GameArea = ({
             </div>
             :
             <div>
+                <a className="entranceAnchor" href={title} id={title} onClick={preventDefault}>
+                    {/* Fake text here to make eslint happy.
+                        Can't wrap the actual title with the link because the areaTitle class breaks margin collapse needed
+                        to offset the anchor below the appbar */}
+                    <span className="entranceAnchorFakeText">&nbsp;</span>
+                </a>
                 <div className={`subAreaTitle ${region.is_required ? 'areaRequiredGeneric' : ''} ${!region.is_required && region.required_for.length > 0 ? 'areaRequiredSpecific' : ''} ${region.is_not_required ? 'areaNotRequired' : ''}`}>
                     <div className='areaTitleTextContainer'>
                         <span className="areaTitleText">
