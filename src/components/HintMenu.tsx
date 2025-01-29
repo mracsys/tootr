@@ -7,7 +7,7 @@ import ItemMenu from './ItemMenu';
 import ListMenu from "./ListMenu";
 import { location_item_menu_layout } from '@/data/location_item_menu_layout';
 
-import { GraphRegion, GraphEntrancePool, GraphLocation } from '@mracsys/randomizer-graph-tool';
+import { GraphEntrancePool, GraphLocation } from '@mracsys/randomizer-graph-tool';
 
 import '@/styles/HintMenu.css';
 import { location_item_menu_layout_vertical } from "@/data/location_item_menu_layout_vertical";
@@ -20,7 +20,6 @@ interface HintMenuProps {
     handleClose: () => void,
     handleFind: (data: HintMenuData) => void,
     clearHint: () => void,
-    regions: GraphRegion[],
     hintRegions: string[],
     fullEntrancePool: GraphEntrancePool,
     fullExitPool: GraphEntrancePool,
@@ -111,7 +110,6 @@ const HintMenu = ({
     handleClose,
     handleFind,
     clearHint,
-    regions,
     hintRegions,
     fullEntrancePool,
     fullExitPool,
@@ -528,7 +526,6 @@ const HintMenu = ({
                 handleClose={handleEntranceMenuClose}
                 handleLink={handleFindEntrance}
                 entrancePool={fullEntrancePool}
-                regions={regions}
                 id="regionMenuEntranceMenu"
             />
             <EntranceMenu
@@ -536,7 +533,6 @@ const HintMenu = ({
                 handleClose={handleExitMenuClose}
                 handleLink={handleFindExit}
                 entrancePool={fullExitPool}
-                regions={regions}
                 id="regionMenuExitMenu"
                 asExits={true}
             />

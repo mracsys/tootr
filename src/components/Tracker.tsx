@@ -1700,7 +1700,6 @@ const Tracker = (_props: {}) => {
                             handleLink={linkEntrance}
                             entrancePool={graphEntrancePool}
                             sourceEntrance={graphEntranceToLink}
-                            regions={graphRegions}
                             id="globalEntranceMenu"
                         />
                         {
@@ -1738,7 +1737,6 @@ const Tracker = (_props: {}) => {
                             sourceLocation={locationToLink}
                             sourceLocationType={sourceHintLocationType}
                             sourceLocationHintText={sourceHintLocationText}
-                            regions={graphRegions}
                             hintRegions={graphHintRegions}
                             fullEntrancePool={graphFullEntrancePool}
                             fullExitPool={graphFullExitPool}

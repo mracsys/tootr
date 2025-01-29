@@ -30,12 +30,19 @@ const ItemMenu = ({
     let handleSubClose = () => {
         setAnchor(null);
     }
+    let handleSubFind: MouseEventHandler = (e) => {
+        handleFind(e);
+        handleSubClose();
+    }
     return (
         <Menu
             id="noKeysanityItems"
             anchorEl={anchorLocation}
             open={Boolean(anchorLocation)}
-            onClose={handleClose}
+            onClose={() => {
+                handleSubClose();
+                handleClose();
+            }}
             className="locationItemMenu"
             TransitionProps={{ timeout: 0 }}
             disableScrollLock={true}
@@ -56,7 +63,7 @@ const ItemMenu = ({
                                                     sourceLocation={sourceLocation}
                                                     menuLayout={row_item.menu_list}
                                                     handleClose={handleSubClose}
-                                                    handleFind={handleFind}
+                                                    handleFind={handleSubFind}
                                                     showClearButton={false}
                                                 />
                                             </React.Fragment>

@@ -2,7 +2,7 @@ import React from 'react';
 import Menu from '@mui/material/Menu';
 import Autocomplete, { createFilterOptions } from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
-import { GraphEntrance, GraphEntrancePool, GraphRegion } from '@mracsys/randomizer-graph-tool';
+import { GraphEntrance, GraphEntrancePool } from '@mracsys/randomizer-graph-tool';
 
 import '@/styles/EntranceMenu.css';
 
@@ -18,7 +18,6 @@ interface EntranceMenuProps {
     anchorLocation?: Element | null,
     sourceEntrance?: GraphEntrance | null,
     entrancePool: GraphEntrancePool,
-    regions: GraphRegion[],
     id: string,
     asExits?: boolean,
     handleClose: () => void,
@@ -29,7 +28,6 @@ const EntranceMenu = ({
     anchorLocation,
     sourceEntrance,
     entrancePool,
-    regions,
     id,
     handleClose,
     handleLink,
@@ -48,8 +46,6 @@ const EntranceMenu = ({
 
         let sourceName = sourceEntrance === undefined ? 'noData' : sourceEntrance.name;
 
-        let regionNames = regions.map(r => r.name);
-
         for (let [areaCategory, entranceList] of Object.entries(entrancePool).sort((a, b) => a[0].localeCompare(b[0]))) {
             let aliasesAdded: string[] = [];
             for (let entrance of entranceList.sort(sortEntranceAliases)) {
@@ -62,10 +58,8 @@ const EntranceMenu = ({
                             optionLabel = entrance.target_alias;
                         } else if (entrance.reverse.target_group?.page === '') {
                             optionLabel = `from ${entrance.reverse.alias}`;
-                        } else if (!regionNames.includes(areaCategory)  // dungeon names
-                            && (entrance.parent_region.parent_group === null || !regionNames.includes(entrance.parent_region.parent_group.name))
-                            && (entrance.parent_region.parent_group === null || entrance.parent_region.parent_group.parent_group === null || !regionNames.includes(entrance.parent_region.parent_group.parent_group.name))) {
-                                optionLabel = entrance.alias;
+                        } else if (!!entrance.target_group && entrance.target_group.page !== 'Overworld') { // dungeons
+                            optionLabel = entrance.alias;
                         } else { // overworld "reverse"
                             optionLabel = entrance.reverse.alias;
                         }
