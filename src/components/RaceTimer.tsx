@@ -21,9 +21,7 @@ const RaceTimer = ({}: RaceTimerProps) => {
 
         setStartTime(startTimeInit);
         setCurrentTime(currentTimeInit);
-        return () => {
-            setTimerInitialized(true);
-        };
+        setTimerInitialized(true);
     }, []);
 
     useEffect(() => {
