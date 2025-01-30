@@ -1,27 +1,30 @@
-import React, { useEffect, useState, Dispatch, SetStateAction } from "react";
+import React, { useEffect, useState } from "react";
 import ContextMenuHandler from "./ContextMenuHandler";
 
 import '@/styles/RaceTimer.css';
 
-interface RaceTimerProps {
-    startTime: number,
-    running: boolean,
-    setStartTime: Dispatch<SetStateAction<number>>,
-    setRunning: Dispatch<SetStateAction<boolean>>,
-}
+interface RaceTimerProps {}
 
-const RaceTimer = ({
-    startTime,
-    running,
-    setStartTime,
-    setRunning,
-}: RaceTimerProps) => {
+const RaceTimer = ({}: RaceTimerProps) => {
+    const [timerInitialized, setTimerInitialized] = useState<boolean>(false);
+    const [running, setRunning] = useState<boolean>(false);
+    const [startTime, setStartTime] = useState<number>(0);
     const [currentTime, setCurrentTime] = useState<number>(0);
 
     // Initial clock value if the timer got unmounted after start
     useEffect(() => {
-        if (running) setCurrentTime(Date.now());
-    }, [])
+        let clientStartTime = localStorage.getItem('TimerStartTime');
+        let clientCurrentTime = localStorage.getItem('TimerCurrentTime');
+        let startTimeInit = clientStartTime !== null ? JSON.parse(clientStartTime) : startTime;
+        let currentTimeInit = clientCurrentTime !== null ? JSON.parse(clientCurrentTime) : currentTime;
+        if (running) currentTimeInit = Date.now();
+
+        setStartTime(startTimeInit);
+        setCurrentTime(currentTimeInit);
+        return () => {
+            setTimerInitialized(true);
+        };
+    }, []);
 
     useEffect(() => {
         let interval = setInterval(() => {
@@ -31,22 +34,30 @@ const RaceTimer = ({
         return () => clearInterval(interval);
     });
 
+    useEffect(() => {
+        if (timerInitialized) localStorage.setItem('TimerStartTime', JSON.stringify(startTime));
+    }, [startTime]);
+
+    useEffect(() => {
+        if (timerInitialized) localStorage.setItem('TimerCurrentTime', JSON.stringify(currentTime));
+    }, [currentTime]);
+
     const pauseTimer = () => {
         setRunning(false);
-    }
+    };
 
     const startOrResumeTimer = () => {
         const newStartTime = Date.now() - (currentTime - startTime);
         setStartTime(newStartTime);
         setCurrentTime(Date.now());
         setRunning(true);
-    }
+    };
 
     const resetTimer = () => {
         setStartTime(0);
         setCurrentTime(0);
         setRunning(false);
-    }
+    };
 
     const handleClick = () => {
         if (running) {
@@ -54,7 +65,7 @@ const RaceTimer = ({
         } else {
             startOrResumeTimer();
         }
-    }
+    };
 
     const handleRightClick = new ContextMenuHandler(resetTimer);
 
@@ -72,7 +83,7 @@ const RaceTimer = ({
         //const msecsStr = msecs.toString().padStart(3, '0');
 
         return `${hoursStr}:${minutesStr}:${secondsStr}`;
-    }
+    };
 
     return (
         <div
