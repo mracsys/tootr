@@ -632,6 +632,7 @@ export const OotSettingAssetMapFactory = (graphSettings: GraphSettingsConfigurat
     let fortressHP = {};
     let tcgLens = {};
     let skulls100 = {};
+    let goldBoulders = {};
 
     if (!isFenhlBranch) {
     mainSettingMap = {
@@ -1013,6 +1014,10 @@ export const OotSettingAssetMapFactory = (graphSettings: GraphSettingsConfigurat
             tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['shuffle_enemy_spawns']),
         },
     };
+    if (graphVersion.gte('8.2.50')) {
+        // add assets when boulder shuffle is supported
+        goldBoulders = {};
+    }
     }
 
     let mergedSettingMap = {};
@@ -1038,6 +1043,9 @@ export const OotSettingAssetMapFactory = (graphSettings: GraphSettingsConfigurat
         mergedSettingMap = merge(mergedSettingMap, tcgLens);
         if (graphVersion.gte('8.1.38')) {
             mergedSettingMap = merge(mergedSettingMap, rewardShuffle);
+        }
+        if (graphVersion.gte('8.2.50')) {
+            mergedSettingMap = merge(mergedSettingMap, goldBoulders);
         }
     } else {
         mergedSettingMap = merge(baseSettingMap, mainSettingMap);
