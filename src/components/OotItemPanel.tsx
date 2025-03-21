@@ -491,6 +491,27 @@ export const OotItemPanel = ({
                         contextMenuHandler = new ContextMenuHandlerWithArgs(() => removeStartingItem('Ice Arrows'), {});
                     }
                 }
+            } else if (gridEntry.item_name === 'Large Sword') {
+                // Don't use replaceStartingItem function for Giants Knife <-> Biggoron Sword
+                // since this would conflict with checklist-collected large sword variants.
+                if (Object.keys(graphPlayerInventory).includes('Biggoron Sword') && graphPlayerInventory['Biggoron Sword'] >= 1) {
+                    collected = graphPlayerInventory['Biggoron Sword'];
+                    itemName = 'Biggoron Sword';
+                    addItem = () => {};
+                    contextMenuHandler = new ContextMenuHandlerWithArgs(() => removeStartingItem('Biggoron Sword'), {});
+                } else {
+                    if (Object.keys(graphPlayerInventory).includes('Giants Knife') && graphPlayerInventory['Giants Knife'] >= 1) {
+                        collected = graphPlayerInventory['Giants Knife'];
+                        itemName = 'Giants Knife';
+                        addItem = () => addStartingItem('Biggoron Sword');
+                        contextMenuHandler = new ContextMenuHandlerWithArgs(() => removeStartingItem('Giants Knife'), {});
+                    } else {
+                        collected = 0;
+                        itemName = 'Large Sword';
+                        addItem = () => addStartingItem('Giants Knife');
+                        contextMenuHandler = new ContextMenuHandlerWithArgs(() => removeStartingItem('Giants Knife'), {});
+                    }
+                }
             } else {
                 itemName = gridEntry.item_name;
                 addItem = (!collected || (!!(gridEntry.sub_variants) && gridEntry.sub_variants.length > collected)) ? () => addStartingItem(gridEntry.item_name) : () => {};

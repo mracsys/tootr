@@ -222,7 +222,13 @@ export const itemPanelLayout: panelLayout = {
                 "Gold Scale",
             ]
         },
-        { item_name: "Biggoron Sword" },
+        {
+            item_name: "Large Sword",
+            group_variants: [
+                "Giants Knife",
+                "Biggoron Sword",
+            ]
+        },
         { item_name: "Zora Tunic" },
         { item_name: "Hover Boots" },
         {
