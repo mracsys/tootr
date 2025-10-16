@@ -41,7 +41,13 @@ export const location_item_menu_layout_vertical: item_menu_layout = [
     ],
     [
         'Kokiri Sword',
-        'Biggoron Sword',
+        {
+            button_item: 'Large Sword',
+            item_list: [
+                'Biggoron Sword',
+                'Giants Knife',
+            ]
+        },
         'Stone of Agony',
         'Goron Tunic',
         'Zora Tunic',

@@ -19,7 +19,13 @@ export const location_item_menu_layout: item_menu_layout = [
         'Fire Arrows',
         'Dins Fire',
         'Kokiri Sword',
-        'Biggoron Sword',
+        {
+            button_item: 'Large Sword',
+            item_list: [
+                'Biggoron Sword',
+                'Giants Knife',
+            ]
+        },
         'Stone of Agony',
         'Goron Tunic',
         'Zora Tunic',
