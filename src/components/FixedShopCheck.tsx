@@ -14,6 +14,7 @@ interface FixedShopCheckProps {
     handleUnCheck: (locationName: string) => void,
     handleContextMenu: ContextMenuHandler,
     simMode: boolean,
+    peekedLocations: Set<string>,
 }
 
 const FixedShopCheck = ({
@@ -23,6 +24,7 @@ const FixedShopCheck = ({
     handleUnCheck,
     handleContextMenu,
     simMode,
+    peekedLocations,
 }: FixedShopCheckProps) => {
     return (
         <div
@@ -44,7 +46,7 @@ const FixedShopCheck = ({
                 location.item === null || !haveOotItemIcon(location.item.name) ?
                     <AddIcon className="fixedShopIcon" />
                     /*<p className="fixedShopIcon">+</p>*/ :
-                    (!simMode || location.checked || !location.shuffled) ?
+                    (!simMode || location.checked || !location.shuffled || peekedLocations.has(location.name)) ?
                         <OotItemIcon
                             itemName={location.item.name}
                             className="fixedShopIcon"

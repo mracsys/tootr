@@ -226,8 +226,9 @@ const LinkedEntrance = ({
                                             location={location}
                                             handleCheck={handleCheck}
                                             handleUnCheck={handleUnCheck}
-                                            handleContextMenu={handleShopContextMenu}
+                                            handleContextMenu={simMode ? handleContextMenu : handleShopContextMenu}
                                             simMode={simMode}
+                                            peekedLocations={peekedLocations}
                                         />
                                     );
                                 })

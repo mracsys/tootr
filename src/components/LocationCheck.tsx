@@ -9,7 +9,7 @@ import ContextMenuHandler from './ContextMenuHandler';
 import LogicIndicator from './LogicIndicator';
 import { buildExitName, buildExitEntranceName } from './UnknownEntrance';
 
-import { GraphLocation, GraphRegion } from '@mracsys/randomizer-graph-tool';
+import { GraphLocation } from '@mracsys/randomizer-graph-tool';
 
 import '@/styles/LocationCheck.css';
 
@@ -56,17 +56,6 @@ const LocationCheck = ({
         "Triforce": '/images/ganon.png',
     };
 
-    const buildHintRegionName = (hintRegion: GraphRegion | null): string => {
-        if (hintRegion === null) return '';
-        if (hintRegion.name.includes('->')) {
-            let hintEntrance = hintRegion.exits[0].reverse;
-            if (!!hintEntrance) return buildExitName(hintEntrance);
-            throw `Could not build hint region name for region with no exits: ${hintRegion.name}`;
-        } else {
-            return hintRegion.name;
-        }
-    }
-
     return (
         <LogicIndicator spot={location} showAgeLogic={showAgeLogic}>
             <div
@@ -96,13 +85,13 @@ const LocationCheck = ({
                             {
                                 location.hint.type === 'woth' ?
                                     <React.Fragment>
-                                    <span className='locationHintRegion'>{buildHintRegionName(location.hint.area)}</span>
+                                    <span className='locationHintRegion'>{location.hint.area?.alias}</span>
                                     <span className='locationHintEqualSign'>=</span>
                                     <span className='locationHintType'>WOTH</span>
                                     </React.Fragment>
                                 : location.hint.type === 'goal' && !!location.hint.goal ?
                                     <React.Fragment>
-                                    <span className='locationHintRegion'>{buildHintRegionName(location.hint.area)}</span>
+                                    <span className='locationHintRegion'>{location.hint.area?.alias}</span>
                                     <ArrowForwardIcon className='locationHintArrow' />
                                     {
                                         !!location.hint.goal.item ?
@@ -120,7 +109,7 @@ const LocationCheck = ({
                                     </React.Fragment>
                                 : location.hint.type === 'foolish' ?
                                     <React.Fragment>
-                                    <span className='locationHintRegion'>{buildHintRegionName(location.hint.area)}</span>
+                                    <span className='locationHintRegion'>{location.hint.area?.alias}</span>
                                     <span className='locationHintEqualSign'>=</span>
                                     <span className='locationHintType'>Foolish</span>
                                     </React.Fragment>
@@ -175,7 +164,7 @@ const LocationCheck = ({
                                     </React.Fragment>
                                 : location.hint.type === 'misc' && !!location.hint.item ?
                                     <React.Fragment>
-                                    <span className='locationHintRegion'>{buildHintRegionName(location.hint.area)}</span>
+                                    <span className='locationHintRegion'>{location.hint.area?.alias}</span>
                                     <span className='locationHintEqualSign'>=</span>
                                     <OotItemIcon
                                         itemName={location.hint.item.name}
@@ -184,7 +173,7 @@ const LocationCheck = ({
                                     </React.Fragment>
                                 : location.hint.type === 'important_check' ?
                                     <React.Fragment>
-                                    <span className='locationHintRegion'>{buildHintRegionName(location.hint.area)}</span>
+                                    <span className='locationHintRegion'>{location.hint.area?.alias}</span>
                                     <span className='locationHintEqualSign'>=</span>
                                     <span className='locationHintRegion'>{location.hint.area?.num_major_items} Major Items</span>
                                     </React.Fragment>
@@ -195,7 +184,7 @@ const LocationCheck = ({
                         : null
                 }
                 {
-                    (location.type === 'Shop' && location.item !== null && (!simMode || location.checked || location.hinted)) ?
+                    (location.type === 'Shop' && location.item !== null && (!simMode || location.checked || location.hinted || peekedLocations.has(location.name))) ?
                         <React.Fragment>
                             { showShopInput ?
                                 <input

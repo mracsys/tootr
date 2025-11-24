@@ -592,22 +592,8 @@ const Tracker = (_props: {}) => {
         if (trackerInitialized) {
             if (importSimMode) {
                 console.log('[Simulator] Enabling sim mode');
-                setRegionPage('Warps');
                 setOneRegionPerPage(true);
-                let spawn = graph.get_starting_region_for_world(graph.worlds[playerNumber]);
-                if (!!spawn) {
-                    let [spawn_region, spawn_entrance] = spawn;
-                    if (!!spawn_region) {
-                        checkEntrance(spawn_entrance.name, false);
-                        handleDungeonTravel(spawn_entrance.target_group, spawn_entrance, false);
-                    } else {
-                        setLastEntranceName('');
-                        setLastRegionName('Warps');
-                    }
-                } else {
-                    setLastEntranceName('');
-                    setLastRegionName('Warps');
-                }
+                startSimMode();
             } else {
                 console.log('[Simulator] Disabling sim mode');
                 setRegionPage('Overworld');
@@ -639,6 +625,25 @@ const Tracker = (_props: {}) => {
         localStorage.setItem('TrackerVersion', trackerVersion);
     }
 
+    const startSimMode = (): void => {
+        let spawn = graph.get_starting_region_for_world(graph.worlds[playerNumber]);
+        if (!!spawn) {
+            let [spawn_region, spawn_entrance] = spawn;
+            if (!!spawn_region) {
+                checkEntrance(spawn_entrance.name, false);
+                handleDungeonTravel(spawn_entrance.target_group, spawn_entrance, false);
+            } else {
+                setRegionPage('Warps');
+                setLastEntranceName('');
+                setLastRegionName('Warps');
+            }
+        } else {
+            setRegionPage('Warps');
+            setLastEntranceName('');
+            setLastRegionName('Warps');
+        }
+    }
+
     const resetState = (resetToPreset: boolean = true): void => {
         // reset graph state by re-importing only the settings
         let simMode = graph.worlds[playerNumber].settings['graphplugin_simulator_mode'] as boolean;
@@ -652,7 +657,7 @@ const Tracker = (_props: {}) => {
             if (simMode) {
                 delete plando[':checked'];
                 delete plando[':checked_entrances'];
-                setRegionPage('Warps');
+                startSimMode();
                 setOneRegionPerPage(true);
             } else {
                 setRegionPage('Overworld');

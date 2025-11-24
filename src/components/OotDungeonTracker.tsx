@@ -136,7 +136,7 @@ export const OotDungeonTracker = ({
                     } else {
                         let bossReward = bossRewards[0];
                         if (!!bossReward.item && !!bossEntrances[0].connected_region) {
-                            if (!simMode || bossReward.hinted || bossReward.checked || (Object.keys(graphRewardHints) && graphRewardHints[bossReward.item.name].hinted)) {
+                            if (!simMode || bossReward.hinted || bossReward.checked || (Object.keys(graphRewardHints).includes(bossReward.item.name) && graphRewardHints[bossReward.item.name].hinted)) {
                                 itemName = bossReward.item.name;
                                 if (bossReward.checked) {
                                     clickAction = () => handleUnCheck(bossReward.name);
