@@ -1,6 +1,7 @@
 import React, { useState, useEffect, ChangeEvent, Dispatch, SetStateAction } from "react";
 import TabPanel from "./TabPanel";
 import { ItemPanel } from "./ItemPanel";
+import { HintPanel } from "./HintPanel";
 import { SettingPanel } from "./SettingsPanel";
 import { SettingListPanel } from "./SettingListPanel";
 import GameSetting from "./GameSetting";
@@ -37,6 +38,7 @@ interface TrackerDrawerProps {
         hinted: boolean,
     }},
     graphLocations: GraphLocation[],
+    graphHintLocations: GraphLocation[],
     graphEntrances: GraphEntrance[],
     graphRegions: GraphRegion[],
     cycleGraphSetting: ({graphSetting, reverseDirection}: {graphSetting?: string, reverseDirection?: boolean}) => void,
@@ -47,6 +49,7 @@ interface TrackerDrawerProps {
     trackerSettings: TrackerSettingsCurrent,
     setTrackerSettings: (newSettings: TrackerSettingsCurrent) => void,
     setLastEntranceName: Dispatch<SetStateAction<string>>,
+    setLastRegionName: Dispatch<SetStateAction<string>>,
     changeGraphStringSetting: (s: ChangeEvent<HTMLSelectElement>) => void,
     changeGraphBooleanSetting: (s: ChangeEvent<HTMLInputElement>) => void,
     changeGraphNumericSetting: (s: ChangeEvent<HTMLSelectElement>) => void,
@@ -58,6 +61,7 @@ interface TrackerDrawerProps {
     visitedSimRegions: Set<string>,
     itemPanelAsTab: boolean,
     isNotMobile: boolean,
+    simMode: boolean,
 }
 
 
@@ -74,6 +78,7 @@ const TrackerDrawer = ({
     graphPlayerInventory,
     graphRewardHints,
     graphLocations,
+    graphHintLocations,
     graphEntrances,
     graphRegions,
     cycleGraphSetting,
@@ -84,6 +89,7 @@ const TrackerDrawer = ({
     trackerSettings,
     setTrackerSettings,
     setLastEntranceName,
+    setLastRegionName,
     changeGraphStringSetting,
     changeGraphBooleanSetting,
     changeGraphNumericSetting,
@@ -95,6 +101,7 @@ const TrackerDrawer = ({
     visitedSimRegions,
     itemPanelAsTab,
     isNotMobile,
+    simMode,
 }: TrackerDrawerProps) => {
     const [tabValue, setTabValue] = useState<number>(0);
     const [multiselectMenuOpen, setMultiselectMenuOpen] = useState<Element | null>(null);
@@ -119,6 +126,7 @@ const TrackerDrawer = ({
         }
         if (name === 'region_page') {
             setLastEntranceName('');
+            setLastRegionName('');
         }
         newTrackerSettings[name] = value;
         setTrackerSettings(newTrackerSettings);
@@ -188,8 +196,8 @@ const TrackerDrawer = ({
     }
 
     useEffect(() => {
-        if (!itemPanelAsTab && tabValue === 2) {
-            setTabValue(1);
+        if (!itemPanelAsTab && tabValue === 3) {
+            setTabValue(2);
         }
     }, [itemPanelAsTab, tabValue]);
 
@@ -262,6 +270,12 @@ const TrackerDrawer = ({
                     : null
                 }
                 <TabPanel value={tabValue} index={0 + tabOffset} className='drawerTab scrollable'>
+                    <HintPanel
+                        graphHintLocations={graphHintLocations}
+                        simMode={simMode}
+                    />
+                </TabPanel>
+                <TabPanel value={tabValue} index={1 + tabOffset} className='drawerTab scrollable'>
                     {
                         trackerSettings.setting_icons ?
                         <SettingPanel
@@ -284,7 +298,7 @@ const TrackerDrawer = ({
                         />
                     }
                 </TabPanel>
-                <TabPanel value={tabValue} index={1 + tabOffset} className='drawerTab scrollable paddedTab'>
+                <TabPanel value={tabValue} index={2 + tabOffset} className='drawerTab scrollable paddedTab'>
                     <SettingMultiselectMenu
                         handleClose={handleInternalMultiselectMenuClose}
                         handleChange={cycleInternalMultiselectOption}
@@ -362,6 +376,7 @@ const TrackerDrawer = ({
                             <Tab label='Inventory' />
                             : null
                         }
+                        <Tab label='Hints' />
                         <Tab label='Game Settings' />
                         <Tab label='Tracker Settings' />
                     </Tabs>

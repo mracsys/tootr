@@ -49,6 +49,7 @@ export const OotSettingAssetMapFactory = (graphSettings: GraphSettingsConfigurat
             img: {
                 'glitchless': '/images/OoT_Hylian_Shield_Icon.png',
                 'glitched': '/images/distorted_shield.png',
+                'advanced': '/images/distorted_shield.png',
                 'none': '/images/shield_x.png',
             }[graphSettings['logic_rules'] as string] as string,
             tooltip: graphSettingsOptions['logic_rules'].display_name,
@@ -283,12 +284,6 @@ export const OotSettingAssetMapFactory = (graphSettings: GraphSettingsConfigurat
             tooltip: graphSettingsOptions['open_kakariko'].display_name,
             tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['open_kakariko']),
         },
-        'open_door_of_time': {
-            img: '/images/sot_block.png',
-            fade: !graphSettings['open_door_of_time'],
-            tooltip: graphSettingsOptions['open_door_of_time'].display_name,
-            tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['open_door_of_time']),
-        },
         'zora_fountain': {
             img: {
                 'open': '/images/king_zora_moved.png',
@@ -512,12 +507,6 @@ export const OotSettingAssetMapFactory = (graphSettings: GraphSettingsConfigurat
             tooltip: graphSettingsOptions['complete_mask_quest'].display_name,
             tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['complete_mask_quest']),
         },
-        'free_scarecrow': {
-            img: '/images/scarecrow.png',
-            fade: !graphSettings['free_scarecrow'],
-            tooltip: graphSettingsOptions['free_scarecrow'].display_name,
-            tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['free_scarecrow']),
-        },
         'plant_beans': {
             img: '/images/soil.png',
             fade: !graphSettings['plant_beans'],
@@ -633,6 +622,29 @@ export const OotSettingAssetMapFactory = (graphSettings: GraphSettingsConfigurat
     let tcgLens = {};
     let skulls100 = {};
     let goldBoulders = {};
+    let doorOfTime = {};
+    let ocarinaSongs = {};
+    let scarecrowSong = {};
+
+    if (graphVersion.gt('8.3.0')) {
+    scarecrowSong = {
+        'scarecrow_behavior': {
+            img: '/images/scarecrow.png',
+            fade: graphSettings['scarecrow_behavior'] !== 'free',
+            tooltip: graphSettingsOptions['scarecrow_behavior'].display_name,
+            tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['scarecrow_behavior']),
+        },
+    };
+    } else {
+    scarecrowSong = {
+        'free_scarecrow': {
+            img: '/images/scarecrow.png',
+            fade: !graphSettings['free_scarecrow'],
+            tooltip: graphSettingsOptions['free_scarecrow'].display_name,
+            tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['free_scarecrow']),
+        },
+    };
+    }
 
     if (!isFenhlBranch) {
     mainSettingMap = {
@@ -655,19 +667,9 @@ export const OotSettingAssetMapFactory = (graphSettings: GraphSettingsConfigurat
                 '4': '4',
                 'random': '?',
             }[graphSettings['shopsanity'] as string] as string,
-            lImg: {
-                'random': '/images/Red_Rupee.png',
-                'random_starting': '/images/Green_Rupee.png',
-                'random_adult': '/images/Blue_Rupee.png',
-                'random_giant': '/images/Red_Rupee.png',
-                'random_tycoon': '/images/Purple_Rupee.png',
-                'affordable': '/images/Yellow_Rupee.png',
-            }[graphSettings['shopsanity_prices'] as string] as string,
-            lSubSource: 'shopsanity_prices',
             fade: graphSettings['shopsanity'] === 'off',
             tooltip: graphSettingsOptions['shopsanity'].display_name,
             tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['shopsanity']),
-            tooltip3: settingValueDisplay(graphSettings, graphSettingsOptions['shopsanity_prices']),
         },
         'shuffle_hideout_entrances': {
             img: '/images/gerudo_symbol.png',
@@ -706,6 +708,11 @@ export const OotSettingAssetMapFactory = (graphSettings: GraphSettingsConfigurat
             tooltip: graphSettingsOptions['warp_songs'].display_name,
             tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['warp_songs']),
         },
+    };
+    }
+
+    if (!isFenhlBranch && graphVersion.lte('8.3.0')) {
+    ocarinaSongs = {
         'ocarina_songs': {
             img: '/images/treble.png',
             rImg: {
@@ -715,6 +722,17 @@ export const OotSettingAssetMapFactory = (graphSettings: GraphSettingsConfigurat
             fade: graphSettings['ocarina_songs'] === 'off',
             tooltip: graphSettingsOptions['ocarina_songs'].display_name,
             tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['ocarina_songs']),
+        }
+    };
+    } else {
+    ocarinaSongs = {
+        'ocarina_songs': {
+            img: '/images/treble.png',
+            rSub: Array.isArray(graphSettings['ocarina_songs']) ? graphSettings['ocarina_songs'].length.toString() : '0',
+            rSubSource: 'ocarina_songs',
+            fade: Array.isArray(graphSettings['ocarina_songs']) ? graphSettings['ocarina_songs'].length === 0 : true,
+            tooltip: graphSettingsOptions['ocarina_songs'].display_name,
+            tooltip2: Array.isArray(graphSettings['ocarina_songs']) ? graphSettings['ocarina_songs'].length > 0 ? graphSettings['ocarina_songs'].join('\n') : 'None' : '',
         },
     };
     }
@@ -847,14 +865,6 @@ export const OotSettingAssetMapFactory = (graphSettings: GraphSettingsConfigurat
 
     if (isFenhlBranch) {
         fenhlSettingMap = {
-            'ocarina_songs': {
-                img: '/images/treble.png',
-                rSub: Array.isArray(graphSettings['ocarina_songs']) ? graphSettings['ocarina_songs'].length.toString() : '0',
-                rSubSource: 'ocarina_songs',
-                fade: Array.isArray(graphSettings['ocarina_songs']) ? graphSettings['ocarina_songs'].length === 0 : true,
-                tooltip: graphSettingsOptions['ocarina_songs'].display_name,
-                tooltip2: Array.isArray(graphSettings['ocarina_songs']) ? graphSettings['ocarina_songs'].length > 0 ? graphSettings['ocarina_songs'].join('\n') : 'None' : '',
-            },
             'require_gohma': {
                 img: '/images/gohma_eye.png',
                 fade: !graphSettings['require_gohma'],
@@ -957,17 +967,18 @@ export const OotSettingAssetMapFactory = (graphSettings: GraphSettingsConfigurat
                 tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['shuffle_base_item_pool']),
             },
         };
-        if (graphVersion.gte('8.2.0')) {
-            skulls100 = {
-                'shuffle_100_skulltula_rupee': {
-                    img: '/images/OoT_Token_Icon.png',
-                    rSub: '100',
-                    fade: !graphSettings['shuffle_100_skulltula_rupee'],
-                    hideLabels: false,
-                    tooltip: graphSettingsOptions['shuffle_100_skulltula_rupee'].display_name,
-                    tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['shuffle_100_skulltula_rupee']),
-                },
-            }
+    }
+
+    if ((graphVersion.gte('8.2.0') && isFenhlBranch) || graphVersion.gt('8.3.0')) {
+        skulls100 = {
+            'shuffle_100_skulltula_rupee': {
+                img: '/images/OoT_Token_Icon.png',
+                rSub: '100',
+                fade: !graphSettings['shuffle_100_skulltula_rupee'],
+                hideLabels: false,
+                tooltip: graphSettingsOptions['shuffle_100_skulltula_rupee'].display_name,
+                tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['shuffle_100_skulltula_rupee']),
+            },
         }
     }
 
@@ -1020,6 +1031,37 @@ export const OotSettingAssetMapFactory = (graphSettings: GraphSettingsConfigurat
     }
     }
 
+    if (graphVersion.gt('8.3.0')) {
+        doorOfTime = {
+            'open_door_of_time': {
+                img: '/images/sot_block.png',
+                lImg: {
+                    'stones': '/images/OoT_Spiritual_Stone_of_Water_Icon.png',
+                    'stones_sot': '/images/OoT_Spiritual_Stone_of_Water_Icon.png',
+                    'stones_oot_sot': '/images/OoT_Spiritual_Stone_of_Water_Icon.png',
+                }[graphSettings['open_door_of_time'] as string] as string,
+                rImg: {
+                    'sot': '/images/Blue_Note.png',
+                    'stones_sot': '/images/Blue_Note.png',
+                    'oot_sot': '/images/Blue_Note.png',
+                    'stones_oot_sot': '/images/Blue_Note.png',
+                }[graphSettings['open_door_of_time'] as string] as string,
+                fade: graphSettings['open_door_of_time'] === 'open',
+                tooltip: graphSettingsOptions['open_door_of_time'].display_name,
+                tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['open_door_of_time']),
+            },
+        };
+    } else {
+        doorOfTime = {
+            'open_door_of_time': {
+                img: '/images/sot_block.png',
+                fade: !graphSettings['open_door_of_time'],
+                tooltip: graphSettingsOptions['open_door_of_time'].display_name,
+                tooltip2: settingValueDisplay(graphSettings, graphSettingsOptions['open_door_of_time']),
+            },
+        };
+    }
+
     let mergedSettingMap = {};
     if (isFenhlBranch) {
         mergedSettingMap = merge(baseSettingMap, fenhlSettingMap);
@@ -1029,6 +1071,9 @@ export const OotSettingAssetMapFactory = (graphSettings: GraphSettingsConfigurat
         mergedSettingMap = merge(mergedSettingMap, fortressHP);
         mergedSettingMap = merge(mergedSettingMap, tcgLens);
         mergedSettingMap = merge(mergedSettingMap, skulls100);
+        mergedSettingMap = merge(mergedSettingMap, doorOfTime);
+        mergedSettingMap = merge(mergedSettingMap, ocarinaSongs);
+        mergedSettingMap = merge(mergedSettingMap, scarecrowSong);
         if (graphVersion.lt('8.1.48')) {
             mergedSettingMap = merge(mergedSettingMap, potSanity2);
         } else {
@@ -1041,11 +1086,17 @@ export const OotSettingAssetMapFactory = (graphSettings: GraphSettingsConfigurat
         mergedSettingMap = merge(mergedSettingMap, towerShuffle);
         mergedSettingMap = merge(mergedSettingMap, fortressHP);
         mergedSettingMap = merge(mergedSettingMap, tcgLens);
+        mergedSettingMap = merge(mergedSettingMap, doorOfTime);
+        mergedSettingMap = merge(mergedSettingMap, ocarinaSongs);
+        mergedSettingMap = merge(mergedSettingMap, scarecrowSong);
         if (graphVersion.gte('8.1.38')) {
             mergedSettingMap = merge(mergedSettingMap, rewardShuffle);
         }
         if (graphVersion.gte('8.2.50')) {
             mergedSettingMap = merge(mergedSettingMap, goldBoulders);
+        }
+        if (graphVersion.gt('8.3.0')) {
+            mergedSettingMap = merge(mergedSettingMap, skulls100);
         }
     } else {
         mergedSettingMap = merge(baseSettingMap, mainSettingMap);
@@ -1053,6 +1104,9 @@ export const OotSettingAssetMapFactory = (graphSettings: GraphSettingsConfigurat
         mergedSettingMap = merge(mergedSettingMap, towerShuffle);
         mergedSettingMap = merge(mergedSettingMap, fortressHP);
         mergedSettingMap = merge(mergedSettingMap, tcgLens);
+        mergedSettingMap = merge(mergedSettingMap, doorOfTime);
+        mergedSettingMap = merge(mergedSettingMap, ocarinaSongs);
+        mergedSettingMap = merge(mergedSettingMap, scarecrowSong);
         if (graphVersion.gte('8.1.38')) {
             mergedSettingMap = merge(mergedSettingMap, rewardShuffle);
         }
@@ -1060,6 +1114,9 @@ export const OotSettingAssetMapFactory = (graphSettings: GraphSettingsConfigurat
             mergedSettingMap = merge(mergedSettingMap, potSanity2);
         } else {
             mergedSettingMap = merge(mergedSettingMap, potSanity3);
+        }
+        if (graphVersion.gt('8.3.0')) {
+            mergedSettingMap = merge(mergedSettingMap, skulls100);
         }
     }
     return mergedSettingMap;

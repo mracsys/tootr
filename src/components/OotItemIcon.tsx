@@ -468,6 +468,27 @@ const itemMap: IconDict = {
     'Scarecrow Song': { img: '/images/scarecrow.png' },
     'BlankSpace': { img: '/images/blank.png' },
     '?': { img: '/images/question_mark.png' },
+
+    'Wooden Chest': { img: '/images/wooden_chest.png' },
+    'Gilded Chest': { img: '/images/gilded_chest.png' },
+    'Small Key Chest': { img: '/images/silver_chest.png' },
+    'Boss Key Chest': { img: '/images/golden_chest.png' },
+    'Webbed Chest': { img: '/images/webbed_chest.png' },
+    'Heart Chest': { img: '/images/heart_chest.png' },
+
+    'Regular Pot': { img: '/images/wooden_chest.png' },
+    'Gilded Pot': { img: '/images/gilded_chest.png' },
+    'Small Key Pot': { img: '/images/silver_chest.png' },
+    'Boss Key Pot': { img: '/images/golden_chest.png' },
+    'Webbed Pot': { img: '/images/webbed_chest.png' },
+    'Heart Pot': { img: '/images/heart_chest.png' },
+
+    'Regular Crate': { img: '/images/wooden_chest.png' },
+    'Gilded Crate': { img: '/images/gilded_chest.png' },
+    'Small Key Crate': { img: '/images/silver_chest.png' },
+    'Boss Key Crate': { img: '/images/golden_chest.png' },
+    'Webbed Crate': { img: '/images/webbed_chest.png' },
+    'Heart Crate': { img: '/images/heart_chest.png' },
 };
 
 export const haveOotItemIcon = (itemName: string) => {

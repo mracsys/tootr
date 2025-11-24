@@ -8,6 +8,7 @@
     "build": "tsc && vite build",
     "localdeploy": "tsc && vite build && ssh m32 \"find /srv/www/tootr/* -not -path '/srv/www/tootr/assets*' -delete\" && rsync -rav -e ssh ./dist/ m32:/srv/www/tootr/ && ssh m32 \"chown -R mracsys:www-data /srv/www/tootr/\"",
     "deploy": "tsc && vite build && ssh tootr \"find /srv/www/tootr/* -not -path '/srv/www/tootr/assets*' -delete\" && rsync -rav -e ssh ./dist/ tootr:/srv/www/tootr/ && ssh tootr \"chown -R mracsys:www-data /srv/www/tootr/\"",
+    "extractrandos": "node ./src/scripts/UpdateRandomizerGitRepos.mjs && node ./src/scripts/ExtractRandomizerFiles.mjs && cross-env TOOTRDEBUG='true' node ./src/scripts/ExtractRandomizerFiles.mjs",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "postinstall": "cross-env TOOTRDEBUG='true' node ./src/scripts/ExtractRandomizerFiles.mjs"
@@ -15,7 +16,7 @@
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
-    "@mracsys/randomizer-graph-tool": "2.1.7",
+    "@mracsys/randomizer-graph-tool": "file:mracsys-randomizer-graph-tool-2.1.10.tgz",
     "@mui/icons-material": "^5.15.20",
     "@mui/material": "^5.15.20",
     "cross-env": "^7.0.3",

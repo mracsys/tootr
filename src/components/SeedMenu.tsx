@@ -56,6 +56,10 @@ export const SeedMenu = ({
         handleClose();
         document.getElementById('graphPlandoFileInput')?.click();
     }
+    const handleSimFileOpen = () => {
+        handleClose();
+        document.getElementById('graphSimPlandoFileInput')?.click();
+    }
     const handleReset = () => {
         setAlertReset(true);
         handleClose();
@@ -80,6 +84,7 @@ export const SeedMenu = ({
                 <span className="menuButtonLabel">File</span>
             </button>
             <input id='graphPlandoFileInput' style={{display: 'none'}} type='file' onChange={(e) => importFunction(e)} />
+            <input id='graphSimPlandoFileInput' style={{display: 'none'}} type='file' onChange={(e) => simFunction(e)} />
             <Menu
                 id="seedMenu"
                 anchorEl={anchorEl}
@@ -89,6 +94,7 @@ export const SeedMenu = ({
                 <MenuItem onClick={handleImport}>New</MenuItem>
                 <MenuItem onClick={handleLoad}>Load</MenuItem>
                 <MenuItem onClick={handleSave}>Save</MenuItem>
+                <MenuItem onClick={handleSimFileOpen}>Simulate</MenuItem>
                 <MenuItem onClick={handleFileOpen}>Import</MenuItem>
                 <MenuItem onClick={handleExport}>Export</MenuItem>
                 <MenuItem onClick={handleReset}>Reset</MenuItem>

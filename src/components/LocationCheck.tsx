@@ -53,6 +53,7 @@ const LocationCheck = ({
         "Compass": '/images/OoT_Compass_Icon.png',
         "Small Key": '/images/OoT_Small_Key_Icon.png',
         "Boss Key": '/images/OoT_Boss_Key_Icon.png',
+        "Triforce": '/images/ganon.png',
     };
 
     const buildHintRegionName = (hintRegion: GraphRegion | null): string => {
@@ -164,10 +165,10 @@ const LocationCheck = ({
                                     <span className='locationHintEntrance'>
                                         <div className="entranceLink">
                                             <div className="entranceLink1">
-                                                {buildExitName(location.hint.entrance.replaces)}
+                                                {buildExitName(location.hint.entrance)}
                                             </div>
                                             <div className="entranceLink2">
-                                                {buildExitEntranceName(location.hint.entrance.replaces)}
+                                                {buildExitEntranceName(location.hint.entrance)}
                                             </div>
                                         </div>
                                     </span>
@@ -227,10 +228,15 @@ const LocationCheck = ({
                 {
                     location.item === null || (simMode && !peekedLocations.has(location.name) && !location.checked && !location.hinted && !location.skipped) ?
                         null :
-                        <OotItemIcon
-                            itemName={location.item.name}
-                            className="locationKnownItem"
-                        />
+                            (simMode && peekedLocations.has(location.name) && !location.checked && !location.hinted && !location.skipped) ?
+                            <OotItemIcon
+                                itemName={location.item.peek}
+                                className="locationKnownItem"
+                            /> :
+                            <OotItemIcon
+                                itemName={location.item.name}
+                                className="locationKnownItem"
+                            />
                 }
                 {
                     location.skipped ?

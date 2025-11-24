@@ -41,7 +41,7 @@ export const buildExitEntranceName = (entrance: GraphEntrance, original: boolean
 }
 
 export const locationFilter = (l: GraphLocation, collapsedRegions: CollapsedRegions, title: string, showHints: boolean, regionIsFoolish: boolean, lastLocationName: string[], simMode: boolean, peekedLocations: Set<string>, searchTerm: string = ''): boolean => {
-    return (!l.checked || collapsedRegions[title] === 'none' || lastLocationName.includes(l.name)) &&
+    return (!l.checked || collapsedRegions[title] === 'none' || lastLocationName.includes(l.name) || searchTerm !== '') &&
             l.viewable(true) &&
             ((!l.is_hint && (!regionIsFoolish || collapsedRegions[title] === 'none')) || (l.is_hint && showHints && l.alias !== l.name) || l.is_restricted) &&
             (searchTerm === '' || 
@@ -194,14 +194,15 @@ const UnknownEntrance = ({
             let internalLocations: GraphLocation[] = [];
             let otherEntrances: GraphEntrance[] = [];
             let showHideoutExit = false;
+            let isFoolish = reverseLink.target_group.is_hint_region ? reverseLink.target_group.is_not_required : regionIsFoolish;
             if (!!reverseLink.target_group && reverseLink.target_group.page === '') {
-                internalLocations.push(...reverseLink.target_group.locations.filter(l => showEntranceLocations && locationFilter(l, collapsedRegions, title, showHints, regionIsFoolish, lastLocationName, simMode, peekedLocations, searchTerm)));
+                internalLocations.push(...reverseLink.target_group.locations.filter(l => showEntranceLocations && locationFilter(l, collapsedRegions, title, showHints, isFoolish, lastLocationName, simMode, peekedLocations, searchTerm)));
                 shopLocations.push(...reverseLink.target_group.locations.filter(l => showEntranceLocations && shopLocationFilter(l, showShops, searchTerm)));
                 otherEntrances.push(...reverseLink.target_group.exits.filter(e => 
                     !(renderedConnectors.includes(e)) &&
                     (e.shuffled || entrance.source_group !== (!!e.replaces ? e.replaces : e).target_group || rootIsWarp) && // || e.target_group !== reverseLink.source_group
                     (e !== reverseLink.reverse || rootIsWarp || (!e.coupled && e.shuffled)) &&
-                    entranceOrTargetMatchesTerm(e, collapsedRegions, title, searchTerm, showEntranceLocations, showShops, showHints, regionIsFoolish, lastLocationName, simMode, peekedLocations, [...renderedConnectors])));
+                    entranceOrTargetMatchesTerm(e, collapsedRegions, title, searchTerm, showEntranceLocations, showShops, showHints, isFoolish, lastLocationName, simMode, peekedLocations, [...renderedConnectors])));
             } else if (!!reverseLink.target_group && reverseLink.use_target_alias && reverseLink.target_group.page !== '') {
                 let target_foolish = reverseLink.target_group.is_not_required;
                 let filteredLocations: GraphLocation[] = reverseLink.target_group.locations.filter((location) => showAreaLocations && locationFilter(location, collapsedRegions, title, showHints, target_foolish, lastLocationName, simMode, peekedLocations, searchTerm));

@@ -87,6 +87,7 @@
   --md-sys-color-on-surface: rgb(226 226 233);
   --md-sys-color-surface-variant: rgb(68 71 78);
   --md-sys-color-on-surface-variant: rgb(196 198 208);
+  --md-sys-color-on-surface-variant-transparent: rgb(196 198 208 / 0.6);
   --md-sys-color-surface-dim: rgb(17 19 24);
   --md-sys-color-surface-bright: rgb(55 57 62);
   --md-sys-color-surface-container-lowest: rgb(12 14 19);

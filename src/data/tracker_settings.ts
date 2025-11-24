@@ -127,6 +127,7 @@ export const tracker_settings_defs: tracker_settings_definitions_v1 = {
         options: [
             'Overworld',
             'Dungeons',
+            'All',
         ]
     },
     one_region_per_page: {

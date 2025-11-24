@@ -86,6 +86,7 @@ body {
     --color-sidebar-text-secondary: var(--md-sys-color-outline);
     --color-sidebar-text-border-focus: var(--md-sys-color-on-surface-variant);
     --color-sidebar-text-border: var(--md-sys-color-on-surface-variant);
+    --color-sidebar-text-border-transparent: var(--md-sys-color-on-surface-variant-transparent);
     --color-sidebar-text-select: var(--md-sys-color-on-surface);
     --color-sidebar-text-select-hover: var(--md-sys-color-on-surface);
     --color-sidebar-shadow: var(--md-sys-color-shadow);

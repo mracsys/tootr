@@ -15,8 +15,8 @@ importers:
         specifier: ^11.11.5
         version: 11.11.5(@emotion/react@11.11.4(@types/react@18.3.3)(react@18.3.1))(@types/react@18.3.3)(react@18.3.1)
       '@mracsys/randomizer-graph-tool':
-        specifier: 2.1.7
-        version: 2.1.7
+        specifier: file:mracsys-randomizer-graph-tool-2.1.10.tgz
+        version: file:mracsys-randomizer-graph-tool-2.1.10.tgz
       '@mui/icons-material':
         specifier: ^5.15.20
         version: 5.15.20(@mui/material@5.15.20(@emotion/react@11.11.4(@types/react@18.3.3)(react@18.3.1))(@emotion/styled@11.11.5(@emotion/react@11.11.4(@types/react@18.3.3)(react@18.3.1))(@types/react@18.3.3)(react@18.3.1))(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@types/react@18.3.3)(react@18.3.1)
@@ -189,8 +189,8 @@ packages:
     resolution: {integrity: sha512-UwgBRMjJP+xv857DCngvqXI3Iq6J4v0wXmwc6sapg+zyhbwmQX67LUEFrkK5tbyJ30jGuG3ZvWpBiB9LCy1kWw==}
     engines: {node: '>=6.9.0'}
 
-  '@babel/standalone@7.28.4':
-    resolution: {integrity: sha512-Qc1BNCfuJZBKs2SC5lqRmSYOw7Ka0X7urZQ7oVsGIax4eGDUIHX+CDg752N4jDxC2rbBh3li098ReGOtjT0x4g==}
+  '@babel/standalone@7.28.5':
+    resolution: {integrity: sha512-1DViPYJpRU50irpGMfLBQ9B4kyfQuL6X7SS7pwTeWeZX0mNkjzPi0XFqxCjSdddZXUQy4AhnQnnesA/ZHnvAdw==}
     engines: {node: '>=6.9.0'}
 
   '@babel/template@7.24.7':
@@ -471,8 +471,9 @@ packages:
   '@jridgewell/trace-mapping@0.3.25':
     resolution: {integrity: sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ==}
 
-  '@mracsys/randomizer-graph-tool@2.1.7':
-    resolution: {integrity: sha512-mKEhaCSTmeRrOJmRYVJjvb59MD8M/a5/kSaIbJMVeNyL9R5UjVyQrW3L7UsiHDg6LvJfQH5wpk7PV6pnYv/L+g==}
+  '@mracsys/randomizer-graph-tool@file:mracsys-randomizer-graph-tool-2.1.10.tgz':
+    resolution: {integrity: sha512-UT3AQ6j4TAxP02+Jb2klzSNJP8QVsSatVRirltKN3NiWWU7XPveCLKXIvagH850VFqRDokhw9LE5q2CCz85ReQ==, tarball: file:mracsys-randomizer-graph-tool-2.1.10.tgz}
+    version: 2.1.10
 
   '@mui/base@5.0.0-beta.40':
     resolution: {integrity: sha512-I/lGHztkCzvwlXpjD2+SNmvNQvB4227xBXhISPjEaJUXGImOQ9f3D2Yj/T3KasSI/h0MLWy74X0J6clhPmsRbQ==}
@@ -1653,7 +1654,7 @@ snapshots:
     dependencies:
       regenerator-runtime: 0.14.1
 
-  '@babel/standalone@7.28.4': {}
+  '@babel/standalone@7.28.5': {}
 
   '@babel/template@7.24.7':
     dependencies:
@@ -1913,11 +1914,11 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.4.15
 
-  '@mracsys/randomizer-graph-tool@2.1.7':
+  '@mracsys/randomizer-graph-tool@file:mracsys-randomizer-graph-tool-2.1.10.tgz':
     dependencies:
       '@babel/generator': 7.24.7
       '@babel/parser': 7.24.7
-      '@babel/standalone': 7.28.4
+      '@babel/standalone': 7.28.5
       '@babel/types': 7.24.7
       semver: 7.6.2
 

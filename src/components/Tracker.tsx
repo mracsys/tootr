@@ -27,7 +27,7 @@ import { WorldGraphFactory, ExternalFileCacheFactory, ExternalFileCache, Externa
 import '@/styles/tracker.css';
 import '@/styles/themes/light.css';
 import '@/styles/themes/dark.css';
-import { buildExitEntranceName } from './UnknownEntrance';
+import { buildExitEntranceName, buildExitName } from './UnknownEntrance';
 import { location_item_menu_layout_vertical } from '@/data/location_item_menu_layout_vertical';
 
 export interface SavedTrackerState {
@@ -108,7 +108,7 @@ const Tracker = (_props: {}) => {
 
     // user settings panel
     const [savedSettingsVersion, setSavedSettingsVersion] = useState<number>(1);
-    const [graphVersion, setGraphVersion] = useState<string>('8.2.50 Fenhl-1');
+    const [graphVersion, setGraphVersion] = useState<string>('8.3.0 Release');
     const [playerNumber, setPlayerNumber] = useState<number>(0);
     const [settingIcons, setSettingIcons] = useState<boolean>(true);
     const [regionPage, setRegionPage] = useState<string>('Overworld');
@@ -130,6 +130,7 @@ const Tracker = (_props: {}) => {
     const [collapsedRegions, setCollapsedRegions] = useState<CollapsedRegions>({});
     const [visitedSimRegions, setVisitedSimRegions] = useState<Set<string>>(new Set());
     const [peekedSimLocations, setPeekedSimLocations] = useState<Set<string>>(new Set());
+    const [lastRegionName, setLastRegionName] = useState<string>('');
     const [lastEntranceName, setLastEntranceName] = useState<string>('');
     const [currentGraphPreset, setCurrentGraphPreset] = useState<string>('Random Settings League');
 
@@ -355,6 +356,8 @@ const Tracker = (_props: {}) => {
         let visitedRegionsInit = !!clientVisitedRegions ? new Set<string>(JSON.parse(clientVisitedRegions)) : new Set<string>();
         let clientLastEntranceName = localStorage.getItem('SimModeLastEntranceName');
         let lastEntranceNameInit = !!clientLastEntranceName ? clientLastEntranceName : '';
+        let clientLastRegionName = localStorage.getItem('SimModeLastRegionName');
+        let lastRegionNameInit = !!clientLastRegionName ? clientLastRegionName : '';
         let clientPeekedLocations = localStorage.getItem('SimModePeekedLocations');
         let peekedLocationsInit = !!clientPeekedLocations ? new Set<string>(JSON.parse(clientPeekedLocations)) : new Set<string>();
         let clientCurrentPreset = localStorage.getItem('CurrentGraphPreset');
@@ -363,6 +366,7 @@ const Tracker = (_props: {}) => {
         setCollapsedRegions(collapsedRegionsInit);
         setVisitedSimRegions(visitedRegionsInit);
         setLastEntranceName(lastEntranceNameInit);
+        setLastRegionName(lastRegionNameInit);
         setPeekedSimLocations(peekedLocationsInit);
         setCurrentGraphPreset(currentPresetInit);
         setImportSimMode(simModeInit);
@@ -453,9 +457,19 @@ const Tracker = (_props: {}) => {
     useEffect(() => {
         if (trackerInitialized) localStorage.setItem('ShowCheckCounter', JSON.stringify(showCheckCounter));
     }, [showCheckCounter]);
-    useEffect(() => {
-        if (trackerInitialized) localStorage.setItem('CollapsedRegions', JSON.stringify(collapsedRegions));
-    }, [...Object.values(collapsedRegions)]);
+    // This causes a warning from React when starting new seeds, resetting the collapsed region list:
+    //      Warning: The final argument passed to useEffect changed size between renders.
+    //      The order and size of this array must remain constant.
+    //      
+    //      Previous: [none, none, some, some]
+    //      Incoming: [] Error:
+    //useEffect(() => {
+    //    if (trackerInitialized) localStorage.setItem('CollapsedRegions', JSON.stringify(collapsedRegions));
+    //}, [...Object.values(collapsedRegions)]);
+    const updateAndSaveCollapsedRegions = (newCollapsedRegions: CollapsedRegions): void => {
+        setCollapsedRegions(newCollapsedRegions);
+        if (trackerInitialized) localStorage.setItem('CollapsedRegions', JSON.stringify(newCollapsedRegions));
+    };
     useEffect(() => {
         if (trackerInitialized) localStorage.setItem('SimModeVisitedRegions', JSON.stringify(Array.from(visitedSimRegions.values())));
     }, [visitedSimRegions.size]);
@@ -465,6 +479,9 @@ const Tracker = (_props: {}) => {
     useEffect(() => {
         if (trackerInitialized) localStorage.setItem('SimModeLastEntranceName', lastEntranceName);
     }, [lastEntranceName]);
+    useEffect(() => {
+        if (trackerInitialized) localStorage.setItem('SimModeLastRegionName', lastRegionName);
+    }, [lastRegionName]);
     useEffect(() => {
         if (trackerInitialized) localStorage.setItem('CurrentGraphPreset', currentGraphPreset);
     }, [currentGraphPreset]);
@@ -563,6 +580,7 @@ const Tracker = (_props: {}) => {
             setTrackerPreferences(graph);
             refreshSearch();
             setLastEntranceName('');
+            setLastRegionName('');
             setTrackerInitialized(true);
             setGraphImportFile('');
             setVisitedSimRegions(new Set());
@@ -576,12 +594,26 @@ const Tracker = (_props: {}) => {
                 console.log('[Simulator] Enabling sim mode');
                 setRegionPage('Warps');
                 setOneRegionPerPage(true);
-                setLastEntranceName('');
+                let spawn = graph.get_starting_region_for_world(graph.worlds[playerNumber]);
+                if (!!spawn) {
+                    let [spawn_region, spawn_entrance] = spawn;
+                    if (!!spawn_region) {
+                        checkEntrance(spawn_entrance.name, false);
+                        handleDungeonTravel(spawn_entrance.target_group, spawn_entrance, false);
+                    } else {
+                        setLastEntranceName('');
+                        setLastRegionName('Warps');
+                    }
+                } else {
+                    setLastEntranceName('');
+                    setLastRegionName('Warps');
+                }
             } else {
                 console.log('[Simulator] Disabling sim mode');
                 setRegionPage('Overworld');
                 setOneRegionPerPage(false);
                 setLastEntranceName('');
+                setLastRegionName('Overworld');
             }
         }
     }, [importSimMode, trackerInitialized]);
@@ -632,11 +664,12 @@ const Tracker = (_props: {}) => {
         }
         setTrackerPreferences(graph);
         refreshSearch();
-        setCollapsedRegions({});
+        updateAndSaveCollapsedRegions({});
         setAlertReset(false);
         setVisitedSimRegions(new Set());
         setPeekedSimLocations(new Set());
         setLastEntranceName('');
+        setLastRegionName('');
     }
 
     const refreshSearch = () => {
@@ -682,7 +715,7 @@ const Tracker = (_props: {}) => {
                 setGraphVersion(savedState.Branch);
             }
             setImportSimMode(savedState.SimMode);
-            setCollapsedRegions(savedState.RegionsCollapsed);
+            updateAndSaveCollapsedRegions(savedState.RegionsCollapsed);
             setVisitedSimRegions(new Set(savedState.VisitedSimRegions));
             setPeekedSimLocations(new Set(savedState.PeekedSimLocations));
             setPlayerNumber(savedState.PlayerNumber);
@@ -738,10 +771,11 @@ const Tracker = (_props: {}) => {
         setCurrentGraphPreset(presetName);
         setRegionPage('Overworld');
         setOneRegionPerPage(false);
-        setCollapsedRegions({});
+        updateAndSaveCollapsedRegions({});
         setVisitedSimRegions(new Set());
         setPeekedSimLocations(new Set());
         setLastEntranceName('');
+        setLastRegionName('');
     }
 
     const importGraphState = (inputEvent: ChangeEvent<HTMLInputElement>) => {
@@ -753,7 +787,7 @@ const Tracker = (_props: {}) => {
             let content = readerEvent.target?.result;
             if (!!content && typeof(content) === 'string') {
                 setImportSimMode(false);
-                setCollapsedRegions({});
+                updateAndSaveCollapsedRegions({});
                 setupImport(content);
             }
         }
@@ -768,7 +802,7 @@ const Tracker = (_props: {}) => {
             let content = readerEvent.target?.result;
             if (!!content && typeof(content) === 'string') {
                 setImportSimMode(true);
-                setCollapsedRegions({});
+                updateAndSaveCollapsedRegions({});
                 setupImport(content);
             }
         }
@@ -825,6 +859,7 @@ const Tracker = (_props: {}) => {
             case 'region_page':
                 setRegionPage(setting.target.value as string);
                 setLastEntranceName('');
+                setLastRegionName('');
                 break;
             case 'one_region_per_page':
                 setOneRegionPerPage(setting.target.value as boolean);
@@ -869,14 +904,77 @@ const Tracker = (_props: {}) => {
         console.log(`[Setting] ${setting.target.name} changed to ${setting.target.value}`);
     }
 
+    const settingChanged = (setting: TrackerSettingChangeEvent): boolean => {
+        switch (setting.target.name) {
+            case 'game_version':
+                return graphVersion !== setting.target.value;
+                break;
+            case 'player_number':
+                return playerNumber !== setting.target.value;
+                break;
+            case 'setting_icons':
+                return settingIcons !== setting.target.value;
+                break;
+            case 'region_page':
+                return regionPage !== setting.target.value;
+                break;
+            case 'one_region_per_page':
+                return oneRegionPerPage !== setting.target.value;
+                break;
+            case 'expand_sidebar':
+                return expandSidebar !== setting.target.value;
+                break;
+            case 'dark_mode':
+                return darkMode !== setting.target.value;
+                break;
+            case 'show_age_logic':
+                return showAgeLogic !== setting.target.value;
+                break;
+            case 'race_mode':
+                return raceMode !== setting.target.value;
+                break;
+            case 'region_visibility':
+                return regionVisibility !== setting.target.value;
+                break;
+            case 'show_unshuffled_entrances':
+                return showUnshuffledEntrances !== setting.target.value;
+                break;
+            case 'show_unshuffled_locations':
+                let shownLocations = [...(setting.target.value as string[])];
+                if (shownLocations.length !== showUnshuffledLocations.length) return true;
+                for (let l of shownLocations) {
+                    if (!(showUnshuffledLocations.includes(l))) return true;
+                }
+                return false;
+                break;
+            case 'show_hints':
+                return showHints !== setting.target.value;
+                break;
+            case 'show_locations':
+                return showLocations !== setting.target.value;
+                break;
+            case 'shop_price_tracking':
+                return showPriceTracking !== setting.target.value;
+                break;
+            case 'show_timer':
+                return showTimer !== setting.target.value;
+                break;
+            case 'show_check_counter':
+                return showCheckCounter !== setting.target.value;
+                break;
+        }
+        return false;
+    }
+
     const setTrackerSettings = (newTrackerSettings: TrackerSettingsCurrent) => {
         for (let [settingName, settingValue] of Object.entries(newTrackerSettings)) {
-            changeSetting({
+            let trackerSetting = {
                 target: {
                     name: settingName,
                     value: settingValue,
                 }
-            });
+            };
+            if (settingChanged(trackerSetting)) changeSetting(trackerSetting);
         }
     }
 
@@ -1083,7 +1181,7 @@ const Tracker = (_props: {}) => {
             collapse = 'none';
         }
         stateCollapsedRegions[area] = collapse;
-        setCollapsedRegions(stateCollapsedRegions);
+        updateAndSaveCollapsedRegions(stateCollapsedRegions);
     }
 
     const toggleCollapseReverse = (areaDiv: HTMLDivElement) => {
@@ -1099,7 +1197,7 @@ const Tracker = (_props: {}) => {
             collapse = 'some';
         }
         stateCollapsedRegions[area] = collapse;
-        setCollapsedRegions(stateCollapsedRegions);
+        updateAndSaveCollapsedRegions(stateCollapsedRegions);
     }
 
     const linkEntrance = (dataLinkFrom: string, dataLinkTo: string): void => {
@@ -1327,7 +1425,7 @@ const Tracker = (_props: {}) => {
     const handleSimModePeek = (_: HTMLDivElement, dataSource: string | null) => {
         if (dataSource === null) return;
         let sourceLocation = graph.worlds[playerNumber].get_location(dataSource);
-        console.log(sourceLocation.name, "[peeked]", sourceLocation.item?.name);
+        console.log(sourceLocation.name, "[peeked]", sourceLocation.item?.peek);
         let newPeeked = new Set(peekedSimLocations);
         if (newPeeked.has(dataSource)) {
             newPeeked.delete(dataSource);
@@ -1401,6 +1499,7 @@ const Tracker = (_props: {}) => {
                         if (!!regionEntrance?.source_group) {
                             linkedRegion = regionEntrance?.source_group;
                             setLastEntranceName('');
+                            setLastRegionName('');
                             break;
                         } else {
                             console.log(`Could not find source group for warp ${regionEntrance?.name} with target group containing multiple exits`);
@@ -1422,22 +1521,35 @@ const Tracker = (_props: {}) => {
             }
             let newPage = '';
             if (oneRegionPerPage) {
-                if (linkedRegion.name !== regionPage) {
+                let actualLinkedRegion: GraphRegion | null = null;
+                if ((linkedRegion.name !== regionPage && linkedRegion.parent_group === null) || linkedRegion.name === 'Warps') {
+                    actualLinkedRegion = linkedRegion;
+                }
+                if ((linkedRegion.parent_group !== null && linkedRegion.parent_group.name !== regionPage && linkedRegion.name !== 'Warps')) {
+                    actualLinkedRegion = linkedRegion.parent_group;
+                }
+                if (fromWarpMenu && !!targetRegion && !!regionEntrance) {
+                    setLastRegionName(buildExitName(regionEntrance));
+                } else {
+                    setLastRegionName(linkedRegion.name);
+                }
+                if (!!actualLinkedRegion) {
                     let newRegions = new Set(visitedSimRegions);
-                    newRegions.add(linkedRegion.name);
+                    newRegions.add(actualLinkedRegion.name);
                     setVisitedSimRegions(newRegions);
-                    setRegionPage(linkedRegion.name);
-                    newPage = linkedRegion.name;
+                    setRegionPage(actualLinkedRegion.name);
+                    newPage = actualLinkedRegion.name;
                 }
             } else {
-                if (linkedRegion.page !== regionPage) {
+                if (linkedRegion.page !== regionPage && regionPage !== 'All') {
                     setRegionPage(linkedRegion.page);
+                    setLastRegionName(linkedRegion.page);
                     newPage = linkedRegion.page;
                 }
             }
             if (!!regionEntrance) {
                 // don't re-scroll if we're linking from within the same region
-                if (regionEntrance.source_group?.name !== linkedRegion.alias) {
+                if (regionEntrance.source_group?.alias !== linkedRegion.alias) {
                     href = `#${linkedRegion.alias}`;
                 }
             } else {
@@ -1541,7 +1653,7 @@ const Tracker = (_props: {}) => {
         let graphRegions = graph.worlds[playerNumber].region_groups.sort((a, b) =>
             a.alias.localeCompare(b.alias));
         let viewableRegions: GraphRegion[] = [];
-        if (oneRegionPerPage) {
+        if (oneRegionPerPage && searchTerm === '') {
             if (tracker_settings_defs.region_page.options?.includes(regionPage)) {
                 viewableRegions = graphRegions.filter(r =>
                     r.page === regionPage && r.viewable);
@@ -1550,8 +1662,9 @@ const Tracker = (_props: {}) => {
                     r.name === regionPage);
             }
         } else {
+            let searchPage = searchTerm === '' ? regionPage : 'All';
             viewableRegions = graphRegions.filter(r =>
-                r.page === regionPage && r.viewable);
+                (r.page === searchPage || searchPage === 'All') && r.viewable);
         }
         let pages: {[page: string]: GraphRegion[]} = {};
         for (let r of graph.worlds[playerNumber].region_groups) {
@@ -1569,6 +1682,7 @@ const Tracker = (_props: {}) => {
         let graphEntranceToLink = entranceToLink !== '' ? graph.worlds[playerNumber].get_entrance(entranceToLink) : null;
         let graphLocations = graph.get_locations_for_world(graph.worlds[playerNumber]);
         let graphLocationCount = graphLocations.filter(l => l.shuffled && !l.is_hint && !l.is_restricted);
+        let graphHintLocations = graphLocations.filter(l => l.is_hint && !!l.hint);
         let graphHintRegions = graph.get_hint_regions().sort();
         let graphRewardHints = graph.worlds[playerNumber].fixed_item_area_hints;
         let sourceHintLocationType = locationToLink !== '' ? graph.worlds[playerNumber].get_location(locationToLink).type : 'HintStone';
@@ -1621,6 +1735,7 @@ const Tracker = (_props: {}) => {
                             deleteFunction={deleteSavedGraphState}
                             stateListFunction={getSavedGraphStates}
                             lastEntranceName={lastEntranceName}
+                            lastRegionName={lastRegionName}
                         />
                         <TrackerDrawer
                             addStartingItem={addStartingItem}
@@ -1635,6 +1750,7 @@ const Tracker = (_props: {}) => {
                             graphPlayerInventory={graphPlayerInventory}
                             graphRewardHints={graphRewardHints}
                             graphLocations={graphLocations}
+                            graphHintLocations={graphHintLocations}
                             graphEntrances={graphEntrances}
                             graphRegions={graphRegions}
                             cycleGraphSetting={cycleGraphSetting}
@@ -1645,6 +1761,7 @@ const Tracker = (_props: {}) => {
                             trackerSettings={trackerSettings}
                             setTrackerSettings={setTrackerSettings}
                             setLastEntranceName={setLastEntranceName}
+                            setLastRegionName={setLastRegionName}
                             changeGraphStringSetting={changeGraphStringSetting}
                             changeGraphBooleanSetting={changeGraphBooleanSetting}
                             changeGraphNumericSetting={changeGraphNumericSetting}
@@ -1656,6 +1773,7 @@ const Tracker = (_props: {}) => {
                             visitedSimRegions={visitedSimRegions}
                             itemPanelAsTab={!isTall || !isNotMobile}
                             isNotMobile={isNotMobile}
+                            simMode={simMode}
                         />
                         <TrackerPaper
                             viewableRegions={viewableRegions}

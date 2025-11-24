@@ -301,12 +301,13 @@ export const OotItemPanel = ({
                 // either clicking the icon or collecting the fake viewable event in Lake Hylia.
                 let pierre = graphLocations.filter((l) => l.vanilla_item?.name === 'Scarecrow Song')[0];
                 let free_scarecrow = graphSettings['free_scarecrow'];
+                let scarecrow_mode = graphSettings['scarecrow_behavior'];
                 let starting_items = graphSettings['starting_items'];
                 let starting_scarecrow = false;
                 if (!!starting_items) {
                     starting_scarecrow = Object.keys(starting_items).includes('Scarecrow Song');
                 }
-                if (free_scarecrow || pierre.checked || starting_scarecrow) {
+                if (free_scarecrow || pierre.checked || starting_scarecrow || (!!scarecrow_mode && scarecrow_mode == 'free')) {
                     collected = 1;
                 } else {
                     collected = 0;
@@ -746,8 +747,7 @@ export const OotItemPanel = ({
         } else {
             available = 0;
         }
-        let show_available_tokens = Object.keys(graphSettings).includes('tokensanity') && graphSettings['tokensanity'] === 'off'
-            && Array.isArray(graphSettings.graphplugin_viewable_unshuffled_items) && !graphSettings.graphplugin_viewable_unshuffled_items.includes('Gold Skulltula Tokens') && itemName === 'Gold Skulltula Token';
+        let show_available_tokens = Object.keys(graphSettings).includes('tokensanity') && graphSettings['tokensanity'] === 'off' && itemName === 'Gold Skulltula Token';
         // Display hearts with the 3 minimum starting hearts. The randomizer logic internally assumes these are always there and starts at 0
         if (itemName === 'Heart Container') collected += 3;
         let addItem = () => addStartingItem(gridEntry.item_name);

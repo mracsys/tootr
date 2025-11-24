@@ -45,3 +45,10 @@
     cursor: pointer;
     padding: var(--theme-spacing) 0;
 }
+
+.hintMenuImportedHintText {
+    padding: calc(var(--theme-spacing) * 2);
+    font-style: italic;
+    font-size: 1.1rem;
+    border-bottom: 1px solid var(--md-sys-color-outline);
+}

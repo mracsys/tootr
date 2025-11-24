@@ -27,6 +27,7 @@ interface TrackerTopBarProps {
     deleteFunction: (saveName: string) => void,
     stateListFunction: () => {[savedName: string]: SavedTrackerState},
     lastEntranceName: string,
+    lastRegionName: string,
 }
 
 
@@ -47,6 +48,7 @@ const TrackerTopBar = ({
     deleteFunction,
     stateListFunction,
     lastEntranceName,
+    lastRegionName,
 }: TrackerTopBarProps) => {
 
     const handleOpenSidebar = () => {
@@ -68,7 +70,7 @@ const TrackerTopBar = ({
             <div className="title">
                 <div>
                     <div className="titleText">
-                        {`${trackerSettings.region_page}`}
+                        {`${trackerSettings.one_region_per_page ? lastRegionName : trackerSettings.region_page}`}
                         <span>{` ${trackerSettings.one_region_per_page ? lastEntranceName : ''}`}</span>
                     </div>
                 </div>

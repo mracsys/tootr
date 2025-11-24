@@ -89,13 +89,17 @@ const GameArea = ({
     const preventDefault: MouseEventHandler = (event: MouseEvent) => event.preventDefault();
     let title = region.name;
     let filter_title = title;
-    if (isSubArea && !!region.parent_group) filter_title = region.parent_group.name;
+    let isFoolish = region.is_not_required;
+    if (isSubArea && !!region.parent_group) {
+        filter_title = region.parent_group.name;
+        isFoolish = region.is_not_required || region.parent_group.is_not_required;
+    }
 
     let connectorShuffled = false;
-    let filteredLocations: GraphLocation[] = region.locations.filter((location) => showAreaLocations && locationFilter(location, collapsedRegions, filter_title, showHints, region.is_not_required, lastLocationName, simMode, peekedLocations, searchTerm));
+    let filteredLocations: GraphLocation[] = region.nested_locations.filter((location) => showAreaLocations && locationFilter(location, collapsedRegions, filter_title, showHints, isFoolish, lastLocationName, simMode, peekedLocations, searchTerm));
     let filteredEntrances: GraphEntrance[] = region.exits.filter((entrance) => 
         ((!showUnshuffledEntrances && (entrance.shuffled || connectorShuffled)) || showUnshuffledEntrances) &&
-        entranceOrTargetMatchesTerm(entrance, collapsedRegions, filter_title, searchTerm, showEntranceLocations, showShops, showHints, region.is_not_required, lastLocationName, simMode, peekedLocations)).sort((a, b) => a.type_priority - b.type_priority || a.alias.localeCompare(b.alias));
+        entranceOrTargetMatchesTerm(entrance, collapsedRegions, filter_title, searchTerm, showEntranceLocations, showShops, showHints, isFoolish, lastLocationName, simMode, peekedLocations)).sort((a, b) => a.type_priority - b.type_priority || a.alias.localeCompare(b.alias));
 
     // Don't show areas that don't match search criteria
     if (filteredEntrances.length === 0 && filteredLocations.length === 0 && searchTerm !== '') {
@@ -107,13 +111,13 @@ const GameArea = ({
     && filteredLocations.length === 0) {
         return null;
     }
-    filteredLocations = region.local_locations.filter((location) => showAreaLocations && locationFilter(location, collapsedRegions, filter_title, showHints, region.is_not_required, lastLocationName, simMode, peekedLocations, searchTerm));
+    filteredLocations = region.local_locations.filter((location) => showAreaLocations && locationFilter(location, collapsedRegions, filter_title, showHints, isFoolish, lastLocationName, simMode, peekedLocations, searchTerm));
     filteredEntrances = region.local_exits.filter((entrance) => 
         ((!showUnshuffledEntrances && (entrance.shuffled || connectorShuffled)) || showUnshuffledEntrances) &&
-        entranceOrTargetMatchesTerm(entrance, collapsedRegions, filter_title, searchTerm, showEntranceLocations, showShops, showHints, region.is_not_required, lastLocationName, simMode, peekedLocations)).sort((a, b) => a.type_priority - b.type_priority || a.alias.localeCompare(b.alias));
+        entranceOrTargetMatchesTerm(entrance, collapsedRegions, filter_title, searchTerm, showEntranceLocations, showShops, showHints, isFoolish, lastLocationName, simMode, peekedLocations)).sort((a, b) => a.type_priority - b.type_priority || a.alias.localeCompare(b.alias));
 
     return (
-        <div className={!isSubArea ? `areaCard ${region.is_required ? 'areaRequiredGeneric' : ''} ${!region.is_required && region.required_for.length > 0 ? 'areaRequiredSpecific' : ''} ${region.is_not_required ? 'areaNotRequired' : ''}` : 'subAreaCard'}>
+        <div className={!isSubArea ? `areaCard ${region.is_required ? 'areaRequiredGeneric' : ''} ${!region.is_required && region.required_for.length > 0 ? 'areaRequiredSpecific' : ''} ${isFoolish ? 'areaNotRequired' : ''}` : 'subAreaCard'}>
             {!isSubArea ?
             <div>
                 <a className="entranceAnchor" href={title} id={title} onClick={preventDefault}>
@@ -123,7 +127,7 @@ const GameArea = ({
                     <span className="entranceAnchorFakeText">&nbsp;</span>
                 </a>
                 <div className="areaHeader" />
-                <div className={`areaTitle ${region.is_required ? 'areaRequiredGeneric' : ''} ${!region.is_required && region.required_for.length > 0 ? 'areaRequiredSpecific' : ''} ${region.is_not_required ? 'areaNotRequired' : ''}`}>
+                <div className={`areaTitle ${region.is_required ? 'areaRequiredGeneric' : ''} ${!region.is_required && region.required_for.length > 0 ? 'areaRequiredSpecific' : ''} ${isFoolish ? 'areaNotRequired' : ''}`}>
                     <div
                         className="areaTitleTextContainer areaTitleCollapse"
                         onClick={() => collapseSwitch(title)}
@@ -192,7 +196,7 @@ const GameArea = ({
                         to offset the anchor below the appbar */}
                     <span className="entranceAnchorFakeText">&nbsp;</span>
                 </a>
-                <div className={`subAreaTitle ${region.is_required ? 'areaRequiredGeneric' : ''} ${!region.is_required && region.required_for.length > 0 ? 'areaRequiredSpecific' : ''} ${region.is_not_required ? 'areaNotRequired' : ''}`}>
+                <div className={`subAreaTitle ${region.is_required ? 'areaRequiredGeneric' : ''} ${!region.is_required && region.required_for.length > 0 ? 'areaRequiredSpecific' : ''} ${isFoolish ? 'areaNotRequired' : ''}`}>
                     <div className='areaTitleTextContainer'>
                         <span className="areaTitleText">
                             {title}
@@ -239,7 +243,7 @@ const GameArea = ({
                 </div>
             </div>}
             {
-                (collapsedRegions[title] !== 'all') ?
+                (collapsedRegions[filter_title] !== 'all') ?
                 <div>
                     <div className='areaLocations'>
                     { filteredLocations.map((location, i) => { 
@@ -258,7 +262,7 @@ const GameArea = ({
                                 showAgeLogic={showAgeLogic}
                                 simMode={simMode}
                                 lastLocationName={lastLocationName}
-                                collapseRegion={collapsedRegions[title]}
+                                collapseRegion={collapsedRegions[filter_title]}
                                 peekedLocations={peekedLocations}
                             />
                         </React.Fragment>)
@@ -269,7 +273,7 @@ const GameArea = ({
                             <React.Fragment key={title + "entranceScrollContainer" + i}>
                                 <div className="scrollControl" ref={(e) => setRef(title + entrance.name, e)} id={title + "entranceScrollContainer" + i} key={title + "entranceScrollContainer" + i} />
                                 <UnknownEntrance
-                                    title={title}
+                                    title={filter_title}
                                     playerNum={playerNum}
                                     collapsedRegions={collapsedRegions}
                                     entrance={entrance}
@@ -294,7 +298,7 @@ const GameArea = ({
                                     showEntranceLocations={showEntranceLocations}
                                     showHints={showHints}
                                     showAgeLogic={showAgeLogic}
-                                    regionIsFoolish={region.is_not_required}
+                                    regionIsFoolish={isFoolish}
                                     lastLocationName={lastLocationName}
                                     peekedLocations={peekedLocations}
 
