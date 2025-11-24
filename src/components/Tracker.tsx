@@ -864,7 +864,7 @@ const Tracker = (_props: {}) => {
             case 'region_page':
                 setRegionPage(setting.target.value as string);
                 setLastEntranceName('');
-                setLastRegionName('');
+                setLastRegionName(setting.target.value as string);
                 break;
             case 'one_region_per_page':
                 setOneRegionPerPage(setting.target.value as boolean);
@@ -1659,12 +1659,16 @@ const Tracker = (_props: {}) => {
             a.alias.localeCompare(b.alias));
         let viewableRegions: GraphRegion[] = [];
         if (oneRegionPerPage && searchTerm === '') {
-            if (tracker_settings_defs.region_page.options?.includes(regionPage)) {
+            let searchPage = searchTerm === '' ? regionPage : 'All';
+            if (searchPage === 'All') {
                 viewableRegions = graphRegions.filter(r =>
-                    r.page === regionPage && r.viewable);
+                    r.viewable);
+            } else if (tracker_settings_defs.region_page.options?.includes(searchPage)) {
+                viewableRegions = graphRegions.filter(r =>
+                    r.page === searchPage && r.viewable);
             } else {
                 viewableRegions = graphRegions.filter(r =>
-                    r.name === regionPage);
+                    r.name === searchPage);
             }
         } else {
             let searchPage = searchTerm === '' ? regionPage : 'All';
