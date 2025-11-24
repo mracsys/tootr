@@ -162,7 +162,7 @@
 }
 .iconSideText {
     display: flex;
-    width: 64px;
+    max-width: 64px;
     height: 24px;
     align-items: center;
     font-family: 'Hylia Serif Beta';

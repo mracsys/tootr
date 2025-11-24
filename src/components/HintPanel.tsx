@@ -140,11 +140,13 @@ export const HintPanel = ({
                                     <div className='hintCopies'>({hintStats.copies} {hintStats.copies === 1 ? 'copy' : 'copies'})</div>
                                 </div>
                                 </div>
+                                <div className='hintIconContainer'>
                                 {region.nested_locations.map((l, j) =>
                                     !!l.item && show_hinted_items(l) ?
                                         <OotItemIcon key={`wothHintItem${i}_${j}`} className='hintPanelItemIcon' itemName={l.item.name} />
                                         : null
                                 )}
+                                </div>
                             </div>
                             </React.Fragment>
                             )
@@ -209,11 +211,13 @@ export const HintPanel = ({
                                     <div className='hintCopies'>({hintStats.copies} {hintStats.copies === 1 ? 'copy' : 'copies'})</div>
                                 </div>
                                 </div>
+                                <div className='hintIconContainer'>
                                 {region.nested_locations.map((l, j) => 
                                     !!l.item && show_hinted_items(l) ?
                                         <OotItemIcon key={`foolishHintItem${i}_${j}`} className='hintPanelItemIcon' itemName={l.item.name} />
                                         : null
                                 )}
+                                </div>
                             </div>
                         )
                     })}
@@ -302,11 +306,13 @@ export const HintPanel = ({
                                     <div className='hintCopies'>({hintStats.copies} {hintStats.copies === 1 ? 'copy' : 'copies'})</div>
                                 </div>
                                 </div>
+                                <div className='hintIconContainer'>
                                 {h.area.nested_locations.map((l, j) =>
                                     !!l.item && show_important_items(l) ?
                                         <OotItemIcon key={`importantHintItem${i}_${j}`} className='hintPanelItemIcon' itemName={l.item.name} />
                                         : null
                                 )}
+                                </div>
                             </div>
                         )
                     })}
