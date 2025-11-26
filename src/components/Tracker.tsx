@@ -661,11 +661,15 @@ const Tracker = (_props: {}) => {
                 setOneRegionPerPage(true);
             } else {
                 setRegionPage('Overworld');
+                setLastRegionName('Overworld');
                 setOneRegionPerPage(false);
             }
             graph.import(plando);
         } else {
             graph.load_settings_preset(currentGraphPreset);
+            setOneRegionPerPage(false);
+            setRegionPage('Overworld');
+            setLastRegionName('Overworld');
         }
         setTrackerPreferences(graph);
         refreshSearch();
@@ -674,7 +678,6 @@ const Tracker = (_props: {}) => {
         setVisitedSimRegions(new Set());
         setPeekedSimLocations(new Set());
         setLastEntranceName('');
-        setLastRegionName('');
     }
 
     const refreshSearch = () => {
