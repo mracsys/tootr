@@ -340,7 +340,7 @@ export const HintPanel = ({
                                     </div>
                                 </div>
                                 </div>
-                                <div className='hintTextFlexContainer'>
+                                <div className='hintTextFlexContainerRight'>
                                 <div className='hintTextContainer'>
                                     <div className="entranceLinkTo">
                                         <div className="entranceLink1">

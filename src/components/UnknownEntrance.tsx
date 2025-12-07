@@ -173,7 +173,7 @@ const UnknownEntrance = ({
     let reverseLink = !!(entrance.replaces) ? entrance.replaces : entrance;
     let rootIsWarp = fromWarp || entrance.is_warp || entrance.reverse === null;
     if (!!eType) {
-        if (entrance.connected_region === null || (simMode && !entrance.checked && entrance.shuffled)) {
+        if (entrance.connected_region === null || (simMode && !entrance.checked && !entrance.hinted && entrance.shuffled)) {
             return (
                 <React.Fragment>
                     <UnLinkedEntrance

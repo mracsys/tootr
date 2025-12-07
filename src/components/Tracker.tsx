@@ -108,7 +108,7 @@ const Tracker = (_props: {}) => {
 
     // user settings panel
     const [savedSettingsVersion, setSavedSettingsVersion] = useState<number>(1);
-    const [graphVersion, setGraphVersion] = useState<string>('8.3.0 Release');
+    const [graphVersion, setGraphVersion] = useState<string>('8.3.65 Dev');
     const [playerNumber, setPlayerNumber] = useState<number>(0);
     const [settingIcons, setSettingIcons] = useState<boolean>(true);
     const [regionPage, setRegionPage] = useState<string>('Overworld');
@@ -132,7 +132,7 @@ const Tracker = (_props: {}) => {
     const [peekedSimLocations, setPeekedSimLocations] = useState<Set<string>>(new Set());
     const [lastRegionName, setLastRegionName] = useState<string>('');
     const [lastEntranceName, setLastEntranceName] = useState<string>('');
-    const [currentGraphPreset, setCurrentGraphPreset] = useState<string>('Random Settings League');
+    const [currentGraphPreset, setCurrentGraphPreset] = useState<string>('S9 Tournament');
 
     // safe defaults for 1080p fullscreen
     const [isNotMobile, setIsNotMobile] = useState<boolean>(false);
@@ -361,7 +361,7 @@ const Tracker = (_props: {}) => {
         let clientPeekedLocations = localStorage.getItem('SimModePeekedLocations');
         let peekedLocationsInit = !!clientPeekedLocations ? new Set<string>(JSON.parse(clientPeekedLocations)) : new Set<string>();
         let clientCurrentPreset = localStorage.getItem('CurrentGraphPreset');
-        let currentPresetInit = !!clientCurrentPreset ? clientCurrentPreset : 'Random Settings League';
+        let currentPresetInit = !!clientCurrentPreset ? clientCurrentPreset : 'S9 Tournament';
 
         setCollapsedRegions(collapsedRegionsInit);
         setVisitedSimRegions(visitedRegionsInit);
@@ -631,7 +631,8 @@ const Tracker = (_props: {}) => {
             let [spawn_region, spawn_entrance] = spawn;
             if (!!spawn_region) {
                 checkEntrance(spawn_entrance.name, false);
-                handleDungeonTravel(spawn_entrance.target_group, spawn_entrance, false);
+                if (spawn_region.parent_group?.page !== '') spawn_region = spawn_region.parent_group;
+                handleDungeonTravel(spawn_region, spawn_entrance, true, true);
             } else {
                 setRegionPage('Warps');
                 setLastEntranceName('');
@@ -657,8 +658,8 @@ const Tracker = (_props: {}) => {
             if (simMode) {
                 delete plando[':checked'];
                 delete plando[':checked_entrances'];
-                startSimMode();
                 setOneRegionPerPage(true);
+                startSimMode();
             } else {
                 setRegionPage('Overworld');
                 setLastRegionName('Overworld');
@@ -830,6 +831,9 @@ const Tracker = (_props: {}) => {
                 plando[':version'] = newVersion;
             }
         }
+        // Only necessary for the tracker version setting display.
+        // The graph handles translating to Dev internally.
+        newVersion = newVersion.replace('f.LUM', 'Dev');
         let supportedVersions = graph.get_game_versions(true);
         if (supportedVersions.versions.filter(v => v.version === newVersion).length === 0) {
             alert(`Unsupported game version ${newVersion}`);
@@ -1495,7 +1499,7 @@ const Tracker = (_props: {}) => {
         setEntranceRef(eRef);
     }
 
-    const handleDungeonTravel = (targetRegion: GraphRegion | null, regionEntrance: GraphEntrance | null = null, fromWarpMenu: boolean = false) => {
+    const handleDungeonTravel = (targetRegion: GraphRegion | null, regionEntrance: GraphEntrance | null = null, fromWarpMenu: boolean = false, startSimMode = false) => {
         let href = '#';
         let linkedRegion = targetRegion;
         if (!!(linkedRegion) && (linkedRegion.page !== '' || fromWarpMenu)) {
@@ -1528,7 +1532,7 @@ const Tracker = (_props: {}) => {
                 }
             }
             let newPage = '';
-            if (oneRegionPerPage) {
+            if (oneRegionPerPage || startSimMode) {
                 let actualLinkedRegion: GraphRegion | null = null;
                 if ((linkedRegion.name !== regionPage && linkedRegion.parent_group === null) || linkedRegion.name === 'Warps') {
                     actualLinkedRegion = linkedRegion;
