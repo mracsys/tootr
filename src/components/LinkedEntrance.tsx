@@ -51,6 +51,8 @@ interface LinkedEntranceProps {
     searchTerm: string,
     showAreaLocations: boolean,
     showEntranceLocations: boolean,
+    showUnshuffledEntrances: string,
+    showLinkedEntranceName: boolean,
     regionIsFoolish: boolean,
     simMode: boolean,
     lastLocationName: string[],
@@ -92,6 +94,8 @@ const LinkedEntrance = ({
     searchTerm,
     showAreaLocations,
     showEntranceLocations,
+    showUnshuffledEntrances,
+    showLinkedEntranceName,
     regionIsFoolish,
     simMode,
     lastLocationName,
@@ -181,20 +185,22 @@ const LinkedEntrance = ({
                         : null
                     }
                     {
-                        reverseLink.target_group?.page !== '' ?
-                        <a
-                            href={buildEntranceURL(reverseLink)}
-                            onClick={(reverseLink.target_group?.page !== currentPage) ?
-                                    () => handleDungeonTravel(reverseLink.target_group, entrance)
-                                    : () => {}}
-                            className='overworldLinkAnchor'
-                        >
-                            {targetDescription}
-                        </a>
-                        :
-                        <div className='falseLinkAnchor'>
-                            {targetDescription}
-                        </div>
+                        showLinkedEntranceName || entrance.shuffled ?
+                            reverseLink.target_group?.page !== '' ?
+                            <a
+                                href={buildEntranceURL(reverseLink)}
+                                onClick={(reverseLink.target_group?.page !== currentPage) ?
+                                        () => handleDungeonTravel(reverseLink.target_group, entrance)
+                                        : () => {}}
+                                className='overworldLinkAnchor'
+                            >
+                                {targetDescription}
+                            </a>
+                            :
+                            <div className='falseLinkAnchor'>
+                                {targetDescription}
+                            </div>
+                        : null
                     }
                     {
                         (oEntrance.shuffled === true) ?
@@ -300,6 +306,8 @@ const LinkedEntrance = ({
                         searchTerm={searchTerm}
                         showAreaLocations={showAreaLocations}
                         showEntranceLocations={showEntranceLocations}
+                        showUnshuffledEntrances={showUnshuffledEntrances}
+                        showLinkedEntranceName={showLinkedEntranceName}
                         regionIsFoolish={regionIsFoolish}
                         simMode={simMode}
                         lastLocationName={lastLocationName}

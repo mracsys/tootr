@@ -5,7 +5,7 @@ import { TrackerSettingsCurrent } from '@/data/tracker_settings';
 import type ContextMenuHandler from './ContextMenuHandler';
 import type { CollapsedRegions } from './Tracker';
 import WarpMenu from './WarpMenu';
-import { locationFilter, entranceOrTargetMatchesTerm } from './UnknownEntrance';
+import { locationFilter, entranceOrTargetMatchesTerm, entranceHasLocations } from './UnknownEntrance';
 
 import { GraphRegion, GraphEntrance, GraphLocation } from '@mracsys/randomizer-graph-tool';
 
@@ -118,7 +118,8 @@ const TrackerPaper = ({
         let showEntranceLocations = ['Yes', 'Interiors Only'].includes(trackerSettings.show_locations);
         let showShops = trackerSettings.show_unshuffled_locations.includes('Shop Items');
         let filteredEntrances: GraphEntrance[] = region.exits.filter((entrance) => 
-            ((!showUnshuffledEntrances && (entrance.shuffled || connectorShuffled)) || showUnshuffledEntrances) &&
+            ((showUnshuffledEntrances === 'None' && (entrance.shuffled || connectorShuffled)) || ['All','With Locations'].includes(showUnshuffledEntrances)) && (showUnshuffledEntrances !== 'With Locations' || (entrance.shuffled || connectorShuffled) ||
+            (entranceHasLocations(entrance, showUnshuffledEntrances, showEntranceLocations, collapsedRegions, title, showHints, region.is_not_required, lastLocationName, simMode, peekedLocations, showShops) && !entrance.is_reverse())) &&
             entranceOrTargetMatchesTerm(entrance, collapsedRegions, title, searchTerm, showEntranceLocations, showShops, showHints, region.is_not_required, lastLocationName, simMode, peekedLocations)).sort((a, b) => a.type_priority - b.type_priority || a.alias.localeCompare(b.alias));
     
         // Don't show areas that don't match search criteria
@@ -160,6 +161,7 @@ const TrackerPaper = ({
                 showUnshuffledEntrances={showUnshuffledEntrances}
                 showAreaLocations={showAreaLocations}
                 showEntranceLocations={showEntranceLocations}
+                showLinkedEntranceName={trackerSettings.show_linked_entrance}
                 showHints={showHints}
                 showAgeLogic={trackerSettings.show_age_logic}
                 key={regionIndex}

@@ -27,7 +27,7 @@ export const HintPanel = ({
     }
 
     let wothRegions: {[region_name: string]: HintStats} = {};
-    let pathRegions: {[region_name: string]: HintStats} = {};
+    let pathRegions: {[region_name: string]: HintStats[]} = {};
     let foolishRegions: {[region_name: string]: HintStats} = {};
     let hintedLocations: {[location_name: string]: HintStats} = {};
     let hintedEntrances: {[entrance_name: string]: HintStats} = {};
@@ -58,9 +58,17 @@ export const HintPanel = ({
                 case 'goal':
                     if (!!hint.area && !!hint.goal) {
                         if (Object.keys(pathRegions).includes(hint.area.name)) {
-                            pathRegions[hint.area.name].copies++;
+                            let is_copy = false;
+                            for (let h of pathRegions[hint.area.name]) {
+                                if ((h.hint.goal?.item?.name === hint.goal.item?.name && !!h.hint.goal?.item) ||
+                                    (h.hint.goal?.location?.name === hint.goal.location?.name && !!h.hint.goal?.location)) {
+                                    h.copies++;
+                                    is_copy = true;
+                                }
+                            }
+                            if (!is_copy) pathRegions[hint.area.name].push(new HintStats(hint));
                         } else {
-                            pathRegions[hint.area.name] = new HintStats(hint);
+                            pathRegions[hint.area.name] = [new HintStats(hint)];
                         }
                     }
                     break;
@@ -162,26 +170,34 @@ export const HintPanel = ({
                 <div className='hintTypeTitle'>Paths</div>
                 <div>
                     {Object.values(pathRegions).map((hintStats, i) => {
-                        let h = hintStats.hint;
+                        let h = hintStats[0].hint;
                         if (!!h.area) return (
                             <div className='hintContainer' key={`pathHintText${i}`}>
+                                <div className='hintPathIcons'>
                                 {
-                                    !!h.goal && !!h.goal.item ?
-                                        <OotItemIcon
-                                            itemName={h.goal.item.name}
-                                            className="hintPanelKnownItem"
-                                        />
-                                    : !!h.goal && !!h.goal.location ?
-                                        <OotItemIcon
-                                            itemName={h.goal.location.name}
-                                            className="hintPanelKnownItem"
-                                        />
-                                    : null
+                                    hintStats.map((h2, k) => 
+                                        !!h2.hint.goal && !!h2.hint.goal.item ?
+                                            <OotItemIcon
+                                                itemName={h2.hint.goal.item.name}
+                                                className="hintPanelKnownItem"
+                                                key={`pathHintIcon${i}_${k}`}
+                                            />
+                                        : !!h2.hint.goal && !!h2.hint.goal.location ?
+                                            <OotItemIcon
+                                                itemName={h2.hint.goal.location.name}
+                                                className="hintPanelKnownItem"
+                                                key={`pathHintIcon${i}_${k}`}
+                                            />
+                                        : null
+                                    )
                                 }
+                                </div>
                                 <div className='hintTextFlexContainer'>
                                 <div className='hintTextContainer'>
                                     <div className='hintText'>{h.area.alias}</div>
-                                    <div className='hintCopies'>({hintStats.copies} {hintStats.copies === 1 ? 'copy' : 'copies'})</div>
+                                    {hintStats.length <= 1 ?
+                                    <div className='hintCopies'>({hintStats[0].copies} {hintStats[0].copies === 1 ? 'copy' : 'copies'})</div>
+                                    : null}
                                 </div>
                                 </div>
                                 <div className='hintIconContainer'>

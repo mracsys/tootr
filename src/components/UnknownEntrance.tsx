@@ -92,6 +92,29 @@ export const entranceOrTargetMatchesTerm = (entrance: GraphEntrance, collapsedRe
     return false;
 }
 
+export const entranceHasLocations = (
+    entrance: GraphEntrance,
+    showUnshuffledEntrances: string,
+    showEntranceLocations: boolean,
+    collapsedRegions: CollapsedRegions,
+    title: string,
+    showHints: boolean,
+    regionIsFoolish: boolean,
+    lastLocationName: string[],
+    simMode: boolean,
+    peekedLocations: Set<string>,
+    showShops: boolean,
+    searchTerm: string = ''
+): boolean => {
+    if (showUnshuffledEntrances !== 'With Locations') return true;
+    let entranceLocations: GraphLocation[] = [];
+    if (!!entrance.target_group && entrance.target_group.page === '') {
+        entranceLocations.push(...entrance.target_group.locations.filter(l => showEntranceLocations && locationFilter(l, collapsedRegions, title, showHints, regionIsFoolish, lastLocationName, simMode, peekedLocations, searchTerm)));
+        entranceLocations.push(...entrance.target_group.locations.filter(l => showEntranceLocations && shopLocationFilter(l, showShops, searchTerm)));
+    }
+    return entranceLocations.length > 0;
+}
+
 interface UnknownEntranceProps {
     forceVisible: boolean,
     title: string,
@@ -124,6 +147,8 @@ interface UnknownEntranceProps {
     searchTerm: string,
     showAreaLocations: boolean,
     showEntranceLocations: boolean,
+    showUnshuffledEntrances: string,
+    showLinkedEntranceName: boolean,
     regionIsFoolish: boolean,
     simMode: boolean,
     lastLocationName: string[],
@@ -163,6 +188,8 @@ const UnknownEntrance = ({
     searchTerm,
     showAreaLocations,
     showEntranceLocations,
+    showUnshuffledEntrances,
+    showLinkedEntranceName,
     regionIsFoolish,
     simMode,
     lastLocationName,
@@ -200,6 +227,7 @@ const UnknownEntrance = ({
                 shopLocations.push(...reverseLink.target_group.locations.filter(l => showEntranceLocations && shopLocationFilter(l, showShops, searchTerm)));
                 otherEntrances.push(...reverseLink.target_group.exits.filter(e => 
                     !(renderedConnectors.includes(e)) &&
+                    (e.shuffled || reverseLink.shuffled || showUnshuffledEntrances !== 'With Locations') &&
                     (e.shuffled || entrance.source_group !== (!!e.replaces ? e.replaces : e).target_group || rootIsWarp) && // || e.target_group !== reverseLink.source_group
                     (e !== reverseLink.reverse || rootIsWarp || (!e.coupled && e.shuffled)) &&
                     entranceOrTargetMatchesTerm(e, collapsedRegions, title, searchTerm, showEntranceLocations, showShops, showHints, isFoolish, lastLocationName, simMode, peekedLocations, [...renderedConnectors])));
@@ -249,6 +277,8 @@ const UnknownEntrance = ({
                             searchTerm={searchTerm}
                             showAreaLocations={showAreaLocations}
                             showEntranceLocations={showEntranceLocations}
+                            showUnshuffledEntrances={showUnshuffledEntrances}
+                            showLinkedEntranceName={showLinkedEntranceName}
                             regionIsFoolish={regionIsFoolish}
                             simMode={simMode}
                             lastLocationName={lastLocationName}

@@ -1,6 +1,6 @@
-export const current_settings_version = 1;
+export const current_settings_version = 2;
 
-export interface tracker_settings_definitions_v1 {
+export interface tracker_settings_definitions_v2 {
     version: number,
     game_version: tracker_setting_definition,
     player_number: tracker_setting_definition,
@@ -8,6 +8,7 @@ export interface tracker_settings_definitions_v1 {
     region_page: tracker_setting_definition,
     one_region_per_page: tracker_setting_definition,
     dark_mode: tracker_setting_definition,
+    show_linked_entrance: tracker_setting_definition,
     show_unshuffled_entrances: tracker_setting_definition,
     show_locations: tracker_setting_definition,
     show_unshuffled_locations: tracker_setting_definition,
@@ -30,7 +31,8 @@ export interface tracker_settings_v1 {
     region_page: string,
     one_region_per_page: boolean,
     dark_mode: boolean,
-    show_unshuffled_entrances: boolean,
+    show_linked_entrance: boolean,
+    show_unshuffled_entrances: string,
     show_locations: string,
     show_unshuffled_locations: string[],
     shop_price_tracking: string,
@@ -42,8 +44,31 @@ export interface tracker_settings_v1 {
     show_check_counter: boolean,
 }
 
-export type all_tracker_settings_versions = tracker_settings_v1;
-export type TrackerSettingsCurrent = tracker_settings_v1;
+export interface tracker_settings_v2 {
+    [key: string]: number | boolean | string | string[],
+    version: number,
+    game_version: string,
+    player_number: number,
+    setting_icons: boolean,
+    expand_sidebar: boolean,
+    region_page: string,
+    one_region_per_page: boolean,
+    dark_mode: boolean,
+    show_linked_entrance: boolean,
+    show_unshuffled_entrances: string,
+    show_locations: string,
+    show_unshuffled_locations: string[],
+    shop_price_tracking: string,
+    show_hints: boolean,
+    show_age_logic: boolean,
+    race_mode: boolean,
+    region_visibility: string,
+    show_timer: boolean,
+    show_check_counter: boolean,
+}
+
+export type all_tracker_settings_versions = [tracker_settings_v1, tracker_settings_v2];
+export type TrackerSettingsCurrent = tracker_settings_v2;
 
 export interface tracker_setting_definition {
     display_name: string,
@@ -61,7 +86,7 @@ export const copyTrackerSettings = (oldTrackerSettings: TrackerSettingsCurrent):
 }
 
 export const tracker_settings_default: TrackerSettingsCurrent = {
-    version: 1,
+    version: current_settings_version,
     game_version: '',
     player_number: 0,
     setting_icons: true,
@@ -72,7 +97,8 @@ export const tracker_settings_default: TrackerSettingsCurrent = {
     show_age_logic: false,
     race_mode: true,
     region_visibility: 'Reachable with All Tricks',
-    show_unshuffled_entrances: true,
+    show_linked_entrance: true,
+    show_unshuffled_entrances: 'All',
     show_unshuffled_locations: [],
     show_hints: true,
     show_locations: 'Yes',
@@ -88,8 +114,8 @@ export const region_visibility_values: {[trackerValue: string]: string} = {
     'Always Visible': 'always',
 }
 
-export const tracker_settings_defs: tracker_settings_definitions_v1 = {
-    version: 1,
+export const tracker_settings_defs: tracker_settings_definitions_v2 = {
+    version: current_settings_version,
     game_version: {
         display_name: 'Randomizer Version',
         type: 'str',
@@ -146,9 +172,18 @@ export const tracker_settings_defs: tracker_settings_definitions_v1 = {
         display_name: 'Show Timer',
         type: 'bool',
     },
+    show_linked_entrance: {
+        display_name: 'Show Linked Entrance Name',
+        type: 'bool',
+    },
     show_unshuffled_entrances: {
         display_name: 'Show Unshuffled Entrances',
-        type: 'bool',
+        type: 'str',
+        options: [
+            'All',
+            'With Locations',
+            'None',
+        ]
     },
     show_locations: {
         display_name: 'Show All Locations',

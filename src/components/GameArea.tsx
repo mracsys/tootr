@@ -3,7 +3,7 @@ import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 
-import UnknownEntrance, { locationFilter, entranceOrTargetMatchesTerm } from './UnknownEntrance';
+import UnknownEntrance, { locationFilter, entranceOrTargetMatchesTerm, entranceHasLocations } from './UnknownEntrance';
 import LocationCheck from './LocationCheck';
 import type { CollapsedRegions } from './Tracker';
 import type ContextMenuHandler from './ContextMenuHandler';
@@ -34,9 +34,10 @@ interface GameAreaProps {
     showShops: boolean,
     showShopInput: boolean,
     showShopRupee: boolean,
-    showUnshuffledEntrances: boolean,
+    showUnshuffledEntrances: string,
     showAreaLocations: boolean,
     showEntranceLocations: boolean,
+    showLinkedEntranceName: boolean,
     showHints: boolean,
     showAgeLogic: boolean,
     collapseSwitch: (areaName: string) => void,
@@ -74,6 +75,7 @@ const GameArea = ({
     showUnshuffledEntrances,
     showAreaLocations,
     showEntranceLocations,
+    showLinkedEntranceName,
     showHints,
     showAgeLogic,
     collapseSwitch,
@@ -98,11 +100,16 @@ const GameArea = ({
     let connectorShuffled = false;
     let filteredLocations: GraphLocation[] = region.nested_locations.filter((location) => showAreaLocations && locationFilter(location, collapsedRegions, filter_title, showHints, isFoolish, lastLocationName, simMode, peekedLocations, searchTerm));
     let filteredEntrances: GraphEntrance[] = region.exits.filter((entrance) => 
-        ((!showUnshuffledEntrances && (entrance.shuffled || connectorShuffled)) || showUnshuffledEntrances) &&
+        ((showUnshuffledEntrances === 'None' && (entrance.shuffled || connectorShuffled)) || ['All','With Locations'].includes(showUnshuffledEntrances)) && (showUnshuffledEntrances !== 'With Locations' || (entrance.shuffled || connectorShuffled) ||
+        (entranceHasLocations(entrance, showUnshuffledEntrances, showEntranceLocations, collapsedRegions, filter_title, showHints, isFoolish, lastLocationName, simMode, peekedLocations, showShops) && !entrance.is_reverse())) &&
         entranceOrTargetMatchesTerm(entrance, collapsedRegions, filter_title, searchTerm, showEntranceLocations, showShops, showHints, isFoolish, lastLocationName, simMode, peekedLocations)).sort((a, b) => a.type_priority - b.type_priority || a.alias.localeCompare(b.alias));
 
     // Don't show areas that don't match search criteria
     if (filteredEntrances.length === 0 && filteredLocations.length === 0 && searchTerm !== '') {
+        return null;
+    }
+    // Don't show completed subareas
+    if (filteredEntrances.length === 0 && filteredLocations.length === 0 && isSubArea) {
         return null;
     }
     // Don't show areas with unshuffled entrances that all lead to the same area.
@@ -113,7 +120,8 @@ const GameArea = ({
     }
     filteredLocations = region.local_locations.filter((location) => showAreaLocations && locationFilter(location, collapsedRegions, filter_title, showHints, isFoolish, lastLocationName, simMode, peekedLocations, searchTerm));
     filteredEntrances = region.local_exits.filter((entrance) => 
-        ((!showUnshuffledEntrances && (entrance.shuffled || connectorShuffled)) || showUnshuffledEntrances) &&
+        ((showUnshuffledEntrances === 'None' && (entrance.shuffled || connectorShuffled)) || ['All','With Locations'].includes(showUnshuffledEntrances)) && (showUnshuffledEntrances !== 'With Locations' || (entrance.shuffled || connectorShuffled) ||
+        (entranceHasLocations(entrance, showUnshuffledEntrances, showEntranceLocations, collapsedRegions, filter_title, showHints, isFoolish, lastLocationName, simMode, peekedLocations, showShops) && !entrance.is_reverse())) &&
         entranceOrTargetMatchesTerm(entrance, collapsedRegions, filter_title, searchTerm, showEntranceLocations, showShops, showHints, isFoolish, lastLocationName, simMode, peekedLocations)).sort((a, b) => a.type_priority - b.type_priority || a.alias.localeCompare(b.alias));
 
     return (
@@ -296,6 +304,8 @@ const GameArea = ({
                                     showShopRupee={showShopRupee}
                                     showAreaLocations={showAreaLocations}
                                     showEntranceLocations={showEntranceLocations}
+                                    showUnshuffledEntrances={showUnshuffledEntrances}
+                                    showLinkedEntranceName={showLinkedEntranceName}
                                     showHints={showHints}
                                     showAgeLogic={showAgeLogic}
                                     regionIsFoolish={isFoolish}
@@ -347,6 +357,7 @@ const GameArea = ({
                             showUnshuffledEntrances={showUnshuffledEntrances}
                             showAreaLocations={showAreaLocations}
                             showEntranceLocations={showEntranceLocations}
+                            showLinkedEntranceName={showLinkedEntranceName}
                             showHints={showHints}
                             showAgeLogic={showAgeLogic}
                             key={regionIndex}

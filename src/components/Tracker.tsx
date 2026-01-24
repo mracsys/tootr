@@ -107,7 +107,7 @@ const Tracker = (_props: {}) => {
     const listRef = useRef<string[]>([]);
 
     // user settings panel
-    const [savedSettingsVersion, setSavedSettingsVersion] = useState<number>(1);
+    const [savedSettingsVersion, setSavedSettingsVersion] = useState<number>(2);
     const [graphVersion, setGraphVersion] = useState<string>('9.0.0 Release');
     const [playerNumber, setPlayerNumber] = useState<number>(0);
     const [settingIcons, setSettingIcons] = useState<boolean>(true);
@@ -118,8 +118,9 @@ const Tracker = (_props: {}) => {
     const [showAgeLogic, setShowAgeLogic] = useState<boolean>(false);
     const [raceMode, setRaceMode] = useState<boolean>(true);
     const [regionVisibility, setRegionVisibility] = useState<string>('Reachable with All Tricks');
-    const [showUnshuffledEntrances, setShowUnshuffledEntrances] = useState<boolean>(true);
+    const [showUnshuffledEntrances, setShowUnshuffledEntrances] = useState<string>('All');
     const [showUnshuffledLocations, setShowUnshuffledLocations] = useState<string[]>([]);
+    const [showLinkedEntrance, setShowLinkedEntrance] = useState<boolean>(true);
     const [showHints, setShowHints] = useState<boolean>(true);
     const [showLocations, setShowLocations] = useState<string>('Yes');
     const [showPriceTracking, setShowPriceTracking] = useState<string>('Both');
@@ -309,6 +310,16 @@ const Tracker = (_props: {}) => {
 
         if (trackerSettingsVersionInit !== savedSettingsVersion) {
             // handle tracker settings upgrades
+            switch (trackerSettingsVersionInit) {
+                case 1:
+                default:
+                    if (showUnshuffledEntrancesInit === true) {
+                        showUnshuffledEntrancesInit = 'All';
+                    } else if (showUnshuffledEntrancesInit === false) {
+                        showUnshuffledEntrancesInit = 'None';
+                    }
+            }
+            trackerSettingsVersionInit = savedSettingsVersion;
         }
 
         if (clientDarkMode === null) {
@@ -892,10 +903,13 @@ const Tracker = (_props: {}) => {
                 setRegionVisibility(setting.target.value as string);
                 break;
             case 'show_unshuffled_entrances':
-                setShowUnshuffledEntrances(setting.target.value as boolean);
+                setShowUnshuffledEntrances(setting.target.value as string);
                 break;
             case 'show_unshuffled_locations':
                 setShowUnshuffledLocations([...(setting.target.value as string[])]);
+                break;
+            case 'show_linked_entrance':
+                setShowLinkedEntrance(setting.target.value as boolean);
                 break;
             case 'show_hints':
                 setShowHints(setting.target.value as boolean);
@@ -958,6 +972,9 @@ const Tracker = (_props: {}) => {
                     if (!(showUnshuffledLocations.includes(l))) return true;
                 }
                 return false;
+                break;
+            case 'show_linked_entrance':
+                return showLinkedEntrance !== setting.target.value;
                 break;
             case 'show_hints':
                 return showHints !== setting.target.value;
@@ -1708,7 +1725,7 @@ const Tracker = (_props: {}) => {
         if (simMode) {
             contextMenuHandler = new ContextMenuHandler(handleSimModePeek);
         }
-        let trackerSettings = {
+        let trackerSettings: TrackerSettingsCurrent = {
             version: savedSettingsVersion,
             game_version: graphVersion,
             player_number: playerNumber,
@@ -1722,6 +1739,7 @@ const Tracker = (_props: {}) => {
             region_visibility: regionVisibility,
             show_unshuffled_entrances: showUnshuffledEntrances,
             show_unshuffled_locations: showUnshuffledLocations,
+            show_linked_entrance: showLinkedEntrance,
             show_hints: showHints,
             show_locations: showLocations,
             shop_price_tracking: showPriceTracking,
