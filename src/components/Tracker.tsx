@@ -289,7 +289,7 @@ const Tracker = (_props: {}) => {
         let clientShowPriceTracking = localStorage.getItem('ShowPriceTracking');
         let clientShowTimer = localStorage.getItem('ShowTimer');
         let clientShowCheckCounter = localStorage.getItem('ShowCheckCounter');
-        let trackerSettingsVersionInit = clientTrackerSettingsVersion !== null ? JSON.parse(clientTrackerSettingsVersion) : savedSettingsVersion;
+        let trackerSettingsVersionInit = clientTrackerSettingsVersion !== null ? JSON.parse(clientTrackerSettingsVersion) : 1;
         let graphVersionInit = clientGraphVersion !== null ? JSON.parse(clientGraphVersion) : graphVersion;
         let playerNumberInit = clientPlayerNumber !== null ? JSON.parse(clientPlayerNumber) : playerNumber;
         let settingIconsInit = clientSettingIcons !== null ? JSON.parse(clientSettingIcons) : settingIcons;
@@ -313,11 +313,13 @@ const Tracker = (_props: {}) => {
             switch (trackerSettingsVersionInit) {
                 case 1:
                 default:
-                    if (showUnshuffledEntrancesInit === true) {
+                    if (showUnshuffledEntrancesInit === true || showUnshuffledEntrancesInit === 'true') {
                         showUnshuffledEntrancesInit = 'All';
-                    } else if (showUnshuffledEntrancesInit === false) {
+                    } else if (showUnshuffledEntrancesInit === false || showUnshuffledEntrancesInit === 'false') {
                         showUnshuffledEntrancesInit = 'None';
                     }
+                    localStorage.setItem('SavedSettingsVersion', JSON.stringify(savedSettingsVersion));
+                    break;
             }
             trackerSettingsVersionInit = savedSettingsVersion;
         }
